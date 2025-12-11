@@ -125,8 +125,13 @@ def apply_rules(row, prev_data=None):
                 action = "BUY_WATCH"
                 score += 3
 
-    if oi > 20000:
-        tags.append("🔥萬人塚")
+# --- 規則 3: 超級萬人塚 (Super Crowded) ---
+    # 原本是 > 20000，現在改成 50000
+    if oi > 50000:
+        tags.append("👑超級萬人塚") # 給它一個皇冠
+        score += 2 # 加分加重
+    elif oi > 20000:
+        tags.append("🔥萬人塚") # 2萬~5萬 是一般熱點
         score += 1
         
     if "🚀點火" in str(tags) and "🚬菸屁股" in str(tags):
