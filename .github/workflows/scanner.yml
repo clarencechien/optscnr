@@ -26,7 +26,8 @@ jobs:
           pip install requests pandas tabulate
 
       - name: Run Scanner
-        run: python main.py
+        # 加上 -u 參數，強制顯示輸出 (Unbuffered)
+        run: python -u main.py
 
       - name: Keep only last 7 days data
         run: |
