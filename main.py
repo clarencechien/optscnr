@@ -10,7 +10,7 @@ import random
 # 1. 設定與目標
 # ==========================================
 # 擴充了清單，加入未來可能想看的妖股
-TARGET_TICKERS = ['TSLA', 'NVDA', 'MSTR', 'COIN', 'PLTR', 'GOOG', 'AMD', 'SMCI'] 
+TARGET_TICKERS = ['TSLA', 'NVDA', 'MSTR', 'COIN', 'PLTR', 'GOOG', 'AMD', 'SMCI', 'OKLO'] 
 DATA_DIR = "data"
 
 # GitHub Repo 設定 (用來抓昨天的資料)
