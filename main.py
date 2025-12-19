@@ -10,7 +10,21 @@ import random
 # 1. 設定與目標
 # ==========================================
 # 擴充了清單，加入未來可能想看的妖股
-TARGET_TICKERS = ['TSLA', 'NVDA', 'MSTR', 'COIN', 'PLTR', 'GOOG', 'AMD', 'SMCI', 'OKLO'] 
+TARGET_TICKERS = [
+    'GOOG',  # Google
+    'TSLA',  # 載具與機器人 (Meme King)
+    'NVDA',  # 算力軍火商
+    'AMD',   # 算力老二
+    'SMCI',  # 伺服器 (高風險妖股)
+    'PLTR',  # AI 軟體與國防
+    'MSTR',  # 比特幣槓桿 (Crypto Proxy)
+    'COIN',  # 加密貨幣交易所
+    'OKLO',  # 核能 (Sam Altman 概念)
+    'VST',   # AI 電力龍頭 (新增) ⚡
+    'RKLB',  # 太空運輸 (新增) 🚀
+    'ASTS',  # 衛星通訊 (新增) 🛰️ (波動極大!)
+    'IONQ'   # 量子電腦 (新增) ⚛️
+]
 DATA_DIR = "data"
 
 # GitHub Repo 設定 (用來抓昨天的資料)
