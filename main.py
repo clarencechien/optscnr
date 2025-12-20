@@ -133,29 +133,45 @@ def get_nasdaq_data(symbol, date_str):
 # ==========================================
 # 3. 規則引擎 (核心邏輯)
 # ==========================================
+# ==========================================
+# 修改後的 apply_rules
+# ==========================================
 def apply_rules(row, prev_data=None):
     tags = []
     action = "HOLD"
     score = 0
     
+    symbol = row['Stock']
     price = row['Ask']
     oi = row['OpenInterest']
     vol = row['Volume']
     strike = row['Strike']
-    symbol = row['Stock']
     expiry = row['Expiry']
+
+    # --- 關鍵修改：定義妖股名單與降低門檻 ---
+    SMALL_CAPS = ['RKLB', 'ASTS', 'IONQ', 'OKLO', 'SMCI', 'PLTR']
     
-    # --- 規則 1: 菸屁股 (便宜 + 有人氣) ---
-    if price < RULE_CONFIG['CHEAP_PRICE'] and oi > RULE_CONFIG['HIGH_OI']:
+    if symbol in SMALL_CAPS:
+        # 妖股標準 (寬鬆)
+        THRESHOLD_OI = 2000      # 只要有 2000 張持倉就算多
+        THRESHOLD_VOL = 500      # 只要單日成交 500 張就算點火 (RKLB 745 就會過了!)
+        THRESHOLD_PRICE = 5.0    # 妖股通常比較便宜
+    else:
+        # 巨獸標準 (TSLA, NVDA...)
+        THRESHOLD_OI = 10000
+        THRESHOLD_VOL = 1000
+        THRESHOLD_PRICE = 15.0
+
+    # --- 規則 1: 菸屁股 ---
+    if price < THRESHOLD_PRICE and oi > THRESHOLD_OI:
         tags.append("🚬菸屁股")
         score += 1
 
-    # --- 規則 2: 點火偵測 (成交量爆發) ---
+    # --- 規則 2: 點火偵測 ---
     ignition_detected = False
     vol_msg = ""
     
     if prev_data is not None and not prev_data.empty:
-        # 在昨天的資料裡找同一支合約
         prev_row = prev_data[
             (prev_data['Stock'] == symbol) & 
             (prev_data['Expiry'] == expiry) & 
@@ -164,39 +180,42 @@ def apply_rules(row, prev_data=None):
         
         if not prev_row.empty:
             prev_vol = prev_row.iloc[0]['Volume']
-            # 計算爆發倍數
             if prev_vol > 0:
                 vol_ratio = vol / prev_vol
             else:
-                vol_ratio = 9.99 if vol > 500 else 0 
-                
-            if vol > RULE_CONFIG['IGNITION_VOL'] and vol_ratio >= RULE_CONFIG['VOL_SPIKE_RATIO']:
+                vol_ratio = 9.99 if vol > (THRESHOLD_VOL / 2) else 0 
+            
+            # 這裡改用動態閾值
+            if vol > THRESHOLD_VOL and vol_ratio >= RULE_CONFIG['VOL_SPIKE_RATIO']:
                 ignition_detected = True
                 vol_msg = f"🚀點火({vol_ratio:.1f}x)"
     else:
-        # 如果真的完全沒有歷史資料，但量超大，也給過 (盲測)
-        if vol > 5000 and vol > oi * 0.1: 
+        # 盲測門檻也要降低
+        blind_threshold = 2000 if symbol in SMALL_CAPS else 5000
+        if vol > blind_threshold and vol > oi * 0.1: 
             ignition_detected = True
             vol_msg = "🚀點火(暴量)"
 
     if ignition_detected:
         tags.append(vol_msg)
-        score += 3 # 點火權重最高
-        action = "BUY_WATCH" # 至少要觀察
+        score += 3 
+        action = "BUY_WATCH"
 
-    # --- 規則 3: 萬人塚 (群眾共識) ---
-    if oi > RULE_CONFIG['SUPER_OI']: # 50000
+    # --- 規則 3: 萬人塚 ---
+    # 這裡也可以依照市值微調，但通常萬人塚定義不變較好，或是也降低一點
+    super_oi_limit = 20000 if symbol in SMALL_CAPS else 50000
+    normal_oi_limit = 10000 if symbol in SMALL_CAPS else 20000
+
+    if oi > super_oi_limit:
         tags.append("👑超級萬人塚") 
         score += 2
-    elif oi > 20000: # 20000
+    elif oi > normal_oi_limit:
         tags.append("🔥萬人塚")
         score += 1
         
-    # --- 總結判定 ---
-    # 如果同時是「菸屁股」且「點火」，直接升級 Strong Buy
     if "🚬菸屁股" in str(tags) and ignition_detected:
         action = "STRONG_BUY"
-        score += 1 # 再加分
+        score += 1
         
     return " ".join(tags), action, score
 
