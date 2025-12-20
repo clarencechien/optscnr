@@ -11,19 +11,34 @@ import random
 # ==========================================
 # 擴充了清單，加入未來可能想看的妖股
 TARGET_TICKERS = [
-    'GOOG',  # Google
-    'TSLA',  # 載具與機器人 (Meme King)
+    # --- 巨獸組 (Big Caps) ---
+    'TSLA',  # 載具與機器人 (ARK 最愛)
     'NVDA',  # 算力軍火商
     'AMD',   # 算力老二
-    'SMCI',  # 伺服器 (高風險妖股)
-    'PLTR',  # AI 軟體與國防
-    'MSTR',  # 比特幣槓桿 (Crypto Proxy)
-    'COIN',  # 加密貨幣交易所
-    'OKLO',  # 核能 (Sam Altman 概念)
-    'VST',   # AI 電力龍頭 (新增) ⚡
-    'RKLB',  # 太空運輸 (新增) 🚀
-    'ASTS',  # 衛星通訊 (新增) 🛰️ (波動極大!)
-    'IONQ'   # 量子電腦 (新增) ⚛️
+    'MSTR',  # 比特幣槓桿
+    'COIN',  # 加密貨幣交易所 (ARKF 重倉)
+    'PLTR',  # AI 國防軟體 (ARK 曾經重倉)
+
+    # --- 妖股組 (Small Caps / High Beta) ---
+    'SMCI',  # 伺服器 (高風險)
+    'OKLO',  # 核能
+    'VST',   # 電力龍頭
+    'RKLB',  # 太空運輸 🚀 (ARKX 概念)
+    'ASTS',  # 衛星通訊 🛰️
+    'IONQ',  # 量子電腦 ⚛️
+    
+    # --- ARK 精選菸屁股 (New!) ---
+    'U',     # Unity 遊戲引擎 🎮
+    'PATH',  # UiPath 自動化 🤖
+    'ROKU',  # 串流霸主 📺
+    'SQ',    # Block 金融科技 💸
+    'CRSP',  # 基因編輯 🧬
+    
+    # --- 其他高波動 ---
+    'UPST',  # AI 借貸 (波動王)
+    'SOFI',  # 數位銀行
+    'HIMS',  # 減肥藥
+    'KTOS'   # 無人戰機 (ARKQ 重倉)
 ]
 DATA_DIR = "data"
 
@@ -149,7 +164,11 @@ def apply_rules(row, prev_data=None):
     expiry = row['Expiry']
 
     # --- 關鍵修改：定義妖股名單與降低門檻 ---
-    SMALL_CAPS = ['RKLB', 'ASTS', 'IONQ', 'OKLO', 'SMCI', 'PLTR']
+    SMALL_CAPS = [
+        'RKLB', 'ASTS', 'IONQ', 'OKLO', 'SMCI', 'PLTR', 
+        'UPST', 'SOFI', 'HIMS', 'KTOS',
+        'U', 'PATH', 'ROKU', 'SQ', 'CRSP' # ARK 系列都算妖股
+    ]
     
     if symbol in SMALL_CAPS:
         # 妖股標準 (寬鬆)
