@@ -1,6 +1,6 @@
 # 🚬 每日菸屁股獵殺報表 (AI Auto-Trade)
 
-更新時間: 2025-12-27 22:27 UTC
+更新時間: 2025-12-28 22:28 UTC
 
 ## 🚬 HOLD (291)
 | Stock   | Expiry     |   Strike |    Ask |   OpenInterest |   Volume | Tags        |   Score |
