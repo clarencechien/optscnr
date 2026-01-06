@@ -106,40 +106,64 @@ def get_nasdaq_data(symbol, date_str):
         'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
     ]
     
+    # 定義要嘗試的資產類別順序
+    # 大部分是 stocks，所以放第一個；如果失敗則嘗試 etf
+    asset_classes = ['stocks', 'etf']
+    
     for attempt in range(2): 
         session = requests.Session()
         headers = {
             'User-Agent': random.choice(user_agents),
             'Accept': 'application/json, text/plain, */*',
-            'Referer': 'https://www.nasdaq.com/market-activity/stocks/tsla/option-chain',
+            'Referer': f'https://www.nasdaq.com/market-activity/stocks/{symbol.lower()}/option-chain',
             'Origin': 'https://www.nasdaq.com',
             'Accept-Language': 'en-US,en;q=0.9'
         }
         
-        url = f"https://api.nasdaq.com/api/quote/{symbol}/option-chain?assetclass=stocks&fromDate={date_str}&toDate={date_str}&money=all"
-        
-        try:
-            print(f"    ☁️ [嘗試 {attempt+1}] 連線至 {symbol} {date_str} ...", end=" ")
-            res = session.get(url, headers=headers, timeout=15)
+        # --- 修改重點：遍歷資產類別 ---
+        for asset_class in asset_classes:
+            url = f"https://api.nasdaq.com/api/quote/{symbol}/option-chain?assetclass={asset_class}&fromDate={date_str}&toDate={date_str}&money=all"
             
-            if res.status_code == 200:
-                json_data = res.json()
-                if json_data.get('status', {}).get('rCode') == 200:
-                    rows = json_data.get('data', {}).get('table', {}).get('rows', [])
-                    if rows:
-                        print(f"✅ 成功! 取得 {len(rows)} 筆資料")
-                        return pd.DataFrame(rows), date_str
-                    else:
-                        print("⚠️ 內容為空 (No Rows)")
-                else:
-                    print(f"❌ API 錯誤: {json_data.get('status')}")
-            else:
-                print(f"⛔ HTTP {res.status_code}")
+            try:
+                # 為了版面整潔，只顯示目前嘗試的模式
+                ac_tag = "S" if asset_class == 'stocks' else "E"
+                print(f"    ☁️ [嘗試 {attempt+1}-{ac_tag}] 連線至 {symbol} {date_str} ...", end=" ")
                 
-        except Exception as e:
-            print(f"💥 例外: {str(e)}")
-        
-        # 失敗處理：嘗試減一天
+                res = session.get(url, headers=headers, timeout=15)
+                
+                if res.status_code == 200:
+                    json_data = res.json()
+                    status = json_data.get('status', {})
+                    
+                    # 如果成功 (rCode 200)
+                    if status.get('rCode') == 200:
+                        rows = json_data.get('data', {}).get('table', {}).get('rows', [])
+                        if rows:
+                            print(f"✅ 成功! 取得 {len(rows)} 筆資料")
+                            return pd.DataFrame(rows), date_str
+                        else:
+                            print("⚠️ 內容為空 (No Rows)")
+                            # 內容為空不代表 API 錯誤，可能是該日期沒開盤，通常不需要換 assetclass 重試，但這裡可以直接 break 去下一個日期
+                            break 
+                    
+                    # 如果失敗是因為 Symbol not exists，且目前是 stocks，就讓它繼續迴圈跑 etf
+                    elif "Symbol not exists" in str(status.get('bCodeMessage', '')):
+                         if asset_class == 'stocks':
+                             print(f"🔄 轉為 ETF 模式...", end=" ")
+                             continue # 繼續下一個 asset_class 迴圈
+                         else:
+                             print(f"❌ 找不到代號")
+                    else:
+                        print(f"❌ API 錯誤: {status}")
+                else:
+                    print(f"⛔ HTTP {res.status_code}")
+                    
+            except Exception as e:
+                print(f"💥 例外: {str(e)}")
+            
+            # 如果成功 return 了，上面就會跳出；如果執行到這裡，代表這次 asset_class 失敗
+            
+        # 失敗處理：嘗試減一天 (原有的邏輯)
         dt = datetime.strptime(date_str, "%Y-%m-%d") - timedelta(days=1)
         date_str = dt.strftime("%Y-%m-%d")
         time.sleep(random.uniform(1, 3)) 
