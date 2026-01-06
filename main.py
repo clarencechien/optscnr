@@ -19,7 +19,8 @@ TARGET_TICKERS = [
     'IBIT',  # 比特幣
     'COIN',  # 加密貨幣交易所 (ARKF 重倉)
     'PLTR',  # AI 國防軟體 (ARK 曾經重倉)
-
+    'ONDS',  # 國防無人機
+    
     # --- 妖股組 (Small Caps / High Beta) ---
     'SMCI',  # 伺服器 (高風險)
     'OKLO',  # 核能
