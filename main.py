@@ -32,7 +32,7 @@ TARGET_TICKERS = [
     'U',     # Unity 遊戲引擎 🎮
     'PATH',  # UiPath 自動化 🤖
     'ROKU',  # 串流霸主 📺
-    'SQ',    # Block 金融科技 💸
+    'XYZ',    # Block 金融科技 💸
     'CRSP',  # 基因編輯 🧬
     
     # --- 其他高波動 ---
