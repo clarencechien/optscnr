@@ -16,6 +16,7 @@ TARGET_TICKERS = [
     'NVDA',  # 算力軍火商
     'AMD',   # 算力老二
     'MSTR',  # 比特幣槓桿
+    'IBIT',  # 比特幣
     'COIN',  # 加密貨幣交易所 (ARKF 重倉)
     'PLTR',  # AI 國防軟體 (ARK 曾經重倉)
 
