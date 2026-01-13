@@ -40,7 +40,30 @@ TARGET_TICKERS = [
     'UPST',  # AI 借貸 (波動王)
     'SOFI',  # 數位銀行
     'HIMS',  # 減肥藥
-    'KTOS'   # 無人戰機 (ARKQ 重倉)
+    'KTOS',   # 無人戰機 (ARKQ 重倉)
+    
+    # 🚁 天空之城 (eVTOL) - 2026 商業化元年
+    'JOBY',  # eVTOL 龍頭 (Uber 概念)
+    'ACHR',  # Stellantis 量產系
+
+    # 🌑 Space 2.0 (Moonshot)
+    'LUNR',  # 月球登陸 (高勝賠比)
+
+    # ☢️ 核能兄弟 (SMR Rivals)
+    'SMR',   # NuScale (法規先行者)
+    'NNE',   # Nano Nuclear (微型激進派)
+
+    # 🧬 基因編輯 (CRSP 的對手)
+    'NTLA',  # Intellia (體內編輯先驅)
+
+    # ⚡ AI 基礎設施 (鏟子股)
+    'VRT',   # 液冷散熱 (沒它 AI 會燒掉)
+    'ANET',   # 高速傳輸 (AI 叢集神經)
+
+    # AI樂透
+    'CRWV', # 菸屁股 / 困境反轉	LEAPS 遠期埋伏 (賭它不死)
+    'IREN', # 高貝塔跟風股
+    'NBIS' # 妖股 / 故事股
 ]
 DATA_DIR = "data"
 
