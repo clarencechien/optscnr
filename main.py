@@ -5,205 +5,193 @@ import glob
 from datetime import datetime, timedelta
 import time
 import random
+import io
 
 # ==========================================
-# 1. 設定與目標
+# 1. 設定與目標 (Configuration)
 # ==========================================
-# 擴充了清單，加入未來可能想看的妖股
-TARGET_TICKERS = [
-    # --- 巨獸組 (Big Caps / Market Leaders) ---
-    'TSLA',  # 載具與機器人 (ARK 最愛)
-    'NVDA',  # 算力軍火商
-    'AMD',   # 算力老二
-    'MSTR',  # 比特幣槓桿
-    'IBIT',  # 比特幣 ETF
-    'COIN',  # 加密貨幣交易所 (ARKF 重倉)
-    'PLTR',  # AI 國防軟體
-    'SHOP',  # 電商 SASS 龍頭 (新入榜)
 
-    # --- 妖股組 (Small Caps / High Beta / 波動王) ---
-    'SMCI',  # 伺服器 (高風險)
-    'OKLO',  # 核能
-    'VST',   # 電力龍頭
-    'RKLB',  # 太空運輸 🚀 (ARKX 概念)
-    'ASTS',  # 衛星通訊 🛰️
-    'IONQ',  # 量子電腦 ⚛️
-    'UPST',  # AI 借貸 (波動之王)
-    'SOFI',  # 數位銀行
-    'DKNG',  # 線上博弈 (新入榜)
-    'IREN',  # 比特幣挖礦/AI 資料中心
-    'NBIS',  # 故事股/妖股
-
-    # --- ARK 精選/菸屁股 (Recovery Play) ---
-    'U',     # Unity 遊戲引擎 🎮
-    'PATH',  # UiPath 自動化 🤖
-    'ROKU',  # 串流霸主 📺
-    'XYZ',    # Block 金融科技 (原 XYZ 修正) 💸
-    'HOOD',  # Robinhood 散戶風向球 (新入榜)
-    'TDOC',  # 遠距醫療 (ARK 傷心股) (新入榜)
-    'ZM',    # Zoom 雲端通訊 (新入榜)
-
-    # --- 基因編輯與生技彩票 (Biotech) ---
-    'CRSP',  # 基因編輯 🧬
-    'NTLA',  # Intellia (體內編輯先驅)
-    'BEAM',  # 鹼基編輯 (新入榜)
-    'PACB',  # 長讀距定序 (新入榜)
-    'TXG',   # 單細胞分析 (新入榜)
-    'VCYT',  # 癌症檢測 (新入榜)
-    'HIMS',  # 遠距醫療/減肥藥
-
-    # --- 國防、無人機與太空 (Defense & Space) ---
-    'KTOS',  # 無人戰機 (ARKQ 重倉)
-    'ONDS',  # 國防無人機
-    'LUNR',  # 月球登陸 (高勝賠比)
-    'JOBY',  # eVTOL 龍頭 (Uber 概念)
-    'ACHR',  # Stellantis 量產系
-
-    # --- 核能兄弟 (SMR Rivals) ---
-    'SMR',   # NuScale (法規先行者)
-    'NNE',   # Nano Nuclear (微型激進派)
-
-    # --- ⚡ AI 基礎設施 (Infrastructure) ---
-    'VRT',   # 液冷散熱
-    'ANET',  # 高速傳輸
-    'CRWV'   # AI 遠期埋伏/困境反轉
-]
+# 資料儲存目錄
 DATA_DIR = "data"
 
-# GitHub Repo 設定 (用來抓昨天的資料)
+# GitHub Repo 設定 (用來抓昨天的資料進行比較)
 # ⚠️ 請將這裡換成你的 GitHub 帳號與 Repo 名稱
 GITHUB_USER = "clarencechien" 
-REPO_NAME = "optscnr"     
+REPO_NAME = "optscnr"      
 BRANCH = "main"
 
+# --- 股票清單分類 (動態管理) ---
+TICKER_CATEGORIES = {
+    # 🦁 巨獸組: 高市值、流動性好、價格高
+    'BIG_CAPS': [
+        'TSLA', 'NVDA', 'AMD', 'MSTR', 'IBIT', 'COIN', 'PLTR', 'SHOP', 'ANET'
+    ],
+    
+    # 🦄 妖股/成長股: 波動大、單價低、爆發力強
+    'SMALL_CAPS': [
+        # 妖股組
+        'SMCI', 'OKLO', 'VST', 'RKLB', 'ASTS', 'IONQ', 
+        'UPST', 'SOFI', 'DKNG', 'IREN', 'NBIS',
+        # ARK 菸屁股
+        'U', 'PATH', 'ROKU', 'HOOD', 'TDOC', 'ZM', 'SQ', 
+        # 生技彩票
+        'CRSP', 'NTLA', 'BEAM', 'PACB', 'TXG', 'VCYT', 'HIMS',
+        # 國防與太空
+        'KTOS', 'ONDS', 'LUNR', 'JOBY', 'ACHR',
+        # 核能與基建
+        'SMR', 'NNE', 'VRT', 'CRWV'
+    ]
+}
+
+# 展平所有代號供迴圈使用
+TARGET_TICKERS = TICKER_CATEGORIES['BIG_CAPS'] + TICKER_CATEGORIES['SMALL_CAPS']
+
+# --- 策略參數設定 (動態門檻) ---
 RULE_CONFIG = {
-    'CHEAP_PRICE': 15.0,    # 稍微放寬價格，避免漏掉好貨
-    'HIGH_OI': 10000,       # 基礎門檻
-    'SUPER_OI': 50000,      # 超級萬人塚門檻
-    'IGNITION_VOL': 1000,   # 點火成交量
-    'VOL_SPIKE_RATIO': 2.0, # 量能爆發倍數 (今日/昨日)
-    'DANGER_DAYS': 45       # 末日警示天數
+    'VOL_SPIKE_RATIO': 2.0, # 量能爆發倍數 (今日量 / 昨日量)
+    
+    # 🦁 巨獸組參數
+    'BIG_CAPS_THRESHOLD':  {
+        'OI': 10000,      # 持倉量門檻
+        'VOL': 2000,      # 點火成交量門檻
+        'PRICE': 15.0     # 價格上限 (太貴的不算菸屁股)
+    },
+    
+    # 🦄 妖股組參數 (門檻大幅降低以捕捉早期訊號)
+    'SMALL_CAPS_THRESHOLD': {
+        'OI': 1500,       # 只要有 1500 張囤單就算多
+        'VOL': 300,       # 小股票 300 張成交就算點火
+        'PRICE': 2.0      # 重點！只看 $2.0 (權利金$200) 以下的彩票
+    }
 }
 
 # ==========================================
-# 2. 輔助函數
+# 2. 輔助函數 (Helpers)
 # ==========================================
-def get_target_dates(months=[2, 3, 4, 5, 6]):
-    # 增加近月合約掃描 (2月, 3月...) 
-    dates = []
+
+def get_target_dates():
+    """
+    生成目標日期：
+    1. 加入「本週五」與「下週五」 (捕捉 Gamma Squeeze)
+    2. 加入未來 3 個月的「月選」(每個月第三個週五，捕捉波段佈局)
+    """
+    dates = set() # 使用 set 去重
     today = datetime.now()
-    for i in months:
-        future_idx = today.month - 1 + i
-        year = today.year + future_idx // 12
-        month = future_idx % 12 + 1
+    
+    # --- A. 近兩週週選 (Short Term) ---
+    days_ahead = 4 - today.weekday() # 4 is Friday
+    if days_ahead < 0: days_ahead += 7
+    this_friday = today + timedelta(days=days_ahead)
+    next_friday = this_friday + timedelta(days=7)
+    
+    dates.add(this_friday.strftime('%Y-%m-%d'))
+    dates.add(next_friday.strftime('%Y-%m-%d'))
+
+    # --- B. 未來月選 (Long Term) ---
+    # 掃描未來 4 個月
+    for i in range(4):
+        # 計算月份
+        future_month_first = (today.replace(day=1) + timedelta(days=32*i)).replace(day=1)
         
-        first_day = datetime(year, month, 1)
-        days_to_first_friday = (4 - first_day.weekday() + 7) % 7
-        first_friday = first_day + timedelta(days=days_to_first_friday)
+        # 尋找該月第一個週五
+        # weekday(): Mon=0, Fri=4
+        # (4 - first_day.weekday() + 7) % 7 gives days to first friday
+        days_to_first_friday = (4 - future_month_first.weekday() + 7) % 7
+        first_friday = future_month_first + timedelta(days=days_to_first_friday)
+        
+        # 月選通常是第三個週五
         third_friday = first_friday + timedelta(days=14)
-        dates.append(third_friday.strftime('%Y-%m-%d'))
-    return dates
+        
+        # 只加入未來的日期
+        if third_friday >= today:
+            dates.add(third_friday.strftime('%Y-%m-%d'))
+
+    # 排序並轉回列表
+    sorted_dates = sorted(list(dates))
+    return sorted_dates
 
 def fetch_yesterday_data_from_github():
     """
-    從 GitHub Raw Content 下載昨天的 CSV，解決 Actions 環境失憶問題
+    從 GitHub Raw Content 下載昨天的 CSV，解決 CI/CD 環境沒有歷史檔案的問題
     """
     yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
-    url = f"https://raw.githubusercontent.com/{GITHUB_USER}/{REPO_NAME}/{BRANCH}/{DATA_DIR}/{yesterday}.csv"
-    
-    print(f"☁️ 嘗試從 GitHub 下載昨天 ({yesterday}) 的紀錄...", end=" ")
-    try:
-        res = requests.get(url)
-        if res.status_code == 200:
-            from io import StringIO
-            df = pd.read_csv(StringIO(res.text))
-            print(f"✅ 成功! 取得 {len(df)} 筆歷史資料")
-            return df
-        else:
-            print(f"❌ 找不到 (HTTP {res.status_code}) - 可能是昨天沒跑或檔案不存在")
-            return None
-    except Exception as e:
-        print(f"💥 下載失敗: {e}")
-        return None
+    # 如果今天是週一，昨天可能是週日沒資料，往前多試幾天
+    for lookback in range(1, 4):
+        check_date = (datetime.now() - timedelta(days=lookback)).strftime("%Y-%m-%d")
+        url = f"https://raw.githubusercontent.com/{GITHUB_USER}/{REPO_NAME}/{BRANCH}/{DATA_DIR}/{check_date}.csv"
+        
+        print(f"☁️ 嘗試從 GitHub 下載歷史紀錄 ({check_date})...", end=" ")
+        try:
+            res = requests.get(url, timeout=10)
+            if res.status_code == 200:
+                df = pd.read_csv(io.StringIO(res.text))
+                print(f"✅ 成功! 取得 {len(df)} 筆歷史資料")
+                return df
+            else:
+                print(f"❌ 無資料 (HTTP {res.status_code})")
+        except Exception as e:
+            print(f"💥 連線錯誤: {e}")
+            
+    print("⚠️ 無法取得任何歷史資料，將使用盲測模式 (無法比較昨日成交量)")
+    return None
 
 def get_nasdaq_data(symbol, date_str):
+    """
+    爬取 Nasdaq Option Chain
+    自動切換 'stocks' 與 'etf' 模式 (針對 IBIT, ARKK 等)
+    """
     user_agents = [
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
-        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
     ]
     
-    # 定義要嘗試的資產類別順序
-    # 大部分是 stocks，所以放第一個；如果失敗則嘗試 etf
+    # IBIT, QQQ 等屬於 ETF，其他是 stocks。輪詢嘗試以免遺漏。
     asset_classes = ['stocks', 'etf']
     
-    for attempt in range(2): 
-        session = requests.Session()
+    for asset_class in asset_classes:
+        url = f"https://api.nasdaq.com/api/quote/{symbol}/option-chain?assetclass={asset_class}&fromDate={date_str}&toDate={date_str}&money=all"
         headers = {
             'User-Agent': random.choice(user_agents),
-            'Accept': 'application/json, text/plain, */*',
-            'Referer': f'https://www.nasdaq.com/market-activity/stocks/{symbol.lower()}/option-chain',
-            'Origin': 'https://www.nasdaq.com',
-            'Accept-Language': 'en-US,en;q=0.9'
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Referer': 'https://www.nasdaq.com/'
         }
         
-        # --- 修改重點：遍歷資產類別 ---
-        for asset_class in asset_classes:
-            url = f"https://api.nasdaq.com/api/quote/{symbol}/option-chain?assetclass={asset_class}&fromDate={date_str}&toDate={date_str}&money=all"
+        try:
+            # 隨機延遲避免被封鎖
+            time.sleep(random.uniform(0.5, 1.5))
+            res = requests.get(url, headers=headers, timeout=15)
             
-            try:
-                # 為了版面整潔，只顯示目前嘗試的模式
-                ac_tag = "S" if asset_class == 'stocks' else "E"
-                print(f"    ☁️ [嘗試 {attempt+1}-{ac_tag}] 連線至 {symbol} {date_str} ...", end=" ")
+            if res.status_code == 200:
+                json_data = res.json()
+                status = json_data.get('status', {})
                 
-                res = session.get(url, headers=headers, timeout=15)
-                
-                if res.status_code == 200:
-                    json_data = res.json()
-                    status = json_data.get('status', {})
-                    
-                    # 如果成功 (rCode 200)
-                    if status.get('rCode') == 200:
-                        rows = json_data.get('data', {}).get('table', {}).get('rows', [])
-                        if rows:
-                            print(f"✅ 成功! 取得 {len(rows)} 筆資料")
-                            return pd.DataFrame(rows), date_str
-                        else:
-                            print("⚠️ 內容為空 (No Rows)")
-                            # 內容為空不代表 API 錯誤，可能是該日期沒開盤，通常不需要換 assetclass 重試，但這裡可以直接 break 去下一個日期
-                            break 
-                    
-                    # 如果失敗是因為 Symbol not exists，且目前是 stocks，就讓它繼續迴圈跑 etf
-                    elif "Symbol not exists" in str(status.get('bCodeMessage', '')):
-                         if asset_class == 'stocks':
-                             print(f"🔄 轉為 ETF 模式...", end=" ")
-                             continue # 繼續下一個 asset_class 迴圈
-                         else:
-                             print(f"❌ 找不到代號")
+                # 成功取得數據
+                if status.get('rCode') == 200:
+                    rows = json_data.get('data', {}).get('table', {}).get('rows', [])
+                    if rows:
+                        return pd.DataFrame(rows), date_str
                     else:
-                        print(f"❌ API 錯誤: {status}")
-                else:
-                    print(f"⛔ HTTP {res.status_code}")
-                    
-            except Exception as e:
-                print(f"💥 例外: {str(e)}")
+                        # 該日期無資料 (可能休市)，不需要試 asset_class
+                        return None, date_str
+                
+                # 錯誤處理：如果代號不存在，嘗試切換 asset_class
+                b_msg = str(status.get('bCodeMessage', ''))
+                if "Symbol not exists" in b_msg or "Invalid Asset Class" in b_msg:
+                    if asset_class == 'stocks': continue # 試試看 ETF
             
-            # 如果成功 return 了，上面就會跳出；如果執行到這裡，代表這次 asset_class 失敗
+        except Exception as e:
+            print(f"💥 API 異常 {symbol}: {e}")
             
-        # 失敗處理：嘗試減一天 (原有的邏輯)
-        dt = datetime.strptime(date_str, "%Y-%m-%d") - timedelta(days=1)
-        date_str = dt.strftime("%Y-%m-%d")
-        time.sleep(random.uniform(1, 3)) 
-        
     return None, date_str
 
 # ==========================================
-# 3. 規則引擎 (核心邏輯)
+# 3. 規則引擎 (Core Logic)
 # ==========================================
-# ==========================================
-# 修改後的 apply_rules
-# ==========================================
+
 def apply_rules(row, prev_data=None):
+    """
+    針對每一行選擇權數據進行評分
+    """
     tags = []
     action = "HOLD"
     score = 0
@@ -212,36 +200,34 @@ def apply_rules(row, prev_data=None):
     price = row['Ask']
     oi = row['OpenInterest']
     vol = row['Volume']
-    strike = row['Strike']
     expiry = row['Expiry']
+    strike = row['Strike']
 
-    # --- 關鍵修改：定義妖股名單與降低門檻 ---
-    SMALL_CAPS = [
-        'RKLB', 'ASTS', 'IONQ', 'OKLO', 'SMCI', 'PLTR', 
-        'UPST', 'SOFI', 'HIMS', 'KTOS',
-        'U', 'PATH', 'ROKU', 'SQ', 'CRSP' # ARK 系列都算妖股
-    ]
-    
-    if symbol in SMALL_CAPS:
-        # 妖股標準 (寬鬆)
-        THRESHOLD_OI = 2000      # 只要有 2000 張持倉就算多
-        THRESHOLD_VOL = 500      # 只要單日成交 500 張就算點火 (RKLB 745 就會過了!)
-        THRESHOLD_PRICE = 5.0    # 妖股通常比較便宜
+    # --- 1. 決定門檻 (巨獸 vs 妖股) ---
+    if symbol in TICKER_CATEGORIES['SMALL_CAPS']:
+        cfg = RULE_CONFIG['SMALL_CAPS_THRESHOLD']
+        is_small_cap = True
+        # 特殊微調：生技股與太空股 OI 通常更低，門檻再打 8 折
+        if symbol in ['CRSP', 'NTLA', 'RKLB', 'ASTS']:
+            cfg_oi = cfg['OI'] * 0.8
+        else:
+            cfg_oi = cfg['OI']
     else:
-        # 巨獸標準 (TSLA, NVDA...)
-        THRESHOLD_OI = 10000
-        THRESHOLD_VOL = 1000
-        THRESHOLD_PRICE = 15.0
+        cfg = RULE_CONFIG['BIG_CAPS_THRESHOLD']
+        is_small_cap = False
+        cfg_oi = cfg['OI']
 
-    # --- 規則 1: 菸屁股 ---
-    if price < THRESHOLD_PRICE and oi > THRESHOLD_OI:
+    # --- 規則 2: 菸屁股篩選 (便宜 + 有人屯倉) ---
+    # 這裡很嚴格，妖股必須 < $2.0，確保是樂透單
+    if price <= cfg['PRICE'] and oi > cfg_oi:
         tags.append("🚬菸屁股")
         score += 1
 
-    # --- 規則 2: 點火偵測 ---
+    # --- 規則 3: 點火偵測 (Volume Spike) ---
     ignition_detected = False
     vol_msg = ""
     
+    # 比較昨日數據
     if prev_data is not None and not prev_data.empty:
         prev_row = prev_data[
             (prev_data['Stock'] == symbol) & 
@@ -251,89 +237,97 @@ def apply_rules(row, prev_data=None):
         
         if not prev_row.empty:
             prev_vol = prev_row.iloc[0]['Volume']
-            if prev_vol > 0:
-                vol_ratio = vol / prev_vol
+            # 如果昨天沒量，今天突然有量 (且超過門檻)
+            if prev_vol == 0:
+                if vol > cfg['VOL']:
+                    ignition_detected = True
+                    vol_msg = "🚀死灰復燃"
             else:
-                vol_ratio = 9.99 if vol > (THRESHOLD_VOL / 2) else 0 
-            
-            # 這裡改用動態閾值
-            if vol > THRESHOLD_VOL and vol_ratio >= RULE_CONFIG['VOL_SPIKE_RATIO']:
+                vol_ratio = vol / prev_vol
+                if vol > cfg['VOL'] and vol_ratio >= RULE_CONFIG['VOL_SPIKE_RATIO']:
+                    ignition_detected = True
+                    vol_msg = f"🚀點火({vol_ratio:.1f}x)"
+        else:
+            # 昨天不存在這檔合約 (新開倉?)
+            if vol > cfg['VOL']:
                 ignition_detected = True
-                vol_msg = f"🚀點火({vol_ratio:.1f}x)"
+                vol_msg = "🆕新開倉點火"
     else:
-        # 盲測門檻也要降低
-        blind_threshold = 2000 if symbol in SMALL_CAPS else 5000
-        if vol > blind_threshold and vol > oi * 0.1: 
+        # 盲測模式 (無歷史資料)：如果成交量 > 持倉量的 20% 且超過門檻
+        if vol > cfg['VOL'] and vol > (oi * 0.2):
             ignition_detected = True
-            vol_msg = "🚀點火(暴量)"
+            vol_msg = "🚀突發暴量(盲)"
 
     if ignition_detected:
         tags.append(vol_msg)
-        score += 3 
+        score += 3
         action = "BUY_WATCH"
 
-    # --- 規則 3: 萬人塚 ---
-    # 這裡也可以依照市值微調，但通常萬人塚定義不變較好，或是也降低一點
-    super_oi_limit = 20000 if symbol in SMALL_CAPS else 50000
-    normal_oi_limit = 10000 if symbol in SMALL_CAPS else 20000
-
-    if oi > super_oi_limit:
-        tags.append("👑超級萬人塚") 
+    # --- 規則 4: 萬人塚 (Whale Alert) ---
+    # 這裡用絕對數值，代表極端共識
+    if oi > 50000:
+        tags.append("👑超級萬人塚")
         score += 2
-    elif oi > normal_oi_limit:
+    elif oi > 20000:
         tags.append("🔥萬人塚")
         score += 1
         
+    # --- 最終判定 ---
+    # 同時滿足「菸屁股」(低價高OI) 與 「點火」(成交量爆發) = 強力買入
     if "🚬菸屁股" in str(tags) and ignition_detected:
         action = "STRONG_BUY"
-        score += 1
+        score += 2 # 加分
         
     return " ".join(tags), action, score
 
 # ==========================================
-# 4. 主程序
+# 4. 主程序 (Main Execution)
 # ==========================================
+
 def main():
-    print("🚀 啟動菸屁股掃描器 (Auto-Fetch History Mode)...", flush=True)
+    print(f"🚀 啟動 ARK 妖股掃描器 - {datetime.now().strftime('%Y-%m-%d')}", flush=True)
     
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
     
-    # 1. 嘗試載入歷史資料 (優先從 GitHub 下載)
+    # 1. 取得歷史資料
     prev_df = fetch_yesterday_data_from_github()
     
-    # 如果下載失敗，才試著讀本地 (雖然在 Actions 裡通常沒用)
-    if prev_df is None:
-        history_files = sorted(glob.glob(f"{DATA_DIR}/*.csv"))
-        if history_files:
-            try:
-                print(f"📚 讀取本地紀錄: {history_files[-1]}")
-                prev_df = pd.read_csv(history_files[-1])
-            except: pass
-
     today_results = []
     target_dates = get_target_dates()
+    print(f"📅 鎖定合約日期: {target_dates}")
     
-    print(f"📅 目標日期: {target_dates}")
+    total_tickers = len(TARGET_TICKERS)
     
-    for symbol in TARGET_TICKERS:
-        print(f"\n🔍 正在掃描 {symbol} ...")
+    # 2. 開始掃描
+    for idx, symbol in enumerate(TARGET_TICKERS):
+        print(f"[{idx+1}/{total_tickers}] 🔍 掃描 {symbol} ...", end=" ")
+        
+        # 顯示該股屬於哪一類，方便除錯
+        category = "🦁" if symbol in TICKER_CATEGORIES['BIG_CAPS'] else "🦄"
+        print(f"({category})", end=" ")
+        
+        has_data = False
         for date_str in target_dates:
             df, real_date = get_nasdaq_data(symbol, date_str)
             if df is None: continue
             
-            # 清洗與處理
-            cols = {'strike': 'Strike', 'c_Ask': 'Ask', 'c_Openinterest': 'OpenInterest', 'c_Volume': 'Volume'}
-            if 'c_Openinterest' not in df.columns: 
-                continue
+            has_data = True
             
-            calls = df[list(cols.keys())].rename(columns=cols)
-            for c in calls.columns:
-                if c != 'Strike':
-                    calls[c] = pd.to_numeric(calls[c].astype(str).str.replace(',', '').str.replace('--', '0'), errors='coerce').fillna(0)
+            # 資料清洗
+            cols_map = {'strike': 'Strike', 'c_Ask': 'Ask', 'c_Openinterest': 'OpenInterest', 'c_Volume': 'Volume'}
+            if 'c_Openinterest' not in df.columns: continue
+            
+            calls = df[list(cols_map.keys())].rename(columns=cols_map)
+            
+            # 數值轉換
+            for c in ['Ask', 'OpenInterest', 'Volume']:
+                calls[c] = pd.to_numeric(calls[c].astype(str).str.replace(',', '').str.replace('--', '0'), errors='coerce').fillna(0)
             calls['Strike'] = pd.to_numeric(calls['Strike'], errors='coerce')
             
-            # 第一層過濾：至少要有 1000 張 OI (減少運算量)
-            candidates = calls[calls['OpenInterest'] > 1000] 
+            # --- 初步過濾 (Pre-filter) ---
+            # 為了效能，只處理 OI > 500 的單子 (太小的單子沒意義)
+            # 這裡用比較寬鬆的 500，詳細規則在 apply_rules 判定
+            candidates = calls[calls['OpenInterest'] > 500]
             
             for _, row in candidates.iterrows():
                 data_row = {
@@ -341,55 +335,77 @@ def main():
                     'Expiry': real_date,
                     'Strike': row['Strike'],
                     'Ask': row['Ask'],
-                    'OpenInterest': row['OpenInterest'],
-                    'Volume': row['Volume']
+                    'OpenInterest': int(row['OpenInterest']),
+                    'Volume': int(row['Volume'])
                 }
                 
                 tags, action, score = apply_rules(data_row, prev_df)
                 
-                # 只有 "有分" 或 "非 HOLD" 的才存下來，保持版面乾淨
+                # 只保留有意義的結果
                 if score > 0 or action != "HOLD":
                     data_row['Tags'] = tags
                     data_row['Action'] = action
                     data_row['Score'] = score
                     today_results.append(data_row)
-    
-    # 儲存結果
+        
+        if not has_data:
+            print("❌ (無資料)")
+        else:
+            print("✅")
+
+    # 3. 輸出結果
     if today_results:
         final_df = pd.DataFrame(today_results)
-        final_df = final_df.sort_values(by='Score', ascending=False)
+        final_df = final_df.sort_values(by=['Score', 'Volume'], ascending=[False, False])
         
         today_str = datetime.now().strftime("%Y-%m-%d")
         file_path = f"{DATA_DIR}/{today_str}.csv"
-        print(f"\n💾 正在存檔: {file_path} (共 {len(final_df)} 筆)")
+        print(f"\n💾 儲存檔案: {file_path} (共 {len(final_df)} 筆機會)")
         
         final_df.to_csv(file_path, index=False)
         generate_report(final_df)
     else:
-        print("\n💨 今日無符合條件的機會，無檔案產出。")
+        print("\n💨 今日市場平靜，無符合條件的標的。")
 
 def generate_report(df):
-    md = "# 🚬 每日菸屁股獵殺報表 (AI Auto-Trade)\n\n"
-    md += f"更新時間: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
+    """
+    生成 Markdown 報表
+    """
+    md = "# 🚬 每日妖股獵殺報表 (ARK Edition)\n\n"
+    md += f"**更新時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
+    md += f"**監控範圍**: {len(TARGET_TICKERS)} 檔標的 (含巨獸與妖股)\n\n"
+    md += "---\n\n"
     
     # 定義顯示順序
-    action_order = ['STRONG_BUY', 'BUY_WATCH', 'HOLD', 'SELL_ALERT']
+    action_order = ['STRONG_BUY', 'BUY_WATCH', 'HOLD']
     
     for action in action_order:
         sub_df = df[df['Action'] == action]
         if not sub_df.empty:
-            icon = "🚀" if "BUY" in action else ("👀" if "WATCH" in action else "🚬")
-            md += f"## {icon} {action} ({len(sub_df)})\n"
+            if action == 'STRONG_BUY':
+                title = "🚨 強力買入訊號 (Strong Buy)"
+                desc = "同時滿足「低價大量囤倉」與「今日爆量點火」，極具潛力。"
+            elif action == 'BUY_WATCH':
+                title = "👀 觀察清單 (Watch List)"
+                desc = "出現異動（點火或暴量），但尚未完全符合菸屁股定義，建議放入觀察。"
+            else:
+                title = "🚬 菸屁股 / 萬人塚 (Hold)"
+                desc = "大量持倉但今日無明顯動靜，適合埋伏或觀察支撐。"
+
+            md += f"## {title}\n"
+            md += f"_{desc}_\n\n"
             
-            # 製作表格，隱藏小數點
+            # 選取顯示欄位
             view = sub_df[['Stock', 'Expiry', 'Strike', 'Ask', 'OpenInterest', 'Volume', 'Tags', 'Score']].copy()
-            view['OpenInterest'] = view['OpenInterest'].astype(int)
-            view['Volume'] = view['Volume'].astype(int)
+            
+            # 格式美化
+            view.columns = ['代號', '到期日', '履約價', '價格', '持倉(OI)', '成交(Vol)', '標籤', '分數']
             
             md += view.to_markdown(index=False) + "\n\n"
             
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(md)
+    print("📝 README.md 報表已更新")
 
 if __name__ == "__main__":
     main()
