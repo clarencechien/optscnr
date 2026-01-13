@@ -11,59 +11,62 @@ import random
 # ==========================================
 # 擴充了清單，加入未來可能想看的妖股
 TARGET_TICKERS = [
-    # --- 巨獸組 (Big Caps) ---
+    # --- 巨獸組 (Big Caps / Market Leaders) ---
     'TSLA',  # 載具與機器人 (ARK 最愛)
     'NVDA',  # 算力軍火商
     'AMD',   # 算力老二
     'MSTR',  # 比特幣槓桿
-    'IBIT',  # 比特幣
+    'IBIT',  # 比特幣 ETF
     'COIN',  # 加密貨幣交易所 (ARKF 重倉)
-    'PLTR',  # AI 國防軟體 (ARK 曾經重倉)
-    'ONDS',  # 國防無人機
-    
-    # --- 妖股組 (Small Caps / High Beta) ---
+    'PLTR',  # AI 國防軟體
+    'SHOP',  # 電商 SASS 龍頭 (新入榜)
+
+    # --- 妖股組 (Small Caps / High Beta / 波動王) ---
     'SMCI',  # 伺服器 (高風險)
     'OKLO',  # 核能
     'VST',   # 電力龍頭
     'RKLB',  # 太空運輸 🚀 (ARKX 概念)
     'ASTS',  # 衛星通訊 🛰️
     'IONQ',  # 量子電腦 ⚛️
-    
-    # --- ARK 精選菸屁股 (New!) ---
+    'UPST',  # AI 借貸 (波動之王)
+    'SOFI',  # 數位銀行
+    'DKNG',  # 線上博弈 (新入榜)
+    'IREN',  # 比特幣挖礦/AI 資料中心
+    'NBIS',  # 故事股/妖股
+
+    # --- ARK 精選/菸屁股 (Recovery Play) ---
     'U',     # Unity 遊戲引擎 🎮
     'PATH',  # UiPath 自動化 🤖
     'ROKU',  # 串流霸主 📺
-    'XYZ',    # Block 金融科技 💸
+    'XYZ',    # Block 金融科技 (原 XYZ 修正) 💸
+    'HOOD',  # Robinhood 散戶風向球 (新入榜)
+    'TDOC',  # 遠距醫療 (ARK 傷心股) (新入榜)
+    'ZM',    # Zoom 雲端通訊 (新入榜)
+
+    # --- 基因編輯與生技彩票 (Biotech) ---
     'CRSP',  # 基因編輯 🧬
-    
-    # --- 其他高波動 ---
-    'UPST',  # AI 借貸 (波動王)
-    'SOFI',  # 數位銀行
-    'HIMS',  # 減肥藥
-    'KTOS',   # 無人戰機 (ARKQ 重倉)
-    
-    # 🚁 天空之城 (eVTOL) - 2026 商業化元年
+    'NTLA',  # Intellia (體內編輯先驅)
+    'BEAM',  # 鹼基編輯 (新入榜)
+    'PACB',  # 長讀距定序 (新入榜)
+    'TXG',   # 單細胞分析 (新入榜)
+    'VCYT',  # 癌症檢測 (新入榜)
+    'HIMS',  # 遠距醫療/減肥藥
+
+    # --- 國防、無人機與太空 (Defense & Space) ---
+    'KTOS',  # 無人戰機 (ARKQ 重倉)
+    'ONDS',  # 國防無人機
+    'LUNR',  # 月球登陸 (高勝賠比)
     'JOBY',  # eVTOL 龍頭 (Uber 概念)
     'ACHR',  # Stellantis 量產系
 
-    # 🌑 Space 2.0 (Moonshot)
-    'LUNR',  # 月球登陸 (高勝賠比)
-
-    # ☢️ 核能兄弟 (SMR Rivals)
+    # --- 核能兄弟 (SMR Rivals) ---
     'SMR',   # NuScale (法規先行者)
     'NNE',   # Nano Nuclear (微型激進派)
 
-    # 🧬 基因編輯 (CRSP 的對手)
-    'NTLA',  # Intellia (體內編輯先驅)
-
-    # ⚡ AI 基礎設施 (鏟子股)
-    'VRT',   # 液冷散熱 (沒它 AI 會燒掉)
-    'ANET',   # 高速傳輸 (AI 叢集神經)
-
-    # AI樂透
-    'CRWV', # 菸屁股 / 困境反轉	LEAPS 遠期埋伏 (賭它不死)
-    'IREN', # 高貝塔跟風股
-    'NBIS' # 妖股 / 故事股
+    # --- ⚡ AI 基礎設施 (Infrastructure) ---
+    'VRT',   # 液冷散熱
+    'ANET',  # 高速傳輸
+    'CRWV'   # AI 遠期埋伏/困境反轉
 ]
 DATA_DIR = "data"
 
