@@ -32,7 +32,7 @@ TICKER_CATEGORIES = {
         'SMCI', 'OKLO', 'VST', 'RKLB', 'ASTS', 'IONQ', 
         'UPST', 'SOFI', 'DKNG', 'IREN', 'NBIS',
         # ARK 菸屁股
-        'U', 'PATH', 'ROKU', 'HOOD', 'TDOC', 'ZM', 'XYZ', 
+        'U', 'PATH', 'ROKU', 'HOOD', 'TDOC', 'ZM', 'XYZ', 'OPEN',
         # 生技彩票
         'CRSP', 'NTLA', 'BEAM', 'PACB', 'TXG', 'VCYT', 'HIMS',
         # 國防與太空
