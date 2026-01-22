@@ -30,7 +30,7 @@ TICKER_CATEGORIES = {
     'SMALL_CAPS': [
         # 妖股組
         'SMCI', 'OKLO', 'VST', 'RKLB', 'ASTS', 'IONQ', 
-        'UPST', 'SOFI', 'DKNG', 'IREN', 'NBIS',
+        'UPST', 'SOFI', 'DKNG', 'IREN', 'NBIS', 'NEWT', 'COSM', 'ACRV',
         # ARK 菸屁股
         'U', 'PATH', 'ROKU', 'HOOD', 'TDOC', 'ZM', 'XYZ', 'OPEN',
         # 生技彩票
