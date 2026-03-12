@@ -128,7 +128,22 @@ def apply_rules(row, prev_data=None):
         score += 5
         action = "STRONG_BUY"
 
-    # B: 動能點火
+    # # B: 動能點火
+    # ignition = False
+    # if prev_data is not None and not prev_data.empty:
+    #     prev_row = prev_data[(prev_data['Stock'] == symbol) & (prev_data['Expiry'] == expiry) & (prev_data['Strike'] == strike)]
+    #     if not prev_row.empty:
+    #         prev_vol = prev_row.iloc[0]['Volume']
+    #         if prev_vol > 0 and (vol / prev_vol) >= RULE_CONFIG['VOL_SPIKE_RATIO']:
+    #             tags.append(f"🚀點火({vol/prev_vol:.1f}x)")
+    #             score += 3
+    #             ignition = True
+    # elif vol > cfg['VOL'] and vol > (oi * 0.2):
+    #     tags.append("🚀突發暴量")
+    #     score += 2
+    #     ignition = True
+    
+    # B: 動能點火 (修復邏輯斷層)
     ignition = False
     if prev_data is not None and not prev_data.empty:
         prev_row = prev_data[(prev_data['Stock'] == symbol) & (prev_data['Expiry'] == expiry) & (prev_data['Strike'] == strike)]
@@ -138,11 +153,18 @@ def apply_rules(row, prev_data=None):
                 tags.append(f"🚀點火({vol/prev_vol:.1f}x)")
                 score += 3
                 ignition = True
-    elif vol > cfg['VOL'] and vol > (oi * 0.2):
-        tags.append("🚀突發暴量")
-        score += 2
-        ignition = True
-
+        else:
+            # 補丁：昨天沒進榜，今天突然爆量 (捕捉新主力建倉)
+            if vol > cfg['VOL'] and vol > (oi * 0.2):
+                tags.append("🆕新倉暴量")
+                score += 3
+                ignition = True
+    else:
+        # 盲測模式
+        if vol > cfg['VOL'] and vol > (oi * 0.2):
+            tags.append("🚀突發暴量")
+            score += 2
+            ignition = True
     # C: IV 避險
     if iv > 150:
         tags.append("⚠️IV頂峰")
@@ -267,7 +289,25 @@ def main():
             if df is None or 'c_Openinterest' not in df.columns: continue
             
             # 清洗資料
-            rename_map = {'strike': 'Strike', 'c_Ask': 'Ask', 'c_Openinterest': 'OpenInterest', 'c_Volume': 'Volume', 'c_IV': 'IV'}
+            #rename_map = {'strike': 'Strike', 'c_Ask': 'Ask', 'c_Openinterest': 'OpenInterest', 'c_Volume': 'Volume', 'c_IV': 'IV'}
+            # 清洗資料 (增強 IV 解析)
+            rename_map = {'strike': 'Strike', 'c_Ask': 'Ask', 'c_Openinterest': 'OpenInterest', 'c_Volume': 'Volume'}
+            # 兼容 Nasdaq API 隨機變化的 IV 欄位名
+            iv_col = 'c_IV' if 'c_IV' in df.columns else ('c_iv' if 'c_iv' in df.columns else None)
+            if iv_col: rename_map[iv_col] = 'IV'
+            
+            df = df.rename(columns={k: v for k, v in rename_map.items() if k in df.columns})
+            
+            for col in ['Ask', 'OpenInterest', 'Volume', 'Strike']:
+                if col in df.columns:
+                    df[col] = pd.to_numeric(df[col].astype(str).str.replace('[$,]', '', regex=True).replace('--', '0'), errors='coerce').fillna(0)
+            
+            # 正確暴力解析 IV
+            if 'IV' in df.columns:
+                df['IV'] = pd.to_numeric(df['IV'].astype(str).str.replace('%', '', regex=False).str.replace(',', '', regex=False).replace('--', '0'), errors='coerce').fillna(0.0)
+            else:
+                df['IV'] = 0.0
+            
             df = df.rename(columns={k: v for k, v in rename_map.items() if k in df.columns})
             
             for col in ['Ask', 'OpenInterest', 'Volume', 'Strike']:
