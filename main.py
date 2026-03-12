@@ -105,16 +105,21 @@ def apply_rules(row, prev_data=None):
     
     symbol, price, oi, vol = row['Stock'], row['Ask'], row['OpenInterest'], row['Volume']
     expiry, strike = row['Expiry'], row['Strike']
-    iv = float(str(row.get('IV', 0)).replace('%', '').replace(',', ''))
+    iv = row.get('IV', 0.0)
+    dte = row.get('DTE', 0)
     
-    dte = (datetime.strptime(expiry, "%Y-%m-%d") - datetime.now()).days
     cfg = RULE_CONFIG['SMALL_CAPS_THRESHOLD'] if symbol in TICKER_CATEGORIES['SMALL_CAPS'] else RULE_CONFIG['BIG_CAPS_THRESHOLD']
-    
     p_limit = cfg['PRICE'] * (2.0 if dte > 180 else 1.0)
     
     # 基本防護：太貴或沒人玩的直接濾掉
     if price > p_limit or oi < (cfg['OI'] * 0.5):
         return "", "HOLD", 0
+
+    # 針對末日的隔離機制 (DTE < 5)
+    is_gamble = (dte < 5)
+    if is_gamble:
+        tags.append("🎲末日結算")
+        score -= 2 # 降低末日權重
 
     # A: 莊家掃貨 (Vol/OI Ratio)
     vol_oi_ratio = vol / oi if oi > 0 else 0
@@ -141,7 +146,7 @@ def apply_rules(row, prev_data=None):
     # C: IV 避險
     if iv > 150:
         tags.append("⚠️IV頂峰")
-        score -= 2
+        score -= 3
 
     # D: 屬性標籤
     is_leaps = False
@@ -154,10 +159,14 @@ def apply_rules(row, prev_data=None):
     if oi > 30000: 
         tags.append("🔥萬人塚"); score += 2
 
-    # 綜合判定
+    # 綜合判定與分流
     if action != "STRONG_BUY" and ignition and (is_leaps or is_smoke):
         action = "BUY_WATCH"
         score += 2
+
+    # 強制隔離末日合約到 GAMBLE 區
+    if is_gamble and action in ["STRONG_BUY", "BUY_WATCH"]:
+        action = "GAMBLE"
 
     return " ".join(tags), action, score
 
@@ -165,21 +174,41 @@ def apply_rules(row, prev_data=None):
 # 4. 報表生成 (Report Generation)
 # ==========================================
 def generate_report(df):
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 2.1)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 2.2)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
     
     df['Expiry'] = pd.to_datetime(df['Expiry'])
-    df['DTE'] = (df['Expiry'] - datetime.now()).dt.days
     
-    action_order = ['STRONG_BUY', 'BUY_WATCH', 'HOLD']
+    # 建立一個統一的顯示欄位格式函數
+    def format_view(sub_df):
+        view = sub_df[['Stock', 'Expiry', 'Strike', 'Ask', 'OpenInterest', 'Volume', 'IV', 'Tags', 'Score']].copy()
+        view['Expiry'] = view['Expiry'].dt.strftime('%Y-%m-%d')
+        view['IV'] = view['IV'].apply(lambda x: f"{x:.1f}%")
+        view.columns = ['代號', '到期日', '履約價', '價格', '持倉(OI)', '成交(Vol)', 'IV', '標籤', '分數']
+        return view
+
+    # -----------------------------------
+    # 0. TL;DR 總結 (高分狙擊名單)
+    # -----------------------------------
+    md += "## 🏆 TL;DR 總結 (精選狙擊名單)\n"
+    md += "> 策略：過濾掉結算日雜訊，直擊 Score >= 8 的核心異動。\n\n"
+    tldr_df = df[(df['Score'] >= 8) & (df['Action'] != 'GAMBLE')].sort_values(by=['Score', 'Volume'], ascending=[False, False]).head(10)
+    if not tldr_df.empty:
+        md += format_view(tldr_df).to_markdown(index=False) + "\n\n"
+    else:
+        md += "*今日無高分狙擊標的。*\n\n"
+
+    # -----------------------------------
+    # 1. 核心異動區
+    # -----------------------------------
+    action_order = ['STRONG_BUY', 'BUY_WATCH', 'GAMBLE', 'HOLD']
     
     for action in action_order:
         sub_df = df[df['Action'] == action]
         if sub_df.empty: continue
             
-        icon = "🚨" if action == 'STRONG_BUY' else ("👀" if "WATCH" in action else "🚬")
-        
         if action == 'STRONG_BUY' or action == 'BUY_WATCH':
+            icon = "🚨" if action == 'STRONG_BUY' else "👀"
             title_action = "核彈級異動 (STRONG_BUY)" if action == 'STRONG_BUY' else "重點觀察 (BUY_WATCH)"
             md += f"## {icon} {title_action}\n\n"
             
@@ -187,32 +216,30 @@ def generate_report(df):
             leaps_df = sub_df[leaps_mask].copy()
             short_df = sub_df[~leaps_mask].copy()
             
-            # LEAPS 區塊
+            # LEAPS 區塊 (先顯示)
             if not leaps_df.empty:
                 md += "### 🔭 遠期埋伏 (LEAPS > 120天)\n"
                 md += "> 策略：時間換空間，跟隨聰明錢長期囤貨 (按分數與持倉排序)。\n\n"
                 leaps_df = leaps_df.sort_values(by=['Score', 'OpenInterest'], ascending=[False, False])
-                view = leaps_df[['Stock', 'Expiry', 'Strike', 'Ask', 'OpenInterest', 'Volume', 'IV', 'Tags', 'Score']].copy()
-                view['Expiry'] = view['Expiry'].dt.strftime('%Y-%m-%d')
-                view.columns = ['代號', '到期日', '履約價', '價格', '持倉(OI)', '成交(Vol)', 'IV', '標籤', '分數']
-                md += view.to_markdown(index=False) + "\n\n"
+                md += format_view(leaps_df).to_markdown(index=False) + "\n\n"
 
-            # 短期爆發區塊
+            # 短期波段區塊
             if not short_df.empty:
-                md += "### 🚀 短期爆發 (Short Term < 120天)\n"
-                md += "> 策略：末日輪盤或波段點火，關注資金流向 (按分數與成交排序)。\n\n"
+                md += "### 🚀 短期波段 (Short Term < 120天)\n"
+                md += "> 策略：波段點火，關注資金流向 (排除 DTE<5，按分數與成交排序)。\n\n"
                 short_df = short_df.sort_values(by=['Score', 'Volume'], ascending=[False, False])
-                view = short_df[['Stock', 'Expiry', 'Strike', 'Ask', 'OpenInterest', 'Volume', 'IV', 'Tags', 'Score']].copy()
-                view['Expiry'] = view['Expiry'].dt.strftime('%Y-%m-%d')
-                view.columns = ['代號', '到期日', '履約價', '價格', '持倉(OI)', '成交(Vol)', 'IV', '標籤', '分數']
-                md += view.to_markdown(index=False) + "\n\n"
+                md += format_view(short_df).to_markdown(index=False) + "\n\n"
+                
+        elif action == 'GAMBLE':
+            md += f"## 🎲 末日賭博專區 (DTE < 5)\n"
+            md += "> 警告：極端短線結算，高機率為造市商平倉雜訊，若要玩請當樂透買。\n\n"
+            sub_df = sub_df.sort_values(by=['Volume'], ascending=[False]).head(15) # 賭博專區只列前15大成交量
+            md += format_view(sub_df).to_markdown(index=False) + "\n\n"
+            
         else:
-            md += f"## {icon} 常規雷達 (HOLD)\n"
+            md += f"## 🚬 常規雷達 (HOLD)\n"
             sub_df = sub_df.sort_values(by=['Score', 'Volume'], ascending=[False, False]).head(20) # 只列前20筆防洗版
-            view = sub_df[['Stock', 'Expiry', 'Strike', 'Ask', 'OpenInterest', 'Volume', 'IV', 'Tags', 'Score']].copy()
-            view['Expiry'] = view['Expiry'].dt.strftime('%Y-%m-%d')
-            view.columns = ['代號', '到期日', '履約價', '價格', '持倉(OI)', '成交(Vol)', 'IV', '標籤', '分數']
-            md += view.to_markdown(index=False) + "\n\n"
+            md += format_view(sub_df).to_markdown(index=False) + "\n\n"
             
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(md)
@@ -222,7 +249,7 @@ def generate_report(df):
 # 5. 主執行程序 (Main)
 # ==========================================
 def main():
-    print(f"🔥 啟動 Scanner 2.1 (Full Armored): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 2.2 (IV Fixed & Gamble Zone): {datetime.now().strftime('%Y-%m-%d')}")
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
     
     prev_df = fetch_yesterday_data_from_github()
@@ -240,15 +267,26 @@ def main():
             if df is None or 'c_Openinterest' not in df.columns: continue
             
             # 清洗資料
-            df = df.rename(columns={'strike': 'Strike', 'c_Ask': 'Ask', 'c_Openinterest': 'OpenInterest', 'c_Volume': 'Volume', 'c_IV': 'IV'})
+            rename_map = {'strike': 'Strike', 'c_Ask': 'Ask', 'c_Openinterest': 'OpenInterest', 'c_Volume': 'Volume', 'c_IV': 'IV'}
+            df = df.rename(columns={k: v for k, v in rename_map.items() if k in df.columns})
+            
             for col in ['Ask', 'OpenInterest', 'Volume', 'Strike']:
-                df[col] = pd.to_numeric(df[col].astype(str).str.replace('[$,]', '', regex=True).replace('--', '0'), errors='coerce').fillna(0)
+                if col in df.columns:
+                    df[col] = pd.to_numeric(df[col].astype(str).str.replace('[$,]', '', regex=True).replace('--', '0'), errors='coerce').fillna(0)
+            
+            # 正確解析 IV (移除 % 與 , 並轉 float)
+            if 'IV' in df.columns:
+                df['IV'] = pd.to_numeric(df['IV'].astype(str).str.replace('%', '', regex=False).str.replace(',', '', regex=False).replace('--', '0'), errors='coerce').fillna(0)
+            else:
+                df['IV'] = 0.0
             
             # 過濾並應用規則
             for _, row in df[df['OpenInterest'] > 500].iterrows():
+                dte = (datetime.strptime(d_str, "%Y-%m-%d") - datetime.now()).days
                 d_row = {
                     'Stock': symbol, 'Expiry': d_str, 'Strike': row['Strike'], 'Ask': row['Ask'], 
-                    'OpenInterest': int(row['OpenInterest']), 'Volume': int(row['Volume']), 'IV': row.get('IV', '0%')
+                    'OpenInterest': int(row['OpenInterest']), 'Volume': int(row['Volume']), 
+                    'IV': row['IV'], 'DTE': dte
                 }
                 tags, action, score = apply_rules(d_row, prev_df)
                 if score > 0 or action != "HOLD":
