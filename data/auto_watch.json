@@ -1,0 +1,113 @@
+{
+  "updated_at": "2026-05-11T12:54:26.720453",
+  "criteria": {
+    "MIN_MARKET_CAP": 15000000000.0,
+    "MAX_PCT_FROM_52W_LOW": 1.8,
+    "MIN_AVG_VOLUME": 5000000.0,
+    "MIN_VOL_RATIO_20D": 1.2
+  },
+  "count": 11,
+  "tickers": [
+    "TSCO",
+    "ABT",
+    "NOW",
+    "BSX",
+    "IBM",
+    "IP",
+    "GE",
+    "HOOD",
+    "QCOM",
+    "EBAY",
+    "ANET"
+  ],
+  "details": [
+    {
+      "symbol": "TSCO",
+      "price": 30.65,
+      "pct_from_52w_low": 1.0,
+      "vol_ratio_20d": 1.75,
+      "market_cap_b": 16.1,
+      "score": 18.73
+    },
+    {
+      "symbol": "ABT",
+      "price": 84.32,
+      "pct_from_52w_low": 1.0,
+      "vol_ratio_20d": 1.38,
+      "market_cap_b": 146.9,
+      "score": 16.87
+    },
+    {
+      "symbol": "NOW",
+      "price": 91.18,
+      "pct_from_52w_low": 1.12,
+      "vol_ratio_20d": 1.59,
+      "market_cap_b": 94.0,
+      "score": 16.72
+    },
+    {
+      "symbol": "BSX",
+      "price": 53.93,
+      "pct_from_52w_low": 1.01,
+      "vol_ratio_20d": 1.31,
+      "market_cap_b": 80.2,
+      "score": 16.49
+    },
+    {
+      "symbol": "IBM",
+      "price": 229.76,
+      "pct_from_52w_low": 1.04,
+      "vol_ratio_20d": 1.26,
+      "market_cap_b": 215.9,
+      "score": 15.91
+    },
+    {
+      "symbol": "IP",
+      "price": 33.03,
+      "pct_from_52w_low": 1.12,
+      "vol_ratio_20d": 1.2,
+      "market_cap_b": 17.5,
+      "score": 14.81
+    },
+    {
+      "symbol": "GE",
+      "price": 297.15,
+      "pct_from_52w_low": 1.41,
+      "vol_ratio_20d": 1.28,
+      "market_cap_b": 310.5,
+      "score": 12.3
+    },
+    {
+      "symbol": "HOOD",
+      "price": 77.03,
+      "pct_from_52w_low": 1.38,
+      "vol_ratio_20d": 1.2,
+      "market_cap_b": 69.4,
+      "score": 12.23
+    },
+    {
+      "symbol": "QCOM",
+      "price": 219.09,
+      "pct_from_52w_low": 1.8,
+      "vol_ratio_20d": 1.92,
+      "market_cap_b": 230.9,
+      "score": 11.62
+    },
+    {
+      "symbol": "EBAY",
+      "price": 107.69,
+      "pct_from_52w_low": 1.59,
+      "vol_ratio_20d": 1.32,
+      "market_cap_b": 47.8,
+      "score": 10.75
+    },
+    {
+      "symbol": "ANET",
+      "price": 141.77,
+      "pct_from_52w_low": 1.69,
+      "vol_ratio_20d": 1.27,
+      "market_cap_b": 178.5,
+      "score": 9.46
+    }
+  ]
+}
