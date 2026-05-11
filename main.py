@@ -7,6 +7,34 @@ import time
 import random
 from datetime import datetime, timedelta
 
+import json
+
+def load_auto_watch():
+    """從 data/auto_watch.json 載入每週更新的候選池"""
+    path = os.path.join(DATA_DIR, "auto_watch.json")
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path) as f:
+            data = json.load(f)
+        return data.get('tickers', [])
+    except Exception as e:
+        print(f"⚠️ auto_watch 載入失敗：{e}")
+        return []
+
+def load_catalyst_today():
+    """從 data/catalyst_today.json 載入今日催化劑股"""
+    path = os.path.join(DATA_DIR, "catalyst_today.json")
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path) as f:
+            data = json.load(f)
+        return data.get('tickers', [])
+    except Exception as e:
+        print(f"⚠️ catalyst 載入失敗：{e}")
+        return []
+        
 # ==========================================
 # 1. 設定與目標 (Configuration)
 # ==========================================
@@ -25,7 +53,7 @@ TICKER_CATEGORIES = {
     ]
 }
 
-TARGET_TICKERS = TICKER_CATEGORIES['BIG_CAPS'] + TICKER_CATEGORIES['SMALL_CAPS']
+# TARGET_TICKERS = TICKER_CATEGORIES['BIG_CAPS'] + TICKER_CATEGORIES['SMALL_CAPS']
 
 RULE_CONFIG = {
     'VOL_SPIKE_RATIO': 2.5,  # 點火倍數門檻
@@ -154,6 +182,22 @@ def apply_rules(row, prev_data=None):
 # 4. 報表生成 (Report Generation)
 # ==========================================
 def generate_report(df):
+    # 在 generate_report 開頭：
+    auto_watch = set(load_auto_watch())
+    catalyst = set(load_catalyst_today())
+    
+    def source_tag(symbol):
+        tags = []
+        if symbol in catalyst: tags.append("📰催化劑")
+        elif symbol in auto_watch: tags.append("🔭候選")
+        return " ".join(tags)
+    
+    # 在 format_view 裡，給 Tags 欄加上來源：
+    view['Tags'] = view.apply(
+        lambda r: f"{source_tag(r['Stock'])} {r['Tags']}".strip(), 
+        axis=1
+    )
+    
     md = "# 🚬 每日妖股獵殺報表 (Scanner 3.0 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
     
@@ -222,13 +266,31 @@ def main():
     print(f"🔥 啟動 Scanner 3.0 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
     
+    # 載入動態清單
+    auto_watch = load_auto_watch()
+    catalyst = load_catalyst_today()
+    
+    # 合併並去重，保持順序（核心池優先）
+    seen = set()
+    target_tickers = []
+    for t in (TICKER_CATEGORIES['BIG_CAPS'] 
+              + TICKER_CATEGORIES['SMALL_CAPS'] 
+              + auto_watch 
+              + catalyst):
+        if t not in seen:
+            seen.add(t)
+            target_tickers.append(t)
+    
+    print(f"🎯 核心池: {len(TICKER_CATEGORIES['BIG_CAPS']) + len(TICKER_CATEGORIES['SMALL_CAPS'])} 檔")
+    print(f"🔭 自動候選: {len(auto_watch)} 檔")
+    print(f"📰 催化劑: {len(catalyst)} 檔")
+    print(f"🎯 掃描總數（去重後）: {len(target_tickers)} 檔")
+    
     prev_df = fetch_yesterday_data_from_github()
     results = []
     target_dates = get_target_dates()
     
-    print(f"🎯 掃描標的總數: {len(TARGET_TICKERS)}")
-    
-    for symbol in TARGET_TICKERS:
+    for symbol in target_tickers:
         print(f"🔍 {symbol}...", end=" ", flush=True)
         
         try:
