@@ -1,0 +1,308 @@
+{
+  "updated_at": "2026-05-11T12:56:20.710043",
+  "stats": {
+    "total_items": 107,
+    "items_with_company": 19,
+    "items_with_catalyst": 14,
+    "items_both": 5
+  },
+  "count": 20,
+  "tickers": [
+    "MU",
+    "INTC",
+    "GOOGL",
+    "MRNA",
+    "CEG",
+    "GOLD",
+    "TGT",
+    "WMT",
+    "NFLX",
+    "AMZN",
+    "IBM",
+    "MS",
+    "JPM",
+    "GS",
+    "NVDA",
+    "AMAT",
+    "TSLA",
+    "META",
+    "MSFT",
+    "AAPL"
+  ],
+  "details": [
+    {
+      "symbol": "MU",
+      "score": 6,
+      "evidence": [
+        {
+          "title": "Micron shares are rising again despite weak overall market. Why memory chip rally seems unstoppable",
+          "catalysts": [
+            "rally",
+            "rising"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Intel, Micron gain premarket; Certara slips",
+          "catalysts": [
+            "gain"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Intel, Micron gain premarket; Certara slips",
+          "catalysts": [
+            "gain"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Stock Market Today: Dow Futures Fall, Oil Jumps; Intel, Lumentum, Moderna, Circle Internet All Rise (Live Coverage)",
+          "catalysts": [
+            "jumps"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Alphabet's 160% rally in a year reflects value of owning 'most of the stack' in AI",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Alphabet considers first yen bond sale to fund AI goals",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRNA",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Stock Market Today: Dow Futures Fall, Oil Jumps; Intel, Lumentum, Moderna, Circle Internet All Rise (Live Coverage)",
+          "catalysts": [
+            "jumps"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "CEG",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Earnings live updates: Barrick, Constellation Energy stocks rise on earnings beats",
+          "catalysts": [
+            "earnings beats"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GOLD",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Earnings live updates: Barrick, Constellation Energy stocks rise on earnings beats",
+          "catalysts": [
+            "earnings beats"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Target is trying to win back busy families from Walmart, starting with the baby aisle",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "There’s a new top target for the S&P 500 as the ‘melt-up’ intensifies",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Applied Materials in focus as Cantor Fitzgerald ups price target ahead of earnings",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Target is trying to win back busy families from Walmart, starting with the baby aisle",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "This AI Stock Is Now Worth More Than Tesla, Meta And Walmart",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "With Netflix new ad-free standard plan at $20, streaming's tipping point into old TV is getting closer",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Target is trying to win back busy families from Walmart, starting with the baby aisle",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Do you need a chief AI officer? Here's how the tech is changing boardrooms",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "A ‘race against time.’ Hormuz closure could push Brent to $150 a barrel by summer, warns Morgan Stanley.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "AI plays in emerging markets offer more upside than in the U.S. at present, says JPMorgan",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "As Trump heads to China, here’s how much the dollar is overvalued, according to Goldman Sachs",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "The investor who backed Nvidia in 2016 and a memory-chip maker in 2024 now has a third conviction call",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Applied Materials in focus as Cantor Fitzgerald ups price target ahead of earnings",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "This AI Stock Is Now Worth More Than Tesla, Meta And Walmart",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "This AI Stock Is Now Worth More Than Tesla, Meta And Walmart",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Got $25,000? Apple vs Microsoft- Only One Tech Titan is Winning The AI Race",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Got $25,000? Apple vs Microsoft- Only One Tech Titan is Winning The AI Race",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    }
+  ],
+  "watch_only": {
+    "Cerebras (pre-IPO)": 3,
+    "OpenAI (private)": 2,
+    "Anthropic (private)": 1,
+    "Nintendo": 1,
+    "Saudi Aramco": 1
+  }
+}
