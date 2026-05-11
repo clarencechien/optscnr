@@ -181,25 +181,27 @@ def apply_rules(row, prev_data=None):
 # ==========================================
 # 4. 報表生成 (Report Generation)
 # ==========================================
+# ==========================================
+# 4. 報表生成 (Report Generation)
+# ==========================================
 def generate_report(df):
-    # 在 generate_report 開頭：
+    # 載入動態來源（用於來源標籤）
     auto_watch = set(load_auto_watch())
     catalyst = set(load_catalyst_today())
     
     def source_tag(symbol):
-        tags = []
-        if symbol in catalyst: tags.append("📰催化劑")
-        elif symbol in auto_watch: tags.append("🔭候選")
-        return " ".join(tags)
-    
-    # 在 format_view 裡，給 Tags 欄加上來源：
-    view['Tags'] = view.apply(
-        lambda r: f"{source_tag(r['Stock'])} {r['Tags']}".strip(), 
-        axis=1
-    )
+        if symbol in catalyst: return "📰催化劑"
+        elif symbol in auto_watch: return "🔭候選"
+        return ""
     
     md = "# 🚬 每日妖股獵殺報表 (Scanner 3.0 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
+    
+    # 在最上方附上動態來源摘要
+    if catalyst:
+        md += f"**📰 今日催化劑股**: {', '.join(sorted(catalyst))}\n\n"
+    if auto_watch:
+        md += f"**🔭 本週候選池**: {', '.join(sorted(auto_watch))}\n\n"
     
     df['Expiry'] = pd.to_datetime(df['Expiry'])
     
@@ -207,6 +209,11 @@ def generate_report(df):
         view = sub_df[['Stock', 'Expiry', 'Strike', 'Ask', 'OpenInterest', 'Volume', 'IV', 'Tags', 'Score']].copy()
         view['Expiry'] = view['Expiry'].dt.strftime('%Y-%m-%d')
         view['IV'] = view['IV'].apply(lambda x: f"{x:.1f}%")
+        # 在標籤前面加上來源（📰催化劑 / 🔭候選）
+        view['Tags'] = view.apply(
+            lambda r: f"{source_tag(r['Stock'])} {r['Tags']}".strip(),
+            axis=1
+        )
         view.columns = ['代號', '到期日', '履約價', '價格', '持倉(OI)', '成交(Vol)', 'IV', '標籤', '分數']
         return view
 
@@ -258,7 +265,7 @@ def generate_report(df):
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(md)
     print("📝 README.md 報表已生成。")
-
+    
 # ==========================================
 # 5. 主執行程序 (Main)
 # ==========================================
