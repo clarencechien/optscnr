@@ -2,8 +2,9 @@ name: Weekly Universe Update
 
 on:
   schedule:
-    # 每週日 UTC 23:00（台灣時間週一早上 7:00）
-    - cron: '0 23 * * 0'
+    # 台灣週日早上 7:00 = UTC 週六 23:00
+    # （週日早上更新好，週一爬 catalyst 就能用到新清單）
+    - cron: '0 23 * * 6'
   workflow_dispatch:  # 允許手動觸發
 
 jobs:
