@@ -1,0 +1,36 @@
+name: Daily Catalyst Fetch
+
+on:
+  schedule:
+    # 每日 UTC 11:00 跑（台灣時間晚上 19:00，比主 scanner 早一點）
+    - cron: '0 11 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests
+      
+      - name: Run catalyst fetch
+        run: python catalyst_fetch.py
+      
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/catalyst_today.json
+          git diff --quiet --cached || git commit -m "📰 Daily catalyst fetch [skip ci]"
+          git push
