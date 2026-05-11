@@ -2,8 +2,8 @@ name: Daily Cigarette Butt Scanner
 
 on:
   schedule:
-    # 台灣週一到週六早上 6:00 = UTC 週日到週五 22:00
-    - cron: '0 22 * * 0-5'
+    # scanner.yml — 台灣週一到週六 06:00
+    - cron: '0 22 * * 0-5'    # UTC 22:00
   workflow_dispatch: # 允許手動按按鈕觸發
 
 permissions:
