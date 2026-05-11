@@ -1,38 +1,36 @@
 {
-  "updated_at": "2026-05-11T12:56:20.710043",
+  "updated_at": "2026-05-11T21:50:06.667236",
   "stats": {
-    "total_items": 107,
+    "total_items": 102,
     "items_with_company": 19,
-    "items_with_catalyst": 14,
-    "items_both": 5
+    "items_with_catalyst": 17,
+    "items_both": 4
   },
-  "count": 20,
+  "count": 18,
   "tickers": [
     "MU",
-    "INTC",
-    "GOOGL",
-    "MRNA",
-    "CEG",
-    "GOLD",
-    "TGT",
-    "WMT",
-    "NFLX",
-    "AMZN",
-    "IBM",
-    "MS",
-    "JPM",
-    "GS",
     "NVDA",
-    "AMAT",
+    "AMD",
+    "ASTS",
     "TSLA",
-    "META",
+    "AMZN",
+    "AAPL",
     "MSFT",
-    "AAPL"
+    "GOOGL",
+    "GM",
+    "JPM",
+    "META",
+    "ORCL",
+    "GS",
+    "HIMS",
+    "SBUX",
+    "CRWV",
+    "PLTR"
   ],
   "details": [
     {
       "symbol": "MU",
-      "score": 6,
+      "score": 4,
       "evidence": [
         {
           "title": "Micron shares are rising again despite weak overall market. Why memory chip rally seems unstoppable",
@@ -41,136 +39,74 @@
             "rising"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "Intel, Micron gain premarket; Certara slips",
-          "catalysts": [
-            "gain"
-          ],
-          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "INTC",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Intel, Micron gain premarket; Certara slips",
-          "catalysts": [
-            "gain"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Stock Market Today: Dow Futures Fall, Oil Jumps; Intel, Lumentum, Moderna, Circle Internet All Rise (Live Coverage)",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
+      "symbol": "NVDA",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Alphabet's 160% rally in a year reflects value of owning 'most of the stack' in AI",
+          "title": "Iren’s stock pulls back as investors assess the steep price of the AI buildout",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Advanced Micro Devices (AMD) Doesn’t Need to Beat Nvidia (NVDA) To Be a Winner – Cathie Wood’s Top AI Chip Stock",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "AI Demand Powered 303% Rally in AMD Stock. Huge Growth Could Still Be Ahead.",
           "catalysts": [
             "rally"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Alphabet considers first yen bond sale to fund AI goals",
+          "title": "Advanced Micro Devices (AMD) Doesn’t Need to Beat Nvidia (NVDA) To Be a Winner – Cathie Wood’s Top AI Chip Stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRNA",
+      "symbol": "ASTS",
       "score": 2,
       "evidence": [
         {
-          "title": "Stock Market Today: Dow Futures Fall, Oil Jumps; Intel, Lumentum, Moderna, Circle Internet All Rise (Live Coverage)",
+          "title": "AST SpaceMobile’s stock drops as earnings come with a big disappointment",
           "catalysts": [
-            "jumps"
+            "drops"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "CEG",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Earnings live updates: Barrick, Constellation Energy stocks rise on earnings beats",
-          "catalysts": [
-            "earnings beats"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOLD",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Earnings live updates: Barrick, Constellation Energy stocks rise on earnings beats",
-          "catalysts": [
-            "earnings beats"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
+      "symbol": "TSLA",
       "score": 1.5,
       "evidence": [
         {
-          "title": "Target is trying to win back busy families from Walmart, starting with the baby aisle",
+          "title": "Trump invites Elon Musk, Tim Cook, Larry Fink and other CEOs to join China trip for Xi summit",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "There’s a new top target for the S&P 500 as the ‘melt-up’ intensifies",
+          "title": "Former Tesla CFO Deepak Ahuja joins EV battery recycler Redwood Materials",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Applied Materials in focus as Cantor Fitzgerald ups price target ahead of earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Target is trying to win back busy families from Walmart, starting with the baby aisle",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "This AI Stock Is Now Worth More Than Tesla, Meta And Walmart",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "With Netflix new ad-free standard plan at $20, streaming's tipping point into old TV is getting closer",
+          "title": "Tesla Stock Is on a Winning Streak with China-Made EVs. Its Imports to Europe Are Increasing.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -178,32 +114,59 @@
     },
     {
       "symbol": "AMZN",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Target is trying to win back busy families from Walmart, starting with the baby aisle",
+          "title": "Hassett says AI isn't costing anybody their job right now — but tech layoffs keep coming",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Why Amazon (AMZN) is a Top AI Stock Pick of Cathie Wood?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IBM",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Do you need a chief AI officer? Here's how the tech is changing boardrooms",
+          "title": "Trump invites Elon Musk, Tim Cook, Larry Fink and other CEOs to join China trip for Xi summit",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MS",
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "A ‘race against time.’ Hormuz closure could push Brent to $150 a barrel by summer, warns Morgan Stanley.",
+          "title": "OpenAI trial: Nadella says Musk never raised concerns to him about Microsoft investment",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Google says it likely thwarted effort by hacker group to use AI for 'mass exploitation event'",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "GM cutting hundreds of salaried IT workers as it trims costs, evaluates needs",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -214,7 +177,29 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "AI plays in emerging markets offer more upside than in the U.S. at present, says JPMorgan",
+          "title": "JPMorgan Chase-led bank group reins in credit line to troubled KKR private credit fund as losses mount",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Hassett says AI isn't costing anybody their job right now — but tech layoffs keep coming",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Hassett says AI isn't costing anybody their job right now — but tech layoffs keep coming",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -232,66 +217,44 @@
       ]
     },
     {
-      "symbol": "NVDA",
+      "symbol": "HIMS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "The investor who backed Nvidia in 2016 and a memory-chip maker in 2024 now has a third conviction call",
+          "title": "After-hours movers: HIMS, ACHR, HLIT, ABCL, PLUG, BZH, PSIX, ASTS",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMAT",
+      "symbol": "SBUX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Applied Materials in focus as Cantor Fitzgerald ups price target ahead of earnings",
+          "title": "Starbucks cuts 61 technology jobs in Seattle",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "CRWV",
       "score": 0.5,
       "evidence": [
         {
-          "title": "This AI Stock Is Now Worth More Than Tesla, Meta And Walmart",
+          "title": "Should You Buy CoreWeave (CRWV) on Post-Earnings Dip?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "PLTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "This AI Stock Is Now Worth More Than Tesla, Meta And Walmart",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Got $25,000? Apple vs Microsoft- Only One Tech Titan is Winning The AI Race",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Got $25,000? Apple vs Microsoft- Only One Tech Titan is Winning The AI Race",
+          "title": "Dan Ives Can’t Make It Any Clearer: Palantir Stock Is Still a ‘Golden Goose’ Despite Q1 Earnings Fears",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -299,10 +262,9 @@
     }
   ],
   "watch_only": {
-    "Cerebras (pre-IPO)": 3,
-    "OpenAI (private)": 2,
+    "OpenAI (private)": 3,
     "Anthropic (private)": 1,
-    "Nintendo": 1,
-    "Saudi Aramco": 1
+    "Saudi Aramco": 1,
+    "Cerebras (pre-IPO)": 1
   }
 }
