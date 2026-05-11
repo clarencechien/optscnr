@@ -2,8 +2,8 @@ name: Daily Catalyst Fetch
 
 on:
   schedule:
-    # 每日 UTC 11:00 跑（台灣時間晚上 19:00，比主 scanner 早一點）
-    - cron: '0 11 * * 1-5'
+    # 台灣週一到週六早上 5:00 = UTC 週日到週五 21:00
+    - cron: '0 21 * * 0-5'
   workflow_dispatch:
 
 jobs:
