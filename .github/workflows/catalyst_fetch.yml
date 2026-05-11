@@ -2,8 +2,8 @@ name: Daily Catalyst Fetch
 
 on:
   schedule:
-    # 台灣週一到週六早上 5:00 = UTC 週日到週五 21:00
-    - cron: '0 21 * * 0-5'
+    # catalyst_fetch.yml — 台灣週一到週六 04:30 早一點半
+    - cron: '30 20 * * 0-5'   # UTC 20:30
   workflow_dispatch:
 
 jobs:
