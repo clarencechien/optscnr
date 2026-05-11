@@ -194,7 +194,7 @@ def generate_report(df):
         elif symbol in auto_watch: return "🔭候選"
         return ""
     
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.0 / yf Engine)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.1 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
     
     # 在最上方附上動態來源摘要
@@ -270,7 +270,7 @@ def generate_report(df):
 # 5. 主執行程序 (Main)
 # ==========================================
 def main():
-    print(f"🔥 啟動 Scanner 3.0 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 3.1 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
     
     # 載入動態清單
