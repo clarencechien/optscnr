@@ -9,6 +9,12 @@ from datetime import datetime, timedelta
 
 import json
 
+from enrichment import (
+    add_oi_delta, 
+    format_oi_delta, 
+    generate_deep_cards,
+)
+
 def load_auto_watch():
     """從 data/auto_watch.json 載入每週更新的候選池"""
     path = os.path.join(DATA_DIR, "auto_watch.json")
@@ -185,6 +191,11 @@ def apply_rules(row, prev_data=None):
 # 4. 報表生成 (Report Generation)
 # ==========================================
 def generate_report(df):
+    # === 新增：呼叫 enrichment ===
+    print("\n🔬 開始計算 enrichment...")
+    df, hist_date = add_oi_delta(df)
+    print(f"  ✅ OI Δ7d 已計算 (vs {hist_date})")
+    
     # 載入動態來源（用於來源標籤）
     auto_watch = set(load_auto_watch())
     catalyst = set(load_catalyst_today())
@@ -206,15 +217,16 @@ def generate_report(df):
     df['Expiry'] = pd.to_datetime(df['Expiry'])
     
     def format_view(sub_df):
-        view = sub_df[['Stock', 'Expiry', 'Strike', 'Ask', 'OpenInterest', 'Volume', 'IV', 'Tags', 'Score']].copy()
+        view = sub_df[['Stock', 'Expiry', 'Strike', 'Ask', 'OpenInterest', 'OI_d7', 'Volume', 'IV', 'Tags', 'Score']].copy()
         view['Expiry'] = view['Expiry'].dt.strftime('%Y-%m-%d')
         view['IV'] = view['IV'].apply(lambda x: f"{x:.1f}%")
-        # 在標籤前面加上來源（📰催化劑 / 🔭候選）
+        # 新增：格式化 OI_d7
+        view['OI_d7'] = view['OI_d7'].apply(format_oi_delta)
         view['Tags'] = view.apply(
             lambda r: f"{source_tag(r['Stock'])} {r['Tags']}".strip(),
             axis=1
         )
-        view.columns = ['代號', '到期日', '履約價', '價格', '持倉(OI)', '成交(Vol)', 'IV', '標籤', '分數']
+        view.columns = ['代號', '到期日', '履約價', '價格', '持倉(OI)', 'Δ7d', '成交(Vol)', 'IV', '標籤', '分數']
         return view
 
     md += "## 🏆 TL;DR 總結 (精選狙擊名單)\n"
@@ -262,6 +274,15 @@ def generate_report(df):
             sub_df = sub_df.sort_values(by=['Score', 'Volume'], ascending=[False, False]).head(20)
             md += format_view(sub_df).to_markdown(index=False) + "\n\n"
             
+    # === 新增：Top 5 深度卡片（放在報表最下方） ===
+    print("\n🔬 開始生成深度卡片...")
+    try:
+        deep_section = generate_deep_cards(df, top_n=5)
+        md += deep_section
+    except Exception as e:
+        print(f"  ⚠️ 深度卡片生成失敗：{e}")
+        md += f"\n## 🔬 深度分析\n*（生成失敗：{e}）*\n"
+                
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(md)
     print("📝 README.md 報表已生成。")
@@ -368,6 +389,9 @@ def main():
     if results:
         final_df = pd.DataFrame(results).sort_values(by=['Score', 'Volume'], ascending=[False, False])
         today_str = datetime.now().strftime("%Y-%m-%d")
+        
+        # from enrichment import add_oi_delta
+        # final_df, _ = add_oi_delta(final_df)  # 提前計算
         
         final_df.to_csv(f"{DATA_DIR}/{today_str}.csv", index=False)
         final_df.to_csv(f"{DATA_DIR}/latest.csv", index=False)
