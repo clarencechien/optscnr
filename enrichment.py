@@ -115,7 +115,9 @@ def fetch_iv_term_structure(symbol):
     抓取一個標的的 IV term structure
     回傳 dict: {expiry_date: atm_iv_pct}
     
-    抓 ATM call 的 IV，最多 6 個到期日（避免太慢）
+    【v2 修正】
+    舊版：抓前 6 個到期日 → 全擠在近月（週選太密）
+    新版：智慧選擇不同時間範圍的到期日（近月/中月/遠月/LEAPS）
     """
     try:
         tk = yf.Ticker(symbol)
@@ -128,18 +130,47 @@ def fetch_iv_term_structure(symbol):
         if not spot:
             return None, None
         
-        expiries = tk.options[:6] if tk.options else []
-        if not expiries:
+        all_expiries = tk.options if tk.options else []
+        if not all_expiries:
             return None, spot
         
+        # 智慧選擇：依距離今日的天數，挑選代表性到期日
+        # 目標：~14 天 / ~30 天 / ~60 天 / ~120 天 / ~250 天 / ~500 天
+        today = datetime.now()
+        target_dtes = [14, 30, 60, 120, 250, 500]
+        
+        # 計算每個 expiry 的 DTE
+        expiry_dtes = []
+        for exp in all_expiries:
+            try:
+                exp_dt = datetime.strptime(exp, '%Y-%m-%d')
+                dte = (exp_dt - today).days
+                if dte > 0:
+                    expiry_dtes.append((exp, dte))
+            except Exception:
+                continue
+        
+        # 對每個目標 DTE，找最接近的實際到期日
+        selected_expiries = []
+        used = set()
+        for target in target_dtes:
+            if not expiry_dtes:
+                break
+            # 找離 target 最近的 expiry
+            closest = min(expiry_dtes, key=lambda x: abs(x[1] - target))
+            if closest[0] not in used:
+                selected_expiries.append(closest[0])
+                used.add(closest[0])
+        
+        # 對每個選定的到期日抓 ATM call IV
         term_structure = {}
-        for exp in expiries:
+        for exp in selected_expiries:
             try:
                 chain = tk.option_chain(exp)
                 calls = chain.calls
                 if len(calls) == 0:
                     continue
-                # 找最接近 ATM 的合約
+                calls = calls.copy()
                 calls['distance'] = (calls['strike'] - spot).abs()
                 atm = calls.nsmallest(1, 'distance').iloc[0]
                 iv = atm.get('impliedVolatility', 0) * 100
@@ -155,35 +186,53 @@ def fetch_iv_term_structure(symbol):
         return None, None
 
 
-def calc_oi_accumulation(symbol):
+def calc_oi_accumulation(symbol, today_df):
     """
-    計算該標的過去 7/14/30 天 OI 累積變化
-    回傳 dict: {'d7': ..., 'd14': ..., 'd30': ...}
+    計算該標的 Top 合約的 OI 累積變化（過去 7/14/30 天）
+    
+    【v2 修正】
+    舊版：直接加總所有合約 OI → 因為 CSV 只記錄高分合約，加總沒意義
+    新版：只看「同一支股票今天分數最高的 5 張合約」，比對歷史 CSV 裡的同合約 OI
     """
     result = {}
     
-    # 抓今日 CSV
-    today_str = datetime.now().strftime('%Y-%m-%d')
-    today_path = os.path.join(DATA_DIR, f"{today_str}.csv")
-    if not os.path.exists(today_path):
-        today_path = os.path.join(DATA_DIR, "latest.csv")
+    # 取得該 ticker 今天分數最高的 5 張合約作為「代表合約」
+    symbol_today = today_df[today_df['Stock'] == symbol].sort_values(
+        by='Score', ascending=False
+    ).head(5)
     
-    try:
-        today_df = pd.read_csv(today_path)
-        today_oi = today_df[today_df['Stock'] == symbol]['OpenInterest'].sum()
-    except Exception:
+    if len(symbol_today) == 0:
         return {'d7': None, 'd14': None, 'd30': None}
+    
+    # 今天這 5 張合約的總 OI
+    today_oi_sum = symbol_today['OpenInterest'].sum()
+    
+    # 建立合約 key 集合
+    contract_keys = set()
+    for _, row in symbol_today.iterrows():
+        key = (row['Stock'], str(row['Expiry'])[:10], float(row['Strike']))
+        contract_keys.add(key)
     
     for label, days in [('d7', 7), ('d14', 14), ('d30', 30)]:
         hist_df, _ = load_historical_csv(days_back=days)
         if hist_df is None:
             result[label] = None
             continue
-        try:
-            prev_oi = hist_df[hist_df['Stock'] == symbol]['OpenInterest'].sum()
-            result[label] = int(today_oi - prev_oi)
-        except Exception:
-            result[label] = None
+        
+        # 從歷史 CSV 找這 5 張合約對應的 OI
+        prev_oi_sum = 0
+        found_any = False
+        for _, h_row in hist_df.iterrows():
+            h_key = (h_row['Stock'], str(h_row['Expiry'])[:10], float(h_row['Strike']))
+            if h_key in contract_keys:
+                prev_oi_sum += int(h_row.get('OpenInterest', 0))
+                found_any = True
+        
+        if found_any:
+            result[label] = int(today_oi_sum - prev_oi_sum)
+        else:
+            # 如果歷史中完全沒這些合約，視為「全新建倉」
+            result[label] = int(today_oi_sum)
     
     return result
 
@@ -244,8 +293,8 @@ def generate_deep_card(symbol, df, hist_date=None):
     total_vol = symbol_contracts['Volume'].sum()
     total_oi = symbol_contracts['OpenInterest'].sum()
     
-    # === OI 累積變化 ===
-    oi_changes = calc_oi_accumulation(symbol)
+    # === OI 累積變化（用合約級比對）===
+    oi_changes = calc_oi_accumulation(symbol, df)
     
     md += "**📊 OI 累積建倉**\n\n"
     if any(v is not None for v in oi_changes.values()):
