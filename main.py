@@ -95,15 +95,43 @@ def get_target_dates():
     return sorted(list(dates))
 
 def fetch_yesterday_data_from_github():
+    """
+    優先讀本地歷史 CSV（最穩），fallback 到 GitHub raw
+    """
+    # 嘗試本地 1-5 天前的 CSV（週末/假日可能要往前找）
+    for days_back in range(1, 6):
+        target_date = (datetime.now() - timedelta(days=days_back)).strftime('%Y-%m-%d')
+        local_path = os.path.join(DATA_DIR, f"{target_date}.csv")
+        if os.path.exists(local_path):
+            try:
+                df = pd.read_csv(local_path)
+                print(f"📅 從本地載入 {target_date} 的數據（{len(df)} 筆），啟動動能比對。")
+                return df
+            except Exception as e:
+                print(f"⚠️ 本地 {target_date}.csv 讀取失敗：{e}")
+                continue
+    
+    # 本地 latest.csv 試試
+    local_latest = os.path.join(DATA_DIR, "latest.csv")
+    if os.path.exists(local_latest):
+        try:
+            df = pd.read_csv(local_latest)
+            print(f"📅 從本地載入 latest.csv（{len(df)} 筆），啟動動能比對。")
+            return df
+        except Exception:
+            pass
+    
+    # 最後才走 GitHub raw（保留作為遠端 fallback）
     url = f"https://raw.githubusercontent.com/{GITHUB_USER}/{REPO_NAME}/{BRANCH}/{DATA_DIR}/latest.csv"
     try:
         res = requests.get(url, timeout=10)
         if res.status_code == 200:
-            print("📅 歷史最新數據載入成功，啟動動能比對。")
+            print("📅 從 GitHub raw 載入歷史數據，啟動動能比對。")
             return pd.read_csv(io.StringIO(res.text))
-    except:
+    except Exception:
         pass
-    print("⚠️ 無法載入歷史數據，降級為盲測模式。")
+    
+    print("⚠️ 無法載入歷史數據，降級為盲測模式（所有合約都會缺「🚀點火」標籤）。")
     return None
 
 # ==========================================
