@@ -1,89 +1,54 @@
 {
-  "updated_at": "2026-05-11T21:50:06.667236",
+  "updated_at": "2026-05-12T21:50:15.210672",
   "stats": {
-    "total_items": 102,
-    "items_with_company": 19,
-    "items_with_catalyst": 17,
+    "total_items": 106,
+    "items_with_company": 20,
+    "items_with_catalyst": 20,
     "items_both": 4
   },
-  "count": 18,
+  "count": 20,
   "tickers": [
-    "MU",
     "NVDA",
+    "QCOM",
     "AMD",
-    "ASTS",
-    "TSLA",
-    "AMZN",
+    "PLTR",
+    "AVGO",
+    "MRVL",
     "AAPL",
-    "MSFT",
+    "INTC",
     "GOOGL",
     "GM",
-    "JPM",
-    "META",
-    "ORCL",
-    "GS",
     "HIMS",
-    "SBUX",
-    "CRWV",
-    "PLTR"
+    "AMZN",
+    "NKE",
+    "BA",
+    "QBTS",
+    "MSFT",
+    "NFLX",
+    "META",
+    "RIVN",
+    "SOFI"
   ],
   "details": [
     {
-      "symbol": "MU",
-      "score": 4,
+      "symbol": "NVDA",
+      "score": 6.5,
       "evidence": [
         {
-          "title": "Micron shares are rising again despite weak overall market. Why memory chip rally seems unstoppable",
+          "title": "Trump is taking more than a dozen U.S. executives to China. Jensen Huang isn't one of them",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Qualcomm drops 11% as chip stocks pull back from record AI-driven rally",
           "catalysts": [
             "rally",
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Iren’s stock pulls back as investors assess the steep price of the AI buildout",
-          "catalysts": [
-            "partnership"
+            "drops"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Advanced Micro Devices (AMD) Doesn’t Need to Beat Nvidia (NVDA) To Be a Winner – Cathie Wood’s Top AI Chip Stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "AI Demand Powered 303% Rally in AMD Stock. Huge Growth Could Still Be Ahead.",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Advanced Micro Devices (AMD) Doesn’t Need to Beat Nvidia (NVDA) To Be a Winner – Cathie Wood’s Top AI Chip Stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASTS",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "AST SpaceMobile’s stock drops as earnings come with a big disappointment",
+          "title": "IREN Drops 9% After Friday Rip: NVIDIA AI Cloud Excitement Cools as Profit-Taking Hits",
           "catalysts": [
             "drops"
           ],
@@ -92,59 +57,103 @@
       ]
     },
     {
-      "symbol": "TSLA",
-      "score": 1.5,
+      "symbol": "QCOM",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Trump invites Elon Musk, Tim Cook, Larry Fink and other CEOs to join China trip for Xi summit",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Qualcomm drops 11% as chip stocks pull back from record AI-driven rally",
+          "catalysts": [
+            "rally",
+            "drops"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Former Tesla CFO Deepak Ahuja joins EV battery recycler Redwood Materials",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Tesla Stock Is on a Winning Streak with China-Made EVs. Its Imports to Europe Are Increasing.",
+          "title": "Intel Corporation (INTC) Appoints Qualcomm Executive to Manage its PC and Physical AI Business",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 1.0,
+      "symbol": "AMD",
+      "score": 2,
       "evidence": [
         {
-          "title": "Hassett says AI isn't costing anybody their job right now — but tech layoffs keep coming",
-          "catalysts": [],
-          "has_catalyst": false
-        },
+          "title": "AI super rally has retail investors acting the most aggressive since trading frenzy during Covid",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 2,
+      "evidence": [
         {
-          "title": "Why Amazon (AMZN) is a Top AI Stock Pick of Cathie Wood?",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "AI super rally has retail investors acting the most aggressive since trading frenzy during Covid",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "AI super rally has retail investors acting the most aggressive since trading frenzy during Covid",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MRVL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Marvell Technology, Inc. (MRVL) Announces Acquisition of Polariton Technologies",
+          "catalysts": [
+            "acquisition"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "AAPL",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Trump invites Elon Musk, Tim Cook, Larry Fink and other CEOs to join China trip for Xi summit",
+          "title": "Google races to put Gemini at the center of Android before Apple’s AI reboot",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple Stock: Alpha Engine Or Portfolio Diversifier?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
-      "score": 0.5,
+      "symbol": "INTC",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "OpenAI trial: Nadella says Musk never raised concerns to him about Microsoft investment",
+          "title": "Intel’s stock just guided the chip sector toward a sharp selloff. Here’s why.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Intel Corporation (INTC) Appoints Qualcomm Executive to Manage its PC and Physical AI Business",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -155,7 +164,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Google says it likely thwarted effort by hacker group to use AI for 'mass exploitation event'",
+          "title": "Google races to put Gemini at the center of Android before Apple’s AI reboot",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -166,51 +175,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "GM cutting hundreds of salaried IT workers as it trims costs, evaluates needs",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "JPMorgan Chase-led bank group reins in credit line to troubled KKR private credit fund as losses mount",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Hassett says AI isn't costing anybody their job right now — but tech layoffs keep coming",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Hassett says AI isn't costing anybody their job right now — but tech layoffs keep coming",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "As Trump heads to China, here’s how much the dollar is overvalued, according to Goldman Sachs",
+          "title": "Laid-off GM employees tell of ominous email, severance and role of AI",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -221,40 +186,106 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "After-hours movers: HIMS, ACHR, HLIT, ABCL, PLUG, BZH, PSIX, ASTS",
+          "title": "Hims & Hers plummets 13% after first-quarter loss, weak earnings guidance ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SBUX",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Starbucks cuts 61 technology jobs in Seattle",
+          "title": "Amazon accelerates delivery race with 30-minute drop-offs in dozens of U.S. cities",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWV",
+      "symbol": "NKE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Should You Buy CoreWeave (CRWV) on Post-Earnings Dip?",
+          "title": "On Holding beats first-quarter expectations, sees double-digit growth in China as Nike lags",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dan Ives Can’t Make It Any Clearer: Palantir Stock Is Still a ‘Golden Goose’ Despite Q1 Earnings Fears",
+          "title": "Boeing could finally reignite its China business. Will that breathe new life into its stock?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "D-Wave outlines plan for 100 logical qubits by end of 2032 as it expects 2 to 3 system deals per year",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft Stock Still Looks Undervalued Based on FCF Projections, Despite Higher Capex",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Wall Street Bullish or Bearish on Netflix Stock?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Market is Wrong About Meta Platforms (META)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RIVN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Rivian Alarm Bells Might Be Ringing",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SOFI",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Her $55,000 student loan balance vanished overnight — 10 months later, SoFi took her to court",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -262,9 +293,8 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 3,
     "Anthropic (private)": 1,
-    "Saudi Aramco": 1,
+    "OpenAI (private)": 1,
     "Cerebras (pre-IPO)": 1
   }
 }
