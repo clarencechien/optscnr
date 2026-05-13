@@ -1,0 +1,37 @@
+name: Weekly Small Cap Momentum
+
+on:
+  schedule:
+    # 台灣週日早上 8:00 = UTC 週六 00:00
+    # 比 universe_update 早一點，這樣它們可以分散資料寫入
+    - cron: '0 0 * * 6'
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas requests
+      
+      - name: Run small cap momentum scan
+        run: python small_cap_momentum.py
+      
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/small_caps_momentum.json
+          git diff --quiet --cached || git commit -m "🎰 Weekly small cap momentum scan [skip ci]"
+          git push
