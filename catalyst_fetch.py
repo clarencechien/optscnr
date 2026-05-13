@@ -1,15 +1,11 @@
 """
-catalyst_fetch v5 — 修補 v4 的子字串誤判 bug
+catalyst_fetch v6 — 大幅擴充 TICKER_MAP，涵蓋小盤股題材
 
-【v5 改動】
-- find_catalysts 改用 word boundary（修 'against' 誤命中 'gain' 的 bug）
-- find_watch_only 同樣加上 word boundary
-
-【v4 改動（保留）】
-1. 大幅擴充催化劑關鍵字：加入 gain/rise/climb/up/down/fall 等最常見詞
-2. TICKER_MAP 補齊：MU/CEG/GLD/BRK 等診斷中出現的標的
-3. 「公司名 only」也計分（低分），避免漏掉「Intel gain」這種短標題
-4. 「催化劑詞 only」也算統計（但不計入結果），方便事後檢視市場熱度
+【v6 改動】
+- TICKER_MAP 從 ~90 檔擴充到 ~150 檔
+- 補齊：3D 列印 / 量子 / 太空衛星 / 鈾礦核能 / EV 充電 / 加密礦企
+- 重點新增：VELO, FLNC, RGTI, QBTS, BKSY, LEU, MARA, CHPT 等
+- 改善 watch_only 涵蓋
 """
 import requests
 import xml.etree.ElementTree as ET
@@ -22,7 +18,7 @@ from collections import Counter
 OUTPUT_PATH = "data/catalyst_today.json"
 MAX_TICKERS = 20
 
-# === Ticker ↔ 公司名/別名 映射（v4 擴充）===
+# === Ticker ↔ 公司名/別名 映射（v6 大幅擴充）===
 TICKER_MAP = {
     # === 大盤科技 ===
     'AAPL':  ('Apple', ['iPhone maker', 'Cupertino']),
@@ -40,7 +36,7 @@ TICKER_MAP = {
     'TSM':   ('TSMC', ['Taiwan Semiconductor']),
     'AVGO':  ('Broadcom', []),
     'QCOM':  ('Qualcomm', []),
-    'MU':    ('Micron', []),  # v4 補
+    'MU':    ('Micron', []),
     'AMAT':  ('Applied Materials', []),
     'LRCX':  ('Lam Research', []),
     'KLAC':  ('KLA', []),
@@ -51,6 +47,8 @@ TICKER_MAP = {
     'WDC':   ('Western Digital', []),
     'STX':   ('Seagate', []),
     'SNDK':  ('SanDisk', []),
+    'AEHR':  ('Aehr Test Systems', []),
+    'AMBA':  ('Ambarella', []),
     # === 軟體 / 雲端 ===
     'CRM':   ('Salesforce', []),
     'ORCL':  ('Oracle', []),
@@ -73,39 +71,84 @@ TICKER_MAP = {
     'MSTR':  ('MicroStrategy', ['Strategy Inc']),
     'IBIT':  ('iShares Bitcoin', ['BlackRock Bitcoin']),
     'AFRM':  ('Affirm', []),
-    # === 電動車 / 能源 ===
+    'UPST':  ('Upstart', []),
+    # === 加密礦企 ===
+    'MARA':  ('Marathon Digital', []),
+    'CLSK':  ('CleanSpark', []),
+    'RIOT':  ('Riot Platforms', ['Riot Blockchain']),
+    'HUT':   ('Hut 8', []),
+    'BITF':  ('Bitfarms', []),
+    'IREN':  ('Iris Energy', []),
+    # === 電動車 ===
     'RIVN':  ('Rivian', []),
     'LCID':  ('Lucid', []),
     'F':     ('Ford', []),
     'GM':    ('General Motors', []),
+    # === EV 充電 ===
+    'CHPT':  ('ChargePoint', []),
+    'EVGO':  ('EVgo', []),
+    'BLNK':  ('Blink Charging', []),
+    'WKHS':  ('Workhorse', []),
+    # === 能源 / 公用 ===
     'VST':   ('Vistra', []),
-    'CEG':   ('Constellation Energy', []),  # v4 補
+    'CEG':   ('Constellation Energy', []),
     'NEE':   ('NextEra Energy', []),
+    'NRG':   ('NRG Energy', []),
+    # === 核能 / 鈾礦 ===
     'OKLO':  ('Oklo', []),
     'SMR':   ('NuScale', []),
     'NNE':   ('Nano Nuclear', []),
-    # === 航太 / 國防 ===
+    'LEU':   ('Centrus Energy', []),
+    'UEC':   ('Uranium Energy', []),
+    'UUUU':  ('Energy Fuels', []),
+    'CCJ':   ('Cameco', []),
+    # === 儲能 / 替代能源 ===
+    'FLNC':  ('Fluence Energy', ['Fluence']),
+    'STEM':  ('Stem Inc', []),
+    'PLUG':  ('Plug Power', []),
+    'BLDP':  ('Ballard Power', []),
+    'BE':    ('Bloom Energy', []),
+    # === 3D 列印 / 工業 ===
+    'VELO':  ('Velo3D', ['Velo 3D']),
+    'DDD':   ('3D Systems', []),
+    'SSYS':  ('Stratasys', []),
+    'NNDM':  ('Nano Dimension', []),
+    'PRLB':  ('Protolabs', []),
+    # === 量子計算 ===
+    'IONQ':  ('IonQ', []),
+    'RGTI':  ('Rigetti', []),
+    'QBTS':  ('D-Wave', ['D Wave']),
+    # === 航太 / 國防 / 太空 ===
     'RKLB':  ('Rocket Lab', []),
     'ASTS':  ('AST SpaceMobile', []),
     'LUNR':  ('Intuitive Machines', []),
+    'BKSY':  ('BlackSky', []),
+    'IRDM':  ('Iridium', []),
+    'SPIR':  ('Spire Global', []),
     'JOBY':  ('Joby Aviation', []),
     'ACHR':  ('Archer Aviation', []),
     'KTOS':  ('Kratos', []),
     'BA':    ('Boeing', []),
+    'RTX':   ('RTX', ['Raytheon']),
     # === 生技 ===
     'CRSP':  ('CRISPR Therapeutics', ['CRISPR']),
     'NTLA':  ('Intellia', []),
     'BEAM':  ('Beam Therapeutics', []),
+    'EDIT':  ('Editas Medicine', []),
     'HIMS':  ('Hims', ['Hims & Hers']),
     'TDOC':  ('Teladoc', []),
     'PFE':   ('Pfizer', []),
     'MRK':   ('Merck', []),
     'GILD':  ('Gilead', []),
     'MRNA':  ('Moderna', []),
-    # === 量子 / AI ===
-    'IONQ':  ('IonQ', []),
-    'RGTI':  ('Rigetti', []),
-    'QBTS':  ('D-Wave', ['D Wave']),
+    'VKTX':  ('Viking Therapeutics', []),
+    'BMEA':  ('Biomea Fusion', []),
+    'PACB':  ('Pacific Biosciences', ['PacBio']),
+    # === AI / 雲端基礎設施 ===
+    'NBIS':  ('Nebius', []),
+    'CRWV':  ('CoreWeave', []),
+    'SOUN':  ('SoundHound', []),
+    'BBAI':  ('BigBear', []),
     # === 中型 / 轉機股 ===
     'DELL':  ('Dell', []),
     'HPE':   ('Hewlett Packard Enterprise', ['HPE']),
@@ -114,17 +157,17 @@ TICKER_MAP = {
     'OKTA':  ('Okta', []),
     'TWLO':  ('Twilio', []),
     'TEAM':  ('Atlassian', []),
+    # === 機器人 / 自動化 ===
+    'SYM':   ('Symbotic', []),
+    'PRCT':  ('PROCEPT BioRobotics', ['Procept']),
+    'MNTS':  ('Momentus', []),
     # === 其他常見 ===
     'SHOP':  ('Shopify', []),
     'ANET':  ('Arista Networks', ['Arista']),
-    'UPST':  ('Upstart', []),
     'DKNG':  ('DraftKings', []),
-    'IREN':  ('Iris Energy', []),
     'OPEN':  ('Opendoor', []),
     'ROKU':  ('Roku', []),
     'U':     ('Unity Software', ['Unity Technologies']),
-    'NBIS':  ('Nebius', []),
-    'CRWV':  ('CoreWeave', []),
     'VRT':   ('Vertiv', []),
     'PATH':  ('UiPath', []),
     'DIS':   ('Disney', []),
@@ -138,11 +181,11 @@ TICKER_MAP = {
     'JPM':   ('JPMorgan', ['JP Morgan']),
     'BAC':   ('Bank of America', []),
     'BRK-B': ('Berkshire Hathaway', ['Berkshire']),
-    # 礦業 / 商品
-    'GOLD':  ('Barrick', ['Barrick Gold']),  # v4 補
+    # === 礦業 / 商品 ===
+    'GOLD':  ('Barrick', ['Barrick Gold']),
     'FCX':   ('Freeport-McMoRan', ['Freeport']),
-    # === 任天堂、Cerebras、其他熱門非標 ===
-    # 不在 TICKER_MAP，但會在 "watch_only" 統計裡呈現
+    # === 防詐騙 / IoT ===
+    'ONDS':  ('Ondas', []),
 }
 
 # 同義詞：給 watch_only 用
