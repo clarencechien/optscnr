@@ -1,6 +1,11 @@
 """
-Scanner 3.2 — 整合 catalyst / universe_update / enrichment
-【v3.2 修正】
+Scanner 3.3 — 整合 catalyst / universe_update / small_caps_momentum / enrichment
+【v3.3 改動】
+- 新增 small_caps_momentum 動態清單載入（抓 VELO 級小盤動能股）
+- 在 generate_report 報表頭部顯示「本週動能小盤股」
+- source_tag 加入「🎰動能」標籤
+
+【v3.2 改動】
 1. fetch_yesterday_data_from_github 改用本地優先（修「🚀點火」消失問題）
 2. 整合 enrichment.py：OI Δ7d 欄位 + Top 5 深度卡片
 3. groupby 限制每股最多 3 條（避免單一標的霸版）
@@ -68,6 +73,20 @@ def load_catalyst_today():
         return data.get('tickers', [])
     except Exception as e:
         print(f"⚠️ catalyst 載入失敗：{e}")
+        return []
+
+
+def load_small_caps_momentum():
+    """從 data/small_caps_momentum.json 載入每週更新的小盤動能股"""
+    path = os.path.join(DATA_DIR, "small_caps_momentum.json")
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path) as f:
+            data = json.load(f)
+        return data.get('tickers', [])
+    except Exception as e:
+        print(f"⚠️ small_caps_momentum 載入失敗：{e}")
         return []
 
 
@@ -229,17 +248,21 @@ def generate_report(df):
 
     auto_watch = set(load_auto_watch())
     catalyst = set(load_catalyst_today())
+    small_caps_mom = set(load_small_caps_momentum())
 
     def source_tag(symbol):
         if symbol in catalyst: return "📰催化劑"
+        elif symbol in small_caps_mom: return "🎰動能"
         elif symbol in auto_watch: return "🔭候選"
         return ""
 
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.2 / yf Engine)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.3 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
 
     if catalyst:
         md += f"**📰 今日催化劑股**: {', '.join(sorted(catalyst))}\n\n"
+    if small_caps_mom:
+        md += f"**🎰 本週動能小盤股**: {', '.join(sorted(small_caps_mom))}\n\n"
     if auto_watch:
         md += f"**🔭 本週候選池**: {', '.join(sorted(auto_watch))}\n\n"
 
@@ -322,18 +345,20 @@ def generate_report(df):
 # 6. 主執行程序
 # ==========================================
 def main():
-    print(f"🔥 啟動 Scanner 3.2 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 3.3 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
 
     auto_watch = load_auto_watch()
     catalyst = load_catalyst_today()
+    small_caps_mom = load_small_caps_momentum()
 
     seen = set()
     target_tickers = []
     for t in (TICKER_CATEGORIES['BIG_CAPS']
               + TICKER_CATEGORIES['SMALL_CAPS']
               + auto_watch
-              + catalyst):
+              + catalyst
+              + small_caps_mom):
         if t not in seen:
             seen.add(t)
             target_tickers.append(t)
@@ -341,6 +366,7 @@ def main():
     print(f"🎯 核心池: {len(TICKER_CATEGORIES['BIG_CAPS']) + len(TICKER_CATEGORIES['SMALL_CAPS'])} 檔")
     print(f"🔭 自動候選: {len(auto_watch)} 檔")
     print(f"📰 催化劑: {len(catalyst)} 檔")
+    print(f"🎰 小盤動能: {len(small_caps_mom)} 檔")
     print(f"🎯 掃描總數（去重後）: {len(target_tickers)} 檔")
 
     prev_df = fetch_yesterday_data_from_github()
