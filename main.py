@@ -1,5 +1,11 @@
 """
-Scanner 3.3 — 整合 catalyst / universe_update / small_caps_momentum / enrichment
+Scanner 3.4 — 修補小盤判定 bug
+【v3.4 改動】
+- 動態小盤判定：catalyst / auto_watch / small_caps_momentum 進來的標的，
+  若不在 BIG_CAPS 裡，自動套用 SMALL_CAPS 閾值
+- 修在這個 bug 之前，VELO/AEHR/FLNC 這種動態進來的標的會被當 BIG_CAPS
+  套用 OI≥5000、VOL≥2500 的高門檻，導致整個被濾掉
+
 【v3.3 改動】
 - 新增 small_caps_momentum 動態清單載入（抓 VELO 級小盤動能股）
 - 在 generate_report 報表頭部顯示「本週動能小盤股」
@@ -45,6 +51,26 @@ RULE_CONFIG = {
     'BIG_CAPS_THRESHOLD':  {'OI': 10000, 'VOL': 2500, 'PRICE': 30.0},
     'SMALL_CAPS_THRESHOLD': {'OI': 1500, 'VOL': 400, 'PRICE': 6.0}
 }
+
+
+# 動態小盤股集合：在 main() 初始化時填入
+# catalyst / auto_watch / small_caps_momentum 進來且不在 BIG_CAPS 的標的會被加進來
+_DYNAMIC_SMALL_CAPS = set()
+
+
+def is_small_cap(symbol):
+    """判定是否套用 SMALL_CAPS 閾值
+    
+    優先順序：
+    1. 手動 SMALL_CAPS 名單（強制小盤）
+    2. _DYNAMIC_SMALL_CAPS（動態加入的小盤）
+    3. 否則用 BIG_CAPS 閾值
+    """
+    if symbol in TICKER_CATEGORIES['SMALL_CAPS']:
+        return True
+    if symbol in _DYNAMIC_SMALL_CAPS:
+        return True
+    return False
 
 
 # ==========================================
@@ -177,7 +203,7 @@ def apply_rules(row, prev_data=None):
     iv = row.get('IV', 0.0)
     dte = row.get('DTE', 0)
 
-    cfg = RULE_CONFIG['SMALL_CAPS_THRESHOLD'] if symbol in TICKER_CATEGORIES['SMALL_CAPS'] else RULE_CONFIG['BIG_CAPS_THRESHOLD']
+    cfg = RULE_CONFIG['SMALL_CAPS_THRESHOLD'] if is_small_cap(symbol) else RULE_CONFIG['BIG_CAPS_THRESHOLD']
     p_limit = cfg['PRICE'] * (2.0 if dte > 180 else 1.0)
 
     if price > p_limit or oi < (cfg['OI'] * 0.5):
@@ -256,7 +282,7 @@ def generate_report(df):
         elif symbol in auto_watch: return "🔭候選"
         return ""
 
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.3 / yf Engine)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.4 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
 
     if catalyst:
@@ -345,12 +371,20 @@ def generate_report(df):
 # 6. 主執行程序
 # ==========================================
 def main():
-    print(f"🔥 啟動 Scanner 3.3 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 3.4 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
 
     auto_watch = load_auto_watch()
     catalyst = load_catalyst_today()
     small_caps_mom = load_small_caps_momentum()
+
+    # 動態小盤判定：把 catalyst / auto_watch / small_caps_momentum 進來的標的
+    # 中所有「不在 BIG_CAPS」的都當小盤處理
+    global _DYNAMIC_SMALL_CAPS
+    big_caps_set = set(TICKER_CATEGORIES['BIG_CAPS'])
+    _DYNAMIC_SMALL_CAPS = set(small_caps_mom)  # 動能掃出來的全是小盤
+    _DYNAMIC_SMALL_CAPS |= {t for t in catalyst if t not in big_caps_set}
+    _DYNAMIC_SMALL_CAPS |= {t for t in auto_watch if t not in big_caps_set}
 
     seen = set()
     target_tickers = []
@@ -367,6 +401,7 @@ def main():
     print(f"🔭 自動候選: {len(auto_watch)} 檔")
     print(f"📰 催化劑: {len(catalyst)} 檔")
     print(f"🎰 小盤動能: {len(small_caps_mom)} 檔")
+    print(f"📐 動態判定為小盤: {len(_DYNAMIC_SMALL_CAPS)} 檔")
     print(f"🎯 掃描總數（去重後）: {len(target_tickers)} 檔")
 
     prev_df = fetch_yesterday_data_from_github()
