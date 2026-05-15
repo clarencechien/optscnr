@@ -1,10 +1,14 @@
 """
-Scanner 3.4 — 修補小盤判定 bug
+Scanner 3.5 — 整合 fallen_saas 雷達
+【v3.5 改動】
+- 新增 fallen_saas 動態清單（抓 FIG 級殞落軟體股重生）
+- 報表新增「💀 本週重生候選」摘要區
+- source_tag 新增 💀重生 標籤
+- 動態小盤判定納入 fallen_saas
+
 【v3.4 改動】
 - 動態小盤判定：catalyst / auto_watch / small_caps_momentum 進來的標的，
   若不在 BIG_CAPS 裡，自動套用 SMALL_CAPS 閾值
-- 修在這個 bug 之前，VELO/AEHR/FLNC 這種動態進來的標的會被當 BIG_CAPS
-  套用 OI≥5000、VOL≥2500 的高門檻，導致整個被濾掉
 
 【v3.3 改動】
 - 新增 small_caps_momentum 動態清單載入（抓 VELO 級小盤動能股）
@@ -113,6 +117,20 @@ def load_small_caps_momentum():
         return data.get('tickers', [])
     except Exception as e:
         print(f"⚠️ small_caps_momentum 載入失敗：{e}")
+        return []
+
+
+def load_fallen_saas():
+    """從 data/fallen_saas.json 載入每週更新的殞落 SaaS 重生候選"""
+    path = os.path.join(DATA_DIR, "fallen_saas.json")
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path) as f:
+            data = json.load(f)
+        return data.get('tickers', [])
+    except Exception as e:
+        print(f"⚠️ fallen_saas 載入失敗：{e}")
         return []
 
 
@@ -275,18 +293,22 @@ def generate_report(df):
     auto_watch = set(load_auto_watch())
     catalyst = set(load_catalyst_today())
     small_caps_mom = set(load_small_caps_momentum())
+    fallen_saas = set(load_fallen_saas())
 
     def source_tag(symbol):
         if symbol in catalyst: return "📰催化劑"
+        elif symbol in fallen_saas: return "💀重生"
         elif symbol in small_caps_mom: return "🎰動能"
         elif symbol in auto_watch: return "🔭候選"
         return ""
 
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.4 / yf Engine)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.5 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
 
     if catalyst:
         md += f"**📰 今日催化劑股**: {', '.join(sorted(catalyst))}\n\n"
+    if fallen_saas:
+        md += f"**💀 本週重生候選**: {', '.join(sorted(fallen_saas))}\n\n"
     if small_caps_mom:
         md += f"**🎰 本週動能小盤股**: {', '.join(sorted(small_caps_mom))}\n\n"
     if auto_watch:
@@ -371,18 +393,20 @@ def generate_report(df):
 # 6. 主執行程序
 # ==========================================
 def main():
-    print(f"🔥 啟動 Scanner 3.4 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 3.5 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
 
     auto_watch = load_auto_watch()
     catalyst = load_catalyst_today()
     small_caps_mom = load_small_caps_momentum()
+    fallen_saas = load_fallen_saas()
 
-    # 動態小盤判定：把 catalyst / auto_watch / small_caps_momentum 進來的標的
-    # 中所有「不在 BIG_CAPS」的都當小盤處理
+    # 動態小盤判定：把 catalyst / auto_watch / small_caps_momentum / fallen_saas
+    # 進來的標的中所有「不在 BIG_CAPS」的都當小盤處理
     global _DYNAMIC_SMALL_CAPS
     big_caps_set = set(TICKER_CATEGORIES['BIG_CAPS'])
     _DYNAMIC_SMALL_CAPS = set(small_caps_mom)  # 動能掃出來的全是小盤
+    _DYNAMIC_SMALL_CAPS |= {t for t in fallen_saas if t not in big_caps_set}
     _DYNAMIC_SMALL_CAPS |= {t for t in catalyst if t not in big_caps_set}
     _DYNAMIC_SMALL_CAPS |= {t for t in auto_watch if t not in big_caps_set}
 
@@ -392,7 +416,8 @@ def main():
               + TICKER_CATEGORIES['SMALL_CAPS']
               + auto_watch
               + catalyst
-              + small_caps_mom):
+              + small_caps_mom
+              + fallen_saas):
         if t not in seen:
             seen.add(t)
             target_tickers.append(t)
@@ -401,6 +426,7 @@ def main():
     print(f"🔭 自動候選: {len(auto_watch)} 檔")
     print(f"📰 催化劑: {len(catalyst)} 檔")
     print(f"🎰 小盤動能: {len(small_caps_mom)} 檔")
+    print(f"💀 殞落重生: {len(fallen_saas)} 檔")
     print(f"📐 動態判定為小盤: {len(_DYNAMIC_SMALL_CAPS)} 檔")
     print(f"🎯 掃描總數（去重後）: {len(target_tickers)} 檔")
 
