@@ -1,71 +1,48 @@
 {
-  "updated_at": "2026-05-14T21:45:15.308230",
+  "updated_at": "2026-05-15T21:34:51.217901",
   "stats": {
-    "total_items": 104,
-    "items_with_company": 16,
-    "items_with_catalyst": 11,
-    "items_both": 2
+    "total_items": 106,
+    "items_with_company": 17,
+    "items_with_catalyst": 9,
+    "items_both": 0
   },
-  "count": 13,
+  "count": 17,
   "tickers": [
-    "F",
-    "TSM",
-    "BA",
+    "BRK-B",
     "NVDA",
+    "AMZN",
+    "DELL",
+    "ORCL",
     "AVGO",
-    "AAPL",
-    "LRCX",
-    "CRWV",
     "META",
-    "GS",
-    "SOFI",
-    "INTC",
-    "AMZN"
+    "PLTR",
+    "SBUX",
+    "XYZ",
+    "MSFT",
+    "AAPL",
+    "TSLA",
+    "MSTR",
+    "HIMS",
+    "NFLX",
+    "HUT"
   ],
   "details": [
     {
-      "symbol": "F",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Ford surges nearly 20% in two days. It might be an AI 'meme' stock after energy pivot",
-          "catalysts": [
-            "surges",
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
+      "symbol": "BRK-B",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Rallied on Increasing Demand For AI Chips",
-          "catalysts": [
-            "rallied"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "What Makes Taiwan Semiconductor Manufacturing Company Limited (TSM) One of the Best Companies?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "China will order 200 Boeing jets, Trump tells Fox News",
+          "title": "Berkshire Hathaway returns to airlines with $2.6 billion stake in Delta Air Lines",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Trump’s big trip was supposed to sell 500 Boeing planes. China is only buying 200 of them.",
+          "title": "George Soros’s fund buys Berkshire Hathaway stock — now that Buffett is gone",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Berkshire invests in Delta, sheds several stocks including Amazon, UnitedHealth",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -73,15 +50,63 @@
     },
     {
       "symbol": "NVDA",
-      "score": 1.0,
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Nvidia earnings alone won’t rescue the S&P 500 from its new sell signal",
+          "title": "What you need to know about Nvidia competitor Cerebras after wild IPO",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Trump revamps portfolio, adding Nvidia and other AI names",
+          "title": "Nvidia's trillion-dollar run puts pressure on the bulls",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "George Soros’s fund buys Berkshire Hathaway stock — now that Buffett is gone",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Trump went big on tech stocks in first quarter of 2026, new filings show",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Berkshire invests in Delta, sheds several stocks including Amazon, UnitedHealth",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Berkshire Hathaway invests $2.65B in Delta Air Lines, sheds Amazon",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Trump went big on tech stocks in first quarter of 2026, new filings show",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Trump went big on tech stocks in first quarter of 2026, new filings show",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -92,40 +117,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "What's good for Cisco is good for Broadcom. 3 reasons both stocks are soaring",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "This Little-Known Tech Stock Is Up 60% in 2026. It Powers Apple’s Face ID Tech.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "LRCX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Here’s Why Investors Favour Lam Research Corporation (LRCX)",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "A $100 Billion Reason to Buy CoreWeave Stock",
+          "title": "Trump went big on tech stocks in first quarter of 2026, new filings show",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -136,51 +128,117 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Here’s What Pressured Meta Platforms (META) in Q1",
+          "title": "Trump went big on tech stocks in first quarter of 2026, new filings show",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "PLTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Wall Street Bullish or Bearish on Goldman Sachs Stock?",
+          "title": "Trump touted Palantir on Truth Social after buying the company's stock, records show",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SOFI",
+      "symbol": "SBUX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "SoFi vs. TD Bank: Which bank is a better fit for you?",
+          "title": "Starbucks to lay off 300 U.S. employees, shutter some regional support offices",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Forget Intel: Here Is the Chip Stock Wall Street Is Sleeping On",
+          "title": "Bill Ackman built Microsoft stake in first quarter during sell-off, betting on AI and cloud growth",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "FedEx, Maersk and GXO downplay Amazon Supply Chain Services threat",
+          "title": "Bill Ackman built Microsoft stake in first quarter during sell-off, betting on AI and cloud growth",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "George Soros’s fund buys Berkshire Hathaway stock — now that Buffett is gone",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Tesla, Toyota expose surprising auto industry truth",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Don’t Let MicroStrategy’s Q1 Loss Scare You Off. A New Preferred Stock Strategy Could Benefit Long-Term MSTR Holders.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HIMS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Hims & Hers Bets Big on GLP-1 Drugs, But Investors Want Profits Now",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why the NFL could power Netflix stock up more than 30%",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HUT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Jefferies Initiates Coverage Of Hut 8 Stock With ‘Buy’ Rating",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -188,7 +246,7 @@
     }
   ],
   "watch_only": {
-    "Cerebras (pre-IPO)": 3,
-    "OpenAI (private)": 1
+    "Cerebras (pre-IPO)": 2,
+    "Anthropic (private)": 1
   }
 }
