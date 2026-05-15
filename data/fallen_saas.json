@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-05-15T06:45:15.199436",
+  "criteria": {
+    "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
+    "MIN_REBOUND_FROM_52W_LOW": 1.03,
+    "MAX_REBOUND_FROM_52W_LOW": 1.35,
+    "MIN_MARKET_CAP": 1000000000.0,
+    "MAX_MARKET_CAP": 50000000000.0,
+    "MIN_VOL_RATIO": 1.2,
+    "MIN_AVG_VOLUME": 500000
+  },
+  "count": 2,
+  "tickers": [
+    "RBLX",
+    "HUBS"
+  ],
+  "details": [
+    {
+      "symbol": "RBLX",
+      "price": 43.72,
+      "high_52w": 150.59,
+      "low_52w": 40.15,
+      "drawdown_pct": 71.0,
+      "rebound_pct": 8.9,
+      "vol_ratio": 1.7,
+      "market_cap_b": 31.3,
+      "score": 34.49
+    },
+    {
+      "symbol": "HUBS",
+      "price": 183.46,
+      "high_52w": 669.46,
+      "low_52w": 173.25,
+      "drawdown_pct": 72.6,
+      "rebound_pct": 5.9,
+      "vol_ratio": 1.51,
+      "market_cap_b": 9.4,
+      "score": 33.66
+    }
+  ]
+}
