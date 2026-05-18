@@ -1,69 +1,96 @@
 {
-  "updated_at": "2026-05-17T21:27:49.908654",
+  "updated_at": "2026-05-18T21:47:01.690611",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 22,
-    "items_with_catalyst": 5,
-    "items_both": 0
+    "total_items": 105,
+    "items_with_company": 19,
+    "items_with_catalyst": 12,
+    "items_both": 3
   },
-  "count": 15,
+  "count": 19,
   "tickers": [
-    "TGT",
     "NVDA",
+    "TGT",
+    "INTC",
+    "AMD",
     "BRK-B",
     "MU",
-    "PLTR",
+    "WDC",
+    "STX",
+    "SNDK",
+    "META",
     "GOOGL",
-    "XYZ",
+    "PANW",
+    "PYPL",
+    "TSLA",
+    "MRVL",
+    "DIS",
+    "NFLX",
     "MSFT",
-    "WMT",
-    "BE",
-    "F",
-    "AMZN",
-    "GOLD",
-    "GS",
-    "TEAM"
+    "DELL"
   ],
   "details": [
     {
-      "symbol": "TGT",
-      "score": 3.5,
+      "symbol": "NVDA",
+      "score": 4.0,
       "evidence": [
         {
-          "title": "Walmart and Target are about to show just how much shopping habits have changed due to the Iran war",
+          "title": "Nvidia earnings call drama: Will Jensen Huang talk 'Trump' and China chips after Xi summit?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Collective Mining (CNL) Gets A Major Target Hike As Exploration Optimism Grows",
+          "title": "Nvidia bulls mount uphill battle into earnings",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Newmont (NEM) Gets Another Target Hike As Production Growth Expectations Remain Intact",
+          "title": "The options market is flashing an ominous sign about Nvidia’s looming earnings",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NVDA",
-      "score": 3.0,
+      "symbol": "TGT",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Here are the 3 big things we're watching in the stock market for the week ahead",
+          "title": "Kentucky Republican Thomas Massie is Trump revenge tour's next target",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "What you need to know about Nvidia competitor Cerebras after wild IPO",
-          "catalysts": [],
-          "has_catalyst": false
-        },
+          "title": "Target the Red-Hot Spin-Off and Merger Space With These ETFs",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "score": 2,
+      "evidence": [
         {
-          "title": "Nvidia is getting some help as it props up S&P 500 earnings growth",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Trump says he should've asked for 'more' of Intel when negotiating stake with CEO",
+          "catalysts": [
+            "soared"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Cerebras Stock Opened Trading with a Wild Rally. It Still Has a Lot of Runway Before It Catches Up with Nvidia and AMD.",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
         }
       ]
     },
@@ -72,12 +99,12 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Berkshire's new CEO overhauls portfolio, dumping a slate of stocks",
+          "title": "Warren Buffett teased to CNBC a ‘tiny purchase’ in March. Berkshire filing may have revealed it",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Berkshire Hathaway returns to airlines with $2.6 billion stake in Delta Air Lines",
+          "title": "Berkshire Hathaway has revamped its portfolio — Here's how the new stocks are trading",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -85,26 +112,54 @@
     },
     {
       "symbol": "MU",
-      "score": 1.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia is getting some help as it props up S&P 500 earnings growth",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Is Micron the Next Nvidia?",
+          "title": "Seagate leads memory sell-off as CEO says it would 'take too long' to build new factories",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "WDC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Trump touted Palantir on Truth Social after buying the company's stock, records show",
+          "title": "Seagate leads memory sell-off as CEO says it would 'take too long' to build new factories",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "STX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Seagate leads memory sell-off as CEO says it would 'take too long' to build new factories",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Seagate leads memory sell-off as CEO says it would 'take too long' to build new factories",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg’s company",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -115,18 +170,73 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Here are the 3 big things we're watching in the stock market for the week ahead",
+          "title": "Berkshire Hathaway has revamped its portfolio — Here's how the new stocks are trading",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "PANW",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bill Ackman built Microsoft stake in first quarter during sell-off, betting on AI and cloud growth",
+          "title": "Palo Alto Networks hits a big milestone. Why cybersecurity stocks are so hot right now.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PYPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": " Michael Burry Adds to Positions in MercadoLibre, Adobe, PayPal and Lululemon",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Tesla’s $250 Million Germany Bet Is Interesting. It’s Spending More Before It Has the Payoff.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRVL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Jim Cramer on Marvell: “It Can Go Higher”",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Disney’s Next Battle Won’t Be Against Netflix",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Disney’s Next Battle Won’t Be Against Netflix",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -137,84 +247,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bill Ackman built Microsoft stake in first quarter during sell-off, betting on AI and cloud growth",
+          "title": "Gates' foundation sold all of its Microsoft shares. Bill Ackman is loading up on the stock. What is Wall Street missing?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
+      "symbol": "DELL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Walmart and Target are about to show just how much shopping habits have changed due to the Iran war",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Meet the Nvidias of power — 5 stocks winning Big Tech’s $700 billion AI energy grab",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "How much is Ford Energy worth? RBC breaks down the valuation",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Amazon faces consumer lawsuit over tariff-related price hikes",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOLD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Barrick Mining Corporation (B) Among the 10 Best Gold Mining Stocks to Buy as Central Banks Buy Bullion?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Goldman Sachs sets new Biogen stock price target on bold Alzheimer's bet",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TEAM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Atlassian Corporation (TEAM) One of Steve Cohen’s Stock Picks with High Upside Potential?",
+          "title": "Dear Dell Stock Fans, Mark Your Calendars for May 28",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -222,8 +266,8 @@
     }
   ],
   "watch_only": {
+    "OpenAI (private)": 3,
     "Cerebras (pre-IPO)": 2,
-    "Anthropic (private)": 1,
-    "OpenAI (private)": 1
+    "Anthropic (private)": 2
   }
 }
