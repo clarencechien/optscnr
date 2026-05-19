@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-05-19T14:03:22.850124",
-  "tlt_price": 83.13999938964844,
+  "updated_at": "2026-05-19T14:10:45.042659",
+  "tlt_price": 83.08999633789062,
   "hedging_temperature": 20,
   "components": {
     "whales": 5,
     "skew": 15,
     "oi_buildup": 0
   },
-  "overall_skew_pct": 3.81,
+  "overall_skew_pct": 3.94,
   "oi_change": {
     "near_term_oi_total": 865385,
-    "far_term_oi_total": 423466,
+    "far_term_oi_total": 969058,
     "near_term_change_pct": null,
     "far_term_change_pct": null,
     "has_baseline": false
