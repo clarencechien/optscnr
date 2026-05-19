@@ -1,198 +1,86 @@
 {
-  "updated_at": "2026-05-18T21:47:01.690611",
+  "updated_at": "2026-05-19T21:54:56.382324",
   "stats": {
-    "total_items": 105,
+    "total_items": 107,
     "items_with_company": 19,
-    "items_with_catalyst": 12,
-    "items_both": 3
+    "items_with_catalyst": 15,
+    "items_both": 2
   },
-  "count": 19,
+  "count": 15,
   "tickers": [
-    "NVDA",
-    "TGT",
-    "INTC",
-    "AMD",
-    "BRK-B",
-    "MU",
-    "WDC",
-    "STX",
-    "SNDK",
-    "META",
     "GOOGL",
-    "PANW",
-    "PYPL",
+    "CRWV",
+    "AMZN",
+    "F",
     "TSLA",
-    "MRVL",
-    "DIS",
-    "NFLX",
-    "MSFT",
-    "DELL"
+    "PLTR",
+    "UPST",
+    "NVDA",
+    "BRK-B",
+    "ASML",
+    "NEE",
+    "TGT",
+    "BA",
+    "INTC",
+    "AVGO"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 4.0,
+      "symbol": "GOOGL",
+      "score": 6.0,
       "evidence": [
         {
-          "title": "Nvidia earnings call drama: Will Jensen Huang talk 'Trump' and China chips after Xi summit?",
+          "title": "Google debuts new AI models, personal AI agents in effort to keep pace with OpenAI and Anthropic",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia bulls mount uphill battle into earnings",
+          "title": "Google gives first glimpse of new AI glasses ahead of fall launch ",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "The options market is flashing an ominous sign about Nvidia’s looming earnings",
+          "title": "New data boosts our confidence in Lilly's obesity pill. Plus, Google's new AI features",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Kentucky Republican Thomas Massie is Trump revenge tour's next target",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Target the Red-Hot Spin-Off and Merger Space With These ETFs",
-          "catalysts": [
-            "merger"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
+      "symbol": "CRWV",
       "score": 2,
       "evidence": [
         {
-          "title": "Trump says he should've asked for 'more' of Intel when negotiating stake with CEO",
+          "title": "CoreWeave’s stock falls as new Google cloud venture may signal more competition ahead",
           "catalysts": [
-            "soared"
+            "falls"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMD",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Cerebras Stock Opened Trading with a Wild Rally. It Still Has a Lot of Runway Before It Catches Up with Nvidia and AMD.",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
+      "symbol": "AMZN",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Warren Buffett teased to CNBC a ‘tiny purchase’ in March. Berkshire filing may have revealed it",
+          "title": "Amazon credit card review: Cash-back savings for non-Prime members",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Berkshire Hathaway has revamped its portfolio — Here's how the new stocks are trading",
+          "title": "Amazon Store Card review: Rewards and financing for Amazon-only spending",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "F",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Seagate leads memory sell-off as CEO says it would 'take too long' to build new factories",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WDC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Seagate leads memory sell-off as CEO says it would 'take too long' to build new factories",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "STX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Seagate leads memory sell-off as CEO says it would 'take too long' to build new factories",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Seagate leads memory sell-off as CEO says it would 'take too long' to build new factories",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Meta layoffs starting this week stress harsh AI reality inside Zuckerberg’s company",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Berkshire Hathaway has revamped its portfolio — Here's how the new stocks are trading",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PANW",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Palo Alto Networks hits a big milestone. Why cybersecurity stocks are so hot right now.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PYPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": " Michael Burry Adds to Positions in MercadoLibre, Adobe, PayPal and Lululemon",
+          "title": "The AI economy is rewriting the American Dream — and blue-collar workers are poised to win",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -203,62 +91,117 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Tesla’s $250 Million Germany Bet Is Interesting. It’s Spending More Before It Has the Payoff.",
+          "title": "Anthropic hires OpenAI co-founder Andrej Karpathy, former Tesla AI leader",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRVL",
+      "symbol": "PLTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Jim Cramer on Marvell: “It Can Go Higher”",
+          "title": "President Trump Went on a Palantir Buying Spree. Is It Time for You to Do the Same?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DIS",
+      "symbol": "UPST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Disney’s Next Battle Won’t Be Against Netflix",
+          "title": "Insider Buying Says Upstart Isn’t Down for the Count",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NFLX",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Disney’s Next Battle Won’t Be Against Netflix",
+          "title": "Why Nvidia earnings must deliver massively",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "BRK-B",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Gates' foundation sold all of its Microsoft shares. Bill Ackman is loading up on the stock. What is Wall Street missing?",
+          "title": "UnitedHealth Group stock slides after Berkshire Hathaway exits position in the health insurer",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DELL",
+      "symbol": "ASML",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dear Dell Stock Fans, Mark Your Calendars for May 28",
+          "title": "ASML, Tata Electronics partner on India's first chip fab",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NEE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Dominion to be acquired by NextEra Energy in $66.8 billion deal",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "What Are Wall Street Analysts' Target Price for Allstate Corporation Stock?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Boeing Just Got Its First Major China Order in Nearly a Decade and the Stock Is Down 7%. Here Is Why That Is the Entry",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "The AI Inference Supercycle Is Here. These 2 Stocks Will Be the Biggest Winners of This Megatrend (Hint: It's Not Broadcom or Intel)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "The AI Inference Supercycle Is Here. These 2 Stocks Will Be the Biggest Winners of This Megatrend (Hint: It's Not Broadcom or Intel)",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -266,8 +209,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 3,
-    "Cerebras (pre-IPO)": 2,
-    "Anthropic (private)": 2
+    "Anthropic (private)": 4,
+    "OpenAI (private)": 3
   }
 }
