@@ -1,24 +1,17 @@
 """
-Scanner 3.5 — 整合 fallen_saas 雷達
+Scanner 3.6 — 整合 TLT 避險雷達報告
+【v3.6 改動】
+- 報表最下方自動插入 TLT 避險雷達 markdown（如果存在）
+- TLT 不進主掃描，但結果會出現在 README 末端
+
 【v3.5 改動】
 - 新增 fallen_saas 動態清單（抓 FIG 級殞落軟體股重生）
 - 報表新增「💀 本週重生候選」摘要區
 - source_tag 新增 💀重生 標籤
-- 動態小盤判定納入 fallen_saas
 
 【v3.4 改動】
 - 動態小盤判定：catalyst / auto_watch / small_caps_momentum 進來的標的，
   若不在 BIG_CAPS 裡，自動套用 SMALL_CAPS 閾值
-
-【v3.3 改動】
-- 新增 small_caps_momentum 動態清單載入（抓 VELO 級小盤動能股）
-- 在 generate_report 報表頭部顯示「本週動能小盤股」
-- source_tag 加入「🎰動能」標籤
-
-【v3.2 改動】
-1. fetch_yesterday_data_from_github 改用本地優先（修「🚀點火」消失問題）
-2. 整合 enrichment.py：OI Δ7d 欄位 + Top 5 深度卡片
-3. groupby 限制每股最多 3 條（避免單一標的霸版）
 """
 import pandas as pd
 import yfinance as yf
@@ -302,7 +295,7 @@ def generate_report(df):
         elif symbol in auto_watch: return "🔭候選"
         return ""
 
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.5 / yf Engine)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.6 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
 
     if catalyst:
@@ -384,6 +377,17 @@ def generate_report(df):
         print(f"  ⚠️ 深度卡片生成失敗：{e}")
         md += f"\n## 🔬 深度分析\n*（生成失敗：{e}）*\n"
 
+    # === TLT 避險雷達（如果有產出，附在最後）===
+    tlt_report_path = os.path.join(DATA_DIR, "tlt_radar_report.md")
+    if os.path.exists(tlt_report_path):
+        try:
+            with open(tlt_report_path, encoding='utf-8') as f:
+                tlt_md = f.read()
+            md += tlt_md
+            print("  ✅ TLT 避險雷達已附加")
+        except Exception as e:
+            print(f"  ⚠️ TLT 報告載入失敗：{e}")
+
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(md)
     print("📝 README.md 報表已生成。")
@@ -393,7 +397,7 @@ def generate_report(df):
 # 6. 主執行程序
 # ==========================================
 def main():
-    print(f"🔥 啟動 Scanner 3.5 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 3.6 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
 
     auto_watch = load_auto_watch()
