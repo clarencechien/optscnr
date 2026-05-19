@@ -32,18 +32,21 @@ logging.getLogger("yfinance").setLevel(logging.CRITICAL)
 # === 篩選參數 ===
 CONFIG = {
     'TICKER': 'TLT',
-    'TARGET_MONTHS_AHEAD': 6,           # 抓未來 6 個到期月份
     'MIN_NOTIONAL_WHALE': 500_000,      # 巨鯨單最小名目金額（$50 萬）
     'MIN_VOLUME_WHALE': 100,            # 巨鯨單最小成交量
     'PUT_OTM_PCT': 0.05,                # 價外 5%+ 才算避險買盤
-    'SKEW_NEUTRAL': 0.0,                # Skew 中性值
-    'SKEW_BEARISH': 0.05,               # Put IV - Call IV > 5%（Put 翹起）
-    'SKEW_PANIC': 0.10,                 # Skew > 10% = panic
+    'MIN_OI_FOR_IV': 50,                # IV 計算要求最低 OI（過濾 stale quote）
 }
 
 
 def get_tlt_data():
-    """抓 TLT 現價 + 完整選擇權鏈"""
+    """抓 TLT 現價 + 完整選擇權鏈
+    
+    【v2 修正】
+    舊版用 tk.options[:6] 抓前 6 個到期日，但 TLT 有週選會全部擠在近月
+    新版改用智慧選擇：~30d / ~60d / ~90d / ~180d / ~365d / ~500d
+    這樣 IV term structure 才能看出真實的時間結構
+    """
     tk = yf.Ticker(CONFIG['TICKER'])
     
     try:
@@ -63,15 +66,46 @@ def get_tlt_data():
         return None, None
     
     try:
-        exps = tk.options
+        all_exps = tk.options
     except Exception as e:
         print(f"❌ 無法取得選擇權鏈：{e}")
         return None, None
     
-    target_exps = exps[:CONFIG['TARGET_MONTHS_AHEAD']]
+    if not all_exps:
+        return None, None
+    
+    # 智慧選擇代表性到期日（避開週選擠壓）
+    today = datetime.now()
+    target_dtes = [30, 60, 90, 180, 365, 500]
+    
+    expiry_dtes = []
+    for exp in all_exps:
+        try:
+            exp_dt = datetime.strptime(exp, '%Y-%m-%d')
+            dte = (exp_dt - today).days
+            if dte >= 14:  # 跳過 14 天內到期（IV 太不穩）
+                expiry_dtes.append((exp, dte))
+        except Exception:
+            continue
+    
+    if not expiry_dtes:
+        return None, None
+    
+    selected_exps = []
+    used = set()
+    for target in target_dtes:
+        closest = min(expiry_dtes, key=lambda x: abs(x[1] - target))
+        if closest[0] not in used:
+            selected_exps.append(closest[0])
+            used.add(closest[0])
+    
+    print(f"🔍 選定代表性到期日（DTE）：")
+    for exp in selected_exps:
+        dte = next((d for e, d in expiry_dtes if e == exp), 0)
+        print(f"     {exp} (DTE {dte})")
     
     all_chains = []
-    for exp in target_exps:
+    for exp in selected_exps:
         try:
             opt = tk.option_chain(exp)
             calls = opt.calls.copy()
@@ -92,9 +126,17 @@ def get_tlt_data():
     for col in ['volume', 'openInterest', 'lastPrice', 'impliedVolatility', 'strike']:
         df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
     
+    # 過濾 IV 異常值（太低代表 stale quote，太高代表流動性差）
+    df_iv_clean = df.copy()
+    # IV < 5% 或 > 200% 視為異常，標記但不刪
+    df_iv_clean['IV_suspicious'] = (
+        (df_iv_clean['impliedVolatility'] < 0.05) | 
+        (df_iv_clean['impliedVolatility'] > 2.0)
+    )
+    
     # Notional value
-    df['Notional'] = df['volume'] * df['lastPrice'] * 100
-    df['VolOIRatio'] = df['volume'] / (df['openInterest'] + 1)
+    df_iv_clean['Notional'] = df_iv_clean['volume'] * df_iv_clean['lastPrice'] * 100
+    df_iv_clean['VolOIRatio'] = df_iv_clean['volume'] / (df_iv_clean['openInterest'] + 1)
     
     meta = {
         'current_price': current_price,
@@ -106,7 +148,7 @@ def get_tlt_data():
         'distance_from_60d_high': (current_price / price_60d_high - 1) * 100,
     }
     
-    return df, meta
+    return df_iv_clean, meta
 
 
 # ==========================================
@@ -138,6 +180,11 @@ def detect_put_whales(df, current_price):
 def calc_iv_skew(df, current_price):
     """計算 Put-Call IV 偏斜
     
+    【v2 修正】
+    過濾 IV < 5% 的 stale quote
+    過濾 IV > 200% 的雜訊
+    要求至少 OI > 50 才採用（避免無流動性合約）
+    
     回傳：
     - skew_summary: dict, 每個到期日的 skew 值
     - overall_skew: 整體加權平均 skew
@@ -153,15 +200,19 @@ def calc_iv_skew(df, current_price):
             (sub['Type'] == 'Call') &
             (sub['strike'] >= atm_range[0]) & 
             (sub['strike'] <= atm_range[1]) &
-            (sub['impliedVolatility'] > 0)
+            (sub['impliedVolatility'] >= 0.05) &  # 過濾異常低 IV
+            (sub['impliedVolatility'] <= 2.0) &   # 過濾異常高 IV
+            (sub['openInterest'] >= 50)            # 要求最低流動性
         ]
         
-        # OTM Put（25-delta 大約價外 5-10%）
+        # OTM Put（25-delta 大約價外 5-12%）
         otm_puts = sub[
             (sub['Type'] == 'Put') &
             (sub['strike'] >= current_price * 0.88) &
             (sub['strike'] <= current_price * 0.95) &
-            (sub['impliedVolatility'] > 0)
+            (sub['impliedVolatility'] >= 0.05) &
+            (sub['impliedVolatility'] <= 2.0) &
+            (sub['openInterest'] >= 50)
         ]
         
         if len(atm_calls) == 0 or len(otm_puts) == 0:
@@ -175,9 +226,10 @@ def calc_iv_skew(df, current_price):
             'atm_call_iv': round(atm_call_iv * 100, 1),
             'otm_put_iv': round(otm_put_iv * 100, 1),
             'skew': round(skew * 100, 2),
+            'atm_oi_total': int(atm_calls['openInterest'].sum()),
+            'otm_put_oi_total': int(otm_puts['openInterest'].sum()),
         }
     
-    # 整體 skew（短中天期加權，遠月權重較低）
     if not skew_summary:
         return {}, 0.0
     
@@ -373,8 +425,9 @@ def generate_report(meta, whales, skew_summary, overall_skew, oi_change, temp, c
     # Skew Term Structure
     if skew_summary:
         md += "### IV Skew Term Structure\n\n"
-        md += "| 到期 | ATM Call IV | OTM Put IV | Skew |\n"
-        md += "|---|---|---|---|\n"
+        md += "_只採用 OI ≥ 50 的合約，過濾低流動性 stale quote_\n\n"
+        md += "| 到期 | ATM Call IV | OTM Put IV | Skew | ATM OI | Put OI |\n"
+        md += "|---|---|---|---|---|---|\n"
         for exp in sorted(skew_summary.keys())[:6]:
             s = skew_summary[exp]
             skew_marker = ""
@@ -382,8 +435,15 @@ def generate_report(meta, whales, skew_summary, overall_skew, oi_change, temp, c
                 skew_marker = " 🔴"
             elif s['skew'] > 5:
                 skew_marker = " 🟠"
-            md += f"| {exp} | {s['atm_call_iv']:.1f}% | {s['otm_put_iv']:.1f}% | {s['skew']:+.2f}%{skew_marker} |\n"
+            elif s['skew'] < 0:
+                skew_marker = " 🔵"
+            md += f"| {exp} | {s['atm_call_iv']:.1f}% | {s['otm_put_iv']:.1f}% | {s['skew']:+.2f}%{skew_marker} | {s['atm_oi_total']:,} | {s['otm_put_oi_total']:,} |\n"
         md += "\n"
+        
+        # 額外提醒：如果某些到期日 ATM Call IV 異常低，可能是資料問題
+        suspicious = [exp for exp, s in skew_summary.items() if s['atm_call_iv'] < 8]
+        if suspicious:
+            md += f"⚠️ **資料品質警告**：到期 {', '.join(suspicious[:3])} 的 ATM Call IV < 8%，可能是流動性差導致的 stale quote，這些 Skew 數字參考即可。\n\n"
     
     # Top 巨鯨單
     if len(whales) > 0:
