@@ -76,7 +76,8 @@ def get_tlt_data():
     
     # 智慧選擇代表性到期日（避開週選擠壓）
     today = datetime.now()
-    target_dtes = [30, 60, 90, 180, 365, 500]
+    # 加入 240 天讓 ~8 個月的 LEAPS（典型 hedge 配置）也能被覆蓋
+    target_dtes = [30, 60, 90, 180, 240, 365, 500]
     
     expiry_dtes = []
     for exp in all_exps:
