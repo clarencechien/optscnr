@@ -138,5 +138,12 @@
     "consecutive_days": 1,
     "total_mentions": 3,
     "ticker": null
+  },
+  "Johnson": {
+    "first_seen": "2026-05-20",
+    "last_seen": "2026-05-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "JNJ"
   }
 }
