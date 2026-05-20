@@ -1,18 +1,5 @@
 {
-  "updated_at": "2026-05-20T08:14:14.892853",
-  "count": 1,
-  "blind_spots": [
-    {
-      "name": "Johnson",
-      "ticker": "JNJ",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Is Johnson & Johnson (JNJ) One of the Best “Dogs of the Dow” Stocks to Buy for the Rest of 2026?",
-        "Is Johnson & Johnson (JNJ) One of the Best “Dogs of the Dow” Stocks to Buy for the Rest of 2026?"
-      ]
-    }
-  ]
+  "updated_at": "2026-05-20T08:17:43.386710",
+  "count": 0,
+  "blind_spots": []
 }
