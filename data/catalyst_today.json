@@ -1,48 +1,58 @@
 {
-  "updated_at": "2026-05-20T07:39:14.018449",
+  "updated_at": "2026-05-20T22:11:39.417417",
   "stats": {
-    "total_items": 99,
-    "items_with_company": 30,
-    "items_with_catalyst": 15,
-    "items_both": 3
+    "total_items": 101,
+    "items_with_company": 23,
+    "items_with_catalyst": 12,
+    "items_both": 1
   },
-  "count": 17,
+  "count": 16,
   "tickers": [
-    "NVDA",
-    "GOOGL",
-    "WDAY",
-    "MSFT",
-    "GS",
-    "TSLA",
-    "AMD",
     "AMZN",
-    "F",
-    "BA",
-    "META",
+    "VST",
+    "TGT",
+    "GS",
+    "NVDA",
+    "WMT",
     "MU",
-    "AVGO",
-    "TSM",
-    "AAPL",
-    "BRK-B",
-    "NEE"
+    "MS",
+    "META",
+    "XYZ",
+    "GOOGL",
+    "NEE",
+    "PLTR",
+    "VRT",
+    "OKLO",
+    "SNDK"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 4.0,
+      "symbol": "AMZN",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Nvidia to launch Singapore research hub as city-state boosts AI plans",
+          "title": "Bezos defends billionaires, hypes AI, talks taxes and praises Trump in CNBC interview",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "European stocks tick lower as Nvidia earnings release, inflation fears loom large",
+          "title": "Bezos brushes off concerns of an AI bubble: 'You shouldn't worry about it'",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "China chipmaking stocks rally as Nvidia earnings, Samsung strike loom",
+          "title": "Mamdani fires back at Bezos over Queens teacher tax remark",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "VST",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Constellation’s and Vistra’s stocks rally as power-grid operator speeds up data-center deals",
           "catalysts": [
             "rally"
           ],
@@ -51,49 +61,23 @@
       ]
     },
     {
-      "symbol": "GOOGL",
-      "score": 3.0,
+      "symbol": "TGT",
+      "score": 1.5,
       "evidence": [
         {
-          "title": "New data boosts our confidence in Lilly's obesity pill. Plus, Google's new AI features",
+          "title": "Target beats Wall Street estimates, hikes sales outlook as shoppers start to return",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Singapore inks AI deals with Google, OpenAI as ChatGPT-maker commits $234 million to local ecosystem",
+          "title": "Here’s why Target’s turnaround may not be as smooth as the latest results imply",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Google debuts new AI models, personal AI agents in effort to keep pace with OpenAI and Anthropic",
+          "title": "Target names former Walmart executive as chief supply chain officer",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WDAY",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Workday (WDAY) Partners With Anthropic and the Local Initiatives Support Corporation",
-          "catalysts": [
-            "partners with"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "TD Cowen Maintains a Buy Rating on Microsoft Corporation (MSFT)",
-          "catalysts": [
-            "buy rating"
-          ],
-          "has_catalyst": true
         }
       ]
     },
@@ -102,82 +86,71 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "SpaceX picks Goldman Sachs for lead left position on record-breaking IPO, sources say",
+          "title": "OpenAI to confidentially file for IPO as soon as Friday: Source",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Goldman Sachs says AI and energy resilience are creating a North-South divide in Asian markets",
+          "title": "Saudi Arabia's Humain picks Goldman Sachs to advise on data centre financing, sources say",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "NVDA",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Elon Musk ditched California, but the state will get a much-needed win from SpaceX’s IPO",
+          "title": "Something very unusual is happening with Nvidia options",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Anthropic’s latest hire led AI at Tesla, worked at OpenAI and received high praise from Elon Musk",
+          "title": "Nvidia’s Blockbuster Quarter Is Coming — And NVDA Stock Is Still Cheap",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "WMT",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Evercore ISI Maintains Outperform Rating on Advanced Micro Devices (AMD)",
+          "title": "‘It will not bring you happiness’: I have advice for your single, childless 62-year-old multimillionaire reader",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Prediction: AMD Stock Is Going to Triple in 5 Years, Thanks to This $120 Billion Opportunity",
+          "title": "Target names former Walmart executive as chief supply chain officer",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "MU",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Here’s What TD Cowen Thinks About Amazon.com (AMZN)",
+          "title": "Micron’s stock gets a boost. Are Samsung’s problems helping?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Amazon, IBD's Stock Of The Day, Named 'Franchise Pick' As $3 Trillion Milestone Nears",
+          "title": "White-hot semiconductor stocks like Sandisk and Micron are now in meltdown mode",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "F",
+      "symbol": "MS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "The AI economy is rewriting the American Dream — and blue-collar workers are poised to win",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "China confirms order for 200 Boeing planes, calls aviation key area for U.S. cooperation",
+          "title": "OpenAI to confidentially file for IPO as soon as Friday: Source",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -188,62 +161,29 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Exclusive-Meta offers AI rival chatbots limited free WhatsApp access, sources say",
+          "title": "Zuckerberg's Meta layoffs memo: 'Success isn't a given' in the AI era",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "BofA Remains a Buy on Micron (MU), Raises PT",
+          "title": "Jan. 6 police officers sue Trump to block $1.8B 'lawfare' fund",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AVGO",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "TD Cowen Raises PT on Broadcom (AVGO), Keeps a Buy",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "​Taiwan Semiconductor Manufacturing (TSM) Among the Best Stocks to Invest in According to Billionaires",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "How Services Could Help Generate $13 in Earnings Per Share for Apple Stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Warren Buffett Once Said Airlines Were 'A Bottomless Pit' But Berkshire Hathaway Just Invested in Delta—What's Changed?",
+          "title": "Has Google lost its AI edge? How its ‘unexciting’ strategy could actually pay off.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -254,7 +194,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "NextEra Energy to Buy Dominion in $67 Million Deal. What It Means for D Stock.",
+          "title": "NextEra Energy to buy Caliber Resource Partners, set up shale JV - Reuters",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Palantir Faces a Bigger Threat Than Valuation: AI Labs Like Anthropic and OpenAI Are Disrupting the PLTR Stock Story",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "VRT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Underweight in Vertiv Holdings Co (VRT) Hurt Fidelity Growth Strategies Fund’s Performance in Q1",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "OKLO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Oklo Looks Stronger as a Long-Term Energy Play Thanks to 2 Major Growth Drivers",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "White-hot semiconductor stocks like Sandisk and Micron are now in meltdown mode",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -262,7 +246,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 4,
-    "Anthropic (private)": 3
+    "OpenAI (private)": 5,
+    "Anthropic (private)": 2
   }
 }
