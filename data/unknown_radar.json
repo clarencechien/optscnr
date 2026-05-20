@@ -1,0 +1,186 @@
+{
+  "updated_at": "2026-05-20T08:09:15.121768",
+  "count": 15,
+  "blind_spots": [
+    {
+      "name": "Here",
+      "ticker": "HERE",
+      "mentions_today": 12,
+      "total_mentions": 12,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Writing your own obituary can help you live a better life. Here’s how to get started.",
+        "Is RFK Jr.’s ‘carnivore diet’ healthy? Here’s what you need to know."
+      ]
+    },
+    {
+      "name": "Iran",
+      "ticker": null,
+      "mentions_today": 10,
+      "total_mentions": 10,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Putin-Xi talks revive stalled Russian gas pipeline as Iran war rattles energy markets",
+        "Senate advances measure to end military action in Iran in rebuke to Trump"
+      ]
+    },
+    {
+      "name": "Singapore",
+      "ticker": null,
+      "mentions_today": 4,
+      "total_mentions": 4,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Nvidia to launch Singapore research hub as city-state boosts AI plans",
+        "Nvidia to launch Singapore research hub as city-state boosts AI plans"
+      ]
+    },
+    {
+      "name": "Treasurys",
+      "ticker": null,
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "U.S. Treasurys are now firmly in the 'danger zone,' strategists say",
+        "U.S. Treasurys are now firmly in the 'danger zone,' strategists say"
+      ]
+    },
+    {
+      "name": "Chinese",
+      "ticker": "CWNOF",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Putin-Xi talks revive stalled Russian gas pipeline as Iran war rattles energy markets",
+        "U.S. indicts four Chinese container manufacturers alleging pandemic-era price-fixing cartel"
+      ]
+    },
+    {
+      "name": "President Donald Trump",
+      "ticker": null,
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Another Trump victory: Republican Rep. Thomas Massie loses Kentucky primary",
+        "China confirms order for 200 Boeing planes, calls aviation key area for U.S. cooperation"
+      ]
+    },
+    {
+      "name": "Best Stocks",
+      "ticker": null,
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Reading International Inc. (RDI): One of the Best Stocks in the Mark Cuban Stock Portfolio?",
+        "Live Nation Entertainment Inc. (LYV): One of the Best Stocks to Buy According to Mark Cuban?"
+      ]
+    },
+    {
+      "name": "Million",
+      "ticker": null,
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "3EDGE Just Trimmed Its SEIE Stake by $31.3 Million -- Here's What Investors Should Know",
+        "'You're Not Sailing Off In The Sunset With $6 Million,' Dave Ramsey Tells 30-Year-Old Who Wants To R"
+      ]
+    },
+    {
+      "name": "Putin",
+      "ticker": null,
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Putin-Xi talks revive stalled Russian gas pipeline as Iran war rattles energy markets",
+        "Putin-Xi talks revive stalled Russian gas pipeline as Iran war rattles energy markets"
+      ]
+    },
+    {
+      "name": "Thomas Massie",
+      "ticker": null,
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Another Trump victory: Republican Rep. Thomas Massie loses Kentucky primary",
+        "Another Trump victory: Republican Rep. Thomas Massie loses Kentucky primary"
+      ]
+    },
+    {
+      "name": "Samsung Electronics",
+      "ticker": null,
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Over 47,000 Samsung Electronics workers set to strike as wage talks break down, sending shares lower",
+        "Over 47,000 Samsung Electronics workers set to strike as wage talks break down, sending shares lower"
+      ]
+    },
+    {
+      "name": "South Korea",
+      "ticker": null,
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "AI boom reshuffles global stock market pecking order as South Korea and Taiwan surge",
+        "AI boom reshuffles global stock market pecking order as South Korea and Taiwan surge"
+      ]
+    },
+    {
+      "name": "Taiwan",
+      "ticker": "TWN",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "AI boom reshuffles global stock market pecking order as South Korea and Taiwan surge",
+        "AI boom reshuffles global stock market pecking order as South Korea and Taiwan surge"
+      ]
+    },
+    {
+      "name": "Asia",
+      "ticker": "SORA",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Asia markets fall as Treasury yields climb and Iran tensions linger",
+        "Asia markets fall as Treasury yields climb and Iran tensions linger"
+      ]
+    },
+    {
+      "name": "Vance",
+      "ticker": null,
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Vance defends stock-trading spree in Trump financial filings: 'Come on, man'",
+        "Vance defends stock-trading spree in Trump financial filings: 'Come on, man'"
+      ]
+    }
+  ]
+}
