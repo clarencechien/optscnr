@@ -45,7 +45,9 @@ SMALL_CAP_UNIVERSE = [
     # 儲能 / 電網
     'FLNC', 'STEM', 'NRG', 'PLUG', 'BLDP', 'BE',
     # 太陽能 / 電力電子轉型（SEDG 在做 AI data center power）
-    'SEDG', 'ENPH', 'RUN', 'NOVA', 'FSLR', 'NXT',
+    # 注意：ENPH ($6B)、FSLR ($24B)、NXT ($19B) 市值都超過 $5B 上限
+    # 不放進這裡（會被市值篩選擋掉），可考慮另外做 mid_cap_momentum 雷達
+    'SEDG', 'RUN', 'NOVA',
     # 量子 / AI 基礎設施
     'IONQ', 'RGTI', 'QBTS', 'NBIS', 'CRWV', 'SOUN', 'BBAI',
     # 太空 / 國防
