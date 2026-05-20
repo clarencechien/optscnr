@@ -44,6 +44,8 @@ SMALL_CAP_UNIVERSE = [
     'VELO', 'DDD', 'SSYS', 'NNDM', 'XOMA', 'PRLB',
     # 儲能 / 電網
     'FLNC', 'STEM', 'NRG', 'AGRI', 'PLUG', 'BLDP', 'BE',
+    # 太陽能 / 電力電子轉型（SEDG 在做 AI data center power）
+    'SEDG', 'ENPH', 'RUN', 'NOVA', 'FSLR', 'NXT',
     # 量子 / AI 基礎設施
     'IONQ', 'RGTI', 'QBTS', 'NBIS', 'CRWV', 'SOUN', 'BBAI',
     # 太空 / 國防
