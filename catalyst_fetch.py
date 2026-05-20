@@ -405,7 +405,7 @@ def fetch_feed(url):
 
 
 def main():
-    print(f"📰 啟動 Catalyst Fetch v5: {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"📰 啟動 Catalyst Fetch v6: {datetime.now().strftime('%Y-%m-%d')}")
     print(f"📚 字典：{len(TICKER_MAP)} 檔 ticker / {len(CATALYST_KEYWORDS)} 個關鍵字\n")
     
     if not os.path.exists('data'):
