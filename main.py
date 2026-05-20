@@ -1,17 +1,16 @@
 """
-Scanner 3.6 — 整合 TLT 避險雷達報告
+Scanner 3.7 — 整合 unknown_radar（盲點雷達）
+【v3.7 改動】
+- 讀 data/unknown_radar.json
+- 在 README 加「🛸 字典外盲點」摘要區
+- source_tag 加入 🛸盲點 標籤（只給有 ticker 的）
+- 連續 2+ 天出現的盲點標的，自動加入主掃描清單
+
 【v3.6 改動】
-- 報表最下方自動插入 TLT 避險雷達 markdown（如果存在）
-- TLT 不進主掃描，但結果會出現在 README 末端
+- 報表最下方自動插入 TLT 避險雷達 markdown
 
 【v3.5 改動】
-- 新增 fallen_saas 動態清單（抓 FIG 級殞落軟體股重生）
-- 報表新增「💀 本週重生候選」摘要區
-- source_tag 新增 💀重生 標籤
-
-【v3.4 改動】
-- 動態小盤判定：catalyst / auto_watch / small_caps_momentum 進來的標的，
-  若不在 BIG_CAPS 裡，自動套用 SMALL_CAPS 閾值
+- 新增 fallen_saas 動態清單
 """
 import pandas as pd
 import yfinance as yf
@@ -125,6 +124,31 @@ def load_fallen_saas():
     except Exception as e:
         print(f"⚠️ fallen_saas 載入失敗：{e}")
         return []
+
+
+def load_unknown_radar():
+    """從 data/unknown_radar.json 載入盲點雷達
+    
+    回傳：
+    - tickers: 連續 2+ 天出現且有對應 ticker 的標的（加入主掃描）
+    - all_blind_spots: 全部盲點清單（給 README 顯示）
+    """
+    path = os.path.join(DATA_DIR, "unknown_radar.json")
+    if not os.path.exists(path):
+        return [], []
+    try:
+        with open(path) as f:
+            data = json.load(f)
+        blind_spots = data.get('blind_spots', [])
+        # 只把「連續 2+ 天 + 有 ticker」的加入主掃描
+        strong_tickers = [
+            b['ticker'] for b in blind_spots
+            if b.get('is_strong') and b.get('ticker')
+        ]
+        return strong_tickers, blind_spots
+    except Exception as e:
+        print(f"⚠️ unknown_radar 載入失敗：{e}")
+        return [], []
 
 
 # ==========================================
@@ -287,25 +311,47 @@ def generate_report(df):
     catalyst = set(load_catalyst_today())
     small_caps_mom = set(load_small_caps_momentum())
     fallen_saas = set(load_fallen_saas())
+    unknown_tickers, all_blind_spots = load_unknown_radar()
+    unknown_set = set(unknown_tickers)
 
     def source_tag(symbol):
         if symbol in catalyst: return "📰催化劑"
         elif symbol in fallen_saas: return "💀重生"
+        elif symbol in unknown_set: return "🛸盲點"
         elif symbol in small_caps_mom: return "🎰動能"
         elif symbol in auto_watch: return "🔭候選"
         return ""
 
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.6 / yf Engine)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.7 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
 
     if catalyst:
         md += f"**📰 今日催化劑股**: {', '.join(sorted(catalyst))}\n\n"
     if fallen_saas:
         md += f"**💀 本週重生候選**: {', '.join(sorted(fallen_saas))}\n\n"
+    if unknown_set:
+        md += f"**🛸 字典外盲點（連 2+ 天上新聞但不在我清單）**: {', '.join(sorted(unknown_set))}\n\n"
     if small_caps_mom:
         md += f"**🎰 本週動能小盤股**: {', '.join(sorted(small_caps_mom))}\n\n"
     if auto_watch:
         md += f"**🔭 本週候選池**: {', '.join(sorted(auto_watch))}\n\n"
+    
+    # 盲點雷達詳細摘要
+    if all_blind_spots:
+        strong = [b for b in all_blind_spots if b.get('is_strong')]
+        new = [b for b in all_blind_spots if not b.get('is_strong')]
+        md += "### 🛸 盲點雷達詳情\n\n"
+        if strong:
+            md += "**連續多天出現（強訊號）**：\n"
+            for b in strong[:5]:
+                tk_str = f"`{b['ticker']}`" if b.get('ticker') else "_私募/未找到 ticker_"
+                md += f"- **{b['name']}** {tk_str} — 連 {b['consecutive_days']} 天 / 累積 {b.get('total_mentions', b['mentions_today'])} 次\n"
+        if new:
+            md += "\n**今日新出現**：\n"
+            for b in new[:5]:
+                tk_str = f"`{b['ticker']}`" if b.get('ticker') else "_私募/未找到 ticker_"
+                md += f"- {b['name']} {tk_str} — {b['mentions_today']} 次\n"
+        md += "\n"
 
     df['Expiry'] = pd.to_datetime(df['Expiry'])
 
@@ -397,22 +443,24 @@ def generate_report(df):
 # 6. 主執行程序
 # ==========================================
 def main():
-    print(f"🔥 啟動 Scanner 3.6 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 3.7 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
 
     auto_watch = load_auto_watch()
     catalyst = load_catalyst_today()
     small_caps_mom = load_small_caps_momentum()
     fallen_saas = load_fallen_saas()
+    unknown_tickers, _ = load_unknown_radar()
 
-    # 動態小盤判定：把 catalyst / auto_watch / small_caps_momentum / fallen_saas
+    # 動態小盤判定：把 catalyst / auto_watch / small_caps_momentum / fallen_saas / unknown
     # 進來的標的中所有「不在 BIG_CAPS」的都當小盤處理
     global _DYNAMIC_SMALL_CAPS
     big_caps_set = set(TICKER_CATEGORIES['BIG_CAPS'])
-    _DYNAMIC_SMALL_CAPS = set(small_caps_mom)  # 動能掃出來的全是小盤
+    _DYNAMIC_SMALL_CAPS = set(small_caps_mom)
     _DYNAMIC_SMALL_CAPS |= {t for t in fallen_saas if t not in big_caps_set}
     _DYNAMIC_SMALL_CAPS |= {t for t in catalyst if t not in big_caps_set}
     _DYNAMIC_SMALL_CAPS |= {t for t in auto_watch if t not in big_caps_set}
+    _DYNAMIC_SMALL_CAPS |= {t for t in unknown_tickers if t not in big_caps_set}
 
     seen = set()
     target_tickers = []
@@ -421,7 +469,8 @@ def main():
               + auto_watch
               + catalyst
               + small_caps_mom
-              + fallen_saas):
+              + fallen_saas
+              + unknown_tickers):
         if t not in seen:
             seen.add(t)
             target_tickers.append(t)
@@ -431,6 +480,7 @@ def main():
     print(f"📰 催化劑: {len(catalyst)} 檔")
     print(f"🎰 小盤動能: {len(small_caps_mom)} 檔")
     print(f"💀 殞落重生: {len(fallen_saas)} 檔")
+    print(f"🛸 字典外盲點: {len(unknown_tickers)} 檔")
     print(f"📐 動態判定為小盤: {len(_DYNAMIC_SMALL_CAPS)} 檔")
     print(f"🎯 掃描總數（去重後）: {len(target_tickers)} 檔")
 
