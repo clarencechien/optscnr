@@ -108,6 +108,13 @@ TICKER_MAP = {
     'PLUG':  ('Plug Power', []),
     'BLDP':  ('Ballard Power', []),
     'BE':    ('Bloom Energy', []),
+    # === 太陽能 / 電力電子（SEDG 在做 AI data center power）===
+    'SEDG':  ('SolarEdge', ['SolarEdge Technologies']),
+    'ENPH':  ('Enphase', ['Enphase Energy']),
+    'RUN':   ('Sunrun', []),
+    'NOVA':  ('Sunnova', []),
+    'FSLR':  ('First Solar', []),
+    'NXT':   ('Nextracker', []),
     # === 3D 列印 / 工業 ===
     'VELO':  ('Velo3D', ['Velo 3D']),
     'DDD':   ('3D Systems', []),
