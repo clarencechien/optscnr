@@ -77,6 +77,25 @@ KNOWN_TICKERS = {
     'U', 'VRT', 'PATH', 'DIS', 'NKE', 'SBUX', 'WMT', 'TGT', 'COST',
     'GS', 'MS', 'JPM', 'BAC', 'GOLD', 'FCX', 'ONDS', 'XYZ', 'NFLX',
     'AEHR', 'AMBA', 'WDC', 'STX', 'SNDK',
+    # S&P 100 主要成分股（避免跑出來當「盲點」）
+    'JNJ', 'PG', 'KO', 'PEP', 'V', 'MA', 'CVX', 'XOM', 'WFC', 'C',
+    'BLK', 'AXP', 'CAT', 'BA', 'HON', 'GE', 'LMT', 'UPS', 'FDX',
+    'UNH', 'CVS', 'CI', 'HUM', 'ELV', 'ABT', 'ABBV', 'LLY', 'TMO',
+    'DHR', 'BMY', 'AMGN', 'BIIB', 'REGN', 'VRTX',
+    'CMCSA', 'VZ', 'T', 'CHTR', 'TMUS',
+    'MCD', 'YUM', 'CMG', 'KHC', 'MDLZ', 'CL', 'GIS', 'K',
+    'HD', 'LOW', 'TJX', 'NKE', 'LULU',
+    'SCHW', 'BX', 'KKR', 'BRK', 'BRK-A', 'BRK-B',
+    'DE', 'EMR', 'ETN', 'ITW', 'MMM', 'PH',
+    'ENB', 'KMI', 'OXY', 'SLB', 'EOG', 'COP',
+    'DUK', 'SO', 'D', 'AEP', 'EXC',
+    'SPG', 'AMT', 'PLD', 'CCI', 'O', 'PSA',
+    'GIS', 'STZ', 'CL', 'CHD', 'CLX',
+    # 常見媒體 / 娛樂
+    'NWSA', 'NWS', 'FOX', 'FOXA', 'WBD', 'PARA',
+    # 中概股 / ADR 主流
+    'BABA', 'JD', 'PDD', 'NTES', 'BIDU', 'LI', 'XPEV', 'NIO',
+    'MELI', 'SE', 'NU', 'PAGS', 'STNE',
 }
 
 # 已知公司名（包含完整名稱、用來過濾）
@@ -138,6 +157,17 @@ COMMON_WORDS = {
     # 政治人物名
     'Trump', 'Biden', 'Harris', 'Musk', 'Bezos', 'Buffett', 'Powell',
     'Yellen', 'Lagarde', 'Xi', 'Putin', 'Netanyahu',
+    # 常見英文姓氏（避免「Johnson」→ JNJ 這種誤判）
+    'Johnson', 'Smith', 'Jones', 'Williams', 'Brown', 'Davis', 'Miller',
+    'Wilson', 'Moore', 'Taylor', 'Anderson', 'Thomas', 'Jackson', 'White',
+    'Lee', 'Martin', 'Thompson', 'Garcia', 'Martinez', 'Robinson', 'Clark',
+    'Rodriguez', 'Lewis', 'Walker', 'Hall', 'Young', 'King', 'Wright',
+    'Hill', 'Scott', 'Green', 'Adams', 'Baker', 'Nelson', 'Carter',
+    'Mitchell', 'Roberts', 'Phillips', 'Evans', 'Turner', 'Parker',
+    'Edwards', 'Collins', 'Stewart', 'Sanchez', 'Morris', 'Rogers',
+    'Reed', 'Cook', 'Bailey', 'Bell', 'Cooper', 'Howard', 'Ward',
+    'Cox', 'Diaz', 'Richardson', 'Wood', 'Watson', 'Brooks',
+    'Kelly', 'Sanders', 'Price', 'Bennett', 'Wood', 'Barnes', 'Ross',
     # 金融術語
     'AI', 'CEO', 'CFO', 'CTO', 'COO', 'IPO', 'ETF', 'GDP', 'CPI', 'PPI',
     'Fed', 'SEC', 'FDA', 'FTC', 'DOJ', 'Treasury', 'Treasurys', 'Treasuries',
