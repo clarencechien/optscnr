@@ -145,8 +145,8 @@ COMMON_WORDS = {
 def fetch_listed_companies():
     """從 SEC 抓上市公司名單（NASDAQ + NYSE）
     
-    用 SEC 的官方資料源，這是免費且最全的
-    每個公司有 ticker + name
+    SEC 要求 User-Agent 包含真實識別資訊（name + email），
+    不接受瀏覽器假冒的 UA
     
     回傳: {company_name_normalized: ticker}
     """
@@ -158,10 +158,20 @@ def fetch_listed_companies():
             with open(LISTED_COMPANIES_CACHE) as f:
                 return json.load(f)
     
+    # SEC 規定的 User-Agent 格式：公司或個人名稱 + email
+    # 如果這個你要改成自己的識別資訊，把下面這行換掉
+    SEC_HEADERS = {
+        'User-Agent': 'optscnr-bot research@optscnr.dev',
+        'Accept': 'application/json',
+        'Accept-Encoding': 'gzip, deflate',
+        'Host': 'www.sec.gov',
+    }
+    
     print("🌐 下載 SEC 上市公司清單...")
     url = "https://www.sec.gov/files/company_tickers.json"
+    
     try:
-        r = requests.get(url, headers={**HEADERS, 'Accept': 'application/json'}, timeout=30)
+        r = requests.get(url, headers=SEC_HEADERS, timeout=30)
         r.raise_for_status()
         data = r.json()
         
@@ -171,7 +181,6 @@ def fetch_listed_companies():
             ticker = info.get('ticker', '').upper()
             title = info.get('title', '')
             if ticker and title:
-                # 處理多種可能的名稱形式
                 name_clean = clean_company_name(title)
                 if name_clean:
                     company_to_ticker[name_clean] = ticker
@@ -182,11 +191,67 @@ def fetch_listed_companies():
         with open(LISTED_COMPANIES_CACHE, 'w') as f:
             json.dump(company_to_ticker, f)
         
-        print(f"✅ 載入 {len(company_to_ticker)} 家上市公司")
+        print(f"✅ 載入 {len(company_to_ticker)} 家上市公司（SEC）")
         return company_to_ticker
         
     except Exception as e:
         print(f"⚠️ SEC 公司清單下載失敗：{e}")
+        print("   嘗試備用來源...")
+        return fetch_listed_companies_fallback()
+
+
+def fetch_listed_companies_fallback():
+    """備用：從 NASDAQ 公開 trader 端口抓
+    
+    這個端口不需要特殊 User-Agent，但格式是 csv
+    """
+    try:
+        url = "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"
+        r = requests.get(url, headers=HEADERS, timeout=30)
+        r.raise_for_status()
+        
+        company_to_ticker = {}
+        # 格式: Symbol|Security Name|Market Category|...
+        lines = r.text.split('\n')
+        for line in lines[1:]:  # 跳過 header
+            parts = line.split('|')
+            if len(parts) < 2:
+                continue
+            ticker = parts[0].strip().upper()
+            title = parts[1].strip()
+            if ticker and title and not ticker.startswith('File'):
+                name_clean = clean_company_name(title)
+                if name_clean:
+                    company_to_ticker[name_clean] = ticker
+        
+        # 也抓 NYSE 那邊的
+        try:
+            url2 = "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+            r2 = requests.get(url2, headers=HEADERS, timeout=30)
+            if r2.status_code == 200:
+                for line in r2.text.split('\n')[1:]:
+                    parts = line.split('|')
+                    if len(parts) < 2:
+                        continue
+                    ticker = parts[0].strip().upper()
+                    title = parts[1].strip()
+                    if ticker and title and not ticker.startswith('File'):
+                        name_clean = clean_company_name(title)
+                        if name_clean:
+                            company_to_ticker[name_clean] = ticker
+        except Exception:
+            pass
+        
+        if not os.path.exists('data'):
+            os.makedirs('data')
+        with open(LISTED_COMPANIES_CACHE, 'w') as f:
+            json.dump(company_to_ticker, f)
+        
+        print(f"✅ 載入 {len(company_to_ticker)} 家上市公司（NASDAQ Trader）")
+        return company_to_ticker
+        
+    except Exception as e:
+        print(f"⚠️ NASDAQ Trader 也失敗：{e}")
         return {}
 
 
@@ -329,8 +394,8 @@ def main():
     # 1. 載入上市公司清單
     company_to_ticker = fetch_listed_companies()
     if not company_to_ticker:
-        print("❌ 無法載入上市公司清單，跳出")
-        return
+        print("⚠️ 無法載入上市公司清單，盲點將無法對應 ticker（仍會記錄公司名）")
+        company_to_ticker = {}
     
     # 已知公司名（小寫）用於快速 lookup
     known_names_lower = {clean_company_name(n) for n in KNOWN_COMPANY_NAMES}
