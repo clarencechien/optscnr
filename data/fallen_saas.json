@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-16T04:29:41.932708",
+  "updated_at": "2026-05-20T07:24:05.363055",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -18,36 +18,36 @@
   "details": [
     {
       "symbol": "HUBS",
-      "price": 198.38,
-      "high_52w": 654.33,
+      "price": 208.19,
+      "high_52w": 639.75,
       "low_52w": 173.25,
-      "drawdown_pct": 69.7,
-      "rebound_pct": 14.5,
-      "vol_ratio": 1.57,
-      "market_cap_b": 10.2,
-      "score": 31.68
+      "drawdown_pct": 67.5,
+      "rebound_pct": 20.2,
+      "vol_ratio": 1.65,
+      "market_cap_b": 10.7,
+      "score": 30.7
     },
     {
       "symbol": "RBLX",
-      "price": 42.85,
+      "price": 44.45,
       "high_52w": 150.59,
       "low_52w": 40.15,
-      "drawdown_pct": 71.5,
-      "rebound_pct": 6.7,
-      "vol_ratio": 1.3,
-      "market_cap_b": 30.7,
-      "score": 31.14
+      "drawdown_pct": 70.5,
+      "rebound_pct": 10.7,
+      "vol_ratio": 1.22,
+      "market_cap_b": 31.8,
+      "score": 29.23
     },
     {
       "symbol": "COUR",
-      "price": 5.28,
+      "price": 5.4,
       "high_52w": 13.56,
       "low_52w": 5.0,
-      "drawdown_pct": 61.1,
-      "rebound_pct": 5.6,
-      "vol_ratio": 1.21,
+      "drawdown_pct": 60.2,
+      "rebound_pct": 8.0,
+      "vol_ratio": 1.36,
       "market_cap_b": 1.5,
-      "score": 27.34
+      "score": 28.07
     }
   ]
 }
