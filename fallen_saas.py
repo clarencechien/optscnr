@@ -87,6 +87,14 @@ FALLEN_SAAS_UNIVERSE = [
     'CHWY',   # Chewy
     'CVNA',   # Carvana (重生案例經典)
 
+    # === 殞落電力電子 / 能源轉型重生 ===
+    # 不是 SaaS 但結構類似：跌 80%+、有新故事在發酵、技術重新被定價
+    'SEDG',   # SolarEdge（從 $300+ 跌到 $32，AI data center power roadmap）
+    'ENPH',   # Enphase（純太陽能，sector rotation 連動，沒獨家 AI 故事）
+    'RUN',    # Sunrun（住宅太陽能也跌爆過）
+    'NOVA',   # Sunnova
+    'FSLR',   # First Solar（晶片廠級的太陽能，曾經接近破產）
+
     # === CRM / SaaS 老牌 ===
     'CRM',    # Salesforce
     'NOW',    # ServiceNow
