@@ -69,18 +69,40 @@ SMALL_CAP_UNIVERSE = [
 ]
 
 
-def screen_ticker(symbol):
-    """單一標的篩選"""
+def screen_ticker(symbol, verbose=False):
+    """單一標的篩選
+    
+    verbose=True 會印出失敗原因，方便 debug
+    """
     try:
         tk = yf.Ticker(symbol)
-        info = tk.info
+        
+        # 抓 info（最容易失敗的地方）
+        try:
+            info = tk.info
+        except Exception as e:
+            if verbose:
+                print(f"  ⚠️ {symbol}: tk.info 失敗 ({e})")
+            return None
         
         mc = info.get('marketCap', 0)
-        if mc < CRITERIA['MIN_MARKET_CAP'] or mc > CRITERIA['MAX_MARKET_CAP']:
+        if mc == 0:
+            if verbose:
+                print(f"  ⚠️ {symbol}: marketCap 缺失或為 0")
+            return None
+        if mc < CRITERIA['MIN_MARKET_CAP']:
+            if verbose:
+                print(f"  ❌ {symbol}: 市值太小 (${mc/1e9:.2f}B)")
+            return None
+        if mc > CRITERIA['MAX_MARKET_CAP']:
+            if verbose:
+                print(f"  ❌ {symbol}: 市值太大 (${mc/1e9:.2f}B)")
             return None
         
         hist = tk.history(period='3mo')
         if len(hist) < 30:
+            if verbose:
+                print(f"  ⚠️ {symbol}: 歷史資料太短 ({len(hist)} 筆)")
             return None
         
         current_price = hist['Close'].iloc[-1]
@@ -88,20 +110,35 @@ def screen_ticker(symbol):
         gain_30d = (current_price / price_30d_ago) - 1
         
         if gain_30d < CRITERIA['MIN_30D_GAIN']:
+            if verbose:
+                print(f"  ❌ {symbol}: 30 天漲幅不夠 ({gain_30d*100:.1f}%)")
             return None
         
         avg_vol = hist['Volume'].tail(20).mean()
         if avg_vol < CRITERIA['MIN_AVG_VOLUME']:
+            if verbose:
+                print(f"  ❌ {symbol}: 量能不夠 ({avg_vol/1e6:.2f}M)")
             return None
         
-        if not tk.options:
+        try:
+            has_options = bool(tk.options)
+        except Exception as e:
+            if verbose:
+                print(f"  ⚠️ {symbol}: tk.options 失敗 ({e})")
             return None
         
-        # Short interest 加分（高 short interest = 軋空潛力）
+        if not has_options:
+            if verbose:
+                print(f"  ❌ {symbol}: 沒有期權市場")
+            return None
+        
+        # Short interest 加分
         short_pct = info.get('shortPercentOfFloat', 0) or 0
         
-        # 計分：漲幅 × 量能 × short squeeze 潛力
         score = gain_30d * 10 + (short_pct * 100 if short_pct else 0)
+        
+        if verbose:
+            print(f"  ✅ {symbol}: ${current_price:.2f} (+{gain_30d*100:.1f}%, mc ${mc/1e9:.1f}B, score {score:.1f})")
         
         return {
             'symbol': symbol,
@@ -113,7 +150,9 @@ def screen_ticker(symbol):
             'score': round(score, 2),
         }
         
-    except Exception:
+    except Exception as e:
+        if verbose:
+            print(f"  💥 {symbol}: 未預期錯誤 ({e})")
         return None
 
 
@@ -124,13 +163,18 @@ def main():
     if not os.path.exists('data'):
         os.makedirs('data')
     
+    # 對這些標的開啟 verbose 模式，幫助 debug 為什麼某些股票被漏掉
+    # 如果某個你認為應該被掃到的標的沒進結果，加進這個 list 就會看到失敗原因
+    DEBUG_TICKERS = {'SEDG', 'ENPH', 'RUN', 'NOVA', 'FSLR', 'NXT', 'AEHR'}
+    
     candidates = []
     
     for i, symbol in enumerate(SMALL_CAP_UNIVERSE):
         if i % 20 == 0:
             print(f"  進度: {i}/{len(SMALL_CAP_UNIVERSE)}")
         
-        result = screen_ticker(symbol)
+        verbose = symbol in DEBUG_TICKERS
+        result = screen_ticker(symbol, verbose=verbose)
         if result:
             candidates.append(result)
         
