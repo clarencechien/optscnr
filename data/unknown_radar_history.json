@@ -145,5 +145,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "JNJ"
+  },
+  "Intuit": {
+    "first_seen": "2026-05-20",
+    "last_seen": "2026-05-20",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "INTU"
+  },
+  "Airbnb": {
+    "first_seen": "2026-05-20",
+    "last_seen": "2026-05-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ABNB"
+  },
+  "Climb": {
+    "first_seen": "2026-05-20",
+    "last_seen": "2026-05-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CLYM"
+  },
+  "Billion": {
+    "first_seen": "2026-05-20",
+    "last_seen": "2026-05-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BGHL"
   }
 }
