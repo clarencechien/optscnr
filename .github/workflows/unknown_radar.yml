@@ -1,0 +1,37 @@
+name: Daily Unknown Radar
+
+on:
+  schedule:
+    # 跟 catalyst_fetch 同時間跑（UTC 週一到五 21:00 = 台灣早上 5:00）
+    # 比 catalyst 晚 30 分鐘，避免同時搶 RSS
+    - cron: '30 21 * * 0-5'
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests feedparser
+
+      - name: Run unknown radar
+        run: python unknown_radar.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/unknown_radar.json data/unknown_radar_history.json data/listed_companies.json
+          git diff --quiet --cached || git commit -m "🛸 Daily unknown radar [skip ci]"
+          git push
