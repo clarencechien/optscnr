@@ -1,35 +1,58 @@
 {
-  "updated_at": "2026-05-20T07:27:08.655337",
+  "updated_at": "2026-05-20T07:39:14.018449",
   "stats": {
-    "total_items": 100,
-    "items_with_company": 28,
+    "total_items": 99,
+    "items_with_company": 30,
     "items_with_catalyst": 15,
     "items_both": 3
   },
   "count": 17,
   "tickers": [
-    "GOOGL",
     "NVDA",
-    "MSFT",
+    "GOOGL",
     "WDAY",
+    "MSFT",
     "GS",
     "TSLA",
-    "AMZN",
     "AMD",
+    "AMZN",
     "F",
     "BA",
     "META",
-    "TSM",
-    "AVGO",
     "MU",
-    "BRK-B",
+    "AVGO",
+    "TSM",
     "AAPL",
+    "BRK-B",
     "NEE"
   ],
   "details": [
     {
+      "symbol": "NVDA",
+      "score": 4.0,
+      "evidence": [
+        {
+          "title": "Nvidia to launch Singapore research hub as city-state boosts AI plans",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "European stocks tick lower as Nvidia earnings release, inflation fears loom large",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "China chipmaking stocks rally as Nvidia earnings, Samsung strike loom",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
       "symbol": "GOOGL",
-      "score": 3.5,
+      "score": 3.0,
       "evidence": [
         {
           "title": "New data boosts our confidence in Lilly's obesity pill. Plus, Google's new AI features",
@@ -49,25 +72,15 @@
       ]
     },
     {
-      "symbol": "NVDA",
-      "score": 3.5,
+      "symbol": "WDAY",
+      "score": 2,
       "evidence": [
         {
-          "title": "Nvidia to launch Singapore research hub as city-state boosts AI plans",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "China chipmaking stocks rally as Nvidia earnings, Samsung strike loom",
+          "title": "Workday (WDAY) Partners With Anthropic and the Local Initiatives Support Corporation",
           "catalysts": [
-            "rally"
+            "partners with"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "Here’s What the Street Thinks About ​NVIDIA Corporation (NVDA)",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
@@ -79,19 +92,6 @@
           "title": "TD Cowen Maintains a Buy Rating on Microsoft Corporation (MSFT)",
           "catalysts": [
             "buy rating"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "WDAY",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Workday (WDAY) Partners With Anthropic and the Local Initiatives Support Corporation",
-          "catalysts": [
-            "partners with"
           ],
           "has_catalyst": true
         }
@@ -130,22 +130,6 @@
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Here’s What TD Cowen Thinks About Amazon.com (AMZN)",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Berkshire Hathaway's Greg Abel Thinks Alphabet Is a Better Magnificent Seven Stock Than Amazon. Here's Why He's Right.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "AMD",
       "score": 1.0,
       "evidence": [
@@ -156,6 +140,22 @@
         },
         {
           "title": "Prediction: AMD Stock Is Going to Triple in 5 Years, Thanks to This $120 Billion Opportunity",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Here’s What TD Cowen Thinks About Amazon.com (AMZN)",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Amazon, IBD's Stock Of The Day, Named 'Franchise Pick' As $3 Trillion Milestone Nears",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -195,11 +195,11 @@
       ]
     },
     {
-      "symbol": "TSM",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "​Taiwan Semiconductor Manufacturing (TSM) Among the Best Stocks to Invest in According to Billionaires",
+          "title": "BofA Remains a Buy on Micron (MU), Raises PT",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -217,22 +217,11 @@
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "TSM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "BofA Remains a Buy on Micron (MU), Raises PT",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Berkshire Hathaway's Greg Abel Thinks Alphabet Is a Better Magnificent Seven Stock Than Amazon. Here's Why He's Right.",
+          "title": "​Taiwan Semiconductor Manufacturing (TSM) Among the Best Stocks to Invest in According to Billionaires",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -244,6 +233,17 @@
       "evidence": [
         {
           "title": "How Services Could Help Generate $13 in Earnings Per Share for Apple Stock",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Warren Buffett Once Said Airlines Were 'A Bottomless Pit' But Berkshire Hathaway Just Invested in Delta—What's Changed?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -262,7 +262,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 5,
-    "Anthropic (private)": 4
+    "OpenAI (private)": 4,
+    "Anthropic (private)": 3
   }
 }
