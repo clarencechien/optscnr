@@ -113,32 +113,72 @@ KNOWN_COMPANY_NAMES = {
 
 # 太常見的詞，過濾掉避免誤判公司名
 COMMON_WORDS = {
+    # 冠詞、連接詞
     'The', 'A', 'An', 'And', 'Or', 'But', 'For', 'With', 'On', 'In', 'At',
     'To', 'From', 'By', 'Of', 'As', 'Is', 'Are', 'Was', 'Were', 'Be',
     'Been', 'Being', 'Have', 'Has', 'Had', 'Do', 'Does', 'Did', 'Will',
     'Would', 'Could', 'Should', 'May', 'Might', 'Must', 'Can',
+    'This', 'That', 'These', 'Those', 'It', 'Its',
+    'Here', 'There', 'Where', 'When', 'Why', 'How', 'What', 'Who',
+    'Now', 'Then', 'After', 'Before', 'During', 'While', 'Since',
+    # 公司類型後綴（要當完整詞過濾）
     'Inc', 'Corp', 'Corporation', 'Company', 'Co', 'Ltd', 'LLC', 'LP',
+    # 國家、地區、形容詞
     'US', 'USA', 'UK', 'EU', 'China', 'Japan', 'India', 'Russia',
-    'America', 'American', 'European', 'Asian', 'Wall', 'Street',
-    'AI', 'CEO', 'CFO', 'CTO', 'COO', 'IPO', 'ETF', 'GDP', 'CPI',
-    'Fed', 'SEC', 'FDA', 'FTC', 'DOJ', 'Treasury', 'Pentagon',
-    'Q1', 'Q2', 'Q3', 'Q4', 'FY', 'EPS', 'PE', 'YoY', 'QoQ',
-    'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
+    'Iran', 'Israel', 'Syria', 'Egypt', 'Ukraine', 'Korea', 'Vietnam',
+    'Singapore', 'Taiwan', 'Hong', 'Kong', 'Saudi', 'Arabia', 'Iraq',
+    'Brazil', 'Mexico', 'Canada', 'Australia', 'Germany', 'France',
+    'Italy', 'Spain', 'Britain', 'Britain', 'Ireland', 'Scotland',
+    'America', 'American', 'European', 'Asian', 'African', 'Chinese',
+    'Japanese', 'Korean', 'Indian', 'Russian', 'Mexican', 'Brazilian',
+    # 地名常見
+    'New', 'York', 'San', 'Francisco', 'Los', 'Angeles', 'Chicago',
+    'Boston', 'Washington', 'Texas', 'California', 'Florida', 'Seattle',
+    'Wall', 'Street', 'Silicon', 'Valley',
+    # 政治人物名
+    'Trump', 'Biden', 'Harris', 'Musk', 'Bezos', 'Buffett', 'Powell',
+    'Yellen', 'Lagarde', 'Xi', 'Putin', 'Netanyahu',
+    # 金融術語
+    'AI', 'CEO', 'CFO', 'CTO', 'COO', 'IPO', 'ETF', 'GDP', 'CPI', 'PPI',
+    'Fed', 'SEC', 'FDA', 'FTC', 'DOJ', 'Treasury', 'Treasurys', 'Treasuries',
+    'Pentagon', 'Congress', 'Senate', 'House',
+    'Q1', 'Q2', 'Q3', 'Q4', 'FY', 'EPS', 'PE', 'YoY', 'QoQ', 'PT',
+    'EBITDA', 'EBIT', 'FCF', 'ROE', 'ROI', 'ROIC',
+    # 時間
+    'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December',
-    'New', 'York', 'San', 'Francisco', 'Los', 'Angeles', 'Chicago',
-    'Trump', 'Biden', 'Harris', 'Musk', 'Bezos', 'Buffett',  # 不是公司
-    'Bitcoin', 'Ethereum', 'Crypto', 'Dollar', 'Euro', 'Yen',
+    'Today', 'Yesterday', 'Tomorrow', 'Week', 'Month', 'Year',
+    # 加密貨幣 / 商品
+    'Bitcoin', 'Ethereum', 'Crypto', 'Dollar', 'Euro', 'Yen', 'Pound',
+    'Gold', 'Silver', 'Oil', 'Brent', 'WTI',
+    # 媒體 / 機構
     'Reuters', 'Bloomberg', 'CNBC', 'WSJ', 'MarketWatch', 'Yahoo',
-    'Seeking', 'Alpha', 'Forbes', 'Barron',  # 媒體名
+    'Seeking', 'Alpha', 'Forbes', 'Barron', 'Motley', 'Fool',
+    'Tipranks', 'StreetInsider', 'Investorplace', 'Benzinga',
+    # 市場術語
     'Stock', 'Stocks', 'Market', 'Markets', 'Index', 'Indices',
     'Buy', 'Sell', 'Hold', 'Upgrade', 'Downgrade', 'Target', 'Rating',
-    'NYSE', 'NASDAQ', 'Dow', 'Jones', 'Russell',
+    'Bullish', 'Bearish', 'Outperform', 'Underperform', 'Neutral',
+    'NYSE', 'NASDAQ', 'Dow', 'Jones', 'Russell', 'SPDR',
+    # 通用商業詞
     'Group', 'Holdings', 'Partners', 'Capital', 'Securities', 'Energy',
-    'Technologies', 'Systems', 'Solutions', 'Industries',
-    'COVID', 'Pandemic', 'Recession',
-    'Cowen', 'TD',  # 投行的人名
-    'Lilly',  # 太常見的單一字
+    'Technologies', 'Systems', 'Solutions', 'Industries', 'Services',
+    'Financial', 'International', 'Global', 'National', 'Federal',
+    'Management', 'Investments', 'Investment', 'Fund', 'Funds',
+    # 投行 / 分析師
+    'Cowen', 'TD', 'Mizuho', 'Citi', 'Citigroup', 'Wedbush', 'Evercore',
+    'Wells', 'Fargo', 'UBS', 'HSBC', 'Barclays', 'Deutsche', 'Stifel',
+    'Raymond', 'James', 'Jefferies', 'Morgan', 'Stanley', 'Goldman',
+    # 其他常出現的字
+    'COVID', 'Pandemic', 'Recession', 'Inflation', 'Deflation',
+    'Earnings', 'Revenue', 'Profit', 'Loss', 'Growth', 'Decline',
+    'Lilly', 'Ozempic', 'Wegovy',  # 跟單字藥名/品牌
+    'Watch', 'Watching', 'Analysis', 'Report', 'Update', 'Forecast',
+    'Live', 'Latest', 'Breaking', 'News', 'Trending',
+    'Wednesday', 'Thursday',
+    'Plus',  # "Plus, ..." 開頭
+    'Trading', 'Trader', 'Investor', 'Investors',
 }
 
 
@@ -161,7 +201,7 @@ def fetch_listed_companies():
     # SEC 規定的 User-Agent 格式：公司或個人名稱 + email
     # 如果這個你要改成自己的識別資訊，把下面這行換掉
     SEC_HEADERS = {
-        'User-Agent': 'optscnr-bot research@optscnr.dev',
+        'User-Agent': 'Personal Research Tool clarence.research@gmail.com',
         'Accept': 'application/json',
         'Accept-Encoding': 'gzip, deflate',
         'Host': 'www.sec.gov',
@@ -281,42 +321,42 @@ def clean_company_name(name):
 def extract_proper_nouns(text):
     """從新聞文字抽取「可能的公司名」
     
-    策略：抓所有大寫開頭的詞或多詞片語
-    - 單詞：'Tempus'、'Symbotic'
-    - 雙詞：'Astera Labs'、'Saudi Aramco'
-    - 三詞：'AST SpaceMobile'
+    策略：
+    - 多詞片語（"Astera Labs"）→ 大概率公司名
+    - 單一大寫詞 → 容易誤判（人名、地名、形容詞），要更嚴格
     
     過濾：
-    - 句首大寫字（很多是普通字）
-    - COMMON_WORDS
+    - 句首大寫字
+    - COMMON_WORDS（即使是大寫開頭）
     """
     if not text:
         return []
     
-    # 移除標題開頭，避免句首誤判
-    # 直接抓「至少 2 個大寫字」的 pattern：
-    # 1. 兩個或更多大寫詞連在一起 "AST SpaceMobile"
-    # 2. 大寫詞 + (小寫詞)? + 大寫詞 "Bank of America"
-    # 3. 單一大寫詞 + 後綴 Inc/Corp/Ltd
-    
-    # 簡化策略：先抓所有 capitalized words 連續組合（1-3 個詞）
-    # Pattern: [A-Z][a-zA-Z0-9]+(?:\s+(?:of|and|&|de|la|the)\s+)?(?:\s+[A-Z][a-zA-Z0-9]+){0,2}
     pattern = r'\b([A-Z][a-zA-Z0-9]{2,}(?:\s+[A-Z][a-zA-Z0-9&]+){0,2})\b'
     matches = re.findall(pattern, text)
     
     result = []
     for m in matches:
-        # 排除完全是常見字
         words = m.split()
+        
+        # 完全是常見字 → 跳過
         if all(w in COMMON_WORDS for w in words):
             continue
-        # 排除單一短字
+        
+        # 太短 → 跳過
         if len(m) <= 3:
             continue
-        # 排除明顯非公司（人名、地名）
-        if any(w in COMMON_WORDS for w in words[:1]):
-            # 例如 "May Q1" 的 "May" 排除
+        
+        # 第一個字是 COMMON_WORDS → 跳過
+        # 例如 "May Q1"、"New York"、"China Inc" 開頭
+        if words[0] in COMMON_WORDS:
             continue
+        
+        # 單字（沒空格）且在 COMMON_WORDS → 跳過
+        # 即使 SEC 有 ticker，這種大概是雜訊
+        if len(words) == 1 and m in COMMON_WORDS:
+            continue
+        
         result.append(m.strip())
     
     return result
@@ -421,28 +461,54 @@ def main():
     
     print(f"   抽出 {len(proper_nouns)} 個專有名詞候選")
     
-    # 4. 過濾「已知」標的
+    # 4. 過濾「已知」標的 + 「必須在 SEC 上市公司清單裡」
     unknowns = {}
     for name, count in proper_nouns.items():
         if count < MIN_MENTIONS_TODAY:
             continue
         
         name_clean = clean_company_name(name)
+        if not name_clean or len(name_clean) < 3:
+            continue
+        
+        # 防線 0：單字且在 COMMON_WORDS → 直接跳過（即使 SEC 有 ticker）
+        # 這擋掉 'Here'、'Chinese'、'Iran' 這種「SEC 剛好有公司用這名字」的雜訊
+        if ' ' not in name and name in COMMON_WORDS:
+            continue
+        
+        # 過濾已知
         if is_known(name, name_clean, KNOWN_TICKERS, known_names_lower):
             continue
         
-        # 找對應 ticker
+        # 嚴格 ticker 比對：只接受「完全匹配 SEC 公司名」的
+        # 避免 'Chinese' 隨機 match 到 'CWNOF' 這種雜訊
         ticker = None
-        # 直接 lookup
         if name_clean in company_to_ticker:
+            # 完全匹配
             ticker = company_to_ticker[name_clean]
         else:
-            # 模糊比對：去掉後綴
-            for company_norm, t in company_to_ticker.items():
-                if company_norm.startswith(name_clean) or name_clean.startswith(company_norm):
-                    if len(company_norm) > 3:
+            # 模糊：name_clean 是 SEC 公司名的「完整前綴」或「完整後綴」
+            # 且至少 5 個字（避免短字隨機匹配）
+            if len(name_clean) >= 5:
+                for company_norm, t in company_to_ticker.items():
+                    if len(company_norm) < 5:
+                        continue
+                    # name_clean 是 company_norm 的前綴（"Astera" → "Astera Labs"）
+                    if company_norm.startswith(name_clean + ' '):
                         ticker = t
                         break
+                    # 完全相等的另一種寫法
+                    if company_norm == name_clean:
+                        ticker = t
+                        break
+        
+        # 沒找到 ticker = 不是上市公司或不可投資 → 跳過（這是關鍵）
+        if not ticker:
+            continue
+        
+        # 再次檢查 ticker 不在 KNOWN_TICKERS
+        if ticker in KNOWN_TICKERS:
+            continue
         
         unknowns[name] = {
             'count': count,
