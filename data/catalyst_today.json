@@ -1,113 +1,74 @@
 {
-  "updated_at": "2026-05-20T22:11:39.417417",
+  "updated_at": "2026-05-21T21:57:50.768478",
   "stats": {
-    "total_items": 101,
-    "items_with_company": 23,
-    "items_with_catalyst": 12,
-    "items_both": 1
+    "total_items": 105,
+    "items_with_company": 25,
+    "items_with_catalyst": 23,
+    "items_both": 2
   },
-  "count": 16,
+  "count": 17,
   "tickers": [
-    "AMZN",
-    "VST",
-    "TGT",
-    "GS",
-    "NVDA",
+    "WDAY",
+    "ASML",
+    "TSLA",
     "WMT",
-    "MU",
-    "MS",
+    "NVDA",
+    "MSFT",
     "META",
-    "XYZ",
-    "GOOGL",
-    "NEE",
+    "AMAT",
+    "TGT",
+    "AVGO",
+    "BRK-B",
+    "GS",
+    "SHOP",
     "PLTR",
-    "VRT",
-    "OKLO",
-    "SNDK"
+    "ARM",
+    "GOOGL",
+    "CRWD"
   ],
   "details": [
     {
-      "symbol": "AMZN",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Bezos defends billionaires, hypes AI, talks taxes and praises Trump in CNBC interview",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Bezos brushes off concerns of an AI bubble: 'You shouldn't worry about it'",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Mamdani fires back at Bezos over Queens teacher tax remark",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "VST",
+      "symbol": "WDAY",
       "score": 2,
       "evidence": [
         {
-          "title": "Constellation’s and Vistra’s stocks rally as power-grid operator speeds up data-center deals",
+          "title": "Workday jumps 14% as it bumps up margin forecast on AI strength",
           "catalysts": [
-            "rally"
+            "jumps"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "ASML",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "ASML Holding N.V. (ASML) Rallied Following Solid Results",
+          "catalysts": [
+            "rallied"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
       "score": 1.5,
       "evidence": [
         {
-          "title": "Target beats Wall Street estimates, hikes sales outlook as shoppers start to return",
+          "title": "Job training for robots: How China is getting machines ready to join the workforce",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Here’s why Target’s turnaround may not be as smooth as the latest results imply",
+          "title": "Will Elon Musk eventually merge SpaceX with Tesla? Speculation is building",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Target names former Walmart executive as chief supply chain officer",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "OpenAI to confidentially file for IPO as soon as Friday: Source",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Saudi Arabia's Humain picks Goldman Sachs to advise on data centre financing, sources say",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Something very unusual is happening with Nvidia options",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia’s Blockbuster Quarter Is Coming — And NVDA Stock Is Still Cheap",
+          "title": "Tesla (TSLA) Slid Over Capex Concerns",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -115,42 +76,57 @@
     },
     {
       "symbol": "WMT",
-      "score": 1.0,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "‘It will not bring you happiness’: I have advice for your single, childless 62-year-old multimillionaire reader",
+          "title": "How Walmart's gas price warning shapes our retail outlook — plus, Honeywell's quantum connection",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Target names former Walmart executive as chief supply chain officer",
+          "title": "Walmart issues worse-than-expected outlook as high gas prices hit shoppers, shares drop 7%",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "People are putting less gas in their tanks as high prices crimp budgets, Walmart says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
-      "score": 1.0,
+      "symbol": "NVDA",
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Micron’s stock gets a boost. Are Samsung’s problems helping?",
+          "title": "An AI trade involving energy and infrastructure that's doubled your money, topping Nvidia",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "White-hot semiconductor stocks like Sandisk and Micron are now in meltdown mode",
+          "title": "Nvidia says it has ‘largely conceded’ China’s AI chip market to Huawei",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Analyst Report: NVIDIA Corp",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MS",
-      "score": 0.5,
+      "symbol": "MSFT",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "OpenAI to confidentially file for IPO as soon as Friday: Source",
+          "title": "Anthropic, Microsoft in talks for AI chip deal after $5 billion investment",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Microsoft Stock Slumps, Then Bill Ackman Makes His Boldest AI Bet Yet",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -158,43 +134,91 @@
     },
     {
       "symbol": "META",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Zuckerberg's Meta layoffs memo: 'Success isn't a given' in the AI era",
+          "title": "Meta, Broadcom and others to launch $125 million semiconductor research hub at UCLA",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta Begins Laying Off Thousands In AI Push. Stock Slips.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
-      "score": 0.5,
+      "symbol": "AMAT",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Jan. 6 police officers sue Trump to block $1.8B 'lawfare' fund",
+          "title": "Meta, Broadcom and others to launch $125 million semiconductor research hub at UCLA",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Behind the Numbers: Why Applied Materials’ Historic Q2 Results Justify New All-Time Highs",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
-      "score": 0.5,
+      "symbol": "TGT",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Has Google lost its AI edge? How its ‘unexciting’ strategy could actually pay off.",
+          "title": "Target sees unexpected shift in customer behavior",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "What Are Wall Street Analysts' Target Price for Simon Property Group Stock?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NEE",
+      "symbol": "AVGO",
       "score": 0.5,
       "evidence": [
         {
-          "title": "NextEra Energy to buy Caliber Resource Partners, set up shale JV - Reuters",
+          "title": "Meta, Broadcom and others to launch $125 million semiconductor research hub at UCLA",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "SpaceX, OpenAI valuations could mean they leapfrog Berkshire Hathaway on first day of trading",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Goldman Sachs to pay $500 million to settle shareholder lawsuit over 1MDB scandal",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SHOP",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Loomis Sayles Global Growth Fund Holds Firm on Shopify (SHOP) Beyond AI Narrative",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -205,40 +229,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Palantir Faces a Bigger Threat Than Valuation: AI Labs Like Anthropic and OpenAI Are Disrupting the PLTR Stock Story",
+          "title": "Should You Invest in Palantir Technologies (PLTR)?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "VRT",
+      "symbol": "ARM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Underweight in Vertiv Holdings Co (VRT) Hurt Fidelity Growth Strategies Fund’s Performance in Q1",
+          "title": "Does Arm Holdings (ARM) Offer an Attractive Risk Reward Opportunity?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "OKLO",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Oklo Looks Stronger as a Long-Term Energy Play Thanks to 2 Major Growth Drivers",
+          "title": "Google I/O: Alphabet Flexes Muscles In AI Model Pricing Vs. Rivals",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SNDK",
+      "symbol": "CRWD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "White-hot semiconductor stocks like Sandisk and Micron are now in meltdown mode",
+          "title": "Dear CrowdStrike Stock Fans, Mark Your Calendars for June 3",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -246,7 +270,8 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 5,
-    "Anthropic (private)": 2
+    "Anthropic (private)": 2,
+    "OpenAI (private)": 1,
+    "xAI (private)": 1
   }
 }
