@@ -173,5 +173,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BGHL"
+  },
+  "Starlink": {
+    "first_seen": "2026-05-21",
+    "last_seen": "2026-05-21",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "OTAI-UN"
+  },
+  "Spotify": {
+    "first_seen": "2026-05-21",
+    "last_seen": "2026-05-21",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SPOT"
   }
 }

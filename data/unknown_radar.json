@@ -1,53 +1,29 @@
 {
-  "updated_at": "2026-05-20T22:51:25.768219",
-  "count": 4,
+  "updated_at": "2026-05-21T22:48:58.423218",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Intuit",
-      "ticker": "INTU",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Intuit plans to cut workforce by about 17% as tax software maker reckons with slowing growth",
-        "Intuit plans to cut workforce by about 17% as tax software maker reckons with slowing growth"
-      ]
-    },
-    {
-      "name": "Airbnb",
-      "ticker": "ABNB",
+      "name": "Starlink",
+      "ticker": "OTAI-UN",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Airbnb adds hotels, car rentals. Chesky says app can become an 'Amazon for services'",
-        "Airbnb adds hotels, car rentals. Chesky says app can become an 'Amazon for services'"
+        "SpaceX is heavily reliant on Starlink for growth and profit as it marches toward Nasdaq listing",
+        "SpaceX is heavily reliant on Starlink for growth and profit as it marches toward Nasdaq listing"
       ]
     },
     {
-      "name": "Climb",
-      "ticker": "CLYM",
+      "name": "Spotify",
+      "ticker": "SPOT",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Are Wall Street Analysts Predicting Brown-Forman Stock Will Climb or Sink?",
-        "Are Wall Street Analysts Predicting McCormick & Company Stock Will Climb or Sink?"
-      ]
-    },
-    {
-      "name": "Billion",
-      "ticker": "BGHL",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "CoreWeave Has Raised $20 Billion in Capital This Year. Should Investors Be Worried?",
-        "Google and Blackstone Bet $5 Billion on New Newcloud to Challenge CoreWeave"
+        "Spotify soars 13% after announcing AI music deal with UMG, guidance",
+        "Spotify soars 13% after announcing AI music deal with UMG, guidance"
       ]
     }
   ]
