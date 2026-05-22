@@ -187,5 +187,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "SPOT"
+  },
+  "IMAX": {
+    "first_seen": "2026-05-22",
+    "last_seen": "2026-05-22",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "IMAX"
+  },
+  "Consumer": {
+    "first_seen": "2026-05-22",
+    "last_seen": "2026-05-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CPSS"
   }
 }
