@@ -1,166 +1,90 @@
 {
-  "updated_at": "2026-05-21T21:57:50.768478",
+  "updated_at": "2026-05-22T21:43:02.137365",
   "stats": {
-    "total_items": 105,
-    "items_with_company": 25,
-    "items_with_catalyst": 23,
-    "items_both": 2
+    "total_items": 103,
+    "items_with_company": 17,
+    "items_with_catalyst": 10,
+    "items_both": 3
   },
-  "count": 17,
+  "count": 13,
   "tickers": [
-    "WDAY",
-    "ASML",
-    "TSLA",
     "WMT",
-    "NVDA",
-    "MSFT",
-    "META",
-    "AMAT",
+    "WDAY",
+    "SBUX",
+    "F",
     "TGT",
-    "AVGO",
-    "BRK-B",
-    "GS",
-    "SHOP",
-    "PLTR",
-    "ARM",
-    "GOOGL",
-    "CRWD"
+    "QCOM",
+    "DIS",
+    "IONQ",
+    "MU",
+    "MSFT",
+    "IBM",
+    "BAC",
+    "JPM"
   ],
   "details": [
     {
-      "symbol": "WDAY",
-      "score": 2,
+      "symbol": "WMT",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Workday jumps 14% as it bumps up margin forecast on AI strength",
+          "title": "Two top Walmart executives leave company under new CEO John Furner",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Trump said he'd 'remember' companies that didn't apply for tariff refunds. Many of them are anyway",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Senior Walmart executives depart amid rejig under new CEO, memo shows",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WDAY",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Workday jumps 5% as it bumps up margin forecast on AI strength",
           "catalysts": [
             "jumps"
           ],
           "has_catalyst": true
+        },
+        {
+          "title": "Analyzing Workday’s (WDAY) Idiosyncratic Earnings Growth Dynamics",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ASML",
+      "symbol": "SBUX",
       "score": 2,
       "evidence": [
         {
-          "title": "ASML Holding N.V. (ASML) Rallied Following Solid Results",
+          "title": "Arm shares extend weekly rally to almost 50%, and Starbucks pulls the plug on an AI project",
           "catalysts": [
-            "rallied"
+            "rally"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "TSLA",
-      "score": 1.5,
+      "symbol": "F",
+      "score": 2,
       "evidence": [
         {
-          "title": "Job training for robots: How China is getting machines ready to join the workforce",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Will Elon Musk eventually merge SpaceX with Tesla? Speculation is building",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Tesla (TSLA) Slid Over Capex Concerns",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "How Walmart's gas price warning shapes our retail outlook — plus, Honeywell's quantum connection",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Walmart issues worse-than-expected outlook as high gas prices hit shoppers, shares drop 7%",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "People are putting less gas in their tanks as high prices crimp budgets, Walmart says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "An AI trade involving energy and infrastructure that's doubled your money, topping Nvidia",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia says it has ‘largely conceded’ China’s AI chip market to Huawei",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Analyst Report: NVIDIA Corp",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Anthropic, Microsoft in talks for AI chip deal after $5 billion investment",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft Stock Slumps, Then Bill Ackman Makes His Boldest AI Bet Yet",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Meta, Broadcom and others to launch $125 million semiconductor research hub at UCLA",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta Begins Laying Off Thousands In AI Push. Stock Slips.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMAT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Meta, Broadcom and others to launch $125 million semiconductor research hub at UCLA",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Behind the Numbers: Why Applied Materials’ Historic Q2 Results Justify New All-Time Highs",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Ford’s stock climbs to highest close in three years. Here’s what’s behind its run.",
+          "catalysts": [
+            "climbs"
+          ],
+          "has_catalyst": true
         }
       ]
     },
@@ -169,109 +93,105 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Target sees unexpected shift in customer behavior",
+          "title": "What Are Wall Street Analysts' Target Price for Vertex Pharmaceuticals Stock?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "What Are Wall Street Analysts' Target Price for Simon Property Group Stock?",
+          "title": "Target moves to elevate supply chain operations, inventory reliability",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AVGO",
+      "symbol": "QCOM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta, Broadcom and others to launch $125 million semiconductor research hub at UCLA",
+          "title": "Qualcomm's stock pop shows investors are 'waking up' to boom in AI devices",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "SpaceX, OpenAI valuations could mean they leapfrog Berkshire Hathaway on first day of trading",
+          "title": "Disney's 'Star Wars: The Mandalorian and Grogu' tallies lowest Thursday preview sales in franchise history",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "IONQ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Goldman Sachs to pay $500 million to settle shareholder lawsuit over 1MDB scandal",
+          "title": "Which company will the U.S. government take a stake in next? Here’s what traders think",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SHOP",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Loomis Sayles Global Growth Fund Holds Firm on Shopify (SHOP) Beyond AI Narrative",
+          "title": "Which company will the U.S. government take a stake in next? Here’s what traders think",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Should You Invest in Palantir Technologies (PLTR)?",
+          "title": "Microsoft’s GitHub was positioned to win the AI coding race. Outages got in the way",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ARM",
+      "symbol": "IBM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Does Arm Holdings (ARM) Offer an Attractive Risk Reward Opportunity?",
+          "title": "IBM could be a big winner as quantum computing moves out of the science-fiction realm",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "BAC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Google I/O: Alphabet Flexes Muscles In AI Model Pricing Vs. Rivals",
+          "title": "JP Morgan, Bank of America, and Citi 'living wills' cleared by Fed, FDIC",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWD",
+      "symbol": "JPM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dear CrowdStrike Stock Fans, Mark Your Calendars for June 3",
+          "title": "JP Morgan, Bank of America, and Citi 'living wills' cleared by Fed, FDIC",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "Anthropic (private)": 2,
-    "OpenAI (private)": 1,
-    "xAI (private)": 1
-  }
+  "watch_only": {}
 }
