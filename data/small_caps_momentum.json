@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-20T07:46:03.709506",
+  "updated_at": "2026-05-23T02:05:13.696411",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
@@ -10,95 +10,95 @@
   "tickers": [
     "CLSK",
     "FLNC",
-    "DDD",
-    "MARA",
     "VELO",
-    "NVTS",
+    "DDD",
+    "SEDG",
     "BKSY",
+    "AEHR",
     "BLDP",
-    "ACMR"
+    "POWI"
   ],
   "details": [
     {
       "symbol": "CLSK",
-      "price": 14.69,
-      "gain_30d_pct": 48.7,
-      "market_cap_m": 3770.0,
-      "avg_volume_m": 21.68,
+      "price": 15.97,
+      "gain_30d_pct": 48.4,
+      "market_cap_m": 4098.0,
+      "avg_volume_m": 22.31,
       "short_pct_float": 49.5,
-      "score": 54.32
+      "score": 54.29
     },
     {
       "symbol": "FLNC",
-      "price": 17.91,
-      "gain_30d_pct": 36.5,
-      "market_cap_m": 3301.0,
-      "avg_volume_m": 13.46,
+      "price": 21.49,
+      "gain_30d_pct": 57.4,
+      "market_cap_m": 3961.0,
+      "avg_volume_m": 14.15,
       "short_pct_float": 41.2,
-      "score": 44.88
-    },
-    {
-      "symbol": "DDD",
-      "price": 2.67,
-      "gain_30d_pct": 39.1,
-      "market_cap_m": 392.0,
-      "avg_volume_m": 4.51,
-      "short_pct_float": 29.4,
-      "score": 33.36
-    },
-    {
-      "symbol": "MARA",
-      "price": 12.44,
-      "gain_30d_pct": 30.9,
-      "market_cap_m": 4743.0,
-      "avg_volume_m": 44.52,
-      "short_pct_float": 30.1,
-      "score": 33.2
+      "score": 46.97
     },
     {
       "symbol": "VELO",
-      "price": 16.99,
-      "gain_30d_pct": 60.9,
-      "market_cap_m": 506.0,
-      "avg_volume_m": 3.11,
+      "price": 23.06,
+      "gain_30d_pct": 100.0,
+      "market_cap_m": 687.0,
+      "avg_volume_m": 3.19,
       "short_pct_float": 25.6,
-      "score": 31.65
+      "score": 35.56
     },
     {
-      "symbol": "NVTS",
-      "price": 19.43,
-      "gain_30d_pct": 103.5,
-      "market_cap_m": 4541.0,
-      "avg_volume_m": 39.51,
-      "short_pct_float": 20.4,
-      "score": 30.8
+      "symbol": "DDD",
+      "price": 3.15,
+      "gain_30d_pct": 59.9,
+      "market_cap_m": 463.0,
+      "avg_volume_m": 4.68,
+      "short_pct_float": 29.4,
+      "score": 35.44
+    },
+    {
+      "symbol": "SEDG",
+      "price": 61.95,
+      "gain_30d_pct": 43.4,
+      "market_cap_m": 3768.0,
+      "avg_volume_m": 4.76,
+      "short_pct_float": 19.1,
+      "score": 23.43
     },
     {
       "symbol": "BKSY",
-      "price": 45.17,
-      "gain_30d_pct": 35.2,
-      "market_cap_m": 1676.0,
+      "price": 47.87,
+      "gain_30d_pct": 37.6,
+      "market_cap_m": 1776.0,
       "avg_volume_m": 2.37,
       "short_pct_float": 19.5,
-      "score": 23.04
+      "score": 23.28
+    },
+    {
+      "symbol": "AEHR",
+      "price": 95.02,
+      "gain_30d_pct": 32.6,
+      "market_cap_m": 2989.0,
+      "avg_volume_m": 2.84,
+      "short_pct_float": 15.8,
+      "score": 19.1
     },
     {
       "symbol": "BLDP",
-      "price": 4.18,
-      "gain_30d_pct": 60.8,
-      "market_cap_m": 1260.0,
-      "avg_volume_m": 9.79,
+      "price": 5.54,
+      "gain_30d_pct": 105.2,
+      "market_cap_m": 1670.0,
+      "avg_volume_m": 11.81,
       "short_pct_float": 7.0,
-      "score": 13.06
+      "score": 17.5
     },
     {
-      "symbol": "ACMR",
-      "price": 66.45,
-      "gain_30d_pct": 44.0,
-      "market_cap_m": 4592.0,
-      "avg_volume_m": 1.55,
-      "short_pct_float": 5.4,
-      "score": 9.8
+      "symbol": "POWI",
+      "price": 70.85,
+      "gain_30d_pct": 32.7,
+      "market_cap_m": 3948.0,
+      "avg_volume_m": 1.24,
+      "short_pct_float": 11.1,
+      "score": 14.37
     }
   ]
 }
