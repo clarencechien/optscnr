@@ -1,28 +1,54 @@
 {
-  "updated_at": "2026-05-22T21:43:02.137365",
+  "updated_at": "2026-05-24T21:29:45.507313",
   "stats": {
-    "total_items": 103,
-    "items_with_company": 17,
-    "items_with_catalyst": 10,
-    "items_both": 3
+    "total_items": 106,
+    "items_with_company": 24,
+    "items_with_catalyst": 9,
+    "items_both": 1
   },
-  "count": 13,
+  "count": 18,
   "tickers": [
-    "WMT",
-    "WDAY",
-    "SBUX",
-    "F",
     "TGT",
-    "QCOM",
+    "WMT",
     "DIS",
-    "IONQ",
-    "MU",
+    "GS",
+    "JPM",
+    "BRK-B",
     "MSFT",
-    "IBM",
-    "BAC",
-    "JPM"
+    "QCOM",
+    "NVDA",
+    "ASML",
+    "DELL",
+    "TSLA",
+    "GILD",
+    "MS",
+    "INTC",
+    "MU",
+    "SNDK",
+    "ACHR"
   ],
   "details": [
+    {
+      "symbol": "TGT",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Duke Energy (DUK) Price Target Lowered by $5",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Lowe’s Companies (LOW) Price Target Trimmed by $32 at RBC Capital",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Analyst Upgrades Automatic Data Processing (ADP) to ‘Equal Weight’, Assigns $214 Price Target",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
     {
       "symbol": "WMT",
       "score": 2.5,
@@ -33,72 +59,79 @@
           "has_catalyst": false
         },
         {
-          "title": "Trump said he'd 'remember' companies that didn't apply for tariff refunds. Many of them are anyway",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Senior Walmart executives depart amid rejig under new CEO, memo shows",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WDAY",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Workday jumps 5% as it bumps up margin forecast on AI strength",
+          "title": "Walmart Stock Fell After Its Earnings Beat. Is the Post-Earnings Dip a Buying Opportunity?",
           "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Analyzing Workday’s (WDAY) Idiosyncratic Earnings Growth Dynamics",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SBUX",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Arm shares extend weekly rally to almost 50%, and Starbucks pulls the plug on an AI project",
-          "catalysts": [
-            "rally"
+            "earnings beat"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "F",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Ford’s stock climbs to highest close in three years. Here’s what’s behind its run.",
-          "catalysts": [
-            "climbs"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
+      "symbol": "DIS",
       "score": 1.0,
       "evidence": [
         {
-          "title": "What Are Wall Street Analysts' Target Price for Vertex Pharmaceuticals Stock?",
+          "title": "'The Mandalorian and Grogu' is Disney's lowest-ever Star Wars film opening",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Target moves to elevate supply chain operations, inventory reliability",
+          "title": "Disney's 'Star Wars: The Mandalorian and Grogu' tallies lowest Thursday preview sales in franchise history",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Underlying relationship between equities and rates shaping market - Goldman Sachs",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Goldman Sachs notes shift in fund positioning towards semis and away from software",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Jamie Dimon has bad news for JPMorgan bankers",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "JPMorgan Chase & Co. (JPM) Declares Quarterly Dividend of $1.50 per Share",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Lingering mysteries from Berkshire's portfolio update",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft’s new responsible tech lead on how to humanize high-speed AI development",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -116,22 +149,77 @@
       ]
     },
     {
-      "symbol": "DIS",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Disney's 'Star Wars: The Mandalorian and Grogu' tallies lowest Thursday preview sales in franchise history",
+          "title": "Nvidia can deliver chips — but it can’t buy Big Tech out of its credit and power-grid crisis",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IONQ",
+      "symbol": "ASML",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Which company will the U.S. government take a stake in next? Here’s what traders think",
+          "title": "5 big analyst AI moves: ASML, Dell and Nokia flagged as top picks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "5 big analyst AI moves: ASML, Dell and Nokia flagged as top picks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Dow Jones Futures: Trump Says No 'Rush' For Iran Deal, Ignore 'Losers'; Tesla, AI Stocks Near Buy Points",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GILD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Maxim Upgrades Gilead Sciences (GILD) to ‘Buy’",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "The Home Depot (HD) Price Target Lowered by $20 at Morgan Stanley",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Intel Urges PC Makers to Switch to Its Latest Chips Amid AI Demand. This Could Be the Margin Boost INTC Stock Needs.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -142,56 +230,37 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Which company will the U.S. government take a stake in next? Here’s what traders think",
+          "title": "Micron vs. Sandisk: Which Memory Stock Wins From the AI Boom?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft’s GitHub was positioned to win the AI coding race. Outages got in the way",
+          "title": "Micron vs. Sandisk: Which Memory Stock Wins From the AI Boom?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IBM",
+      "symbol": "ACHR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "IBM could be a big winner as quantum computing moves out of the science-fiction realm",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BAC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "JP Morgan, Bank of America, and Citi 'living wills' cleared by Fed, FDIC",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "JP Morgan, Bank of America, and Citi 'living wills' cleared by Fed, FDIC",
+          "title": "Is FAA Certification Enough to Make Archer Aviation Stock a Buy?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "OpenAI (private)": 1,
+    "xAI (private)": 1
+  }
 }
