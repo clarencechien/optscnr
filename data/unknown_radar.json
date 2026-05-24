@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-05-22T22:33:39.844146",
+  "updated_at": "2026-05-24T22:29:10.421912",
   "count": 2,
   "blind_spots": [
     {
       "name": "IMAX",
       "ticker": "IMAX",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "mentions_today": 2,
+      "total_mentions": 5,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
         "Wall Street thinks IMAX is ripe for a sale. Here's who could buy it",
         "Wall Street thinks IMAX is ripe for a sale. Here's who could buy it"
       ]
     },
     {
-      "name": "Consumer",
-      "ticker": "CPSS",
+      "name": "Invest",
+      "ticker": "IGACU",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Consumer sentiment hits fresh record low in May as Iran war fuels inflation worries",
-        "Consumer sentiment hits fresh record low in May as Iran war fuels inflation worries"
+        "Is Bristol-Myers Squibb (BMY) One of the Best Dividend Stocks to Invest in According to Hedge Funds?",
+        "UnitedHealth Group (UNH) – Among the 12 Best Dividend Stocks to Invest in According to Hedge Funds"
       ]
     }
   ]

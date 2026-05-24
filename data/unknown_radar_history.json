@@ -190,9 +190,9 @@
   },
   "IMAX": {
     "first_seen": "2026-05-22",
-    "last_seen": "2026-05-22",
-    "consecutive_days": 1,
-    "total_mentions": 3,
+    "last_seen": "2026-05-24",
+    "consecutive_days": 2,
+    "total_mentions": 5,
     "ticker": "IMAX"
   },
   "Consumer": {
@@ -201,5 +201,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "CPSS"
+  },
+  "Invest": {
+    "first_seen": "2026-05-24",
+    "last_seen": "2026-05-24",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "IGACU"
   }
 }
