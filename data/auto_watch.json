@@ -1,122 +1,158 @@
 {
-  "updated_at": "2026-05-17T00:03:14.979104",
+  "updated_at": "2026-05-24T00:05:01.388218",
   "criteria": {
     "MIN_MARKET_CAP": 15000000000.0,
     "MAX_PCT_FROM_52W_LOW": 1.8,
     "MIN_AVG_VOLUME": 5000000.0,
     "MIN_VOL_RATIO_20D": 1.2
   },
-  "count": 12,
+  "count": 16,
   "tickers": [
     "TSCO",
     "ZTS",
-    "BSX",
-    "IBM",
+    "FIS",
+    "MDT",
     "ABT",
-    "NOW",
-    "IP",
     "CTSH",
-    "QCOM",
-    "GE",
+    "IBM",
+    "CCL",
+    "NOW",
+    "D",
+    "DXCM",
+    "GEN",
+    "F",
+    "APH",
     "EBAY",
-    "ANET"
+    "DVN"
   ],
   "details": [
     {
       "symbol": "TSCO",
-      "price": 30.57,
-      "pct_from_52w_low": 1.04,
-      "vol_ratio_20d": 1.85,
-      "market_cap_b": 16.0,
-      "score": 18.85
+      "price": 31.62,
+      "pct_from_52w_low": 1.07,
+      "vol_ratio_20d": 1.65,
+      "market_cap_b": 16.6,
+      "score": 17.48
     },
     {
       "symbol": "ZTS",
-      "price": 74.22,
-      "pct_from_52w_low": 1.03,
-      "vol_ratio_20d": 1.54,
-      "market_cap_b": 31.1,
-      "score": 17.42
+      "price": 81.32,
+      "pct_from_52w_low": 1.12,
+      "vol_ratio_20d": 1.69,
+      "market_cap_b": 34.1,
+      "score": 17.19
     },
     {
-      "symbol": "BSX",
-      "price": 52.68,
-      "pct_from_52w_low": 1.0,
-      "vol_ratio_20d": 1.36,
-      "market_cap_b": 78.3,
-      "score": 16.79
+      "symbol": "FIS",
+      "price": 43.56,
+      "pct_from_52w_low": 1.05,
+      "vol_ratio_20d": 1.34,
+      "market_cap_b": 22.5,
+      "score": 16.18
     },
     {
-      "symbol": "IBM",
-      "price": 219.3,
-      "pct_from_52w_low": 1.03,
-      "vol_ratio_20d": 1.33,
-      "market_cap_b": 206.1,
-      "score": 16.34
+      "symbol": "MDT",
+      "price": 78.6,
+      "pct_from_52w_low": 1.06,
+      "vol_ratio_20d": 1.22,
+      "market_cap_b": 100.9,
+      "score": 15.55
     },
     {
       "symbol": "ABT",
-      "price": 84.47,
-      "pct_from_52w_low": 1.03,
-      "vol_ratio_20d": 1.28,
-      "market_cap_b": 147.1,
-      "score": 16.08
-    },
-    {
-      "symbol": "NOW",
-      "price": 95.07,
-      "pct_from_52w_low": 1.17,
-      "vol_ratio_20d": 1.53,
-      "market_cap_b": 98.0,
-      "score": 15.97
-    },
-    {
-      "symbol": "IP",
-      "price": 30.26,
-      "pct_from_52w_low": 1.03,
-      "vol_ratio_20d": 1.21,
-      "market_cap_b": 16.0,
-      "score": 15.8
+      "price": 87.41,
+      "pct_from_52w_low": 1.07,
+      "vol_ratio_20d": 1.2,
+      "market_cap_b": 152.3,
+      "score": 15.36
     },
     {
       "symbol": "CTSH",
-      "price": 47.13,
-      "pct_from_52w_low": 1.04,
-      "vol_ratio_20d": 1.2,
-      "market_cap_b": 22.3,
-      "score": 15.65
+      "price": 52.75,
+      "pct_from_52w_low": 1.16,
+      "vol_ratio_20d": 1.3,
+      "market_cap_b": 25.0,
+      "score": 14.88
     },
     {
-      "symbol": "QCOM",
-      "price": 201.49,
-      "pct_from_52w_low": 1.65,
-      "vol_ratio_20d": 2.22,
-      "market_cap_b": 212.4,
-      "score": 14.59
+      "symbol": "IBM",
+      "price": 253.84,
+      "pct_from_52w_low": 1.2,
+      "vol_ratio_20d": 1.32,
+      "market_cap_b": 238.6,
+      "score": 14.64
     },
     {
-      "symbol": "GE",
-      "price": 281.53,
-      "pct_from_52w_low": 1.23,
+      "symbol": "CCL",
+      "price": 25.98,
+      "pct_from_52w_low": 1.18,
+      "vol_ratio_20d": 1.24,
+      "market_cap_b": 36.0,
+      "score": 14.47
+    },
+    {
+      "symbol": "NOW",
+      "price": 102.13,
+      "pct_from_52w_low": 1.26,
+      "vol_ratio_20d": 1.4,
+      "market_cap_b": 105.3,
+      "score": 14.43
+    },
+    {
+      "symbol": "D",
+      "price": 67.67,
+      "pct_from_52w_low": 1.27,
+      "vol_ratio_20d": 1.33,
+      "market_cap_b": 59.5,
+      "score": 13.99
+    },
+    {
+      "symbol": "DXCM",
+      "price": 72.1,
+      "pct_from_52w_low": 1.33,
+      "vol_ratio_20d": 1.39,
+      "market_cap_b": 27.8,
+      "score": 13.6
+    },
+    {
+      "symbol": "GEN",
+      "price": 24.82,
+      "pct_from_52w_low": 1.4,
+      "vol_ratio_20d": 1.32,
+      "market_cap_b": 15.0,
+      "score": 12.65
+    },
+    {
+      "symbol": "F",
+      "price": 14.93,
+      "pct_from_52w_low": 1.51,
       "vol_ratio_20d": 1.23,
-      "market_cap_b": 294.2,
-      "score": 13.82
+      "market_cap_b": 59.5,
+      "score": 11.02
+    },
+    {
+      "symbol": "APH",
+      "price": 132.06,
+      "pct_from_52w_low": 1.52,
+      "vol_ratio_20d": 1.22,
+      "market_cap_b": 162.5,
+      "score": 10.89
     },
     {
       "symbol": "EBAY",
-      "price": 116.13,
-      "pct_from_52w_low": 1.64,
-      "vol_ratio_20d": 1.4,
-      "market_cap_b": 51.6,
-      "score": 10.59
+      "price": 115.75,
+      "pct_from_52w_low": 1.61,
+      "vol_ratio_20d": 1.38,
+      "market_cap_b": 51.4,
+      "score": 10.76
     },
     {
-      "symbol": "ANET",
-      "price": 141.97,
-      "pct_from_52w_low": 1.69,
-      "vol_ratio_20d": 1.46,
-      "market_cap_b": 178.8,
-      "score": 10.35
+      "symbol": "DVN",
+      "price": 47.22,
+      "pct_from_52w_low": 1.56,
+      "vol_ratio_20d": 1.21,
+      "market_cap_b": 54.4,
+      "score": 10.46
     }
   ]
 }
