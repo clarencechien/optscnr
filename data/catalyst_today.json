@@ -1,115 +1,142 @@
 {
-  "updated_at": "2026-05-24T21:29:45.507313",
+  "updated_at": "2026-05-25T21:45:46.849260",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 24,
-    "items_with_catalyst": 9,
+    "total_items": 107,
+    "items_with_company": 19,
+    "items_with_catalyst": 11,
     "items_both": 1
   },
-  "count": 18,
+  "count": 16,
   "tickers": [
-    "TGT",
-    "WMT",
-    "DIS",
-    "GS",
-    "JPM",
-    "BRK-B",
-    "MSFT",
-    "QCOM",
     "NVDA",
-    "ASML",
-    "DELL",
-    "TSLA",
-    "GILD",
-    "MS",
-    "INTC",
+    "NFLX",
+    "BAC",
+    "AAPL",
+    "MSFT",
+    "ZS",
+    "DIS",
+    "BRK-B",
+    "GOOGL",
     "MU",
-    "SNDK",
-    "ACHR"
+    "PLTR",
+    "WMT",
+    "META",
+    "WDAY",
+    "XYZ",
+    "TGT"
   ],
   "details": [
     {
-      "symbol": "TGT",
-      "score": 3.0,
+      "symbol": "NVDA",
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Duke Energy (DUK) Price Target Lowered by $5",
+          "title": "Huawei plans new smartphone chips this fall as rivalry with Nvidia and Apple heats up",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Lowe’s Companies (LOW) Price Target Trimmed by $32 at RBC Capital",
+          "title": "It's time for Nvidia to take a page out of Apple's playbook and do more for investors",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Analyst Upgrades Automatic Data Processing (ADP) to ‘Equal Weight’, Assigns $214 Price Target",
+          "title": "Mastercard’s stock is up 11,000% since its IPO 20 years ago. What comes next?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
-      "score": 2.5,
+      "symbol": "NFLX",
+      "score": 2,
       "evidence": [
         {
-          "title": "Two top Walmart executives leave company under new CEO John Furner",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Walmart Stock Fell After Its Earnings Beat. Is the Post-Earnings Dip a Buying Opportunity?",
+          "title": "Bank of America Reiterates Buy Rating on Netflix (NFLX) Stock",
           "catalysts": [
-            "earnings beat"
+            "buy rating"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "DIS",
+      "symbol": "BAC",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Bank of America Reiterates Buy Rating on Netflix (NFLX) Stock",
+          "catalysts": [
+            "buy rating"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Huawei plans new smartphone chips this fall as rivalry with Nvidia and Apple heats up",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "It's time for Nvidia to take a page out of Apple's playbook and do more for investors",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Mastercard’s stock is up 11,000% since its IPO 20 years ago. What comes next?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Microsoft’s new responsible tech lead on how to humanize high-speed AI development",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Gates' foundation sold all of its Microsoft shares. Bill Ackman is loading up on the stock. What is Wall Street missing?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Microsoft (MSFT): One of the Best Long-Term Stocks to Buy Now for High Returns",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ZS",
       "score": 1.0,
+      "evidence": [
+        {
+          "title": " Elbit Systems, Zscaler, Semtech and more set to report earnings Tuesday",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Zscaler Q3 2026 Earnings Preview",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 0.5,
       "evidence": [
         {
           "title": "'The Mandalorian and Grogu' is Disney's lowest-ever Star Wars film opening",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Disney's 'Star Wars: The Mandalorian and Grogu' tallies lowest Thursday preview sales in franchise history",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Underlying relationship between equities and rates shaping market - Goldman Sachs",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Goldman Sachs notes shift in fund positioning towards semis and away from software",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Jamie Dimon has bad news for JPMorgan bankers",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "JPMorgan Chase & Co. (JPM) Declares Quarterly Dividend of $1.50 per Share",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -127,99 +154,11 @@
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft’s new responsible tech lead on how to humanize high-speed AI development",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "QCOM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Qualcomm's stock pop shows investors are 'waking up' to boom in AI devices",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nvidia can deliver chips — but it can’t buy Big Tech out of its credit and power-grid crisis",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASML",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "5 big analyst AI moves: ASML, Dell and Nokia flagged as top picks",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DELL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "5 big analyst AI moves: ASML, Dell and Nokia flagged as top picks",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures: Trump Says No 'Rush' For Iran Deal, Ignore 'Losers'; Tesla, AI Stocks Near Buy Points",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GILD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Maxim Upgrades Gilead Sciences (GILD) to ‘Buy’",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "The Home Depot (HD) Price Target Lowered by $20 at Morgan Stanley",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Intel Urges PC Makers to Switch to Its Latest Chips Amid AI Demand. This Could Be the Margin Boost INTC Stock Needs.",
+          "title": "EU plans to fine Google high triple-digit million euro sum, Handelsblatt reports",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -230,37 +169,78 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron vs. Sandisk: Which Memory Stock Wins From the AI Boom?",
+          "title": "Micron Stock is Up over 133% From Its Lows - But Is MU Still Undervalued?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SNDK",
+      "symbol": "PLTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron vs. Sandisk: Which Memory Stock Wins From the AI Boom?",
+          "title": "Palantir Is 1 of the Fastest-Growing AI Companies, but Does That Make It a Buy?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ACHR",
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is FAA Certification Enough to Make Archer Aviation Stock a Buy?",
+          "title": "Scenes from the Memorial Day investing road: Takeaways on Walmart, Nvidia, and GameStop",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Wells Fargo Reduces PT on Meta Platforms (META) Stock",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WDAY",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Needham Reduces PT on Workday (WDAY) Stock",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Block (XYZ) Announces The Hat Selects Square as Unified Commerce Platform",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Enterprise Products Partners (EPD) Gets A Higher Target But Analysts Stay Cautious",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "OpenAI (private)": 1,
-    "xAI (private)": 1
-  }
+  "watch_only": {}
 }
