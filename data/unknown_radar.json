@@ -1,5 +1,30 @@
 {
-  "updated_at": "2026-05-25T22:34:06.916993",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-05-26T22:47:52.237662",
+  "count": 2,
+  "blind_spots": [
+    {
+      "name": "Starlink",
+      "ticker": "OTAI-UN",
+      "mentions_today": 2,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "American Airlines picks SpaceX's Starlink for in-flight Wi-Fi on more than 500 planes",
+        "American Airlines picks SpaceX's Starlink for in-flight Wi-Fi on more than 500 planes"
+      ]
+    },
+    {
+      "name": "Ferrari",
+      "ticker": "RACE",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "‘The market has spoken’: Ferrari shares fall after carmaker unveils first fully electric vehicle",
+        "‘The market has spoken’: Ferrari shares fall after carmaker unveils first fully electric vehicle"
+      ]
+    }
+  ]
 }

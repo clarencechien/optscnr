@@ -176,9 +176,9 @@
   },
   "Starlink": {
     "first_seen": "2026-05-21",
-    "last_seen": "2026-05-21",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-05-26",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "OTAI-UN"
   },
   "Spotify": {
@@ -208,5 +208,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "IGACU"
+  },
+  "Ferrari": {
+    "first_seen": "2026-05-26",
+    "last_seen": "2026-05-26",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "RACE"
   }
 }
