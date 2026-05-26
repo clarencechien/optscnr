@@ -1,31 +1,68 @@
 {
-  "updated_at": "2026-05-25T21:45:46.849260",
+  "updated_at": "2026-05-26T22:06:19.099110",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 19,
-    "items_with_catalyst": 11,
-    "items_both": 1
+    "total_items": 103,
+    "items_with_company": 21,
+    "items_with_catalyst": 17,
+    "items_both": 6
   },
-  "count": 16,
+  "count": 17,
   "tickers": [
-    "NVDA",
-    "NFLX",
-    "BAC",
+    "TSLA",
     "AAPL",
-    "MSFT",
-    "ZS",
-    "DIS",
-    "BRK-B",
-    "GOOGL",
-    "MU",
-    "PLTR",
+    "NVDA",
     "WMT",
-    "META",
-    "WDAY",
+    "DELL",
+    "RGTI",
+    "ARM",
+    "ZS",
     "XYZ",
-    "TGT"
+    "DIS",
+    "MU",
+    "TGT",
+    "CRWD",
+    "ONDS",
+    "HOOD",
+    "QCOM",
+    "QBTS"
   ],
   "details": [
+    {
+      "symbol": "TSLA",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "SpaceX-Tesla merger chatter reignites as Musk pushes rocket company towards Nasdaq",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Musk mulled combining Tesla and SpaceX - report",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Apple's surge to record highs faces a major test next month. What it must do to pass",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Huawei plans new smartphone chips this fall as rivalry with Nvidia and Apple heats up",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
     {
       "symbol": "NVDA",
       "score": 2.0,
@@ -36,82 +73,66 @@
           "has_catalyst": false
         },
         {
-          "title": "It's time for Nvidia to take a page out of Apple's playbook and do more for investors",
+          "title": "Nvidia Had Another ‘Usual’ Quarter: How to Play NVDA Stock After Q1 Earnings",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Mastercard’s stock is up 11,000% since its IPO 20 years ago. What comes next?",
+          "title": "Nvidia Hikes Its Dividend and Buybacks Based on Surging FCF - Is NVDA Too Cheap?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NFLX",
+      "symbol": "WMT",
       "score": 2,
       "evidence": [
         {
-          "title": "Bank of America Reiterates Buy Rating on Netflix (NFLX) Stock",
+          "title": "Gen Z demands bigger bargains — driving gains for discount retailers like Walmart and Ross",
           "catalysts": [
-            "buy rating"
+            "gains"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "BAC",
+      "symbol": "DELL",
       "score": 2,
       "evidence": [
         {
-          "title": "Bank of America Reiterates Buy Rating on Netflix (NFLX) Stock",
+          "title": "IREN signs $1.6B deal with Dell to deploy Blackwell systems; ARR seen rising to $4.4B",
           "catalysts": [
-            "buy rating"
+            "rising"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 1.5,
+      "symbol": "RGTI",
+      "score": 2,
       "evidence": [
         {
-          "title": "Huawei plans new smartphone chips this fall as rivalry with Nvidia and Apple heats up",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "It's time for Nvidia to take a page out of Apple's playbook and do more for investors",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Mastercard’s stock is up 11,000% since its IPO 20 years ago. What comes next?",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Rigetti (RGTI) Climbs 48% on $100M Govt Backing",
+          "catalysts": [
+            "climbs"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "MSFT",
-      "score": 1.5,
+      "symbol": "ARM",
+      "score": 2,
       "evidence": [
         {
-          "title": "Microsoft’s new responsible tech lead on how to humanize high-speed AI development",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Gates' foundation sold all of its Microsoft shares. Bill Ackman is loading up on the stock. What is Wall Street missing?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft (MSFT): One of the Best Long-Term Stocks to Buy Now for High Returns",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Arm Holdings (ARM) Soars 46% as Profits Seen Growing 5x",
+          "catalysts": [
+            "soars"
+          ],
+          "has_catalyst": true
         }
       ]
     },
@@ -120,12 +141,23 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": " Elbit Systems, Zscaler, Semtech and more set to report earnings Tuesday",
+          "title": "Cybersecurity stocks are surging. One looks promising into earnings",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Zscaler Q3 2026 Earnings Preview",
+          "title": "As Zscaler Doubles Down on AI Security, ZS Stock Still Needs More to Justify Its Steep Valuation",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Judges block Alabama redistricting maps that would dilute Black vote in midterms",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -143,88 +175,11 @@
       ]
     },
     {
-      "symbol": "BRK-B",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Lingering mysteries from Berkshire's portfolio update",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "EU plans to fine Google high triple-digit million euro sum, Handelsblatt reports",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron Stock is Up over 133% From Its Lows - But Is MU Still Undervalued?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Palantir Is 1 of the Fastest-Growing AI Companies, but Does That Make It a Buy?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Scenes from the Memorial Day investing road: Takeaways on Walmart, Nvidia, and GameStop",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Wells Fargo Reduces PT on Meta Platforms (META) Stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WDAY",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Needham Reduces PT on Workday (WDAY) Stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Block (XYZ) Announces The Hat Selects Square as Unified Commerce Platform",
+          "title": "Micron’s stock reaches a major milestone as UBS slaps on an out-of-sight price target",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -235,7 +190,62 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Enterprise Products Partners (EPD) Gets A Higher Target But Analysts Stay Cautious",
+          "title": "Micron’s stock reaches a major milestone as UBS slaps on an out-of-sight price target",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Moody’s upgrades CrowdStrike rating on profit growth outlook",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ONDS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Ondas Holdings Adds High-Margin AI Software to Its Autonomous Defense Portfolio. Here’s What That Means for ONDS Stock.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Senior Crypto Executive Departs Robinhood",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Short Sellers Aren’t Relenting Against Qualcomm. The Chipmaker Needs to Quickly Deliver on Its AI Pivot for Bulls to Win.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "D-Wave (QBTS) Spikes Up 44% on Govt Backing",
           "catalysts": [],
           "has_catalyst": false
         }
