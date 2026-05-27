@@ -31,10 +31,31 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/space_radar.json data/space_radar_report.md data/spcx_vwap_anchor.json data/spcx_iv_history.csv 2>/dev/null || true
+
+          echo "=== 1. 檢查檔案是否真的存在 ==="
+          ls -la data/ || echo "data/ 目錄不存在"
+
+          echo "=== 2. 檢查 .gitignore 有沒有擋 data ==="
+          if [ -f .gitignore ]; then
+            grep -i "data" .gitignore && echo "WARNING: .gitignore 有提到 data" || echo "OK: .gitignore 沒擋 data"
+          else
+            echo "OK: 沒有 .gitignore"
+          fi
+
+          echo "=== 3. git 對這些檔案的狀態 ==="
+          git status --short data/ || true
+
+          echo "=== 4. 強制 add (-f 繞過 .gitignore) ==="
+          git add -f data/space_radar.json data/space_radar_report.md data/spcx_vwap_anchor.json data/spcx_iv_history.csv data/spcx_dca_log.json
+
+          echo "=== 5. staged 了什麼 ==="
+          git status --short
+
+          echo "=== 6. commit + push ==="
           if git diff --quiet --cached; then
-            echo "No changes"
+            echo "No changes to commit"
           else
             git commit -m "🚀 Daily SPCX space radar [skip ci]"
             git push
+            echo "已 push 成功"
           fi
