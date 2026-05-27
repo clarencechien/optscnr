@@ -1,29 +1,53 @@
 {
-  "updated_at": "2026-05-26T22:47:52.237662",
-  "count": 2,
+  "updated_at": "2026-05-27T22:56:04.596070",
+  "count": 4,
   "blind_spots": [
     {
-      "name": "Starlink",
-      "ticker": "OTAI-UN",
-      "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "American Airlines picks SpaceX's Starlink for in-flight Wi-Fi on more than 500 planes",
-        "American Airlines picks SpaceX's Starlink for in-flight Wi-Fi on more than 500 planes"
+        "Bears load up bets against small-cap stocks ahead of economic data releases",
+        "Greenwave Technology Solutions gets second Nasdaq notice over delayed Q1 filing"
       ]
     },
     {
-      "name": "Ferrari",
-      "ticker": "RACE",
+      "name": "Abercrombie",
+      "ticker": "ANF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "‘The market has spoken’: Ferrari shares fall after carmaker unveils first fully electric vehicle",
-        "‘The market has spoken’: Ferrari shares fall after carmaker unveils first fully electric vehicle"
+        "Abercrombie shares jump 12% on earnings beat even as Iran conflict hits sales",
+        "Abercrombie shares jump 12% on earnings beat even as Iran conflict hits sales"
+      ]
+    },
+    {
+      "name": "Momentus",
+      "ticker": "MNTSW",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Momentus’s stock nearly triples in 2 days as the space company raises more cash from investors",
+        "Momentus’s stock nearly triples in 2 days as the space company raises more cash from investors"
+      ]
+    },
+    {
+      "name": "Daily",
+      "ticker": "DJCO",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Daily – Vickers Top Insider Picks for 05/27/2026",
+        "Daily – Vickers Top Buyers & Sellers for 05/27/2026"
       ]
     }
   ]
