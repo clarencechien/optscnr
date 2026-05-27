@@ -1,0 +1,40 @@
+name: Daily SPCX Space Radar
+
+on:
+  schedule:
+    # 每天 UTC 22:15（台灣早上 6:15），跟主 scanner 接近
+    - cron: '15 22 * * 0-5'
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas
+
+      - name: Run space radar
+        run: python space_radar.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/space_radar.json data/space_radar_report.md data/spcx_vwap_anchor.json data/spcx_iv_history.csv 2>/dev/null || true
+          if git diff --quiet --cached; then
+            echo "No changes"
+          else
+            git commit -m "🚀 Daily SPCX space radar [skip ci]"
+            git push
+          fi
