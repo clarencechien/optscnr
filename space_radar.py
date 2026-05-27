@@ -76,7 +76,21 @@ REPORT_PATH = "data/space_radar_report.md"
 
 
 def detect_stage():
-    """偵測目前在哪個階段"""
+    """偵測目前在哪個階段
+    
+    【重要防呆】SPCX 這個代號在 SpaceX 上市前，是一檔叫
+    "SPAC and New Issue ETF" 的舊 ETF 在用（已改名 SPCK 但 yfinance 有殘留）。
+    所以 IPO 日期（6/12）之前，絕不相信任何 SPCX 報價。
+    """
+    # 防呆 1：還沒到 IPO 日期，直接回階段 0
+    today = datetime.now()
+    ipo_dt = datetime.strptime(IPO_DATE, '%Y-%m-%d')
+    if today < ipo_dt:
+        days_to_ipo = (ipo_dt - today).days
+        print(f"⏳ 距 SPCX 上市還有 {days_to_ipo} 天（{IPO_DATE}），維持階段 0")
+        print(f"   （註：IPO 前 SPCX 報價是同名舊 ETF，不可信，已忽略）")
+        return 0, None, None
+    
     tk = yf.Ticker(TICKER)
     
     # 試著抓價格
@@ -88,7 +102,23 @@ def detect_stage():
     except Exception:
         return 0, None, None
     
-    # 上市了，檢查有沒有選擇權
+    # 防呆 2：驗證這真的是 SpaceX，不是同名 ETF
+    # SpaceX 市值兆級，股價不可能是 $22 這種 ETF 價位
+    # 用市值或公司名驗證
+    try:
+        info = tk.info
+        long_name = info.get('longName', '') or info.get('shortName', '')
+        # SpaceX 的名字應該包含 Space Exploration 或 SpaceX
+        if long_name and 'space exploration' not in long_name.lower() \
+           and 'spacex' not in long_name.lower():
+            print(f"⚠️ SPCX 報價對應的是「{long_name}」，不是 SpaceX，忽略")
+            print(f"   （SpaceX 尚未上市或代號尚未生效）")
+            return 0, None, None
+    except Exception:
+        # 抓不到 info，保守起見當還沒上市
+        return 0, None, None
+    
+    # 確認是真 SpaceX 了，檢查有沒有選擇權
     try:
         has_options = bool(tk.options)
     except Exception:
