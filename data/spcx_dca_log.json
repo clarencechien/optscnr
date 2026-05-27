@@ -1,0 +1,5 @@
+{
+  "_comment": "每次 DCA 買進後手動加一筆到 purchases。radar 會自動算平均成本。",
+  "_example": "{'date': '2026-06-20', 'shares': 10, 'price': 185.50}",
+  "purchases": []
+}
