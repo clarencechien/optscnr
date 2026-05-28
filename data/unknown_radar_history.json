@@ -1,179 +1,4 @@
 {
-  "Treasurys": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": null
-  },
-  "Putin": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": null
-  },
-  "Iran": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 10,
-    "ticker": null
-  },
-  "Chinese": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "CWNOF"
-  },
-  "Thomas Massie": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": null
-  },
-  "President Donald Trump": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": null
-  },
-  "Samsung Electronics": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": null
-  },
-  "South Korea": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": null
-  },
-  "Taiwan": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "TWN"
-  },
-  "Singapore": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 4,
-    "ticker": null
-  },
-  "Asia": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SORA"
-  },
-  "Vance": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": null
-  },
-  "Middle East": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": null
-  },
-  "Elon Musk": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": null
-  },
-  "Here": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 12,
-    "ticker": "HERE"
-  },
-  "FTSE": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": null
-  },
-  "Strait": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": null
-  },
-  "Hormuz": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": null
-  },
-  "Best Stocks": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": null
-  },
-  "Million": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": null
-  },
-  "Johnson": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "JNJ"
-  },
-  "Intuit": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "INTU"
-  },
-  "Airbnb": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ABNB"
-  },
-  "Climb": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "CLYM"
-  },
-  "Billion": {
-    "first_seen": "2026-05-20",
-    "last_seen": "2026-05-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BGHL"
-  },
   "Starlink": {
     "first_seen": "2026-05-21",
     "last_seen": "2026-05-26",
@@ -239,9 +64,23 @@
   },
   "Daily": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-05-27",
+    "last_seen": "2026-05-28",
+    "consecutive_days": 2,
+    "total_mentions": 4,
+    "ticker": "DJCO"
+  },
+  "Fidelity": {
+    "first_seen": "2026-05-28",
+    "last_seen": "2026-05-28",
     "consecutive_days": 1,
     "total_mentions": 2,
-    "ticker": "DJCO"
+    "ticker": "FIS"
+  },
+  "Best Buy": {
+    "first_seen": "2026-05-28",
+    "last_seen": "2026-05-28",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BBY"
   }
 }
