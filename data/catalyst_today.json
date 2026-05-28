@@ -1,64 +1,166 @@
 {
-  "updated_at": "2026-05-27T22:17:39.262804",
+  "updated_at": "2026-05-28T22:17:03.331363",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 29,
-    "items_with_catalyst": 14,
-    "items_both": 4
+    "total_items": 104,
+    "items_with_company": 30,
+    "items_with_catalyst": 22,
+    "items_both": 10
   },
   "count": 20,
   "tickers": [
-    "AMZN",
-    "SNOW",
-    "JPM",
-    "TSLA",
-    "MRVL",
-    "TGT",
-    "MU",
-    "MS",
-    "MSFT",
-    "NVDA",
-    "WMT",
-    "SBUX",
-    "META",
-    "ZS",
-    "BA",
-    "HOOD",
-    "CRM",
-    "IBM",
     "DELL",
-    "AMD"
+    "MU",
+    "PLTR",
+    "ORCL",
+    "CRM",
+    "NOW",
+    "SNOW",
+    "OKTA",
+    "ARM",
+    "COST",
+    "JPM",
+    "SBUX",
+    "DIS",
+    "NFLX",
+    "GS",
+    "MS",
+    "BAC",
+    "IBM",
+    "GOOGL",
+    "ZS"
   ],
   "details": [
     {
-      "symbol": "AMZN",
-      "score": 3.5,
+      "symbol": "DELL",
+      "score": 8.5,
       "evidence": [
         {
-          "title": "Snowflake rockets 36% on earnings beat and plan to spend $6 billion on Amazon cloud",
+          "title": "Dell shares jump 31% after server maker reports fastest sales growth since return to public market in 2018",
           "catalysts": [
+            "jump"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Dell stock soars toward another record high as the AI boom drives a big earnings beat",
+          "catalysts": [
+            "soars",
+            "record high",
             "earnings beat"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Amazon's top health exec is stepping down, will be replaced by Amwell co-founder",
+          "title": "Dell raises annual forecasts as AI data center buildout fuels demand",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 4.5,
+      "evidence": [
+        {
+          "title": "Up 214% This Year, Is It Too Late to Buy Micron Stock?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Amazon starts selling its AI shopping technology to other retailers",
+          "title": "Why Micron Stock Might Have a Math Problem",
           "catalysts": [],
           "has_catalyst": false
+        },
+        {
+          "title": "The Micron stock price bubble explained in 2 numbers",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Snowflake surges 36% for best day ever on AI frenzy, fueling software rally",
+          "catalysts": [
+            "surges",
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Snowflake surges 36% for best day ever on AI frenzy, fueling software rally",
+          "catalysts": [
+            "surges",
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Snowflake surges 36% for best day ever on AI frenzy, fueling software rally",
+          "catalysts": [
+            "surges",
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NOW",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Snowflake surges 36% for best day ever on AI frenzy, fueling software rally",
+          "catalysts": [
+            "surges",
+            "rally"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "SNOW",
-      "score": 2,
+      "score": 4,
       "evidence": [
         {
-          "title": "Snowflake rockets 36% on earnings beat and plan to spend $6 billion on Amazon cloud",
+          "title": "Snowflake surges 36% for best day ever on AI frenzy, fueling software rally",
+          "catalysts": [
+            "surges",
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "OKTA",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Okta jumps 8%, tops first-quarter results on agentic AI demand",
+          "catalysts": [
+            "jumps"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Okta shares rise on earnings beat and AI-agent opportunity",
           "catalysts": [
             "earnings beat"
           ],
@@ -67,11 +169,48 @@
       ]
     },
     {
-      "symbol": "JPM",
-      "score": 2,
+      "symbol": "ARM",
+      "score": 4,
       "evidence": [
         {
-          "title": "Jamie Dimon says JPMorgan Chase could spend $20 billion on acquisition: 'We are on the lookout'",
+          "title": "Red-hot Arm Holdings soars to another all-time high. What's fueling the move this time?",
+          "catalysts": [
+            "soars",
+            "all-time high"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "COST",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Costco says it saw 'record-breaking' gas volumes amid rising prices",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Higher gas prices are driving people to membership retailers — and Costco is the latest to benefit",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Mythos was the critical trigger for IBM's open-source cybersecurity push, Krishna says",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Jamie Dimon says JPMorgan could spend $20B on acquisition",
           "catalysts": [
             "acquisition"
           ],
@@ -80,68 +219,46 @@
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "SBUX",
       "score": 2,
       "evidence": [
         {
-          "title": "SpaceX-Tesla merger chatter reignites as Musk pushes rocket company toward Nasdaq",
+          "title": "Starbucks says afternoon traffic is rising as turnaround starts to take hold",
           "catalysts": [
-            "merger"
+            "rising"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "MRVL",
-      "score": 2,
+      "symbol": "DIS",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Marvell’s stock climbs as ‘exceptional’ AI demand drives a stronger growth outlook",
-          "catalysts": [
-            "climbs"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Micron closes in on $1 trillion market value as UBS triples share price target",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Barclays Reaffirms Bullish View on The Coca-Cola Company (KO) with Higher Price Target",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "What Are Wall Street Analysts' Target Price for Huntington Ingalls Stock?",
+          "title": "Disney's ABC files early broadcast licenses renewal 'under protest' against the FCC ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
-      "score": 1.5,
+      "symbol": "NFLX",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Micron closes in on $1 trillion market value as UBS triples share price target",
+          "title": "New '60 Minutes' head Nick Bilton says Paramount's CBS News hired him to pivot the show before ratings decline",
           "catalysts": [],
           "has_catalyst": false
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
         {
-          "title": "Scorching runs for memory chip stocks like Micron and Sandisk have sent this new ETF soaring",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron Stock Is Up 726%. This Options Strategy Pays You to Buy the Dip",
+          "title": "Mythos was the critical trigger for IBM's open-source cybersecurity push, Krishna says",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -149,139 +266,21 @@
     },
     {
       "symbol": "MS",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Morgan Stanley Keeps Bullish View on NextEra Energy (NEE) Despite PT Cut",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Morgan Stanley Revises Automatic Data Processing (ADP) Target Lower Following Earnings Re-Rating",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Morgan Stanley Lifts Aflac (AFL) PT to $125 on Solid Insurance Trends",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Pentagon awards Microsoft $9.7 billion deal in bid to cut costs, end license sprawl",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dell unit secures $9.69B DoD Microsoft software procurement deal",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "AMD Is Up 5% Today: Is It Outperforming Other Chip Stocks Like Intel and NVIDIA?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "After NVIDIA, Broadcom's Earnings Are Next—Here's What to Watch",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Walmart (WMT) – Among the Top 12 Picks for a Dividend Stock Portfolio For Retirement",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Walmart's Stock Experiencing Biggest Wipeout in 4 Years",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SBUX",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Reuters: Starbucks Ends AI Inventory Program across North American Stores",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Starbucks Stock is Up YTD – Thank a Kardashian",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta to start testing AI subscription services, with cheapest plan at $7.99 a month",
+          "title": "Mythos was the critical trigger for IBM's open-source cybersecurity push, Krishna says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ZS",
+      "symbol": "BAC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Zscaler tanks 31% for worst day ever on 'prudent' guidance, sales shakeup",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Boeing CEO says company met requirements to increase 737 Max production to 47 jets per month",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HOOD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Your AI agent can now trade for you on Robinhood. And buy stuff with your credit card too",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Salesforce shares sink on soft revenue outlook as AI disruption concerns linger",
+          "title": "Mythos was the critical trigger for IBM's open-source cybersecurity push, Krishna says",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -292,29 +291,29 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "IBM receives $46 million Air Force contract modification",
+          "title": "Mythos was the critical trigger for IBM's open-source cybersecurity push, Krishna says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DELL",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dell unit secures $9.69B DoD Microsoft software procurement deal",
+          "title": "Waymo opens Ojai robotaxis to select riders as company aims to lower cost of fleet expansion",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "ZS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AMD Is Up 5% Today: Is It Outperforming Other Chip Stocks Like Intel and NVIDIA?",
+          "title": "Mike Khouw: I was wrong about Zscaler. Here's how I'm managing the trade",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -322,6 +321,7 @@
     }
   ],
   "watch_only": {
+    "Anthropic (private)": 2,
     "OpenAI (private)": 1
   }
 }
