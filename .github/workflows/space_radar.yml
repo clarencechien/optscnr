@@ -39,7 +39,6 @@ jobs:
           for f in \
             data/space_radar.json \
             data/space_radar_report.md \
-            data/spcx_vwap_anchor.json \
             data/spcx_iv_history.csv \
             data/spcx_dca_log.json
           do
