@@ -4,9 +4,9 @@ space_radar.py — SPCX (SpaceX) IPO 三池策略支援雷達
 SpaceX 6/12 上市，代號 SPCX。這個 radar 不替你決定買什麼，
 而是餵你三池策略各自需要的訊號：
 
-【40% GTC 池】首日 VWAP 當錨點，追蹤 -5%/-15%/-25% 掛單距離
-【10% Options 池】IV 冷卻溫度計，IV 狂熱期擋住，冷卻後才放行
-【50% DCA 池】純儀表板：成本線 + 均線，不給任何買賣訊號
+【A 核心 DCA 池 60% / $120k】依市值估值錨分批建倉（主力），市值 >2.2T 斷路器
+【B 地板預備池 30% / $60k】GTC 掛 1.5T/1.3T/1.1T，承接鎖倉瀑布供給，掛到 12 月中
+【C 機動/選擇權池 10% / $20k】IV 崩後才動 LEAPS，否則持現金
 
 另外盯太空同游股（RKLB/ASTS/RDW...），看 SPCX 上市對它們的虹吸/受惠
 
@@ -21,6 +21,8 @@ SpaceX 6/12 上市，代號 SPCX。這個 radar 不替你決定買什麼，
 - data/space_radar_report.md（附到主 README）
 - data/spcx_iv_history.csv（IV 時間序列）
 - data/spcx_dca_log.json（你的 DCA 紀錄，手動維護）
+
+可變參數：data/spcx_config.json（IPO 日期、股數、各池比例…全在這，改它不用動 code）
 
 頻率：每天跑（IPO 後）
 
@@ -40,29 +42,78 @@ from datetime import datetime, timedelta
 logging.getLogger("yfinance").setLevel(logging.CRITICAL)
 
 # === 設定 ===
-TICKER = "SPCX"
-IPO_DATE = "2026-06-12"          # 預期掛牌日
-PRICING_DATE = "2026-06-11"      # 訂價日
+# 所有「6/11 才定案、可能變動」的參數都集中在 data/spcx_config.json
+# code 啟動時讀它；讀不到任一欄位就用下面的內建預設值（防呆）
+# 6/11 定價後，只改 json，不用動 code
 
-# ============================================================
-# === v8.1 市值定錨設定（6/11 拿到 S-1 最終定價後，改這裡就好）===
-# ============================================================
-# ⚠️ TOTAL_SHARES_B 是整個市值定錨的根基，務必 6/11 用真實數字更新！
-#    單位是 Billion（十億），不是「億」！中英文單位易混淆：
-#      130 億股 = 13 B（這個才對，IPO 價約 $135）
-#      130 B   = 1300 億股（錯，會算出 $13.5，SpaceX 不可能這麼多股）
-#    市值反推價格 = 市值(兆) × 1000 / 總股數(十億)
-#    例：1.75T ÷ 13B 股 = $134.6（合理，像 Nvidia/Apple 量級）
-#    對照：Apple 15B 股、Nvidia 24.5B 股、Tesla 3.2B 股——沒人超過 25B
-TOTAL_SHARES_B = 13.0             # 約 130 億股（十億為單位）← 6/11 用 S-1 真實數字核對
-HARD_CAP_T = 2.2                  # A池(DCA) 停止建倉的市值天花板（兆）
-B_POOL_ANCHORS_T = [1.5, 1.3, 1.1]  # B池(GTC) 三檔深海網格市值（兆）
-GTC_WEIGHTS = [0.40, 0.35, 0.25]    # B池內三檔資金分配
+CONFIG_PATH = "data/spcx_config.json"
 
-# Gamma Squeeze 偵測門檻
-PC_RATIO_SQUEEZE = 0.20           # Put/Call < 0.2（Call 是 Put 5 倍）= 軋空狂熱
-PC_MIN_PUT_VOL = 500              # Put 總量低於這個就不算 PC ratio（流動性不足，避免假警報）
-# ============================================================
+# 內建預設值（config 讀不到時的 fallback）
+_DEFAULTS = {
+    'ticker': 'SPCX',
+    'ipo_date': '2026-06-12',
+    'pricing_date': '2026-06-11',
+    'total_shares_b': 13.0,
+    'total_capital': 200_000,
+    'pool_a_dca_pct': 0.60,
+    'pool_b_floor_pct': 0.30,
+    'pool_c_opt_pct': 0.10,
+    'dca_tranches': 5,
+    'hard_cap_t': 2.2,
+    'buy_zone_top_t': 2.0,
+    'buy_zone_accel_t': 1.75,
+    'b_pool_anchors_t': [1.5, 1.3, 1.1],
+    'gtc_weights': [0.40, 0.35, 0.25],
+    'greenshoe_off_day': 30,
+    'lockup_floor_end_day': 180,
+    'pc_ratio_squeeze': 0.20,
+    'pc_min_put_vol': 500,
+    'iv_frenzy': 0.80,
+    'iv_cooling': 0.60,
+    'iv_calm': 0.50,
+    'iv_stable_days': 3,
+}
+
+
+def load_config():
+    """讀 spcx_config.json，缺欄位用 _DEFAULTS 補。讀不到整個檔也不會掛。"""
+    cfg = dict(_DEFAULTS)
+    try:
+        if os.path.exists(CONFIG_PATH):
+            with open(CONFIG_PATH) as f:
+                user_cfg = json.load(f)
+            # 只覆蓋非 _ 開頭的 key（_ 開頭是註解）
+            for k, v in user_cfg.items():
+                if not k.startswith('_') and k in _DEFAULTS:
+                    cfg[k] = v
+            print(f"📋 已讀取 spcx_config.json（IPO 日期：{cfg['ipo_date']}，股數：{cfg['total_shares_b']}B）")
+        else:
+            print(f"⚠️ 找不到 {CONFIG_PATH}，使用內建預設值")
+    except Exception as e:
+        print(f"⚠️ config 讀取失敗（{e}），使用內建預設值")
+    return cfg
+
+
+# 載入 config，灌進 module-level 變數（其他函式沿用原本的名字，零改動）
+_CFG = load_config()
+TICKER = _CFG['ticker']
+IPO_DATE = _CFG['ipo_date']
+PRICING_DATE = _CFG['pricing_date']
+TOTAL_SHARES_B = _CFG['total_shares_b']
+TOTAL_CAPITAL = _CFG['total_capital']
+POOL_A_DCA_PCT = _CFG['pool_a_dca_pct']
+POOL_B_FLOOR_PCT = _CFG['pool_b_floor_pct']
+POOL_C_OPT_PCT = _CFG['pool_c_opt_pct']
+DCA_TRANCHES = _CFG['dca_tranches']
+HARD_CAP_T = _CFG['hard_cap_t']
+BUY_ZONE_TOP_T = _CFG['buy_zone_top_t']
+BUY_ZONE_ACCEL_T = _CFG['buy_zone_accel_t']
+B_POOL_ANCHORS_T = _CFG['b_pool_anchors_t']
+GTC_WEIGHTS = _CFG['gtc_weights']
+GREENSHOE_OFF_DAY = _CFG['greenshoe_off_day']
+LOCKUP_FLOOR_END_DAY = _CFG['lockup_floor_end_day']
+PC_RATIO_SQUEEZE = _CFG['pc_ratio_squeeze']
+PC_MIN_PUT_VOL = _CFG['pc_min_put_vol']
 
 # 太空同游股（觀察 SPCX 上市的虹吸/受惠效應）
 SPACE_PEERS = {
@@ -83,10 +134,10 @@ IPO_PROXIES = {
 
 # Options 池 IV 門檻
 IV_CONFIG = {
-    'FRENZY': 0.80,      # IV > 80% = 狂熱期，擋住
-    'COOLING': 0.60,     # 60-80% = 冷卻中，觀察
-    'CALM': 0.50,        # < 50% = 可評估
-    'STABLE_DAYS': 3,    # 連續幾天 < COOLING 才算「穩定」
+    'FRENZY': _CFG['iv_frenzy'],      # IV > 此值 = 狂熱期，擋住
+    'COOLING': _CFG['iv_cooling'],    # 此值以下 = 冷卻中
+    'CALM': _CFG['iv_calm'],          # 此值以下 = 可評估
+    'STABLE_DAYS': _CFG['iv_stable_days'],  # 連續幾天 < COOLING 才算「穩定」
 }
 
 IV_HISTORY_PATH = "data/spcx_iv_history.csv"
@@ -223,6 +274,49 @@ def calc_gtc_levels():
 def price_to_mc_t(price):
     """價格反推市值（兆）"""
     return (price * TOTAL_SHARES_B) / 1000
+
+
+def days_since_ipo():
+    """距上市第幾天（上市前回負數）"""
+    today = datetime.now()
+    ipo_dt = datetime.strptime(IPO_DATE, '%Y-%m-%d')
+    return (today - ipo_dt).days
+
+
+def get_timeline_status():
+    """根據距上市天數，回傳當前時間軸狀態 + 鎖倉瀑布提醒"""
+    d = days_since_ipo()
+    notes = []
+    
+    if d < 0:
+        return f"上市前 {abs(d)} 天", []
+    
+    # 綠鞋撤除
+    if d < GREENSHOE_OFF_DAY:
+        notes.append(f"🟢 綠鞋/穩定操作仍在（投行撐盤地板，到第 {GREENSHOE_OFF_DAY} 天，還剩 {GREENSHOE_OFF_DAY - d} 天）")
+    elif d < GREENSHOE_OFF_DAY + 5:
+        notes.append(f"⚠️ 綠鞋剛撤除（~第 {GREENSHOE_OFF_DAY} 天）—— 投行撐盤消失，下檔少一層緩衝")
+    
+    # 鎖倉瀑布（180 天基準，日期隨上市平移）
+    lockup_events = [
+        (70, "第 70 天解鎖 +7%"),
+        (90, "第 90 天解鎖 +7%"),
+        (105, "第 105 天解鎖 +7%"),
+        (120, "第 120 天解鎖 +7%"),
+        (135, "第 135 天解鎖 +7%"),
+        (180, "第 180 天 剩餘全部解鎖（瀑布終點，B 池任務完成）"),
+    ]
+    for day, desc in lockup_events:
+        if abs(d - day) <= 3:  # 接近解鎖日（±3 天）
+            notes.append(f"🔓 接近{desc}（供給高峰，B 池準備承接）")
+    
+    # B 池掛單期間提醒
+    if 0 <= d <= LOCKUP_FLOOR_END_DAY:
+        notes.append(f"📌 B 池 GTC 應掛滿至第 {LOCKUP_FLOOR_END_DAY} 天（~12 月中），目前第 {d} 天")
+    elif d > LOCKUP_FLOOR_END_DAY:
+        notes.append(f"✅ 已過第 {LOCKUP_FLOOR_END_DAY} 天，鎖倉瀑布跑完，主要供給壓力結束")
+    
+    return f"上市第 {d} 天", notes
 
 
 def record_iv_history(atm_iv, current_price):
@@ -368,28 +462,43 @@ def generate_report(stage, price, atm_iv, pc_ratio, gtc_levels,
     current_mc_t = price_to_mc_t(price)
     md += f"**SPCX 現價**：${price:.2f}　**即時預估市值**：{current_mc_t:.2f}T（以 {TOTAL_SHARES_B}B 股計）\n\n"
     
+    # === 時間軸狀態（綠鞋撤除 / 鎖倉瀑布）===
+    timeline_label, timeline_notes = get_timeline_status()
+    md += f"**時間軸**：{timeline_label}\n"
+    for note in timeline_notes:
+        md += f"- {note}\n"
+    md += "\n"
+    
     # === 修正二：DCA 斷路器（Hard Cap）===
     if current_mc_t > HARD_CAP_T:
-        md += f"🚨 **【斷路器觸發】市值已突破 {HARD_CAP_T}T 天花板！A 池與 B 池嚴禁投入新資金！**\n\n"
+        md += f"🚨 **【斷路器觸發】市值已突破 {HARD_CAP_T}T 天花板！A 池（DCA）與 B 池（地板）嚴禁投入新資金！**\n\n"
+    elif current_mc_t > BUY_ZONE_TOP_T:
+        md += f"🟠 市值 {current_mc_t:.2f}T 介於買區頂({BUY_ZONE_TOP_T}T)與上限({HARD_CAP_T}T)之間 —— 謹慎，接近停手線。\n\n"
+    elif current_mc_t <= BUY_ZONE_ACCEL_T:
+        md += f"🟢🟢 市值 {current_mc_t:.2f}T ≤ 加速買區({BUY_ZONE_ACCEL_T}T) —— A 池可加速 DCA。\n\n"
     else:
-        md += f"🟢 市值位於 {HARD_CAP_T}T 安全區內，A 池可依計畫分批 DCA。\n\n"
+        md += f"🟢 市值位於買區內（≤{HARD_CAP_T}T），A 池可依計畫分批 DCA。\n\n"
     
-    # === 40% GTC 池（市值定錨）===
-    md += "### 💰 40% GTC 池（絕對市值定錨，與開盤價無關）\n\n"
+    # === B 地板預備池 30% / $60k（市值定錨 GTC）===
+    pool_b_amount = TOTAL_CAPITAL * POOL_B_FLOOR_PCT
+    md += f"### 💰 B 地板預備池 30%（${pool_b_amount:,.0f}）— 絕對市值定錨 GTC\n\n"
+    md += f"_掛單與開盤價無關，掛滿至第 {LOCKUP_FLOOR_END_DAY} 天（~12 月中）承接鎖倉瀑布。_\n\n"
     if gtc_levels:
-        md += "| 目標市值 | 掛單價 | 池內權重 | 距現價 | 狀態 |\n"
-        md += "|---|---|---|---|---|\n"
+        md += "| 目標市值 | 掛單價 | 池內權重 | 分配金額 | 距現價 | 狀態 |\n"
+        md += "|---|---|---|---|---|---|\n"
         for lv in gtc_levels:
             dist = (price / lv['price'] - 1) * 100
+            alloc = pool_b_amount * lv['weight']
             if price <= lv['price']:
                 status = "✅ 已觸發"
             else:
                 status = f"⏳ 還需跌 {dist:.1f}%"
-            md += f"| {lv['target_mc_t']:.1f}T | ${lv['price']:.2f} | {lv['weight']*100:.0f}% | {dist:+.1f}% | {status} |\n"
+            md += f"| {lv['target_mc_t']:.1f}T | ${lv['price']:.2f} | {lv['weight']*100:.0f}% | ${alloc:,.0f} | {dist:+.1f}% | {status} |\n"
         md += "\n"
     
-    # === 10% Options 池 ===
-    md += "### 🎰 10% Options 池（IV 冷卻 + Gamma 預警）\n\n"
+    # === C 機動/選擇權池 10% ===
+    pool_c_amount = TOTAL_CAPITAL * POOL_C_OPT_PCT
+    md += f"### 🎰 C 機動/選擇權池 10%（${pool_c_amount:,.0f}）— IV 冷卻 + Gamma 預警\n\n"
     if atm_iv is not None:
         iv_pct = atm_iv * 100
         if atm_iv > IV_CONFIG['FRENZY']:
@@ -419,8 +528,11 @@ def generate_report(stage, price, atm_iv, pc_ratio, gtc_levels,
     else:
         md += "_選擇權尚未上市，IV 無法計算_\n\n"
     
-    # === 50% DCA 池 ===
-    md += "### 📊 50% DCA 池（純儀表板，無買賣訊號）\n\n"
+    # === A 核心 DCA 池 60% / $120k ===
+    pool_a_amount = TOTAL_CAPITAL * POOL_A_DCA_PCT
+    tranche_amount = pool_a_amount / DCA_TRANCHES
+    md += f"### 📊 A 核心 DCA 池 60%（${pool_a_amount:,.0f}）— 純儀表板，無買賣訊號\n\n"
+    md += f"_計畫：6/12→~7/3 分 {DCA_TRANCHES} 筆 × ${tranche_amount:,.0f}，依市值錨。市值 >{HARD_CAP_T}T 該筆跳過。_\n\n"
     if dca_metrics:
         if dca_metrics.get('avg_cost'):
             md += f"- 你的平均成本：**${dca_metrics['avg_cost']:.2f}**"
