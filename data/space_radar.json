@@ -1,11 +1,30 @@
 {
-  "updated_at": "2026-05-28T23:43:28.174223",
+  "updated_at": "2026-05-29T07:38:03.647537",
   "stage": 0,
   "price": null,
+  "market_cap_t": null,
+  "total_shares_b": 13.0,
+  "hard_cap_t": 2.2,
   "atm_iv": null,
+  "pc_ratio": null,
   "iv_stable": false,
-  "vwap_anchor": null,
-  "gtc_levels": null,
+  "gtc_levels": [
+    {
+      "target_mc_t": 1.5,
+      "price": 115.38,
+      "weight": 0.4
+    },
+    {
+      "target_mc_t": 1.3,
+      "price": 100.0,
+      "weight": 0.35
+    },
+    {
+      "target_mc_t": 1.1,
+      "price": 84.62,
+      "weight": 0.25
+    }
+  ],
   "dca_metrics": null,
   "peers": [
     {
