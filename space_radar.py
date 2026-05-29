@@ -19,11 +19,16 @@ SpaceX 6/12 上市，代號 SPCX。這個 radar 不替你決定買什麼，
 輸出：
 - data/space_radar.json
 - data/space_radar_report.md（附到主 README）
-- data/spcx_vwap_anchor.json（首日 VWAP，算一次存著）
 - data/spcx_iv_history.csv（IV 時間序列）
 - data/spcx_dca_log.json（你的 DCA 紀錄，手動維護）
 
 頻率：每天跑（IPO 後）
+
+【v8.1 改動】
+- 拔除首日 VWAP，改用絕對市值定錨（1.5T/1.3T/1.1T 反推掛單價）
+- A 池加入 2.2T 斷路器（市值破頂禁止新資金）
+- Options 池加 Gamma Squeeze 預警（PC ratio < 0.2）
+- 報告開頭加論點破壞檢查清單（4 個黑天鵝條件）
 """
 import yfinance as yf
 import pandas as pd
@@ -38,6 +43,26 @@ logging.getLogger("yfinance").setLevel(logging.CRITICAL)
 TICKER = "SPCX"
 IPO_DATE = "2026-06-12"          # 預期掛牌日
 PRICING_DATE = "2026-06-11"      # 訂價日
+
+# ============================================================
+# === v8.1 市值定錨設定（6/11 拿到 S-1 最終定價後，改這裡就好）===
+# ============================================================
+# ⚠️ TOTAL_SHARES_B 是整個市值定錨的根基，務必 6/11 用真實數字更新！
+#    單位是 Billion（十億），不是「億」！中英文單位易混淆：
+#      130 億股 = 13 B（這個才對，IPO 價約 $135）
+#      130 B   = 1300 億股（錯，會算出 $13.5，SpaceX 不可能這麼多股）
+#    市值反推價格 = 市值(兆) × 1000 / 總股數(十億)
+#    例：1.75T ÷ 13B 股 = $134.6（合理，像 Nvidia/Apple 量級）
+#    對照：Apple 15B 股、Nvidia 24.5B 股、Tesla 3.2B 股——沒人超過 25B
+TOTAL_SHARES_B = 13.0             # 約 130 億股（十億為單位）← 6/11 用 S-1 真實數字核對
+HARD_CAP_T = 2.2                  # A池(DCA) 停止建倉的市值天花板（兆）
+B_POOL_ANCHORS_T = [1.5, 1.3, 1.1]  # B池(GTC) 三檔深海網格市值（兆）
+GTC_WEIGHTS = [0.40, 0.35, 0.25]    # B池內三檔資金分配
+
+# Gamma Squeeze 偵測門檻
+PC_RATIO_SQUEEZE = 0.20           # Put/Call < 0.2（Call 是 Put 5 倍）= 軋空狂熱
+PC_MIN_PUT_VOL = 500              # Put 總量低於這個就不算 PC ratio（流動性不足，避免假警報）
+# ============================================================
 
 # 太空同游股（觀察 SPCX 上市的虹吸/受惠效應）
 SPACE_PEERS = {
@@ -56,10 +81,6 @@ IPO_PROXIES = {
     'DXYZ': 'Destiny Tech100（SpaceX proxy，溢價交易）',
 }
 
-# GTC 池設定
-GTC_LEVELS = [-0.05, -0.15, -0.25]   # 三檔掛單
-GTC_WEIGHTS = [0.40, 0.35, 0.25]      # 各檔資金比例（總和 40% 池內分配）
-
 # Options 池 IV 門檻
 IV_CONFIG = {
     'FRENZY': 0.80,      # IV > 80% = 狂熱期，擋住
@@ -68,7 +89,6 @@ IV_CONFIG = {
     'STABLE_DAYS': 3,    # 連續幾天 < COOLING 才算「穩定」
 }
 
-VWAP_ANCHOR_PATH = "data/spcx_vwap_anchor.json"
 IV_HISTORY_PATH = "data/spcx_iv_history.csv"
 DCA_LOG_PATH = "data/spcx_dca_log.json"
 OUTPUT_PATH = "data/space_radar.json"
@@ -89,7 +109,7 @@ def detect_stage():
         days_to_ipo = (ipo_dt - today).days
         print(f"⏳ 距 SPCX 上市還有 {days_to_ipo} 天（{IPO_DATE}），維持階段 0")
         print(f"   （註：IPO 前 SPCX 報價是同名舊 ETF，不可信，已忽略）")
-        return 0, None, None
+        return 0, None, None, None
     
     tk = yf.Ticker(TICKER)
     
@@ -97,26 +117,22 @@ def detect_stage():
     try:
         hist = tk.history(period='5d')
         if len(hist) == 0:
-            return 0, None, None  # 還沒上市
+            return 0, None, None, None  # 還沒上市
         current_price = float(hist['Close'].iloc[-1])
     except Exception:
-        return 0, None, None
+        return 0, None, None, None
     
     # 防呆 2：驗證這真的是 SpaceX，不是同名 ETF
-    # SpaceX 市值兆級，股價不可能是 $22 這種 ETF 價位
-    # 用市值或公司名驗證
     try:
         info = tk.info
         long_name = info.get('longName', '') or info.get('shortName', '')
-        # SpaceX 的名字應該包含 Space Exploration 或 SpaceX
         if long_name and 'space exploration' not in long_name.lower() \
            and 'spacex' not in long_name.lower():
             print(f"⚠️ SPCX 報價對應的是「{long_name}」，不是 SpaceX，忽略")
             print(f"   （SpaceX 尚未上市或代號尚未生效）")
-            return 0, None, None
+            return 0, None, None, None
     except Exception:
-        # 抓不到 info，保守起見當還沒上市
-        return 0, None, None
+        return 0, None, None, None
     
     # 確認是真 SpaceX 了，檢查有沒有選擇權
     try:
@@ -125,94 +141,88 @@ def detect_stage():
         has_options = False
     
     if not has_options:
-        return 1, current_price, None  # 上市但無選擇權
+        return 1, current_price, None, None  # 上市但無選擇權
     
-    # 有選擇權，算 ATM IV
-    atm_iv = get_atm_iv(tk, current_price)
+    # 有選擇權，算 ATM IV + PC ratio
+    atm_iv, pc_ratio = get_options_metrics(tk, current_price)
     
     if atm_iv is None:
-        return 1, current_price, None
+        return 1, current_price, None, None
     
     if atm_iv > IV_CONFIG['FRENZY']:
-        return 2, current_price, atm_iv  # IV 狂熱
+        return 2, current_price, atm_iv, pc_ratio  # IV 狂熱
     else:
-        return 3, current_price, atm_iv  # IV 冷卻，可評估
+        return 3, current_price, atm_iv, pc_ratio  # IV 冷卻，可評估
 
 
-def get_atm_iv(tk, current_price):
-    """抓最近月份的 ATM IV"""
+def get_options_metrics(tk, current_price):
+    """抓 ATM IV + Put/Call Volume Ratio（Gamma Squeeze 偵測）
+    
+    回傳 (atm_iv, pc_ratio)
+    
+    PC ratio bug 防呆：
+    - SPCX 初期 Put 流動性差，total_put_vol 可能接近 0
+    - 若 Put 量 < PC_MIN_PUT_VOL，pc_ratio 回 None（不可信，不觸發警報）
+    """
     try:
         exps = tk.options
         if not exps:
-            return None
-        # 用第一個有意義的到期日（>14 天）
+            return None, None
+        
         today = datetime.now()
         for exp in exps:
             exp_dt = datetime.strptime(exp, '%Y-%m-%d')
-            dte = (exp_dt - today).days
-            if dte < 14:
+            if (exp_dt - today).days < 14:
                 continue
+            
             opt = tk.option_chain(exp)
-            calls = opt.calls
-            # ATM = 最接近現價的 strike
-            calls = calls.copy()
+            calls = opt.calls.copy()
+            puts = opt.puts.copy()
+            
+            # ATM IV
             calls['dist'] = (calls['strike'] - current_price).abs()
             atm = calls.nsmallest(3, 'dist')
-            iv = atm['impliedVolatility'].mean()
-            if iv > 0:
-                return float(iv)
-        return None
+            atm_iv = float(atm['impliedVolatility'].mean())
+            if atm_iv <= 0:
+                continue
+            
+            # PC Ratio（軋空狂熱偵測）
+            total_call_vol = float(calls['volume'].fillna(0).sum())
+            total_put_vol = float(puts['volume'].fillna(0).sum()) if not puts.empty else 0
+            
+            # Put 流動性防呆：量太低不算（避免 0/大數 = 假警報）
+            if total_put_vol < PC_MIN_PUT_VOL or total_call_vol < 1:
+                pc_ratio = None
+            else:
+                pc_ratio = total_put_vol / total_call_vol
+            
+            return atm_iv, pc_ratio
+        
+        return None, None
     except Exception:
-        return None
+        return None, None
 
 
-def get_first_day_vwap():
-    """算 SPCX 首日 VWAP，存成錨點（只算一次）"""
-    if os.path.exists(VWAP_ANCHOR_PATH):
-        with open(VWAP_ANCHOR_PATH) as f:
-            return json.load(f)
+def calc_gtc_levels():
+    """v8.1: 根據絕對市值反推 B 池 GTC 掛單價位，與開盤價/VWAP 完全無關
     
-    tk = yf.Ticker(TICKER)
-    try:
-        # 抓首日分鐘資料算 VWAP
-        hist = tk.history(period='5d', interval='1d')
-        if len(hist) == 0:
-            return None
-        
-        # 首日 = 上市第一天
-        first_day = hist.iloc[0]
-        # 簡化版 VWAP：用 (H+L+C)/3 當代理
-        vwap = (first_day['High'] + first_day['Low'] + first_day['Close']) / 3
-        
-        anchor = {
-            'first_day_date': hist.index[0].strftime('%Y-%m-%d'),
-            'first_day_vwap': round(float(vwap), 2),
-            'first_day_high': round(float(first_day['High']), 2),
-            'first_day_low': round(float(first_day['Low']), 2),
-            'first_day_close': round(float(first_day['Close']), 2),
-            'computed_at': datetime.now().isoformat(),
-        }
-        
-        with open(VWAP_ANCHOR_PATH, 'w') as f:
-            json.dump(anchor, f, indent=2)
-        
-        return anchor
-    except Exception as e:
-        print(f"⚠️ VWAP 計算失敗：{e}")
-        return None
-
-
-def calc_gtc_levels(vwap):
-    """根據首日 VWAP 算出三檔 GTC 掛單價位"""
+    價格 = 市值(兆) × 1000 / 總股數(十億)
+    這樣不管 SPCX 開盤暴漲暴跌，你的掛單都定錨在「我認為值多少」
+    """
     levels = []
-    for pct, weight in zip(GTC_LEVELS, GTC_WEIGHTS):
-        price = vwap * (1 + pct)
+    for mc_t, weight in zip(B_POOL_ANCHORS_T, GTC_WEIGHTS):
+        price = (mc_t * 1000) / TOTAL_SHARES_B
         levels.append({
-            'pct': pct,
+            'target_mc_t': mc_t,
             'price': round(price, 2),
             'weight': weight,
         })
     return levels
+
+
+def price_to_mc_t(price):
+    """價格反推市值（兆）"""
+    return (price * TOTAL_SHARES_B) / 1000
 
 
 def record_iv_history(atm_iv, current_price):
@@ -322,10 +332,18 @@ def scan_space_peers():
     return peers_data
 
 
-def generate_report(stage, price, atm_iv, vwap_anchor, gtc_levels, 
+def generate_report(stage, price, atm_iv, pc_ratio, gtc_levels, 
                     iv_stable, dca_metrics, peers):
-    """生成 markdown 報告"""
-    md = "\n## 🚀 SPCX 太空雷達\n\n"
+    """生成 markdown 報告（v8.1：市值定錨 + 斷路器 + Gamma 預警 + 論點破壞清單）"""
+    md = "\n## 🚀 SPCX 太空雷達 (v8.1)\n\n"
+    
+    # === 修正四：論點破壞檢查清單（每天強迫自我拷問）===
+    md += "### 🛑 v8.1 論點破壞檢查 (Narrative Breakers)\n"
+    md += "_若以下任一條件成立，全盤凍結新資金投入：_\n"
+    md += "- [ ] Starship 重大試飛失敗或進度嚴重推遲\n"
+    md += "- [ ] Starlink 用戶數/營收季增率轉負\n"
+    md += "- [ ] Nasdaq 100 快速納入 (Fast-entry) 規則生變\n"
+    md += "- [ ] SpaceX 與 Tesla/xAI 出現重大惡意關聯交易或監管調查\n\n"
     
     stage_names = {
         0: "階段 0：尚未上市（追 IPO 進度）",
@@ -337,32 +355,41 @@ def generate_report(stage, price, atm_iv, vwap_anchor, gtc_levels,
     
     if stage == 0:
         md += f"SPCX 預計 {IPO_DATE} 掛牌（{PRICING_DATE} 訂價）。上市後本雷達自動啟動。\n\n"
+        # 階段 0 也顯示 GTC 市值定錨（不依賴開盤價，現在就能算）
+        if gtc_levels:
+            md += "### 💰 B 池 GTC 市值定錨（不依賴開盤價，已就緒）\n\n"
+            md += f"_假設總股數 {TOTAL_SHARES_B}B。6/11 定價後務必核對更新。_\n\n"
+            md += "| 目標市值 | 掛單價 | 池內權重 |\n|---|---|---|\n"
+            for lv in gtc_levels:
+                md += f"| {lv['target_mc_t']:.1f}T | ${lv['price']:.2f} | {lv['weight']*100:.0f}% |\n"
+            md += "\n"
         return md
     
-    md += f"**SPCX 現價**：${price:.2f}\n\n"
+    current_mc_t = price_to_mc_t(price)
+    md += f"**SPCX 現價**：${price:.2f}　**即時預估市值**：{current_mc_t:.2f}T（以 {TOTAL_SHARES_B}B 股計）\n\n"
     
-    # === 40% GTC 池 ===
-    md += "### 💰 40% GTC 池（首日 VWAP 錨點）\n\n"
-    if vwap_anchor:
-        md += f"首日 VWAP 錨點：**${vwap_anchor['first_day_vwap']:.2f}** "
-        md += f"（{vwap_anchor['first_day_date']}，高 ${vwap_anchor['first_day_high']:.2f} / 低 ${vwap_anchor['first_day_low']:.2f}）\n\n"
-        
-        if gtc_levels:
-            md += "| 檔位 | 掛單價 | 池內權重 | 距現價 | 狀態 |\n"
-            md += "|---|---|---|---|---|\n"
-            for lv in gtc_levels:
-                dist = (price / lv['price'] - 1) * 100
-                if price <= lv['price']:
-                    status = "✅ 已觸發"
-                else:
-                    status = f"⏳ 還需跌 {dist:.1f}%"
-                md += f"| {lv['pct']*100:.0f}% | ${lv['price']:.2f} | {lv['weight']*100:.0f}% | {dist:+.1f}% | {status} |\n"
-            md += "\n"
+    # === 修正二：DCA 斷路器（Hard Cap）===
+    if current_mc_t > HARD_CAP_T:
+        md += f"🚨 **【斷路器觸發】市值已突破 {HARD_CAP_T}T 天花板！A 池與 B 池嚴禁投入新資金！**\n\n"
     else:
-        md += "_首日 VWAP 尚未計算（需等上市首日收盤）_\n\n"
+        md += f"🟢 市值位於 {HARD_CAP_T}T 安全區內，A 池可依計畫分批 DCA。\n\n"
+    
+    # === 40% GTC 池（市值定錨）===
+    md += "### 💰 40% GTC 池（絕對市值定錨，與開盤價無關）\n\n"
+    if gtc_levels:
+        md += "| 目標市值 | 掛單價 | 池內權重 | 距現價 | 狀態 |\n"
+        md += "|---|---|---|---|---|\n"
+        for lv in gtc_levels:
+            dist = (price / lv['price'] - 1) * 100
+            if price <= lv['price']:
+                status = "✅ 已觸發"
+            else:
+                status = f"⏳ 還需跌 {dist:.1f}%"
+            md += f"| {lv['target_mc_t']:.1f}T | ${lv['price']:.2f} | {lv['weight']*100:.0f}% | {dist:+.1f}% | {status} |\n"
+        md += "\n"
     
     # === 10% Options 池 ===
-    md += "### 🎰 10% Options 池（IV 冷卻溫度計）\n\n"
+    md += "### 🎰 10% Options 池（IV 冷卻 + Gamma 預警）\n\n"
     if atm_iv is not None:
         iv_pct = atm_iv * 100
         if atm_iv > IV_CONFIG['FRENZY']:
@@ -374,6 +401,16 @@ def generate_report(stage, price, atm_iv, vwap_anchor, gtc_levels,
         else:
             iv_status = f"🟢 合理（{iv_pct:.0f}%）— 可評估 directional bet"
         md += f"ATM IV：{iv_status}\n\n"
+        
+        # === 修正三：Gamma Squeeze 預警 ===
+        if pc_ratio is not None:
+            md += f"Put/Call Volume Ratio：{pc_ratio:.2f}　"
+            if pc_ratio < PC_RATIO_SQUEEZE:
+                md += f"⚠️ **極端軋空狂熱（Gamma Squeeze Warning），買 Call 是買 Put 的 {1/pc_ratio:.1f} 倍，造市商正在裸奔！**\n\n"
+            else:
+                md += "（正常範圍）\n\n"
+        else:
+            md += "_Put 流動性不足，PC ratio 暫不計算（避免假警報）_\n\n"
         
         if iv_stable:
             md += "✅ **IV 已連續穩定冷卻** — options 池可開始評估進場\n\n"
@@ -413,43 +450,46 @@ def generate_report(stage, price, atm_iv, vwap_anchor, gtc_levels,
 
 
 def main():
-    print(f"🚀 啟動 SPCX 太空雷達: {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🚀 啟動 SPCX 太空雷達 v8.1: {datetime.now().strftime('%Y-%m-%d')}")
     
     if not os.path.exists('data'):
         os.makedirs('data')
     
     # 偵測階段
-    stage, price, atm_iv = detect_stage()
+    stage, price, atm_iv, pc_ratio = detect_stage()
     print(f"📍 目前階段：{stage}")
     
-    vwap_anchor = None
-    gtc_levels = None
+    # GTC 市值定錨：與開盤價無關，任何階段都能算
+    gtc_levels = calc_gtc_levels()
+    print(f"⚓ B 池市值定錨（總股數 {TOTAL_SHARES_B}B）：")
+    for lv in gtc_levels:
+        print(f"     {lv['target_mc_t']:.1f}T → ${lv['price']:.2f}（權重 {lv['weight']*100:.0f}%）")
+    
     iv_stable = False
     dca_metrics = None
     
     if stage >= 1:
-        print(f"💎 SPCX 現價：${price:.2f}")
-        # 算首日 VWAP 錨點
-        vwap_anchor = get_first_day_vwap()
-        if vwap_anchor:
-            print(f"⚓ 首日 VWAP 錨點：${vwap_anchor['first_day_vwap']:.2f}")
-            gtc_levels = calc_gtc_levels(vwap_anchor['first_day_vwap'])
-        # DCA 儀表板
+        print(f"💎 SPCX 現價：${price:.2f}（市值 {price_to_mc_t(price):.2f}T）")
         dca_metrics = calc_dca_metrics(price)
+        if price_to_mc_t(price) > HARD_CAP_T:
+            print(f"🚨 斷路器觸發：市值 > {HARD_CAP_T}T，嚴禁新資金")
     
     if stage >= 2 and atm_iv is not None:
         print(f"🌡️  ATM IV：{atm_iv*100:.1f}%")
+        if pc_ratio is not None:
+            print(f"   PC ratio：{pc_ratio:.2f}" + 
+                  (f" ⚠️ Gamma Squeeze 警告！" if pc_ratio < PC_RATIO_SQUEEZE else ""))
         iv_df = record_iv_history(atm_iv, price)
         iv_stable = check_iv_stable(iv_df)
         print(f"   IV 穩定冷卻：{'✅' if iv_stable else '⏳ 尚未'}")
     
-    # 太空同游股（任何階段都掃，IPO 前就能觀察）
+    # 太空同游股（任何階段都掃）
     print("🛰️  掃描太空同游股...")
     peers = scan_space_peers()
     print(f"   {len(peers)} 檔")
     
     # 生成報告
-    md = generate_report(stage, price, atm_iv, vwap_anchor, gtc_levels,
+    md = generate_report(stage, price, atm_iv, pc_ratio, gtc_levels,
                          iv_stable, dca_metrics, peers)
     with open(REPORT_PATH, 'w', encoding='utf-8') as f:
         f.write(md)
@@ -459,9 +499,12 @@ def main():
         'updated_at': datetime.now().isoformat(),
         'stage': stage,
         'price': price,
+        'market_cap_t': round(price_to_mc_t(price), 3) if price else None,
+        'total_shares_b': TOTAL_SHARES_B,
+        'hard_cap_t': HARD_CAP_T,
         'atm_iv': atm_iv,
+        'pc_ratio': pc_ratio,
         'iv_stable': iv_stable,
-        'vwap_anchor': vwap_anchor,
         'gtc_levels': gtc_levels,
         'dca_metrics': dca_metrics,
         'peers': peers,
