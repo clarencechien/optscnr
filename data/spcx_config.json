@@ -1,0 +1,43 @@
+{
+  "_comment": "SPCX 可變參數。6/11 定價後改這裡就好，不用動 code。讀不到任一欄位時 code 用內建預設值。",
+  "_last_updated": "2026-05-27 (上市前預估值，6/11 定價後務必更新)",
+
+  "ticker": "SPCX",
+  "ipo_date": "2026-06-12",
+  "pricing_date": "2026-06-11",
+  "_date_note": "IPO 日期常滑動。若延期，只改 ipo_date，所有天數計算（綠鞋/鎖倉瀑布）自動跟著平移。",
+
+  "total_shares_b": 13.0,
+  "_shares_note": "單位 Billion。S-1 pro forma ~125億+新股~130億股=13.0B。6/11 最終定價核對。",
+
+  "total_capital": 200000,
+  "pool_a_dca_pct": 0.60,
+  "pool_b_floor_pct": 0.30,
+  "pool_c_opt_pct": 0.10,
+  "dca_tranches": 5,
+
+  "hard_cap_t": 2.2,
+  "buy_zone_top_t": 2.0,
+  "buy_zone_accel_t": 1.75,
+  "b_pool_anchors_t": [1.5, 1.3, 1.1],
+  "gtc_weights": [0.40, 0.35, 0.25],
+
+  "greenshoe_off_day": 30,
+  "lockup_floor_end_day": 180,
+  "_lockup_note": "180 天基準。Musk 366 天鎖倉不在此列。解鎖瀑布日 70/90/105/120/135/180 隨上市日平移。",
+
+  "pc_ratio_squeeze": 0.20,
+  "pc_min_put_vol": 500,
+
+  "iv_frenzy": 0.80,
+  "iv_cooling": 0.60,
+  "iv_calm": 0.50,
+  "iv_stable_days": 3,
+
+  "_still_blank_until_pricing": [
+    "每股 IPO 價（S-1 中點留白）",
+    "發行張數 / free float",
+    "綠鞋百分比",
+    "散戶保留百分比（新聞講 30% 未入 S-1）"
+  ]
+}
