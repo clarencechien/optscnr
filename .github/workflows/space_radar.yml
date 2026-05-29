@@ -40,7 +40,8 @@ jobs:
             data/space_radar.json \
             data/space_radar_report.md \
             data/spcx_iv_history.csv \
-            data/spcx_dca_log.json
+            data/spcx_dca_log.json \
+            data/spcx_config.json
           do
             if [ -f "$f" ]; then
               git add "$f"
