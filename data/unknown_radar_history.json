@@ -6,13 +6,6 @@
     "total_mentions": 4,
     "ticker": "OTAI-UN"
   },
-  "Spotify": {
-    "first_seen": "2026-05-21",
-    "last_seen": "2026-05-21",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SPOT"
-  },
   "IMAX": {
     "first_seen": "2026-05-22",
     "last_seen": "2026-05-24",
@@ -43,9 +36,9 @@
   },
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-05-27",
-    "consecutive_days": 1,
-    "total_mentions": 3,
+    "last_seen": "2026-05-29",
+    "consecutive_days": 2,
+    "total_mentions": 5,
     "ticker": "NDAQ"
   },
   "Abercrombie": {
@@ -64,9 +57,9 @@
   },
   "Daily": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-05-28",
-    "consecutive_days": 2,
-    "total_mentions": 4,
+    "last_seen": "2026-05-29",
+    "consecutive_days": 3,
+    "total_mentions": 6,
     "ticker": "DJCO"
   },
   "Fidelity": {
@@ -82,5 +75,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BBY"
+  },
+  "SentinelOne": {
+    "first_seen": "2026-05-29",
+    "last_seen": "2026-05-29",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "S"
+  },
+  "Bowman": {
+    "first_seen": "2026-05-29",
+    "last_seen": "2026-05-29",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BWMN"
   }
 }
