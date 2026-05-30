@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-23T04:42:11.057865",
+  "updated_at": "2026-05-30T04:53:50.298360",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -9,33 +9,45 @@
     "MIN_VOL_RATIO": 1.2,
     "MIN_AVG_VOLUME": 500000
   },
-  "count": 2,
+  "count": 3,
   "tickers": [
+    "ZS",
     "COUR",
     "HUBS"
   ],
   "details": [
     {
+      "symbol": "ZS",
+      "price": 139.73,
+      "high_52w": 336.99,
+      "low_52w": 114.62,
+      "drawdown_pct": 58.5,
+      "rebound_pct": 21.9,
+      "vol_ratio": 2.43,
+      "market_cap_b": 22.6,
+      "score": 35.52
+    },
+    {
       "symbol": "COUR",
-      "price": 5.32,
+      "price": 5.39,
       "high_52w": 13.56,
       "low_52w": 5.0,
-      "drawdown_pct": 60.8,
-      "rebound_pct": 6.4,
-      "vol_ratio": 1.44,
+      "drawdown_pct": 60.3,
+      "rebound_pct": 7.8,
+      "vol_ratio": 1.36,
       "market_cap_b": 1.5,
-      "score": 29.38
+      "score": 28.16
     },
     {
       "symbol": "HUBS",
-      "price": 201.97,
-      "high_52w": 627.49,
+      "price": 220.63,
+      "high_52w": 611.0,
       "low_52w": 173.25,
-      "drawdown_pct": 67.8,
-      "rebound_pct": 16.6,
-      "vol_ratio": 1.27,
-      "market_cap_b": 10.3,
-      "score": 27.73
+      "drawdown_pct": 63.9,
+      "rebound_pct": 27.3,
+      "vol_ratio": 1.33,
+      "market_cap_b": 11.3,
+      "score": 24.99
     }
   ]
 }
