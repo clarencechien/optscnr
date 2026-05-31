@@ -1,40 +1,45 @@
 {
-  "updated_at": "2026-05-29T22:12:55.405116",
+  "updated_at": "2026-05-31T21:33:01.956691",
   "stats": {
     "total_items": 107,
     "items_with_company": 22,
-    "items_with_catalyst": 18,
-    "items_both": 5
+    "items_with_catalyst": 7,
+    "items_both": 3
   },
-  "count": 15,
+  "count": 16,
   "tickers": [
-    "NOW",
+    "MU",
     "DELL",
-    "SNOW",
-    "OKTA",
-    "SOFI",
     "NVDA",
-    "XYZ",
-    "AMZN",
-    "DIS",
-    "COIN",
-    "ORCL",
+    "WKHS",
+    "BRK-B",
     "META",
-    "AVGO",
+    "AMD",
     "MSFT",
-    "INTC"
+    "DIS",
+    "AAPL",
+    "NFLX",
+    "CRM",
+    "TSLA",
+    "IBM",
+    "SNOW",
+    "ZS"
   ],
   "details": [
     {
-      "symbol": "NOW",
-      "score": 6,
+      "symbol": "MU",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "ServiceNow’s stock soars to a historic month as AI fears fade across software",
+          "title": "Should You Buy Micron Stock Before June 24?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Micron Stock Forecast: Can MU Sustain Its AI-Driven Breakout After Record High?",
           "catalysts": [
-            "soars",
-            "rally",
-            "gained"
+            "breakout",
+            "record high"
           ],
           "has_catalyst": true
         }
@@ -42,149 +47,72 @@
     },
     {
       "symbol": "DELL",
-      "score": 5.0,
+      "score": 2.5,
       "evidence": [
+        {
+          "title": "Jim Cramer says Dell’s blowout quarter sets up a crucial week for AI stocks",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
           "title": "Dell stock skyrockets 32% for its best day ever as AI server revenue soars",
           "catalysts": [
             "soars"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "Dell’s stunning 33% stock rally gave a big boost to shares of other server makers",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Analyst Report: Dell Technologies Inc",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNOW",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Software stocks wrap up best month since 2001 as talk of 'SaaSpocalypse' subsides",
-          "catalysts": [
-            "pops"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Snowflake targets AI agent adoption with AWS deal, acquisition",
-          "catalysts": [
-            "acquisition"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "OKTA",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Software stocks wrap up best month since 2001 as talk of 'SaaSpocalypse' subsides",
-          "catalysts": [
-            "pops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SOFI",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "SoFi vs. TD Bank: Which bank is a better fit for you?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "SoFi vs. Ally: Which online bank is best for you?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "SoFi vs. Chime: Which fintech offers a better banking experience?",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "NVDA",
-      "score": 1.0,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Nvidia is investing billions into this emerging technology that could change the AI industry",
+          "title": "Nvidia and AMD face new export limits on China subsidiaries",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Aggressive Share Buybacks and Dominant Positioning Still Make Nvidia Stock a Top Buy Now",
+          "title": "US takes step to halt Nvidia AI chip shipments to Chinese firms outside China",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
-      "score": 0.5,
+      "symbol": "WKHS",
+      "score": 2,
       "evidence": [
         {
-          "title": "Postal Service proposes requiring states to provide mail-in ballot voter lists",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "United Rentals: The Industrial Stock Workhorse I'd Happily Hold Through Any Market Crash",
+          "catalysts": [
+            "crash"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 0.5,
+      "symbol": "BRK-B",
+      "score": 1.5,
       "evidence": [
         {
-          "title": "What the Blue Origin rocket explosion means for Amazon's satellite ambitions",
+          "title": "Berkshire trails red-hot S&P 500 by biggest margin so far this year",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Disney's ABC files early broadcast licenses renewal. FCC Chair vows to 'follow the facts'",
+          "title": "Berkshire Hathaway to buy US homebuilder Taylor Morrison for $8.5 billion",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "One of the hottest crypto products in the world is finally coming to the U.S.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "How Is Oracle's Stock Performance Compared to Other Software Stocks",
+          "title": "Warren Buffett's Berkshire dumps entire stake in dividend stock",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -192,21 +120,31 @@
     },
     {
       "symbol": "META",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Meta commits $13 million in additional funding for oversight board until 2028",
+          "title": "Meta has struggled at selling anything other than ads. Will AI be different?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta's Subscription Push Could Add $13.5 Billion By 2028 Across Instagram, Facebook, WhatsApp",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AVGO",
-      "score": 0.5,
+      "symbol": "AMD",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Is Broadcom Stock Outperforming the Dow?",
+          "title": "Nvidia and AMD face new export limits on China subsidiaries",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia’s $150 billion bet trumps AMD",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -217,18 +155,95 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "The $43 Billion Reason to Buy Microsoft Stock Here",
+          "title": "Former Barclays CEO Jes Staley agrees to July 23 interview about Jeffrey Epstein by Oversight panel",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Prediction. Intel Has Run 492% and Its Own Insiders Are Selling",
+          "title": "Disney is poised to ramp its already booming advertising business. Rita Ferro is behind the push",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Here’s what’s worth streaming in June 2026 on Netflix, Hulu, HBO Max and more",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Here’s what’s worth streaming in June 2026 on Netflix, Hulu, HBO Max and more",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "SA Asks: Can Salesforce thrive in an AI-dominated world?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Trump praised IBM's 'legend' CEO, government floated a $1B quantum award — is the stock still a 'very nice price'?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNOW",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Software Was the Market's Big Laggard This Year. Snowflake's Blowout Might Be the Spark That Changes That.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ZS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Zscaler Stock Plummeted This Week",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -236,6 +251,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3
+    "OpenAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
