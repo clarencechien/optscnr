@@ -1,53 +1,29 @@
 {
-  "updated_at": "2026-05-29T22:50:19.936683",
-  "count": 4,
+  "updated_at": "2026-05-31T22:31:55.404813",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Daily",
-      "ticker": "DJCO",
-      "mentions_today": 2,
-      "total_mentions": 6,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "Daily – Vickers Top Insider Picks for 05/29/2026",
-        "Daily – Vickers Top Buyers & Sellers for 05/29/2026"
-      ]
-    },
-    {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 5,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "Dan Ives: Anthropic’s growth is 'just the tip of the spear' for AI rally",
-        "Clean Energy Technologies receives Nasdaq notice over delayed quarterly filing"
-      ]
-    },
-    {
-      "name": "SentinelOne",
-      "ticker": "S",
+      "name": "Travelers",
+      "ticker": "TRV",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "SentinelOne stock drops 8% as cyber firm trims headcount to boost AI investments",
-        "SentinelOne stock drops 8% as cyber firm trims headcount to boost AI investments"
+        "Travelers to Europe may be leaving money on the table. Here's why",
+        "Travelers to Europe may be leaving money on the table. Here's why"
       ]
     },
     {
-      "name": "Bowman",
-      "ticker": "BWMN",
+      "name": "Billion",
+      "ticker": "BGHL",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Fed Governor Michelle Bowman warns against hiking interest rates because of inflation spike",
-        "Fed Governor Michelle Bowman warns against hiking interest rates because of inflation spike"
+        "Berkshire Hathaway Has First Takeover by CEO Abel, Paying $8.5 Billion for a Homebuilder",
+        "Berkshire Hathaway to Buy Homebuilder Taylor Morrison for $6.8 Billion"
       ]
     }
   ]

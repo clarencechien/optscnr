@@ -13,13 +13,6 @@
     "total_mentions": 5,
     "ticker": "IMAX"
   },
-  "Consumer": {
-    "first_seen": "2026-05-22",
-    "last_seen": "2026-05-22",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "CPSS"
-  },
   "Invest": {
     "first_seen": "2026-05-24",
     "last_seen": "2026-05-24",
@@ -89,5 +82,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BWMN"
+  },
+  "Travelers": {
+    "first_seen": "2026-05-31",
+    "last_seen": "2026-05-31",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "TRV"
+  },
+  "Billion": {
+    "first_seen": "2026-05-31",
+    "last_seen": "2026-05-31",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BGHL"
   }
 }
