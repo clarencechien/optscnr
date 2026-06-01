@@ -1,47 +1,129 @@
 {
-  "updated_at": "2026-05-31T21:33:01.956691",
+  "updated_at": "2026-06-01T22:41:10.368745",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 22,
-    "items_with_catalyst": 7,
-    "items_both": 3
+    "total_items": 103,
+    "items_with_company": 26,
+    "items_with_catalyst": 12,
+    "items_both": 5
   },
-  "count": 16,
+  "count": 15,
   "tickers": [
-    "MU",
-    "DELL",
     "NVDA",
-    "WKHS",
-    "BRK-B",
-    "META",
-    "AMD",
-    "MSFT",
-    "DIS",
-    "AAPL",
-    "NFLX",
-    "CRM",
-    "TSLA",
+    "HPE",
     "IBM",
-    "SNOW",
-    "ZS"
+    "MSFT",
+    "TGT",
+    "DELL",
+    "GOOGL",
+    "BRK-B",
+    "XYZ",
+    "META",
+    "MRNA",
+    "AMD",
+    "MU",
+    "RKLB",
+    "COST"
   ],
   "details": [
     {
-      "symbol": "MU",
-      "score": 4.5,
+      "symbol": "NVDA",
+      "score": 12.0,
       "evidence": [
         {
-          "title": "Should You Buy Micron Stock Before June 24?",
+          "title": "Nvidia jumps into PCs with new Arm-based chip debuting in laptops from Microsoft, Dell, HP",
+          "catalysts": [
+            "jumps"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Nvidia picks Unitree for humanoid robot platform as Chinese startup eyes IPO",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Micron Stock Forecast: Can MU Sustain Its AI-Driven Breakout After Record High?",
+          "title": "Arm, IBM and Hewlett Packard soar as Nvidia chip 'reinvention' extends software rally",
           "catalysts": [
-            "breakout",
-            "record high"
+            "surged",
+            "soar",
+            "rally"
           ],
           "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "HPE",
+      "score": 6,
+      "evidence": [
+        {
+          "title": "HPE skyrockets 30% on biggest earnings beat since 2018",
+          "catalysts": [
+            "earnings beat"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "HPE’s stock soars toward record gain as earnings show a networking bonanza",
+          "catalysts": [
+            "soars",
+            "gain"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "score": 6,
+      "evidence": [
+        {
+          "title": "Arm, IBM and Hewlett Packard soar as Nvidia chip 'reinvention' extends software rally",
+          "catalysts": [
+            "surged",
+            "soar",
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Microsoft and Google are late to AI coding, but 'absolutely critical' they compete for growth",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia jumps into PCs with new Arm-based chip debuting in laptops from Microsoft, Dell, HP",
+          "catalysts": [
+            "jumps"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Microsoft and Google are late to AI coding, but 'absolutely critical' they compete for growth",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "General Mills (GIS) Faces Lower Price Target as BofA Revises Industry Outlook",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Piper Sandler Raises Aflac (AFL) Price Target, Favors Insurance Carriers over Brokers",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
@@ -50,69 +132,67 @@
       "score": 2.5,
       "evidence": [
         {
-          "title": "Jim Cramer says Dell’s blowout quarter sets up a crucial week for AI stocks",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dell stock skyrockets 32% for its best day ever as AI server revenue soars",
+          "title": "Nvidia jumps into PCs with new Arm-based chip debuting in laptops from Microsoft, Dell, HP",
           "catalysts": [
-            "soars"
+            "jumps"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Nvidia and AMD face new export limits on China subsidiaries",
-          "catalysts": [],
-          "has_catalyst": false
         },
         {
-          "title": "US takes step to halt Nvidia AI chip shipments to Chinese firms outside China",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points",
+          "title": "Trump praised Dell, bought its stock — now the company has landed a $9.7B Pentagon contract and shares are up 255%",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WKHS",
-      "score": 2,
+      "symbol": "GOOGL",
+      "score": 2.0,
       "evidence": [
         {
-          "title": "United Rentals: The Industrial Stock Workhorse I'd Happily Hold Through Any Market Crash",
-          "catalysts": [
-            "crash"
-          ],
-          "has_catalyst": true
+          "title": "Alphabet plans to raise $80 billion from stock sales to fund AI buildout",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Microsoft and Google are late to AI coding, but 'absolutely critical' they compete for growth",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Alphabet asks shareholders to foot an $80 billion bill for AI expansion",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "BRK-B",
-      "score": 1.5,
+      "score": 2.0,
       "evidence": [
+        {
+          "title": "Alphabet plans to raise $80 billion from stock sales to fund AI buildout",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Berkshire's bet on Taylor Morrison suggests the housing market may have bottomed",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
           "title": "Berkshire trails red-hot S&P 500 by biggest margin so far this year",
           "catalysts": [],
           "has_catalyst": false
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
         {
-          "title": "Berkshire Hathaway to buy US homebuilder Taylor Morrison for $8.5 billion",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Warren Buffett's Berkshire dumps entire stake in dividend stock",
+          "title": "Schumer says Democrats will force Senate votes to block Trump's DOJ 'lawfare' fund",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -120,15 +200,21 @@
     },
     {
       "symbol": "META",
-      "score": 1.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Meta has struggled at selling anything other than ads. Will AI be different?",
+          "title": "Nvidia, Meta and SLB rank among top companies in adopting AI, new study says",
           "catalysts": [],
           "has_catalyst": false
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "MRNA",
+      "score": 0.5,
+      "evidence": [
         {
-          "title": "Meta's Subscription Push Could Add $13.5 Billion By 2028 Across Instagram, Facebook, WhatsApp",
+          "title": "Moderna and other groups get $60 million to develop Ebola vaccine",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -136,114 +222,43 @@
     },
     {
       "symbol": "AMD",
-      "score": 1.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia and AMD face new export limits on China subsidiaries",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia’s $150 billion bet trumps AMD",
+          "title": "DriveNets secures $410 million in latest funding round, AMD joins as investor",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Former Barclays CEO Jes Staley agrees to July 23 interview about Jeffrey Epstein by Oversight panel",
+          "title": "Is Micron Technology Stock Outperforming the S&P 500?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DIS",
+      "symbol": "RKLB",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Disney is poised to ramp its already booming advertising business. Rita Ferro is behind the push",
+          "title": "Could Buying Rocket Lab Stock Today Set You Up for Life?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Here’s what’s worth streaming in June 2026 on Netflix, Hulu, HBO Max and more",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Here’s what’s worth streaming in June 2026 on Netflix, Hulu, HBO Max and more",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "SA Asks: Can Salesforce thrive in an AI-dominated world?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "IBM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump praised IBM's 'legend' CEO, government floated a $1B quantum award — is the stock still a 'very nice price'?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNOW",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Software Was the Market's Big Laggard This Year. Snowflake's Blowout Might Be the Spark That Changes That.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ZS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why Zscaler Stock Plummeted This Week",
+          "title": "Truist Highlights Costco’s (COST) Sales Momentum While Flagging Membership Growth Slowdown",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -251,7 +266,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1,
-    "Anthropic (private)": 1
+    "OpenAI (private)": 4,
+    "Anthropic (private)": 3
   }
 }
