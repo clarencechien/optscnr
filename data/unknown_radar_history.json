@@ -6,20 +6,6 @@
     "total_mentions": 4,
     "ticker": "OTAI-UN"
   },
-  "IMAX": {
-    "first_seen": "2026-05-22",
-    "last_seen": "2026-05-24",
-    "consecutive_days": 2,
-    "total_mentions": 5,
-    "ticker": "IMAX"
-  },
-  "Invest": {
-    "first_seen": "2026-05-24",
-    "last_seen": "2026-05-24",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "IGACU"
-  },
   "Ferrari": {
     "first_seen": "2026-05-26",
     "last_seen": "2026-05-26",
@@ -96,5 +82,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BGHL"
+  },
+  "MGM Resorts": {
+    "first_seen": "2026-06-01",
+    "last_seen": "2026-06-01",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "MGM"
+  },
+  "Duke Energy": {
+    "first_seen": "2026-06-01",
+    "last_seen": "2026-06-01",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DUK-PA"
   }
 }

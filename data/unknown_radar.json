@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-05-31T22:31:55.404813",
+  "updated_at": "2026-06-01T23:13:23.915514",
   "count": 2,
   "blind_spots": [
     {
-      "name": "Travelers",
-      "ticker": "TRV",
+      "name": "MGM Resorts",
+      "ticker": "MGM",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Travelers to Europe may be leaving money on the table. Here's why",
-        "Travelers to Europe may be leaving money on the table. Here's why"
+        "Barry Diller's People offers to buy casino giant MGM Resorts for $48.30 per share",
+        "Barry Diller's People offers to buy casino giant MGM Resorts for $48.30 per share"
       ]
     },
     {
-      "name": "Billion",
-      "ticker": "BGHL",
+      "name": "Duke Energy",
+      "ticker": "DUK-PA",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Berkshire Hathaway Has First Takeover by CEO Abel, Paying $8.5 Billion for a Homebuilder",
-        "Berkshire Hathaway to Buy Homebuilder Taylor Morrison for $6.8 Billion"
+        "Duke Energy exploring tech partnerships to offset nuclear expansion risks",
+        "Duke Energy seeking tech partnerships to offset nuclear expansion risks, CEO says"
       ]
     }
   ]
