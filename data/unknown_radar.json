@@ -1,29 +1,41 @@
 {
-  "updated_at": "2026-06-01T23:13:23.915514",
-  "count": 2,
+  "updated_at": "2026-06-02T23:14:56.307298",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "MGM Resorts",
-      "ticker": "MGM",
-      "mentions_today": 2,
-      "total_mentions": 2,
+      "name": "GameStop",
+      "ticker": "GME-WT",
+      "mentions_today": 3,
+      "total_mentions": 3,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Barry Diller's People offers to buy casino giant MGM Resorts for $48.30 per share",
-        "Barry Diller's People offers to buy casino giant MGM Resorts for $48.30 per share"
+        "GameStop wants to buy back $2 billion of its own stock after an eBay-fueled selloff",
+        "GameStop reports 14% rise in quarterly revenue, unveils $2 billion share buyback"
       ]
     },
     {
-      "name": "Duke Energy",
-      "ticker": "DUK-PA",
+      "name": "Gemini",
+      "ticker": "GEMI",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Duke Energy exploring tech partnerships to offset nuclear expansion risks",
-        "Duke Energy seeking tech partnerships to offset nuclear expansion risks, CEO says"
+        "Commodities regulator alleges Winklevosses' Gemini crypto exchange was politically targeted",
+        "Commodities regulator alleges Winklevosses' Gemini crypto exchange was politically targeted"
+      ]
+    },
+    {
+      "name": "Software",
+      "ticker": "SFWJ",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Software stocks just passed a big milestone",
+        "Software stocks just passed a big milestone"
       ]
     }
   ]
