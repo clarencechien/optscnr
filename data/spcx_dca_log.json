@@ -1,9 +1,14 @@
 {
-  "_comment": "A 核心 DCA 池紀錄。每次 DCA 買進後手動加一筆到 purchases，radar 自動算平均成本+未實現損益。",
-  "_plan": "A 池 $120,000 分 5 筆 × $24,000，6/12→~7/3，依市值錨。市值 >2.2T 該筆跳過、回買區再補。",
-  "_format": "date=買進日, shares=股數, price=每股成交價。market_cap_t 選填（純記錄當時市值）。",
-  "_example": [
-    {"date": "2026-06-15", "shares": 178, "price": 134.50, "market_cap_t": 1.75}
-  ],
-  "purchases": []
+  "_comment": "手動維護的 DCA 買入紀錄。每次成交後加一筆到 purchases。scanner 讀這個算平均成本與 A 池佈署進度。",
+  "_schema": "每筆需要 date, shares, price 三個欄位；pool/note 選填供你自己辨識。",
+  "_example_below": "下面是格式範例（市值/價格是預演值），實際開始 DCA 後請清空 purchases 改填真實成交。",
+  "purchases": [
+    {
+      "date": "2026-06-12",
+      "shares": 0,
+      "price": 0.0,
+      "pool": "A-market",
+      "note": "首筆市價單範例（確保上車）— 實際成交後填真實股數與價格"
+    }
+  ]
 }
