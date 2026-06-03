@@ -71,6 +71,7 @@ _DEFAULTS = {
     'gtc_weights': [0.40, 0.35, 0.25],
     'greenshoe_off_day': 30,
     'lockup_floor_end_day': 180,
+    'vacuum_end_day': 45,                   # 真空期結束日（約對應 Q2 財報/首波解鎖）。此前 B 池基本不成交屬正常
     'dca_deadline': '2026-07-03',           # A 池佈署截止日
     'pc_ratio_squeeze': 0.20,
     'pc_min_put_vol': 500,
@@ -124,6 +125,7 @@ B_POOL_ANCHORS_T = _CFG['b_pool_anchors_t']
 GTC_WEIGHTS = _CFG['gtc_weights']
 GREENSHOE_OFF_DAY = _CFG['greenshoe_off_day']
 LOCKUP_FLOOR_END_DAY = _CFG['lockup_floor_end_day']
+VACUUM_END_DAY = _CFG['vacuum_end_day']
 DCA_DEADLINE = _CFG['dca_deadline']
 PC_RATIO_SQUEEZE = _CFG['pc_ratio_squeeze']
 PC_MIN_PUT_VOL = _CFG['pc_min_put_vol']
@@ -361,6 +363,12 @@ def get_timeline_status():
     if d < 0:
         return f"上市前 {abs(d)} 天", []
 
+    # 真空期 vs 解鎖期階段標示（決定 B 池該不該有期待）
+    if d < VACUUM_END_DAY:
+        notes.append(f"🌑 真空期（~第 {VACUUM_END_DAY} 天前）—— 僅 IPO 新股流通、鎖倉未解，B 池基本不會成交，屬正常。前期靠等下跌建倉的路徑大概率走不通。")
+    else:
+        notes.append(f"📉 解鎖期（已過第 {VACUUM_END_DAY} 天）—— B 池成交窗口開啟，但仍需有人『賣』才接得到（見下方惜售提醒）。")
+
     # A 池佈署截止日提醒
     try:
         deadline_dt = datetime.strptime(DCA_DEADLINE, '%Y-%m-%d')
@@ -389,7 +397,7 @@ def get_timeline_status():
     ]
     for day, desc in lockup_events:
         if abs(d - day) <= 3:  # 接近解鎖日（±3 天）
-            notes.append(f"🔓 接近{desc}（供給高峰，B 池準備承接）")
+            notes.append(f"🔓 接近{desc}（注意：解鎖≠賣出。逾千員工組織 borrow-die 惜售，實際賣壓可能遠小於帳面解鎖量。B 池被動等，接不到是常態）")
 
     # B 池掛單期間提醒
     if 0 <= d <= LOCKUP_FLOOR_END_DAY:
@@ -673,6 +681,11 @@ def _render_pool_b_plan(gtc_levels_b, price, stage):
             status = "✅ 已觸發" if price <= lv['price'] else f"⏳ 還需跌 {dist:.1f}%"
         md += f"| {lv['target_mc_t']:.1f}T | ${lv['price']:.2f} | {lv['weight']*100:.0f}% | ${alloc:,.0f} | {dist_str} | {status} |\n"
     md += "\n"
+    md += "> **B 池是後段武器，不是前期戰力。**\n"
+    md += "> - 前期真空期幾乎不會成交（只有 IPO 新股流通、鎖倉未解）。\n"
+    md += "> - 真正可能成交的窗口：**7 月底 Q2 財報+首波解鎖 → 秋季 Anthropic/OpenAI IPO 抽走資金 → 10 月底 Q3 大解鎖(+28%)**。\n"
+    md += "> - 解鎖≠賣出：員工惜售(borrow-die)下，賣壓可能是溫水非海嘯，B 池可能整段不成交。\n"
+    md += "> - **接不到 = 沒崩 = 好事**（你的 A 池十年倉在賺）。**絕不可因接不到而上調錨點追價**——那就破功了。\n\n"
     return md
 
 
