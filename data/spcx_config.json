@@ -29,9 +29,10 @@
   "b_pool_anchors_t": [1.5, 1.3, 1.1],
   "gtc_weights": [0.40, 0.35, 0.25],
 
-  "_timeline_note": "綠鞋約第30天撤除；鎖倉瀑布跑到第180天(~12月中)。dca_deadline 是 A 池佈署截止日，未投滿餘額併入 B 池。",
+  "_timeline_note": "綠鞋約第30天撤除；鎖倉瀑布跑到第180天(~12月中)。dca_deadline 是 A 池佈署截止日，未投滿餘額併入 B 池。vacuum_end_day 前為真空期(B池基本不成交屬正常)，定價日確認 Q2 財報日後校準。",
   "greenshoe_off_day": 30,
   "lockup_floor_end_day": 180,
+  "vacuum_end_day": 45,
   "dca_deadline": "2026-07-03",
 
   "_pc_note": "PC ratio 極端 + IV 狂熱 → C 池凍結（非進場訊號）。pc_min_put_vol 防 put 流動性不足的假警報。",
