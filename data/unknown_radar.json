@@ -1,42 +1,5 @@
 {
-  "updated_at": "2026-06-02T23:14:56.307298",
-  "count": 3,
-  "blind_spots": [
-    {
-      "name": "GameStop",
-      "ticker": "GME-WT",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "GameStop wants to buy back $2 billion of its own stock after an eBay-fueled selloff",
-        "GameStop reports 14% rise in quarterly revenue, unveils $2 billion share buyback"
-      ]
-    },
-    {
-      "name": "Gemini",
-      "ticker": "GEMI",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Commodities regulator alleges Winklevosses' Gemini crypto exchange was politically targeted",
-        "Commodities regulator alleges Winklevosses' Gemini crypto exchange was politically targeted"
-      ]
-    },
-    {
-      "name": "Software",
-      "ticker": "SFWJ",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Software stocks just passed a big milestone",
-        "Software stocks just passed a big milestone"
-      ]
-    }
-  ]
+  "updated_at": "2026-06-03T23:17:34.468168",
+  "count": 0,
+  "blind_spots": []
 }
