@@ -1,241 +1,72 @@
 {
-  "updated_at": "2026-06-02T22:34:40.954449",
+  "updated_at": "2026-06-03T22:37:21.358239",
   "stats": {
-    "total_items": 102,
+    "total_items": 107,
     "items_with_company": 29,
-    "items_with_catalyst": 25,
-    "items_both": 10
+    "items_with_catalyst": 14,
+    "items_both": 2
   },
-  "count": 20,
+  "count": 16,
   "tickers": [
+    "AVGO",
     "TGT",
-    "GOOGL",
-    "NVDA",
-    "MRVL",
-    "MSFT",
-    "PANW",
-    "HPE",
-    "ASTS",
-    "ORCL",
-    "BE",
-    "COIN",
-    "BRK-B",
     "META",
-    "GS",
-    "AMD",
-    "INTC",
-    "QCOM",
-    "XYZ",
-    "SHOP",
-    "PLUG"
+    "PANW",
+    "CRM",
+    "NVDA",
+    "TSLA",
+    "MS",
+    "JPM",
+    "SNDK",
+    "MU",
+    "GOOG",
+    "GOOGL",
+    "ARM",
+    "QBTS",
+    "BRK-B"
   ],
   "details": [
     {
-      "symbol": "TGT",
-      "score": 6.0,
-      "evidence": [
-        {
-          "title": "Microsoft and Google are late to AI coding, but 'absolutely critical' they compete for growth",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "BofA Trims Conagra Brands, Inc. (CAG)’s Price Target To $13, Keeps Underperform Rating",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Truist Reiterates Hold on Fidelity National Information Services, Inc. (FIS), Cuts Price Target to $45",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 5.0,
-      "evidence": [
-        {
-          "title": "Microsoft unveils new AI models to lessen reliance on OpenAI and lower costs for developers",
-          "catalysts": [
-            "unveils"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Alphabet's plan to sell $80 billion in stock to fund its AI buildout isn't all bad",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft and Google are late to AI coding, but 'absolutely critical' they compete for growth",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
+      "symbol": "AVGO",
       "score": 4.5,
       "evidence": [
         {
-          "title": "Marvell stock soars 32% as Nvidia's Huang says it could be the next trillion-dollar company",
+          "title": "Broadcom stock plunges on weak software sales, unchanged AI chip forecast for the year",
           "catalysts": [
-            "soars"
+            "plunges"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Why Lumentum, Coherent and other optical stocks are rocketing toward big gains",
+          "title": "Broadcom’s revenue misses estimates as AI chip race heats up, shares tumble",
           "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MRVL",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Marvell stock soars 32% as Nvidia's Huang says it could be the next trillion-dollar company",
-          "catalysts": [
-            "soars"
+            "misses estimates"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Why Lumentum, Coherent and other optical stocks are rocketing toward big gains",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 3.5,
-      "evidence": [
-        {
-          "title": "Microsoft unveils new AI models to lessen reliance on OpenAI and lower costs for developers",
-          "catalysts": [
-            "unveils"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Microsoft and Google are late to AI coding, but 'absolutely critical' they compete for growth",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft teases new era of AI-driven devices at annual developer conference",
+          "title": "Why Wall Street Thinks You Should Buy Broadcom Stock Before June 3",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PANW",
-      "score": 2.5,
+      "symbol": "TGT",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Palo Alto Networks tops earnings as AI fuels cybersecurity urgency",
+          "title": "SpaceX is worth less than half of its $1.75 trillion IPO target, Morningstar says",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Palo Alto Networks’ stock is rising as earnings show AI is a friend, not a foe",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "HPE",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "HPE surges 19% after Monday's blowout earnings, closing its best day ever",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ASTS",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "This space stock is rising as Blue Origin predicts quick recovery from big explosion",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Barclays and BTIG Raise Price Targets on Bloom Energy (BE) Following Strong Quarter and Oracle Partnership",
-          "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BE",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Barclays and BTIG Raise Price Targets on Bloom Energy (BE) Following Strong Quarter and Oracle Partnership",
-          "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Strategy Slides 6%, Coinbase Drops 5% as Saylor’s First Bitcoin Sale in Nearly 4 Years Triggers Crypto Selloff",
-          "catalysts": [
-            "drops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Alphabet plans to raise $80 billion from stock sales to fund AI build-out",
+          "title": "RNG: Raising target price to $49.00",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Berkshire Hathaway invests extra $10 billion in Alphabet, deepening bet on AI",
+          "title": "INVA: Lowering target price to $23.00",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -246,89 +77,170 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Exclusive-Meta scales back plan for internal mouse-tracking tech, citing staff concerns",
+          "title": "Meta is trying to sell AI agents to businesses in latest effort to diversify away from ads",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Meta, Alphabet, Amazon, and Microsoft are getting hooked on debt to fuel AI boom",
+          "title": "Is Meta Platforms (META) One of the Best Stocks to Buy Now for Long Term Growth?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
-      "score": 0.5,
+      "symbol": "PANW",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Goldman Sachs CEO David Solomon says markets are in 'greed' mode as AI companies seek billions",
+          "title": "Palo Alto Networks tops earnings as AI fuels cybersecurity urgency",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Jefferies Remains Bullish on Palo Alto Networks (PANW)",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
-      "score": 0.5,
+      "symbol": "CRM",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack",
+          "title": "DA Davidson Cuts PT on Salesforce, Inc. (CRM) Following Q1 Results",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "A $5 Billion Reason to Buy Salesforce Stock Now",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "INTC",
-      "score": 0.5,
+      "symbol": "NVDA",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack",
+          "title": "Is NVIDIA Corporation (NVDA) One of the Best Stocks to Buy Now for Long Term Growth?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia CEO Jensen Huang Is Building the Future Faster Than Infrastructure Can Support It",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "QCOM",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia's new PC chips represent CEO Huang's bid to win at every layer of AI stack",
+          "title": "SpaceX targets $135 IPO price at valuation of $1.77 trillion",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "MS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Polymarket closes its first block trade as prediction markets push for Wall Street adoption",
+          "title": "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SHOP",
+      "symbol": "JPM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Shopify expands share buyback program by $3 billion",
+          "title": "JPMorgan’s Dimon to discuss SpaceX IPO roadshow with ultra-rich clients, Bloomberg News reports",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLUG",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Craig-Hallum Boosts Price Target on Plug Power (PLUG) Following Strong Q1 Results and Improving Fundamentals",
+          "title": "Is Sandisk Corporation (SNDK) One of the Top Undervalued Blue Chip Stocks Analysts Recommend for Smart Investing?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Micron Technology (MU) One of the Top Undervalued Blue Chip Stocks Analysts Recommend for Smart Investing?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOG",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Alphabet Inc. (GOOG) is One of the Best Stocks to Buy Now for Long Term Growth",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Alphabet Inc. (GOOG) is One of the Best Stocks to Buy Now for Long Term Growth",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ARM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Mizuho Lifts PT on Arm Holdings plc (ARM) After Analysis of the Memory Market and Impact of Agentic AI",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "How the Latest Federal Contract Boosts D-Wave's Prospects",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Berkshire Hathaway Is Spending Some of Its Cash Hoard -- Here's Why Investors Should Take Notice",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -336,7 +248,8 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 2
+    "OpenAI (private)": 2,
+    "xAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
