@@ -1,120 +1,70 @@
 {
-  "updated_at": "2026-06-03T22:37:21.358239",
+  "updated_at": "2026-06-04T22:05:15.459483",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 29,
-    "items_with_catalyst": 14,
+    "total_items": 102,
+    "items_with_company": 16,
+    "items_with_catalyst": 16,
     "items_both": 2
   },
-  "count": 16,
+  "count": 13,
   "tickers": [
-    "AVGO",
-    "TGT",
-    "META",
-    "PANW",
-    "CRM",
-    "NVDA",
+    "ORCL",
+    "DELL",
     "TSLA",
-    "MS",
-    "JPM",
-    "SNDK",
+    "NVDA",
+    "AMZN",
+    "AVGO",
+    "COIN",
     "MU",
-    "GOOG",
+    "BA",
+    "TGT",
+    "U",
     "GOOGL",
-    "ARM",
-    "QBTS",
-    "BRK-B"
+    "MSFT"
   ],
   "details": [
     {
-      "symbol": "AVGO",
-      "score": 4.5,
+      "symbol": "ORCL",
+      "score": 2,
       "evidence": [
         {
-          "title": "Broadcom stock plunges on weak software sales, unchanged AI chip forecast for the year",
+          "title": "Don’t rule out a ‘June swoon’ — the S&P 500 is pushing its limits",
           "catalysts": [
-            "plunges"
+            "rally"
           ],
           "has_catalyst": true
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "score": 2,
+      "evidence": [
         {
-          "title": "Broadcom’s revenue misses estimates as AI chip race heats up, shares tumble",
+          "title": "Dell’s Bull Rally Will Continue. Don’t Fall Into the Trap of Thinking It’s Just a Low-Margin Hardware Assembler.",
           "catalysts": [
-            "misses estimates"
+            "rally"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "Why Wall Street Thinks You Should Buy Broadcom Stock Before June 3",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
-      "score": 4.5,
+      "symbol": "TSLA",
+      "score": 1.5,
       "evidence": [
         {
-          "title": "SpaceX is worth less than half of its $1.75 trillion IPO target, Morningstar says",
+          "title": "SpaceX targets $135 IPO price at valuation of $1.77 trillion",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "RNG: Raising target price to $49.00",
+          "title": "3 Common Sense Reasons to Sell Tesla Stock and Buy the SpaceX IPO",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "INVA: Lowering target price to $23.00",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Meta is trying to sell AI agents to businesses in latest effort to diversify away from ads",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Is Meta Platforms (META) One of the Best Stocks to Buy Now for Long Term Growth?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PANW",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Palo Alto Networks tops earnings as AI fuels cybersecurity urgency",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Jefferies Remains Bullish on Palo Alto Networks (PANW)",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "DA Davidson Cuts PT on Salesforce, Inc. (CRM) Following Q1 Results",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "A $5 Billion Reason to Buy Salesforce Stock Now",
+          "title": "Here Are The Latest Odds That Elon Musk Will Merge Tesla And SpaceX",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -125,56 +75,55 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Is NVIDIA Corporation (NVDA) One of the Best Stocks to Buy Now for Long Term Growth?",
+          "title": "Warren invites Nvidia CEO Jensen Huang to Senate hearing on China AI chip sales",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia CEO Jensen Huang Is Building the Future Faster Than Infrastructure Can Support It",
+          "title": "There’s Still Plenty of Time to Invest in Nvidia’s Strong Upside Momentum",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
-      "score": 0.5,
+      "symbol": "AMZN",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "SpaceX targets $135 IPO price at valuation of $1.77 trillion",
+          "title": "Amazon engineers in Seattle slam employer for building AI data centers while laying off 30,000 staffers",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Dear Amazon Stock Fans, Mark Your Calendars for June 23",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MS",
-      "score": 0.5,
+      "symbol": "AVGO",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents",
+          "title": "Why Broadcom’s stock is falling so hard after earnings",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Micron suffers record market-cap wipeout as Broadcom casts a shadow over chip stocks",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "JPM",
+      "symbol": "COIN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "JPMorgan’s Dimon to discuss SpaceX IPO roadshow with ultra-rich clients, Bloomberg News reports",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Sandisk Corporation (SNDK) One of the Top Undervalued Blue Chip Stocks Analysts Recommend for Smart Investing?",
+          "title": "Investors can 'buy' SpaceX early with Coinbase perpetual futures on pre-IPOs",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -185,18 +134,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Micron Technology (MU) One of the Top Undervalued Blue Chip Stocks Analysts Recommend for Smart Investing?",
+          "title": "Micron suffers record market-cap wipeout as Broadcom casts a shadow over chip stocks",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOG",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Alphabet Inc. (GOOG) is One of the Best Stocks to Buy Now for Long Term Growth",
+          "title": "Boeing weighs 737 ramp-up to approach Airbus production targets, Air Current reports",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Piper Sandler Just Upped Its Price Target on Unity Software Stock. Here’s Why.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "U",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Piper Sandler Just Upped Its Price Target on Unity Software Stock. Here’s Why.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -207,40 +178,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Alphabet Inc. (GOOG) is One of the Best Stocks to Buy Now for Long Term Growth",
+          "title": "Alphabet's $80 billion stock sale shows how expensive AI is getting: Chart of the Day",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ARM",
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Mizuho Lifts PT on Arm Holdings plc (ARM) After Analysis of the Memory Market and Impact of Agentic AI",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "QBTS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "How the Latest Federal Contract Boosts D-Wave's Prospects",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Berkshire Hathaway Is Spending Some of Its Cash Hoard -- Here's Why Investors Should Take Notice",
+          "title": "Microsoft (MSFT) Slid Despite Top and Bottom-Line Beats",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -248,8 +197,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2,
-    "xAI (private)": 1,
-    "Anthropic (private)": 1
+    "Anthropic (private)": 2
   }
 }
