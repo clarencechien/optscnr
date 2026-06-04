@@ -54,6 +54,7 @@ _DEFAULTS = {
     'ipo_date': '2026-06-12',
     'pricing_date': '2026-06-11',
     'total_shares_b': 13.0,
+    'ipo_price': None,
     'total_capital': 200_000,
     'pool_a_dca_pct': 0.60,
     'pool_b_floor_pct': 0.30,
@@ -110,6 +111,7 @@ TICKER = _CFG['ticker']
 IPO_DATE = _CFG['ipo_date']
 PRICING_DATE = _CFG['pricing_date']
 TOTAL_SHARES_B = _CFG['total_shares_b']
+IPO_PRICE = _CFG['ipo_price']
 TOTAL_CAPITAL = _CFG['total_capital']
 POOL_A_DCA_PCT = _CFG['pool_a_dca_pct']
 POOL_B_FLOOR_PCT = _CFG['pool_b_floor_pct']
@@ -374,9 +376,9 @@ def get_timeline_status():
         deadline_dt = datetime.strptime(DCA_DEADLINE, '%Y-%m-%d')
         days_to_deadline = (deadline_dt - datetime.now()).days
         if 0 <= days_to_deadline <= 21:
-            notes.append(f"📊 A 池佈署截止日 {DCA_DEADLINE} 還剩 {days_to_deadline} 天 —— 截止後未投滿餘額併入 B 池")
+            notes.append(f"📊 A 池佈署截止日 {DCA_DEADLINE} 還剩 {days_to_deadline} 天 —— 截止日未成交批次將市價補滿（保證 A 池佈署完，<2.2T 前提）")
         elif -3 <= days_to_deadline < 0:
-            notes.append(f"⚠️ A 池佈署截止日已過（{DCA_DEADLINE}）—— 盤點：未投滿餘額依規則併入 B 池或凍結")
+            notes.append(f"⚠️ A 池佈署截止日已過（{DCA_DEADLINE}）—— 盤點：未成交批次市價補滿 A 池（<2.2T）；若已 >2.2T 則凍結餘額")
     except Exception:
         pass
 
@@ -655,7 +657,7 @@ def _render_pool_a_plan(gtc_levels_a, stage, price=None, dca_metrics=None):
         md += f"（未實現 {dca_metrics['unrealized_pnl_pct']:+.1f}%）\n"
         if dca_metrics.get('ma50'):
             md += f"- 50 日均線：${dca_metrics['ma50']:.2f}\n"
-        md += f"\n_截止日 {DCA_DEADLINE} 未投滿 → 餘額併入 B 池（買區內）或凍結（>2.2T）。可能結果：核心倉 < 60%，這是紀律沒追高的代價。_\n\n"
+        md += f"\n_截止日 {DCA_DEADLINE} 未投滿 → 未成交批次**市價補滿**（買區 <2.2T）或凍結（>2.2T）。目標：A 池保證 100% 佈署（上車優先，接受可能買在 IPO 價之上）。_\n\n"
     elif stage >= 1:
         md += f"- _尚未開始 DCA，或 spcx_dca_log.json 未維護_\n\n"
 
