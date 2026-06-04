@@ -35,7 +35,7 @@
   "greenshoe_off_day": 30,
   "lockup_floor_end_day": 180,
   "vacuum_end_day": 45,
-  "dca_deadline": "2026-07-03",
+  "dca_deadline": "2026-07-01",
 
   "_pc_note": "PC ratio 極端 + IV 狂熱 → C 池凍結（非進場訊號）。pc_min_put_vol 防 put 流動性不足的假警報。",
   "pc_ratio_squeeze": 0.20,
