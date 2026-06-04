@@ -1,24 +1,10 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-05-29",
-    "consecutive_days": 2,
-    "total_mentions": 5,
+    "last_seen": "2026-06-04",
+    "consecutive_days": 3,
+    "total_mentions": 7,
     "ticker": "NDAQ"
-  },
-  "Abercrombie": {
-    "first_seen": "2026-05-27",
-    "last_seen": "2026-05-27",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ANF"
-  },
-  "Momentus": {
-    "first_seen": "2026-05-27",
-    "last_seen": "2026-05-27",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "MNTSW"
   },
   "Daily": {
     "first_seen": "2026-05-27",
@@ -103,5 +89,12 @@
     "consecutive_days": 1,
     "total_mentions": 3,
     "ticker": "GME-WT"
+  },
+  "Quantinuum": {
+    "first_seen": "2026-06-04",
+    "last_seen": "2026-06-04",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "QNT"
   }
 }

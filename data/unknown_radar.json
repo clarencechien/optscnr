@@ -1,5 +1,30 @@
 {
-  "updated_at": "2026-06-03T23:17:34.468168",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-06-04T22:52:55.403854",
+  "count": 2,
+  "blind_spots": [
+    {
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 7,
+      "consecutive_days": 3,
+      "is_strong": true,
+      "evidence": [
+        "Quantinuum closes flat in Nasdaq debut, after upsized offering",
+        "SpaceX IPO hype has traders flocking to this mid-cap stock"
+      ]
+    },
+    {
+      "name": "Quantinuum",
+      "ticker": "QNT",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Quantinuum closes flat in Nasdaq debut, after upsized offering",
+        "Quantinuum closes flat in Nasdaq debut, after upsized offering"
+      ]
+    }
+  ]
 }
