@@ -13,20 +13,6 @@
     "total_mentions": 6,
     "ticker": "DJCO"
   },
-  "Fidelity": {
-    "first_seen": "2026-05-28",
-    "last_seen": "2026-05-28",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "FIS"
-  },
-  "Best Buy": {
-    "first_seen": "2026-05-28",
-    "last_seen": "2026-05-28",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BBY"
-  },
   "SentinelOne": {
     "first_seen": "2026-05-29",
     "last_seen": "2026-05-29",
@@ -96,5 +82,12 @@
     "consecutive_days": 1,
     "total_mentions": 3,
     "ticker": "QNT"
+  },
+  "Broadway": {
+    "first_seen": "2026-06-05",
+    "last_seen": "2026-06-05",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BYFC"
   }
 }

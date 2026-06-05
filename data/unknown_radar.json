@@ -1,29 +1,17 @@
 {
-  "updated_at": "2026-06-04T22:52:55.403854",
-  "count": 2,
+  "updated_at": "2026-06-05T22:41:09.420498",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
+      "name": "Broadway",
+      "ticker": "BYFC",
       "mentions_today": 2,
-      "total_mentions": 7,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "Quantinuum closes flat in Nasdaq debut, after upsized offering",
-        "SpaceX IPO hype has traders flocking to this mid-cap stock"
-      ]
-    },
-    {
-      "name": "Quantinuum",
-      "ticker": "QNT",
-      "mentions_today": 3,
-      "total_mentions": 3,
+      "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Quantinuum closes flat in Nasdaq debut, after upsized offering",
-        "Quantinuum closes flat in Nasdaq debut, after upsized offering"
+        "Broadway's $1.9 billion season is the latest sign of consumers splurging on experiences",
+        "Broadway's $1.9 billion season is the latest sign of consumers splurging on experiences"
       ]
     }
   ]
