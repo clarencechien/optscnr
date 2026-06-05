@@ -1,86 +1,101 @@
 {
-  "updated_at": "2026-06-04T22:05:15.459483",
+  "updated_at": "2026-06-05T21:57:12.416016",
   "stats": {
-    "total_items": 102,
-    "items_with_company": 16,
-    "items_with_catalyst": 16,
-    "items_both": 2
+    "total_items": 105,
+    "items_with_company": 20,
+    "items_with_catalyst": 11,
+    "items_both": 3
   },
-  "count": 13,
+  "count": 17,
   "tickers": [
-    "ORCL",
-    "DELL",
-    "TSLA",
-    "NVDA",
-    "AMZN",
-    "AVGO",
-    "COIN",
-    "MU",
-    "BA",
-    "TGT",
-    "U",
     "GOOGL",
-    "MSFT"
+    "IBM",
+    "META",
+    "MRVL",
+    "AMZN",
+    "MSTR",
+    "TGT",
+    "AAPL",
+    "BA",
+    "MSFT",
+    "GS",
+    "MU",
+    "CRM",
+    "CRWD",
+    "HPE",
+    "COIN",
+    "PANW"
   ],
   "details": [
     {
-      "symbol": "ORCL",
-      "score": 2,
+      "symbol": "GOOGL",
+      "score": 5.5,
       "evidence": [
         {
-          "title": "Don’t rule out a ‘June swoon’ — the S&P 500 is pushing its limits",
+          "title": "Google to pay SpaceX $920 million a month for compute capacity at xAI data centers",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Alphabet is seeking fresh capital as stock's 4-week losing streak tests investor appetite",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "First Google, now Meta? Big Tech may increasingly sell stock to bankroll $820 billion AI boom.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "IBM Stock Rises As Tech Giant Enters Cloud Partnership On Agentic AI With Google",
           "catalysts": [
-            "rally"
+            "rises",
+            "partnership"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "DELL",
-      "score": 2,
+      "symbol": "META",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Dell’s Bull Rally Will Continue. Don’t Fall Into the Trap of Thinking It’s Just a Low-Margin Hardware Assembler.",
+          "title": "Meta's stock sinks on report company could raise tens of billions of dollars to fund AI push",
           "catalysts": [
-            "rally"
+            "sinks"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "SpaceX targets $135 IPO price at valuation of $1.77 trillion",
-          "catalysts": [],
-          "has_catalyst": false
         },
         {
-          "title": "3 Common Sense Reasons to Sell Tesla Stock and Buy the SpaceX IPO",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Here Are The Latest Odds That Elon Musk Will Merge Tesla And SpaceX",
+          "title": "First Google, now Meta? Big Tech may increasingly sell stock to bankroll $820 billion AI boom.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NVDA",
-      "score": 1.0,
+      "symbol": "MRVL",
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Warren invites Nvidia CEO Jensen Huang to Senate hearing on China AI chip sales",
+          "title": "Marvell Technology and Flex to join S&P 500 index, replacing Pool and Campbell's",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "There’s Still Plenty of Time to Invest in Nvidia’s Strong Upside Momentum",
+          "title": "Marvell gets a spot in the S&P 500 — along with this data-center play",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Marvell, Micron shares tumble as the chip sector suffers its worst day in 6 years",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -88,64 +103,23 @@
     },
     {
       "symbol": "AMZN",
-      "score": 1.0,
+      "score": 2,
       "evidence": [
         {
-          "title": "Amazon engineers in Seattle slam employer for building AI data centers while laying off 30,000 staffers",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dear Amazon Stock Fans, Mark Your Calendars for June 23",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Amazon unveils latest warehouse robot as tech giants continue AI layoffs ",
+          "catalysts": [
+            "unveils"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AVGO",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Why Broadcom’s stock is falling so hard after earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron suffers record market-cap wipeout as Broadcom casts a shadow over chip stocks",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
+      "symbol": "MSTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Investors can 'buy' SpaceX early with Coinbase perpetual futures on pre-IPOs",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Micron suffers record market-cap wipeout as Broadcom casts a shadow over chip stocks",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Boeing weighs 737 ramp-up to approach Airbus production targets, Air Current reports",
+          "title": "Crypto mutiny on Strategy: Shorts target 'MSTR' in bitcoin bloodbath",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -156,29 +130,29 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Piper Sandler Just Upped Its Price Target on Unity Software Stock. Here’s Why.",
+          "title": "Crypto mutiny on Strategy: Shorts target 'MSTR' in bitcoin bloodbath",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "U",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Piper Sandler Just Upped Its Price Target on Unity Software Stock. Here’s Why.",
+          "title": "Apple's WWDC: Tim Cook's AI legacy at stake in his final developer conference as CEO",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Alphabet's $80 billion stock sale shows how expensive AI is getting: Chart of the Day",
+          "title": "Boeing to start 737 Max production on new assembly line July 6, CEO says",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -189,7 +163,84 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft (MSFT) Slid Despite Top and Bottom-Line Beats",
+          "title": "LinkedIn co-founder Reid Hoffman is leaving Microsoft's board after almost a decade",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Where investors may find the next 'big wave' for AI trade ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Marvell, Micron shares tumble as the chip sector suffers its worst day in 6 years",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Salesforce Stock: Buy the Underrated AI Company Now as Pessimism Peaks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Analyst Report: Crowdstrike Holdings Inc",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HPE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "HPE Is Riding the AI Boom. Wall Street Thinks It’s Just Getting Started.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COIN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Better and Coinbase issue the first crypto-backed conventional mortgage",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PANW",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Analyst Report: Palo Alto Networks Inc",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -197,6 +248,8 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2
+    "OpenAI (private)": 5,
+    "Anthropic (private)": 2,
+    "xAI (private)": 1
   }
 }
