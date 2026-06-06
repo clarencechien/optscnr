@@ -1,114 +1,44 @@
 {
-  "updated_at": "2026-05-30T02:06:06.268298",
+  "updated_at": "2026-06-06T02:09:29.023066",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 10,
+  "count": 3,
   "tickers": [
-    "CLSK",
     "FLNC",
-    "DDD",
-    "RUN",
-    "VELO",
     "SEDG",
-    "BBAI",
-    "BLDP",
-    "TDOC",
-    "POWI"
+    "BLDP"
   ],
   "details": [
     {
-      "symbol": "CLSK",
-      "price": 18.29,
-      "gain_30d_pct": 52.8,
-      "market_cap_m": 4693.0,
-      "avg_volume_m": 23.58,
-      "short_pct_float": 45.8,
-      "score": 51.12
-    },
-    {
       "symbol": "FLNC",
-      "price": 18.88,
-      "gain_30d_pct": 39.5,
-      "market_cap_m": 3480.0,
-      "avg_volume_m": 14.74,
+      "price": 22.91,
+      "gain_30d_pct": 71.2,
+      "market_cap_m": 4223.0,
+      "avg_volume_m": 16.53,
       "short_pct_float": 38.2,
-      "score": 42.14
-    },
-    {
-      "symbol": "DDD",
-      "price": 3.57,
-      "gain_30d_pct": 59.4,
-      "market_cap_m": 525.0,
-      "avg_volume_m": 5.43,
-      "short_pct_float": 31.1,
-      "score": 37.08
-    },
-    {
-      "symbol": "RUN",
-      "price": 16.72,
-      "gain_30d_pct": 34.8,
-      "market_cap_m": 3989.0,
-      "avg_volume_m": 8.58,
-      "short_pct_float": 29.9,
-      "score": 33.35
-    },
-    {
-      "symbol": "VELO",
-      "price": 24.01,
-      "gain_30d_pct": 113.2,
-      "market_cap_m": 716.0,
-      "avg_volume_m": 3.25,
-      "short_pct_float": 20.4,
-      "score": 31.7
+      "score": 45.31
     },
     {
       "symbol": "SEDG",
-      "price": 76.35,
-      "gain_30d_pct": 99.3,
-      "market_cap_m": 4643.0,
-      "avg_volume_m": 5.24,
+      "price": 63.17,
+      "gain_30d_pct": 37.8,
+      "market_cap_m": 3842.0,
+      "avg_volume_m": 4.8,
       "short_pct_float": 19.7,
-      "score": 29.6
-    },
-    {
-      "symbol": "BBAI",
-      "price": 5.04,
-      "gain_30d_pct": 30.9,
-      "market_cap_m": 2414.0,
-      "avg_volume_m": 47.9,
-      "short_pct_float": 26.2,
-      "score": 29.32
+      "score": 23.45
     },
     {
       "symbol": "BLDP",
-      "price": 6.29,
-      "gain_30d_pct": 112.5,
-      "market_cap_m": 1896.0,
-      "avg_volume_m": 13.46,
+      "price": 4.92,
+      "gain_30d_pct": 50.0,
+      "market_cap_m": 1483.0,
+      "avg_volume_m": 13.41,
       "short_pct_float": 7.3,
-      "score": 18.6
-    },
-    {
-      "symbol": "TDOC",
-      "price": 7.61,
-      "gain_30d_pct": 33.7,
-      "market_cap_m": 1374.0,
-      "avg_volume_m": 5.06,
-      "short_pct_float": 14.8,
-      "score": 18.13
-    },
-    {
-      "symbol": "POWI",
-      "price": 84.0,
-      "gain_30d_pct": 43.6,
-      "market_cap_m": 4680.0,
-      "avg_volume_m": 1.51,
-      "short_pct_float": 10.2,
-      "score": 14.55
+      "score": 12.35
     }
   ]
 }
