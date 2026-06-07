@@ -1,106 +1,32 @@
 {
-  "updated_at": "2026-06-05T21:57:12.416016",
+  "updated_at": "2026-06-07T21:44:53.665705",
   "stats": {
-    "total_items": 105,
-    "items_with_company": 20,
-    "items_with_catalyst": 11,
-    "items_both": 3
+    "total_items": 107,
+    "items_with_company": 17,
+    "items_with_catalyst": 7,
+    "items_both": 1
   },
   "count": 17,
   "tickers": [
-    "GOOGL",
-    "IBM",
-    "META",
-    "MRVL",
     "AMZN",
-    "MSTR",
     "TGT",
-    "AAPL",
+    "BRK-B",
+    "GOOGL",
+    "MRVL",
+    "MSTR",
+    "RTX",
     "BA",
-    "MSFT",
-    "GS",
-    "MU",
-    "CRM",
-    "CRWD",
-    "HPE",
+    "AMAT",
+    "CRWV",
+    "ANET",
+    "BE",
+    "GILD",
+    "NKE",
+    "PYPL",
     "COIN",
-    "PANW"
+    "MU"
   ],
   "details": [
-    {
-      "symbol": "GOOGL",
-      "score": 5.5,
-      "evidence": [
-        {
-          "title": "Google to pay SpaceX $920 million a month for compute capacity at xAI data centers",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Alphabet is seeking fresh capital as stock's 4-week losing streak tests investor appetite",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "First Google, now Meta? Big Tech may increasingly sell stock to bankroll $820 billion AI boom.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "IBM",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "IBM Stock Rises As Tech Giant Enters Cloud Partnership On Agentic AI With Google",
-          "catalysts": [
-            "rises",
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Meta's stock sinks on report company could raise tens of billions of dollars to fund AI push",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "First Google, now Meta? Big Tech may increasingly sell stock to bankroll $820 billion AI boom.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MRVL",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Marvell Technology and Flex to join S&P 500 index, replacing Pool and Campbell's",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Marvell gets a spot in the S&P 500 — along with this data-center play",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Marvell, Micron shares tumble as the chip sector suffers its worst day in 6 years",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
     {
       "symbol": "AMZN",
       "score": 2,
@@ -111,6 +37,55 @@
             "unveils"
           ],
           "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Crypto mutiny on Strategy: Shorts target 'MSTR' in bitcoin bloodbath",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Citi quietly resets S&P 500 price target for the rest of 2026",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Abel goes his own way with new Berkshire investments, including billions for AI",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Google to pay SpaceX $920 million a month for compute capacity at xAI data centers",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRVL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Marvell Technology and Flex to join S&P 500 index, replacing Pool and Campbell's",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
@@ -126,22 +101,11 @@
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "RTX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Crypto mutiny on Strategy: Shorts target 'MSTR' in bitcoin bloodbath",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Apple's WWDC: Tim Cook's AI legacy at stake in his final developer conference as CEO",
+          "title": "Italy’s ITA Airways to decide imminently on lawsuit over RTX engine faults",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -152,73 +116,84 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Boeing to start 737 Max production on new assembly line July 6, CEO says",
+          "title": "Boeing clears key 777X certification hurdle as FAA approves next flight tests",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "AMAT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "LinkedIn co-founder Reid Hoffman is leaving Microsoft's board after almost a decade",
+          "title": "Is Applied Materials, Inc. (AMAT) A Good Stock To Buy Now?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "CRWV",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Where investors may find the next 'big wave' for AI trade ",
+          "title": "Is CoreWeave, Inc. (CRWV) A Good Stock To Buy Now?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "ANET",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Marvell, Micron shares tumble as the chip sector suffers its worst day in 6 years",
+          "title": "Is Arista Networks, Inc. (ANET) A Good Stock To Buy Now?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
+      "symbol": "BE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Salesforce Stock: Buy the Underrated AI Company Now as Pessimism Peaks",
+          "title": "Is Bloom Energy Corporation (BE) A Good Stock To Buy Now?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWD",
+      "symbol": "GILD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Analyst Report: Crowdstrike Holdings Inc",
+          "title": "Is Gilead Sciences, Inc. (GILD) A Good Stock To Buy Now?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HPE",
+      "symbol": "NKE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "HPE Is Riding the AI Boom. Wall Street Thinks It’s Just Getting Started.",
+          "title": "Is NIKE, Inc. (NKE) A Good Stock To Buy Now?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PYPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is PayPal Holdings, Inc. (PYPL) A Good Stock To Buy Now?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -229,18 +204,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Better and Coinbase issue the first crypto-backed conventional mortgage",
+          "title": "Cathie Wood’s ARK Buys Coinbase and Circle While Trimming Archer and Baidu",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PANW",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Analyst Report: Palo Alto Networks Inc",
+          "title": "Micron's Stock Is Up Over 270% This Year. Here's How It Can Still Double in 2026.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -248,8 +223,8 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 5,
-    "Anthropic (private)": 2,
-    "xAI (private)": 1
+    "OpenAI (private)": 2,
+    "xAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
