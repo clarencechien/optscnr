@@ -6,27 +6,6 @@
     "total_mentions": 7,
     "ticker": "NDAQ"
   },
-  "Daily": {
-    "first_seen": "2026-05-27",
-    "last_seen": "2026-05-29",
-    "consecutive_days": 3,
-    "total_mentions": 6,
-    "ticker": "DJCO"
-  },
-  "SentinelOne": {
-    "first_seen": "2026-05-29",
-    "last_seen": "2026-05-29",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "S"
-  },
-  "Bowman": {
-    "first_seen": "2026-05-29",
-    "last_seen": "2026-05-29",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BWMN"
-  },
   "Travelers": {
     "first_seen": "2026-05-31",
     "last_seen": "2026-05-31",
@@ -89,5 +68,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BYFC"
+  },
+  "Delta": {
+    "first_seen": "2026-06-07",
+    "last_seen": "2026-06-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DAL"
+  },
+  "Pacific": {
+    "first_seen": "2026-06-07",
+    "last_seen": "2026-06-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GPAEF"
   }
 }

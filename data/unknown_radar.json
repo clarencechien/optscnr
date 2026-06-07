@@ -1,17 +1,29 @@
 {
-  "updated_at": "2026-06-05T22:41:09.420498",
-  "count": 1,
+  "updated_at": "2026-06-07T22:36:03.285168",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Broadway",
-      "ticker": "BYFC",
+      "name": "Delta",
+      "ticker": "DAL",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Broadway's $1.9 billion season is the latest sign of consumers splurging on experiences",
-        "Broadway's $1.9 billion season is the latest sign of consumers splurging on experiences"
+        "'Bring 'em on': Delta wants United's crown over the Pacific, too",
+        "'Bring 'em on': Delta wants United's crown over the Pacific, too"
+      ]
+    },
+    {
+      "name": "Pacific",
+      "ticker": "GPAEF",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "'Bring 'em on': Delta wants United's crown over the Pacific, too",
+        "'Bring 'em on': Delta wants United's crown over the Pacific, too"
       ]
     }
   ]
