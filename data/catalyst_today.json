@@ -1,210 +1,142 @@
 {
-  "updated_at": "2026-06-07T21:44:53.665705",
+  "updated_at": "2026-06-08T22:10:41.133184",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 17,
-    "items_with_catalyst": 7,
-    "items_both": 1
+    "total_items": 106,
+    "items_with_company": 14,
+    "items_with_catalyst": 11,
+    "items_both": 4
   },
-  "count": 17,
+  "count": 15,
   "tickers": [
+    "NVDA",
     "AMZN",
-    "TGT",
-    "BRK-B",
-    "GOOGL",
     "MRVL",
-    "MSTR",
-    "RTX",
-    "BA",
-    "AMAT",
-    "CRWV",
-    "ANET",
-    "BE",
+    "GOOGL",
+    "META",
+    "INTC",
+    "AAPL",
+    "MU",
     "GILD",
-    "NKE",
-    "PYPL",
-    "COIN",
-    "MU"
+    "MRK",
+    "QCOM",
+    "MSFT",
+    "U",
+    "DELL",
+    "HIMS"
   ],
   "details": [
     {
-      "symbol": "AMZN",
-      "score": 2,
+      "symbol": "NVDA",
+      "score": 5.0,
       "evidence": [
         {
-          "title": "Amazon unveils latest warehouse robot as tech giants continue AI layoffs ",
+          "title": "Apple partnering with Google and Nvidia for most advanced AI model",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia CEO Jensen Huang declines Senate testimony on AI, China and exports",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Corning strikes another multibillion-dollar AI deal. What the new Amazon pact means for the stock",
           "catalysts": [
-            "unveils"
+            "ai deal"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "TGT",
-      "score": 1.0,
+      "symbol": "AMZN",
+      "score": 4,
       "evidence": [
         {
-          "title": "Crypto mutiny on Strategy: Shorts target 'MSTR' in bitcoin bloodbath",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Corning strikes another multibillion-dollar AI deal. What the new Amazon pact means for the stock",
+          "catalysts": [
+            "ai deal"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Citi quietly resets S&P 500 price target for the rest of 2026",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Abel goes his own way with new Berkshire investments, including billions for AI",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Google to pay SpaceX $920 million a month for compute capacity at xAI data centers",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Corning shares jump 4% after company strikes deal to power Amazon AI data centers in U.S.",
+          "catalysts": [
+            "jump"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "MRVL",
-      "score": 0.5,
+      "score": 4,
       "evidence": [
         {
-          "title": "Marvell Technology and Flex to join S&P 500 index, replacing Pool and Campbell's",
+          "title": "Marvell Technology jumps 10% after news it will join the S&P 500 index ",
+          "catalysts": [
+            "jumps",
+            "jumped"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Apple partnering with Google and Nvidia for most advanced AI model",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Intel’s stock soars as the company’s ‘blue-chip roster’ of customers looks to be growing",
+          "catalysts": [
+            "soars"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Corning strikes another multibillion-dollar AI deal. What the new Amazon pact means for the stock",
+          "catalysts": [
+            "ai deal"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Meta funds skilled trades jobs program for AI data center buildout",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSTR",
-      "score": 0.5,
+      "symbol": "INTC",
+      "score": 2,
       "evidence": [
         {
-          "title": "Crypto mutiny on Strategy: Shorts target 'MSTR' in bitcoin bloodbath",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Intel’s stock soars as the company’s ‘blue-chip roster’ of customers looks to be growing",
+          "catalysts": [
+            "soars"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "RTX",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Italy’s ITA Airways to decide imminently on lawsuit over RTX engine faults",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Boeing clears key 777X certification hurdle as FAA approves next flight tests",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMAT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Applied Materials, Inc. (AMAT) A Good Stock To Buy Now?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is CoreWeave, Inc. (CRWV) A Good Stock To Buy Now?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ANET",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Arista Networks, Inc. (ANET) A Good Stock To Buy Now?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Bloom Energy Corporation (BE) A Good Stock To Buy Now?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GILD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Gilead Sciences, Inc. (GILD) A Good Stock To Buy Now?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is NIKE, Inc. (NKE) A Good Stock To Buy Now?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PYPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is PayPal Holdings, Inc. (PYPL) A Good Stock To Buy Now?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Cathie Wood’s ARK Buys Coinbase and Circle While Trimming Archer and Baidu",
+          "title": "Apple partnering with Google and Nvidia for most advanced AI model",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -215,7 +147,84 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron's Stock Is Up Over 270% This Year. Here's How It Can Still Double in 2026.",
+          "title": "Micron’s stock bounces back in a big way: ‘The memory trade is alive and well’",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GILD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Merck, Gilead share positive phase 3 results from combination HIV pill",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Merck, Gilead share positive phase 3 results from combination HIV pill",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Dear Qualcomm Stock Fans, Mark Your Calendars for June 24",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft Announces Majorana 2 Quantum Chip as Wedbush Calls It Another ‘Validation’ for the Industry",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "U",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Unity Software Inc. (U) A Good Stock To Buy Now?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Dell Technologies Inc. (DELL) A Good Stock To Buy Now?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HIMS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Hims & Hers Health, Inc. (HIMS) A Good Stock To Buy Now?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -223,8 +232,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2,
-    "xAI (private)": 1,
-    "Anthropic (private)": 1
+    "OpenAI (private)": 5,
+    "Anthropic (private)": 2
   }
 }
