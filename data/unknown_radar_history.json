@@ -6,20 +6,6 @@
     "total_mentions": 7,
     "ticker": "NDAQ"
   },
-  "Travelers": {
-    "first_seen": "2026-05-31",
-    "last_seen": "2026-05-31",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "TRV"
-  },
-  "Billion": {
-    "first_seen": "2026-05-31",
-    "last_seen": "2026-05-31",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BGHL"
-  },
   "MGM Resorts": {
     "first_seen": "2026-06-01",
     "last_seen": "2026-06-01",
@@ -71,16 +57,23 @@
   },
   "Delta": {
     "first_seen": "2026-06-07",
-    "last_seen": "2026-06-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-06-08",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "DAL"
   },
   "Pacific": {
     "first_seen": "2026-06-07",
-    "last_seen": "2026-06-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-06-08",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "GPAEF"
+  },
+  "Corning": {
+    "first_seen": "2026-06-08",
+    "last_seen": "2026-06-08",
+    "consecutive_days": 1,
+    "total_mentions": 4,
+    "ticker": "GLW"
   }
 }

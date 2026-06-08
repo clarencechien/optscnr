@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-06-07T22:36:03.285168",
-  "count": 2,
+  "updated_at": "2026-06-08T22:55:26.330557",
+  "count": 3,
   "blind_spots": [
     {
       "name": "Delta",
       "ticker": "DAL",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
         "'Bring 'em on': Delta wants United's crown over the Pacific, too",
         "'Bring 'em on': Delta wants United's crown over the Pacific, too"
@@ -18,12 +18,24 @@
       "name": "Pacific",
       "ticker": "GPAEF",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
         "'Bring 'em on': Delta wants United's crown over the Pacific, too",
         "'Bring 'em on': Delta wants United's crown over the Pacific, too"
+      ]
+    },
+    {
+      "name": "Corning",
+      "ticker": "GLW",
+      "mentions_today": 4,
+      "total_mentions": 4,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Corning strikes another multibillion-dollar AI deal. What the new Amazon pact means for the stock",
+        "Corning strikes another multibillion-dollar AI deal. What the new Amazon pact means for the stock"
       ]
     }
   ]
