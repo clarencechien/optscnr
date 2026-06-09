@@ -63,13 +63,16 @@ _DEFAULTS = {
     'hard_cap_t': 2.2,
     'buy_zone_top_t': 2.0,
     'buy_zone_accel_t': 1.75,
-    # A 池：首筆市價 + 4 筆 limit 階梯（對齊 SOP v8.3）
-    'a_pool_first_market': True,            # 首筆是否市價單（確保上車）
+    # A 池：首筆「高限價單」(Firstrade 首日不收市價單) + 4 筆 limit 階梯
+    'a_pool_first_market': False,           # Firstrade 首日不接受市價單，首筆改高限價單
+    'a_pool_first_limit_price': 169.0,      # 首筆限價（2.2T 上限，最大化上車機率）
+    'a_pool_first_shares_at': 135.0,        # 首筆股數用此價算（IPO 價，達標為主；非用限價算）
     'a_pool_anchors_t': [1.9, 1.8, 1.7, 1.6],  # 第 2–5 筆 limit 掛單市值錨
     'a_pool_limit_weights': [0.25, 0.25, 0.25, 0.25],  # 第 2–5 筆權重（佔 limit 部分）
-    # B 池：單向下檔 GTC
+    # B 池：單向下檔 GTC（Firstrade 最長 GT90，需每 90 天重掛）
     'b_pool_anchors_t': [1.5, 1.3, 1.1],
     'gtc_weights': [0.40, 0.35, 0.25],
+    'gt90_relist_day': 90,                  # Firstrade GTC 最長 90 天，第 90 天提醒重掛
     'greenshoe_off_day': 30,
     'lockup_floor_end_day': 180,
     'vacuum_end_day': 45,                   # 真空期結束日（約對應 Q2 財報/首波解鎖）。此前 B 池基本不成交屬正常
@@ -121,12 +124,15 @@ HARD_CAP_T = _CFG['hard_cap_t']
 BUY_ZONE_TOP_T = _CFG['buy_zone_top_t']
 BUY_ZONE_ACCEL_T = _CFG['buy_zone_accel_t']
 A_POOL_FIRST_MARKET = _CFG['a_pool_first_market']
+A_POOL_FIRST_LIMIT_PRICE = _CFG['a_pool_first_limit_price']
+A_POOL_FIRST_SHARES_AT = _CFG['a_pool_first_shares_at']
 A_POOL_ANCHORS_T = _CFG['a_pool_anchors_t']
 A_POOL_LIMIT_WEIGHTS = _CFG['a_pool_limit_weights']
 B_POOL_ANCHORS_T = _CFG['b_pool_anchors_t']
 GTC_WEIGHTS = _CFG['gtc_weights']
 GREENSHOE_OFF_DAY = _CFG['greenshoe_off_day']
 LOCKUP_FLOOR_END_DAY = _CFG['lockup_floor_end_day']
+GT90_RELIST_DAY = _CFG['gt90_relist_day']
 VACUUM_END_DAY = _CFG['vacuum_end_day']
 DCA_DEADLINE = _CFG['dca_deadline']
 PC_RATIO_SQUEEZE = _CFG['pc_ratio_squeeze']
@@ -320,29 +326,58 @@ def classify_iv(atm_iv):
 
 
 def calc_gtc_levels(pool='B'):
-    """根據絕對市值反推 GTC 掛單價位，與開盤價/VWAP 完全無關
+    """根據絕對市值反推 GTC 掛單價位，並算出「股數 + 實際金額」(下單可直接照抄)
 
-    price = 市值(兆) × 1000 / 總股數(十億)
+    限價 = 市值(兆) × 1000 / 總股數(十億)
+    股數 = 該筆金額 ÷ 限價，取整數股（Firstrade 下單填的是股數，不是金額）
 
-    pool='A'：A 池 limit 階梯（第 2–5 筆，首筆市價另計），錨點 A_POOL_ANCHORS_T
+    pool='A'：A 池 limit 階梯（第 2–5 筆，首筆另計），錨點 A_POOL_ANCHORS_T
     pool='B'：B 池下檔承接，錨點 B_POOL_ANCHORS_T
     """
     if pool == 'A':
         anchors = A_POOL_ANCHORS_T
         weights = A_POOL_LIMIT_WEIGHTS
+        pool_amount = TOTAL_CAPITAL * POOL_A_DCA_PCT
+        # A 池每筆金額 = 池金額 / 5 筆（首筆 + 4 階梯）
+        per_tranche = pool_amount / (len(anchors) + 1)
     else:
         anchors = B_POOL_ANCHORS_T
         weights = GTC_WEIGHTS
+        pool_amount = TOTAL_CAPITAL * POOL_B_FLOOR_PCT
 
     levels = []
     for mc_t, weight in zip(anchors, weights):
         price = (mc_t * 1000) / TOTAL_SHARES_B
+        # 該筆金額：A 池每筆均分；B 池按權重
+        amount = per_tranche if pool == 'A' else pool_amount * weight
+        shares = int(amount / price) if price > 0 else 0  # 取整數股
+        actual = round(shares * price, 2)
         levels.append({
             'target_mc_t': mc_t,
             'price': round(price, 2),
             'weight': weight,
+            'shares': shares,
+            'actual_amount': actual,
         })
     return levels
+
+
+def calc_a_first_tranche():
+    """A 池首筆：高限價單（Firstrade 首日不收市價單）。
+    限價 = A_POOL_FIRST_LIMIT_PRICE（2.2T 上限，最大化上車）
+    股數 = 每筆金額 ÷ A_POOL_FIRST_SHARES_AT（用 IPO 價算，達標為主）
+    """
+    pool_amount = TOTAL_CAPITAL * POOL_A_DCA_PCT
+    per_tranche = pool_amount / (len(A_POOL_ANCHORS_T) + 1)
+    shares = int(per_tranche / A_POOL_FIRST_SHARES_AT) if A_POOL_FIRST_SHARES_AT else 0
+    return {
+        'limit_price': A_POOL_FIRST_LIMIT_PRICE,
+        'shares_at': A_POOL_FIRST_SHARES_AT,
+        'shares': shares,
+        'budget': round(per_tranche, 2),
+        'max_cost_if_filled_high': round(shares * A_POOL_FIRST_LIMIT_PRICE, 2),  # 若掛在上限成交的最壞金額
+    }
+
 
 
 def price_to_mc_t(price):
@@ -406,6 +441,10 @@ def get_timeline_status():
         notes.append(f"📌 B 池 GTC 應掛滿至第 {LOCKUP_FLOOR_END_DAY} 天（~12 月中），目前第 {d} 天")
     elif d > LOCKUP_FLOOR_END_DAY:
         notes.append(f"✅ 已過第 {LOCKUP_FLOOR_END_DAY} 天，鎖倉瀑布跑完，主要供給壓力結束")
+
+    # Firstrade GT90 重掛提醒（最長 90 天，撐不到 180 天）
+    if abs(d - GT90_RELIST_DAY) <= 3:
+        notes.append(f"🔁 接近第 {GT90_RELIST_DAY} 天：B 池 GT90 即將到期，需重掛第二批撐到第 {LOCKUP_FLOOR_END_DAY} 天（Firstrade 最長 GT90）")
 
     return f"上市第 {d} 天", notes
 
@@ -608,31 +647,27 @@ def generate_report(stage, price, atm_iv, pc_ratio, gtc_levels_a, gtc_levels_b,
 
 
 def _render_pool_a_plan(gtc_levels_a, stage, price=None, dca_metrics=None):
-    """A 池：首筆市價 + 4 筆 limit 階梯（對齊 SOP v8.3）"""
+    """A 池：首筆高限價單(Firstrade 首日不收市價) + 4 筆 limit 階梯。表格含股數+實際金額。"""
     pool_a_amount = TOTAL_CAPITAL * POOL_A_DCA_PCT
-    n_tranches = (1 if A_POOL_FIRST_MARKET else 0) + len(gtc_levels_a)
-    tranche_amount = pool_a_amount / n_tranches if n_tranches else 0
+    first = calc_a_first_tranche()
 
-    md = f"### 📊 A 核心 DCA 池 {POOL_A_DCA_PCT*100:.0f}%（${pool_a_amount:,.0f}）— 首筆市價 + limit 階梯\n\n"
-    md += f"_計畫：上市首日第 1 筆市價確保上車；第 2–5 筆 GTC limit 掛好就忘。每筆約 ${tranche_amount:,.0f}。截止日 {DCA_DEADLINE}。_\n\n"
-    md += "| 批次 | 類型 | 目標市值 | 掛單價 | 金額 | 狀態 |\n|---|---|---|---|---|---|\n"
+    md = f"### 📊 A 核心 DCA 池 {POOL_A_DCA_PCT*100:.0f}%（${pool_a_amount:,.0f}）— 首筆高限價 + limit 階梯\n\n"
+    md += f"_Firstrade 首日不收市價單 → 首筆改「高限價 ${first['limit_price']:.0f}」(2.2T 上限) 最大化上車；股數用 IPO 價 ${first['shares_at']:.0f} 算（達標為主）。第 2–5 筆 limit 掛好就忘。截止日 {DCA_DEADLINE}。_\n\n"
+    md += "| 批次 | 類型 | 目標市值 | 限價 | 股數 | 實際金額 | 狀態 |\n|---|---|---|---|---|---|---|\n"
 
-    # 第 1 筆市價
-    if A_POOL_FIRST_MARKET:
-        if stage == 0:
-            status1 = "上市首日執行"
-        elif price is not None and price_to_mc_t(price) > HARD_CAP_T:
-            status1 = "⚠️ >2.2T，改掛 2.2T limit"
-        else:
-            status1 = "✅ 首日市價（確保上車）"
-        md += f"| 1 | 市價 | — | 開盤價 | ${tranche_amount:,.0f} | {status1} |\n"
+    # 第 1 筆：高限價單
+    if stage == 0:
+        status1 = "上市首日掛限價"
+    elif price is not None and price_to_mc_t(price) > HARD_CAP_T:
+        status1 = "⚠️ >2.2T 斷路器，暫不掛"
+    elif price is not None and price <= first['limit_price']:
+        status1 = "✅ 限價內可成交（上車）"
+    else:
+        status1 = "⏳ 等回到限價內"
+    md += f"| 1 | 限價(上車) | ≤2.2T | ${first['limit_price']:.2f} | {first['shares']} | ${first['budget']:,.0f}(預算) | {status1} |\n"
 
-    # 第 2–5 筆 limit
+    # 第 2–5 筆 limit（含股數）
     for i, lv in enumerate(gtc_levels_a, start=2):
-        alloc = pool_a_amount * (1 - (tranche_amount/pool_a_amount if A_POOL_FIRST_MARKET else 0)) * lv['weight'] \
-            if A_POOL_FIRST_MARKET else pool_a_amount * lv['weight']
-        # 上面這行為了精確；實務上每筆就是 tranche_amount，簡化顯示
-        alloc = tranche_amount
         if stage == 0 or price is None:
             status = "待上市掛單"
         elif price <= lv['price']:
@@ -640,13 +675,14 @@ def _render_pool_a_plan(gtc_levels_a, stage, price=None, dca_metrics=None):
         else:
             dist = (price / lv['price'] - 1) * 100
             status = f"⏳ 還需跌 {dist:.1f}%"
-        md += f"| {i} | limit | {lv['target_mc_t']:.2f}T | ${lv['price']:.2f} | ${alloc:,.0f} | {status} |\n"
+        md += f"| {i} | limit | {lv['target_mc_t']:.2f}T | ${lv['price']:.2f} | {lv['shares']} | ${lv['actual_amount']:,.0f} | {status} |\n"
 
     md += "\n"
+    md += f"_⚠️ 首筆若真在 ${first['limit_price']:.0f} 成交，最壞金額 ${first['max_cost_if_filled_high']:,.0f}（超預算）——但那代表已近斷路器，本就該重評估。正常 ${first['shares_at']:.0f} 附近成交即達標。_\n"
     if stage == 0:
-        md += f"_假設總股數 {TOTAL_SHARES_B}B。**6/11 定價後務必核對更新 config 的 total_shares_b。**_\n\n"
+        md += f"_總股數 {TOTAL_SHARES_B}B、IPO 價 ${IPO_PRICE if IPO_PRICE else '未定'}。**6/11 定價通知確認後若有變，改 config 重算。**_\n"
+    md += "\n"
 
-    # DCA 進度 + 7/3 截止提醒
     if dca_metrics and dca_metrics.get('avg_cost'):
         md += f"- 你的平均成本：**${dca_metrics['avg_cost']:.2f}**"
         md += f"（{dca_metrics['total_shares']} 股，投入 ${dca_metrics['total_invested']:,.0f}）\n"
@@ -657,7 +693,7 @@ def _render_pool_a_plan(gtc_levels_a, stage, price=None, dca_metrics=None):
         md += f"（未實現 {dca_metrics['unrealized_pnl_pct']:+.1f}%）\n"
         if dca_metrics.get('ma50'):
             md += f"- 50 日均線：${dca_metrics['ma50']:.2f}\n"
-        md += f"\n_截止日 {DCA_DEADLINE} 未投滿 → 未成交批次**市價補滿**（買區 <2.2T）或凍結（>2.2T）。目標：A 池保證 100% 佈署（上車優先，接受可能買在 IPO 價之上）。_\n\n"
+        md += f"\n_截止日 {DCA_DEADLINE} 未投滿 → 未成交批次**限價補滿**（買區 <2.2T，掛高限價）或凍結（>2.2T）。目標：A 池保證佈署（上車優先）。_\n\n"
     elif stage >= 1:
         md += f"- _尚未開始 DCA，或 spcx_dca_log.json 未維護_\n\n"
 
@@ -667,24 +703,24 @@ def _render_pool_a_plan(gtc_levels_a, stage, price=None, dca_metrics=None):
 def _render_pool_b_plan(gtc_levels_b, price, stage):
     """B 池：單向下檔 GTC，掛到 180 天"""
     pool_b_amount = TOTAL_CAPITAL * POOL_B_FLOOR_PCT
-    md = f"### 💰 B 地板預備池 {POOL_B_FLOOR_PCT*100:.0f}%（${pool_b_amount:,.0f}）— 絕對市值定錨 GTC\n\n"
-    md += f"_掛單與開盤價無關，掛滿至第 {LOCKUP_FLOOR_END_DAY} 天（~12 月中）承接鎖倉瀑布。_\n\n"
+    md = f"### 💰 B 地板預備池 {POOL_B_FLOOR_PCT*100:.0f}%（${pool_b_amount:,.0f}）— 絕對市值定錨 GT90\n\n"
+    md += f"_掛單與開盤價無關。Firstrade 最長 GT90（90天），故掛滿至第 {LOCKUP_FLOOR_END_DAY} 天需在第 {GT90_RELIST_DAY} 天重掛一次。_\n\n"
     if not gtc_levels_b:
         return md
-    md += "| 目標市值 | 掛單價 | 池內權重 | 分配金額 | 距現價 | 狀態 |\n"
+    md += "| 目標市值 | 限價 | 股數 | 實際金額 | 距現價 | 狀態 |\n"
     md += "|---|---|---|---|---|---|\n"
     for lv in gtc_levels_b:
-        alloc = pool_b_amount * lv['weight']
         if stage == 0 or price is None:
             dist_str, status = "—", "待上市掛單"
         else:
             dist = (price / lv['price'] - 1) * 100
             dist_str = f"{dist:+.1f}%"
             status = "✅ 已觸發" if price <= lv['price'] else f"⏳ 還需跌 {dist:.1f}%"
-        md += f"| {lv['target_mc_t']:.1f}T | ${lv['price']:.2f} | {lv['weight']*100:.0f}% | ${alloc:,.0f} | {dist_str} | {status} |\n"
+        md += f"| {lv['target_mc_t']:.1f}T | ${lv['price']:.2f} | {lv['shares']} | ${lv['actual_amount']:,.0f} | {dist_str} | {status} |\n"
     md += "\n"
     md += "> **B 池是後段武器，不是前期戰力。**\n"
     md += "> - 前期真空期幾乎不會成交（只有 IPO 新股流通、鎖倉未解）。\n"
+    md += f"> - **Firstrade GT90 限制：第 {GT90_RELIST_DAY} 天 GT90 到期，需重掛第二批撐到第 {LOCKUP_FLOOR_END_DAY} 天。**\n"
     md += "> - 真正可能成交的窗口：**7 月底 Q2 財報+首波解鎖 → 秋季 Anthropic/OpenAI IPO 抽走資金 → 10 月底 Q3 大解鎖(+28%)**。\n"
     md += "> - 解鎖≠賣出：員工惜售(borrow-die)下，賣壓可能是溫水非海嘯，B 池可能整段不成交。\n"
     md += "> - **接不到 = 沒崩 = 好事**（你的 A 池十年倉在賺）。**絕不可因接不到而上調錨點追價**——那就破功了。\n\n"
