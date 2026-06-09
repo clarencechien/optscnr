@@ -1,66 +1,106 @@
 {
-  "updated_at": "2026-06-08T22:10:41.133184",
+  "updated_at": "2026-06-09T22:07:35.933270",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 14,
-    "items_with_catalyst": 11,
+    "total_items": 101,
+    "items_with_company": 23,
+    "items_with_catalyst": 13,
     "items_both": 4
   },
-  "count": 15,
+  "count": 20,
   "tickers": [
-    "NVDA",
-    "AMZN",
-    "MRVL",
-    "GOOGL",
-    "META",
-    "INTC",
-    "AAPL",
     "MU",
-    "GILD",
-    "MRK",
-    "QCOM",
+    "SNDK",
+    "WDC",
+    "AAPL",
+    "BA",
+    "CRWD",
+    "JPM",
+    "HOOD",
+    "SOFI",
+    "MS",
+    "XYZ",
+    "TSLA",
+    "RIVN",
+    "NVDA",
+    "UPST",
     "MSFT",
-    "U",
-    "DELL",
-    "HIMS"
+    "ASTS",
+    "F",
+    "RTX",
+    "SMCI"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 5.0,
+      "symbol": "MU",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Apple partnering with Google and Nvidia for most advanced AI model",
+          "title": "Micron and other memory makers are driving a ‘supercycle’ for this corner of the chip sector",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia CEO Jensen Huang declines Senate testimony on AI, China and exports",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Corning strikes another multibillion-dollar AI deal. What the new Amazon pact means for the stock",
+          "title": "Micron Rockets 8%, Western Digital Surges 7%, SanDisk Pops 6% in Memory-Stock Snap-Back",
           "catalysts": [
-            "ai deal"
+            "surges",
+            "pops"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "SNDK",
       "score": 4,
       "evidence": [
         {
-          "title": "Corning strikes another multibillion-dollar AI deal. What the new Amazon pact means for the stock",
+          "title": "Micron Rockets 8%, Western Digital Surges 7%, SanDisk Pops 6% in Memory-Stock Snap-Back",
           "catalysts": [
-            "ai deal"
+            "surges",
+            "pops"
           ],
           "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "WDC",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Micron Rockets 8%, Western Digital Surges 7%, SanDisk Pops 6% in Memory-Stock Snap-Back",
+          "catalysts": [
+            "surges",
+            "pops"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Apple shares slide after big Siri AI reveal",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "Corning shares jump 4% after company strikes deal to power Amazon AI data centers in U.S.",
+          "title": "Apple’s AI could usher in a historic upgrade cycle that investors are overlooking",
+          "catalysts": [
+            "upgrade"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Another jump in Boeing deliveries shows why we got into the stock and want to stay in",
           "catalysts": [
             "jump"
           ],
@@ -69,118 +109,117 @@
       ]
     },
     {
-      "symbol": "MRVL",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Marvell Technology jumps 10% after news it will join the S&P 500 index ",
-          "catalysts": [
-            "jumps",
-            "jumped"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Apple partnering with Google and Nvidia for most advanced AI model",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Intel’s stock soars as the company’s ‘blue-chip roster’ of customers looks to be growing",
-          "catalysts": [
-            "soars"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Corning strikes another multibillion-dollar AI deal. What the new Amazon pact means for the stock",
-          "catalysts": [
-            "ai deal"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Meta funds skilled trades jobs program for AI data center buildout",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
+      "symbol": "CRWD",
       "score": 2,
       "evidence": [
         {
-          "title": "Intel’s stock soars as the company’s ‘blue-chip roster’ of customers looks to be growing",
+          "title": "CrowdStrike (CRWD) Gains Analyst Confidence on AI Demand and Platform Strength",
           "catalysts": [
-            "soars"
+            "gains"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 0.5,
+      "symbol": "JPM",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Apple partnering with Google and Nvidia for most advanced AI model",
+          "title": "JPMorgan Chase plans to deploy more powerful AI agents this year",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "JPMorgan Sees Qualcomm (QCOM) Investor Day as Potential AI Growth Catalyst",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "HOOD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron’s stock bounces back in a big way: ‘The memory trade is alive and well’",
+          "title": "SpaceX IPO explained: The price is set, but retail allocation still up in the air",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GILD",
+      "symbol": "SOFI",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Merck, Gilead share positive phase 3 results from combination HIV pill",
+          "title": "SpaceX IPO explained: The price is set, but retail allocation still up in the air",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRK",
+      "symbol": "MS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Merck, Gilead share positive phase 3 results from combination HIV pill",
+          "title": "SpaceX IPO explained: The price is set, but retail allocation still up in the air",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "QCOM",
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dear Qualcomm Stock Fans, Mark Your Calendars for June 24",
+          "title": "Anthropic releases Mythos-like AI model to the public two months after private rollout rocked Wall Street",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Rivian is betting on its R2 EV to turn the automaker into a household name like Tesla",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RIVN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Rivian is betting on its R2 EV to turn the automaker into a household name like Tesla",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Upstart chipmakers keep challenging Nvidia. This time it's Microsoft-backed D-Matrix",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "UPST",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Upstart chipmakers keep challenging Nvidia. This time it's Microsoft-backed D-Matrix",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -191,40 +230,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft Announces Majorana 2 Quantum Chip as Wedbush Calls It Another ‘Validation’ for the Industry",
+          "title": "Upstart chipmakers keep challenging Nvidia. This time it's Microsoft-backed D-Matrix",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "U",
+      "symbol": "ASTS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Unity Software Inc. (U) A Good Stock To Buy Now?",
+          "title": "AST SpaceMobile’s stock experiences rocky trading as SpaceX plans to launch its satellites into orbit",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DELL",
+      "symbol": "F",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Dell Technologies Inc. (DELL) A Good Stock To Buy Now?",
+          "title": "GM follows Ford by making a big energy bet — this time with an unconventional approach",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HIMS",
+      "symbol": "RTX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Hims & Hers Health, Inc. (HIMS) A Good Stock To Buy Now?",
+          "title": "RTX's Collins Aerospace expands Malaysia MRO hub with $63M investment",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SMCI",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Supermicro proposes $7B equity plan to help fulfill AI server orders",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -232,7 +282,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 5,
-    "Anthropic (private)": 2
+    "Anthropic (private)": 2,
+    "OpenAI (private)": 1
   }
 }
