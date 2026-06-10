@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-10T05:24:38.992850",
+  "updated_at": "2026-06-10T23:50:36.403230",
   "version": "v8.6",
   "stage": 0,
   "price": null,
@@ -69,51 +69,51 @@
     {
       "ticker": "RKLB",
       "desc": "Rocket Lab\uff08\u5c0f\u578b\u767c\u5c04\uff0c\u4e92\u88dc\u578b\uff09",
-      "price": NaN,
-      "change_1m_pct": NaN,
-      "recent_trend_pct": -12.7
+      "price": 105.05,
+      "change_1m_pct": -10.5,
+      "recent_trend_pct": -14.5
     },
     {
       "ticker": "ASTS",
       "desc": "AST SpaceMobile\uff08\u885b\u661f\u76f4\u9023\uff0c\u7af6\u722d\u578b\uff09",
-      "price": NaN,
-      "change_1m_pct": NaN,
-      "recent_trend_pct": 1.2
+      "price": 87.32,
+      "change_1m_pct": 5.8,
+      "recent_trend_pct": -5.7
     },
     {
       "ticker": "RDW",
       "desc": "Redwire\uff08\u592a\u7a7a\u88fd\u9020\uff0c\u90e8\u5206\u7af6\u722d\uff09",
-      "price": NaN,
-      "change_1m_pct": NaN,
-      "recent_trend_pct": 11.5
+      "price": 14.87,
+      "change_1m_pct": 22.3,
+      "recent_trend_pct": 2.6
     },
     {
       "ticker": "PL",
       "desc": "Planet Labs\uff08\u885b\u661f\u5f71\u50cf\uff0c\u5229\u57fa\uff09",
-      "price": NaN,
-      "change_1m_pct": NaN,
-      "recent_trend_pct": -15.4
+      "price": 30.72,
+      "change_1m_pct": -26.6,
+      "recent_trend_pct": -23.7
     },
     {
       "ticker": "LUNR",
       "desc": "Intuitive Machines\uff08\u767b\u6708\uff0c\u90e8\u5206\u7af6\u722d\uff09",
-      "price": NaN,
-      "change_1m_pct": NaN,
-      "recent_trend_pct": -13.5
+      "price": 26.53,
+      "change_1m_pct": -18.2,
+      "recent_trend_pct": -19.4
     },
     {
       "ticker": "SPIR",
       "desc": "Spire Global\uff08\u885b\u661f\u6578\u64da\uff0c\u5229\u57fa\uff09",
-      "price": NaN,
-      "change_1m_pct": NaN,
-      "recent_trend_pct": -11.1
+      "price": 16.37,
+      "change_1m_pct": -12.3,
+      "recent_trend_pct": -15.3
     },
     {
       "ticker": "BKSY",
       "desc": "BlackSky\uff08\u885b\u661f\u5f71\u50cf\uff0c\u5229\u57fa\uff09",
-      "price": NaN,
-      "change_1m_pct": NaN,
-      "recent_trend_pct": -18.4
+      "price": 31.79,
+      "change_1m_pct": -23.2,
+      "recent_trend_pct": -22.4
     }
   ]
 }
