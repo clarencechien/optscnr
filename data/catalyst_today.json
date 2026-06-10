@@ -1,170 +1,121 @@
 {
-  "updated_at": "2026-06-09T22:07:35.933270",
+  "updated_at": "2026-06-10T22:27:12.768960",
   "stats": {
-    "total_items": 101,
-    "items_with_company": 23,
-    "items_with_catalyst": 13,
+    "total_items": 103,
+    "items_with_company": 18,
+    "items_with_catalyst": 16,
     "items_both": 4
   },
-  "count": 20,
+  "count": 15,
   "tickers": [
+    "ORCL",
+    "TGT",
+    "NKE",
     "MU",
-    "SNDK",
-    "WDC",
-    "AAPL",
-    "BA",
-    "CRWD",
-    "JPM",
-    "HOOD",
-    "SOFI",
-    "MS",
+    "AMZN",
+    "PLTR",
     "XYZ",
-    "TSLA",
-    "RIVN",
+    "SBUX",
     "NVDA",
-    "UPST",
+    "WMT",
     "MSFT",
-    "ASTS",
-    "F",
-    "RTX",
-    "SMCI"
+    "CRM",
+    "DDOG",
+    "MDB",
+    "KLAC"
   ],
   "details": [
     {
+      "symbol": "ORCL",
+      "score": 5.0,
+      "evidence": [
+        {
+          "title": "Oracle beats on earnings, but stock drops on plans to raise another $20 billion",
+          "catalysts": [
+            "drops"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Oracle’s stock slides after earnings, as the steep price of AI spooks investors",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Oracle’s AI spending for 2026 exceeds forecast, raising worries over growing debt",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Why Nike saw its stock downgraded a day before the World Cup’s kickoff",
+          "catalysts": [
+            "downgraded"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Why Nike saw its stock downgraded a day before the World Cup’s kickoff",
+          "catalysts": [
+            "downgraded"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
       "symbol": "MU",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "Micron and other memory makers are driving a ‘supercycle’ for this corner of the chip sector",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron Rockets 8%, Western Digital Surges 7%, SanDisk Pops 6% in Memory-Stock Snap-Back",
-          "catalysts": [
-            "surges",
-            "pops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Micron Rockets 8%, Western Digital Surges 7%, SanDisk Pops 6% in Memory-Stock Snap-Back",
-          "catalysts": [
-            "surges",
-            "pops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "WDC",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Micron Rockets 8%, Western Digital Surges 7%, SanDisk Pops 6% in Memory-Stock Snap-Back",
-          "catalysts": [
-            "surges",
-            "pops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Apple shares slide after big Siri AI reveal",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apple’s AI could usher in a historic upgrade cycle that investors are overlooking",
-          "catalysts": [
-            "upgrade"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
       "score": 2,
       "evidence": [
         {
-          "title": "Another jump in Boeing deliveries shows why we got into the stock and want to stay in",
+          "title": "The Tell-Tale Rally in Micron's Stock",
           "catalysts": [
-            "jump"
+            "rally"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "CRWD",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "CrowdStrike (CRWD) Gains Analyst Confidence on AI Demand and Platform Strength",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
+      "symbol": "AMZN",
       "score": 1.0,
       "evidence": [
         {
-          "title": "JPMorgan Chase plans to deploy more powerful AI agents this year",
+          "title": "Amazon trucking expansion sparks freight stock sell-off",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "JPMorgan Sees Qualcomm (QCOM) Investor Day as Potential AI Growth Catalyst",
+          "title": "Humaniod robotics company raises up to $1.4 billion from Nvidia, Amazon and others",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HOOD",
-      "score": 0.5,
+      "symbol": "PLTR",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "SpaceX IPO explained: The price is set, but retail allocation still up in the air",
+          "title": "Palantir's Karp says businesses are 'unhappy' with the frontier AI labs",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SOFI",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "SpaceX IPO explained: The price is set, but retail allocation still up in the air",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "SpaceX IPO explained: The price is set, but retail allocation still up in the air",
+          "title": "Palantir CEO warns AI firms are 'upsetting enterprise clients' now",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -172,32 +123,26 @@
     },
     {
       "symbol": "XYZ",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Anthropic releases Mythos-like AI model to the public two months after private rollout rocked Wall Street",
+          "title": "Anthropic urges US not to block state AI laws without setting federal standards",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Anthropic says government should have right to block risky AI models",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "SBUX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Rivian is betting on its R2 EV to turn the automaker into a household name like Tesla",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RIVN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Rivian is betting on its R2 EV to turn the automaker into a household name like Tesla",
+          "title": "Starbucks stock is a bright spot in Wednesday's bleak market. Here's why",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -208,18 +153,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Upstart chipmakers keep challenging Nvidia. This time it's Microsoft-backed D-Matrix",
+          "title": "Humaniod robotics company raises up to $1.4 billion from Nvidia, Amazon and others",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "UPST",
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Upstart chipmakers keep challenging Nvidia. This time it's Microsoft-backed D-Matrix",
+          "title": "‘It will not bring you happiness’: I have advice for your single, childless 62-year-old multimillionaire reader",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -230,51 +175,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Upstart chipmakers keep challenging Nvidia. This time it's Microsoft-backed D-Matrix",
+          "title": "Microsoft’s Xbox plans for major layoffs next month, Bloomberg News reports",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ASTS",
+      "symbol": "CRM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AST SpaceMobile’s stock experiences rocky trading as SpaceX plans to launch its satellites into orbit",
+          "title": "AI Competition Pressured Salesforce (CRM) in Q1",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "F",
+      "symbol": "DDOG",
       "score": 0.5,
       "evidence": [
         {
-          "title": "GM follows Ford by making a big energy bet — this time with an unconventional approach",
+          "title": "MongoDB vs. Datadog: Only 1 Growth Stock Could Make Investors Richer",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RTX",
+      "symbol": "MDB",
       "score": 0.5,
       "evidence": [
         {
-          "title": "RTX's Collins Aerospace expands Malaysia MRO hub with $63M investment",
+          "title": "MongoDB vs. Datadog: Only 1 Growth Stock Could Make Investors Richer",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SMCI",
+      "symbol": "KLAC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Supermicro proposes $7B equity plan to help fulfill AI server orders",
+          "title": "Dear KLA Stock Fans, Mark Your Calendars for June 12",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -282,7 +227,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2,
+    "Anthropic (private)": 3,
     "OpenAI (private)": 1
   }
 }
