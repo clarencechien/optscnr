@@ -6,27 +6,6 @@
     "total_mentions": 7,
     "ticker": "NDAQ"
   },
-  "Gemini": {
-    "first_seen": "2026-06-02",
-    "last_seen": "2026-06-02",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GEMI"
-  },
-  "Software": {
-    "first_seen": "2026-06-02",
-    "last_seen": "2026-06-02",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SFWJ"
-  },
-  "GameStop": {
-    "first_seen": "2026-06-02",
-    "last_seen": "2026-06-02",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "GME-WT"
-  },
   "Quantinuum": {
     "first_seen": "2026-06-04",
     "last_seen": "2026-06-04",
