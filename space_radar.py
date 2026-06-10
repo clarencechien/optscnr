@@ -402,7 +402,8 @@ def get_timeline_status():
 
     # 真空期 vs 解鎖期階段標示（決定 B 池該不該有期待）
     if d < VACUUM_END_DAY:
-        notes.append(f"🌑 真空期（~第 {VACUUM_END_DAY} 天前）—— 僅 IPO 新股流通、鎖倉未解，B 池基本不會成交，屬正常。前期靠等下跌建倉的路徑大概率走不通。")
+        notes.append(f"🌑 真空期（~第 {VACUUM_END_DAY} 天前）—— 可交易流通約 7%（IPO 新股 + directed share 5% 無鎖倉），B 池基本不會成交屬正常，但 directed share 持有人可賣、零星供給比零略多。前期靠等下跌建倉的路徑大概率走不通。")
+        notes.append(f"📈 指數催化兩階段：夏天多指數（MSCI 第10交易日 / Nasdaq100 第15交易日 / Russell）+ 2027 S&P 500（最大一波，待獲利）。注意：納入日常是搶跑者出貨點，非追高時機。")
     else:
         notes.append(f"📉 解鎖期（已過第 {VACUUM_END_DAY} 天）—— B 池成交窗口開啟，但仍需有人『賣』才接得到（見下方惜售提醒）。")
 
@@ -579,15 +580,21 @@ def scan_space_peers():
 def generate_report(stage, price, atm_iv, pc_ratio, gtc_levels_a, gtc_levels_b,
                     iv_stable, dca_metrics, peers):
     """生成 markdown 報告（v8.3：A 池首筆市價+階梯 / PC 方向修正 / IV 分位）"""
-    md = "\n## 🚀 SPCX 太空雷達 (v8.3)\n\n"
+    md = "\n## 🚀 SPCX 太空雷達 (v8.6)\n\n"
 
-    # === 論點破壞檢查清單（每天強迫自我拷問）===
-    md += "### 🛑 論點破壞檢查 (Narrative Breakers)\n"
-    md += "_若以下任一條件成立，全盤凍結新資金投入：_\n"
-    md += "- [ ] Starship 重大試飛失敗或進度嚴重推遲\n"
-    md += "- [ ] Starlink 用戶數/營收季增率轉負\n"
+    # === 論點破壞檢查清單（v8.6 兩級制：壞掉時照什麼表）===
+    md += "### 🛑 論點破壞檢查 (Narrative Breakers) — 兩級制\n\n"
+    md += "**Level 1（單一事件）→ 凍結新單、持倉不動、觀察一季：**\n"
+    md += "- [ ] Starship 單次重大試飛失敗 / 里程碑延後（追蹤三里程碑：①首次真正入軌+真酬載 ②軌道燃料補加示範(目標 late 2026) ③V3 Starlink 首次實際部署）\n"
+    md += "- [ ] Anthropic 或 Google 算力合約縮減（兩約皆 90 天可取消，是 xAI 板塊主要現金流）\n"
     md += "- [ ] Nasdaq 100 快速納入 (Fast-entry) 規則生變\n"
-    md += "- [ ] SpaceX 與 Tesla/xAI 出現重大惡意關聯交易或監管調查\n\n"
+    md += "- [ ] SpaceX 與 Tesla/xAI 出現重大關聯交易疑慮或監管調查\n\n"
+    md += "**Level 2（結構性破壞）→ 啟動有秩序減倉（反向 DCA），十年論點支點已斷：**\n"
+    md += "- [ ] Starship 計畫實質放棄或無限期擱置（三里程碑連續失敗且無時程）\n"
+    md += "- [ ] Starlink 用戶/營收連兩季 QoQ 轉負（成長引擎熄火）\n"
+    md += "- [ ] Anthropic+Google 算力合約同時終止（xAI 外部現金流歸零）\n"
+    md += "- [ ] Musk 喪失行為能力或離開（單一關鍵人風險）\n\n"
+    md += "_「十年持股」的前提是「十年論點還活著」。Level 1 = 論點受傷，等它自證；Level 2 = 支點斷裂，不下車就從紀律變固執。_\n\n"
 
     stage_names = {
         0: "階段 0：尚未上市（追 IPO 進度）",
@@ -773,7 +780,7 @@ def _render_pool_c(atm_iv, pc_ratio, iv_stable):
 
 
 def main():
-    print(f"🚀 啟動 SPCX 太空雷達 v8.3: {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🚀 啟動 SPCX 太空雷達 v8.6: {datetime.now().strftime('%Y-%m-%d')}")
 
     if not os.path.exists('data'):
         os.makedirs('data')
@@ -827,7 +834,7 @@ def main():
     # 寫 JSON
     output = {
         'updated_at': datetime.now().isoformat(),
-        'version': 'v8.3',
+        'version': 'v8.6',
         'stage': stage,
         'price': price,
         'market_cap_t': round(price_to_mc_t(price), 3) if price else None,
