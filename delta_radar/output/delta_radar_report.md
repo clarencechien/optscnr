@@ -1,4 +1,4 @@
-# Delta Radar (2308.TW) — 2026-06-11 05:57 UTC
+# Delta Radar (2308.TW) — 2026-06-11 06:17 UTC
 
 ## 總判定：🟡 YELLOW
 
@@ -8,10 +8,10 @@ GS 4500 劇本三大未驗證前提的機械化監控：FCF 轉回 (M2)、合約
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
 | M1 revenue_acceleration | 🟢 GREEN | 2026-05 YoY +43.7%, slope +4.22pp/月, 連續減速 1 個月 |
-| M2 bullwhip_health | 🟢 GREEN | 合約負債 QoQ +7.4% / 存貨 QoQ +17.4% / FCF/淨利 0.65 |
+| M2 bullwhip_health | 🟡 YELLOW | 合約負債 QoQ +7.4% / 存貨 QoQ +17.4% / FCF/淨利 0.43 |
 | M3 thai_shadow | 🟢 GREEN | DELTA.BK 2026-03-31 營收 YoY +47.0%, GM 31.7% |
 | M4 customs_flow | 🟢 GREEN | US 進口 HS850440 (TH+TW) 近3月 $1244.3M, YoY +49.9% |
-| M5 narrative_triggers | 🔴 RED | capex_cut:4 / vr300_delay:5 / debt_financed_capex:14 |
+| M5 narrative_triggers | 🔴 RED | capex_cut:4 / vr300_delay:5 / debt_financed_capex:13 |
 
 ### M1 revenue_acceleration — 🟢 GREEN
 ```json
@@ -23,13 +23,20 @@ GS 4500 劇本三大未驗證前提的機械化監控：FCF 轉回 (M2)、合約
 }
 ```
 
-### M2 bullwhip_health — 🟢 GREEN
+### M2 bullwhip_health — 🟡 YELLOW
 ```json
 {
   "as_of": "2026-03-31",
   "contract_liab_qoq_pct": 7.4,
   "inventory_qoq_pct": 17.4,
-  "fcf_to_net_income": 0.65
+  "fcf_to_net_income": 0.43,
+  "accounts_used": {
+    "contract": "CurrentContractLiabilities",
+    "inventory": "Inventories",
+    "ocf": "CashFlowsFromOperatingActivities",
+    "capex": "PropertyAndPlantAndEquipment",
+    "net_income": "EquityAttributableToOwnersOfParent"
+  }
 }
 ```
 
@@ -57,13 +64,13 @@ GS 4500 劇本三大未驗證前提的機械化監控：FCF 轉回 (M2)、合約
   "hits": {
     "capex_cut": 4,
     "vr300_delay": 5,
-    "debt_financed_capex": 14
+    "debt_financed_capex": 13
   }
 }
 ```
 - [capex_cut] 'The odd decouple': JPMorgan says the tech capex surge is masking a troubling slowdown in job growth - Business Insider
-- [capex_cut] AI Infrastructure Stocks See a Strategic Pause - Let's Data Science
 - [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
+- [capex_cut] AI Infrastructure Stocks See a Strategic Pause - Let's Data Science
 - [vr300_delay] Nvidia's CoWoS supplies still secured, but Rubin delay issues crop up: KeyBanc (NVDA:NASDAQ) - Seeking Alpha
 - [vr300_delay] [News] NVIDIA Reportedly Denies Rubin Delay as AMD MI450 Spurs Redesign Speculation - TrendForce
 - [vr300_delay] NVIDIA Reportedly Won’t Launch the RTX 50 SUPER Series This Year; GeForce RTX 60 “Rubin” Also Delayed as Memory Shortage
