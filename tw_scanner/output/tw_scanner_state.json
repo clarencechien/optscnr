@@ -2,13 +2,13 @@
   {
     "date": "2026-06-11",
     "regime": "NEUTRAL",
-    "score": -0.569,
+    "score": -0.37,
     "alerts": [],
     "pcts": {
       "f_spot_20d": 18.3,
       "tx_delta": 30.2,
       "retail_mtx": 83.7,
-      "margin_chg": null
+      "margin_chg": 61.4
     }
   }
 ]
