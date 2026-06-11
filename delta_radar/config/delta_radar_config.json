@@ -25,24 +25,11 @@
     "fcf_ni_red": 0.3,
     "inventory_runaway_pct": 15.0,
     "account_patterns": {
-      "_note": "Pattern lists are PRIORITY-ORDERED; first regex with any match wins, single account type only, _per rows auto-excluded. Balance-sheet names pinned from 2026-06-11 live dump; cash-flow/income names pending --dump-accounts (now dumps all three datasets).",
-      "contract_liabilities": [
-        "^CurrentContractLiabilities$",
-        "contract.*liab"
-      ],
-      "inventory": [
-        "^Inventories$",
-        "^inventor"
-      ],
-      "operating_cash_flow": [
-        "operating.*activit|CashFlowsFromOperatingActivities|CashProvidedByOperatingActivities"
-      ],
-      "capex": [
-        "propert.*plant.*equip|AcquisitionOfPropertyPlantAndEquipment"
-      ],
-      "net_income": [
-        "^IncomeAfterTax|^NetIncome$|EquityAttributableToOwnersOfParent"
-      ]
+      "contract_liabilities": ["^CurrentContractLiabilities$", "contract.*liab"],
+      "inventory":            ["^Inventories$", "^inventor"],
+      "operating_cash_flow":  ["^CashFlowsFromOperatingActivities$", "operating.*activit"],
+      "capex":                ["^PropertyAndPlantAndEquipment$", "propert.*plant.*equip"],
+      "net_income":           ["^EquityAttributableToOwnersOfParent$", "^IncomeAfterTaxes$"]
     }
   },
   "m3_thai_shadow": {
