@@ -115,12 +115,16 @@
     "_note": "tail CO-OCCURRENCE, expected to fire a few times per YEAR. Calibrated provisionally; --backtest is the judge — alerts that don't separate from baseline get deleted.",
     "capitulation": {
       "spot_pct_max": 5.0,
-      "margin_pct_max": 5.0
+      "margin_pct_max": 5.0,
+      "enabled": true,
+      "_verdict": "VALIDATED 2026-06-11 on 2019-2026 live data: 6 episodes (2020-03-09/19, 2022-03-08, 2024-04-22, 2024-07-19, 2024-08-05), fwd 20d median +5.75% vs baseline +2.22%, 60d +9.80% vs +5.04%, 60d hit 83%. n=6: no statistical significance claimed; justified by DCA payoff asymmetry (false alarm = buy a few days early; miss = skip the best windows)."
     },
     "overheat": {
-      "margin_pct_min": 90.0,
-      "retail_pct_min": 85.0,
-      "spot_pct_min": 70.0
+      "margin_pct_min": 95.0,
+      "retail_pct_min": 90.0,
+      "spot_pct_min": 75.0,
+      "enabled": false,
+      "_verdict": "RETIRED 2026-06-11 after retrial at relaxed thresholds (90/85/70): 2 episodes in 7y (2021-06-11, 2026-06-01), the only measurable one went +3.49% at 20d (wrong direction), hit 0%. Structural cause: bottoms are events (panic co-occurs intraday), tops are processes (euphoria disperses; tops form by rotation). Tier-2 OVERHEAT regime band retained as temperature description; only the Tier-3 actionable alert is deleted. 2026-06-01 single hit filed as anecdote, not instrument."
     }
   },
   "backtest": {
