@@ -25,11 +25,13 @@
     "fcf_ni_red": 0.3,
     "inventory_runaway_pct": 15.0,
     "account_patterns": {
-      "_note": "FinMind account names drift; regex lists, OR-matched. Use --dump-accounts to inspect live schema and tighten.",
+      "_note": "Pattern lists are PRIORITY-ORDERED; first regex with any match wins, single account type only, _per rows auto-excluded. Balance-sheet names pinned from 2026-06-11 live dump; cash-flow/income names pending --dump-accounts (now dumps all three datasets).",
       "contract_liabilities": [
+        "^CurrentContractLiabilities$",
         "contract.*liab"
       ],
       "inventory": [
+        "^Inventories$",
         "^inventor"
       ],
       "operating_cash_flow": [
