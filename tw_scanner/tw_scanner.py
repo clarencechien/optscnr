@@ -322,15 +322,21 @@ def render_briefing(f: pd.DataFrame, regime: pd.Series, score: pd.Series,
     today_alerts = [c for c in alerts.columns if alerts.iloc[-1][c]]
 
     def t(v, pct, fmt="{:+,.0f}"):
+        if pd.isna(v):
+            return "⏳ 今日尚未公布（融資等資料約 21:00 揭露，屆時重跑補齊）"
         if pd.isna(pct):
-            return f"`{fmt.format(v)}`（分位數未校準）"
+            return f"`{fmt.format(v)}`（歷史不足，分位數未校準）"
         return f"`{fmt.format(v)}`，落在近一年第 **{pct:.0f}** 百分位"
+
+    n_feat = int(4 - sum(pd.isna(row[c]) for c in
+                         ("f_spot_20d", "tx_delta", "retail_mtx", "margin_chg")))
+    feat_note = "" if n_feat == 4 else f"，以 {n_feat}/4 特徵計算"
 
     lines = [
         f"# 🌤️ 台股 DCA 天氣簡報 — {d.strftime('%Y-%m-%d')}",
         "",
         f"## 鋒面：{STATE_EMOJI.get(pr, '❔')} **{pr}** {transition}"
-        f"　(score {score.iloc[-1]:+.2f})",
+        f"　(score {score.iloc[-1]:+.2f}{feat_note})",
         "",
         "## 溫度計（全部為 Δ 與滾動分位數，無絕對閾值）",
         f"- 外資現貨 20 日累積：{t(row['f_spot_20d'], row['f_spot_20d_pct'])}",
