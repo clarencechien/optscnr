@@ -3,55 +3,104 @@
   "history_start": "2019-01-01",
   "cache_dir": "cache",
   "output_dir": "output",
-
   "endpoints": {
     "finmind": "https://api.finmindtrade.com/api/v4/data"
   },
-
   "products": {
     "tx": "TX",
     "mtx": "MTX"
   },
-
   "fields": {
     "spot_total_institution": {
       "dataset": "TaiwanStockTotalInstitutionalInvestors",
-      "date": ["date"],
-      "name": ["name", "institutional_investor", "type"],
-      "buy": ["buy", "buy_amount"],
-      "sell": ["sell", "sell_amount"],
-      "foreign_pattern": "Foreign|外資"
+      "date": [
+        "date"
+      ],
+      "name": [
+        "name",
+        "institutional_investor",
+        "type"
+      ],
+      "buy": [
+        "buy",
+        "buy_amount"
+      ],
+      "sell": [
+        "sell",
+        "sell_amount"
+      ],
+      "foreign_pattern": "^Foreign_Investor$",
+      "_pinned": "name values seen live: Dealer_Hedging, Investment_Trust, Foreign_Investor, total. Exact-match Foreign_Investor => matches official 外資及陸資 headline; excludes Foreign_Dealer_Self and total."
     },
     "futures_institution": {
       "dataset": "TaiwanFuturesInstitutionalInvestors",
-      "date": ["date"],
-      "who": ["institutional_investors", "name", "investor"],
-      "long_oi": ["long_open_interest_balance_volume", "long_oi_volume"],
-      "short_oi": ["short_open_interest_balance_volume", "short_oi_volume"],
-      "foreign_pattern": "外資|Foreign"
+      "date": [
+        "date"
+      ],
+      "who": [
+        "institutional_investors",
+        "name",
+        "investor"
+      ],
+      "long_oi": [
+        "long_open_interest_balance_volume",
+        "long_oi_volume"
+      ],
+      "short_oi": [
+        "short_open_interest_balance_volume",
+        "short_oi_volume"
+      ],
+      "foreign_pattern": "^外資$",
+      "all_inst_pattern": "自營商|投信|外資",
+      "_pinned": "investor values seen live: 自營商/投信/外資. Verified 2026-06-11: TX 外資 net OI 8969-72137=-63168 matches legacy scanner & TAIFEX."
     },
     "margin_total": {
       "dataset": "TaiwanStockTotalMarginPurchaseShortSale",
-      "date": ["date"],
-      "name": ["name", "type"],
-      "today": ["TodayBalance", "today_balance"],
-      "margin_pattern": "融資|Margin"
+      "date": [
+        "date"
+      ],
+      "name": [
+        "name",
+        "type"
+      ],
+      "today": [
+        "TodayBalance",
+        "today_balance"
+      ],
+      "margin_pattern": "^MarginPurchaseMoney$",
+      "_pinned": "name values seen live: MarginPurchaseMoney(元)/MarginPurchase(張)/ShortSale. Old '融資|Margin' regex matched BOTH money and lot-count rows — cross-type summing bug, same class as delta_radar M2. Pinned to money."
     },
     "index_candidates": [
-      { "dataset": "TaiwanStockPrice", "data_id": "TAIEX",
-        "date": ["date"], "close": ["close", "Close"] },
-      { "dataset": "TaiwanStockTotalReturnIndex", "data_id": "TAIEX",
-        "date": ["date"], "close": ["price", "close"] }
+      {
+        "dataset": "TaiwanStockPrice",
+        "data_id": "TAIEX",
+        "date": [
+          "date"
+        ],
+        "close": [
+          "close",
+          "Close"
+        ]
+      },
+      {
+        "dataset": "TaiwanStockTotalReturnIndex",
+        "data_id": "TAIEX",
+        "date": [
+          "date"
+        ],
+        "close": [
+          "price",
+          "close"
+        ]
+      }
     ]
   },
-
   "thermometer": {
     "_note": "everything percentile-based: unit-invariant by construction",
     "spot_window_days": 20,
     "percentile_window_days": 252,
     "min_history_days": 120
   },
-
   "regime": {
     "_note": "score = mean of risk-signed pcts rescaled to [-1,1]; flip needs confirm_days consecutive closes in new band (hysteresis => weekly-timescale state machine)",
     "confirm_days": 3,
@@ -62,7 +111,6 @@
       "overheat_min": 0.55
     }
   },
-
   "alerts": {
     "_note": "tail CO-OCCURRENCE, expected to fire a few times per YEAR. Calibrated provisionally; --backtest is the judge — alerts that don't separate from baseline get deleted.",
     "capitulation": {
@@ -75,8 +123,10 @@
       "spot_pct_min": 75.0
     }
   },
-
   "backtest": {
-    "horizons_days": [20, 60]
+    "horizons_days": [
+      20,
+      60
+    ]
   }
 }
