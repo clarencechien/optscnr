@@ -132,6 +132,10 @@ def fetch_futures_net_oi(cfg: dict, start: str, product_key: str,
     c_short = col(df, fc["short_oi"], "fut short OI")
     if who_pattern:
         df = rows_matching(df, c_who, who_pattern)
+    else:
+        # sum of the three institutional categories ONLY — guard against
+        # FinMind ever adding a 'total' row (spot dataset already has one)
+        df = rows_matching(df, c_who, fc.get("all_inst_pattern", "自營商|投信|外資"))
     df = df.copy()
     df["net_oi"] = pd.to_numeric(df[c_long], errors="coerce") - \
         pd.to_numeric(df[c_short], errors="coerce")
