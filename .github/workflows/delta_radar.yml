@@ -2,11 +2,21 @@ name: delta-radar
 
 on:
   schedule:
-    - cron: "30 2 * * 1,4"   # Mon & Thu 02:30 UTC = 10:30 Taipei (after monthly-revenue mornings)
+    - cron: "30 2 * * *"     # daily   02:30 UTC = 10:30 Taipei — M5 narrative only
+    - cron: "30 3 * * 1,4"   # Mon/Thu 03:30 UTC = 11:30 Taipei — full scan (offset from daily)
+    - cron: "30 4 10-12 * *" # 10th–12th 04:30 UTC = 12:30 Taipei — M1 revenue-judgment window
   workflow_dispatch:
+    inputs:
+      modules:
+        description: "modules to run (e.g. m1,m2,m3,m4,m5)"
+        default: "m1,m2,m3,m4,m5"
 
 permissions:
   contents: write
+
+concurrency:
+  group: delta-radar
+  cancel-in-progress: false
 
 jobs:
   scan:
@@ -18,19 +28,91 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Resolve track
+        id: track
+        # Route by which cron fired. Manual dispatch takes the input as-is.
+        #   daily        -> m5 only, commit only on status change
+        #   mon/thu      -> all modules, always commit
+        #   10th-12th    -> m1 only (monthly-revenue judgment day; 3-day window
+        #                   because the release date drifts), commit on change
+        run: |
+          set -euo pipefail
+          SCHED="${{ github.event.schedule }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "modules=${{ github.event.inputs.modules }}" >> "$GITHUB_OUTPUT"
+            echo "commit_mode=always" >> "$GITHUB_OUTPUT"
+            echo "track=manual" >> "$GITHUB_OUTPUT"
+          elif [ "$SCHED" = "30 2 * * *" ]; then
+            echo "modules=m5" >> "$GITHUB_OUTPUT"
+            echo "commit_mode=on_change" >> "$GITHUB_OUTPUT"
+            echo "track=narrative-daily" >> "$GITHUB_OUTPUT"
+          elif [ "$SCHED" = "30 3 * * 1,4" ]; then
+            echo "modules=m1,m2,m3,m4,m5" >> "$GITHUB_OUTPUT"
+            echo "commit_mode=always" >> "$GITHUB_OUTPUT"
+            echo "track=full-scan" >> "$GITHUB_OUTPUT"
+          elif [ "$SCHED" = "30 4 10-12 * *" ]; then
+            echo "modules=m1" >> "$GITHUB_OUTPUT"
+            echo "commit_mode=on_change" >> "$GITHUB_OUTPUT"
+            echo "track=revenue-day" >> "$GITHUB_OUTPUT"
+          else
+            echo "::error::unrecognized schedule '$SCHED' — update Resolve track"
+            exit 1
+          fi
+
       - name: Install deps
         run: pip install -r delta_radar/requirements.txt
 
-      - name: Run radar
+      - name: Snapshot previous statuses
+        id: prev
+        # Capture module statuses BEFORE the run so on_change tracks can diff.
+        # state.json is append-only; we read the last entry's per-module statuses.
+        run: |
+          set -euo pipefail
+          python - <<'EOF' > prev_status.txt || echo "NONE" > prev_status.txt
+          import json
+          h = json.load(open("delta_radar/output/delta_radar_state.json"))
+          print("|".join(f"{m['module']}={m['status']}" for m in h[-1]["modules"]))
+          EOF
+          echo "statuses=$(cat prev_status.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Run radar (${{ steps.track.outputs.track }})
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
           CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
         run: |
           python delta_radar/delta_radar.py \
             --config delta_radar/config/delta_radar_config.json \
-            --output-dir delta_radar/output
+            --output-dir delta_radar/output \
+            --modules "${{ steps.track.outputs.modules }}"
+
+      - name: Decide whether to commit
+        id: gate
+        run: |
+          set -euo pipefail
+          MODE="${{ steps.track.outputs.commit_mode }}"
+          if [ "$MODE" = "always" ]; then
+            echo "do_commit=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          CUR=$(python - <<'EOF'
+          import json
+          h = json.load(open("delta_radar/output/delta_radar_state.json"))
+          print("|".join(f"{m['module']}={m['status']}" for m in h[-1]["modules"]))
+          EOF
+          )
+          PREV="${{ steps.prev.outputs.statuses }}"
+          if [ "$CUR" = "$PREV" ]; then
+            echo "Status unchanged ($CUR) — skipping commit."
+            # Revert the working tree so the redundant state entry is discarded
+            # and state.json stays an information-bearing series, not a heartbeat log.
+            git checkout -- delta_radar/output/
+            echo "do_commit=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Status changed: '$PREV' -> '$CUR'"
+            echo "do_commit=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Commit results
+        if: steps.gate.outputs.do_commit == 'true'
         # NOTE: do NOT collapse this into `git add ... || true`.
         # The silent-swallow pattern on conditionally-absent files is the exact
         # bug class fixed across this repo's workflows — fail loudly instead.
@@ -46,10 +128,11 @@ jobs:
             fi
           done
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No content changes to commit."
             exit 0
           fi
           git config user.name "delta-radar-bot"
           git config user.email "actions@users.noreply.github.com"
-          git commit -m "delta_radar: scheduled scan $(date -u +%F)"
+          git pull --rebase --autostash
+          git commit -m "delta_radar[${{ steps.track.outputs.track }}]: $(date -u +%F)"
           git push
