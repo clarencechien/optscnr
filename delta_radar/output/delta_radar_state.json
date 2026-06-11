@@ -226,5 +226,19 @@
         "error": null
       }
     ]
+  },
+  {
+    "ts": "2026-06-11T05:46:59.629002+00:00",
+    "overall": "NO_DATA",
+    "modules": [
+      {
+        "module": "M4 (crashed)",
+        "status": "NO_DATA",
+        "headline": "",
+        "metrics": {},
+        "notes": [],
+        "error": "RuntimeError: Census non-JSON response: '\\n<html>\\n    <head>\\n        <title>Missing Key</title>\\n    </head>\\n    <body>\\n        <p>\\n            A valid <em>key</em> must be included with each data API request.\\n            If you do not have a key, you may sign up for one <a href=\"key_signup.html\">here</a>.\\n        </p>\\n        <p>\\n        \\tI'"
+      }
+    ]
   }
 ]
