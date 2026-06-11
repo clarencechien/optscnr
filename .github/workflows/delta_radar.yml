@@ -1,0 +1,55 @@
+name: delta-radar
+
+on:
+  schedule:
+    - cron: "30 2 * * 1,4"   # Mon & Thu 02:30 UTC = 10:30 Taipei (after monthly-revenue mornings)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r delta_radar/requirements.txt
+
+      - name: Run radar
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+        run: |
+          python delta_radar/delta_radar.py \
+            --config delta_radar/config/delta_radar_config.json \
+            --output-dir delta_radar/output
+
+      - name: Commit results
+        # NOTE: do NOT collapse this into `git add ... || true`.
+        # The silent-swallow pattern on conditionally-absent files is the exact
+        # bug class fixed across this repo's workflows — fail loudly instead.
+        run: |
+          set -euo pipefail
+          for f in delta_radar/output/delta_radar_report.md \
+                   delta_radar/output/delta_radar_state.json; do
+            if [ -f "$f" ]; then
+              git add "$f"
+            else
+              echo "::error::expected radar output missing: $f"
+              exit 1
+            fi
+          done
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "delta-radar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "delta_radar: scheduled scan $(date -u +%F)"
+          git push
