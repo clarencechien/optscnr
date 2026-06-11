@@ -112,17 +112,24 @@ def census_fetch(cfg: dict, months_back: int) -> list[dict]:
     c = cfg["m4_customs_flow"]
     today = dt.date.today()
     start = (today.replace(day=1) - dt.timedelta(days=31 * months_back)).strftime("%Y-%m")
-    params = {
-        "get": "GEN_VAL_MO,CTY_CODE,CTY_NAME",
-        "I_COMMODITY": c["hs_code"],
-        "COMM_LVL": "HS6",
-        "time": f"from {start}",
-    }
+    params: list[tuple] = [
+        ("get", "GEN_VAL_MO,CTY_CODE,CTY_NAME"),
+        ("I_COMMODITY", c["hs_code"]),
+        ("COMM_LVL", "HS6"),
+        ("time", f"from {start}"),
+    ]
+    # server-side country filter (repeated param) — shrinks payload massively
+    for code in c["country_codes"].values():
+        params.append(("CTY_CODE", str(code)))
     key = os.environ.get("CENSUS_API_KEY", "")
     if key:
-        params["key"] = key
+        params.append(("key", key))
     url = cfg["endpoints"]["census"] + "?" + urllib.parse.urlencode(params)
-    rows = http_get_json(url)  # first row is header
+    raw = http_get_text(url)
+    try:
+        rows = json.loads(raw)  # first row is header
+    except json.JSONDecodeError:
+        raise RuntimeError(f"Census non-JSON response: {raw[:300]!r}")
     header, body = rows[0], rows[1:]
     idx = {h: i for i, h in enumerate(header)}
     wanted = set(str(x) for x in c["country_codes"].values())
@@ -432,8 +439,11 @@ def run_m5(cfg: dict, fetch: Callable) -> ModuleResult:
             res.notes.append(f"feed {bucket} failed: {e}")
             continue
         kw = [k.lower() for k in spec["keywords"]]
+        must = [m.lower() for m in spec.get("must_include", [])]
         for it in items[: p["max_items_per_feed"]]:
             text = (it["title"] + " " + it["summary"]).lower()
+            if must and not any(m in text for m in must):
+                continue  # hard topical filter — e.g. consumer-GPU delay noise
             if any(k in text for k in kw):
                 hits[bucket].append(it["title"][:120])
     if not fetched_any:
