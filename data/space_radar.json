@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-10T23:50:36.403230",
+  "updated_at": "2026-06-11T23:53:43.686060",
   "version": "v8.6",
   "stage": 0,
   "price": null,
@@ -69,51 +69,51 @@
     {
       "ticker": "RKLB",
       "desc": "Rocket Lab\uff08\u5c0f\u578b\u767c\u5c04\uff0c\u4e92\u88dc\u578b\uff09",
-      "price": 105.05,
-      "change_1m_pct": -10.5,
-      "recent_trend_pct": -14.5
+      "price": 114.78,
+      "change_1m_pct": -2.4,
+      "recent_trend_pct": -15.4
     },
     {
       "ticker": "ASTS",
       "desc": "AST SpaceMobile\uff08\u885b\u661f\u76f4\u9023\uff0c\u7af6\u722d\u578b\uff09",
-      "price": 87.32,
-      "change_1m_pct": 5.8,
-      "recent_trend_pct": -5.7
+      "price": 97.56,
+      "change_1m_pct": 33.7,
+      "recent_trend_pct": -9.0
     },
     {
       "ticker": "RDW",
       "desc": "Redwire\uff08\u592a\u7a7a\u88fd\u9020\uff0c\u90e8\u5206\u7af6\u722d\uff09",
-      "price": 14.87,
-      "change_1m_pct": 22.3,
-      "recent_trend_pct": 2.6
+      "price": 17.09,
+      "change_1m_pct": 47.8,
+      "recent_trend_pct": -5.4
     },
     {
       "ticker": "PL",
       "desc": "Planet Labs\uff08\u885b\u661f\u5f71\u50cf\uff0c\u5229\u57fa\uff09",
-      "price": 30.72,
-      "change_1m_pct": -26.6,
-      "recent_trend_pct": -23.7
+      "price": 34.17,
+      "change_1m_pct": -16.0,
+      "recent_trend_pct": -28.1
     },
     {
       "ticker": "LUNR",
       "desc": "Intuitive Machines\uff08\u767b\u6708\uff0c\u90e8\u5206\u7af6\u722d\uff09",
-      "price": 26.53,
-      "change_1m_pct": -18.2,
-      "recent_trend_pct": -19.4
+      "price": 30.64,
+      "change_1m_pct": -4.5,
+      "recent_trend_pct": -21.2
     },
     {
       "ticker": "SPIR",
       "desc": "Spire Global\uff08\u885b\u661f\u6578\u64da\uff0c\u5229\u57fa\uff09",
-      "price": 16.37,
-      "change_1m_pct": -12.3,
-      "recent_trend_pct": -15.3
+      "price": 19.79,
+      "change_1m_pct": 12.2,
+      "recent_trend_pct": -15.9
     },
     {
       "ticker": "BKSY",
       "desc": "BlackSky\uff08\u885b\u661f\u5f71\u50cf\uff0c\u5229\u57fa\uff09",
-      "price": 31.79,
-      "change_1m_pct": -23.2,
-      "recent_trend_pct": -22.4
+      "price": 35.97,
+      "change_1m_pct": -10.8,
+      "recent_trend_pct": -23.9
     }
   ]
 }
