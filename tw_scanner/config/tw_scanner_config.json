@@ -118,9 +118,9 @@
       "margin_pct_max": 5.0
     },
     "overheat": {
-      "margin_pct_min": 95.0,
-      "retail_pct_min": 90.0,
-      "spot_pct_min": 75.0
+      "margin_pct_min": 90.0,
+      "retail_pct_min": 85.0,
+      "spot_pct_min": 70.0
     }
   },
   "backtest": {
