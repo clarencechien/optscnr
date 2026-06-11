@@ -1,105 +1,163 @@
 {
-  "updated_at": "2026-06-10T22:27:12.768960",
+  "updated_at": "2026-06-11T22:22:36.875133",
   "stats": {
-    "total_items": 103,
-    "items_with_company": 18,
-    "items_with_catalyst": 16,
+    "total_items": 102,
+    "items_with_company": 13,
+    "items_with_catalyst": 18,
     "items_both": 4
   },
-  "count": 15,
+  "count": 12,
   "tickers": [
-    "ORCL",
     "TGT",
-    "NKE",
+    "COIN",
+    "QBTS",
+    "DKNG",
+    "ORCL",
     "MU",
-    "AMZN",
-    "PLTR",
-    "XYZ",
-    "SBUX",
-    "NVDA",
-    "WMT",
-    "MSFT",
-    "CRM",
-    "DDOG",
-    "MDB",
-    "KLAC"
+    "ASML",
+    "GM",
+    "NBIS",
+    "META",
+    "GOOGL",
+    "PLTR"
   ],
   "details": [
     {
-      "symbol": "ORCL",
-      "score": 5.0,
+      "symbol": "TGT",
+      "score": 6,
       "evidence": [
         {
-          "title": "Oracle beats on earnings, but stock drops on plans to raise another $20 billion",
+          "title": "Cracker Barrel Jumps Into A Short Squeeze On Upgrade, Target Hikes",
           "catalysts": [
-            "drops"
+            "jumps",
+            "upgrade",
+            "short squeeze"
           ],
           "has_catalyst": true
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "COIN",
+      "score": 2,
+      "evidence": [
         {
-          "title": "Oracle’s stock slides after earnings, as the steep price of AI spooks investors",
+          "title": "Coinbase launches tool to let AI agents manage trading and payments",
           "catalysts": [
-            "rising"
+            "launches"
           ],
           "has_catalyst": true
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "score": 2,
+      "evidence": [
         {
-          "title": "Oracle’s AI spending for 2026 exceeds forecast, raising worries over growing debt",
+          "title": "D-Wave Rewarded Patient Investors With 135% Gains but Recent Buyers Face a Brutal Reality",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "DKNG",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "DraftKings (DKNG) Stock Soars on Prediction Markets Optimism",
+          "catalysts": [
+            "soars"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Oracle shares tumble 11% on increased capital raise, cash concerns",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 2,
-      "evidence": [
+        },
         {
-          "title": "Why Nike saw its stock downgraded a day before the World Cup’s kickoff",
-          "catalysts": [
-            "downgraded"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Why Nike saw its stock downgraded a day before the World Cup’s kickoff",
-          "catalysts": [
-            "downgraded"
-          ],
-          "has_catalyst": true
+          "title": "Oracle’s stock is seeing its worst run in a quarter-century as this key AI debate rages on",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "MU",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "The Tell-Tale Rally in Micron's Stock",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Amazon trucking expansion sparks freight stock sell-off",
+          "title": "Micron’s stock rebounds after ‘healthy’ reset, and analysts see blue skies ahead",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Humaniod robotics company raises up to $1.4 billion from Nvidia, Amazon and others",
+          "title": "Micron Selects Bechtel for New York Semiconductor Project as U.S. Manufacturing Expansion Moves Forward (MU)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ASML",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Ahead of SpaceX IPO, Elon Musk addresses ASML employees as part of push into chip manufacturing",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "General Motors locks $143M Army vehicle contract; total value hits $623.8M",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NBIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "After UK Deal, Nebius Stock Is Still Too Expensive to Buy",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Google and Meta denied new trial in youth social media addiction case",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Google and Meta denied new trial in youth social media addiction case",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -107,119 +165,10 @@
     },
     {
       "symbol": "PLTR",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Palantir's Karp says businesses are 'unhappy' with the frontier AI labs",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Palantir CEO warns AI firms are 'upsetting enterprise clients' now",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Anthropic urges US not to block state AI laws without setting federal standards",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Anthropic says government should have right to block risky AI models",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SBUX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Starbucks stock is a bright spot in Wednesday's bleak market. Here's why",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Humaniod robotics company raises up to $1.4 billion from Nvidia, Amazon and others",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "‘It will not bring you happiness’: I have advice for your single, childless 62-year-old multimillionaire reader",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Microsoft’s Xbox plans for major layoffs next month, Bloomberg News reports",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "AI Competition Pressured Salesforce (CRM) in Q1",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DDOG",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "MongoDB vs. Datadog: Only 1 Growth Stock Could Make Investors Richer",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MDB",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "MongoDB vs. Datadog: Only 1 Growth Stock Could Make Investors Richer",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "KLAC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Dear KLA Stock Fans, Mark Your Calendars for June 12",
+          "title": "Wedbush Gives a Thumbs Up to Palantir’s AIPCon, But I Think AIPCon 2026 Was a Dud for PLTR Stock",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -227,7 +176,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 1
+    "OpenAI (private)": 2
   }
 }
