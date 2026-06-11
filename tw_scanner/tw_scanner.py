@@ -257,14 +257,16 @@ def regime_series(f: pd.DataFrame, cfg: dict) -> pd.Series:
 
 def alert_series(f: pd.DataFrame, cfg: dict) -> pd.DataFrame:
     a = cfg["alerts"]
-    capit = ((f["f_spot_20d_pct"] <= a["capitulation"]["spot_pct_max"]) &
-             (f["margin_chg_pct"] <= a["capitulation"]["margin_pct_max"]) &
-             (f["retail_mtx_delta"] < 0))
-    over = ((f["margin_chg_pct"] >= a["overheat"]["margin_pct_min"]) &
-            (f["retail_mtx_pct"] >= a["overheat"]["retail_pct_min"]) &
-            (f["f_spot_20d_pct"] >= a["overheat"]["spot_pct_min"]))
-    return pd.DataFrame({"capitulation": capit.fillna(False),
-                         "overheat": over.fillna(False)}, index=f.index)
+    out = {}
+    if a["capitulation"].get("enabled", True):
+        out["capitulation"] = ((f["f_spot_20d_pct"] <= a["capitulation"]["spot_pct_max"]) &
+                               (f["margin_chg_pct"] <= a["capitulation"]["margin_pct_max"]) &
+                               (f["retail_mtx_delta"] < 0)).fillna(False)
+    if a["overheat"].get("enabled", True):
+        out["overheat"] = ((f["margin_chg_pct"] >= a["overheat"]["margin_pct_min"]) &
+                           (f["retail_mtx_pct"] >= a["overheat"]["retail_pct_min"]) &
+                           (f["f_spot_20d_pct"] >= a["overheat"]["spot_pct_min"])).fillna(False)
+    return pd.DataFrame(out, index=f.index)
 
 
 # ----------------------------------------------------------------------------
@@ -396,7 +398,12 @@ def append_state(path: str, entry: dict) -> None:
             hist = json.load(open(path, encoding="utf-8"))
         except Exception:
             hist = []
-    hist.append(entry)
+    if hist and hist[-1].get("date") == entry.get("date"):
+        # same data date (weekend/holiday rerun, or 21:30 second pass):
+        # replace rather than append, so the series stays one-row-per-session
+        hist[-1] = entry
+    else:
+        hist.append(entry)
     json.dump(hist, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 
