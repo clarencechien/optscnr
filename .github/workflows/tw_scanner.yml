@@ -1,42 +1,90 @@
-name: Taiwan Market Institutional and Retail Scanner
+name: tw-scanner
 
 on:
   schedule:
-    # 台北時間週一至週五晚上 21:30 自動執行 (對應國際標準時 UTC 13:30)
-    - cron: '30 13 * * 1-5'
-  workflow_dispatch: # 允許你隨時在 GitHub 網頁上「手動點擊執行(Run workflow)」按鈕
+    - cron: "45 13 * * 1-5"  # 13:45 UTC = 21:45 Taipei, Mon-Fri — after margin (~21:00) publishes; all 4 features complete
+    - cron: "15 14 1 * *"    # monthly, 1st — backtest revalidation: re-judge the capitulation alert on accrued data
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "briefing | backtest | backfill"
+        default: "briefing"
 
 permissions:
-  contents: write # 給予 GitHub Action 權限可以將產出的 output.md 自動推回你的 repository
+  contents: write
+
+concurrency:
+  group: tw-scanner
+  cancel-in-progress: false
 
 jobs:
-  run-scanner:
+  scan:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-        cache: 'pip' # 開啟快取，加速後續執行
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-    - name: Install Dependencies
-      run: |
-        python -m pip install --upgrade pip
-        if [ -f tw_scanner/requirements.txt ]; then pip install -r tw_scanner/requirements.txt; fi
+      - name: Install deps
+        run: pip install -r tw_scanner/requirements.txt
 
-    - name: Execute Taiwan Market Scanner
-      run: |
-        python tw_scanner/tw_scanner.py
+      - name: Resolve mode
+        id: mode
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ github.event.inputs.mode }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "15 14 1 * *" ]; then
+            echo "mode=backtest" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=briefing" >> "$GITHUB_OUTPUT"
+          fi
 
-    - name: Commit and Push update.md
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add tw_scanner/output.md
-        
-        # 防呆機制：如果今天沒任何籌碼變動（如遇到休市），就不會產生無效 commit 報錯
-        git diff --quiet && git diff --staged --quiet || (git commit -m "chore: 🤖 自動更新台股籌碼 X 光機報告 [skip ci]" && git push)
+      - name: Run tw_scanner (${{ steps.mode.outputs.mode }})
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+        run: |
+          set -euo pipefail
+          FLAGS=""
+          case "${{ steps.mode.outputs.mode }}" in
+            backtest) FLAGS="--backtest" ;;
+            backfill) FLAGS="--backfill" ;;
+          esac
+          python tw_scanner/tw_scanner.py $FLAGS \
+            --config tw_scanner/config/tw_scanner_config.json \
+            --output-dir tw_scanner/output
+
+      - name: Commit results
+        # Explicit existence checks — never `git add ... || true`.
+        # The cache CSVs are committed too: they make every backtest
+        # reproducible and spare FinMind quota on scheduled runs.
+        run: |
+          set -euo pipefail
+          MODE="${{ steps.mode.outputs.mode }}"
+          if [ "$MODE" = "backtest" ]; then
+            REQUIRED="tw_scanner/output/tw_scanner_backtest.md"
+          else
+            REQUIRED="tw_scanner/output/tw_scanner_briefing.md tw_scanner/output/tw_scanner_state.json"
+          fi
+          for f in $REQUIRED; do
+            if [ -f "$f" ]; then
+              git add "$f"
+            else
+              echo "::error::expected output missing: $f"
+              exit 1
+            fi
+          done
+          if [ -d tw_scanner/cache ]; then
+            git add tw_scanner/cache
+          fi
+          if git diff --cached --quiet; then
+            echo "No changes to commit (weekend/holiday or unchanged)."
+            exit 0
+          fi
+          git config user.name "tw-scanner-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase --autostash
+          git commit -m "tw_scanner[${{ steps.mode.outputs.mode }}]: $(date -u +%F)"
+          git push
