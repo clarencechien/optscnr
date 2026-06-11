@@ -1,0 +1,82 @@
+{
+  "_comment": "tw_scanner v2 config — DCA weather station. All field names are PRIORITY-ORDERED candidate lists (FinMind schema not yet live-verified; run --dump-schema and pin, same workflow as delta_radar M2).",
+  "history_start": "2019-01-01",
+  "cache_dir": "cache",
+  "output_dir": "output",
+
+  "endpoints": {
+    "finmind": "https://api.finmindtrade.com/api/v4/data"
+  },
+
+  "products": {
+    "tx": "TX",
+    "mtx": "MTX"
+  },
+
+  "fields": {
+    "spot_total_institution": {
+      "dataset": "TaiwanStockTotalInstitutionalInvestors",
+      "date": ["date"],
+      "name": ["name", "institutional_investor", "type"],
+      "buy": ["buy", "buy_amount"],
+      "sell": ["sell", "sell_amount"],
+      "foreign_pattern": "Foreign|外資"
+    },
+    "futures_institution": {
+      "dataset": "TaiwanFuturesInstitutionalInvestors",
+      "date": ["date"],
+      "who": ["institutional_investors", "name", "investor"],
+      "long_oi": ["long_open_interest_balance_volume", "long_oi_volume"],
+      "short_oi": ["short_open_interest_balance_volume", "short_oi_volume"],
+      "foreign_pattern": "外資|Foreign"
+    },
+    "margin_total": {
+      "dataset": "TaiwanStockTotalMarginPurchaseShortSale",
+      "date": ["date"],
+      "name": ["name", "type"],
+      "today": ["TodayBalance", "today_balance"],
+      "margin_pattern": "融資|Margin"
+    },
+    "index_candidates": [
+      { "dataset": "TaiwanStockPrice", "data_id": "TAIEX",
+        "date": ["date"], "close": ["close", "Close"] },
+      { "dataset": "TaiwanStockTotalReturnIndex", "data_id": "TAIEX",
+        "date": ["date"], "close": ["price", "close"] }
+    ]
+  },
+
+  "thermometer": {
+    "_note": "everything percentile-based: unit-invariant by construction",
+    "spot_window_days": 20,
+    "percentile_window_days": 252,
+    "min_history_days": 120
+  },
+
+  "regime": {
+    "_note": "score = mean of risk-signed pcts rescaled to [-1,1]; flip needs confirm_days consecutive closes in new band (hysteresis => weekly-timescale state machine)",
+    "confirm_days": 3,
+    "bands": {
+      "capitulation_max": -0.55,
+      "de_risk_max": -0.2,
+      "risk_on_min": 0.2,
+      "overheat_min": 0.55
+    }
+  },
+
+  "alerts": {
+    "_note": "tail CO-OCCURRENCE, expected to fire a few times per YEAR. Calibrated provisionally; --backtest is the judge — alerts that don't separate from baseline get deleted.",
+    "capitulation": {
+      "spot_pct_max": 5.0,
+      "margin_pct_max": 5.0
+    },
+    "overheat": {
+      "margin_pct_min": 95.0,
+      "retail_pct_min": 90.0,
+      "spot_pct_min": 75.0
+    }
+  },
+
+  "backtest": {
+    "horizons_days": [20, 60]
+  }
+}
