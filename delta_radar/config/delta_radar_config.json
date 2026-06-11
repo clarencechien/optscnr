@@ -3,13 +3,11 @@
   "ticker_tw": "2308",
   "ticker_th": "DELTA.BK",
   "output_dir": "output",
-
   "endpoints": {
     "finmind": "https://api.finmindtrade.com/api/v4/data",
     "census": "https://api.census.gov/data/timeseries/intltrade/imports/hs",
     "gnews_rss": "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
   },
-
   "m1_revenue_acceleration": {
     "_basis": "2026-05 YoY +43.7%; we monitor the 2nd derivative, not the level",
     "slope_window": 3,
@@ -19,7 +17,6 @@
     "red_consec_decel": 3,
     "red_slope_floor_pp": -5.0
   },
-
   "m2_bullwhip_health": {
     "_basis": "Q1-2026 baseline: FCF/NI = 88.4/205.5 = 0.43; gate: Q2 must recover toward 0.6",
     "contract_qoq_green_pct": 10.0,
@@ -29,55 +26,104 @@
     "inventory_runaway_pct": 15.0,
     "account_patterns": {
       "_note": "FinMind account names drift; regex lists, OR-matched. Use --dump-accounts to inspect live schema and tighten.",
-      "contract_liabilities": ["contract.*liab"],
-      "inventory": ["^inventor"],
-      "operating_cash_flow": ["operating.*activit|CashFlowsFromOperatingActivities|CashProvidedByOperatingActivities"],
-      "capex": ["propert.*plant.*equip|AcquisitionOfPropertyPlantAndEquipment"],
-      "net_income": ["^IncomeAfterTax|^NetIncome$|EquityAttributableToOwnersOfParent"]
+      "contract_liabilities": [
+        "contract.*liab"
+      ],
+      "inventory": [
+        "^inventor"
+      ],
+      "operating_cash_flow": [
+        "operating.*activit|CashFlowsFromOperatingActivities|CashProvidedByOperatingActivities"
+      ],
+      "capex": [
+        "propert.*plant.*equip|AcquisitionOfPropertyPlantAndEquipment"
+      ],
+      "net_income": [
+        "^IncomeAfterTax|^NetIncome$|EquityAttributableToOwnersOfParent"
+      ]
     }
   },
-
   "m3_thai_shadow": {
     "_basis": "DELTA.BK Q1-2026 rev +56.2% YoY, GM 31.7%; sub reports ~2 days ahead of parent",
     "green_rev_yoy_pct": 30.0,
     "yellow_rev_yoy_pct": 15.0,
     "gm_floor_pct": 27.0
   },
-
   "m4_customs_flow": {
     "_basis": "US monthly imports of static converters (HS 8504.40) from TH+TW = physical AI-power flow proxy; data lags ~6 weeks",
     "hs_code": "850440",
-    "country_codes": { "thailand": "5490", "taiwan": "5830" },
+    "country_codes": {
+      "thailand": "5490",
+      "taiwan": "5830"
+    },
     "months_back": 30,
     "rolling_window_months": 3,
     "green_yoy_pct": 20.0,
     "yellow_yoy_pct": 5.0
   },
-
   "m5_narrative_triggers": {
     "max_items_per_feed": 40,
     "buckets": {
       "capex_cut": {
         "query": "hyperscaler capex (cut OR reduce OR pause OR slowdown)",
-        "keywords": ["capex cut", "spending cut", "pause", "slowdown", "reduce capital expenditure", "scale back"],
-        "yellow_hits": 2,
-        "red_hits": 5
+        "keywords": [
+          "capex cut",
+          "spending cut",
+          "pause",
+          "slowdown",
+          "reduce capital expenditure",
+          "scale back"
+        ],
+        "yellow_hits": 4,
+        "red_hits": 10,
+        "must_include": [
+          "capex",
+          "capital expenditure",
+          "data center",
+          "datacenter",
+          "ai infrastructure",
+          "hyperscaler"
+        ]
       },
       "vr300_delay": {
         "query": "Nvidia (VR300 OR Kyber OR Rubin Ultra) (delay OR pushed OR postponed)",
-        "keywords": ["delay", "pushed back", "postponed", "slip"],
-        "yellow_hits": 1,
-        "red_hits": 3
+        "keywords": [
+          "delay",
+          "pushed back",
+          "postponed",
+          "slip"
+        ],
+        "yellow_hits": 2,
+        "red_hits": 5,
+        "must_include": [
+          "rubin",
+          "vr300",
+          "vr 300",
+          "kyber",
+          "vera rubin"
+        ]
       },
       "debt_financed_capex": {
         "query": "AI data center capex debt (bond OR borrowing OR negative free cash flow)",
-        "keywords": ["debt", "bond sale", "borrowing", "negative free cash flow", "leverage"],
-        "yellow_hits": 4,
-        "red_hits": 8
+        "keywords": [
+          "debt",
+          "bond sale",
+          "borrowing",
+          "negative free cash flow",
+          "leverage"
+        ],
+        "yellow_hits": 12,
+        "red_hits": 25,
+        "must_include": [
+          "ai",
+          "data center",
+          "datacenter",
+          "hyperscaler"
+        ]
       }
-    }
+    },
+    "_calibration_note": "2026-06-11 first live run baseline: capex_cut=6 vr300_delay=10(w/ false pos) debt=18. Thresholds re-centered on this noise floor; switch to z-score vs state.json rolling baseline after ~5 runs."
   },
-
   "aggregation": {
     "overall_red_min_reds": 2,
     "overall_yellow_min_yellows": 2,
