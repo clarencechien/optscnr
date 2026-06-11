@@ -40,5 +40,19 @@
     "consecutive_days": 1,
     "total_mentions": 4,
     "ticker": "GLW"
+  },
+  "Foreign": {
+    "first_seen": "2026-06-11",
+    "last_seen": "2026-06-11",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BLX"
+  },
+  "DoorDash": {
+    "first_seen": "2026-06-11",
+    "last_seen": "2026-06-11",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DASH"
   }
 }

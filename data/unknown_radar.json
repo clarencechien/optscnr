@@ -1,5 +1,30 @@
 {
-  "updated_at": "2026-06-10T23:07:13.826768",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-06-11T23:06:14.635214",
+  "count": 2,
+  "blind_spots": [
+    {
+      "name": "Foreign",
+      "ticker": "BLX",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Foreign surveillance program to expire Friday after House blocks extension",
+        "The SpaceX IPO is drawing historic demand from foreign investors. But don’t expect a dollar-buying f"
+      ]
+    },
+    {
+      "name": "DoorDash",
+      "ticker": "DASH",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "DoorDash lets customers use photos, prompts to order food and book reservations in latest AI push",
+        "DoorDash lets customers use photos, prompts to order food and book reservations in latest AI push"
+      ]
+    }
+  ]
 }
