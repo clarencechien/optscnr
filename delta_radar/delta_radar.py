@@ -238,16 +238,27 @@ def run_m1(cfg: dict, fetch: Callable) -> ModuleResult:
 # M2 — bullwhip health (contract liabilities / inventory / FCF quality)
 # ----------------------------------------------------------------------------
 
-def _pick_account(rows: list[dict], patterns: list[str]) -> dict[str, float]:
+def _pick_account(rows: list[dict], patterns: list[str]) -> tuple[dict[str, float], str]:
     """FinMind statements come as long-format rows {'date','type','value'}.
-    Account naming drifts between schema versions, so match by regex list."""
-    out: dict[str, float] = {}
-    pats = [re.compile(p, re.I) for p in patterns]
-    for r in rows:
-        t = str(r.get("type", ""))
-        if any(p.search(t) for p in pats):
-            out[r["date"]] = out.get(r["date"], 0.0) + float(r["value"])
-    return out
+
+    Rules learned from live schema (2026-06-11 dump):
+      * '<Name>_per' rows are percent-of-total — always excluded.
+      * Never sum across DIFFERENT account types; pick exactly one type,
+        by pattern priority order (first regex that matches anything wins).
+    Returns ({date: value}, chosen_type)."""
+    rows = [r for r in rows if not str(r.get("type", "")).endswith("_per")]
+    for pat in patterns:
+        rx = re.compile(pat, re.I)
+        candidates = sorted({str(r["type"]) for r in rows if rx.search(str(r["type"]))})
+        if not candidates:
+            continue
+        chosen = candidates[0]
+        out: dict[str, float] = {}
+        for r in rows:
+            if str(r["type"]) == chosen:
+                out[r["date"]] = float(r["value"])
+        return out, chosen
+    return {}, ""
 
 
 def run_m2(cfg: dict, fetch: Callable) -> ModuleResult:
@@ -261,11 +272,11 @@ def run_m2(cfg: dict, fetch: Callable) -> ModuleResult:
         res.error = "empty FinMind statements"
         return res
 
-    contract = _pick_account(bs, p["account_patterns"]["contract_liabilities"])
-    inventory = _pick_account(bs, p["account_patterns"]["inventory"])
-    ocf = _pick_account(cf, p["account_patterns"]["operating_cash_flow"])
-    capex = _pick_account(cf, p["account_patterns"]["capex"])
-    ni = _pick_account(inc, p["account_patterns"]["net_income"]) if inc else {}
+    contract, t_c = _pick_account(bs, p["account_patterns"]["contract_liabilities"])
+    inventory, t_i = _pick_account(bs, p["account_patterns"]["inventory"])
+    ocf, t_o = _pick_account(cf, p["account_patterns"]["operating_cash_flow"])
+    capex, t_x = _pick_account(cf, p["account_patterns"]["capex"])
+    ni, t_n = _pick_account(inc, p["account_patterns"]["net_income"]) if inc else ({}, "")
 
     def latest_two(d: dict) -> tuple:
         ks = sorted(d)
@@ -296,8 +307,11 @@ def run_m2(cfg: dict, fetch: Callable) -> ModuleResult:
         "contract_liab_qoq_pct": None if contract_qoq is None else round(contract_qoq, 1),
         "inventory_qoq_pct": None if inv_qoq is None else round(inv_qoq, 1),
         "fcf_to_net_income": None if fcf_ni is None else round(fcf_ni, 2),
+        "accounts_used": {"contract": t_c, "inventory": t_i,
+                          "ocf": t_o, "capex": t_x, "net_income": t_n},
     }
-    got_any = any(v is not None for k, v in res.metrics.items() if k != "as_of")
+    got_any = any(res.metrics[k] is not None for k in
+                  ("contract_liab_qoq_pct", "inventory_qoq_pct", "fcf_to_net_income"))
     if not got_any:
         res.error = ("no account matched — adjust m2_bullwhip_health.account_patterns "
                      "to the live FinMind schema (run with --dump-accounts to inspect)")
@@ -551,8 +565,10 @@ def _fixtures() -> dict:
             return rows
         if dataset == "TaiwanStockBalanceSheet":
             return [
-                {"date": "2025-12-31", "type": "ContractLiabilitiesCurrent", "value": 30e9},
-                {"date": "2026-03-31", "type": "ContractLiabilitiesCurrent", "value": 36e9},
+                {"date": "2025-12-31", "type": "CurrentContractLiabilities", "value": 30e9},
+                {"date": "2026-03-31", "type": "CurrentContractLiabilities", "value": 36e9},
+                {"date": "2026-03-31", "type": "CurrentContractLiabilities_per", "value": 4.2},
+                {"date": "2026-03-31", "type": "Inventories_per", "value": 13.9},
                 {"date": "2025-12-31", "type": "Inventories", "value": 105e9},
                 {"date": "2026-03-31", "type": "Inventories", "value": 119.1e9},
             ]
@@ -618,10 +634,17 @@ def main() -> int:
     }
 
     if args.dump_accounts:
-        rows = fx["finmind"]("TaiwanStockBalanceSheet", cfg["ticker_tw"],
-                             (dt.date.today() - dt.timedelta(days=400)).isoformat(), cfg)
-        for t in sorted({r.get("type", "") for r in rows}):
-            print(t)
+        start = (dt.date.today() - dt.timedelta(days=400)).isoformat()
+        for ds in ("TaiwanStockBalanceSheet",
+                   "TaiwanStockCashFlowsStatement",
+                   "TaiwanStockFinancialStatements"):
+            print(f"\n===== {ds} =====")
+            try:
+                rows = fx["finmind"](ds, cfg["ticker_tw"], start, cfg)
+                for t in sorted({r.get("type", "") for r in rows}):
+                    print(t)
+            except Exception as e:
+                print(f"(fetch failed: {e})")
         return 0
 
     wanted = {m.strip().lower() for m in args.modules.split(",")}
