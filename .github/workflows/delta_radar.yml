@@ -2,9 +2,9 @@ name: delta-radar
 
 on:
   schedule:
-    - cron: "30 2 * * *"     # daily   02:30 UTC = 10:30 Taipei — M5 narrative only
-    - cron: "30 3 * * 1,4"   # Mon/Thu 03:30 UTC = 11:30 Taipei — full scan (offset from daily)
-    - cron: "30 4 10-12 * *" # 10th–12th 04:30 UTC = 12:30 Taipei — M1 revenue-judgment window
+    - cron: "30 2 * * *"     # daily   02:30 UTC = 10:30 Taipei - M5 narrative only
+    - cron: "30 3 * * 1,4"   # Mon/Thu 03:30 UTC = 11:30 Taipei - full scan (offset from daily)
+    - cron: "30 4 10-12 * *" # 10th-12th 04:30 UTC = 12:30 Taipei - M1 revenue-judgment window
   workflow_dispatch:
     inputs:
       modules:
@@ -55,7 +55,7 @@ jobs:
             echo "commit_mode=on_change" >> "$GITHUB_OUTPUT"
             echo "track=revenue-day" >> "$GITHUB_OUTPUT"
           else
-            echo "::error::unrecognized schedule '$SCHED' — update Resolve track"
+            echo "::error::unrecognized schedule '$SCHED' - update Resolve track"
             exit 1
           fi
 
@@ -101,7 +101,7 @@ jobs:
           )
           PREV="${{ steps.prev.outputs.statuses }}"
           if [ "$CUR" = "$PREV" ]; then
-            echo "Status unchanged ($CUR) — skipping commit."
+            echo "Status unchanged ($CUR) - skipping commit."
             # Revert the working tree so the redundant state entry is discarded
             # and state.json stays an information-bearing series, not a heartbeat log.
             git checkout -- delta_radar/output/
@@ -115,7 +115,7 @@ jobs:
         if: steps.gate.outputs.do_commit == 'true'
         # NOTE: do NOT collapse this into `git add ... || true`.
         # The silent-swallow pattern on conditionally-absent files is the exact
-        # bug class fixed across this repo's workflows — fail loudly instead.
+        # bug class fixed across this repo's workflows - fail loudly instead.
         run: |
           set -euo pipefail
           for f in delta_radar/output/delta_radar_report.md \
