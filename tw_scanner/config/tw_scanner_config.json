@@ -1,6 +1,6 @@
 {
   "_comment": "tw_scanner v2 config — DCA weather station. All field names are PRIORITY-ORDERED candidate lists (FinMind schema not yet live-verified; run --dump-schema and pin, same workflow as delta_radar M2).",
-  "history_start": "2019-01-01",
+  "history_start": "2007-07-01",
   "cache_dir": "cache",
   "output_dir": "output",
   "endpoints": {
