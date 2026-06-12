@@ -777,5 +777,24 @@
         "error": null
       }
     ]
+  },
+  {
+    "ts": "2026-06-12T08:47:03.341945+00:00",
+    "overall": "GREEN",
+    "modules": [
+      {
+        "module": "M1 revenue_acceleration",
+        "status": "GREEN",
+        "headline": "2026-05 YoY +43.7%, slope +4.22pp/月, 連續減速 1 個月",
+        "metrics": {
+          "latest_month": "2026-05",
+          "latest_yoy_pct": 43.7,
+          "yoy_slope_pp_per_month": 4.22,
+          "consecutive_decel_months": 1
+        },
+        "notes": [],
+        "error": null
+      }
+    ]
   }
 ]
