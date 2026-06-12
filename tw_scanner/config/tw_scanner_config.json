@@ -1,6 +1,6 @@
 {
   "_comment": "tw_scanner v2 config — DCA weather station. All field names are PRIORITY-ORDERED candidate lists (FinMind schema not yet live-verified; run --dump-schema and pin, same workflow as delta_radar M2).",
-  "history_start": "2007-07-01",
+  "history_start": "2019-01-01",
   "cache_dir": "cache",
   "output_dir": "output",
   "endpoints": {
@@ -117,7 +117,7 @@
       "spot_pct_max": 5.0,
       "margin_pct_max": 5.0,
       "enabled": true,
-      "_verdict": "VALIDATED 2026-06-11 on 2019-2026 live data: 6 episodes (2020-03-09/19, 2022-03-08, 2024-04-22, 2024-07-19, 2024-08-05), fwd 20d median +5.75% vs baseline +2.22%, 60d +9.80% vs +5.04%, 60d hit 83%. n=6: no statistical significance claimed; justified by DCA payoff asymmetry (false alarm = buy a few days early; miss = skip the best windows)."
+      "_verdict": "VALIDATED 2026-06-11, re-tried same day on extended history (FinMind futures-institution data floor ~2017/18 => effective sample 2018-2026): 8 episodes (2018-07-06, 2018-10-25, 2020-03-09/19, 2022-03-08, 2024-04-22, 2024-07-19, 2024-08-05) — coverage integrity perfect, every known panic day present, zero noise days. BUT separation downgraded from 'clear' to 'modest': fwd 20d median +2.95% vs baseline +1.26% (was +5.75/+2.22 on 2019+ sample), 60d median +3.98% vs +2.82%; MEANS remain strong (60d +10.47% vs +2.82%, hit 88%) => right-skewed payoff: 2020/2024 episodes huge, 2018 episodes fired mid-decline and ground for months (the 'rang on the hillside' failure mode, now empirically observed). Verdict: retained for DCA acceleration (right-skew is exactly the desired payoff shape); NOT valid for leveraged timing. 2008 unreachable without a separate spot+margin-only legacy-mode alert (different instrument, must not share this scorecard)."
     },
     "overheat": {
       "margin_pct_min": 95.0,
