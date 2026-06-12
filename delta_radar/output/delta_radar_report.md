@@ -1,4 +1,4 @@
-# Delta Radar (2308.TW) — 2026-06-11 06:17 UTC
+# Delta Radar (2308.TW) — 2026-06-12 01:02 UTC
 
 ## 總判定：🟡 YELLOW
 
@@ -11,7 +11,7 @@ GS 4500 劇本三大未驗證前提的機械化監控：FCF 轉回 (M2)、合約
 | M2 bullwhip_health | 🟡 YELLOW | 合約負債 QoQ +7.4% / 存貨 QoQ +17.4% / FCF/淨利 0.43 |
 | M3 thai_shadow | 🟢 GREEN | DELTA.BK 2026-03-31 營收 YoY +47.0%, GM 31.7% |
 | M4 customs_flow | 🟢 GREEN | US 進口 HS850440 (TH+TW) 近3月 $1244.3M, YoY +49.9% |
-| M5 narrative_triggers | 🔴 RED | capex_cut:4 / vr300_delay:5 / debt_financed_capex:13 |
+| M5 narrative_triggers | 🟡 YELLOW | capex_cut:4 / vr300_delay:4 / debt_financed_capex:15 |
 
 ### M1 revenue_acceleration — 🟢 GREEN
 ```json
@@ -58,25 +58,25 @@ GS 4500 劇本三大未驗證前提的機械化監控：FCF 轉回 (M2)、合約
 }
 ```
 
-### M5 narrative_triggers — 🔴 RED
+### M5 narrative_triggers — 🟡 YELLOW
 ```json
 {
   "hits": {
     "capex_cut": 4,
-    "vr300_delay": 5,
-    "debt_financed_capex": 13
+    "vr300_delay": 4,
+    "debt_financed_capex": 15
   }
 }
 ```
 - [capex_cut] 'The odd decouple': JPMorgan says the tech capex surge is masking a troubling slowdown in job growth - Business Insider
-- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
 - [capex_cut] AI Infrastructure Stocks See a Strategic Pause - Let's Data Science
+- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
 - [vr300_delay] Nvidia's CoWoS supplies still secured, but Rubin delay issues crop up: KeyBanc (NVDA:NASDAQ) - Seeking Alpha
 - [vr300_delay] [News] NVIDIA Reportedly Denies Rubin Delay as AMD MI450 Spurs Redesign Speculation - TrendForce
 - [vr300_delay] NVIDIA Reportedly Won’t Launch the RTX 50 SUPER Series This Year; GeForce RTX 60 “Rubin” Also Delayed as Memory Shortage
 - [debt_financed_capex] Oracle's AI spending blows past estimates, raising worries over growing debt - Reuters
 - [debt_financed_capex] Oracle Raises Massive Debt for AI Infrastructure - Let's Data Science
-- [debt_financed_capex] Big Tech Keeps Piling On AI Debt. Spending Is Set to Soar. - Barron's
+- [debt_financed_capex] AI Hyperscalers Are Taking on Debt, But the Broader Market Looks More Leveraged - Yahoo Finance
 
 ---
 *delta_radar — optscnr radar family. Shadow-mode instrument: this is a measurement device, not a trade signal.*
