@@ -1,152 +1,145 @@
 {
-  "updated_at": "2026-06-11T22:22:36.875133",
+  "updated_at": "2026-06-12T22:07:18.253286",
   "stats": {
     "total_items": 102,
-    "items_with_company": 13,
-    "items_with_catalyst": 18,
-    "items_both": 4
+    "items_with_company": 19,
+    "items_with_catalyst": 19,
+    "items_both": 3
   },
-  "count": 12,
+  "count": 16,
   "tickers": [
-    "TGT",
-    "COIN",
-    "QBTS",
-    "DKNG",
-    "ORCL",
-    "MU",
-    "ASML",
-    "GM",
-    "NBIS",
     "META",
+    "TGT",
+    "AMZN",
+    "TSLA",
+    "NVDA",
+    "MRVL",
+    "ROKU",
+    "GOOG",
     "GOOGL",
-    "PLTR"
+    "MU",
+    "SMCI",
+    "PANW",
+    "GM",
+    "HOOD",
+    "KTOS",
+    "CRWD"
   ],
   "details": [
     {
-      "symbol": "TGT",
-      "score": 6,
-      "evidence": [
-        {
-          "title": "Cracker Barrel Jumps Into A Short Squeeze On Upgrade, Target Hikes",
-          "catalysts": [
-            "jumps",
-            "upgrade",
-            "short squeeze"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Coinbase launches tool to let AI agents manage trading and payments",
-          "catalysts": [
-            "launches"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "QBTS",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "D-Wave Rewarded Patient Investors With 135% Gains but Recent Buyers Face a Brutal Reality",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "DKNG",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "DraftKings (DKNG) Stock Soars on Prediction Markets Optimism",
-          "catalysts": [
-            "soars"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Oracle shares tumble 11% on increased capital raise, cash concerns",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Oracle’s stock is seeing its worst run in a quarter-century as this key AI debate rages on",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Micron’s stock rebounds after ‘healthy’ reset, and analysts see blue skies ahead",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron Selects Bechtel for New York Semiconductor Project as U.S. Manufacturing Expansion Moves Forward (MU)",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASML",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ahead of SpaceX IPO, Elon Musk addresses ASML employees as part of push into chip manufacturing",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "General Motors locks $143M Army vehicle contract; total value hits $623.8M",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NBIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "After UK Deal, Nebius Stock Is Still Too Expensive to Buy",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "META",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Meta reportedly begins dismantling $2 billion Manus deal on Beijing's orders",
+          "catalysts": [
+            "acquisition"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Meta’s Zuckerberg admits ’mistakes’ made on AI transformation",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Target investors reject proposal for independent board chair, support rises but stays below majority",
+          "catalysts": [
+            "rises"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "SpaceX surges past $2 trillion in Nasdaq debut, closes in on Amazon",
+          "catalysts": [
+            "surges"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Elon Musk becomes world's first trillionaire as SpaceX begins trading on the Nasdaq",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Former Tesla board member says SpaceX needs to achieve 2 of its 3 moonshots to keep its valuation ",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Is it too late to buy SpaceX’s stock? Here’s how Tesla’s did after one day — and five years.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Micron Got a Major Vote of Confidence From Nvidia’s Jensen Huang on AI Returns. I Still Wouldn’t Chase MU Stock Here.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Jensen Huang Says AI Is ‘Insanely Profitable.’ That Means It’s Not Too Late to Hop on the Nvidia Bandwagon.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Can Robots Rescue Nvidia Stock?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRVL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Google and Meta denied new trial in youth social media addiction case",
+          "title": "Adobe’s CFO is departing for Marvell. And it’s one more reason for investors to choose chips over software.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ROKU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Roku is exploring strategic options, including a sale of the company, sources say",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOG",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Alphabet (GOOG) Slipped on Concerns Over Increased Capex and AI Monetization",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -157,18 +150,84 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Google and Meta denied new trial in youth social media addiction case",
+          "title": "Alphabet (GOOG) Slipped on Concerns Over Increased Capex and AI Monetization",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Wedbush Gives a Thumbs Up to Palantir’s AIPCon, But I Think AIPCon 2026 Was a Dud for PLTR Stock",
+          "title": "Micron Got a Major Vote of Confidence From Nvidia’s Jensen Huang on AI Returns. I Still Wouldn’t Chase MU Stock Here.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SMCI",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Super Micro Prices $7 Billion AI Server Financing Package to Support $39 Billion Order Backlog (SMCI)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PANW",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Palo Alto Networks, Inc. (PANW) A Good Stock To Buy Now?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "General Motors analyst spots customer trend investors should watch",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Robinhood Markets, Inc. (HOOD) A Good Stock To Buy Now?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "KTOS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Kratos Defense & Security Solutions, Inc. (KTOS) A Good Stock To Buy Now?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is CrowdStrike Holdings, Inc. (CRWD) A Good Stock To Buy Now?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -176,6 +235,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2
+    "xAI (private)": 1
   }
 }
