@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-06-11T23:06:14.635214",
+  "updated_at": "2026-06-12T22:56:28.686959",
   "count": 2,
   "blind_spots": [
     {
-      "name": "Foreign",
-      "ticker": "BLX",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 3,
+      "total_mentions": 10,
+      "consecutive_days": 4,
+      "is_strong": true,
       "evidence": [
-        "Foreign surveillance program to expire Friday after House blocks extension",
-        "The SpaceX IPO is drawing historic demand from foreign investors. But don’t expect a dollar-buying f"
+        "SpaceX market cap tops $2 trillion after shares of Elon Musk's rocket company gain 19% on debut",
+        "SpaceX surges past $2 trillion in Nasdaq debut, closes in on Amazon"
       ]
     },
     {
-      "name": "DoorDash",
-      "ticker": "DASH",
+      "name": "Beijing",
+      "ticker": "BGTCF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "DoorDash lets customers use photos, prompts to order food and book reservations in latest AI push",
-        "DoorDash lets customers use photos, prompts to order food and book reservations in latest AI push"
+        "Meta reportedly begins dismantling $2 billion Manus deal on Beijing's orders",
+        "Meta reportedly begins dismantling $2 billion Manus deal on Beijing's orders"
       ]
     }
   ]
