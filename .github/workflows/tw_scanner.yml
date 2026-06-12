@@ -2,8 +2,8 @@ name: tw-scanner
 
 on:
   schedule:
-    - cron: "45 13 * * 1-5"  # 13:45 UTC = 21:45 Taipei, Mon-Fri — after margin (~21:00) publishes; all 4 features complete
-    - cron: "15 14 1 * *"    # monthly, 1st — backtest revalidation: re-judge the capitulation alert on accrued data
+    - cron: "45 13 * * 1-5"  # 13:45 UTC = 21:45 Taipei, Mon-Fri - after margin (~21:00) publishes; all 4 features complete
+    - cron: "15 14 1 * *"    # monthly, 1st - backtest revalidation: re-judge the capitulation alert on accrued data
   workflow_dispatch:
     inputs:
       mode:
@@ -57,7 +57,7 @@ jobs:
             --output-dir tw_scanner/output
 
       - name: Commit results
-        # Explicit existence checks — never `git add ... || true`.
+        # Explicit existence checks - never `git add ... || true`.
         # The cache CSVs are committed too: they make every backtest
         # reproducible and spare FinMind quota on scheduled runs.
         run: |
