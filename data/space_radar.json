@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12T23:51:03.081424",
+  "updated_at": "2026-06-13T01:27:59.426583",
   "version": "v8.6",
   "stage": 3,
   "price": 160.9499969482422,
@@ -67,7 +67,14 @@
   "dca_metrics": {
     "ma50": null,
     "ma200": null,
-    "current_price": 160.95
+    "current_price": 160.95,
+    "avg_cost": 150.0,
+    "total_shares": 177,
+    "total_invested": 26550,
+    "current_value": 28488.15,
+    "unrealized_pnl_pct": 7.3,
+    "pool_a_target": 120000.0,
+    "pool_a_filled_pct": 22.1
   },
   "peers": [
     {
