@@ -1,44 +1,54 @@
 {
-  "updated_at": "2026-06-06T02:09:29.023066",
+  "updated_at": "2026-06-13T02:29:53.396138",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 3,
+  "count": 4,
   "tickers": [
+    "CLSK",
     "FLNC",
-    "SEDG",
-    "BLDP"
+    "VELO",
+    "SEDG"
   ],
   "details": [
     {
+      "symbol": "CLSK",
+      "price": 16.48,
+      "gain_30d_pct": 35.4,
+      "market_cap_m": 4229.0,
+      "avg_volume_m": 24.93,
+      "short_pct_float": 45.7,
+      "score": 49.28
+    },
+    {
       "symbol": "FLNC",
-      "price": 22.91,
-      "gain_30d_pct": 71.2,
-      "market_cap_m": 4223.0,
-      "avg_volume_m": 16.53,
-      "short_pct_float": 38.2,
-      "score": 45.31
+      "price": 23.71,
+      "gain_30d_pct": 94.5,
+      "market_cap_m": 4370.0,
+      "avg_volume_m": 13.82,
+      "short_pct_float": 36.4,
+      "score": 45.87
+    },
+    {
+      "symbol": "VELO",
+      "price": 25.5,
+      "gain_30d_pct": 88.7,
+      "market_cap_m": 760.0,
+      "avg_volume_m": 4.61,
+      "short_pct_float": 17.7,
+      "score": 26.6
     },
     {
       "symbol": "SEDG",
-      "price": 63.17,
-      "gain_30d_pct": 37.8,
-      "market_cap_m": 3842.0,
-      "avg_volume_m": 4.8,
-      "short_pct_float": 19.7,
-      "score": 23.45
-    },
-    {
-      "symbol": "BLDP",
-      "price": 4.92,
-      "gain_30d_pct": 50.0,
-      "market_cap_m": 1483.0,
-      "avg_volume_m": 13.41,
-      "short_pct_float": 7.3,
-      "score": 12.35
+      "price": 60.8,
+      "gain_30d_pct": 41.7,
+      "market_cap_m": 3698.0,
+      "avg_volume_m": 4.59,
+      "short_pct_float": 20.5,
+      "score": 24.66
     }
   ]
 }
