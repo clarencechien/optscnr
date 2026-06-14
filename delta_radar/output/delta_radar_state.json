@@ -826,5 +826,23 @@
         "error": null
       }
     ]
+  },
+  {
+    "ts": "2026-06-14T07:06:30.203652+00:00",
+    "overall": "NO_DATA",
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "NO_DATA",
+        "headline": "",
+        "metrics": {},
+        "notes": [
+          "feed capex_cut failed: HTTP Error 503: Service Unavailable",
+          "feed vr300_delay failed: HTTP Error 503: Service Unavailable",
+          "feed debt_financed_capex failed: HTTP Error 503: Service Unavailable"
+        ],
+        "error": "all RSS feeds failed"
+      }
+    ]
   }
 ]
