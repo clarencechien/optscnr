@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T01:27:59.426583",
+  "updated_at": "2026-06-14T23:37:50.393495",
   "version": "v8.6",
   "stage": 3,
   "price": 160.9499969482422,
@@ -10,7 +10,7 @@
   "iv_percentile": null,
   "pc_ratio": null,
   "c_pool_frozen": false,
-  "iv_stable": false,
+  "iv_stable": true,
   "gtc_levels_a": [
     {
       "target_mc_t": 1.9,
