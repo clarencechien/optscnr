@@ -1,17 +1,10 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-06-12",
-    "consecutive_days": 4,
-    "total_mentions": 10,
+    "last_seen": "2026-06-14",
+    "consecutive_days": 5,
+    "total_mentions": 13,
     "ticker": "NDAQ"
-  },
-  "Broadway": {
-    "first_seen": "2026-06-05",
-    "last_seen": "2026-06-05",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BYFC"
   },
   "Delta": {
     "first_seen": "2026-06-07",
@@ -54,5 +47,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BGTCF"
+  },
+  "JetBlue": {
+    "first_seen": "2026-06-14",
+    "last_seen": "2026-06-14",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "JBLU"
+  },
+  "Pimco": {
+    "first_seen": "2026-06-14",
+    "last_seen": "2026-06-14",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "PDI"
   }
 }

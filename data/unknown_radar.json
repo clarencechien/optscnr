@@ -1,29 +1,41 @@
 {
-  "updated_at": "2026-06-12T22:56:28.686959",
-  "count": 2,
+  "updated_at": "2026-06-14T22:39:33.464546",
+  "count": 3,
   "blind_spots": [
     {
       "name": "Nasdaq",
       "ticker": "NDAQ",
       "mentions_today": 3,
-      "total_mentions": 10,
-      "consecutive_days": 4,
+      "total_mentions": 13,
+      "consecutive_days": 5,
       "is_strong": true,
       "evidence": [
-        "SpaceX market cap tops $2 trillion after shares of Elon Musk's rocket company gain 19% on debut",
-        "SpaceX surges past $2 trillion in Nasdaq debut, closes in on Amazon"
+        "From 10% chance of success to $2 trillion market cap: SpaceX's historic IPO",
+        "SpaceX market cap tops $2 trillion after shares of Elon Musk's rocket company gain 19% on debut"
       ]
     },
     {
-      "name": "Beijing",
-      "ticker": "BGTCF",
+      "name": "JetBlue",
+      "ticker": "JBLU",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Meta reportedly begins dismantling $2 billion Manus deal on Beijing's orders",
-        "Meta reportedly begins dismantling $2 billion Manus deal on Beijing's orders"
+        "JetBlue bets big on Fort Lauderdale, from a new airport lounge to an international gateway",
+        "JetBlue bets big on Fort Lauderdale, from a new airport lounge to an international gateway"
+      ]
+    },
+    {
+      "name": "Pimco",
+      "ticker": "PDI",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Defaults in debt markets are starting again, warns Pimco. Here’s the bond giant’s game plan.",
+        "Defaults in debt markets are starting again, warns Pimco. Here’s the bond giant’s game plan."
       ]
     }
   ]
