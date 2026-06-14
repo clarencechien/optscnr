@@ -1,91 +1,62 @@
 {
-  "updated_at": "2026-06-12T22:07:18.253286",
+  "updated_at": "2026-06-14T21:51:53.639611",
   "stats": {
-    "total_items": 102,
-    "items_with_company": 19,
-    "items_with_catalyst": 19,
-    "items_both": 3
+    "total_items": 107,
+    "items_with_company": 25,
+    "items_with_catalyst": 6,
+    "items_both": 0
   },
-  "count": 16,
+  "count": 20,
   "tickers": [
-    "META",
-    "TGT",
-    "AMZN",
-    "TSLA",
-    "NVDA",
-    "MRVL",
-    "ROKU",
-    "GOOG",
     "GOOGL",
-    "MU",
-    "SMCI",
-    "PANW",
-    "GM",
-    "HOOD",
-    "KTOS",
-    "CRWD"
+    "SHOP",
+    "NVDA",
+    "AVGO",
+    "META",
+    "RIVN",
+    "TSLA",
+    "RKLB",
+    "TGT",
+    "WMT",
+    "COST",
+    "AMZN",
+    "CRWD",
+    "DDOG",
+    "ANET",
+    "PLTR",
+    "JPM",
+    "VRT",
+    "HPE",
+    "MSFT"
   ],
   "details": [
     {
-      "symbol": "META",
-      "score": 2.5,
+      "symbol": "GOOGL",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Meta reportedly begins dismantling $2 billion Manus deal on Beijing's orders",
-          "catalysts": [
-            "acquisition"
-          ],
-          "has_catalyst": true
+          "title": "Elon Musk drifted from Larry Page over a decade ago, but their companies are closer than ever",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "Meta’s Zuckerberg admits ’mistakes’ made on AI transformation",
+          "title": "GitLab (GTLB): Google Cloud Expansion Shows How AI Is Deepening Enterprise DevSecOps Demand",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
-      "score": 2,
+      "symbol": "SHOP",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Target investors reject proposal for independent board chair, support rises but stays below majority",
-          "catalysts": [
-            "rises"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "SpaceX surges past $2 trillion in Nasdaq debut, closes in on Amazon",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Elon Musk becomes world's first trillionaire as SpaceX begins trading on the Nasdaq",
+          "title": "Shopify Inc. (SHOP) Shows Why AI Search Could Become a Bigger E-Commerce Growth Channel",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Former Tesla board member says SpaceX needs to achieve 2 of its 3 moonshots to keep its valuation ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Is it too late to buy SpaceX’s stock? Here’s how Tesla’s did after one day — and five years.",
+          "title": "Shopify (SHOP): GMV Growth Shows Why Its Commerce Platform Still Has Operating Leverage",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -93,130 +64,119 @@
     },
     {
       "symbol": "NVDA",
-      "score": 1.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Micron Got a Major Vote of Confidence From Nvidia’s Jensen Huang on AI Returns. I Still Wouldn’t Chase MU Stock Here.",
+          "title": "NVIDIA (NVDA): AI Factory Demand Shows How Growth Can Stay High Without Balance Sheet Strain",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Jensen Huang Says AI Is ‘Insanely Profitable.’ That Means It’s Not Too Late to Hop on the Nvidia Bandwagon.",
+          "title": "Jim Cramer Asserts NVIDIA (NVDA), Not SpaceX, Is The “Key” To The Market",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Broadcom (AVGO): AI XPV Platform Sharpens Its Role in Custom Compute and Networking Infrastructure",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Can Robots Rescue Nvidia Stock?",
+          "title": "Jim Cramer Keeps The Faith in Broadcom (AVGO)",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRVL",
+      "symbol": "META",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Adobe’s CFO is departing for Marvell. And it’s one more reason for investors to choose chips over software.",
+          "title": "A year after Meta tapped Alexandr Wang to build a new AI model, Zuckerberg has to sell it",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ROKU",
+      "symbol": "RIVN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Roku is exploring strategic options, including a sale of the company, sources say",
+          "title": "Rivian CEO taking different approach than Elon Musk for humanoid robotics company",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOG",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Alphabet (GOOG) Slipped on Concerns Over Increased Capex and AI Monetization",
+          "title": "Former Tesla board member says SpaceX needs to achieve 2 of its 3 moonshots to keep its valuation ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "RKLB",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Alphabet (GOOG) Slipped on Concerns Over Increased Capex and AI Monetization",
+          "title": "Why Rocket Lab stock tumbled on Nasdaq-100 news",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron Got a Major Vote of Confidence From Nvidia’s Jensen Huang on AI Returns. I Still Wouldn’t Chase MU Stock Here.",
+          "title": "Target Corporation (TGT) Shows Why Store-Based Fulfillment Still Matters in Digital Retail",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SMCI",
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Super Micro Prices $7 Billion AI Server Financing Package to Support $39 Billion Order Backlog (SMCI)",
+          "title": "Walmart Inc. (WMT) Shows How Faster Delivery and Cross-Border Access Can Lift Online Retail",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PANW",
+      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Palo Alto Networks, Inc. (PANW) A Good Stock To Buy Now?",
+          "title": "Costco Wholesale Corporation (COST) Shows How Digitally Enabled Sales Are Outrunning Its Core Business",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GM",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "General Motors analyst spots customer trend investors should watch",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HOOD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Robinhood Markets, Inc. (HOOD) A Good Stock To Buy Now?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "KTOS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Kratos Defense & Security Solutions, Inc. (KTOS) A Good Stock To Buy Now?",
+          "title": "Amazon.com Inc. (AMZN) Shows How Logistics Scale Can Become a Broader E-Commerce Service",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -227,7 +187,84 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is CrowdStrike Holdings, Inc. (CRWD) A Good Stock To Buy Now?",
+          "title": "CrowdStrike (CRWD): ARR Growth Shows Why Falcon Still Has Room to Expand Across Cybersecurity Budgets",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DDOG",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Datadog (DDOG): AI Observability Push Shows Why Cloud Monitoring Demand Is Broadening",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ANET",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Arista Networks (ANET): 1.6T Launch Shows How AI Fabrics Are Expanding Its Data Center Opportunity",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Palantir (PLTR): Debt-Free AI Growth Shows Why Its Software Story Still Has Financial Firepower",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Lumentum (LITE): JPMorgan Pushback Helps Keep the AI Optical Networking Case Intact",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "VRT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Vertiv (VRT): Digital Twin Work Shows How AI Factories Are Becoming an Infrastructure Story",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HPE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "HPE (HPE): Networking Growth Gives the AI Infrastructure Bull Case More Substance",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Jim Cramer Thinks Microsoft (MSFT) Doesn’t Need $100 Billion",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -235,6 +272,8 @@
     }
   ],
   "watch_only": {
-    "xAI (private)": 1
+    "Anthropic (private)": 4,
+    "xAI (private)": 1,
+    "OpenAI (private)": 1
   }
 }
