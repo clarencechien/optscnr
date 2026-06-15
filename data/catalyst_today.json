@@ -1,94 +1,117 @@
 {
-  "updated_at": "2026-06-14T21:51:53.639611",
+  "updated_at": "2026-06-15T22:33:46.464659",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 25,
-    "items_with_catalyst": 6,
-    "items_both": 0
+    "total_items": 100,
+    "items_with_company": 18,
+    "items_with_catalyst": 12,
+    "items_both": 1
   },
-  "count": 20,
+  "count": 14,
   "tickers": [
-    "GOOGL",
-    "SHOP",
     "NVDA",
-    "AVGO",
-    "META",
-    "RIVN",
-    "TSLA",
-    "RKLB",
-    "TGT",
-    "WMT",
-    "COST",
-    "AMZN",
-    "CRWD",
-    "DDOG",
-    "ANET",
-    "PLTR",
     "JPM",
-    "VRT",
-    "HPE",
-    "MSFT"
+    "MU",
+    "ORCL",
+    "ROKU",
+    "CRM",
+    "META",
+    "WDC",
+    "AMD",
+    "DELL",
+    "AMZN",
+    "COIN",
+    "TGT",
+    "GS"
   ],
   "details": [
     {
-      "symbol": "GOOGL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Elon Musk drifted from Larry Page over a decade ago, but their companies are closer than ever",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "GitLab (GTLB): Google Cloud Expansion Shows How AI Is Deepening Enterprise DevSecOps Demand",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SHOP",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Shopify Inc. (SHOP) Shows Why AI Search Could Become a Bigger E-Commerce Growth Channel",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Shopify (SHOP): GMV Growth Shows Why Its Commerce Platform Still Has Operating Leverage",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "NVDA",
-      "score": 1.0,
+      "score": 3.0,
       "evidence": [
         {
-          "title": "NVIDIA (NVDA): AI Factory Demand Shows How Growth Can Stay High Without Balance Sheet Strain",
+          "title": "Nvidia plans to raise at least $20 billion in first debt sale since start of AI boom",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Jim Cramer Asserts NVIDIA (NVDA), Not SpaceX, Is The “Key” To The Market",
+          "title": "Even Nvidia is joining the AI borrowing spree, with a historic $20 billion bond deal",
+          "catalysts": [
+            "surges"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Nvidia to raise $25 billion in first corporate bond sale in five years",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AVGO",
+      "symbol": "JPM",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Broadcom (AVGO): AI XPV Platform Sharpens Its Role in Custom Compute and Networking Infrastructure",
+          "title": "Charlie Javice reportedly seeking a pardon from Trump ",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Jim Cramer Keeps The Faith in Broadcom (AVGO)",
+          "title": "AMD flirts with a $900 billion valuation after beefing up its memory technology",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Micron bulls are getting even more optimistic about memory trends as earnings draw closer",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Micron Stock is Now Close to Fair Value, But Shorting 2-Week Puts Yield 7.0%",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Oracle Stock Has Shed More Than 20% in Just 5 Days. Bulls Are Hoping a New Federal Government Win Can Turn Things Around.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Oracle CEO Says Token Billing Model Helps Firms Control AI Costs. What That Actually Means for ORCL Stock.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ROKU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Fox to buy streaming device maker Roku for $22 billion",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Salesforce to buy AI customer service platform Fin for $3.6 billion to boost agentic offerings",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -106,66 +129,33 @@
       ]
     },
     {
-      "symbol": "RIVN",
+      "symbol": "WDC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Rivian CEO taking different approach than Elon Musk for humanoid robotics company",
+          "title": "Why Western Digital’s stock was the S&P 500’s biggest gainer on Monday",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Former Tesla board member says SpaceX needs to achieve 2 of its 3 moonshots to keep its valuation ",
+          "title": "AMD flirts with a $900 billion valuation after beefing up its memory technology",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RKLB",
+      "symbol": "DELL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Rocket Lab stock tumbled on Nasdaq-100 news",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Target Corporation (TGT) Shows Why Store-Based Fulfillment Still Matters in Digital Retail",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Walmart Inc. (WMT) Shows How Faster Delivery and Cross-Border Access Can Lift Online Retail",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COST",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Costco Wholesale Corporation (COST) Shows How Digitally Enabled Sales Are Outrunning Its Core Business",
+          "title": "A $1.24 Trillion Reason to Buy Dell Stock Now",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -176,95 +166,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon.com Inc. (AMZN) Shows How Logistics Scale Can Become a Broader E-Commerce Service",
+          "title": "Corning’s Amazon Deal Validates the AI Optics Boom. What That Means for GLW Stock.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWD",
+      "symbol": "COIN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "CrowdStrike (CRWD): ARR Growth Shows Why Falcon Still Has Room to Expand Across Cybersecurity Budgets",
+          "title": "Coinbase's D'Agostino reveals the plan to put all of finance on one app",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DDOG",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Datadog (DDOG): AI Observability Push Shows Why Cloud Monitoring Demand Is Broadening",
+          "title": "A Chicago woman stopped to hear a stranger's story outside Target — then $5,000 vanished from her account",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ANET",
+      "symbol": "GS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Arista Networks (ANET): 1.6T Launch Shows How AI Fabrics Are Expanding Its Data Center Opportunity",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Palantir (PLTR): Debt-Free AI Growth Shows Why Its Software Story Still Has Financial Firepower",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Lumentum (LITE): JPMorgan Pushback Helps Keep the AI Optical Networking Case Intact",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "VRT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Vertiv (VRT): Digital Twin Work Shows How AI Factories Are Becoming an Infrastructure Story",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HPE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "HPE (HPE): Networking Growth Gives the AI Infrastructure Bull Case More Substance",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Jim Cramer Thinks Microsoft (MSFT) Doesn’t Need $100 Billion",
+          "title": "Goldman Sachs Predicts AI Infrastructure Spending Could Hit More Than $1 Trillion in 2027. 3 AI Stocks to Buy.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -272,8 +207,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 4,
-    "xAI (private)": 1,
-    "OpenAI (private)": 1
+    "Anthropic (private)": 1
   }
 }
