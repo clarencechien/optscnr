@@ -61,5 +61,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "PDI"
+  },
+  "Centene": {
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CNC"
+  },
+  "Electronic Arts": {
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "EA"
   }
 }

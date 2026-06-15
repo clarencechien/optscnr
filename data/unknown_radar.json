@@ -1,41 +1,29 @@
 {
-  "updated_at": "2026-06-14T22:39:33.464546",
-  "count": 3,
+  "updated_at": "2026-06-15T23:16:27.188793",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 3,
-      "total_mentions": 13,
-      "consecutive_days": 5,
-      "is_strong": true,
-      "evidence": [
-        "From 10% chance of success to $2 trillion market cap: SpaceX's historic IPO",
-        "SpaceX market cap tops $2 trillion after shares of Elon Musk's rocket company gain 19% on debut"
-      ]
-    },
-    {
-      "name": "JetBlue",
-      "ticker": "JBLU",
+      "name": "Centene",
+      "ticker": "CNC",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "JetBlue bets big on Fort Lauderdale, from a new airport lounge to an international gateway",
-        "JetBlue bets big on Fort Lauderdale, from a new airport lounge to an international gateway"
+        "Centene to offer buyouts to some employees as health insurer cuts costs",
+        "Centene to offer buyouts to some employees as health insurer cuts costs"
       ]
     },
     {
-      "name": "Pimco",
-      "ticker": "PDI",
+      "name": "Electronic Arts",
+      "ticker": "EA",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Defaults in debt markets are starting again, warns Pimco. Here’s the bond giant’s game plan.",
-        "Defaults in debt markets are starting again, warns Pimco. Here’s the bond giant’s game plan."
+        "Electronic Arts launches EA Advertising, a new way for brands to advertise 'directly into gameplay'",
+        "Electronic Arts launches EA Advertising, a new way for brands to advertise 'directly into gameplay'"
       ]
     }
   ]
