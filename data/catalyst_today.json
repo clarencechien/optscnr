@@ -1,35 +1,87 @@
 {
-  "updated_at": "2026-06-16T00:48:06.324464",
+  "updated_at": "2026-06-16T22:30:15.357870",
   "stats": {
-    "total_items": 98,
-    "items_with_company": 19,
-    "items_with_catalyst": 12,
-    "items_both": 0
+    "total_items": 103,
+    "items_with_company": 16,
+    "items_with_catalyst": 18,
+    "items_both": 2
   },
-  "count": 16,
+  "count": 14,
   "tickers": [
-    "NVDA",
-    "ROKU",
-    "ORCL",
-    "CRM",
-    "JPM",
-    "META",
-    "WDC",
-    "CRWD",
-    "MU",
-    "DELL",
-    "AAPL",
     "AMZN",
+    "CRM",
+    "MSFT",
+    "NVDA",
+    "INTC",
+    "TSLA",
+    "META",
+    "AAPL",
     "TGT",
-    "CRWV",
-    "HOOD",
-    "IONQ"
+    "ROKU",
+    "MU",
+    "AMD",
+    "WDAY",
+    "ORCL"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 1.0,
+      "symbol": "AMZN",
+      "score": 2.5,
       "evidence": [
+        {
+          "title": "SpaceX rises 4% to leapfrog Amazon in market cap, closes short of Microsoft",
+          "catalysts": [
+            "rises"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Amazon may face penalties from potential FTC ad suit, Bloomberg News reports",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Salesforce’s stock seals longest losing streak on record as newest AI acquisition sparks anxiety",
+          "catalysts": [
+            "acquisition"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Madison Large Cap Fund Picks Salesforce (CRM) Despite Market Sell-Off",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "SpaceX rises 4% to leapfrog Amazon in market cap, closes short of Microsoft",
+          "catalysts": [
+            "rises"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "'Godfather' of options sees SpaceX surpassing Nvidia, Tesla as early trades come in",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
           "title": "Nvidia plans to raise at least $20 billion in its first debt sale since start of AI boom",
           "catalysts": [],
@@ -43,54 +95,32 @@
       ]
     },
     {
-      "symbol": "ROKU",
+      "symbol": "INTC",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Fox to buy streaming device maker Roku for $22 billion",
+          "title": "Intel begins production of most-advanced chip, inching closer to possible Apple deal",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Roku’s sale to Fox for $22 billion raises a big question",
+          "title": "Intel’s new manufacturing tech enters initial production",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ORCL",
+      "symbol": "TSLA",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Oracle Stock Has Shed More Than 20% in Just 5 Days. Bulls Are Hoping a New Federal Government Win Can Turn Things Around.",
+          "title": "'Godfather' of options sees SpaceX surpassing Nvidia, Tesla as early trades come in",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Oracle CEO Says Token Billing Model Helps Firms Control AI Costs. What That Actually Means for ORCL Stock.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Salesforce to buy AI customer service platform Fin for $3.6 billion to boost agentic offerings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Charlie Javice reportedly seeking a pardon from Trump ",
+          "title": "Tesla booted from the ‘Magnificent Seven’ by a top fund manager. Here is the tech giant he’s crowned.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -98,54 +128,15 @@
     },
     {
       "symbol": "META",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "A year after Meta tapped Alexandr Wang to build a new AI model, Zuckerberg has to sell it",
+          "title": "Madison Large Cap Fund Sees Long-Term Value Creation in Meta Platforms’ (META) Huge Capex",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WDC",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Why Western Digital’s stock was the S&P 500’s biggest gainer on Monday",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "US closes probe into 2024 Delta Air Lines meltdown sparked by CrowdStrike outage",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Micron Stock is Now Close to Fair Value, But Shorting 2-Week Puts Yield 7.0%",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DELL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "A $1.24 Trillion Reason to Buy Dell Stock Now",
+          "title": "Mark Zuckerberg Admits Meta ‘Made Mistakes’ as AI Reshapes 20% of Its Workforce",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -156,18 +147,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Given the News Out of WWDC, Was Warren Buffett Right to Sell Apple Stock?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Corning’s Amazon Deal Validates the AI Optics Boom. What That Means for GLW Stock.",
+          "title": "Intel begins production of most-advanced chip, inching closer to possible Apple deal",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -178,40 +158,62 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "A Chicago woman stopped to hear a stranger's story outside Target — then $5,000 vanished from her account",
+          "title": "Intel begins production of most-advanced chip, inching closer to possible Apple deal",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWV",
+      "symbol": "ROKU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "CoreWeave Just Raised $3.5 Billion. How to Play the AI Stock Here.",
+          "title": "How Roku fits into Fox's future — and what investors are missing about the deal ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HOOD",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Robinhood Wants a Bigger Role in IPOs—Here's Why It Matters",
+          "title": "This little-known AI stock has beaten Micron and Arm this year, and now it’s extending its lead",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IONQ",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why IonQ Stock Ended This Week in the Green Despite Early Sell-Offs",
+          "title": "This little-known AI stock has beaten Micron and Arm this year, and now it’s extending its lead",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WDAY",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Workday (WDAY) Slid Over AI Risk",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Oracle's Q4 Double Beat Shouldn't Have Sent Shares Down By 10%. What Spooked Investors?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -219,6 +221,8 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1
+    "Anthropic (private)": 2,
+    "xAI (private)": 1,
+    "OpenAI (private)": 1
   }
 }
