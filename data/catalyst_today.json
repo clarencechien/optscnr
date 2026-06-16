@@ -1,44 +1,39 @@
 {
-  "updated_at": "2026-06-15T22:33:46.464659",
+  "updated_at": "2026-06-16T00:48:06.324464",
   "stats": {
-    "total_items": 100,
-    "items_with_company": 18,
+    "total_items": 98,
+    "items_with_company": 19,
     "items_with_catalyst": 12,
-    "items_both": 1
+    "items_both": 0
   },
-  "count": 14,
+  "count": 16,
   "tickers": [
     "NVDA",
-    "JPM",
-    "MU",
-    "ORCL",
     "ROKU",
+    "ORCL",
     "CRM",
+    "JPM",
     "META",
     "WDC",
-    "AMD",
+    "CRWD",
+    "MU",
     "DELL",
+    "AAPL",
     "AMZN",
-    "COIN",
     "TGT",
-    "GS"
+    "CRWV",
+    "HOOD",
+    "IONQ"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 3.0,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Nvidia plans to raise at least $20 billion in first debt sale since start of AI boom",
+          "title": "Nvidia plans to raise at least $20 billion in its first debt sale since start of AI boom",
           "catalysts": [],
           "has_catalyst": false
-        },
-        {
-          "title": "Even Nvidia is joining the AI borrowing spree, with a historic $20 billion bond deal",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
         },
         {
           "title": "Nvidia to raise $25 billion in first corporate bond sale in five years",
@@ -48,32 +43,16 @@
       ]
     },
     {
-      "symbol": "JPM",
+      "symbol": "ROKU",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Charlie Javice reportedly seeking a pardon from Trump ",
+          "title": "Fox to buy streaming device maker Roku for $22 billion",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "AMD flirts with a $900 billion valuation after beefing up its memory technology",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Micron bulls are getting even more optimistic about memory trends as earnings draw closer",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron Stock is Now Close to Fair Value, But Shorting 2-Week Puts Yield 7.0%",
+          "title": "Roku’s sale to Fox for $22 billion raises a big question",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -96,22 +75,22 @@
       ]
     },
     {
-      "symbol": "ROKU",
+      "symbol": "CRM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Fox to buy streaming device maker Roku for $22 billion",
+          "title": "Salesforce to buy AI customer service platform Fin for $3.6 billion to boost agentic offerings",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
+      "symbol": "JPM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Salesforce to buy AI customer service platform Fin for $3.6 billion to boost agentic offerings",
+          "title": "Charlie Javice reportedly seeking a pardon from Trump ",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -140,11 +119,22 @@
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "CRWD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AMD flirts with a $900 billion valuation after beefing up its memory technology",
+          "title": "US closes probe into 2024 Delta Air Lines meltdown sparked by CrowdStrike outage",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron Stock is Now Close to Fair Value, But Shorting 2-Week Puts Yield 7.0%",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -162,22 +152,22 @@
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Corning’s Amazon Deal Validates the AI Optics Boom. What That Means for GLW Stock.",
+          "title": "Given the News Out of WWDC, Was Warren Buffett Right to Sell Apple Stock?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COIN",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Coinbase's D'Agostino reveals the plan to put all of finance on one app",
+          "title": "Corning’s Amazon Deal Validates the AI Optics Boom. What That Means for GLW Stock.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -195,11 +185,33 @@
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "CRWV",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Goldman Sachs Predicts AI Infrastructure Spending Could Hit More Than $1 Trillion in 2027. 3 AI Stocks to Buy.",
+          "title": "CoreWeave Just Raised $3.5 Billion. How to Play the AI Stock Here.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Robinhood Wants a Bigger Role in IPOs—Here's Why It Matters",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IONQ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why IonQ Stock Ended This Week in the Green Despite Early Sell-Offs",
           "catalysts": [],
           "has_catalyst": false
         }
