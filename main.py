@@ -1,5 +1,15 @@
 """
-Scanner 3.7 — 整合 unknown_radar（盲點雷達）
+Scanner 3.8 — 三道假高分過濾（反誘惑層）
+【v3.8 改動】「水快滾前提醒一下」——讓 scanner 在你被高分誘惑時標出陷阱
+- 過濾一 ⚠️尾段價外：履約價距現價 >25%(按IV放寬) + DTE<45 → -3
+    擋 F22C/META1100C 這類「極價外+短天期」的投機尾段
+- 過濾二 ⚠️當沖刷量：Vol 大但 Δ7d≈0(OI沒沉澱) → -3
+    擋 GOOGL575C 這類「量大但沒人真建倉」的假點火
+- 過濾三 🏛️機構場：大市值 + IV<35% → -1
+    標 AAPL320C/MSFT 這類「不會噴」的機構溫吞場
+- main() 新增 Spot(現價)抓取；抓不到時過濾自動跳過，不誤殺
+- 門檻集中在 RULE_CONFIG，要調鬆緊改那裡就好
+
 【v3.7 改動】
 - 讀 data/unknown_radar.json
 - 在 README 加「🛸 字典外盲點」摘要區
@@ -45,7 +55,13 @@ TICKER_CATEGORIES = {
 RULE_CONFIG = {
     'VOL_SPIKE_RATIO': 2.5,
     'BIG_CAPS_THRESHOLD':  {'OI': 10000, 'VOL': 2500, 'PRICE': 30.0},
-    'SMALL_CAPS_THRESHOLD': {'OI': 1500, 'VOL': 400, 'PRICE': 6.0}
+    'SMALL_CAPS_THRESHOLD': {'OI': 1500, 'VOL': 400, 'PRICE': 6.0},
+    # === v3.8 三道「假高分」過濾門檻 ===
+    'OTM_TAIL_PCT': 0.25,      # 履約價距現價 >25% = 極價外
+    'OTM_TAIL_DTE': 45,        # 且 DTE<45 = 短天期 → 投機尾段，扣分
+    'CHURN_VOL_MIN': 2000,     # Vol 夠大
+    'CHURN_OI_DELTA_MAX': 200, # 但 Δ7d 幾乎沒增（OI 沒沉澱）→ 當沖刷量，扣分
+    'INST_IV_MAX': 0.35,       # 大市值股 IV <35% = 機構溫吞場（不會噴）
 }
 
 
@@ -56,7 +72,7 @@ _DYNAMIC_SMALL_CAPS = set()
 
 def is_small_cap(symbol):
     """判定是否套用 SMALL_CAPS 閾值
-    
+
     優先順序：
     1. 手動 SMALL_CAPS 名單（強制小盤）
     2. _DYNAMIC_SMALL_CAPS（動態加入的小盤）
@@ -128,7 +144,7 @@ def load_fallen_saas():
 
 def load_unknown_radar():
     """從 data/unknown_radar.json 載入盲點雷達
-    
+
     回傳：
     - tickers: 連續 2+ 天出現且有對應 ticker 的標的（加入主掃描）
     - all_blind_spots: 全部盲點清單（給 README 顯示）
@@ -183,7 +199,7 @@ def fetch_yesterday_data_from_github():
     """
     優先讀本地歷史 CSV（最穩，因為 actions/checkout 已經把整個 repo 拉下來）
     Fallback 到 GitHub raw
-    
+
     這是修「🚀點火」標籤消失的關鍵：
     GitHub raw 對剛 commit 的檔案有 CDN cache 延遲，
     讀本地檔可以完全繞過這個問題。
@@ -237,12 +253,20 @@ def apply_rules(row, prev_data=None):
     expiry, strike = row['Expiry'], row['Strike']
     iv = row.get('IV', 0.0)
     dte = row.get('DTE', 0)
+    spot = row.get('Spot', 0.0)  # 現價，可能為 0（抓不到時）
 
     cfg = RULE_CONFIG['SMALL_CAPS_THRESHOLD'] if is_small_cap(symbol) else RULE_CONFIG['BIG_CAPS_THRESHOLD']
     p_limit = cfg['PRICE'] * (2.0 if dte > 180 else 1.0)
 
     if price > p_limit or oi < (cfg['OI'] * 0.5):
         return "", "HOLD", 0
+
+    # === 計算價外程度（otm_pct）===
+    # otm_pct = (履約價 - 現價) / 現價；正值=價外，越大越價外
+    # 抓不到現價(spot<=0)時設為 None，用到它的判斷一律跳過（不誤殺）
+    otm_pct = None
+    if spot and spot > 0:
+        otm_pct = (strike - spot) / spot
 
     is_gamble = (dte < 5)
     if is_gamble:
@@ -289,6 +313,27 @@ def apply_rules(row, prev_data=None):
     if oi > 30000:
         tags.append("🔥萬人塚"); score += 2
 
+    # ============================================================
+    # === v3.8 過濾一：極價外尾段（OTM% 過大 + 短天期）===
+    # 主升段點火（如 F 16C，距現價近）vs 尾段狂歡（如 F 22C / META 1100C，極價外）
+    # scanner 給一樣的點火分，但意義相反。極價外+短天期=投機尾段，扣分+警示。
+    # IV 調整：高 IV 股本來就容易大幅波動，門檻按 IV 放寬，避免誤殺 HOOD 這類高波動股。
+    #   有效門檻 = 基準25% × (1 + (IV-50%)/100)，IV70%→門檻30%，IV100%→門檻37.5%
+    # 只在抓得到現價(otm_pct 非 None)時才判斷，否則跳過不誤殺。
+    if otm_pct is not None and ignition:
+        iv_frac = iv / 100.0 if iv > 0 else 0.5
+        otm_threshold = RULE_CONFIG['OTM_TAIL_PCT'] * (1 + max(0, iv_frac - 0.5))
+        if otm_pct > otm_threshold and dte < RULE_CONFIG['OTM_TAIL_DTE']:
+            tags.append(f"⚠️尾段價外({otm_pct*100:.0f}%)")
+            score -= 3
+
+    # === v3.8 過濾三：機構溫吞場（大市值 + 低 IV）===
+    # 大市值權值股 + IV<35% = 機構避險/收租場，不會噴，free ride 啟動不了
+    # （AAPL 320C IV26%、MSFT 這種）。標警示但不重扣（有時你只是想看看）。
+    if (not is_small_cap(symbol)) and iv > 0 and (iv / 100.0) < RULE_CONFIG['INST_IV_MAX']:
+        tags.append("🏛️機構場")
+        score -= 1
+
     if action != "STRONG_BUY" and ignition and (is_leaps or is_smoke):
         action = "BUY_WATCH"
         score += 2
@@ -306,6 +351,23 @@ def generate_report(df):
     print("\n🔬 開始計算 enrichment...")
     df, hist_date = add_oi_delta(df)
     print(f"  ✅ OI Δ7d 已計算 (vs {hist_date})")
+
+    # ============================================================
+    # === v3.8 過濾二：當沖刷量（Vol 大但 Δ7d≈0）===
+    # 點火倍數會被當沖量灌水。真建倉=Vol大+Δ7d大；當沖刷量=Vol大+Δ7d≈0(OI沒沉澱)。
+    # 如 GOOGL 575C：Vol 2509 但 Δ7d +1 → 假點火。這裡 enrichment 後才有 OI_d7，故在此後處理。
+    if 'OI_d7' in df.columns:
+        churn_mask = (
+            (df['Volume'] >= RULE_CONFIG['CHURN_VOL_MIN']) &
+            (df['OI_d7'].abs() <= RULE_CONFIG['CHURN_OI_DELTA_MAX'])
+        )
+        n_churn = int(churn_mask.sum())
+        if n_churn > 0:
+            df.loc[churn_mask, 'Score'] = df.loc[churn_mask, 'Score'] - 3
+            df.loc[churn_mask, 'Tags'] = df.loc[churn_mask, 'Tags'] + " ⚠️當沖刷量"
+            print(f"  🔍 當沖刷量過濾：{n_churn} 筆 Vol大但OI沒增，已降級")
+        # 重新依調整後分數排序
+        df = df.sort_values(by=['Score', 'Volume'], ascending=[False, False])
 
     auto_watch = set(load_auto_watch())
     catalyst = set(load_catalyst_today())
@@ -335,7 +397,7 @@ def generate_report(df):
         md += f"**🎰 本週動能小盤股**: {', '.join(sorted(small_caps_mom))}\n\n"
     if auto_watch:
         md += f"**🔭 本週候選池**: {', '.join(sorted(auto_watch))}\n\n"
-    
+
     # 盲點雷達詳細摘要
     if all_blind_spots:
         strong = [b for b in all_blind_spots if b.get('is_strong')]
@@ -502,6 +564,21 @@ def main():
             print("💨 (無期權)")
             continue
 
+        # 抓現價（spot）給「極價外尾段」過濾用。抓不到設 0，過濾自動跳過不誤殺。
+        spot_price = 0.0
+        try:
+            fast = tk.fast_info
+            spot_price = float(fast.get('lastPrice', 0) or fast.get('last_price', 0) or 0)
+        except Exception:
+            spot_price = 0.0
+        if not spot_price:
+            try:
+                hist = tk.history(period="1d")
+                if not hist.empty:
+                    spot_price = float(hist['Close'].iloc[-1])
+            except Exception:
+                spot_price = 0.0
+
         valid_target_dates = [d for d in target_dates if d in available_dates]
         found_any = False
 
@@ -534,7 +611,7 @@ def main():
                     d_row = {
                         'Stock': symbol, 'Expiry': d_str, 'Strike': row['Strike'], 'Ask': row['Ask'],
                         'OpenInterest': int(row['OpenInterest']), 'Volume': int(row['Volume']),
-                        'IV': row['IV'], 'DTE': dte
+                        'IV': row['IV'], 'DTE': dte, 'Spot': spot_price
                     }
                     tags, action, score = apply_rules(d_row, prev_df)
                     if score > 0 or action != "HOLD":
