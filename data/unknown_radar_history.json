@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-06-14",
-    "consecutive_days": 5,
-    "total_mentions": 13,
+    "last_seen": "2026-06-17",
+    "consecutive_days": 6,
+    "total_mentions": 15,
     "ticker": "NDAQ"
   },
   "Foreign": {
@@ -54,5 +54,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "EA"
+  },
+  "Allbirds": {
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BIRD"
+  },
+  "UniQure": {
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "QURE"
   }
 }
