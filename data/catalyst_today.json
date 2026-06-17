@@ -1,60 +1,152 @@
 {
-  "updated_at": "2026-06-16T22:30:15.357870",
+  "updated_at": "2026-06-17T22:20:57.365581",
   "stats": {
-    "total_items": 103,
-    "items_with_company": 16,
-    "items_with_catalyst": 18,
-    "items_both": 2
+    "total_items": 104,
+    "items_with_company": 21,
+    "items_with_catalyst": 16,
+    "items_both": 3
   },
-  "count": 14,
+  "count": 17,
   "tickers": [
-    "AMZN",
-    "CRM",
-    "MSFT",
-    "NVDA",
-    "INTC",
-    "TSLA",
-    "META",
-    "AAPL",
     "TGT",
-    "ROKU",
-    "MU",
-    "AMD",
-    "WDAY",
-    "ORCL"
+    "TSM",
+    "AAPL",
+    "ASML",
+    "SOUN",
+    "AMZN",
+    "GOOGL",
+    "MSFT",
+    "META",
+    "IBM",
+    "WMT",
+    "PYPL",
+    "COIN",
+    "LRCX",
+    "HUT",
+    "AMAT",
+    "HOOD"
   ],
   "details": [
     {
-      "symbol": "AMZN",
+      "symbol": "TGT",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Chairman Warsh abstains from giving rate forecast as several members signal a hike in 2026",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Target, Walmart and Amazon among brands losing LGBTQ+ consumer spending, new survey says",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "SoundHound AI Reveals Its Strategy for Finding a Potential Acquisition Target, and It's Risky",
+          "catalysts": [
+            "acquisition"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
       "score": 2.5,
       "evidence": [
         {
-          "title": "SpaceX rises 4% to leapfrog Amazon in market cap, closes short of Microsoft",
+          "title": "Taiwan Semiconductor Manufacturing Co.’s (TSM) 25% Capex Budget Hike Surged Market Confidence",
           "catalysts": [
-            "rises"
+            "surged"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Amazon may face penalties from potential FTC ad suit, Bloomberg News reports",
+          "title": "What Makes Taiwan Semiconductor Manufacturing (TSM) a Strong Bet?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
-      "score": 2.5,
+      "symbol": "AAPL",
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Salesforce’s stock seals longest losing streak on record as newest AI acquisition sparks anxiety",
+          "title": "It’s ‘unavoidable’: Apple says it will be forced to raise prices due to the AI boom",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple to raise prices due to memory chip shortage, CEO tells WSJ",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple CEO warns price hikes ’unavoidable’ as chip costs bite - WSJ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ASML",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "ASML Holding N.V. (ASML) Rallied on Market Dominance",
+          "catalysts": [
+            "rallied"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "SOUN",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "SoundHound AI Reveals Its Strategy for Finding a Potential Acquisition Target, and It's Risky",
           "catalysts": [
             "acquisition"
           ],
           "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Amazon AI exec predicts first 'commercially useful' quantum computers in 5-7 years",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "Madison Large Cap Fund Picks Salesforce (CRM) Despite Market Sell-Off",
+          "title": "Target, Walmart and Amazon among brands losing LGBTQ+ consumer spending, new survey says",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "SpaceX Just Passed Amazon and Microsoft Is Next",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "CEOs of Anthropic and Google DeepMind call for U.S.-led AI coalition in meeting at G7",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Amazon AI exec predicts first 'commercially useful' quantum computers in 5-7 years",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -62,65 +154,15 @@
     },
     {
       "symbol": "MSFT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "SpaceX rises 4% to leapfrog Amazon in market cap, closes short of Microsoft",
-          "catalysts": [
-            "rises"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "'Godfather' of options sees SpaceX surpassing Nvidia, Tesla as early trades come in",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia plans to raise at least $20 billion in its first debt sale since start of AI boom",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia to raise $25 billion in first corporate bond sale in five years",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Intel begins production of most-advanced chip, inching closer to possible Apple deal",
+          "title": "Amazon AI exec predicts first 'commercially useful' quantum computers in 5-7 years",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Intel’s new manufacturing tech enters initial production",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "'Godfather' of options sees SpaceX surpassing Nvidia, Tesla as early trades come in",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Tesla booted from the ‘Magnificent Seven’ by a top fund manager. Here is the tech giant he’s crowned.",
+          "title": "SpaceX Just Passed Amazon and Microsoft Is Next",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -131,89 +173,100 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Madison Large Cap Fund Sees Long-Term Value Creation in Meta Platforms’ (META) Huge Capex",
+          "title": "Exclusive-Meta head of product for ’AI for work’ transformation is leaving company",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Mark Zuckerberg Admits Meta ‘Made Mistakes’ as AI Reshapes 20% of Its Workforce",
+          "title": "Meta executive leading 'AI for Work' transformation to depart- report",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "IBM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Intel begins production of most-advanced chip, inching closer to possible Apple deal",
+          "title": "Amazon AI exec predicts first 'commercially useful' quantum computers in 5-7 years",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Intel begins production of most-advanced chip, inching closer to possible Apple deal",
+          "title": "Target, Walmart and Amazon among brands losing LGBTQ+ consumer spending, new survey says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ROKU",
+      "symbol": "PYPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "How Roku fits into Fox's future — and what investors are missing about the deal ",
+          "title": "SpaceX adds a third ‘PayPal Mafia’ member to its board",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "COIN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "This little-known AI stock has beaten Micron and Arm this year, and now it’s extending its lead",
+          "title": "Mark Cuban has a blunt response to Coinbase CEO",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "LRCX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "This little-known AI stock has beaten Micron and Arm this year, and now it’s extending its lead",
+          "title": "Lam Research (LRCX) Stands Out on Strong Demand",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WDAY",
+      "symbol": "HUT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Workday (WDAY) Slid Over AI Risk",
+          "title": "Another Hut 8 Board Member Sells Company Stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ORCL",
+      "symbol": "AMAT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Oracle's Q4 Double Beat Shouldn't Have Sent Shares Down By 10%. What Spooked Investors?",
+          "title": "Strong Results Lifted Applied Materials (AMAT) in Q1",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Analyst Report: Robinhood Markets Inc",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -221,8 +274,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2,
-    "xAI (private)": 1,
+    "Anthropic (private)": 5,
     "OpenAI (private)": 1
   }
 }
