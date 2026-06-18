@@ -1,115 +1,139 @@
 {
-  "updated_at": "2026-06-17T22:20:57.365581",
+  "updated_at": "2026-06-18T22:30:20.089001",
   "stats": {
-    "total_items": 104,
-    "items_with_company": 21,
-    "items_with_catalyst": 16,
-    "items_both": 3
+    "total_items": 98,
+    "items_with_company": 25,
+    "items_with_catalyst": 15,
+    "items_both": 7
   },
-  "count": 17,
+  "count": 20,
   "tickers": [
-    "TGT",
-    "TSM",
+    "INTC",
     "AAPL",
-    "ASML",
-    "SOUN",
-    "AMZN",
-    "GOOGL",
-    "MSFT",
-    "META",
-    "IBM",
-    "WMT",
-    "PYPL",
-    "COIN",
-    "LRCX",
-    "HUT",
+    "TGT",
+    "RTX",
     "AMAT",
-    "HOOD"
+    "CRM",
+    "AMZN",
+    "MU",
+    "META",
+    "NKE",
+    "ROKU",
+    "TSLA",
+    "CRWV",
+    "ZS",
+    "NVDA",
+    "AVGO",
+    "GOOGL",
+    "NRG",
+    "MSFT",
+    "COIN"
   ],
   "details": [
     {
-      "symbol": "TGT",
-      "score": 3.0,
+      "symbol": "INTC",
+      "score": 10,
       "evidence": [
         {
-          "title": "Chairman Warsh abstains from giving rate forecast as several members signal a hike in 2026",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Target, Walmart and Amazon among brands losing LGBTQ+ consumer spending, new survey says",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "SoundHound AI Reveals Its Strategy for Finding a Potential Acquisition Target, and It's Risky",
+          "title": "Intel gains 10% after Trump says company will partner with Apple on U.S. chip design",
           "catalysts": [
-            "acquisition"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Taiwan Semiconductor Manufacturing Co.’s (TSM) 25% Capex Budget Hike Surged Market Confidence",
-          "catalysts": [
-            "surged"
+            "rally",
+            "gains"
           ],
           "has_catalyst": true
         },
         {
-          "title": "What Makes Taiwan Semiconductor Manufacturing (TSM) a Strong Bet?",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Intel’s stock jumps 11% — even as analysts say new Apple chip deal might start small",
+          "catalysts": [
+            "jumps",
+            "foundry"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Intel taps industry veteran Seok-Hee Lee to lead foundry packaging push",
+          "catalysts": [
+            "foundry"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "AAPL",
-      "score": 2.0,
+      "score": 9.0,
       "evidence": [
         {
-          "title": "It’s ‘unavoidable’: Apple says it will be forced to raise prices due to the AI boom",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Intel gains 10% after Trump says company will partner with Apple on U.S. chip design",
+          "catalysts": [
+            "rally",
+            "gains"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Apple to raise prices due to memory chip shortage, CEO tells WSJ",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Intel’s stock jumps 11% — even as analysts say new Apple chip deal might start small",
+          "catalysts": [
+            "jumps",
+            "foundry"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Apple CEO warns price hikes ’unavoidable’ as chip costs bite - WSJ",
+          "title": "Micron’s stock is on the rise. Even Apple isn’t safe from ballooning memory-chip costs.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ASML",
-      "score": 2,
+      "symbol": "TGT",
+      "score": 4,
       "evidence": [
         {
-          "title": "ASML Holding N.V. (ASML) Rallied on Market Dominance",
+          "title": "Hollister partners with Target to tap into $89 billion back-to-college shopping market",
           "catalysts": [
-            "rallied"
+            "partnership",
+            "partners with"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "SOUN",
+      "symbol": "RTX",
       "score": 2,
       "evidence": [
         {
-          "title": "SoundHound AI Reveals Its Strategy for Finding a Potential Acquisition Target, and It's Risky",
+          "title": "RTX Stock Has Carved Out a New Price Floor and Is Headed Higher. The Chart Says More Gains Are Likely in Store.",
           "catalysts": [
-            "acquisition"
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Applied Materials (AMAT) Climbed Amid Broad-Based Growth Drivers",
+          "catalysts": [
+            "climbed"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Salesforce Acquires AI Agent Firm Fin for $3.6 Billion to Expand Agentforce. CRM Stock Could Double Over the Next 4 Years.",
+          "catalysts": [
+            "acquires"
           ],
           "has_catalyst": true
         }
@@ -117,52 +141,31 @@
     },
     {
       "symbol": "AMZN",
-      "score": 1.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Amazon AI exec predicts first 'commercially useful' quantum computers in 5-7 years",
+          "title": "Amazon investigating engineers who criticized AI data center expansion",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Target, Walmart and Amazon among brands losing LGBTQ+ consumer spending, new survey says",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "SpaceX Just Passed Amazon and Microsoft Is Next",
+          "title": "Wall Street recovers from Fed slump, and the next step for Amazon's AI chip ambitions",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "MU",
       "score": 1.0,
       "evidence": [
         {
-          "title": "CEOs of Anthropic and Google DeepMind call for U.S.-led AI coalition in meeting at G7",
+          "title": "Micron’s stock is on the rise. Even Apple isn’t safe from ballooning memory-chip costs.",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Amazon AI exec predicts first 'commercially useful' quantum computers in 5-7 years",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Amazon AI exec predicts first 'commercially useful' quantum computers in 5-7 years",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "SpaceX Just Passed Amazon and Microsoft Is Next",
+          "title": "Micron, other memory stocks are having their best year ever. Why do they still look so cheap?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -173,45 +176,122 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Exclusive-Meta head of product for ’AI for work’ transformation is leaving company",
+          "title": "Exclusive-Meta lobbies Congress for protection from child-harm lawsuits",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Meta executive leading 'AI for Work' transformation to depart- report",
+          "title": "Meta signs new AI computing deals with data center firm Crusoe, Bloomberg News reports",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IBM",
+      "symbol": "NKE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon AI exec predicts first 'commercially useful' quantum computers in 5-7 years",
+          "title": "Why this year's World Cup is happening at the perfect time for struggling Nike",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
+      "symbol": "ROKU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Target, Walmart and Amazon among brands losing LGBTQ+ consumer spending, new survey says",
+          "title": "Fox stock gets sobering BofA call amid Roku deal",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PYPL",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "SpaceX adds a third ‘PayPal Mafia’ member to its board",
+          "title": "Jim Cramer Remembers How He Was Criticized After Tesla, Inc. (TSLA)’s IPO",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Here’s Why Jim Cramer Thinks CoreWeave Inc. (CRWV)’s The Best",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ZS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "AI Agents Are Changing Cybersecurity Forever. Zscaler Is Positioning Itself to Win Big.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Jim Cramer Wonders Whether Nvidia Corp (NVDA)’s Becoming Like Apple",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Jim Cramer Shares Unmissable Insights About Broadcom (AVGO)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Jim Cramer Discusses Alphabet Inc. (GOOGL)’s AI Chips",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NRG",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "How Is NRG Energy's Stock Performance Compared to Other Utility Stocks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft Corporation (MSFT) Fell as Azure Growth Fell Short of Expectations",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -222,51 +302,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Mark Cuban has a blunt response to Coinbase CEO",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "LRCX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Lam Research (LRCX) Stands Out on Strong Demand",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HUT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Another Hut 8 Board Member Sells Company Stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMAT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Strong Results Lifted Applied Materials (AMAT) in Q1",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HOOD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Analyst Report: Robinhood Markets Inc",
+          "title": "'Rapidly Evolving': Benchmark Analyst Bullish on Coinbase After Stocks, Options Moves",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -274,7 +310,8 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 5,
-    "OpenAI (private)": 1
+    "xAI (private)": 1,
+    "OpenAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
