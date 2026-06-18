@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-06-17",
-    "consecutive_days": 6,
-    "total_mentions": 15,
+    "last_seen": "2026-06-18",
+    "consecutive_days": 7,
+    "total_mentions": 17,
     "ticker": "NDAQ"
   },
   "Foreign": {
@@ -68,5 +68,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "QURE"
+  },
+  "Vanguard": {
+    "first_seen": "2026-06-18",
+    "last_seen": "2026-06-18",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "VGES"
   }
 }

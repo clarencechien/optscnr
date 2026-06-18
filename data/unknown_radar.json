@@ -1,41 +1,29 @@
 {
-  "updated_at": "2026-06-17T22:56:48.854684",
-  "count": 3,
+  "updated_at": "2026-06-18T23:17:34.290225",
+  "count": 2,
   "blind_spots": [
     {
       "name": "Nasdaq",
       "ticker": "NDAQ",
       "mentions_today": 2,
-      "total_mentions": 15,
-      "consecutive_days": 6,
+      "total_mentions": 17,
+      "consecutive_days": 7,
       "is_strong": true,
       "evidence": [
-        "Wilco 63 prices $200M IPO on Nasdaq as blank check company",
-        "Is Leidos Holdings Stock Underperforming the Nasdaq?"
+        "Akanda stock tumbles on Nasdaq compliance notice",
+        "Is Eversource Energy Stock Underperforming the Nasdaq?"
       ]
     },
     {
-      "name": "Allbirds",
-      "ticker": "BIRD",
+      "name": "Vanguard",
+      "ticker": "VGES",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Allbirds continues AI pivot with name change and CEO hire, sending stock soaring",
-        "Allbirds continues AI pivot with name change and CEO hire, sending stock soaring"
-      ]
-    },
-    {
-      "name": "UniQure",
-      "ticker": "QURE",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "UniQure to seek FDA approval for Huntington's disease gene therapy after previous clash with agency",
-        "UniQure to seek FDA approval for Huntington's disease gene therapy after previous clash with agency"
+        "Women have better retirement savings habits but lower 401(k) balances than men, Vanguard finds",
+        "I’m 55 and retiring in 6 years. Should I be switching to Roth 401(k) contributions now?"
       ]
     }
   ]
