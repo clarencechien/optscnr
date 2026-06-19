@@ -6,20 +6,6 @@
     "total_mentions": 17,
     "ticker": "NDAQ"
   },
-  "Foreign": {
-    "first_seen": "2026-06-11",
-    "last_seen": "2026-06-11",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BLX"
-  },
-  "DoorDash": {
-    "first_seen": "2026-06-11",
-    "last_seen": "2026-06-11",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "DASH"
-  },
   "Beijing": {
     "first_seen": "2026-06-12",
     "last_seen": "2026-06-12",
@@ -75,5 +61,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "VGES"
+  },
+  "Starlink": {
+    "first_seen": "2026-06-19",
+    "last_seen": "2026-06-19",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "OTAI-UN"
+  },
+  "Accenture": {
+    "first_seen": "2026-06-19",
+    "last_seen": "2026-06-19",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ACN"
+  },
+  "Indonesia": {
+    "first_seen": "2026-06-19",
+    "last_seen": "2026-06-19",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "INDO"
+  },
+  "Canadian": {
+    "first_seen": "2026-06-19",
+    "last_seen": "2026-06-19",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CNDIF"
   }
 }

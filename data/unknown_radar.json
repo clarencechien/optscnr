@@ -1,29 +1,53 @@
 {
-  "updated_at": "2026-06-18T23:17:34.290225",
-  "count": 2,
+  "updated_at": "2026-06-19T22:30:49.100735",
+  "count": 4,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 17,
-      "consecutive_days": 7,
-      "is_strong": true,
-      "evidence": [
-        "Akanda stock tumbles on Nasdaq compliance notice",
-        "Is Eversource Energy Stock Underperforming the Nasdaq?"
-      ]
-    },
-    {
-      "name": "Vanguard",
-      "ticker": "VGES",
+      "name": "Starlink",
+      "ticker": "OTAI-UN",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Women have better retirement savings habits but lower 401(k) balances than men, Vanguard finds",
-        "I’m 55 and retiring in 6 years. Should I be switching to Roth 401(k) contributions now?"
+        "Jio Platforms eyes low-orbit satellite rollout as Starlink awaits India launch",
+        "Jio Platforms eyes low-orbit satellite rollout as Starlink awaits India launch"
+      ]
+    },
+    {
+      "name": "Accenture",
+      "ticker": "ACN",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Indian IT stocks slump up to 7% as Accenture cuts revenue outlook, fueling fresh concerns over secto",
+        "Indian IT stocks slump up to 7% as Accenture cuts revenue outlook, fueling fresh concerns over secto"
+      ]
+    },
+    {
+      "name": "Indonesia",
+      "ticker": "INDO",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "MSCI isn't done with Indonesia yet: new report signals continued concerns over market transparency",
+        "MSCI isn't done with Indonesia yet: new report signals continued concerns over market transparency"
+      ]
+    },
+    {
+      "name": "Canadian",
+      "ticker": "CNDIF",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Exclusive-Canadian lender TD tells some employees it will use software to monitor their work",
+        "Canadian bank stocks trade higher as regulator lowers capital requirement"
       ]
     }
   ]
