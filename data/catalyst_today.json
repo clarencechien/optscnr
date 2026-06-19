@@ -1,155 +1,60 @@
 {
-  "updated_at": "2026-06-18T22:30:20.089001",
+  "updated_at": "2026-06-19T21:44:52.066915",
   "stats": {
-    "total_items": 98,
-    "items_with_company": 25,
-    "items_with_catalyst": 15,
-    "items_both": 7
+    "total_items": 99,
+    "items_with_company": 9,
+    "items_with_catalyst": 12,
+    "items_both": 1
   },
-  "count": 20,
+  "count": 10,
   "tickers": [
-    "INTC",
-    "AAPL",
-    "TGT",
-    "RTX",
-    "AMAT",
-    "CRM",
     "AMZN",
+    "AAPL",
+    "DIS",
     "MU",
-    "META",
-    "NKE",
-    "ROKU",
-    "TSLA",
-    "CRWV",
-    "ZS",
-    "NVDA",
-    "AVGO",
-    "GOOGL",
-    "NRG",
-    "MSFT",
-    "COIN"
+    "WDAY",
+    "AMD",
+    "COIN",
+    "JPM",
+    "RKLB",
+    "META"
   ],
   "details": [
     {
-      "symbol": "INTC",
-      "score": 10,
+      "symbol": "AMZN",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Intel gains 10% after Trump says company will partner with Apple on U.S. chip design",
+          "title": "SpaceX stock sinks for a second day as company slips below Amazon in market cap",
           "catalysts": [
-            "rally",
-            "gains"
+            "sinks"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Intel’s stock jumps 11% — even as analysts say new Apple chip deal might start small",
-          "catalysts": [
-            "jumps",
-            "foundry"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Intel taps industry veteran Seok-Hee Lee to lead foundry packaging push",
-          "catalysts": [
-            "foundry"
-          ],
-          "has_catalyst": true
+          "title": "Catalyst Watch: Micron earnings, Amazon Prime Day, and stress tests for major banks",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "AAPL",
-      "score": 9.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Intel gains 10% after Trump says company will partner with Apple on U.S. chip design",
-          "catalysts": [
-            "rally",
-            "gains"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Intel’s stock jumps 11% — even as analysts say new Apple chip deal might start small",
-          "catalysts": [
-            "jumps",
-            "foundry"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Micron’s stock is on the rise. Even Apple isn’t safe from ballooning memory-chip costs.",
+          "title": "Memory crisis hits such extremes that 'even Apple can't be safe' ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
-      "score": 4,
+      "symbol": "DIS",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Hollister partners with Target to tap into $89 billion back-to-college shopping market",
-          "catalysts": [
-            "partnership",
-            "partners with"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "RTX",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "RTX Stock Has Carved Out a New Price Floor and Is Headed Higher. The Chart Says More Gains Are Likely in Store.",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMAT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Applied Materials (AMAT) Climbed Amid Broad-Based Growth Drivers",
-          "catalysts": [
-            "climbed"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Salesforce Acquires AI Agent Firm Fin for $3.6 Billion to Expand Agentforce. CRM Stock Could Double Over the Next 4 Years.",
-          "catalysts": [
-            "acquires"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Amazon investigating engineers who criticized AI data center expansion",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Wall Street recovers from Fed slump, and the next step for Amazon's AI chip ambitions",
+          "title": "Bob Iger reflects on 10 years of Shanghai Disneyland as it defies the Chinese pullback",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -157,141 +62,32 @@
     },
     {
       "symbol": "MU",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Micron’s stock is on the rise. Even Apple isn’t safe from ballooning memory-chip costs.",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron, other memory stocks are having their best year ever. Why do they still look so cheap?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Exclusive-Meta lobbies Congress for protection from child-harm lawsuits",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta signs new AI computing deals with data center firm Crusoe, Bloomberg News reports",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why this year's World Cup is happening at the perfect time for struggling Nike",
+          "title": "Catalyst Watch: Micron earnings, Amazon Prime Day, and stress tests for major banks",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ROKU",
+      "symbol": "WDAY",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Fox stock gets sobering BofA call amid Roku deal",
+          "title": "Workday Stock: Is WDAY Underperforming the Technology Sector?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Jim Cramer Remembers How He Was Criticized After Tesla, Inc. (TSLA)’s IPO",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Here’s Why Jim Cramer Thinks CoreWeave Inc. (CRWV)’s The Best",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ZS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "AI Agents Are Changing Cybersecurity Forever. Zscaler Is Positioning Itself to Win Big.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Jim Cramer Wonders Whether Nvidia Corp (NVDA)’s Becoming Like Apple",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Jim Cramer Shares Unmissable Insights About Broadcom (AVGO)",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Jim Cramer Discusses Alphabet Inc. (GOOGL)’s AI Chips",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NRG",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "How Is NRG Energy's Stock Performance Compared to Other Utility Stocks",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Microsoft Corporation (MSFT) Fell as Azure Growth Fell Short of Expectations",
+          "title": "AMD and Rackspace Team Up on a 30 MW AI Compute Agreement. This Could Be a Win for Both Stocks.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -302,7 +98,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "'Rapidly Evolving': Benchmark Analyst Bullish on Coinbase After Stocks, Options Moves",
+          "title": "Coinbase CEO on bitcoin bottom, AI agents, and his war of words with JPMorgan CEO",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Coinbase CEO on bitcoin bottom, AI agents, and his war of words with JPMorgan CEO",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Rocket Lab’s Nasdaq-100 Moment Could Change the Story",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Manus original investors plan to buy back AI firm from Meta for $2 billion, The Information reports",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -310,8 +139,6 @@
     }
   ],
   "watch_only": {
-    "xAI (private)": 1,
-    "OpenAI (private)": 1,
     "Anthropic (private)": 1
   }
 }
