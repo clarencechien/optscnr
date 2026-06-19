@@ -1078,5 +1078,35 @@
         "error": null
       }
     ]
+  },
+  {
+    "ts": "2026-06-19T07:38:37.178447+00:00",
+    "overall": "GREEN",
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "capex_cut:5 / vr300_delay:3 / debt_financed_capex:16",
+        "metrics": {
+          "hits": {
+            "capex_cut": 5,
+            "vr300_delay": 3,
+            "debt_financed_capex": 16
+          }
+        },
+        "notes": [
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[capex_cut] AI Infrastructure Stocks See a Strategic Pause - Let's Data Science",
+          "[capex_cut] 'The odd decouple': JPMorgan says the tech capex surge is masking a troubling slowdown in job growth - Business Insider",
+          "[vr300_delay] Nvidia's CoWoS supplies still secured, but Rubin delay issues crop up: KeyBanc (NVDA:NASDAQ) - Seeking Alpha",
+          "[vr300_delay] [News] NVIDIA Reportedly Denies Rubin Delay as AMD MI450 Spurs Redesign Speculation - TrendForce",
+          "[vr300_delay] NVIDIA Reportedly Won’t Launch the RTX 50 SUPER Series This Year; GeForce RTX 60 “Rubin” Also Delayed as Memory Shortage",
+          "[debt_financed_capex] AI Hyperscalers Are Taking on Debt, But the Broader Market Looks More Leveraged - Yahoo Finance",
+          "[debt_financed_capex] Oracle's AI spending blows past estimates, raising worries over growing debt - Reuters",
+          "[debt_financed_capex] Oracle Raises Massive Debt for AI Infrastructure - Let's Data Science"
+        ],
+        "error": null
+      }
+    ]
   }
 ]
