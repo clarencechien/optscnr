@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-06-13T06:07:05.664242",
-  "tlt_price": 85.7699966430664,
-  "hedging_temperature": 45,
+  "updated_at": "2026-06-20T06:09:11.355366",
+  "tlt_price": 86.75,
+  "hedging_temperature": 15,
   "components": {
     "whales": 0,
     "skew": 15,
-    "oi_buildup": 30
+    "oi_buildup": 0
   },
-  "overall_skew_pct": 2.16,
+  "overall_skew_pct": 2.03,
   "oi_change": {
-    "near_term_oi_total": 634631,
-    "far_term_oi_total": 971806,
-    "near_term_change_pct": 432.3,
-    "far_term_change_pct": -2.4,
+    "near_term_oi_total": 546041,
+    "far_term_oi_total": 727261,
+    "near_term_change_pct": -14.0,
+    "far_term_change_pct": -25.2,
     "has_baseline": true
   },
-  "whale_count": 1,
+  "whale_count": 3,
   "new_position_whales": 0
 }
