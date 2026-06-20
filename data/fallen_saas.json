@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T05:21:38.346572",
+  "updated_at": "2026-06-20T05:15:19.405518",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -11,31 +11,31 @@
   },
   "count": 2,
   "tickers": [
-    "ZS",
-    "CHWY"
+    "CHWY",
+    "AI"
   ],
   "details": [
     {
-      "symbol": "ZS",
-      "price": 129.52,
-      "high_52w": 336.99,
-      "low_52w": 114.62,
-      "drawdown_pct": 61.6,
-      "rebound_pct": 13.0,
+      "symbol": "CHWY",
+      "price": 18.21,
+      "high_52w": 43.84,
+      "low_52w": 17.64,
+      "drawdown_pct": 58.5,
+      "rebound_pct": 3.2,
       "vol_ratio": 1.32,
-      "market_cap_b": 20.9,
-      "score": 27.06
+      "market_cap_b": 7.5,
+      "score": 28.07
     },
     {
-      "symbol": "CHWY",
-      "price": 19.31,
-      "high_52w": 43.84,
-      "low_52w": 18.22,
-      "drawdown_pct": 56.0,
-      "rebound_pct": 6.0,
-      "vol_ratio": 1.22,
-      "market_cap_b": 7.9,
-      "score": 25.79
+      "symbol": "AI",
+      "price": 10.3,
+      "high_52w": 30.11,
+      "low_52w": 7.67,
+      "drawdown_pct": 65.8,
+      "rebound_pct": 34.2,
+      "vol_ratio": 1.27,
+      "market_cap_b": 1.5,
+      "score": 23.57
     }
   ]
 }
