@@ -6,13 +6,6 @@
     "total_mentions": 17,
     "ticker": "NDAQ"
   },
-  "Beijing": {
-    "first_seen": "2026-06-12",
-    "last_seen": "2026-06-12",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BGTCF"
-  },
   "JetBlue": {
     "first_seen": "2026-06-14",
     "last_seen": "2026-06-14",
@@ -64,9 +57,9 @@
   },
   "Starlink": {
     "first_seen": "2026-06-19",
-    "last_seen": "2026-06-19",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-06-21",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "OTAI-UN"
   },
   "Accenture": {
@@ -89,5 +82,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "CNDIF"
+  },
+  "Earth": {
+    "first_seen": "2026-06-21",
+    "last_seen": "2026-06-21",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ETST"
   }
 }
