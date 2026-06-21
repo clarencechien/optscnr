@@ -1,38 +1,117 @@
 {
-  "updated_at": "2026-06-19T21:44:52.066915",
+  "updated_at": "2026-06-21T21:55:37.370700",
   "stats": {
-    "total_items": 99,
-    "items_with_company": 9,
-    "items_with_catalyst": 12,
-    "items_both": 1
+    "total_items": 107,
+    "items_with_company": 16,
+    "items_with_catalyst": 8,
+    "items_both": 3
   },
-  "count": 10,
+  "count": 13,
   "tickers": [
-    "AMZN",
-    "AAPL",
+    "INTC",
+    "BE",
+    "TSM",
     "DIS",
     "MU",
-    "WDAY",
-    "AMD",
-    "COIN",
+    "GS",
+    "AAPL",
+    "CRWD",
+    "F",
+    "ORCL",
+    "VST",
     "JPM",
-    "RKLB",
     "META"
   ],
   "details": [
     {
-      "symbol": "AMZN",
-      "score": 2.5,
+      "symbol": "INTC",
+      "score": 4,
       "evidence": [
         {
-          "title": "SpaceX stock sinks for a second day as company slips below Amazon in market cap",
+          "title": "Jim Cramer Highlights How CEO Lip-Bu Tan Solved Intel (INTC) Foundry Issues",
           "catalysts": [
-            "sinks"
+            "foundry"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Catalyst Watch: Micron earnings, Amazon Prime Day, and stress tests for major banks",
+          "title": "Intel Is Stealing the Foundry Spotlight. Is TSMC Still the Most Important Company in Chips?",
+          "catalysts": [
+            "foundry"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "BE",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Bloom Energy Soared After a New AI Power Report. Is the Fuel Cell Stock a Buy?",
+          "catalysts": [
+            "soared"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Intel Is Stealing the Foundry Spotlight. Is TSMC Still the Most Important Company in Chips?",
+          "catalysts": [
+            "foundry"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Pixar's 'Toy Story 5' lassos biggest opening weekend in franchise history with $160 million haul",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Bob Iger reflects on 10 years of Shanghai Disneyland as it defies the Chinese pullback",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Micron’s earnings are a must-watch market event — with profit growth approaching 1,000%",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "The Entire Micron Investment Thesis Comes Down to This One Number",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Goldman Sachs trims global smartphone market estimates on high memory costs",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Jim Cramer Highlights Goldman Sachs (GS) as Investment Banking Activity Explodes",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -50,55 +129,44 @@
       ]
     },
     {
-      "symbol": "DIS",
+      "symbol": "CRWD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bob Iger reflects on 10 years of Shanghai Disneyland as it defies the Chinese pullback",
+          "title": "Jim Cramer on CrowdStrike (CRWD): “I Think the Second Half of the Year is Going to Be Really Good”",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "F",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Catalyst Watch: Micron earnings, Amazon Prime Day, and stress tests for major banks",
+          "title": "Jim Cramer Notes That He Loves “What Ford (F) Is Doing With the Battery Business”",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WDAY",
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Workday Stock: Is WDAY Underperforming the Technology Sector?",
+          "title": "Jim Cramer Highlights Oracle (ORCL)’s Heavy Debt Load",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "VST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AMD and Rackspace Team Up on a 30 MW AI Compute Agreement. This Could Be a Win for Both Stocks.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Coinbase CEO on bitcoin bottom, AI agents, and his war of words with JPMorgan CEO",
+          "title": "Jim Cramer on Vistra (VST): “It’s Just Fallen Enough”",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -109,18 +177,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Coinbase CEO on bitcoin bottom, AI agents, and his war of words with JPMorgan CEO",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RKLB",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why Rocket Lab’s Nasdaq-100 Moment Could Change the Story",
+          "title": "Jim Cramer Says Banks Like JPMorgan (JPM) “Are Still Inexpensive”",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -131,7 +188,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Manus original investors plan to buy back AI firm from Meta for $2 billion, The Information reports",
+          "title": "Veteran Tech Investor: Meta Is ‘One of the Best Advertising Machines Ever Built’ With 46% Upside",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -139,6 +196,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1
+    "DeepSeek (private)": 1
   }
 }
