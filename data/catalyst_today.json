@@ -1,139 +1,282 @@
 {
-  "updated_at": "2026-06-21T21:55:37.370700",
+  "updated_at": "2026-06-22T22:22:00.309404",
   "stats": {
     "total_items": 107,
-    "items_with_company": 16,
-    "items_with_catalyst": 8,
-    "items_both": 3
+    "items_with_company": 28,
+    "items_with_catalyst": 16,
+    "items_both": 8
   },
-  "count": 13,
+  "count": 19,
   "tickers": [
-    "INTC",
-    "BE",
-    "TSM",
-    "DIS",
+    "TSLA",
+    "NVDA",
     "MU",
-    "GS",
-    "AAPL",
-    "CRWD",
-    "F",
+    "SMCI",
     "ORCL",
-    "VST",
-    "JPM",
-    "META"
+    "TGT",
+    "AMAT",
+    "NFLX",
+    "GOOGL",
+    "META",
+    "QCOM",
+    "AMZN",
+    "LCID",
+    "MSFT",
+    "CRM",
+    "WMT",
+    "RKLB",
+    "F",
+    "GM"
   ],
   "details": [
     {
-      "symbol": "INTC",
-      "score": 4,
+      "symbol": "TSLA",
+      "score": 5.5,
       "evidence": [
         {
-          "title": "Jim Cramer Highlights How CEO Lip-Bu Tan Solved Intel (INTC) Foundry Issues",
-          "catalysts": [
-            "foundry"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Intel Is Stealing the Foundry Spotlight. Is TSMC Still the Most Important Company in Chips?",
-          "catalysts": [
-            "foundry"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BE",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Bloom Energy Soared After a New AI Power Report. Is the Fuel Cell Stock a Buy?",
-          "catalysts": [
-            "soared"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Intel Is Stealing the Foundry Spotlight. Is TSMC Still the Most Important Company in Chips?",
-          "catalysts": [
-            "foundry"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Pixar's 'Toy Story 5' lassos biggest opening weekend in franchise history with $160 million haul",
+          "title": "Tesla faces federal probe after Model 3 slams into Texas home, killing 76-year-old",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Bob Iger reflects on 10 years of Shanghai Disneyland as it defies the Chinese pullback",
+          "title": "Can anyone join Musk in the trillionaire club? Zuckerberg has best shot, according to prediction markets",
           "catalysts": [],
           "has_catalyst": false
+        },
+        {
+          "title": "US opens probe into fatal Tesla crash into Texas home",
+          "catalysts": [
+            "crash"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 3.5,
+      "evidence": [
+        {
+          "title": "Nvidia's stock struggles as Kalshi traders bet chip prices are coming down",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Can anyone join Musk in the trillionaire club? Zuckerberg has best shot, according to prediction markets",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Super Micro’s stock is seeing its best run in a year thanks to Nvidia partnership",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "MU",
-      "score": 1.0,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Micron’s earnings are a must-watch market event — with profit growth approaching 1,000%",
+          "title": "Three key AI stocks to watch this week with traders expecting giant moves",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "The Entire Micron Investment Thesis Comes Down to This One Number",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Micron’s stock momentum builds as the company inks a new Anthropic partnership",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "GS",
-      "score": 1.0,
+      "symbol": "SMCI",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Goldman Sachs trims global smartphone market estimates on high memory costs",
+          "title": "Three key AI stocks to watch this week with traders expecting giant moves",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Jim Cramer Highlights Goldman Sachs (GS) as Investment Banking Activity Explodes",
+          "title": "Super Micro’s stock is seeing its best run in a year thanks to Nvidia partnership",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Oracle workforce shrinks by about 21,000 employees amid AI adoption",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Oracle Stock Tumbles on Higher Capex and Equity Raise - Shorting ORCL Puts Works",
+          "catalysts": [
+            "tumbles"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "'Reward for failure': Investor support for Target Chair Brian Cornell falls to lowest level ever",
+          "catalysts": [
+            "falls"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Applied Materials Stock Looks Pricey—Can AI Demand Justify the Rally?",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Netflix Finally Makes an Acquisition That Wall Street Actually Likes",
+          "catalysts": [
+            "acquisition"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Alphabet has its worst day in over a year on AI concerns after high-profile exits",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Alphabet sees $225 billion market-cap wipeout as investors fear it’s losing the war for AI talent",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 0.5,
+      "symbol": "META",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Memory crisis hits such extremes that 'even Apple can't be safe' ",
+          "title": "Meta's WhatsApp head to step down, will be replaced by Indian fintech founder Kunal Shah",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Can anyone join Musk in the trillionaire club? Zuckerberg has best shot, according to prediction markets",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWD",
+      "symbol": "QCOM",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Qualcomm nearing deal for AI chip startup Modular, Bloomberg News reports",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Qualcomm nears $4B deal for AI chip startup Modular Inc, Bloomberg reports",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Jim Cramer on CrowdStrike (CRWD): “I Think the Second Half of the Year is Going to Be Really Good”",
+          "title": "Amazon Prime Day arrives earlier this year. Here's why Wall Street is watching closely",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LCID",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Lucid to lay off roughly 18% of U.S. workforce, COO Marc Winterhoff leaves",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Chevron to fuel massive Microsoft data center in Texas using natural gas",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Salesforce’s stock extends record losing streak. Can the company disrupt itself?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "BP, Marathon, 7-Eleven, Walmart sued for allegedly using AI to boost California gas prices",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Rocket Lab completes end-to-end VICTUS HAZE mission; sets new TacRS record",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -144,51 +287,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Jim Cramer Notes That He Loves “What Ford (F) Is Doing With the Battery Business”",
+          "title": "Is Ford Motor Company (F) One of the Best EV Stocks to Invest In According to Hedge Funds?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ORCL",
+      "symbol": "GM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Jim Cramer Highlights Oracle (ORCL)’s Heavy Debt Load",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "VST",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Jim Cramer on Vistra (VST): “It’s Just Fallen Enough”",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Jim Cramer Says Banks Like JPMorgan (JPM) “Are Still Inexpensive”",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Veteran Tech Investor: Meta Is ‘One of the Best Advertising Machines Ever Built’ With 46% Upside",
+          "title": "General Motors Company (GM) may Ditch LFP Batteries for Future EVs",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -196,6 +306,8 @@
     }
   ],
   "watch_only": {
-    "DeepSeek (private)": 1
+    "Cerebras (pre-IPO)": 1,
+    "OpenAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
