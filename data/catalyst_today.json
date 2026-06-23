@@ -1,168 +1,48 @@
 {
-  "updated_at": "2026-06-22T22:22:00.309404",
+  "updated_at": "2026-06-23T21:57:10.283993",
   "stats": {
     "total_items": 107,
-    "items_with_company": 28,
-    "items_with_catalyst": 16,
-    "items_both": 8
+    "items_with_company": 26,
+    "items_with_catalyst": 9,
+    "items_both": 2
   },
-  "count": 19,
+  "count": 20,
   "tickers": [
-    "TSLA",
-    "NVDA",
-    "MU",
-    "SMCI",
-    "ORCL",
-    "TGT",
-    "AMAT",
-    "NFLX",
+    "SNDK",
     "GOOGL",
     "META",
-    "QCOM",
-    "AMZN",
+    "TSLA",
+    "INTC",
+    "ORCL",
+    "MU",
+    "IBM",
+    "PFE",
+    "NKE",
+    "BA",
+    "AFRM",
+    "SOFI",
+    "NET",
+    "AMAT",
+    "AMD",
+    "TGT",
     "LCID",
-    "MSFT",
-    "CRM",
-    "WMT",
-    "RKLB",
-    "F",
-    "GM"
+    "LRCX",
+    "MRVL"
   ],
   "details": [
     {
-      "symbol": "TSLA",
-      "score": 5.5,
-      "evidence": [
-        {
-          "title": "Tesla faces federal probe after Model 3 slams into Texas home, killing 76-year-old",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Can anyone join Musk in the trillionaire club? Zuckerberg has best shot, according to prediction markets",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "US opens probe into fatal Tesla crash into Texas home",
-          "catalysts": [
-            "crash"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 3.5,
-      "evidence": [
-        {
-          "title": "Nvidia's stock struggles as Kalshi traders bet chip prices are coming down",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Can anyone join Musk in the trillionaire club? Zuckerberg has best shot, according to prediction markets",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Super Micro’s stock is seeing its best run in a year thanks to Nvidia partnership",
-          "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
+      "symbol": "SNDK",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Three key AI stocks to watch this week with traders expecting giant moves",
+          "title": "Micron and Sandisk lead a sharp tech selloff in a ‘gut-check’ moment for AI stocks",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Micron’s stock momentum builds as the company inks a new Anthropic partnership",
+          "title": "Sandisk Corporation (SNDK) Jumped on Improving Memory Fundamentals",
           "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SMCI",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Three key AI stocks to watch this week with traders expecting giant moves",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Super Micro’s stock is seeing its best run in a year thanks to Nvidia partnership",
-          "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Oracle workforce shrinks by about 21,000 employees amid AI adoption",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Oracle Stock Tumbles on Higher Capex and Equity Raise - Shorting ORCL Puts Works",
-          "catalysts": [
-            "tumbles"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "'Reward for failure': Investor support for Target Chair Brian Cornell falls to lowest level ever",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMAT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Applied Materials Stock Looks Pricey—Can AI Demand Justify the Rally?",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Netflix Finally Makes an Acquisition That Wall Street Actually Likes",
-          "catalysts": [
-            "acquisition"
+            "jumped"
           ],
           "has_catalyst": true
         }
@@ -170,15 +50,20 @@
     },
     {
       "symbol": "GOOGL",
-      "score": 1.0,
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Alphabet has its worst day in over a year on AI concerns after high-profile exits",
+          "title": "Alphabet added to Dow Jones Industrial Average, replacing Verizon",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Alphabet sees $225 billion market-cap wipeout as investors fear it’s losing the war for AI talent",
+          "title": "Google’s online dominance is showing signs of cracking in AI era",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Alphabet’s stock is set to join the Dow. Here’s which company is getting the boot.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -186,42 +71,181 @@
     },
     {
       "symbol": "META",
-      "score": 1.0,
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Meta's WhatsApp head to step down, will be replaced by Indian fintech founder Kunal Shah",
+          "title": "Meta announces new smart glasses starting at $299, as Zuckerberg keeps pushing wearables",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Can anyone join Musk in the trillionaire club? Zuckerberg has best shot, according to prediction markets",
+          "title": "Meta is building a prediction markets app. These stocks fell in response",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "US presses Meta to agree to AI reviews as security concerns rise, NYT reports",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "QCOM",
+      "symbol": "TSLA",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Did Elon Musk Just Hint a SpaceX-Tesla Merger Is Imminent?",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Qualcomm nearing deal for AI chip startup Modular, Bloomberg News reports",
+          "title": "Intel CEO gives investors a reality check",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Qualcomm nears $4B deal for AI chip startup Modular Inc, Bloomberg reports",
+          "title": "Could Intel (INTC) Be an Unexpected Winner of the AI Chip Shortage?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon Prime Day arrives earlier this year. Here's why Wall Street is watching closely",
+          "title": "Oracle sheds 21,000 roles over the past year amid wave of AI layoffs from tech giants",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron and Sandisk lead a sharp tech selloff in a ‘gut-check’ moment for AI stocks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Trump regrets once selling IBM’s stock. Now he’s cheering its quantum future and dealing its shares.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PFE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Nike names Pfizer executive David Denton as CFO",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Nike names Pfizer executive David Denton as CFO",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Boeing wins $2B contract for two MUOS satellites and launch support",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AFRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Weak Investor Sentiment Hurt Affirm Holdings (AFRM) in Q1",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SOFI",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "SoFi Technologies (SOFI) Slid Amid Interest Rate Volatility and Macro Uncertainty",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NET",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Cloudflare, Inc. (NET) among the Most Overvalued Quantum Computing Stocks According to Short Sellers?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "A Growing Supply Gap Has Analysts Eyeing Applied Materials (AMAT)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "AMD Lands a Massive AI Infrastructure Opportunity With Rackspace",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "BofA Cuts Stryker (SYK) Target; Is a Medtech Slowdown Starting to Show?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -232,73 +256,29 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Lucid to lay off roughly 18% of U.S. workforce, COO Marc Winterhoff leaves",
+          "title": "EV maker Lucid to cut about 18% of US workforce, COO Winterhoff exits",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "LRCX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Chevron to fuel massive Microsoft data center in Texas using natural gas",
+          "title": "Why Analysts See More Upside for Lam Research (LRCX)",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
+      "symbol": "MRVL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Salesforce’s stock extends record losing streak. Can the company disrupt itself?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "BP, Marathon, 7-Eleven, Walmart sued for allegedly using AI to boost California gas prices",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RKLB",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Rocket Lab completes end-to-end VICTUS HAZE mission; sets new TacRS record",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Ford Motor Company (F) One of the Best EV Stocks to Invest In According to Hedge Funds?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "General Motors Company (GM) may Ditch LFP Batteries for Future EVs",
+          "title": "The Next Phase of AI Infrastructure Could Be Good News for Marvell (MRVL)",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -306,8 +286,7 @@
     }
   ],
   "watch_only": {
-    "Cerebras (pre-IPO)": 1,
-    "OpenAI (private)": 1,
+    "Cerebras (pre-IPO)": 2,
     "Anthropic (private)": 1
   }
 }
