@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-06-18",
-    "consecutive_days": 7,
-    "total_mentions": 17,
+    "last_seen": "2026-06-24",
+    "consecutive_days": 8,
+    "total_mentions": 20,
     "ticker": "NDAQ"
   },
   "Allbirds": {
@@ -61,5 +61,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "ETST"
+  },
+  "Alibaba": {
+    "first_seen": "2026-06-24",
+    "last_seen": "2026-06-24",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BBAAY"
+  },
+  "Toyota": {
+    "first_seen": "2026-06-24",
+    "last_seen": "2026-06-24",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "TOYOF"
   }
 }

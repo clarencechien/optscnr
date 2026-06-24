@@ -1,5 +1,42 @@
 {
-  "updated_at": "2026-06-23T22:45:55.602318",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-06-24T22:46:22.452611",
+  "count": 3,
+  "blind_spots": [
+    {
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 3,
+      "total_mentions": 20,
+      "consecutive_days": 8,
+      "is_strong": true,
+      "evidence": [
+        "Nasdaq, S&P end lower as tech stocks fall",
+        "Is Henry Schein Stock Underperforming the Nasdaq?"
+      ]
+    },
+    {
+      "name": "Alibaba",
+      "ticker": "BBAAY",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Anthropic accuses Alibaba of campaign to 'brazenly' and 'illicitly' extract AI capabilities",
+        "Anthropic accuses Alibaba of campaign to 'brazenly' and 'illicitly' extract AI capabilities"
+      ]
+    },
+    {
+      "name": "Toyota",
+      "ticker": "TOYOF",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Toyota gains on General Motors in new U.S. sales forecast: 'GM may be looking over their shoulder'",
+        "Toyota gains on General Motors in new U.S. sales forecast: 'GM may be looking over their shoulder'"
+      ]
+    }
+  ]
 }
