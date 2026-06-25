@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T05:47:26.327783",
+  "updated_at": "2026-06-25T05:52:09.237868",
   "version": "sage_v0.1",
   "days_since_ipo": 13,
   "price": 154.5399932861328,
@@ -29,10 +29,14 @@
     "pc_vol_ratio": 0.059
   },
   "viewpoint": {
-    "has_viewpoint": false,
-    "confidence": 0,
+    "has_viewpoint": true,
+    "confidence": 3,
     "passes": false,
-    "detail": null
+    "detail": {
+      "catalyst": "\uff08\u7bc4\u4f8b\uff092027 S&P 500 \u7d0d\u5165\u524d\u7684\u56db\u5b63\u7372\u5229\u9a57\u8b49\u7a97\u53e3",
+      "thesis": "\uff08\u7bc4\u4f8b\uff09\u5e02\u5834\u4f4e\u4f30 Q3 Starlink ARPU \u7684 B2G \u5546\u696d\u5316\u901f\u5ea6\uff0c\u7372\u5229\u9054\u6a19\u6703\u6bd4\u5171\u8b58\u65e9\u4e00\u5b63",
+      "updated": "2026-06-25"
+    }
   },
   "conditions": {
     "IV \u76f8\u5c0d\u51b7\u537b\u4e14\u7a69\u5b9a": false,
