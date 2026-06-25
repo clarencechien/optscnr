@@ -1,32 +1,73 @@
 {
-  "updated_at": "2026-06-25T05:52:09.237868",
+  "updated_at": "2026-06-25T23:45:59.604716",
   "version": "sage_v0.1",
   "days_since_ipo": 13,
-  "price": 154.5399932861328,
-  "phase": "P0",
+  "price": 153.0,
+  "phase": "P1",
   "level": "L1",
   "iv": {
-    "atm_iv": 0.062509375,
+    "atm_iv": 0.7255479919433593,
     "pctile": 36.4,
     "n_samples": 11,
     "rel_calm": "True",
-    "abs_acceptable": true,
+    "abs_acceptable": false,
     "stable": false
   },
   "liquidity": {
     "has_leaps": true,
-    "total_int": 0,
-    "total_vol": 27352,
-    "usable_strikes": 0,
-    "best_spread_pct": null,
-    "liquid": false,
-    "detail": []
+    "total_int": 129009,
+    "total_vol": 15088,
+    "usable_strikes": 15,
+    "best_spread_pct": 0.047,
+    "liquid": true,
+    "detail": [
+      {
+        "exp": "2028-12-15",
+        "strike": 100.0,
+        "oi": 443,
+        "spread_pct": 0.049,
+        "bid": 81.9,
+        "ask": 86.0
+      },
+      {
+        "exp": "2028-01-21",
+        "strike": 100.0,
+        "oi": 489,
+        "spread_pct": 0.054,
+        "bid": 71.4,
+        "ask": 75.4
+      },
+      {
+        "exp": "2027-06-17",
+        "strike": 120.0,
+        "oi": 220,
+        "spread_pct": 0.057,
+        "bid": 55.0,
+        "ask": 58.2
+      },
+      {
+        "exp": "2028-12-15",
+        "strike": 120.0,
+        "oi": 165,
+        "spread_pct": 0.058,
+        "bid": 74.0,
+        "ask": 78.4
+      },
+      {
+        "exp": "2028-12-15",
+        "strike": 130.0,
+        "oi": 122,
+        "spread_pct": 0.061,
+        "bid": 70.5,
+        "ask": 74.9
+      }
+    ]
   },
   "skew": {
-    "skew_type": "call",
-    "call_iv": 0.125,
-    "put_iv": 0.0,
-    "pc_vol_ratio": 0.059
+    "skew_type": "neutral",
+    "call_iv": 0.728,
+    "put_iv": 0.693,
+    "pc_vol_ratio": 0.064
   },
   "viewpoint": {
     "has_viewpoint": true,
@@ -40,8 +81,8 @@
   },
   "conditions": {
     "IV \u76f8\u5c0d\u51b7\u537b\u4e14\u7a69\u5b9a": false,
-    "IV \u7d55\u5c0d\u53ef\u63a5\u53d7\uff08\u2264\u9632\u7dda\uff09": true,
-    "\u6d41\u52d5\u6027\u904e\u95dc": false,
+    "IV \u7d55\u5c0d\u53ef\u63a5\u53d7\uff08\u2264\u9632\u7dda\uff09": false,
+    "\u6d41\u52d5\u6027\u904e\u95dc": true,
     "\u89c0\u9ede\u4fe1\u5fc3\u9054\u6a19": false
   }
 }
