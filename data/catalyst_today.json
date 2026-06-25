@@ -1,129 +1,67 @@
 {
-  "updated_at": "2026-06-24T21:54:01.915590",
+  "updated_at": "2026-06-25T22:03:58.540640",
   "stats": {
-    "total_items": 100,
-    "items_with_company": 24,
-    "items_with_catalyst": 19,
-    "items_both": 8
+    "total_items": 105,
+    "items_with_company": 29,
+    "items_with_catalyst": 17,
+    "items_both": 6
   },
-  "count": 19,
+  "count": 20,
   "tickers": [
+    "ENPH",
     "MU",
-    "AVGO",
-    "AMZN",
-    "NVDA",
-    "QCOM",
     "JPM",
-    "GS",
-    "GM",
-    "TGT",
-    "TSLA",
-    "RTX",
-    "ORCL",
-    "INTC",
-    "RUN",
-    "MRVL",
     "AAPL",
-    "LRCX",
-    "ASML",
-    "MSFT"
+    "IBM",
+    "TSLA",
+    "CRM",
+    "MSTR",
+    "MSFT",
+    "NVDA",
+    "AMZN",
+    "META",
+    "QCOM",
+    "PLTR",
+    "RTX",
+    "INTC",
+    "CEG",
+    "GOOGL",
+    "TGT",
+    "SNOW"
   ],
   "details": [
     {
-      "symbol": "MU",
-      "score": 6.5,
-      "evidence": [
-        {
-          "title": "Micron stock jumps 12% as soaring prices from memory crunch lead to quadrupling of revenue ",
-          "catalysts": [
-            "surge",
-            "jumps"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Micron earnings are set to send the market on a wild ride — and a new ETF may add to the volatility",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Chip stocks surge after-hours on Micron’s record quarter",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
+      "symbol": "ENPH",
       "score": 4,
       "evidence": [
         {
-          "title": "OpenAI unveils first chip as part of Broadcom deal in effort to 'build the full stack'",
+          "title": "Enphase Energy (ENPH) Gains Upgrade as Solid-State Transformers Open AI Data Center Opportunity",
           "catalysts": [
-            "unveils"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Broadcom unveils a custom chip for OpenAI as it challenges Nvidia’s dominance",
-          "catalysts": [
-            "unveils"
+            "gains",
+            "upgrade"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 3.0,
+      "symbol": "MU",
+      "score": 3.5,
       "evidence": [
         {
-          "title": "Amazon's Zoox unveils redesigned robotaxi ahead of upcoming expansion",
-          "catalysts": [
-            "unveils"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Amazon engineers spoke out against the AI data center boom — now 3 say they're facing internal investigations",
+          "title": "Apple’s MacBooks and iPads are getting more expensive as the memory crunch deepens",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Amazon Prime Day shoppers may face added costs with buy now, pay later",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Nvidia's Huang calls black market data centers made of smuggled parts a 'dead end'",
+          "title": "Micron has suddenly become one of the world’s most important stocks",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Broadcom unveils a custom chip for OpenAI as it challenges Nvidia’s dominance",
+          "title": "S&P 500, Nasdaq rise as oil drops and Micron earnings loom",
           "catalysts": [
-            "unveils"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "QCOM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Qualcomm stock pops 15% after chipmaker almost doubles projection for 2029 non-handset revenue",
-          "catalysts": [
-            "pops"
+            "drops"
           ],
           "has_catalyst": true
         }
@@ -131,70 +69,181 @@
     },
     {
       "symbol": "JPM",
-      "score": 2,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "JPMorgan Chase unveils $50 billion buyback, Goldman Sachs raises dividend after Fed stress test",
-          "catalysts": [
-            "unveils"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "JPMorgan Chase unveils $50 billion buyback, Goldman Sachs raises dividend after Fed stress test",
-          "catalysts": [
-            "unveils"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Toyota gains on General Motors in new U.S. sales forecast: 'GM may be looking over their shoulder'",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Micron earnings are set to send the market on a wild ride — and a new ETF may add to the volatility",
+          "title": "JPMorgan names Doug Petno and Troy Rohrbaugh co-presidents as longtime exec Marianne Lake exits",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Marvell Just Got a New Street-High Price Target. Wall Street Thinks Networking Is a Huge Growth Opportunity.",
+          "title": "International Business Machines (IBM) Upgraded by JPMorgan as Software Growth Boosts Outlook",
+          "catalysts": [
+            "upgraded"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 2.0,
+      "evidence": [
+        {
+          "title": "Microsoft lifts price of Xbox consoles due to soaring component costs",
           "catalysts": [],
           "has_catalyst": false
+        },
+        {
+          "title": "Apple stock gets slammed on bigger Mac, iPad price hikes. Why it can weather the storm",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple’s MacBooks and iPads are getting more expensive as the memory crunch deepens",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "International Business Machines (IBM) Upgraded by JPMorgan as Software Growth Boosts Outlook",
+          "catalysts": [
+            "upgraded"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "TSLA",
-      "score": 1.0,
+      "score": 2,
       "evidence": [
         {
-          "title": "This solar stock is surging on the heels of a new Tesla deal",
+          "title": "Tesla (TSLA) Seen Trading More Like a SpaceX Proxy as Merger Talk Grows",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Salesforce (CRM) Gets Buy Upgrade as AI Concerns Create Compelling Entry Point",
+          "catalysts": [
+            "upgrade"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSTR",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "MicroStrategy Stock Drops Below $100 For the First Time Since March 2024",
+          "catalysts": [
+            "drops"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Microsoft lifts price of Xbox consoles due to soaring component costs",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Right After Becoming a Trillionaire, Elon Musk \"Sold\" 17.5 Million Tesla Shares. Here's Why This Isn't a Big Deal.",
+          "title": "Microsoft’s stock is suffering a historic June rout as investors balk at heavy spending",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Microsoft (MSFT) Project Kilby Agreement Highlights Data Center Power Demand, Stifel Says",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Can Qualcomm actually compete with Nvidia? Inside its bold data-center gamble.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "NVIDIA (NVDA) Remains a Must-Own for Bernstein Despite Tech Sell-Off",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Fervo Energy Just Partnered With Nvidia and PNNL on a Geothermal Digital Twin. What This Means for FRVO Stock.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Amazon (AMZN) BofA Sees Q2 Revenue Beat Despite Prime Day Timing Shift",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "US online spending hits $8.3 billion as Amazon Prime Day kicks off, Adobe says",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Can Qualcomm actually compete with Nvidia? Inside its bold data-center gamble.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Can Qualcomm actually compete with Nvidia? Inside its bold data-center gamble.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Palantir’s stock is having its worst month in years — even in the midst of an AI boom",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -202,31 +251,10 @@
     },
     {
       "symbol": "RTX",
-      "score": 1.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Raytheon wins $399M missile contract from U.S. Air Force",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Raytheon lands $398.7M AMRAAM Missile contract from U.S. Air Force",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Oracle cuts 21,000 jobs over past year as it adopts AI",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Oracle cut 21,000 jobs as AI buildout continues",
+          "title": "Raytheon wins $1.1B missile contract from DoD",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -234,81 +262,54 @@
     },
     {
       "symbol": "INTC",
-      "score": 1.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Intel Will Design and Manufacture Chips for Apple. What This Really Means for INTC Stock Investors.",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Intel Corporation (INTC) Lagged Behind Tech Shifts",
+          "title": "Intel (INTC) Advanced Packaging Could Support AI Data Center Growth, Mizuho Says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RUN",
+      "symbol": "CEG",
       "score": 0.5,
       "evidence": [
         {
-          "title": "This solar stock is surging on the heels of a new Tesla deal",
+          "title": "Constellation Energy (CEG) Seen as High-Quality Power Demand Play, but Goldman Flags Valuation",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRVL",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Marvell Just Got a New Street-High Price Target. Wall Street Thinks Networking Is a Huge Growth Opportunity.",
+          "title": "Alphabet (GOOGL) Keeps Market Outperform Rating as Citizens Flags AI Talent Retention Risk",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Intel Will Design and Manufacture Chips for Apple. What This Really Means for INTC Stock Investors.",
+          "title": "Micron Technology (MU) Higher Target Reflects Multi-Year Demand Visibility, Needham Says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "LRCX",
+      "symbol": "SNOW",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Lam Research Put Options Short Play - Make a 6% Yield Over 2 Months",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASML",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "ASML Holding N.V. (ASML) Reported Strong Returns in Q1",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "What Makes Microsoft (MSFT) a Strong Position Amid Challenges?",
+          "title": "Will Snowflake Reach $300 This Year?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -317,7 +318,6 @@
   ],
   "watch_only": {
     "Anthropic (private)": 2,
-    "OpenAI (private)": 2,
-    "Cerebras (pre-IPO)": 1
+    "OpenAI (private)": 1
   }
 }
