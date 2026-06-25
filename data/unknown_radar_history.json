@@ -6,20 +6,6 @@
     "total_mentions": 20,
     "ticker": "NDAQ"
   },
-  "Allbirds": {
-    "first_seen": "2026-06-17",
-    "last_seen": "2026-06-17",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BIRD"
-  },
-  "UniQure": {
-    "first_seen": "2026-06-17",
-    "last_seen": "2026-06-17",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "QURE"
-  },
   "Vanguard": {
     "first_seen": "2026-06-18",
     "last_seen": "2026-06-18",
@@ -75,5 +61,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "TOYOF"
+  },
+  "Synaptics": {
+    "first_seen": "2026-06-25",
+    "last_seen": "2026-06-25",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SYNA"
+  },
+  "Daily": {
+    "first_seen": "2026-06-25",
+    "last_seen": "2026-06-25",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DJCO"
   }
 }

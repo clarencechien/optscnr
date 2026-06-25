@@ -1,41 +1,29 @@
 {
-  "updated_at": "2026-06-24T22:46:22.452611",
-  "count": 3,
+  "updated_at": "2026-06-25T22:54:54.681572",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 3,
-      "total_mentions": 20,
-      "consecutive_days": 8,
-      "is_strong": true,
-      "evidence": [
-        "Nasdaq, S&P end lower as tech stocks fall",
-        "Is Henry Schein Stock Underperforming the Nasdaq?"
-      ]
-    },
-    {
-      "name": "Alibaba",
-      "ticker": "BBAAY",
+      "name": "Synaptics",
+      "ticker": "SYNA",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Anthropic accuses Alibaba of campaign to 'brazenly' and 'illicitly' extract AI capabilities",
-        "Anthropic accuses Alibaba of campaign to 'brazenly' and 'illicitly' extract AI capabilities"
+        "On Semiconductor strikes $7 billion deal for Synaptics in physical AI push",
+        "Onsemi to buy Synaptics in $7 billion all-stock deal"
       ]
     },
     {
-      "name": "Toyota",
-      "ticker": "TOYOF",
+      "name": "Daily",
+      "ticker": "DJCO",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Toyota gains on General Motors in new U.S. sales forecast: 'GM may be looking over their shoulder'",
-        "Toyota gains on General Motors in new U.S. sales forecast: 'GM may be looking over their shoulder'"
+        "Daily – Vickers Top Buyers & Sellers for 06/25/2026",
+        "Daily – Vickers Top Insider Picks for 06/25/2026"
       ]
     }
   ]
