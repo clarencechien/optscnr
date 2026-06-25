@@ -1,47 +1,48 @@
 name: Daily SPCX Space Radar
-
 on:
   schedule:
     # 每天 UTC 22:15（台灣早上 6:15），跟主 scanner 接近
     - cron: '15 22 * * 0-5'
   workflow_dispatch:
-
 jobs:
   scan:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - uses: actions/checkout@v4
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install dependencies
         run: |
           pip install yfinance pandas
-
       - name: Run space radar
         run: python space_radar.py
-
+      # Option Sage（C 池沉思者）——必須排在 space_radar 之後：
+      # 它唯讀 space_radar 剛寫好的 data/spcx_iv_history.csv。
+      # continue-on-error：Sage 掛掉不該擋住 space_radar 的 commit。
+      - name: Run option sage
+        run: python spcx_options.py
+        continue-on-error: true
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
           echo "=== 檔案存在狀況 ==="
           ls -la data/space_radar* data/spcx_* 2>/dev/null || echo "(部分檔案不存在，正常)"
-
           echo "=== 逐檔 add（存在才 add）==="
           for f in \
             data/space_radar.json \
             data/space_radar_report.md \
             data/spcx_iv_history.csv \
             data/spcx_dca_log.json \
-            data/spcx_config.json
+            data/spcx_config.json \
+            data/spcx_options.json \
+            data/spcx_options_report.md \
+            data/spcx_options_history.csv \
+            data/spcx_c_viewpoint.json
           do
             if [ -f "$f" ]; then
               git add "$f"
@@ -50,15 +51,13 @@ jobs:
               echo "  skip (不存在): $f"
             fi
           done
-
           echo "=== staged 內容 ==="
           git status --short
-
           echo "=== commit + push ==="
           if git diff --quiet --cached; then
             echo "No changes to commit"
           else
-            git commit -m "🚀 Daily SPCX space radar [skip ci]"
+            git commit -m "🚀 Daily SPCX space radar + option sage [skip ci]"
             git push
             echo "已 push 成功"
           fi
