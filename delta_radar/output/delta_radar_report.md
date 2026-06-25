@@ -1,4 +1,4 @@
-# Delta Radar (2308.TW) — 2026-06-25 06:59 UTC
+# Delta Radar (2308.TW) — 2026-06-25 12:59 UTC
 
 ## 總判定：🟡 YELLOW
 
@@ -11,7 +11,7 @@ GS 4500 劇本三大未驗證前提的機械化監控：FCF 轉回 (M2)、合約
 | M2 bullwhip_health | 🟡 YELLOW | 合約負債 QoQ +7.4% / 存貨 QoQ +17.4% / FCF/淨利 0.43 |
 | M3 thai_shadow | 🟢 GREEN | DELTA.BK 2026-03-31 營收 YoY +47.0%, GM 31.7% |
 | M4 (crashed) | ⚪ NO_DATA | TimeoutError: The read operation timed out |
-| M5 narrative_triggers | 🟡 YELLOW | capex_cut:4 / vr300_delay:4 / debt_financed_capex:16 |
+| M5 narrative_triggers | 🟡 YELLOW | capex_cut:4 / vr300_delay:3 / debt_financed_capex:15 |
 
 ### M1 revenue_acceleration — 🟢 GREEN
 ```json
@@ -57,8 +57,8 @@ GS 4500 劇本三大未驗證前提的機械化監控：FCF 轉回 (M2)、合約
 {
   "hits": {
     "capex_cut": 4,
-    "vr300_delay": 4,
-    "debt_financed_capex": 16
+    "vr300_delay": 3,
+    "debt_financed_capex": 15
   }
 }
 ```
@@ -68,8 +68,8 @@ GS 4500 劇本三大未驗證前提的機械化監控：FCF 轉回 (M2)、合約
 - [vr300_delay] Nvidia's CoWoS supplies still secured, but Rubin delay issues crop up: KeyBanc (NVDA:NASDAQ) - Seeking Alpha
 - [vr300_delay] [News] NVIDIA Reportedly Denies Rubin Delay as AMD MI450 Spurs Redesign Speculation - TrendForce
 - [vr300_delay] NVIDIA Reportedly Won’t Launch the RTX 50 SUPER Series This Year; GeForce RTX 60 “Rubin” Also Delayed as Memory Shortage
-- [debt_financed_capex] Oracle's AI spending blows past estimates, raising worries over growing debt - Reuters
 - [debt_financed_capex] AI infrastructure is soaring, but data centers are burning through cash and the debt bubble is starting to burst - Bitge
+- [debt_financed_capex] Oracle's AI spending blows past estimates, raising worries over growing debt - Reuters
 - [debt_financed_capex] Big Tech Keeps Piling On AI Debt. Spending Is Set to Soar. - Barron's
 
 ---
