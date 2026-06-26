@@ -1,6 +1,6 @@
-# 🚬 每日妖股獵殺報表 (Scanner 3.7 / yf Engine)
+# 🚬 每日妖股獵殺報表 (Scanner 3.9 / yf Engine)
 
-**掃描時間**: 2026-06-26 06:29 UTC
+**掃描時間**: 2026-06-26 06:46 UTC
 
 **📰 今日催化劑股**: AAPL, AMZN, CEG, CRM, ENPH, GOOGL, IBM, INTC, JPM, META, MSFT, MSTR, MU, NVDA, PLTR, QCOM, RTX, SNOW, TGT, TSLA
 
