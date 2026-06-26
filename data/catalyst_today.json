@@ -1,282 +1,125 @@
 {
-  "updated_at": "2026-06-25T22:03:58.540640",
+  "updated_at": "2026-06-26T21:47:39.030752",
   "stats": {
-    "total_items": 105,
-    "items_with_company": 29,
-    "items_with_catalyst": 17,
-    "items_both": 6
+    "total_items": 102,
+    "items_with_company": 15,
+    "items_with_catalyst": 18,
+    "items_both": 5
   },
-  "count": 20,
+  "count": 12,
   "tickers": [
-    "ENPH",
     "MU",
-    "JPM",
-    "AAPL",
-    "IBM",
-    "TSLA",
-    "CRM",
-    "MSTR",
-    "MSFT",
-    "NVDA",
-    "AMZN",
+    "TGT",
     "META",
     "QCOM",
-    "PLTR",
-    "RTX",
-    "INTC",
-    "CEG",
+    "ORCL",
+    "WMT",
     "GOOGL",
-    "TGT",
-    "SNOW"
+    "BA",
+    "AAPL",
+    "GM",
+    "TSLA",
+    "MS"
   ],
   "details": [
     {
-      "symbol": "ENPH",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Enphase Energy (ENPH) Gains Upgrade as Solid-State Transformers Open AI Data Center Opportunity",
-          "catalysts": [
-            "gains",
-            "upgrade"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
       "symbol": "MU",
-      "score": 3.5,
+      "score": 5.0,
       "evidence": [
         {
-          "title": "Apple’s MacBooks and iPads are getting more expensive as the memory crunch deepens",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron has suddenly become one of the world’s most important stocks",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "S&P 500, Nasdaq rise as oil drops and Micron earnings loom",
+          "title": "Micron sinks 6%, wrapping a wild week of trading that saw big swings",
           "catalysts": [
-            "drops"
+            "sinks"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "JPMorgan names Doug Petno and Troy Rohrbaugh co-presidents as longtime exec Marianne Lake exits",
-          "catalysts": [],
-          "has_catalyst": false
         },
         {
-          "title": "International Business Machines (IBM) Upgraded by JPMorgan as Software Growth Boosts Outlook",
+          "title": "Micron stock soars after blowout earnings expose AI's memory bottleneck",
           "catalysts": [
-            "upgraded"
+            "soars"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Microsoft lifts price of Xbox consoles due to soaring component costs",
-          "catalysts": [],
-          "has_catalyst": false
         },
         {
-          "title": "Apple stock gets slammed on bigger Mac, iPad price hikes. Why it can weather the storm",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apple’s MacBooks and iPads are getting more expensive as the memory crunch deepens",
+          "title": "Micron overtakes Meta, Tesla in market value amid relentless AI infrastructure demand",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IBM",
-      "score": 2,
+      "symbol": "TGT",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "International Business Machines (IBM) Upgraded by JPMorgan as Software Growth Boosts Outlook",
+          "title": "Agilent Technologies, Inc. (A) Initiated at Neutral With $150 Price Target by Piper Sandler",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Legend Biotech Corporation (LEGN) Price Target Raised to $49 on LB5006 Clinical Progress",
           "catalysts": [
-            "upgraded"
+            "price target raised"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 2,
-      "evidence": [
+        },
         {
-          "title": "Tesla (TSLA) Seen Trading More Like a SpaceX Proxy as Merger Talk Grows",
+          "title": "Edgewise Therapeutics, Inc. (EWTX) Price Target Raised to $59 on Positive HCM Trial Data",
           "catalysts": [
-            "merger"
+            "price target raised"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Salesforce (CRM) Gets Buy Upgrade as AI Concerns Create Compelling Entry Point",
-          "catalysts": [
-            "upgrade"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSTR",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "MicroStrategy Stock Drops Below $100 For the First Time Since March 2024",
-          "catalysts": [
-            "drops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Microsoft lifts price of Xbox consoles due to soaring component costs",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft’s stock is suffering a historic June rout as investors balk at heavy spending",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft (MSFT) Project Kilby Agreement Highlights Data Center Power Demand, Stifel Says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Can Qualcomm actually compete with Nvidia? Inside its bold data-center gamble.",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "NVIDIA (NVDA) Remains a Must-Own for Bernstein Despite Tech Sell-Off",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Fervo Energy Just Partnered With Nvidia and PNNL on a Geothermal Digital Twin. What This Means for FRVO Stock.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Amazon (AMZN) BofA Sees Q2 Revenue Beat Despite Prime Day Timing Shift",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "US online spending hits $8.3 billion as Amazon Prime Day kicks off, Adobe says",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "META",
-      "score": 0.5,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Can Qualcomm actually compete with Nvidia? Inside its bold data-center gamble.",
+          "title": "Micron overtakes Meta, Tesla in market value amid relentless AI infrastructure demand",
           "catalysts": [],
           "has_catalyst": false
+        },
+        {
+          "title": "Qualcomm unveils data center AI chips, Meta as CPU customer",
+          "catalysts": [
+            "unveils"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "QCOM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Qualcomm unveils data center AI chips, Meta as CPU customer",
+          "catalysts": [
+            "unveils"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Can Qualcomm actually compete with Nvidia? Inside its bold data-center gamble.",
+          "title": "Oracle stock has worst week since 2001 dot-com bust as AI financing concerns escalate",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Palantir’s stock is having its worst month in years — even in the midst of an AI boom",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RTX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Raytheon wins $1.1B missile contract from DoD",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Intel (INTC) Advanced Packaging Could Support AI Data Center Growth, Mizuho Says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CEG",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Constellation Energy (CEG) Seen as High-Quality Power Demand Play, but Goldman Flags Valuation",
+          "title": "Walmart heir Lukas Walton buys minority stake in the Chicago Bulls and United Center ",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -287,29 +130,62 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Alphabet (GOOGL) Keeps Market Outperform Rating as Citizens Flags AI Talent Retention Risk",
+          "title": "Why getting dumped from the Dow is the ultimate buy signal for this — or any — stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron Technology (MU) Higher Target Reflects Multi-Year Demand Visibility, Needham Says",
+          "title": "Fitch revises Boeing outlook on production recovery strength",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SNOW",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Will Snowflake Reach $300 This Year?",
+          "title": "Memory Price Tsunami Swamps Apple as Tim Cook Hikes Prices 20%",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Scalp a Quick Profit on General Motors Stock with This Contrarian Option Trade",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron overtakes Meta, Tesla in market value amid relentless AI infrastructure demand",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Morgan Stanley's Quarterly Earnings Preview: What You Need to Know",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -317,7 +193,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2,
-    "OpenAI (private)": 1
+    "OpenAI (private)": 4,
+    "Anthropic (private)": 1
   }
 }
