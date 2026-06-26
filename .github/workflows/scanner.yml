@@ -33,14 +33,24 @@ jobs:
         continue-on-error: true
         run: python -u shadow_tracer.py
 
-      - name: Keep only last 7 days CSV (掃描資料輪替)
-        # 注意：只刪 data/ 根目錄的掃描 CSV
-        # data/iv_log/ 的信號快照是 append-only 永久保存，不在這裡刪
+      # - name: Keep only last 7 days CSV (掃描資料輪替)
+      #   # 注意：只刪 data/ 根目錄的掃描 CSV
+      #   # data/iv_log/ 的信號快照是 append-only 永久保存，不在這裡刪
+      #   run: |
+      #     cd data
+      #     ls -t *.csv 2>/dev/null | tail -n +8 | xargs -I {} rm -- {} || true
+      #     cd ..
+      - name: Prune old scan CSV (keep ~1 year, by filename date)
         run: |
           cd data
-          ls -t *.csv 2>/dev/null | tail -n +8 | xargs -I {} rm -- {} || true
+          # 只處理日期檔(2026-06-25.csv 這種)，明確排除 latest.csv
+          # 靠檔名字串排序(不靠 mtime，因為 checkout 會把 mtime 全重置)
+          # 留最新 365 個，刪更舊的；刪除有印出來，看得見
+          ls [0-9][0-9][0-9][0-9]-*.csv 2>/dev/null | sort | head -n -365 | while read f; do
+            rm -- "$f" && echo "🗑️  pruned $f"
+          done
           cd ..
-
+          
       - name: Commit and Push results
         run: |
           git config --local user.email "action@github.com"
