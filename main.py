@@ -1,6 +1,6 @@
 """
-Scanner 3.8 — 三道假高分過濾（反誘惑層）
-【v3.8 改動】「水快滾前提醒一下」——讓 scanner 在你被高分誘惑時標出陷阱
+Scanner 3.9 — 四道假高分過濾
+【v3.8 & 3.9 改動】「水快滾前提醒一下」——讓 scanner 在你被高分誘惑時標出陷阱
 - 過濾一 ⚠️尾段價外：履約價距現價 >25%(按IV放寬) + DTE<45 → -3
     擋 F22C/META1100C 這類「極價外+短天期」的投機尾段
 - 過濾二 ⚠️當沖刷量：Vol 大但 Δ7d≈0(OI沒沉澱) → -3
@@ -395,7 +395,7 @@ def generate_report(df):
         elif symbol in auto_watch: return "🔭候選"
         return ""
 
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.7 / yf Engine)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.9 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
 
     if catalyst:
@@ -586,7 +586,7 @@ def save_signal_snapshot(df):
 # 6. 主執行程序
 # ==========================================
 def main():
-    print(f"🔥 啟動 Scanner 3.7 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 3.9 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
 
     auto_watch = load_auto_watch()
