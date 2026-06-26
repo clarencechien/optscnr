@@ -62,6 +62,9 @@ RULE_CONFIG = {
     'CHURN_VOL_MIN': 2000,     # Vol 夠大
     'CHURN_OI_DELTA_MAX': 200, # 但 Δ7d 幾乎沒增（OI 沒沉澱）→ 當沖刷量，扣分
     'INST_IV_MAX': 0.35,       # 大市值股 IV <35% = 機構溫吞場（不會噴）
+    # === v3.9 第四道：暴動高 IV 過濾（RUN 暴露的漏洞）===
+    'SURGE_IV_MIN': 80.0,      # IV >80% = 暴動已把 IV 炒高
+    'SURGE_IV_DTE': 60,        # 且 DTE<60 短天期 → 進場會買在 IV 頂峰，等冷卻
 }
 
 
@@ -334,6 +337,14 @@ def apply_rules(row, prev_data=None):
         tags.append("🏛️機構場")
         score -= 1
 
+    # === v3.9 過濾四：暴動高 IV（RUN 暴露的漏洞）===
+    # 點火 + IV 已被炒到很高 + 短天期 = 進場買在 IV 頂峰，會被 crush。
+    # RUN 暴動當天 IV 飆到 90%+ 卻給高分 → 應提醒「等冷卻」。
+    # 盯的是 IV 這個真變數，不是「第幾天」這個表象。標警示降分，不是排除。
+    if ignition and iv >= RULE_CONFIG['SURGE_IV_MIN'] and dte < RULE_CONFIG['SURGE_IV_DTE']:
+        tags.append(f"⚠️暴動高IV({iv:.0f}%)")
+        score -= 2
+
     if action != "STRONG_BUY" and ignition and (is_leaps or is_smoke):
         action = "BUY_WATCH"
         score += 2
@@ -499,6 +510,76 @@ def generate_report(df):
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(md)
     print("📝 README.md 報表已生成。")
+
+    # === v3.9 信號快照（給 shadow_tracer 事後回填 T+N 用）===
+    # 只記「市場事實」（信號當下的價格/IV），不記「你持有什麼、賺賠多少」
+    # 這份是 append-only 永久保存，跟 7 天輪替的掃描 CSV 是不同生命週期
+    try:
+        save_signal_snapshot(df)
+    except Exception as e:
+        print(f"  ⚠️ 信號快照儲存失敗：{e}")
+
+
+def save_signal_snapshot(df):
+    """把今天 TL;DR 高分信號存成 append-only 月檔，供 shadow_tracer 事後回填。
+
+    設計原則（從雨縫 SHADOWLOG_SPEC 搬來）：
+    - append-only：寫了就不改，事後不能竄改當初的預測（避免自欺）
+    - 每月一檔：data/iv_log/signals_YYYY-MM.json
+    - 和錢隔離：只記信號的市場快照，不記持有/損益
+    """
+    iv_log_dir = os.path.join(DATA_DIR, "iv_log")
+    os.makedirs(iv_log_dir, exist_ok=True)
+
+    today = datetime.now()
+    today_str = today.strftime("%Y-%m-%d")
+    month_str = today.strftime("%Y-%m")
+    snapshot_path = os.path.join(iv_log_dir, f"signals_{month_str}.json")
+
+    # 只記 TL;DR 等級的高分信號（Score >= 8 且非末日賭博）
+    # 這些才是「scanner 在喊買」的信號，值得事後驗證準不準
+    hi = df[(df['Score'] >= 8) & (df['Action'] != 'GAMBLE')].copy()
+
+    new_records = []
+    for _, r in hi.iterrows():
+        # signal_id：日期+標的+到期+履約，唯一識別一個信號，T+N 回填時用
+        expiry_str = r['Expiry'].strftime('%Y-%m-%d') if hasattr(r['Expiry'], 'strftime') else str(r['Expiry'])
+        sig_id = f"{today_str}_{r['Stock']}_{expiry_str}_{r['Strike']}"
+        new_records.append({
+            "signal_id": sig_id,
+            "snapshot_date": today_str,
+            "ticker": r['Stock'],
+            "expiry": expiry_str,
+            "strike": float(r['Strike']),
+            "score": int(r['Score']),
+            "tags": r.get('Tags', ''),
+            "entry_price": float(r['Ask']),       # 信號當下的 option 價格
+            "entry_iv": float(r.get('IV', 0)),    # 信號當下的 IV
+            "entry_spot": float(r.get('Spot', 0)),# 信號當下的現價
+            "oi": int(r['OpenInterest']),
+            "oi_d7": int(r['OI_d7']) if 'OI_d7' in r and pd.notna(r['OI_d7']) else 0,
+            # T+N 結果欄位，先留空，由 shadow_tracer 事後回填
+            "t5": None, "t10": None, "t20": None,
+            "verdict": None,  # 事後判定：噴了/沒噴/歸零
+        })
+
+    # 讀現有月檔（append-only：不覆蓋，只新增今天的）
+    existing = []
+    if os.path.exists(snapshot_path):
+        try:
+            with open(snapshot_path, encoding='utf-8') as f:
+                existing = json.load(f)
+        except Exception:
+            existing = []
+
+    # 防重複：同一個 signal_id 今天已寫過就不重複（手動重跑時的保護）
+    existing_ids = {e['signal_id'] for e in existing}
+    appended = [r for r in new_records if r['signal_id'] not in existing_ids]
+    existing.extend(appended)
+
+    with open(snapshot_path, 'w', encoding='utf-8') as f:
+        json.dump(existing, f, ensure_ascii=False, indent=2)
+    print(f"  📸 信號快照：今日 {len(appended)} 筆新信號 → {snapshot_path}")
 
 
 # ==========================================
