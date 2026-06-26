@@ -1,14 +1,11 @@
 name: Daily Cigarette Butt Scanner
-
 on:
   schedule:
     # scanner.yml — 台灣週一到週六 06:00
     - cron: '0 22 * * 0-5'    # UTC 22:00
   workflow_dispatch: # 允許手動按按鈕觸發
-
 permissions:
   contents: write
-
 jobs:
   scan:
     runs-on: ubuntu-latest
@@ -27,18 +24,30 @@ jobs:
 
       - name: Run Scanner
         # 加上 -u 參數，強制顯示輸出 (Unbuffered)
+        # main.py 跑完會多吐一份信號快照到 data/iv_log/signals_YYYY-MM.json
         run: python -u main.py
 
-      - name: Keep only last 7 days data
+      - name: Run Shadow Tracer
+        # 在 scanner 之後跑：先有今天的快照，再回填舊信號的 T+N
+        # 慢 batch、不急，失敗也不該擋掉 scanner 的成果，所以加 continue-on-error
+        continue-on-error: true
+        run: python -u shadow_tracer.py
+
+      - name: Keep only last 7 days CSV (掃描資料輪替)
+        # 注意：只刪 data/ 根目錄的掃描 CSV
+        # data/iv_log/ 的信號快照是 append-only 永久保存，不在這裡刪
         run: |
           cd data
-          ls -t *.csv | tail -n +8 | xargs -I {} rm -- {} || true
+          ls -t *.csv 2>/dev/null | tail -n +8 | xargs -I {} rm -- {} || true
           cd ..
 
       - name: Commit and Push results
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
+          # 掃描報表 + 掃描 CSV + 信號快照(永久) + SHADOWLOG 報告
           git add data/*.csv README.md
-          git commit -m "📈 Update scanner data & report [skip ci]" || exit 0
+          git add data/iv_log/*.json || true
+          git add SHADOWLOG_*.md || true
+          git commit -m "📈 Update scanner + shadow log [skip ci]" || exit 0
           git push
