@@ -1,29 +1,65 @@
 {
-  "updated_at": "2026-06-25T22:54:54.681572",
-  "count": 2,
+  "updated_at": "2026-06-26T22:44:09.224771",
+  "count": 5,
   "blind_spots": [
     {
-      "name": "Synaptics",
-      "ticker": "SYNA",
+      "name": "Healthcare",
+      "ticker": "HR",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "On Semiconductor strikes $7 billion deal for Synaptics in physical AI push",
-        "Onsemi to buy Synaptics in $7 billion all-stock deal"
+        "Healthcare stocks have caught fire, sending all 3 of our names to record highs",
+        "Healthcare stocks have become a haven for investors ditching tech"
       ]
     },
     {
-      "name": "Daily",
-      "ticker": "DJCO",
+      "name": "German",
+      "ticker": "GABC",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Daily – Vickers Top Buyers & Sellers for 06/25/2026",
-        "Daily – Vickers Top Insider Picks for 06/25/2026"
+        "Volkswagen plans to cut 15% of its workforce and close four German plants, report says",
+        "Volkswagen plans to cut 15% of its workforce and close four German plants, report says"
+      ]
+    },
+    {
+      "name": "GameStop",
+      "ticker": "GME-WT",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "GameStop pledges to pursue eBay takeover",
+        "GameStop sees adj. EBITDA above $600M for FY ending Jan. 2027"
+      ]
+    },
+    {
+      "name": "Lantheus",
+      "ticker": "LNTH",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Lantheus stock falls after FDA rejects drug application",
+        "Lantheus receives Complete Response Letter for LNTH-2501"
+      ]
+    },
+    {
+      "name": "Billion",
+      "ticker": "BGHL",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Better Buy: McDonald's or Yum! Brands After Selling Pizza Hut for $2.7 Billion?",
+        "AI Data Center Boom Could Drive Fuel Cell Market to $30 Billion by 2030"
       ]
     }
   ]
