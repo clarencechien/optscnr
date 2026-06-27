@@ -1,54 +1,24 @@
 {
-  "updated_at": "2026-06-20T02:30:06.151814",
+  "updated_at": "2026-06-27T02:12:04.449283",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 4,
+  "count": 1,
   "tickers": [
-    "FLNC",
-    "DDD",
-    "VELO",
-    "SEDG"
+    "TDUP"
   ],
   "details": [
     {
-      "symbol": "FLNC",
-      "price": 24.8,
-      "gain_30d_pct": 30.7,
-      "market_cap_m": 4571.0,
-      "avg_volume_m": 13.41,
-      "short_pct_float": 36.4,
-      "score": 39.49
-    },
-    {
-      "symbol": "DDD",
-      "price": 3.57,
-      "gain_30d_pct": 48.7,
-      "market_cap_m": 583.0,
-      "avg_volume_m": 6.32,
-      "short_pct_float": 32.5,
-      "score": 37.38
-    },
-    {
-      "symbol": "VELO",
-      "price": 29.86,
-      "gain_30d_pct": 144.2,
-      "market_cap_m": 890.0,
-      "avg_volume_m": 5.1,
-      "short_pct_float": 17.7,
-      "score": 32.15
-    },
-    {
-      "symbol": "SEDG",
-      "price": 58.05,
-      "gain_30d_pct": 50.3,
-      "market_cap_m": 3530.0,
-      "avg_volume_m": 3.65,
-      "short_pct_float": 20.5,
-      "score": 25.52
+      "symbol": "TDUP",
+      "price": 6.93,
+      "gain_30d_pct": 63.6,
+      "market_cap_m": 894.0,
+      "avg_volume_m": 2.1,
+      "short_pct_float": 22.1,
+      "score": 28.5
     }
   ]
 }
