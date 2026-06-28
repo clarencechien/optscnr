@@ -1,125 +1,116 @@
 {
-  "updated_at": "2026-06-26T21:47:39.030752",
+  "updated_at": "2026-06-28T21:38:34.592754",
   "stats": {
-    "total_items": 102,
-    "items_with_company": 15,
-    "items_with_catalyst": 18,
-    "items_both": 5
+    "total_items": 107,
+    "items_with_company": 24,
+    "items_with_catalyst": 12,
+    "items_both": 3
   },
-  "count": 12,
+  "count": 20,
   "tickers": [
-    "MU",
-    "TGT",
-    "META",
-    "QCOM",
-    "ORCL",
-    "WMT",
-    "GOOGL",
-    "BA",
     "AAPL",
-    "GM",
+    "NVDA",
+    "INTC",
+    "LRCX",
+    "MSFT",
+    "GOOGL",
+    "MU",
+    "NKE",
+    "TGT",
+    "BRK-B",
+    "F",
     "TSLA",
-    "MS"
+    "PFE",
+    "QCOM",
+    "ASML",
+    "AMAT",
+    "AVGO",
+    "TSM",
+    "WMT",
+    "CEG"
   ],
   "details": [
     {
-      "symbol": "MU",
-      "score": 5.0,
+      "symbol": "AAPL",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Micron sinks 6%, wrapping a wild week of trading that saw big swings",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Micron stock soars after blowout earnings expose AI's memory bottleneck",
-          "catalysts": [
-            "soars"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Micron overtakes Meta, Tesla in market value amid relentless AI infrastructure demand",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "Agilent Technologies, Inc. (A) Initiated at Neutral With $150 Price Target by Piper Sandler",
+          "title": "The memory shortage shaking Apple and Microsoft is 'existential crisis' for smaller players",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Legend Biotech Corporation (LEGN) Price Target Raised to $49 on LB5006 Clinical Progress",
-          "catalysts": [
-            "price target raised"
-          ],
-          "has_catalyst": true
+          "title": "Apple posts worst day in over a year after MacBook and iPad price hikes",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "Edgewise Therapeutics, Inc. (EWTX) Price Target Raised to $59 on Positive HCM Trial Data",
+          "title": "Apple’s AI overhaul seen driving upgrade cycle as BofA backs long-term upside",
           "catalysts": [
-            "price target raised"
+            "upgrade"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "META",
-      "score": 2.5,
+      "symbol": "NVDA",
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Micron overtakes Meta, Tesla in market value amid relentless AI infrastructure demand",
+          "title": "Micron is about to be more profitable than any U.S. company except Nvidia and Google",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Qualcomm unveils data center AI chips, Meta as CPU customer",
-          "catalysts": [
-            "unveils"
-          ],
-          "has_catalyst": true
+          "title": "Australia’s Firmus Technologies strikes AI access deal with Nvidia",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "This Nvidia-Backed Artificial Intelligence (AI) Infrastructure Stock Has Multibagger Potential. It Is Trading at an Incredibly Attractive Va",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "QCOM",
+      "symbol": "INTC",
       "score": 2,
       "evidence": [
         {
-          "title": "Qualcomm unveils data center AI chips, Meta as CPU customer",
+          "title": "Intel Corporation (INTC)’s Stock Has Surged but Needs an Engineering Revival",
           "catalysts": [
-            "unveils"
+            "surged"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "ORCL",
-      "score": 0.5,
+      "symbol": "LRCX",
+      "score": 2,
       "evidence": [
         {
-          "title": "Oracle stock has worst week since 2001 dot-com bust as AI financing concerns escalate",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Barclays Maintained an “Overweight” rating on Lam Research Corporation (LRCX)",
+          "catalysts": [
+            "overweight"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "WMT",
-      "score": 0.5,
+      "symbol": "MSFT",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Walmart heir Lukas Walton buys minority stake in the Chicago Bulls and United Center ",
+          "title": "The memory shortage shaking Apple and Microsoft is 'existential crisis' for smaller players",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "How GE Vernova builds the massive gas turbines powering the AI data center boom",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -127,43 +118,75 @@
     },
     {
       "symbol": "GOOGL",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Why getting dumped from the Dow is the ultimate buy signal for this — or any — stock",
+          "title": "Micron is about to be more profitable than any U.S. company except Nvidia and Google",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Alphabet Pulled Back Hard. Here Are My Top 3 Megacaps to Buy on the Dip.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
-      "score": 0.5,
+      "symbol": "MU",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Fitch revises Boeing outlook on production recovery strength",
+          "title": "Micron is about to be more profitable than any U.S. company except Nvidia and Google",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Is Micron Technology, Inc. (MU) Among the Best Semiconductor Stocks to Buy According to Billionaires?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "NKE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Memory Price Tsunami Swamps Apple as Tim Cook Hikes Prices 20%",
+          "title": "Here are 3 big things we're watching in the stock market in the week ahead",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GM",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Scalp a Quick Profit on General Motors Stock with This Contrarian Option Trade",
+          "title": "From concerts to train rides, bots are winning the ticket wars — but they're only part of the problem",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Berkshire CEO Greg Abel sworn in as U.S. citizen at baseball game",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Ford’s AI wasn’t smart enough to replace veteran engineers — so it hired 350 of them to fix quality control issues",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -174,18 +197,95 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron overtakes Meta, Tesla in market value amid relentless AI infrastructure demand",
+          "title": "Dow Jones Futures: Market At Tipping Point With Iran News, AI Fears In Focus. Tesla, Jobs On Tap.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MS",
+      "symbol": "PFE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Morgan Stanley's Quarterly Earnings Preview: What You Need to Know",
+          "title": "China surpassing Europe in Drug Innovation and Development, Pfizer Inc. (PFE) Executive says",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is QUALCOMM Incorporated (QCOM) Set to Acquire a Startup?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ASML",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "ASML Holding N.V. (ASML) Denies Selling EUV Chipmaking Tool to China Following Report of US Concern",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "BofA is Bullish on Applied Materials, Inc. (AMAT)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Broadcom Inc. (AVGO) is Avoiding Acquisitions in Favor of AI Organic Development",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Taiwan Semiconductor Manufacturing Company (TSM)’s Monthly Sales Rise",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Constellation Energy (CEG) and Walmart Announce Long-Term Nuclear Power Purchase Agreement",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CEG",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Constellation Energy (CEG) and Walmart Announce Long-Term Nuclear Power Purchase Agreement",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -193,7 +293,8 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 4,
+    "OpenAI (private)": 2,
+    "xAI (private)": 1,
     "Anthropic (private)": 1
   }
 }
