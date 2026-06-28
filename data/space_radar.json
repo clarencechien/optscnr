@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-06-26T23:34:52.180824",
+  "updated_at": "2026-06-28T23:18:54.771024",
   "version": "v8.6",
   "stage": 3,
   "price": 153.22999572753906,
   "market_cap_t": 2.004,
   "total_shares_b": 13.08,
   "hard_cap_t": 2.2,
-  "atm_iv": 0.6787548400878908,
-  "iv_percentile": 25.0,
-  "pc_ratio": 0.5374641736044766,
+  "atm_iv": 0.7128121166992187,
+  "iv_percentile": 38.5,
+  "pc_ratio": 0.5145663956639567,
   "c_pool_frozen": false,
-  "iv_stable": false,
+  "iv_stable": true,
   "gtc_levels_a": [
     {
       "target_mc_t": 1.9,
