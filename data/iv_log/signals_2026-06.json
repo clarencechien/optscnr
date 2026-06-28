@@ -304,5 +304,41 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-06-28_SOFI_2026-07-17_19.5",
+    "snapshot_date": "2026-06-28",
+    "ticker": "SOFI",
+    "expiry": "2026-07-17",
+    "strike": 19.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股",
+    "entry_price": 0.43,
+    "entry_iv": 53.906710937500016,
+    "entry_spot": 17.8799991607666,
+    "oi": 796,
+    "oi_d7": 796,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-06-28_AMZN_2026-07-17_252.5",
+    "snapshot_date": "2026-06-28",
+    "ticker": "AMZN",
+    "expiry": "2026-07-17",
+    "strike": 252.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量",
+    "entry_price": 1.54,
+    "entry_iv": 34.91276025390625,
+    "entry_spot": 232.69000244140625,
+    "oi": 799,
+    "oi_d7": 799,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
