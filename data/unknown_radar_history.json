@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-06-24",
-    "consecutive_days": 8,
-    "total_mentions": 20,
+    "last_seen": "2026-06-28",
+    "consecutive_days": 9,
+    "total_mentions": 22,
     "ticker": "NDAQ"
   },
   "Starlink": {
@@ -12,27 +12,6 @@
     "consecutive_days": 2,
     "total_mentions": 4,
     "ticker": "OTAI-UN"
-  },
-  "Accenture": {
-    "first_seen": "2026-06-19",
-    "last_seen": "2026-06-19",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ACN"
-  },
-  "Indonesia": {
-    "first_seen": "2026-06-19",
-    "last_seen": "2026-06-19",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "INDO"
-  },
-  "Canadian": {
-    "first_seen": "2026-06-19",
-    "last_seen": "2026-06-19",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "CNDIF"
   },
   "Earth": {
     "first_seen": "2026-06-21",

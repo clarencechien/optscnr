@@ -1,65 +1,17 @@
 {
-  "updated_at": "2026-06-26T22:44:09.224771",
-  "count": 5,
+  "updated_at": "2026-06-28T22:34:23.141626",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Healthcare",
-      "ticker": "HR",
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 22,
+      "consecutive_days": 9,
+      "is_strong": true,
       "evidence": [
-        "Healthcare stocks have caught fire, sending all 3 of our names to record highs",
-        "Healthcare stocks have become a haven for investors ditching tech"
-      ]
-    },
-    {
-      "name": "German",
-      "ticker": "GABC",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Volkswagen plans to cut 15% of its workforce and close four German plants, report says",
-        "Volkswagen plans to cut 15% of its workforce and close four German plants, report says"
-      ]
-    },
-    {
-      "name": "GameStop",
-      "ticker": "GME-WT",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "GameStop pledges to pursue eBay takeover",
-        "GameStop sees adj. EBITDA above $600M for FY ending Jan. 2027"
-      ]
-    },
-    {
-      "name": "Lantheus",
-      "ticker": "LNTH",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Lantheus stock falls after FDA rejects drug application",
-        "Lantheus receives Complete Response Letter for LNTH-2501"
-      ]
-    },
-    {
-      "name": "Billion",
-      "ticker": "BGHL",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Better Buy: McDonald's or Yum! Brands After Selling Pizza Hut for $2.7 Billion?",
-        "AI Data Center Boom Could Drive Fuel Cell Market to $30 Billion by 2030"
+        "SpaceX to join the Nasdaq-100 in a fast-tracked process that will drive huge ETF buying demand",
+        "SpaceX to join the Nasdaq-100 in a fast-tracked process that will drive huge ETF buying demand"
       ]
     }
   ]
