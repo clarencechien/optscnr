@@ -1,100 +1,96 @@
 {
-  "updated_at": "2026-06-28T21:38:34.592754",
+  "updated_at": "2026-06-29T21:52:19.120203",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 24,
+    "total_items": 101,
+    "items_with_company": 17,
     "items_with_catalyst": 12,
-    "items_both": 3
+    "items_both": 4
   },
-  "count": 20,
+  "count": 15,
   "tickers": [
-    "AAPL",
-    "NVDA",
-    "INTC",
-    "LRCX",
-    "MSFT",
-    "GOOGL",
+    "RKLB",
     "MU",
-    "NKE",
-    "TGT",
-    "BRK-B",
-    "F",
-    "TSLA",
-    "PFE",
-    "QCOM",
-    "ASML",
-    "AMAT",
-    "AVGO",
-    "TSM",
+    "IRDM",
+    "DELL",
+    "MSFT",
+    "CRM",
     "WMT",
-    "CEG"
+    "TSLA",
+    "AAPL",
+    "XYZ",
+    "META",
+    "GOOGL",
+    "NVDA",
+    "SNDK",
+    "COST"
   ],
   "details": [
     {
-      "symbol": "AAPL",
-      "score": 3.0,
+      "symbol": "RKLB",
+      "score": 6,
       "evidence": [
         {
-          "title": "The memory shortage shaking Apple and Microsoft is 'existential crisis' for smaller players",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apple posts worst day in over a year after MacBook and iPad price hikes",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apple’s AI overhaul seen driving upgrade cycle as BofA backs long-term upside",
+          "title": "SpaceX bulls are back betting on huge, fast gains as Rocket Lab surges",
           "catalysts": [
-            "upgrade"
+            "surges",
+            "gains"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Rocket Lab to take on SpaceX’s Starlink with $8 billion acquisition",
+          "catalysts": [
+            "acquisition"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "NVDA",
-      "score": 2.0,
+      "symbol": "MU",
+      "score": 5.0,
       "evidence": [
         {
-          "title": "Micron is about to be more profitable than any U.S. company except Nvidia and Google",
+          "title": "Micron's monster post-earnings rally is almost gone. Traders divided on where it goes next",
+          "catalysts": [
+            "surge",
+            "rally"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Q3 Results Proved That the Stars Are Aligned for Micron Stock",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Australia’s Firmus Technologies strikes AI access deal with Nvidia",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "This Nvidia-Backed Artificial Intelligence (AI) Infrastructure Stock Has Multibagger Potential. It Is Trading at an Incredibly Attractive Va",
+          "title": "The AI Memory Supercycle Could Last Longer Than Investors Expect. That's Great News for Micron and Sandisk.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "IRDM",
       "score": 2,
       "evidence": [
         {
-          "title": "Intel Corporation (INTC)’s Stock Has Surged but Needs an Engineering Revival",
+          "title": "Rocket Lab to take on SpaceX’s Starlink with $8 billion acquisition",
           "catalysts": [
-            "surged"
+            "acquisition"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "LRCX",
+      "symbol": "DELL",
       "score": 2,
       "evidence": [
         {
-          "title": "Barclays Maintained an “Overweight” rating on Lam Research Corporation (LRCX)",
+          "title": "After a Nearly 200% Run Since February, GF Securities Downgraded Dell Shares. Don’t Count DELL Stock Out Just Yet.",
           "catalysts": [
-            "overweight"
+            "downgraded"
           ],
           "has_catalyst": true
         }
@@ -105,165 +101,23 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "The memory shortage shaking Apple and Microsoft is 'existential crisis' for smaller players",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
           "title": "How GE Vernova builds the massive gas turbines powering the AI data center boom",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Micron is about to be more profitable than any U.S. company except Nvidia and Google",
-          "catalysts": [],
-          "has_catalyst": false
         },
         {
-          "title": "Alphabet Pulled Back Hard. Here Are My Top 3 Megacaps to Buy on the Dip.",
+          "title": "Microsoft Corporation (MSFT) Is A Top Richard Chilton AI Stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Micron is about to be more profitable than any U.S. company except Nvidia and Google",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Is Micron Technology, Inc. (MU) Among the Best Semiconductor Stocks to Buy According to Billionaires?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
+      "symbol": "CRM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Here are 3 big things we're watching in the stock market in the week ahead",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "From concerts to train rides, bots are winning the ticket wars — but they're only part of the problem",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Berkshire CEO Greg Abel sworn in as U.S. citizen at baseball game",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ford’s AI wasn’t smart enough to replace veteran engineers — so it hired 350 of them to fix quality control issues",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures: Market At Tipping Point With Iran News, AI Fears In Focus. Tesla, Jobs On Tap.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PFE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "China surpassing Europe in Drug Innovation and Development, Pfizer Inc. (PFE) Executive says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "QCOM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is QUALCOMM Incorporated (QCOM) Set to Acquire a Startup?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASML",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "ASML Holding N.V. (ASML) Denies Selling EUV Chipmaking Tool to China Following Report of US Concern",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMAT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "BofA is Bullish on Applied Materials, Inc. (AMAT)",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Broadcom Inc. (AVGO) is Avoiding Acquisitions in Favor of AI Organic Development",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Taiwan Semiconductor Manufacturing Company (TSM)’s Monthly Sales Rise",
+          "title": "Salesforce is on an AI buying spree, but Wall Street still has its doubts",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -274,18 +128,95 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Constellation Energy (CEG) and Walmart Announce Long-Term Nuclear Power Purchase Agreement",
+          "title": "‘I claimed Social Security at 62’: At 76, I’m working at Walmart. Why do I still owe payroll taxes?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CEG",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Constellation Energy (CEG) and Walmart Announce Long-Term Nuclear Power Purchase Agreement",
+          "title": "Tesla’s stock rips higher after a long-awaited update to self-driving technology",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Apple says it is releasing updates early in response to AI cybersecurity concerns",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Northrop Grumman wins $312M U.S. Navy contract for SEWIP Block 3 systems",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Meta Platforms Just Unveiled New Smart Glasses. What That Means for META Stock.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Alphabet’s Pullback May Be an Opportunity in Disguise",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Australia's Firmus Technologies strikes AI access deal with Nvidia",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "The AI Memory Supercycle Could Last Longer Than Investors Expect. That's Great News for Micron and Sandisk.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COST",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Should You Buy Costco Wholesale Corporation (COST)’s Shares?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -293,8 +224,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2,
-    "xAI (private)": 1,
-    "Anthropic (private)": 1
+    "xAI (private)": 1
   }
 }
