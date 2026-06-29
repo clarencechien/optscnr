@@ -1,73 +1,73 @@
 {
-  "updated_at": "2026-06-28T23:18:56.412931",
+  "updated_at": "2026-06-29T23:16:18.955065",
   "version": "sage_v0.1",
-  "days_since_ipo": 16,
-  "price": 153.22999572753906,
+  "days_since_ipo": 17,
+  "price": 164.19000244140625,
   "phase": "P1",
   "level": "L1",
   "iv": {
-    "atm_iv": 0.7128121166992187,
-    "pctile": 38.5,
-    "n_samples": 13,
-    "rel_calm": "True",
+    "atm_iv": 0.7296983410644531,
+    "pctile": 42.9,
+    "n_samples": 14,
+    "rel_calm": "False",
     "abs_acceptable": false,
-    "stable": true
+    "stable": false
   },
   "liquidity": {
     "has_leaps": true,
-    "total_int": 136958,
-    "total_vol": 13810,
-    "usable_strikes": 9,
-    "best_spread_pct": 0.047,
+    "total_int": 139844,
+    "total_vol": 9255,
+    "usable_strikes": 22,
+    "best_spread_pct": 0.031,
     "liquid": true,
     "detail": [
       {
-        "exp": "2027-01-15",
-        "strike": 100.0,
-        "oi": 346,
-        "spread_pct": 0.054,
-        "bid": 59.7,
-        "ask": 63.0
+        "exp": "2028-12-15",
+        "strike": 120.0,
+        "oi": 186,
+        "spread_pct": 0.031,
+        "bid": 83.4,
+        "ask": 86.0
       },
       {
         "exp": "2028-12-15",
-        "strike": 100.0,
-        "oi": 473,
-        "spread_pct": 0.061,
-        "bid": 82.0,
-        "ask": 87.2
-      },
-      {
-        "exp": "2027-01-15",
-        "strike": 90.0,
-        "oi": 283,
-        "spread_pct": 0.062,
-        "bid": 66.8,
-        "ask": 71.1
+        "strike": 130.0,
+        "oi": 129,
+        "spread_pct": 0.031,
+        "bid": 80.0,
+        "ask": 82.5
       },
       {
         "exp": "2028-12-15",
         "strike": 50.0,
-        "oi": 72,
-        "spread_pct": 0.063,
-        "bid": 108.0,
-        "ask": 115.0
+        "oi": 73,
+        "spread_pct": 0.038,
+        "bid": 118.4,
+        "ask": 123.0
       },
       {
-        "exp": "2027-09-17",
-        "strike": 75.0,
-        "oi": 90,
-        "spread_pct": 0.068,
-        "bid": 84.0,
-        "ask": 89.9
+        "exp": "2027-01-15",
+        "strike": 100.0,
+        "oi": 350,
+        "spread_pct": 0.04,
+        "bid": 69.4,
+        "ask": 72.2
+      },
+      {
+        "exp": "2027-03-19",
+        "strike": 100.0,
+        "oi": 56,
+        "spread_pct": 0.05,
+        "bid": 71.9,
+        "ask": 75.6
       }
     ]
   },
   "skew": {
     "skew_type": "neutral",
-    "call_iv": 0.732,
-    "put_iv": 0.74,
-    "pc_vol_ratio": 0.515
+    "call_iv": 0.755,
+    "put_iv": 0.712,
+    "pc_vol_ratio": 0.419
   },
   "viewpoint": {
     "has_viewpoint": true,
@@ -80,7 +80,7 @@
     }
   },
   "conditions": {
-    "IV \u76f8\u5c0d\u51b7\u537b\u4e14\u7a69\u5b9a": true,
+    "IV \u76f8\u5c0d\u51b7\u537b\u4e14\u7a69\u5b9a": "False",
     "IV \u7d55\u5c0d\u53ef\u63a5\u53d7\uff08\u2264\u9632\u7dda\uff09": false,
     "\u6d41\u52d5\u6027\u904e\u95dc": true,
     "\u89c0\u9ede\u4fe1\u5fc3\u9054\u6a19": false
