@@ -8,17 +8,10 @@
   },
   "Starlink": {
     "first_seen": "2026-06-19",
-    "last_seen": "2026-06-21",
-    "consecutive_days": 2,
-    "total_mentions": 4,
+    "last_seen": "2026-06-29",
+    "consecutive_days": 3,
+    "total_mentions": 6,
     "ticker": "OTAI-UN"
-  },
-  "Earth": {
-    "first_seen": "2026-06-21",
-    "last_seen": "2026-06-21",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ETST"
   },
   "Alibaba": {
     "first_seen": "2026-06-24",
@@ -82,5 +75,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BGHL"
+  },
+  "Comcast": {
+    "first_seen": "2026-06-29",
+    "last_seen": "2026-06-29",
+    "consecutive_days": 1,
+    "total_mentions": 4,
+    "ticker": "CCZ"
   }
 }

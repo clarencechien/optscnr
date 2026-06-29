@@ -1,17 +1,29 @@
 {
-  "updated_at": "2026-06-28T22:34:23.141626",
-  "count": 1,
+  "updated_at": "2026-06-29T22:36:01.308514",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
+      "name": "Starlink",
+      "ticker": "OTAI-UN",
       "mentions_today": 2,
-      "total_mentions": 22,
-      "consecutive_days": 9,
+      "total_mentions": 6,
+      "consecutive_days": 3,
       "is_strong": true,
       "evidence": [
-        "SpaceX to join the Nasdaq-100 in a fast-tracked process that will drive huge ETF buying demand",
-        "SpaceX to join the Nasdaq-100 in a fast-tracked process that will drive huge ETF buying demand"
+        "Rocket Lab to take on SpaceX’s Starlink with $8 billion acquisition",
+        "Charter may be making ‘frenemies’ with SpaceX, and its stock is soaring"
+      ]
+    },
+    {
+      "name": "Comcast",
+      "ticker": "CCZ",
+      "mentions_today": 4,
+      "total_mentions": 4,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Comcast announces it will spin off NBCUniversal and Sky from cable business",
+        "Comcast announces it will spin off NBCUniversal and Sky from cable business"
       ]
     }
   ]
