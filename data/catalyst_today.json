@@ -1,134 +1,203 @@
 {
-  "updated_at": "2026-06-29T21:52:19.120203",
+  "updated_at": "2026-06-30T21:56:41.234450",
   "stats": {
-    "total_items": 101,
-    "items_with_company": 17,
-    "items_with_catalyst": 12,
-    "items_both": 4
+    "total_items": 107,
+    "items_with_company": 15,
+    "items_with_catalyst": 16,
+    "items_both": 2
   },
   "count": 15,
   "tickers": [
-    "RKLB",
-    "MU",
-    "IRDM",
-    "DELL",
-    "MSFT",
-    "CRM",
-    "WMT",
-    "TSLA",
-    "AAPL",
-    "XYZ",
-    "META",
-    "GOOGL",
     "NVDA",
-    "SNDK",
-    "COST"
+    "MU",
+    "MSFT",
+    "INTC",
+    "AMD",
+    "NKE",
+    "GOOGL",
+    "CRWD",
+    "BA",
+    "LUNR",
+    "PYPL",
+    "AVGO",
+    "MS",
+    "TSLA",
+    "TGT"
   ],
   "details": [
     {
-      "symbol": "RKLB",
-      "score": 6,
+      "symbol": "NVDA",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "SpaceX bulls are back betting on huge, fast gains as Rocket Lab surges",
+          "title": "Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter",
           "catalysts": [
-            "surges",
-            "gains"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Rocket Lab to take on SpaceX’s Starlink with $8 billion acquisition",
-          "catalysts": [
-            "acquisition"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 5.0,
-      "evidence": [
-        {
-          "title": "Micron's monster post-earnings rally is almost gone. Traders divided on where it goes next",
-          "catalysts": [
-            "surge",
             "rally"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Q3 Results Proved That the Stars Are Aligned for Micron Stock",
+          "title": "Nvidia, Micron, and Broadcom hold the stock market's fate in the palm of their hands",
           "catalysts": [],
           "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "The AI Memory Supercycle Could Last Longer Than Investors Expect. That's Great News for Micron and Sandisk.",
+          "title": "Nvidia, Micron, and Broadcom hold the stock market's fate in the palm of their hands",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "IRDM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Rocket Lab to take on SpaceX’s Starlink with $8 billion acquisition",
-          "catalysts": [
-            "acquisition"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "DELL",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "After a Nearly 200% Run Since February, GF Securities Downgraded Dell Shares. Don’t Count DELL Stock Out Just Yet.",
-          "catalysts": [
-            "downgraded"
-          ],
-          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "MSFT",
-      "score": 1.0,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "How GE Vernova builds the massive gas turbines powering the AI data center boom",
+          "title": "Meridian Hedged Equity Fund Holds Firm on Microsoft Corp. (MSFT)",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Microsoft Corporation (MSFT) Is A Top Richard Chilton AI Stock",
+          "title": "Microsoft (MSFT) Expands Operations With a New Strategic Partnership",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Nike results top estimates even as China sales drop 12%; retailer expects $986 million tariff refund",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nike earnings crushed Wall Street’s estimates, but there’s a catch",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
-      "score": 0.5,
+      "symbol": "GOOGL",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Salesforce is on an AI buying spree, but Wall Street still has its doubts",
+          "title": "Ex-Google recruiter: The No. 1 resume 'red flag' that makes hiring managers stop reading—and how to fix it",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Is Alphabet (GOOGL) the Best Stock to Buy in Chris Hohn’s TCI Fund Portfolio?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
+      "symbol": "CRWD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "‘I claimed Social Security at 62’: At 76, I’m working at Walmart. Why do I still owe payroll taxes?",
+          "title": "Palo Alto, CrowdStrike both have best quarter ever as AI threats bolster cyber demand",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Boeing wins $49.5M missile contract",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LUNR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "NASA awards $600M in new lunar missions, lifting Intuitive Machines, Firefly, Astrobotic",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PYPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Meridian Hedged Equity Fund Maintained Its Position in PayPal Holdings (PYPL)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Nvidia, Micron, and Broadcom hold the stock market's fate in the palm of their hands",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "How the chip trade has come to resemble silver — a warning from Morgan Stanley’s Wilson",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -139,84 +208,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Tesla’s stock rips higher after a long-awaited update to self-driving technology",
+          "title": "Tesla's Quarterly Earnings Preview: What You Need to Know",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple says it is releasing updates early in response to AI cybersecurity concerns",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Northrop Grumman wins $312M U.S. Navy contract for SEWIP Block 3 systems",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Meta Platforms Just Unveiled New Smart Glasses. What That Means for META Stock.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why Alphabet’s Pullback May Be an Opportunity in Disguise",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Australia's Firmus Technologies strikes AI access deal with Nvidia",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "The AI Memory Supercycle Could Last Longer Than Investors Expect. That's Great News for Micron and Sandisk.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COST",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Should You Buy Costco Wholesale Corporation (COST)’s Shares?",
+          "title": "Rothschild Revisits Moody’s (MCO) Price Target",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -224,6 +227,6 @@
     }
   ],
   "watch_only": {
-    "xAI (private)": 1
+    "Anthropic (private)": 2
   }
 }
