@@ -1,29 +1,77 @@
 {
-  "updated_at": "2026-06-29T22:36:01.308514",
-  "count": 2,
+  "updated_at": "2026-06-30T22:49:13.450062",
+  "count": 6,
   "blind_spots": [
-    {
-      "name": "Starlink",
-      "ticker": "OTAI-UN",
-      "mentions_today": 2,
-      "total_mentions": 6,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "Rocket Lab to take on SpaceX’s Starlink with $8 billion acquisition",
-        "Charter may be making ‘frenemies’ with SpaceX, and its stock is soaring"
-      ]
-    },
     {
       "name": "Comcast",
       "ticker": "CCZ",
-      "mentions_today": 4,
+      "mentions_today": 2,
+      "total_mentions": 6,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "Will the Comcast-NBCU spinoff pay off for investors? Here’s what history has to say.",
+        "Will the Comcast-NBCU spinoff pay off for investors? Here’s what history has to say."
+      ]
+    },
+    {
+      "name": "Daily",
+      "ticker": "DJCO",
+      "mentions_today": 2,
       "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "Daily – Vickers Top Insider Picks for 06/30/2026",
+        "Daily – Vickers Top Buyers & Sellers for 06/30/2026"
+      ]
+    },
+    {
+      "name": "AeroVironment",
+      "ticker": "AVAV",
+      "mentions_today": 2,
+      "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Comcast announces it will spin off NBCUniversal and Sky from cable business",
-        "Comcast announces it will spin off NBCUniversal and Sky from cable business"
+        "AeroVironment skyrockets 19% as dronemaker capitalizes on defense spending surge",
+        "AeroVironment skyrockets 19% as dronemaker capitalizes on defense spending surge"
+      ]
+    },
+    {
+      "name": "Digital Realty",
+      "ticker": "DLR-PJ",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Digital Realty falls 5% after taking $3.5 billion stake in Blackstone's Virginia data centers",
+        "Digital Realty falls 5% after taking $3.5 billion stake in Blackstone's Virginia data centers"
+      ]
+    },
+    {
+      "name": "Allison Transmission",
+      "ticker": "ALSN",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Allison Transmission to join S&P MidCap 400, Goodyear to move to S&P SmallCap 600",
+        "Allison Transmission to join S&P MidCap 400; shares up"
+      ]
+    },
+    {
+      "name": "MidCap",
+      "ticker": "MFICL",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Allison Transmission to join S&P MidCap 400, Goodyear to move to S&P SmallCap 600",
+        "Allison Transmission to join S&P MidCap 400; shares up"
       ]
     }
   ]

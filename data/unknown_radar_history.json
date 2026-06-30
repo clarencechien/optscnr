@@ -36,9 +36,9 @@
   },
   "Daily": {
     "first_seen": "2026-06-25",
-    "last_seen": "2026-06-25",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-06-30",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "DJCO"
   },
   "Healthcare": {
@@ -78,9 +78,37 @@
   },
   "Comcast": {
     "first_seen": "2026-06-29",
-    "last_seen": "2026-06-29",
-    "consecutive_days": 1,
-    "total_mentions": 4,
+    "last_seen": "2026-06-30",
+    "consecutive_days": 2,
+    "total_mentions": 6,
     "ticker": "CCZ"
+  },
+  "AeroVironment": {
+    "first_seen": "2026-06-30",
+    "last_seen": "2026-06-30",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "AVAV"
+  },
+  "Digital Realty": {
+    "first_seen": "2026-06-30",
+    "last_seen": "2026-06-30",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DLR-PJ"
+  },
+  "Allison Transmission": {
+    "first_seen": "2026-06-30",
+    "last_seen": "2026-06-30",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ALSN"
+  },
+  "MidCap": {
+    "first_seen": "2026-06-30",
+    "last_seen": "2026-06-30",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "MFICL"
   }
 }
