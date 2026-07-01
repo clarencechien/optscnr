@@ -1,77 +1,82 @@
 {
-  "updated_at": "2026-06-30T21:56:41.234450",
+  "updated_at": "2026-07-01T22:02:34.444272",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 15,
-    "items_with_catalyst": 16,
-    "items_both": 2
+    "total_items": 105,
+    "items_with_company": 20,
+    "items_with_catalyst": 17,
+    "items_both": 7
   },
-  "count": 15,
+  "count": 18,
   "tickers": [
-    "NVDA",
     "MU",
+    "TGT",
+    "PLTR",
+    "META",
+    "LEU",
+    "IBM",
+    "CRWV",
     "MSFT",
-    "INTC",
-    "AMD",
-    "NKE",
-    "GOOGL",
-    "CRWD",
-    "BA",
-    "LUNR",
-    "PYPL",
-    "AVGO",
-    "MS",
-    "TSLA",
-    "TGT"
+    "NVDA",
+    "AAPL",
+    "AMZN",
+    "WMT",
+    "NOW",
+    "CRM",
+    "SNDK",
+    "NFLX",
+    "HOOD",
+    "AVGO"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Nvidia, Micron, and Broadcom hold the stock market's fate in the palm of their hands",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "MU",
-      "score": 2.5,
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter",
+          "title": "Chip stocks that notched record rallies in second quarter start Q3 with a dud",
           "catalysts": [
-            "rally"
+            "jumped",
+            "rallies"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Nvidia, Micron, and Broadcom hold the stock market's fate in the palm of their hands",
+          "title": "Sandisk’s and Micron’s stocks sink as the rotation trade builds, but supply shortages should limit losses",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
-      "score": 2.5,
+      "symbol": "TGT",
+      "score": 4,
       "evidence": [
         {
-          "title": "Meridian Hedged Equity Fund Holds Firm on Microsoft Corp. (MSFT)",
+          "title": "Nurix Therapeutics, Inc. (NRIX) Price Target Raised to $33 on Roche Partnership Value",
+          "catalysts": [
+            "partnership",
+            "price target raised"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Palantir's Karp bashes OpenAI, Anthropic token model: 'Something has gone completely wrong'",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Microsoft (MSFT) Expands Operations With a New Strategic Partnership",
+          "title": "NVIDIA (NVDA), Palantir (PLTR) Partner to Deploy Secure AI Models for Government and Infrastructure",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Palantir (PLTR), Surf Air Mobility Expand Partnership to Accelerate SurfOS Platform Development",
           "catalysts": [
             "partnership"
           ],
@@ -80,102 +85,187 @@
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "META",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Meta pops 9% as company makes cloud push to sell excess AI compute power capacity ",
+          "catalysts": [
+            "pops"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Meta's plan to launch a cloud business eases the biggest overhang on the stock",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Is Meta ‘giving up’ on cutting-edge AI? Wall Street is divided over potential cloud pivot.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LEU",
       "score": 2,
       "evidence": [
         {
-          "title": "Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter",
+          "title": "Centrus Energy stock rises on $900M DOE uranium contract",
           "catalysts": [
-            "rally"
+            "rises"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "IBM",
       "score": 2,
       "evidence": [
         {
-          "title": "Record chip rally adds $2 trillion in combined value to Micron, Intel and AMD in second quarter",
+          "title": "International Business Machines (IBM) Unveils World’s First 0.7-Nanometer Semiconductor Tech",
           "catalysts": [
-            "rally"
+            "unveils"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "NKE",
+      "symbol": "CRWV",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "CoreWeave (CRWV) Expands European AI Infrastructure Through New Partnership with Conapto",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Nike results top estimates even as China sales drop 12%; retailer expects $986 million tariff refund",
+          "title": "Trump says outside funds 'run my money' after disclosure shows billions in 2025 revenue",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nike earnings crushed Wall Street’s estimates, but there’s a catch",
+          "title": "Microsoft Stock Hasn’t Been This Cheap in Nearly a Decade. Here’s How to Buy the Dip for Less.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "NVDA",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Ex-Google recruiter: The No. 1 resume 'red flag' that makes hiring managers stop reading—and how to fix it",
+          "title": "Trump says outside funds 'run my money' after disclosure shows billions in 2025 revenue",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Is Alphabet (GOOGL) the Best Stock to Buy in Chris Hohn’s TCI Fund Portfolio?",
+          "title": "NVIDIA (NVDA), Palantir (PLTR) Partner to Deploy Secure AI Models for Government and Infrastructure",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWD",
-      "score": 0.5,
+      "symbol": "AAPL",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Palo Alto, CrowdStrike both have best quarter ever as AI threats bolster cyber demand",
+          "title": "Here’s what’s worth streaming in July 2026 on Netflix, Hulu, HBO Max and more",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple Price Hikes Sent AAPL Stock Falling. They May Not Even Matter in the Long Term.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Boeing wins $49.5M missile contract",
+          "title": "Trump says outside funds 'run my money' after disclosure shows billions in 2025 revenue",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "LUNR",
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "NASA awards $600M in new lunar missions, lifting Intuitive Machines, Firefly, Astrobotic",
+          "title": "Healthy Returns: Walmart, CVS step in to help seniors navigate Medicare coverage of obesity drugs ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PYPL",
+      "symbol": "NOW",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meridian Hedged Equity Fund Maintained Its Position in PayPal Holdings (PYPL)",
+          "title": "ServiceNow and Salesforce shares now look like buys, as ‘Armageddon’ fears are too extreme, analyst says",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "ServiceNow and Salesforce shares now look like buys, as ‘Armageddon’ fears are too extreme, analyst says",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Sandisk’s and Micron’s stocks sink as the rotation trade builds, but supply shortages should limit losses",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Here’s what’s worth streaming in July 2026 on Netflix, Hulu, HBO Max and more",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "4 Reasons BTIG Is Buying Robinhood Stock Right Now",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -186,40 +276,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia, Micron, and Broadcom hold the stock market's fate in the palm of their hands",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "How the chip trade has come to resemble silver — a warning from Morgan Stanley’s Wilson",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Tesla's Quarterly Earnings Preview: What You Need to Know",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Rothschild Revisits Moody’s (MCO) Price Target",
+          "title": "Could This New Chip Be a Game Changer for Broadcom Stock?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -227,6 +284,8 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2
+    "Anthropic (private)": 2,
+    "OpenAI (private)": 2,
+    "Cerebras (pre-IPO)": 1
   }
 }
