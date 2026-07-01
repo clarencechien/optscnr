@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-06-28",
-    "consecutive_days": 9,
-    "total_mentions": 22,
+    "last_seen": "2026-07-01",
+    "consecutive_days": 10,
+    "total_mentions": 24,
     "ticker": "NDAQ"
   },
   "Starlink": {
@@ -110,5 +110,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "MFICL"
+  },
+  "Coupang": {
+    "first_seen": "2026-07-01",
+    "last_seen": "2026-07-01",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CPNG"
+  },
+  "Defense": {
+    "first_seen": "2026-07-01",
+    "last_seen": "2026-07-01",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "DTII"
   }
 }
