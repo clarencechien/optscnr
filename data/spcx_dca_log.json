@@ -9,6 +9,20 @@
       "price": 150,
       "pool": "A-market",
       "note": "首筆市價單範例（確保上車）— 實際成交後填真實股數與價格"
+    },
+    {
+      "date": "2026-07-01",
+      "shares": 388,
+      "price": 160,
+      "pool": "A-market",
+      "note": "A Pool 補單"
+    },
+    {
+      "date": "2026-07-01",
+      "shares": 5,
+      "price": 159,
+      "pool": "A-market",
+      "note": "A Pool 補單"
     }
   ]
 }
