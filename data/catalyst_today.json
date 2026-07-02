@@ -1,84 +1,55 @@
 {
-  "updated_at": "2026-07-01T22:02:34.444272",
+  "updated_at": "2026-07-02T21:45:23.930634",
   "stats": {
-    "total_items": 105,
-    "items_with_company": 20,
-    "items_with_catalyst": 17,
-    "items_both": 7
+    "total_items": 101,
+    "items_with_company": 26,
+    "items_with_catalyst": 19,
+    "items_both": 6
   },
-  "count": 18,
+  "count": 20,
   "tickers": [
-    "MU",
-    "TGT",
-    "PLTR",
+    "TSLA",
     "META",
     "LEU",
-    "IBM",
-    "CRWV",
-    "MSFT",
-    "NVDA",
-    "AAPL",
-    "AMZN",
-    "WMT",
-    "NOW",
+    "BE",
     "CRM",
-    "SNDK",
-    "NFLX",
+    "NVDA",
+    "F",
     "HOOD",
-    "AVGO"
+    "PLTR",
+    "AAPL",
+    "MSFT",
+    "GS",
+    "MS",
+    "LCID",
+    "RIVN",
+    "JPM",
+    "XYZ",
+    "ORCL",
+    "CRWV",
+    "NET"
   ],
   "details": [
     {
-      "symbol": "MU",
+      "symbol": "TSLA",
       "score": 4.5,
       "evidence": [
         {
-          "title": "Chip stocks that notched record rallies in second quarter start Q3 with a dud",
+          "title": "Tesla stock sinks 7% despite strong deliveries report, posting worst day in nearly a year",
           "catalysts": [
-            "jumped",
-            "rallies"
+            "sinks"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Sandisk’s and Micron’s stocks sink as the rotation trade builds, but supply shortages should limit losses",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Nurix Therapeutics, Inc. (NRIX) Price Target Raised to $33 on Roche Partnership Value",
-          "catalysts": [
-            "partnership",
-            "price target raised"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Palantir's Karp bashes OpenAI, Anthropic token model: 'Something has gone completely wrong'",
+          "title": "Why Tesla’s stock sank to its worst day in a year despite blowout delivery numbers",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "NVIDIA (NVDA), Palantir (PLTR) Partner to Deploy Secure AI Models for Government and Infrastructure",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Palantir (PLTR), Surf Air Mobility Expand Partnership to Accelerate SurfOS Platform Development",
+          "title": "Tesla launches six-seater Model Y L in US to boost sales",
           "catalysts": [
-            "partnership"
+            "launches"
           ],
           "has_catalyst": true
         }
@@ -86,24 +57,24 @@
     },
     {
       "symbol": "META",
-      "score": 3.0,
+      "score": 3.5,
       "evidence": [
         {
-          "title": "Meta pops 9% as company makes cloud push to sell excess AI compute power capacity ",
+          "title": "Meta’s push into cloud computing means Wall Street has to prepare for lower margins",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta CEO says agent development not accelerating as expected: report",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta stock pops on news it will reportedly start a cloud computing business",
           "catalysts": [
             "pops"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "Meta's plan to launch a cloud business eases the biggest overhang on the stock",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Is Meta ‘giving up’ on cutting-edge AI? Wall Street is divided over potential cloud pivot.",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
@@ -112,7 +83,20 @@
       "score": 2,
       "evidence": [
         {
-          "title": "Centrus Energy stock rises on $900M DOE uranium contract",
+          "title": "Centrus Energy stock gains on S&P SmallCap 600 inclusion",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "BE",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Bloom Energy Rises On Big AI Infrastructure Expansion",
           "catalysts": [
             "rises"
           ],
@@ -121,44 +105,15 @@
       ]
     },
     {
-      "symbol": "IBM",
+      "symbol": "CRM",
       "score": 2,
       "evidence": [
         {
-          "title": "International Business Machines (IBM) Unveils World’s First 0.7-Nanometer Semiconductor Tech",
+          "title": "SpaceX initiated, Salesforce upgraded: Wall Street's top analyst calls",
           "catalysts": [
-            "unveils"
+            "upgraded"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "CoreWeave (CRWV) Expands European AI Infrastructure Through New Partnership with Conapto",
-          "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Trump says outside funds 'run my money' after disclosure shows billions in 2025 revenue",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft Stock Hasn’t Been This Cheap in Nearly a Decade. Here’s How to Buy the Dip for Less.",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
@@ -167,94 +122,28 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Trump says outside funds 'run my money' after disclosure shows billions in 2025 revenue",
+          "title": "Trump bought Apple, Nvidia and other tech giants before tariff reversal fueled rebound",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "NVIDIA (NVDA), Palantir (PLTR) Partner to Deploy Secure AI Models for Government and Infrastructure",
+          "title": "Nvidia is betting on a trillion-dollar robotics boom. Here is the hidden way to trade it.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "F",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Here’s what’s worth streaming in July 2026 on Netflix, Hulu, HBO Max and more",
+          "title": "Ford Q2 sales drop 10.3% due to F-Series supplier issue, falling EV demand",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Apple Price Hikes Sent AAPL Stock Falling. They May Not Even Matter in the Long Term.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump says outside funds 'run my money' after disclosure shows billions in 2025 revenue",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Healthy Returns: Walmart, CVS step in to help seniors navigate Medicare coverage of obesity drugs ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NOW",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "ServiceNow and Salesforce shares now look like buys, as ‘Armageddon’ fears are too extreme, analyst says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "ServiceNow and Salesforce shares now look like buys, as ‘Armageddon’ fears are too extreme, analyst says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Sandisk’s and Micron’s stocks sink as the rotation trade builds, but supply shortages should limit losses",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Here’s what’s worth streaming in July 2026 on Netflix, Hulu, HBO Max and more",
+          "title": "Ford CEO wants level playing field with Toyota, GM imports as USMCA trade talks reopen",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -262,21 +151,152 @@
     },
     {
       "symbol": "HOOD",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "4 Reasons BTIG Is Buying Robinhood Stock Right Now",
+          "title": "AI agents will soon be able to match human traders, Robinhood CEO tells CNBC",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Robinhood Markets (HOOD) Fell on Weak Core Earnings",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AVGO",
+      "symbol": "PLTR",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Palantir’s stock bounces back as analyst cheers company’s unique AI advantage",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Palantir Is the Most Oversold Tech Stock Now. A Rebound Isn’t a Guarantee.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Could This New Chip Be a Game Changer for Broadcom Stock?",
+          "title": "Trump bought Apple, Nvidia and other tech giants before tariff reversal fueled rebound",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft commits $2.5 billion and 6,000 employees to new AI implementation unit",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Trump Accounts get a boost from employer contributions — Goldman Sachs and Morgan Stanley are the latest to offer matching programs",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Trump Accounts get a boost from employer contributions — Goldman Sachs and Morgan Stanley are the latest to offer matching programs",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LCID",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Rivian raises 2026 delivery outlook while Lucid misses Wall Street expectations for second quarter",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RIVN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Rivian raises 2026 delivery outlook while Lucid misses Wall Street expectations for second quarter",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "JPMorgan loses fight over Charlie Javice's legal bills - report",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Pershing Square Inc. declares $0.122 dividend",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "CoreWeave Is Down 13% Today: How Does CRWV Compare to Other Cloud Stocks Like Cloudflare and Oracle?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "CoreWeave Is Down 13% Today: How Does CRWV Compare to Other Cloud Stocks Like Cloudflare and Oracle?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NET",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "CoreWeave Is Down 13% Today: How Does CRWV Compare to Other Cloud Stocks Like Cloudflare and Oracle?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -284,8 +304,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2,
-    "OpenAI (private)": 2,
-    "Cerebras (pre-IPO)": 1
+    "OpenAI (private)": 1
   }
 }
