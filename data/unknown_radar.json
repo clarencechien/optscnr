@@ -1,41 +1,29 @@
 {
-  "updated_at": "2026-07-01T22:46:11.231250",
-  "count": 3,
+  "updated_at": "2026-07-02T22:36:15.610929",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 24,
-      "consecutive_days": 10,
-      "is_strong": true,
-      "evidence": [
-        "Bulls are betting big on this global ETF that's deep in a bear market",
-        "Meridian3 Industrials prices $175M IPO on Nasdaq"
-      ]
-    },
-    {
-      "name": "Defense",
-      "ticker": "DTII",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Buy the UK DIP? Defense stocks lifted by $20 billion spending boost as gilts come under fire",
-        "Cleveland-Cliffs wins $400M Defense steel contract"
-      ]
-    },
-    {
-      "name": "Coupang",
-      "ticker": "CPNG",
+      "name": "Columbia",
+      "ticker": "COLB",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "South Korean government discriminated against Coupang, U.S. companies, House report finds",
-        "South Korean government discriminated against Coupang, U.S. companies, House report finds"
+        "Levi's, The North Face and Columbia are turning to women to fuel their next phase of growth",
+        "Levi's, The North Face and Columbia are turning to women to fuel their next phase of growth"
+      ]
+    },
+    {
+      "name": "State Street",
+      "ticker": "STT-PG",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Treasury says Trump Account investment options will include State Street, BlackRock and Vanguard ETF",
+        "Treasury says Trump Account investment options will include State Street, BlackRock and Vanguard ETF"
       ]
     }
   ]

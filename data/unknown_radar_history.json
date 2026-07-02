@@ -13,20 +13,6 @@
     "total_mentions": 6,
     "ticker": "OTAI-UN"
   },
-  "Alibaba": {
-    "first_seen": "2026-06-24",
-    "last_seen": "2026-06-24",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BBAAY"
-  },
-  "Toyota": {
-    "first_seen": "2026-06-24",
-    "last_seen": "2026-06-24",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "TOYOF"
-  },
   "Synaptics": {
     "first_seen": "2026-06-25",
     "last_seen": "2026-06-25",
@@ -124,5 +110,19 @@
     "consecutive_days": 1,
     "total_mentions": 3,
     "ticker": "DTII"
+  },
+  "Columbia": {
+    "first_seen": "2026-07-02",
+    "last_seen": "2026-07-02",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "COLB"
+  },
+  "State Street": {
+    "first_seen": "2026-07-02",
+    "last_seen": "2026-07-02",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "STT-PG"
   }
 }
