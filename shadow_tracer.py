@@ -179,6 +179,18 @@ def generate_shadowlog_md(signals, month_str):
         md += f"- 噴出（≥2x）：{len(spiked)} 筆 → **命中率 {hit_rate:.0f}%**\n"
         md += f"- 待驗證（T+N 還沒到）：{len(signals) - len(judged)} 筆\n\n"
 
+        # === 權利金分層命中率（lottery vs mid vs heavy）===
+        # 驗證「$1.28 樂透票 vs $5.5 實彈單」兩類信號的期望值是否有顯著差異
+        # 樣本夠多且差異顯著 → 才考慮在掃描報表分區顯示；否則此分類即雜訊
+        md += "### 💰 權利金分層命中率\n\n"
+        md += "| 分層 | 定義 | 已驗證 | 噴出 | 命中率 |\n|---|---|---|---|---|\n"
+        for tier, label in [("lottery", "樂透 <$1.5"), ("mid", "中間 $1.5-3"), ("heavy", "實彈 >$3")]:
+            tj = [s for s in judged if s.get("premium_tier") == tier]
+            ts = [s for s in tj if s["verdict"].startswith("✅")]
+            rate = f"{len(ts)/len(tj)*100:.0f}%" if tj else "—"
+            md += f"| {label.split(' ')[0]} | {label.split(' ',1)[1] if ' ' in label else ''} | {len(tj)} | {len(ts)} | {rate} |\n"
+        md += "\n_樣本 <10 筆時命中率僅供參考，勿據此改規則。_\n\n"
+
     # === 區塊一：暴動高 IV 過濾驗證 ===
     md += "## 🔥 區塊一：暴動高 IV 過濾驗證\n\n"
     md += "> 被 v3.9「⚠️暴動高IV」標記的，後來真的該擋嗎？（驗證 IV>80% 門檻）\n\n"
