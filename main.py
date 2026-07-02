@@ -558,6 +558,11 @@ def save_signal_snapshot(df):
             "entry_spot": float(r.get('Spot', 0)),# 信號當下的現價
             "oi": int(r['OpenInterest']),
             "oi_d7": int(r['OI_d7']) if 'OI_d7' in r and pd.notna(r['OI_d7']) else 0,
+            # premium_tier：權利金分級貼標（只記錄，不影響掃描邏輯）
+            # lottery(<$1.5)=散戶樂透/知情者低成本埋伏；heavy(>$3)=機構級真金白銀方向單
+            # 用途：shadow log 事後驗證兩類命中率是否有顯著差異，數據說話後才考慮動報表
+            "premium_tier": ("lottery" if float(r['Ask']) < 1.5
+                             else ("mid" if float(r['Ask']) < 3.0 else "heavy")),
             # T+N 結果欄位，先留空，由 shadow_tracer 事後回填
             "t5": None, "t10": None, "t20": None,
             "verdict": None,  # 事後判定：噴了/沒噴/歸零
