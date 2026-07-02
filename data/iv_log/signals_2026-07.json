@@ -15,7 +15,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_CPRT_2026-07-17_30.0",
@@ -33,7 +34,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_PATH_2026-07-17_11.5",
@@ -51,7 +53,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_META_2026-07-17_700.0",
@@ -69,7 +72,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "mid"
   },
   {
     "signal_id": "2026-07-01_PLTR_2026-07-17_150.0",
@@ -87,7 +91,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_WMT_2026-08-21_120.0",
@@ -105,7 +110,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_DELL_2026-07-17_550.0",
@@ -123,7 +129,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "mid"
   },
   {
     "signal_id": "2026-07-01_META_2026-07-17_695.0",
@@ -141,7 +148,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "mid"
   },
   {
     "signal_id": "2026-07-01_AMZN_2026-07-17_280.0",
@@ -159,7 +167,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_SOFI_2026-09-18_25.0",
@@ -177,7 +186,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_WMT_2026-08-21_115.0",
@@ -195,7 +205,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "mid"
   },
   {
     "signal_id": "2026-07-01_WMT_2026-08-21_110.0",
@@ -213,7 +224,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "heavy"
   },
   {
     "signal_id": "2026-07-01_IBIT_2027-01-15_60.0",
@@ -231,7 +243,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_NVDA_2026-09-18_310.0",
@@ -249,7 +262,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_OPEN_2027-01-15_10.0",
@@ -267,7 +281,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_IBIT_2026-08-21_55.0",
@@ -285,7 +300,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "lottery"
   },
   {
     "signal_id": "2026-07-01_NVDA_2028-01-21_400.0",
@@ -303,6 +319,7 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "premium_tier": "heavy"
   }
 ]

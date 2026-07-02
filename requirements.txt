@@ -1,0 +1,10 @@
+# 根目錄腳本共用依賴（各 .github/workflows/*.yml 統一用 pip install -r requirements.txt）
+# 子目錄 delta_radar/ 與 tw_scanner/ 各有自己的 requirements.txt，不在此列
+requests
+pandas
+tabulate
+yfinance
+feedparser
+lxml
+html5lib
+beautifulsoup4

@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests feedparser
+          pip install -r requirements.txt
 
       - name: Run unknown radar
         run: python unknown_radar.py

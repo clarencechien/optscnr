@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests pandas tabulate yfinance
+          pip install -r requirements.txt
 
       - name: Run Scanner
         # 加上 -u 參數，強制顯示輸出 (Unbuffered)

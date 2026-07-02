@@ -22,7 +22,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install requests
+          pip install -r requirements.txt
       
       - name: Run catalyst fetch
         run: python catalyst_fetch.py
