@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-07-01T23:43:10.358497",
+  "updated_at": "2026-07-02T02:45:31.413810",
   "version": "v8.6",
   "stage": 3,
   "price": 157.5399932861328,
   "market_cap_t": 2.061,
   "total_shares_b": 13.08,
   "hard_cap_t": 2.2,
-  "atm_iv": 0.7588728540039064,
-  "iv_percentile": 50.0,
+  "atm_iv": 0.782228740234375,
+  "iv_percentile": 64.7,
   "pc_ratio": 0.502353770797995,
   "c_pool_frozen": false,
   "iv_stable": false,
@@ -68,13 +68,13 @@
     "ma50": null,
     "ma200": null,
     "current_price": 157.54,
-    "avg_cost": 150.0,
-    "total_shares": 177,
-    "total_invested": 26550,
-    "current_value": 27884.58,
-    "unrealized_pnl_pct": 5.0,
+    "avg_cost": 156.89,
+    "total_shares": 570,
+    "total_invested": 89425,
+    "current_value": 89797.8,
+    "unrealized_pnl_pct": 0.4,
     "pool_a_target": 120000.0,
-    "pool_a_filled_pct": 22.1
+    "pool_a_filled_pct": 74.5
   },
   "peers": [
     {
