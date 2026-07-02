@@ -17,7 +17,7 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: |
-          pip install yfinance pandas
+          pip install -r requirements.txt
       - name: Run space radar
         run: python space_radar.py
       # Option Sage（C 池沉思者）——必須排在 space_radar 之後：

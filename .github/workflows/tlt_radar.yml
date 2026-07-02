@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install yfinance pandas
+          pip install -r requirements.txt
 
       - name: Run TLT radar
         run: python tlt_radar.py

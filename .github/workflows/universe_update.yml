@@ -22,7 +22,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install yfinance pandas lxml html5lib beautifulsoup4 requests
+          pip install -r requirements.txt
       
       - name: Run universe update
         run: python universe_update.py

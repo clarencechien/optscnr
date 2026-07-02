@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install yfinance pandas requests
+          pip install -r requirements.txt
 
       - name: Run fallen SaaS scan
         run: python fallen_saas.py

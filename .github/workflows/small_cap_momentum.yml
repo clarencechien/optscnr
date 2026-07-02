@@ -23,7 +23,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install yfinance pandas requests
+          pip install -r requirements.txt
       
       - name: Run small cap momentum scan
         run: python small_cap_momentum.py
