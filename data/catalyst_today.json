@@ -1,128 +1,45 @@
 {
-  "updated_at": "2026-07-02T21:45:23.930634",
+  "updated_at": "2026-07-03T21:40:45.105659",
   "stats": {
-    "total_items": 101,
-    "items_with_company": 26,
-    "items_with_catalyst": 19,
-    "items_both": 6
+    "total_items": 98,
+    "items_with_company": 22,
+    "items_with_catalyst": 18,
+    "items_both": 8
   },
-  "count": 20,
+  "count": 19,
   "tickers": [
-    "TSLA",
-    "META",
-    "LEU",
-    "BE",
-    "CRM",
     "NVDA",
     "F",
+    "NFLX",
+    "TSLA",
+    "BE",
     "HOOD",
     "PLTR",
+    "MRVL",
     "AAPL",
-    "MSFT",
-    "GS",
-    "MS",
-    "LCID",
-    "RIVN",
-    "JPM",
-    "XYZ",
     "ORCL",
-    "CRWV",
-    "NET"
+    "BA",
+    "INTC",
+    "AMZN",
+    "MS",
+    "GS",
+    "WMT",
+    "VRT",
+    "MU",
+    "SNDK"
   ],
   "details": [
     {
-      "symbol": "TSLA",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "Tesla stock sinks 7% despite strong deliveries report, posting worst day in nearly a year",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Why Tesla’s stock sank to its worst day in a year despite blowout delivery numbers",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Tesla launches six-seater Model Y L in US to boost sales",
-          "catalysts": [
-            "launches"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "META",
+      "symbol": "NVDA",
       "score": 3.5,
       "evidence": [
         {
-          "title": "Meta’s push into cloud computing means Wall Street has to prepare for lower margins",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta CEO says agent development not accelerating as expected: report",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta stock pops on news it will reportedly start a cloud computing business",
-          "catalysts": [
-            "pops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "LEU",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Centrus Energy stock gains on S&P SmallCap 600 inclusion",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BE",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Bloom Energy Rises On Big AI Infrastructure Expansion",
-          "catalysts": [
-            "rises"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "SpaceX initiated, Salesforce upgraded: Wall Street's top analyst calls",
-          "catalysts": [
-            "upgraded"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.0,
-      "evidence": [
-        {
           "title": "Trump bought Apple, Nvidia and other tech giants before tariff reversal fueled rebound",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia offers start-up customers chance to swap compute power for revenue share",
           "catalysts": [],
           "has_catalyst": false
         },
@@ -135,80 +52,165 @@
     },
     {
       "symbol": "F",
-      "score": 1.0,
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Ford Q2 sales drop 10.3% due to F-Series supplier issue, falling EV demand",
+          "title": "Ford achieves quality milestone, as CEO targets flawless new vehicle launches",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Ford Q2 sales slide 10% on EV drop and model phase-outs; Bronco and Maverick hybrid set records",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Ford CEO wants level playing field with Toyota, GM imports as USMCA trade talks reopen",
+          "title": "Big win for humans! Ford rehired 350 'gray beards' after AI failed quality checks. Are replacement fears overblown?",
           "catalysts": [],
           "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Here’s what’s worth streaming in July 2026 on Netflix, Hulu, HBO Max and more",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Netflix (NFLX) Surged on Refocusing on Fundamentals",
+          "catalysts": [
+            "surged"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Tesla stock sinks 7% despite strong deliveries report, posting worst day in nearly a year",
+          "catalysts": [
+            "sinks"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "BE",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Bloom Energy’s $25B partnership targets AI’s next bottleneck",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "HOOD",
-      "score": 1.0,
+      "score": 2,
       "evidence": [
         {
-          "title": "AI agents will soon be able to match human traders, Robinhood CEO tells CNBC",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Robinhood Markets (HOOD) Fell on Weak Core Earnings",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Robinhood Markets Launches Public Blockchain",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "PLTR",
-      "score": 1.0,
+      "score": 2,
       "evidence": [
         {
-          "title": "Palantir’s stock bounces back as analyst cheers company’s unique AI advantage",
-          "catalysts": [],
-          "has_catalyst": false
-        },
+          "title": "Palantir Stock Gets Analyst Upgrade Amid Anthropic, OpenAI Rivalry",
+          "catalysts": [
+            "upgrade"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MRVL",
+      "score": 2,
+      "evidence": [
         {
-          "title": "Palantir Is the Most Oversold Tech Stock Now. A Rebound Isn’t a Guarantee.",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Marvell Technology (MRVL) Gains from AI-Related Infrastructure Demand",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "AAPL",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
           "title": "Trump bought Apple, Nvidia and other tech giants before tariff reversal fueled rebound",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Microsoft commits $2.5 billion and 6,000 employees to new AI implementation unit",
+          "title": "Here’s what’s worth streaming in July 2026 on Netflix, Hulu, HBO Max and more",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Trump Accounts get a boost from employer contributions — Goldman Sachs and Morgan Stanley are the latest to offer matching programs",
+          "title": "Trump’s Freedom 250 draws corporate sponsors with business before his administration",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Trump’s Freedom 250 draws corporate sponsors with business before his administration",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Acting DNI Pulte fires dozens of intelligence officials: MS Now",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Amazon has deployed enough satellites to launch Leo service later this year",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -226,77 +228,55 @@
       ]
     },
     {
-      "symbol": "LCID",
+      "symbol": "GS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Rivian raises 2026 delivery outlook while Lucid misses Wall Street expectations for second quarter",
+          "title": "Trump Accounts get a boost from employer contributions — Goldman Sachs and Morgan Stanley are the latest to offer matching programs",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RIVN",
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Rivian raises 2026 delivery outlook while Lucid misses Wall Street expectations for second quarter",
+          "title": "‘I claimed Social Security at 62’: At 76, I’m working at Walmart. Why do I still owe payroll taxes?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "JPM",
+      "symbol": "VRT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "JPMorgan loses fight over Charlie Javice's legal bills - report",
+          "title": "Vertiv Holdings Co (VRT) Continues to Add Strong Backlogs",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Pershing Square Inc. declares $0.122 dividend",
+          "title": "The Next Micron? Some Investors Say NETLIST (NLST) Is The Best AI Memory Stock to Buy Now",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ORCL",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "CoreWeave Is Down 13% Today: How Does CRWV Compare to Other Cloud Stocks Like Cloudflare and Oracle?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "CoreWeave Is Down 13% Today: How Does CRWV Compare to Other Cloud Stocks Like Cloudflare and Oracle?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NET",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "CoreWeave Is Down 13% Today: How Does CRWV Compare to Other Cloud Stocks Like Cloudflare and Oracle?",
+          "title": "Retail Investors Say This Is The Next SanDisk Stock Everyone’s Ignoring",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -304,6 +284,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1
+    "OpenAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
