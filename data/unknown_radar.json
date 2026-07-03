@@ -1,29 +1,17 @@
 {
-  "updated_at": "2026-07-02T22:36:15.610929",
-  "count": 2,
+  "updated_at": "2026-07-03T22:32:30.698032",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Columbia",
-      "ticker": "COLB",
+      "name": "Billion",
+      "ticker": "BGHL",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "Levi's, The North Face and Columbia are turning to women to fuel their next phase of growth",
-        "Levi's, The North Face and Columbia are turning to women to fuel their next phase of growth"
-      ]
-    },
-    {
-      "name": "State Street",
-      "ticker": "STT-PG",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Treasury says Trump Account investment options will include State Street, BlackRock and Vanguard ETF",
-        "Treasury says Trump Account investment options will include State Street, BlackRock and Vanguard ETF"
+        "This Global Utility Stock Looks Very Cheap Right Now as It Invests Nearly $2 Billion in the U.S. Ene",
+        "CoreWeave Just Slipped Under $50 Billion. Is the Debt Finally Catching Up?"
       ]
     }
   ]

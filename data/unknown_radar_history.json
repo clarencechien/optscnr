@@ -13,13 +13,6 @@
     "total_mentions": 6,
     "ticker": "OTAI-UN"
   },
-  "Synaptics": {
-    "first_seen": "2026-06-25",
-    "last_seen": "2026-06-25",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SYNA"
-  },
   "Daily": {
     "first_seen": "2026-06-25",
     "last_seen": "2026-06-30",
@@ -57,9 +50,9 @@
   },
   "Billion": {
     "first_seen": "2026-06-26",
-    "last_seen": "2026-06-26",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-07-03",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "BGHL"
   },
   "Comcast": {
