@@ -178,5 +178,17 @@
       "retail_mtx": 70.6,
       "margin_chg": 97.2
     }
+  },
+  {
+    "date": "2026-07-03",
+    "regime": "DE_RISK",
+    "score": 0.141,
+    "alerts": [],
+    "pcts": {
+      "f_spot_20d": 2.0,
+      "tx_delta": 89.7,
+      "retail_mtx": 59.1,
+      "margin_chg": 95.6
+    }
   }
 ]
