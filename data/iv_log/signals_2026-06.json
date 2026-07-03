@@ -420,10 +420,15 @@
     "entry_spot": 17.8799991607666,
     "oi": 796,
     "oi_d7": 796,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.39,
+      "spot": 18.239999771118164,
+      "iv": 57.42230078125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰0.9x/今0.9x)",
     "premium_tier": "lottery"
   },
   {
@@ -439,10 +444,15 @@
     "entry_spot": 232.69000244140625,
     "oi": 799,
     "oi_d7": 799,
-    "t5": null,
+    "t5": {
+      "opt_price": 3.04,
+      "spot": 242.6699981689453,
+      "iv": 34.35124243164062,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰2.0x/今2.0x)",
     "premium_tier": "mid"
   },
   {
