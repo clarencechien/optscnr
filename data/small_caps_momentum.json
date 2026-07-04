@@ -1,24 +1,54 @@
 {
-  "updated_at": "2026-06-27T02:12:04.449283",
+  "updated_at": "2026-07-04T01:56:43.018973",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 1,
+  "count": 4,
   "tickers": [
-    "TDUP"
+    "NTLA",
+    "TDUP",
+    "TDOC",
+    "EDIT"
   ],
   "details": [
     {
+      "symbol": "NTLA",
+      "price": 17.56,
+      "gain_30d_pct": 43.2,
+      "market_cap_m": 2454.0,
+      "avg_volume_m": 6.94,
+      "short_pct_float": 45.4,
+      "score": 49.72
+    },
+    {
       "symbol": "TDUP",
-      "price": 6.93,
-      "gain_30d_pct": 63.6,
-      "market_cap_m": 894.0,
-      "avg_volume_m": 2.1,
+      "price": 7.03,
+      "gain_30d_pct": 63.9,
+      "market_cap_m": 907.0,
+      "avg_volume_m": 2.11,
       "short_pct_float": 22.1,
-      "score": 28.5
+      "score": 28.53
+    },
+    {
+      "symbol": "TDOC",
+      "price": 9.2,
+      "gain_30d_pct": 42.0,
+      "market_cap_m": 1661.0,
+      "avg_volume_m": 4.35,
+      "short_pct_float": 16.4,
+      "score": 20.59
+    },
+    {
+      "symbol": "EDIT",
+      "price": 3.65,
+      "gain_30d_pct": 40.4,
+      "market_cap_m": 560.0,
+      "avg_volume_m": 2.75,
+      "short_pct_float": 12.0,
+      "score": 16.06
     }
   ]
 }
