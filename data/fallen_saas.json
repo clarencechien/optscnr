@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T04:54:20.661279",
+  "updated_at": "2026-07-04T04:35:19.150263",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -9,33 +9,21 @@
     "MIN_VOL_RATIO": 1.2,
     "MIN_AVG_VOLUME": 500000
   },
-  "count": 2,
+  "count": 1,
   "tickers": [
-    "CHWY",
     "COUR"
   ],
   "details": [
     {
-      "symbol": "CHWY",
-      "price": 18.55,
-      "high_52w": 43.63,
-      "low_52w": 17.4,
-      "drawdown_pct": 57.5,
-      "rebound_pct": 6.6,
-      "vol_ratio": 1.31,
-      "market_cap_b": 7.6,
-      "score": 27.03
-    },
-    {
       "symbol": "COUR",
-      "price": 5.74,
+      "price": 5.9,
       "high_52w": 13.56,
       "low_52w": 5.0,
-      "drawdown_pct": 57.7,
-      "rebound_pct": 14.8,
-      "vol_ratio": 1.41,
-      "market_cap_b": 1.6,
-      "score": 26.47
+      "drawdown_pct": 56.5,
+      "rebound_pct": 18.0,
+      "vol_ratio": 1.33,
+      "market_cap_b": 1.7,
+      "score": 24.65
     }
   ]
 }
