@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-07-03T22:32:30.698032",
+  "updated_at": "2026-07-05T22:29:33.766183",
   "count": 1,
   "blind_spots": [
     {
-      "name": "Billion",
-      "ticker": "BGHL",
-      "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
+      "name": "EasyJet",
+      "ticker": "EJTTF",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "This Global Utility Stock Looks Very Cheap Right Now as It Invests Nearly $2 Billion in the U.S. Ene",
-        "CoreWeave Just Slipped Under $50 Billion. Is the Debt Finally Catching Up?"
+        "EasyJet’s flight path from start-up to takeover deal",
+        "EasyJet agrees to Castlelake’s £5.2B takeover offer"
       ]
     }
   ]

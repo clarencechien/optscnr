@@ -20,34 +20,6 @@
     "total_mentions": 4,
     "ticker": "DJCO"
   },
-  "Healthcare": {
-    "first_seen": "2026-06-26",
-    "last_seen": "2026-06-26",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "HR"
-  },
-  "German": {
-    "first_seen": "2026-06-26",
-    "last_seen": "2026-06-26",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GABC"
-  },
-  "GameStop": {
-    "first_seen": "2026-06-26",
-    "last_seen": "2026-06-26",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GME-WT"
-  },
-  "Lantheus": {
-    "first_seen": "2026-06-26",
-    "last_seen": "2026-06-26",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "LNTH"
-  },
   "Billion": {
     "first_seen": "2026-06-26",
     "last_seen": "2026-07-03",
@@ -117,5 +89,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "STT-PG"
+  },
+  "EasyJet": {
+    "first_seen": "2026-07-05",
+    "last_seen": "2026-07-05",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "EJTTF"
   }
 }
