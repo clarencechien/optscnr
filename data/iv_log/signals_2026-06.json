@@ -468,10 +468,15 @@
     "entry_spot": 25.799999237060547,
     "oi": 1682,
     "oi_d7": 256,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.14,
+      "spot": 25.889999389648438,
+      "iv": 63.281617187500004,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.0x/今1.0x)",
     "premium_tier": "lottery"
   },
   {
@@ -487,10 +492,15 @@
     "entry_spot": 21.81999969482422,
     "oi": 1739,
     "oi_d7": 1739,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.07,
+      "spot": 20.579999923706055,
+      "iv": 31.250687499999998,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "❌沒噴(峰0.2x)",
     "premium_tier": "lottery"
   },
   {
@@ -506,10 +516,15 @@
     "entry_spot": 240.13999938964844,
     "oi": 10871,
     "oi_d7": 4468,
-    "t5": null,
+    "t5": {
+      "opt_price": 13.32,
+      "spot": 242.6699981689453,
+      "iv": 40.76597320556641,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.1x/今1.1x)",
     "premium_tier": "heavy"
   },
   {
@@ -525,10 +540,15 @@
     "entry_spot": 34.18000030517578,
     "oi": 7808,
     "oi_d7": 7808,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.62,
+      "spot": 34.869998931884766,
+      "iv": 42.139250488281256,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.2x/今1.2x)",
     "premium_tier": "lottery"
   },
   {
@@ -544,10 +564,15 @@
     "entry_spot": 240.13999938964844,
     "oi": 30723,
     "oi_d7": -2330,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.58,
+      "spot": 242.6699981689453,
+      "iv": 38.574833007812494,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰0.8x/今0.8x)",
     "premium_tier": "lottery"
   },
   {
@@ -563,10 +588,15 @@
     "entry_spot": 54.59000015258789,
     "oi": 1771,
     "oi_d7": 1771,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.05,
+      "spot": 53.75,
+      "iv": 50.43994873046876,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰0.9x/今0.9x)",
     "premium_tier": "lottery"
   },
   {
@@ -582,10 +612,15 @@
     "entry_spot": 4.679999828338623,
     "oi": 46178,
     "oi_d7": 1593,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.38,
+      "spot": 4.980000019073486,
+      "iv": 94.14068359375,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.2x/今1.2x)",
     "premium_tier": "lottery"
   },
   {
@@ -601,10 +636,15 @@
     "entry_spot": 240.13999938964844,
     "oi": 41885,
     "oi_d7": 1118,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.09,
+      "spot": 242.6699981689453,
+      "iv": 46.973186523437505,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰0.8x/今0.8x)",
     "premium_tier": "lottery"
   },
   {
@@ -620,10 +660,15 @@
     "entry_spot": 34.18000030517578,
     "oi": 32662,
     "oi_d7": 275,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.24,
+      "spot": 34.869998931884766,
+      "iv": 52.246571289062494,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.0x/今1.0x)",
     "premium_tier": "lottery"
   },
   {
@@ -639,10 +684,15 @@
     "entry_spot": 114.20999908447266,
     "oi": 82058,
     "oi_d7": 0,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.94,
+      "spot": 119.45999908447266,
+      "iv": 65.25913647460939,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.0x/今1.0x)",
     "premium_tier": "lottery"
   },
   {
@@ -658,10 +708,15 @@
     "entry_spot": 57.619998931884766,
     "oi": 3067,
     "oi_d7": 3067,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.11,
+      "spot": 58.130001068115234,
+      "iv": 32.25165405273437,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.2x/今1.2x)",
     "premium_tier": "lottery"
   },
   {
@@ -677,10 +732,15 @@
     "entry_spot": 20.700000762939453,
     "oi": 1329,
     "oi_d7": 1329,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.26,
+      "spot": 20.579999923706055,
+      "iv": 28.028063476562494,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰0.8x/今0.8x)",
     "premium_tier": "lottery"
   },
   {
@@ -696,10 +756,15 @@
     "entry_spot": 8.920000076293945,
     "oi": 1115,
     "oi_d7": 1115,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.06,
+      "spot": 8.489999771118164,
+      "iv": 86.7188828125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "❌沒噴(峰0.4x)",
     "premium_tier": "lottery"
   },
   {
@@ -715,10 +780,15 @@
     "entry_spot": 20.700000762939453,
     "oi": 1352,
     "oi_d7": 1352,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.65,
+      "spot": 20.579999923706055,
+      "iv": 32.12958496093749,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.0x/今1.0x)",
     "premium_tier": "lottery"
   },
   {
@@ -734,10 +804,15 @@
     "entry_spot": 33.290000915527344,
     "oi": 11608,
     "oi_d7": 11608,
-    "t5": null,
+    "t5": {
+      "opt_price": 2.1,
+      "spot": 34.869998931884766,
+      "iv": 43.2622861328125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.5x/今1.5x)",
     "premium_tier": "lottery"
   },
   {
@@ -753,10 +828,15 @@
     "entry_spot": 373.0199890136719,
     "oi": 33564,
     "oi_d7": 2081,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.5,
+      "spot": 390.489990234375,
+      "iv": 42.212491943359375,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.6x/今1.6x)",
     "premium_tier": "lottery"
   },
   {
@@ -772,10 +852,15 @@
     "entry_spot": 20.700000762939453,
     "oi": 35180,
     "oi_d7": 35180,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.02,
+      "spot": 20.579999923706055,
+      "iv": 46.0942890625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰0.5x/今0.5x)",
     "premium_tier": "lottery"
   },
   {
@@ -791,10 +876,15 @@
     "entry_spot": 45.72999954223633,
     "oi": 1305,
     "oi_d7": 1305,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.75,
+      "spot": 38.81999969482422,
+      "iv": 117.84709045410153,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰0.7x/今0.7x)",
     "premium_tier": "mid"
   },
   {
@@ -810,10 +900,15 @@
     "entry_spot": 33.290000915527344,
     "oi": 43724,
     "oi_d7": 1637,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.97,
+      "spot": 34.869998931884766,
+      "iv": 45.703667968750004,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.4x/今1.4x)",
     "premium_tier": "lottery"
   },
   {
@@ -829,10 +924,15 @@
     "entry_spot": 41.04999923706055,
     "oi": 2652,
     "oi_d7": 2652,
-    "t5": null,
+    "t5": {
+      "opt_price": 2.6,
+      "spot": 44.09000015258789,
+      "iv": 41.5044912109375,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.4x/今1.4x)",
     "premium_tier": "mid"
   },
   {
@@ -848,10 +948,15 @@
     "entry_spot": 41.04999923706055,
     "oi": 762,
     "oi_d7": 762,
-    "t5": null,
+    "t5": {
+      "opt_price": 3.5,
+      "spot": 44.09000015258789,
+      "iv": 47.949739257812496,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.5x/今1.5x)",
     "premium_tier": "mid"
   },
   {
@@ -867,10 +972,15 @@
     "entry_spot": 33.290000915527344,
     "oi": 37547,
     "oi_d7": -481,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.35,
+      "spot": 34.869998931884766,
+      "iv": 43.21345849609375,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.6x/今1.6x)",
     "premium_tier": "lottery"
   },
   {
@@ -886,10 +996,15 @@
     "entry_spot": 357.3699951171875,
     "oi": 1363,
     "oi_d7": 1363,
-    "t5": null,
+    "t5": {
+      "opt_price": 3.1,
+      "spot": 359.9100036621094,
+      "iv": 35.938140624999996,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.1x/今1.1x)",
     "premium_tier": "mid"
   },
   {
@@ -905,10 +1020,15 @@
     "entry_spot": 41.04999923706055,
     "oi": 1087,
     "oi_d7": 1087,
-    "t5": null,
+    "t5": {
+      "opt_price": 3.05,
+      "spot": 44.09000015258789,
+      "iv": 50.92822509765625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.5x/今1.5x)",
     "premium_tier": "mid"
   },
   {
@@ -924,10 +1044,15 @@
     "entry_spot": 200.08999633789062,
     "oi": 34948,
     "oi_d7": 56,
-    "t5": null,
+    "t5": {
+      "opt_price": 27.53,
+      "spot": 194.8300018310547,
+      "iv": 46.851117431640624,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰0.9x/今0.9x)",
     "premium_tier": "heavy"
   },
   {
@@ -943,10 +1068,15 @@
     "entry_spot": 238.33999633789062,
     "oi": 43191,
     "oi_d7": 43191,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.21,
+      "spot": 242.6699981689453,
+      "iv": 46.24077197265626,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.0x/今1.0x)",
     "premium_tier": "lottery"
   },
   {
@@ -962,10 +1092,15 @@
     "entry_spot": 33.290000915527344,
     "oi": 32724,
     "oi_d7": 432,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.24,
+      "spot": 34.869998931884766,
+      "iv": 52.246571289062494,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.2x/今1.2x)",
     "premium_tier": "lottery"
   },
   {
@@ -981,10 +1116,15 @@
     "entry_spot": 238.33999633789062,
     "oi": 47476,
     "oi_d7": 47476,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.68,
+      "spot": 242.6699981689453,
+      "iv": 43.79939013671875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.0x/今1.0x)",
     "premium_tier": "lottery"
   },
   {
@@ -1000,10 +1140,15 @@
     "entry_spot": 33.290000915527344,
     "oi": 36369,
     "oi_d7": 229,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.11,
+      "spot": 34.869998931884766,
+      "iv": 51.758294921875006,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.4x/今1.4x)",
     "premium_tier": "lottery"
   },
   {
@@ -1019,10 +1164,15 @@
     "entry_spot": 33.290000915527344,
     "oi": 33117,
     "oi_d7": -27,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.06,
+      "spot": 34.869998931884766,
+      "iv": 59.766027343750004,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.5x/今1.5x)",
     "premium_tier": "lottery"
   },
   {
@@ -1038,10 +1188,15 @@
     "entry_spot": 25.260000228881836,
     "oi": 30615,
     "oi_d7": -66,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.9,
+      "spot": 25.889999389648438,
+      "iv": 62.15858154296876,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.1x/今1.1x)",
     "premium_tier": "lottery"
   },
   {
@@ -1057,10 +1212,15 @@
     "entry_spot": 42.68000030517578,
     "oi": 38661,
     "oi_d7": -1759,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.05,
+      "spot": 45.13999938964844,
+      "iv": 59.277750976562515,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null,
+    "verdict": "➖持平(峰1.0x/今1.0x)",
     "premium_tier": "lottery"
   }
 ]
