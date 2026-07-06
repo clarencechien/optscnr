@@ -540,6 +540,10 @@ def save_signal_snapshot(df):
     # 這些才是「scanner 在喊買」的信號，值得事後驗證準不準
     hi = df[(df['Score'] >= 8) & (df['Action'] != 'GAMBLE')].copy()
 
+    # news_at_signal 貼標用：掃描當天這檔是否已在公開新聞催化名單上
+    # （catalyst_fetch 每天 20:30 UTC 先跑，scanner 22:00 跑，名單必然是當天的）
+    catalyst_set = set(load_catalyst_today())
+
     new_records = []
     for _, r in hi.iterrows():
         # signal_id：日期+標的+到期+履約，唯一識別一個信號，T+N 回填時用
@@ -563,6 +567,10 @@ def save_signal_snapshot(df):
             # 用途：shadow log 事後驗證兩類命中率是否有顯著差異，數據說話後才考慮動報表
             "premium_tier": ("lottery" if float(r['Ask']) < 1.5
                              else ("mid" if float(r['Ask']) < 3.0 else "heavy")),
+            # news_at_signal：掃描當天標的是否在公開新聞催化名單（只記錄，不影響掃描邏輯）
+            # True=新聞點火型（新聞已公開、flow 確認有人押注）；False=純flow型（沉默佈局）
+            # 用途：驗證「新聞×flow 交集 vs 無新聞 flow」兩類命中率差異（2026-06-26 批的觀察）
+            "news_at_signal": r['Stock'] in catalyst_set,
             # T+N 結果欄位，先留空，由 shadow_tracer 事後回填
             "t5": None, "t10": None, "t20": None,
             "verdict": None,  # 事後判定：噴了/沒噴/歸零

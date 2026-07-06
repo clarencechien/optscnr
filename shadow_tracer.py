@@ -191,6 +191,20 @@ def generate_shadowlog_md(signals, month_str):
             md += f"| {label.split(' ')[0]} | {label.split(' ',1)[1] if ' ' in label else ''} | {len(tj)} | {len(ts)} | {rate} |\n"
         md += "\n_樣本 <10 筆時命中率僅供參考，勿據此改規則。_\n\n"
 
+        # === 新聞點火 vs 純 flow 命中率 ===
+        # 驗證 2026-06-26 批的觀察：當天新聞名單 12 檔中 flow 只放行 2 檔（GOOGL/META）全噴，
+        # 無新聞的 15 筆只中 1（ASTS）。「新聞×真金白銀交集」是否真的比純 flow 準？
+        # news_at_signal 缺欄的舊信號不列入（避免把未知當 False 灌進統計）
+        md += "### 📰 新聞點火 vs 純 flow 命中率\n\n"
+        md += "| 類型 | 定義 | 已驗證 | 噴出 | 命中率 |\n|---|---|---|---|---|\n"
+        for flag, name, desc in [(True, "新聞點火", "信號日已在催化名單"),
+                                 (False, "純flow", "無新聞的沉默佈局")]:
+            nj = [s for s in judged if s.get("news_at_signal") is flag]
+            ns = [s for s in nj if s["verdict"].startswith("✅")]
+            nrate = f"{len(ns)/len(nj)*100:.0f}%" if nj else "—"
+            md += f"| {name} | {desc} | {len(nj)} | {len(ns)} | {nrate} |\n"
+        md += "\n_樣本 <10 筆時命中率僅供參考，勿據此改規則。_\n\n"
+
     # === 區塊一：暴動高 IV 過濾驗證 ===
     md += "## 🔥 區塊一：暴動高 IV 過濾驗證\n\n"
     md += "> 被 v3.9「⚠️暴動高IV」標記的，後來真的該擋嗎？（驗證 IV>80% 門檻）\n\n"
