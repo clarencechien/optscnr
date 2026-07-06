@@ -1,82 +1,86 @@
 {
-  "updated_at": "2026-07-05T21:34:38.669680",
+  "updated_at": "2026-07-06T21:55:45.443057",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 19,
-    "items_with_catalyst": 13,
-    "items_both": 1
+    "total_items": 98,
+    "items_with_company": 21,
+    "items_with_catalyst": 15,
+    "items_both": 3
   },
-  "count": 20,
+  "count": 15,
   "tickers": [
-    "F",
-    "AAPL",
-    "AMZN",
-    "NVDA",
-    "META",
-    "WMT",
-    "ORCL",
-    "BA",
-    "INTC",
-    "MS",
-    "GS",
-    "NFLX",
-    "HOOD",
-    "SNDK",
-    "TGT",
-    "AMD",
+    "RIVN",
     "MU",
     "NKE",
+    "NVDA",
+    "DELL",
+    "AMD",
+    "MSFT",
     "TSLA",
-    "NOW"
+    "META",
+    "WMT",
+    "AAPL",
+    "SNDK",
+    "GILD",
+    "PLTR",
+    "AVGO"
   ],
   "details": [
     {
-      "symbol": "F",
-      "score": 2,
+      "symbol": "RIVN",
+      "score": 3.5,
       "evidence": [
         {
-          "title": "Ford achieves quality milestone, as CEO targets flawless new vehicle launches",
+          "title": "Rivian, Tesla and the 'Holly Index': How to trade the new EV Main Street battle",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Rivian forecasts quarterly revenue above estimates",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Rivian stock tumbles on 75 million share offering announcement",
           "catalysts": [
-            "launches"
+            "tumbles"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 1.5,
+      "symbol": "MU",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Trump bought Apple, Nvidia and other tech giants before tariff reversal fueled rebound",
+          "title": "Micron’s stock gains, signaling a ‘return to optimism’ about the chip sector",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Why Micron Technology, Inc.’s (MU) Memory Tightness Is Turning AI Demand Into Cleaner Earnings Momentum",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Here’s what’s worth streaming in July 2026 on Netflix, Hulu, HBO Max and more",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dow Jones Futures: Expect Market Fireworks; Apple, SpaceX, Sandisk, Robinhood In Focus",
+          "title": "Micron Risks Falling Out of the Trillion-Dollar Club. AMD Stock Has a Clear Path to Joining.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 1.0,
+      "symbol": "NKE",
+      "score": 2,
       "evidence": [
         {
-          "title": "Amazon has deployed enough satellites to launch Leo service later this year",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Jeff Bezos Held 60 Meetings To Secure Amazon Investors But 40 Declined His Offer Of $50K For 1% Ownership — Today, That Would Be Worth $25B",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Why Is Nike Stock Rising After Another Crushing Update?",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
         }
       ]
     },
@@ -85,143 +89,28 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Trump bought Apple, Nvidia and other tech giants before tariff reversal fueled rebound",
+          "title": "Nvidia's next-gen AI rack system delayed to 2028 on manufacturing snags, SemiAnalysis says",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia Stock Is Down 13% Over the Last Month. Here's Why That Could Be Good News.",
+          "title": "How NVIDIA Corporation’s (NVDA) AI Factory Model Could Turn Blackwell Demand Into Usage-Linked Revenue",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "DELL",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Analyst shares 5 takes on the Neocloud vs Hyperscaler opportunities for Meta",
+          "title": "Dell’s stock gets another Trump bump — but this time it’s fading",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Meta and Tesla Are Suddenly Worth the Same $1.48 Trillion. Which Stock Wins from Here?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "MercadoLibre and Walmart Are Both Down This Year. Which Stock Should Investors Buy?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Walmart quietly built a $6 billion business off its shoppers",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump’s Freedom 250 draws corporate sponsors with business before his administration",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump’s Freedom 250 draws corporate sponsors with business before his administration",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Acting DNI Pulte fires dozens of intelligence officials: MS Now",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump Accounts get a boost from employer contributions — Goldman Sachs and Morgan Stanley are the latest to offer matching programs",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump Accounts get a boost from employer contributions — Goldman Sachs and Morgan Stanley are the latest to offer matching programs",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Here’s what’s worth streaming in July 2026 on Netflix, Hulu, HBO Max and more",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HOOD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures: Expect Market Fireworks; Apple, SpaceX, Sandisk, Robinhood In Focus",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures: Expect Market Fireworks; Apple, SpaceX, Sandisk, Robinhood In Focus",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Top Analyst strongly resets AMD stock price target",
+          "title": "Dell Stock Has Very Attractive Short-Put Yields - Over 3.8% for the Next 2 Weeks",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -229,32 +118,26 @@
     },
     {
       "symbol": "AMD",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Top Analyst strongly resets AMD stock price target",
+          "title": "How Advanced Micro Devices, Inc.’s (AMD) Server CPU Demand Is Broadening Its AI Growth Story",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Micron Risks Falling Out of the Trillion-Dollar Club. AMD Stock Has a Clear Path to Joining.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Micron Technology Stock Going to $1,500? The Bull Case Is Stronger Than You Think.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "1 Big Reason Nike's Turnaround Is Taking Longer Than Expected",
+          "title": "Microsoft cuts 4,800 jobs, as Xbox unit downsizes and plans to spin off four gaming studios",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -265,23 +148,91 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta and Tesla Are Suddenly Worth the Same $1.48 Trillion. Which Stock Wins from Here?",
+          "title": "Rivian, Tesla and the 'Holly Index': How to trade the new EV Main Street battle",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NOW",
+      "symbol": "META",
       "score": 0.5,
       "evidence": [
         {
-          "title": "The 1 Big Risk Every ServiceNow Investor Should Understand",
+          "title": "Meta’s woes deepen in India as child abuse ads on Instagram draw government ire",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Walmart cuts prices on summer items across US stores",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Best Buy and Apple flag a price shock for shoppers",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Kioxia and Sandisk (SNDK) Begin Production of 10th-Generation 3D Flash Memory",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GILD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Gilead (GILD) One of the Most Undervalued NASDAQ Stocks to Buy Right Now?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "How Palantir Technologies Inc. (PLTR) Is Expanding AI Deployment Channels Across Government and Enterprise",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Broadcom Inc.’s (AVGO) Custom AI Silicon Growth Still Supports Its Estimate Story",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "Anthropic (private)": 3
+  }
 }
