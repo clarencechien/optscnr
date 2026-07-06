@@ -97,12 +97,17 @@ guard（擋假日，SPY 最後交易日 vs 美東今日比對，fail-open）+
 
 ## 七、進行中事項（PENDING）
 
-- **premium_tier 貼標**：依 PLAN_premium_tier_and_repo.md 部署
-  （快照加 lottery/mid/heavy 分級 + SHADOWLOG 分層命中率表 + 歷史回填）。
+- **premium_tier 貼標**：已部署（2026-07，PR #1/#2）。快照帶 lottery/mid/heavy
+  分級、SHADOWLOG 有分層命中率表、歷史已回填。等樣本累積，每層 <50 筆前不下結論。
   背景：META 635C（$1.28 樂透）噴 9.1x 與 GOOGL 350C（$5.5 實彈）噴 3.1x
   是兩種不同性質信號，先貼標讓數據回答「哪類更準」，**不做分類池 UI、不做盤中 alert**。
+- **news_at_signal 貼標**：已部署（2026-07）。快照記錄「信號日標的是否已在
+  catalyst 新聞名單」，SHADOWLOG 有「新聞點火 vs 純flow」命中率表，歷史從
+  catalyst_today.json 的 git 版本回填（用的是信號日當天的公開資訊，非事後資訊）。
+  背景：2026-06-26 批新聞名單 12 檔中 flow 只放行 GOOGL/META 兩檔全噴、
+  無新聞 15 筆只中 ASTS 一筆——「新聞×真金白銀交集」假說，等數據驗證。
 - **SURGE_IV_MIN 驗證**：等 SHADOWLOG 區塊一樣本累積。
-- repo 整理 P1（根目錄 requirements.txt 統一）P2（docs/ 歸攏）可做；
+- repo 整理 P1（requirements.txt 統一）P2（docs/ 歸攏）已完成（PR #1）；
   P3（抽 utils.py）等系統穩定；P4（大重構）不做。
 
 ## 八、紅線（任何 session 都不得越過）

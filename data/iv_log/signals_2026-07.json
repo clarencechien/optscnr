@@ -21,7 +21,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰1.2x/今1.2x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-01_CPRT_2026-07-17_30.0",
@@ -45,7 +46,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰1.9x/今1.9x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-01_PATH_2026-07-17_11.5",
@@ -69,7 +71,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰1.0x/今1.0x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-01_META_2026-07-17_700.0",
@@ -93,7 +96,8 @@
     "t10": null,
     "t20": null,
     "verdict": "❌沒噴(峰0.3x)",
-    "premium_tier": "mid"
+    "premium_tier": "mid",
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-01_PLTR_2026-07-17_150.0",
@@ -117,7 +121,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰1.4x/今1.4x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-01_WMT_2026-08-21_120.0",
@@ -141,7 +146,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰1.5x/今1.5x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-01_DELL_2026-07-17_550.0",
@@ -165,7 +171,8 @@
     "t10": null,
     "t20": null,
     "verdict": "❌沒噴(峰0.2x)",
-    "premium_tier": "mid"
+    "premium_tier": "mid",
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-01_META_2026-07-17_695.0",
@@ -189,7 +196,8 @@
     "t10": null,
     "t20": null,
     "verdict": "❌沒噴(峰0.3x)",
-    "premium_tier": "mid"
+    "premium_tier": "mid",
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-01_AMZN_2026-07-17_280.0",
@@ -213,7 +221,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰1.0x/今1.0x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-01_SOFI_2026-09-18_25.0",
@@ -237,7 +246,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰0.9x/今0.9x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-01_WMT_2026-08-21_115.0",
@@ -261,7 +271,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰1.5x/今1.5x)",
-    "premium_tier": "mid"
+    "premium_tier": "mid",
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-01_WMT_2026-08-21_110.0",
@@ -285,7 +296,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰1.4x/今1.4x)",
-    "premium_tier": "heavy"
+    "premium_tier": "heavy",
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-01_IBIT_2027-01-15_60.0",
@@ -309,7 +321,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰1.1x/今1.1x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-01_NVDA_2026-09-18_310.0",
@@ -333,7 +346,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰0.7x/今0.7x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-01_OPEN_2027-01-15_10.0",
@@ -357,7 +371,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰0.9x/今0.9x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-01_IBIT_2026-08-21_55.0",
@@ -381,7 +396,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰1.2x/今1.2x)",
-    "premium_tier": "lottery"
+    "premium_tier": "lottery",
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-01_NVDA_2028-01-21_400.0",
@@ -405,7 +421,8 @@
     "t10": null,
     "t20": null,
     "verdict": "➖持平(峰0.9x/今0.9x)",
-    "premium_tier": "heavy"
+    "premium_tier": "heavy",
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_T_2026-07-17_20.0",
@@ -424,7 +441,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_T_2026-08-21_21.0",
@@ -443,7 +461,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_F_2026-07-17_13.5",
@@ -462,7 +481,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_NVDA_2026-07-17_225.0",
@@ -481,7 +501,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_RIVN_2026-08-21_20.0",
@@ -500,7 +521,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_T_2027-01-15_21.0",
@@ -519,7 +541,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_AMZN_2026-10-16_300.0",
@@ -538,7 +561,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_IREN_2026-12-18_140.0",
@@ -557,7 +581,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_IREN_2026-11-20_100.0",
@@ -576,7 +601,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_GS_2026-07-17_1200.0",
@@ -595,7 +621,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_DELL_2026-07-17_500.0",
@@ -614,7 +641,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_ORCL_2026-07-17_145.0",
@@ -633,7 +661,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_F_2026-12-18_4.82",
@@ -652,7 +681,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_NVDA_2026-07-17_235.0",
@@ -671,7 +701,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_F_2027-01-15_5.0",
@@ -690,7 +721,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_ORCL_2026-08-21_170.0",
@@ -709,7 +741,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_AMZN_2026-08-21_320.0",
@@ -728,7 +761,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_F_2026-12-18_5.0",
@@ -747,7 +781,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_ORCL_2026-10-16_230.0",
@@ -766,7 +801,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_T_2026-12-18_21.0",
@@ -785,7 +821,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_LCID_2027-01-15_5.0",
@@ -804,7 +841,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_T_2026-09-18_21.0",
@@ -823,7 +861,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_ONDS_2027-01-15_20.0",
@@ -842,7 +881,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_T_2026-07-17_24.0",
@@ -861,7 +901,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_BSX_2026-12-18_67.5",
@@ -880,7 +921,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_T_2027-01-15_30.0",
@@ -899,7 +941,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_IBIT_2026-09-18_45.0",
@@ -918,7 +961,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_IBIT_2026-09-18_55.0",
@@ -937,7 +981,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_ONDS_2027-01-15_30.0",
@@ -956,7 +1001,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_TSLA_2026-09-18_990.0",
@@ -975,7 +1021,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": true
   },
   {
     "signal_id": "2026-07-02_IBIT_2026-09-18_65.0",
@@ -994,7 +1041,8 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   },
   {
     "signal_id": "2026-07-02_BSX_2026-09-18_70.0",
@@ -1013,6 +1061,7 @@
     "t5": null,
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": null,
+    "news_at_signal": false
   }
 ]
