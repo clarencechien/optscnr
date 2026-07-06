@@ -1,8 +1,10 @@
 name: Daily Cigarette Butt Scanner
 on:
   schedule:
-    # scanner.yml — 台灣週一到週六 06:00
-    - cron: '0 22 * * 0-5'    # UTC 22:00
+    # scanner.yml — 台灣週二到週六 06:00
+    # UTC 週日不跑：美股週末休市，該次掃描只會是週五收盤的重播，
+    # 寫進 signals 快照就是污染 shadow log（詳見 CONTEXT.md 污染事件記錄）
+    - cron: '0 22 * * 1-5'    # UTC 22:00 週一~週五
   workflow_dispatch: # 允許手動按按鈕觸發
 permissions:
   contents: write
