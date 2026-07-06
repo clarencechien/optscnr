@@ -590,8 +590,32 @@ def save_signal_snapshot(df):
 # ==========================================
 # 6. 主執行程序
 # ==========================================
+def us_market_traded_today():
+    """檢查美股今天（美東日期）是否有交易。
+
+    方法：SPY 最後一根日 K 的日期 vs 今天美東日期比對。
+    - 掃描跑在 UTC 22:00 = 美東 17-18:00，UTC-4/-5 換算到同一天，取 -5 保守即可
+    - 抓不到資料時 fail-open（回 True），避免 yfinance 偶發故障誤殺每日掃描
+    - 此防護與 cron 修正是雙保險：cron 擋週日、這裡擋假日（如 7/3 落平日）
+    """
+    try:
+        from datetime import timezone
+        spy = yf.Ticker("SPY").history(period="5d")
+        if spy.empty:
+            return True  # fail-open
+        last_trade = spy.index[-1].date()
+        today_et = (datetime.now(timezone.utc) - timedelta(hours=5)).date()
+        return last_trade == today_et
+    except Exception:
+        return True  # fail-open
+
+
 def main():
     print(f"🔥 啟動 Scanner 3.9 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    if not us_market_traded_today():
+        print("🛑 美股今日休市（週末/假日），市場資料為舊收盤殘留。")
+        print("   跳過本次掃描與信號快照，避免污染 shadow log。")
+        return
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
 
     auto_watch = load_auto_watch()
