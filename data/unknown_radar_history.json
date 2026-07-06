@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-07-01",
-    "consecutive_days": 10,
-    "total_mentions": 24,
+    "last_seen": "2026-07-06",
+    "consecutive_days": 11,
+    "total_mentions": 26,
     "ticker": "NDAQ"
   },
   "Starlink": {
@@ -92,9 +92,51 @@
   },
   "EasyJet": {
     "first_seen": "2026-07-05",
-    "last_seen": "2026-07-05",
-    "consecutive_days": 1,
-    "total_mentions": 3,
+    "last_seen": "2026-07-06",
+    "consecutive_days": 2,
+    "total_mentions": 5,
     "ticker": "EJTTF"
+  },
+  "Alibaba": {
+    "first_seen": "2026-07-06",
+    "last_seen": "2026-07-06",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BBAAY"
+  },
+  "Klarna": {
+    "first_seen": "2026-07-06",
+    "last_seen": "2026-07-06",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "KLAR"
+  },
+  "Versant": {
+    "first_seen": "2026-07-06",
+    "last_seen": "2026-07-06",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "VSNT"
+  },
+  "TeraWulf": {
+    "first_seen": "2026-07-06",
+    "last_seen": "2026-07-06",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "WULF"
+  },
+  "L3Harris": {
+    "first_seen": "2026-07-06",
+    "last_seen": "2026-07-06",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LHX"
+  },
+  "Trade": {
+    "first_seen": "2026-07-06",
+    "last_seen": "2026-07-06",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "TTD"
   }
 }

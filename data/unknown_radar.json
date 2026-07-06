@@ -1,17 +1,101 @@
 {
-  "updated_at": "2026-07-05T22:29:33.766183",
-  "count": 1,
+  "updated_at": "2026-07-06T22:45:28.043444",
+  "count": 8,
   "blind_spots": [
+    {
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 26,
+      "consecutive_days": 11,
+      "is_strong": true,
+      "evidence": [
+        "Here's how SpaceX's Nasdaq-100 inclusion might affect options pricing",
+        "The Nasdaq-100 has been far more volatile than the S&P 500. Now add SpaceX to the mix."
+      ]
+    },
     {
       "name": "EasyJet",
       "ticker": "EJTTF",
-      "mentions_today": 3,
-      "total_mentions": 3,
+      "mentions_today": 2,
+      "total_mentions": 5,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "EasyJet shares soar 10% as budget airline agrees to $7.3 billion Castlelake takeover",
+        "EasyJet shares soar 10% as budget airline agrees to $7.3 billion Castlelake takeover"
+      ]
+    },
+    {
+      "name": "Alibaba",
+      "ticker": "BBAAY",
+      "mentions_today": 2,
+      "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "EasyJet’s flight path from start-up to takeover deal",
-        "EasyJet agrees to Castlelake’s £5.2B takeover offer"
+        "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation",
+        "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation"
+      ]
+    },
+    {
+      "name": "Klarna",
+      "ticker": "KLAR",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Klarna seeks U.S. bank charter in latest push beyond buy now, pay later",
+        "Klarna seeks U.S. bank charter in latest push beyond buy now, pay later"
+      ]
+    },
+    {
+      "name": "Versant",
+      "ticker": "VSNT",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Versant agrees to buy golf simulator company Full Swing for $530 million",
+        "Versant agrees to buy golf simulator company Full Swing for $530 million"
+      ]
+    },
+    {
+      "name": "TeraWulf",
+      "ticker": "WULF",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "TeraWulf shares soar after Anthropic leases data center in Kentucky",
+        "TeraWulf’s stock gains after a $19 billion deal with Anthropic"
+      ]
+    },
+    {
+      "name": "L3Harris",
+      "ticker": "LHX",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "L3Harris wins $499.6M defense contract",
+        "L3Harris lands up to $499.6M Missile Defense Agency follow-on contract"
+      ]
+    },
+    {
+      "name": "Trade",
+      "ticker": "TTD",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Why Microsoft Looks Like the Best Big Tech Trade for H2 2026",
+        "Gold Is Up Again in 2026 and After Reviewing Every Way to Own Bullion These 3 ETFs Cover the Trade a"
       ]
     }
   ]
