@@ -1,17 +1,10 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-07-06",
-    "consecutive_days": 11,
-    "total_mentions": 26,
+    "last_seen": "2026-07-07",
+    "consecutive_days": 12,
+    "total_mentions": 30,
     "ticker": "NDAQ"
-  },
-  "Starlink": {
-    "first_seen": "2026-06-19",
-    "last_seen": "2026-06-29",
-    "consecutive_days": 3,
-    "total_mentions": 6,
-    "ticker": "OTAI-UN"
   },
   "Daily": {
     "first_seen": "2026-06-25",
@@ -120,9 +113,9 @@
   },
   "TeraWulf": {
     "first_seen": "2026-07-06",
-    "last_seen": "2026-07-06",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-07-07",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "WULF"
   },
   "L3Harris": {
@@ -138,5 +131,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "TTD"
+  },
+  "Greenland": {
+    "first_seen": "2026-07-07",
+    "last_seen": "2026-07-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GLNDW"
+  },
+  "Georgia": {
+    "first_seen": "2026-07-07",
+    "last_seen": "2026-07-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GPJA"
+  },
+  "MasTec": {
+    "first_seen": "2026-07-07",
+    "last_seen": "2026-07-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "MTZ"
+  },
+  "Superior Group": {
+    "first_seen": "2026-07-07",
+    "last_seen": "2026-07-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SGC"
   }
 }

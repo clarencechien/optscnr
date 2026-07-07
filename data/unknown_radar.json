@@ -1,101 +1,77 @@
 {
-  "updated_at": "2026-07-06T22:45:28.043444",
-  "count": 8,
+  "updated_at": "2026-07-07T22:36:48.244515",
+  "count": 6,
   "blind_spots": [
     {
       "name": "Nasdaq",
       "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 26,
-      "consecutive_days": 11,
+      "mentions_today": 4,
+      "total_mentions": 30,
+      "consecutive_days": 12,
       "is_strong": true,
       "evidence": [
-        "Here's how SpaceX's Nasdaq-100 inclusion might affect options pricing",
-        "The Nasdaq-100 has been far more volatile than the S&P 500. Now add SpaceX to the mix."
-      ]
-    },
-    {
-      "name": "EasyJet",
-      "ticker": "EJTTF",
-      "mentions_today": 2,
-      "total_mentions": 5,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "EasyJet shares soar 10% as budget airline agrees to $7.3 billion Castlelake takeover",
-        "EasyJet shares soar 10% as budget airline agrees to $7.3 billion Castlelake takeover"
-      ]
-    },
-    {
-      "name": "Alibaba",
-      "ticker": "BBAAY",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation",
-        "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation"
-      ]
-    },
-    {
-      "name": "Klarna",
-      "ticker": "KLAR",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Klarna seeks U.S. bank charter in latest push beyond buy now, pay later",
-        "Klarna seeks U.S. bank charter in latest push beyond buy now, pay later"
-      ]
-    },
-    {
-      "name": "Versant",
-      "ticker": "VSNT",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Versant agrees to buy golf simulator company Full Swing for $530 million",
-        "Versant agrees to buy golf simulator company Full Swing for $530 million"
+        "Traders on Kalshi think the Nasdaq-100 will end 2026 above 30,000, predicting a cooler second half o",
+        "Traders on Kalshi think the Nasdaq-100 will end 2026 above 30,000, predicting a cooler second half o"
       ]
     },
     {
       "name": "TeraWulf",
       "ticker": "WULF",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "TeraWulf shares soar after Anthropic leases data center in Kentucky",
-        "TeraWulf’s stock gains after a $19 billion deal with Anthropic"
+        "TeraWulf jumps on $19 billion data center lease deal with Anthropic",
+        "TeraWulf signs 20-year Anthropic lease for 401 MW at Kentucky data campus, sells Abernathy stake for"
       ]
     },
     {
-      "name": "L3Harris",
-      "ticker": "LHX",
+      "name": "Greenland",
+      "ticker": "GLNDW",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "L3Harris wins $499.6M defense contract",
-        "L3Harris lands up to $499.6M Missile Defense Agency follow-on contract"
+        "Trump renews Greenland threats at NATO summit, says U.S. could remove troops from Europe",
+        "Trump renews Greenland threats at NATO summit, says U.S. could remove troops from Europe"
       ]
     },
     {
-      "name": "Trade",
-      "ticker": "TTD",
+      "name": "Georgia",
+      "ticker": "GPJA",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Why Microsoft Looks Like the Best Big Tech Trade for H2 2026",
-        "Gold Is Up Again in 2026 and After Reviewing Every Way to Own Bullion These 3 ETFs Cover the Trade a"
+        "Judge blocks DOJ subpoena for names of 2020 Fulton County, Georgia, election workers",
+        "Judge blocks DOJ subpoena for names of 2020 Fulton County, Georgia, election workers"
+      ]
+    },
+    {
+      "name": "MasTec",
+      "ticker": "MTZ",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "MasTec to acquire electrical contractor Superior Group in $1.65 billion deal",
+        "MasTec stock rises on $1.65 billion Superior Group acquisition"
+      ]
+    },
+    {
+      "name": "Superior Group",
+      "ticker": "SGC",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "MasTec to acquire electrical contractor Superior Group in $1.65 billion deal",
+        "MasTec stock rises on $1.65 billion Superior Group acquisition"
       ]
     }
   ]
