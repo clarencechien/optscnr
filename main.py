@@ -562,6 +562,8 @@ def save_signal_snapshot(df):
             "entry_spot": float(r.get('Spot', 0)),# 信號當下的現價
             "oi": int(r['OpenInterest']),
             "oi_d7": int(r['OI_d7']) if 'OI_d7' in r and pd.notna(r['OI_d7']) else 0,
+            # volume：信號當日成交量（供未來「量大倉退」刷量 cohort 分析，Vol/OI 比）
+            "volume": int(r['Volume']),
             # premium_tier：權利金分級貼標（只記錄，不影響掃描邏輯）
             # lottery(<$1.5)=散戶樂透/知情者低成本埋伏；heavy(>$3)=機構級真金白銀方向單
             # 用途：shadow log 事後驗證兩類命中率是否有顯著差異，數據說話後才考慮動報表
