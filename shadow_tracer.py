@@ -256,6 +256,25 @@ def generate_shadowlog_md(signals, month_str):
         md += f"| 倉退信號 | Δ7d≤0（量大倉不增，過濾二邊界） | {len(blind2)} | {len(b2_hit)} | {r2} |\n"
         md += "\n_cohort 命中率顯著低於整體 → 支持補過濾；顯著高於 → 該「盲點」其實不是問題。_\n\n"
 
+        # === 指紋 cohort：純「掃貨+新倉暴量」（第一次改卷的最強線索）===
+        # 2026-06 三筆命中（GOOGL 350C / META 635C / ASTS 140C）的唯一共同指紋：
+        # tags 恰為「🚨異常掃貨 🆕新倉暴量」且無其他標籤——合約七天內新生、
+        # 量 >1.2x OI 的掃貨、且非菸屁股/萬人塚的散戶墳場。
+        # 6/26 批內 4 筆此型態包辦全部 3 個命中；但 6/29-7/1 同型態 0/13
+        # → 假說：型態挑標的、日子給行情。詳見 CONTEXT.md 第七節。只統計，不改分。
+        FP = "🚨異常掃貨 🆕新倉暴量"
+        fp_j = [s for s in judged if s.get("tags") == FP]
+        fp_hit = [s for s in fp_j if s["verdict"].startswith("✅")]
+        ot_j = [s for s in judged if s.get("tags") != FP]
+        ot_hit = [s for s in ot_j if s["verdict"].startswith("✅")]
+        md += "### 🧬 指紋 cohort：純「掃貨+新倉暴量」\n\n"
+        md += "| 類型 | 已驗證 | 噴出 | 命中率 |\n|---|---|---|---|\n"
+        fr_ = f"{len(fp_hit)/len(fp_j)*100:.0f}%" if fp_j else "—"
+        or_ = f"{len(ot_hit)/len(ot_j)*100:.0f}%" if ot_j else "—"
+        md += f"| 指紋（純掃貨+新倉暴量，無其他標籤） | {len(fp_j)} | {len(fp_hit)} | {fr_} |\n"
+        md += f"| 其他 tag 組合 | {len(ot_j)} | {len(ot_hit)} | {or_} |\n"
+        md += "\n_指紋假說出自事後分析（post-hoc），以本表的後續樣本為準；樣本 <10 筆僅供參考。_\n\n"
+
     # === 區塊一：暴動高 IV 過濾驗證 ===
     md += "## 🔥 區塊一：暴動高 IV 過濾驗證\n\n"
     md += "> 被 v3.9「⚠️暴動高IV」標記的，後來真的該擋嗎？（驗證 IV>80% 門檻）\n\n"
