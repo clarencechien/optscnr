@@ -1742,5 +1742,35 @@
         "error": null
       }
     ]
+  },
+  {
+    "ts": "2026-07-07T06:29:04.393658+00:00",
+    "overall": "YELLOW",
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "RED",
+        "headline": "capex_cut:5 / vr300_delay:25 / debt_financed_capex:15",
+        "metrics": {
+          "hits": {
+            "capex_cut": 5,
+            "vr300_delay": 25,
+            "debt_financed_capex": 15
+          }
+        },
+        "notes": [
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due for a Pause - Investing.com",
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[capex_cut] AI Infrastructure Stocks See a Strategic Pause - Let's Data Science",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[vr300_delay] Nvidia delays Kyber AI rack to 2028 over PCB issues - MSN",
+          "[debt_financed_capex] Oracle's AI spending blows past estimates, raising worries over growing debt - Reuters",
+          "[debt_financed_capex] AI infrastructure is soaring, but data centers are burning through cash and the debt bubble is starting to burst - Bitge",
+          "[debt_financed_capex] The AI debt wave means bonds aren't boring anymore - qz.com"
+        ],
+        "error": null
+      }
+    ]
   }
 ]
