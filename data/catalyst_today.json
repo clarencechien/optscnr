@@ -1,143 +1,184 @@
 {
-  "updated_at": "2026-07-06T21:55:45.443057",
+  "updated_at": "2026-07-07T21:53:56.494085",
   "stats": {
-    "total_items": 98,
-    "items_with_company": 21,
-    "items_with_catalyst": 15,
-    "items_both": 3
+    "total_items": 99,
+    "items_with_company": 18,
+    "items_with_catalyst": 12,
+    "items_both": 2
   },
-  "count": 15,
+  "count": 14,
   "tickers": [
-    "RIVN",
-    "MU",
-    "NKE",
     "NVDA",
-    "DELL",
-    "AMD",
+    "RIVN",
     "MSFT",
-    "TSLA",
     "META",
-    "WMT",
+    "AMZN",
     "AAPL",
-    "SNDK",
-    "GILD",
-    "PLTR",
-    "AVGO"
+    "DIS",
+    "NFLX",
+    "XYZ",
+    "GOOGL",
+    "MS",
+    "TSLA",
+    "LRCX",
+    "MSTR"
   ],
   "details": [
     {
-      "symbol": "RIVN",
-      "score": 3.5,
-      "evidence": [
-        {
-          "title": "Rivian, Tesla and the 'Holly Index': How to trade the new EV Main Street battle",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Rivian forecasts quarterly revenue above estimates",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Rivian stock tumbles on 75 million share offering announcement",
-          "catalysts": [
-            "tumbles"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
+      "symbol": "NVDA",
       "score": 3.0,
       "evidence": [
         {
-          "title": "Micron’s stock gains, signaling a ‘return to optimism’ about the chip sector",
+          "title": "As chip sector takes it on the chin, traders bet on a big Nvidia rally ",
           "catalysts": [
-            "gains"
+            "rally"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Why Micron Technology, Inc.’s (MU) Memory Tightness Is Turning AI Demand Into Cleaner Earnings Momentum",
+          "title": "Chinese lidar maker with Nvidia ties accused of being cyber risk for U.S.",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Micron Risks Falling Out of the Trillion-Dollar Club. AMD Stock Has a Clear Path to Joining.",
+          "title": "Apple is closing in on Nvidia as it looks to reclaim title of largest U.S. company",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NKE",
+      "symbol": "RIVN",
       "score": 2,
       "evidence": [
         {
-          "title": "Why Is Nike Stock Rising After Another Crushing Update?",
+          "title": "Rivian stock falls 18% as company sells 75 million shares to raise capital",
           "catalysts": [
-            "rising"
+            "falls"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Nvidia's next-gen AI rack system delayed to 2028 on manufacturing snags, SemiAnalysis says",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "How NVIDIA Corporation’s (NVDA) AI Factory Model Could Turn Blackwell Demand Into Usage-Linked Revenue",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DELL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Dell’s stock gets another Trump bump — but this time it’s fading",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dell Stock Has Very Attractive Short-Put Yields - Over 3.8% for the Next 2 Weeks",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "How Advanced Micro Devices, Inc.’s (AMD) Server CPU Demand Is Broadening Its AI Growth Story",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron Risks Falling Out of the Trillion-Dollar Club. AMD Stock Has a Clear Path to Joining.",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "MSFT",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "The implications of Amazon's $25B bond sale, and Microsoft's evolving AI model strategy",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Is Microsoft Stock Too Cheap Here? One Play is to Short Cash-Secured MSFT Puts",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Microsoft to cut 4,800 jobs, overhaul Xbox unit",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Meta enters AI image model race in bid to court advertisers and subscribers",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "What You Need to Know Ahead of Meta Platforms' Earnings Release",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "The implications of Amazon's $25B bond sale, and Microsoft's evolving AI model strategy",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Amazon raising at least $25 billion in bond sale, won't issue more debt in 2026",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Apple is closing in on Nvidia as it looks to reclaim title of largest U.S. company",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Best Buy and Apple flag a price shock for shoppers",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft cuts 4,800 jobs, as Xbox unit downsizes and plans to spin off four gaming studios",
+          "title": "Netflix, Disney and YouTube interested in FIFA World Cup U.S. rights, package could reach $2 billion",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Netflix, Disney and YouTube interested in FIFA World Cup U.S. rights, package could reach $2 billion",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "DeSantis-backed 'Stop WOKE' law meets appeals court block, teeing up possible Supreme Court fight",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Google backs nuclear fusion startup targeting Europe’s first commercial power plant",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "AI investors may pivot to hyperscalers from chipmakers, Morgan Stanley says",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -148,84 +189,29 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Rivian, Tesla and the 'Holly Index': How to trade the new EV Main Street battle",
+          "title": "Michael Burry Is Betting Against Tesla Again. He’s Not Buying the AI Hype Story.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "LRCX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta’s woes deepen in India as child abuse ads on Instagram draw government ire",
+          "title": "What You Need to Know Ahead of Lam Research's Earnings Release",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
+      "symbol": "MSTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Walmart cuts prices on summer items across US stores",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Best Buy and Apple flag a price shock for shoppers",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Kioxia and Sandisk (SNDK) Begin Production of 10th-Generation 3D Flash Memory",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GILD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Gilead (GILD) One of the Most Undervalued NASDAQ Stocks to Buy Right Now?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "How Palantir Technologies Inc. (PLTR) Is Expanding AI Deployment Channels Across Government and Enterprise",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why Broadcom Inc.’s (AVGO) Custom AI Silicon Growth Still Supports Its Estimate Story",
+          "title": "Strategy Shares Slip After Reporting $8.32 Billion Bitcoin Loss and Asset Sales (MSTR)",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -233,6 +219,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3
+    "Anthropic (private)": 2
   }
 }
