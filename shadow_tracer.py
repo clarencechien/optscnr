@@ -205,6 +205,57 @@ def generate_shadowlog_md(signals, month_str):
             md += f"| {name} | {desc} | {len(nj)} | {len(ns)} | {nrate} |\n"
         md += "\n_樣本 <10 筆時命中率僅供參考，勿據此改規則。_\n\n"
 
+        # === DTE 分層命中率（theta 絞肉區驗證）===
+        # 月選到期前 1-2 週流動性擠向近月，TL;DR 會塞滿 DTE<21 的合約（日曆效應）。
+        # 驗證「近月高分信號是否系統性較差」。DTE 由 expiry-snapshot_date 推導，
+        # 零 schema 改動、可回溯全部歷史信號。
+        def _dte_of(s):
+            try:
+                exp = datetime.strptime(s["expiry"], "%Y-%m-%d")
+                snap = datetime.strptime(s["snapshot_date"], "%Y-%m-%d")
+                return (exp - snap).days
+            except Exception:
+                return None
+
+        md += "### ⏳ DTE 分層命中率\n\n"
+        md += "| 分層 | 已驗證 | 噴出 | 命中率 |\n|---|---|---|---|\n"
+        dte_buckets = [
+            ("<21天（絞肉區）", lambda d: d is not None and d < 21),
+            ("21-45天", lambda d: d is not None and 21 <= d <= 45),
+            (">45天", lambda d: d is not None and d > 45),
+        ]
+        for label, cond in dte_buckets:
+            bj = [s for s in judged if cond(_dte_of(s))]
+            bs = [s for s in bj if s["verdict"].startswith("✅")]
+            rate = f"{len(bs)/len(bj)*100:.0f}%" if bj else "—"
+            md += f"| {label} | {len(bj)} | {len(bs)} | {rate} |\n"
+        md += "\n_驗證進場天期與命中率的關係；樣本 <10 筆僅供參考。_\n\n"
+
+        # === 過濾盲點觀察（只記錄，不改分）===
+        # 盲點一：長天期極價外——過濾一要求 DTE<45 才觸發，DTE>45 的極價外漏網
+        #   （活案例：TSLA 990C 2026-07-06，DTE 74、OTM 135%，拿 8 分）
+        # 盲點二：倉退信號——過濾二門檻 |Δ7d|≤200，量大但 OI 減少的刷量漏網
+        #   （活案例：VST 180C 2026-07-06，Vol 7,688、Δ7d -234，拿 9 分）
+        # 兩個 cohort 命中率若顯著低於整體 → 支持補過濾；先累積數據，不動門檻。
+        def _otm_of(s):
+            spot = s.get("entry_spot") or 0
+            if spot <= 0:
+                return None
+            return (s["strike"] - spot) / spot
+
+        blind1 = [s for s in judged if (_dte_of(s) or 0) > 45 and (_otm_of(s) or 0) > 0.25]
+        b1_hit = [s for s in blind1 if s["verdict"].startswith("✅")]
+        blind2 = [s for s in judged if s.get("oi_d7", 0) <= 0]
+        b2_hit = [s for s in blind2 if s["verdict"].startswith("✅")]
+
+        md += "### 🕳️ 過濾盲點觀察\n\n"
+        md += "| 盲點 cohort | 定義 | 已驗證 | 噴出 | 命中率 |\n|---|---|---|---|---|\n"
+        r1 = f"{len(b1_hit)/len(blind1)*100:.0f}%" if blind1 else "—"
+        r2 = f"{len(b2_hit)/len(blind2)*100:.0f}%" if blind2 else "—"
+        md += f"| 長天期極價外 | DTE>45 且 OTM>25%（躲過過濾一） | {len(blind1)} | {len(b1_hit)} | {r1} |\n"
+        md += f"| 倉退信號 | Δ7d≤0（量大倉不增，過濾二邊界） | {len(blind2)} | {len(b2_hit)} | {r2} |\n"
+        md += "\n_cohort 命中率顯著低於整體 → 支持補過濾；顯著高於 → 該「盲點」其實不是問題。_\n\n"
+
     # === 區塊一：暴動高 IV 過濾驗證 ===
     md += "## 🔥 區塊一：暴動高 IV 過濾驗證\n\n"
     md += "> 被 v3.9「⚠️暴動高IV」標記的，後來真的該擋嗎？（驗證 IV>80% 門檻）\n\n"
