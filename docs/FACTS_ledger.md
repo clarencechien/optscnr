@@ -5,6 +5,13 @@
 > 否則以本庫為準。本庫只增不改；事實被推翻時加註更正、保留原記錄。
 > 每筆格式：事實 ｜ 事件絕對日期 ｜ 查證來源 ｜ 入庫日
 
+## WULF 
+- 與 Anthropic 簽署 20 年 $19B AI HPC 基礎設施合約 ｜ 2026-07-06 ｜ Barchart ｜ 7/8 入庫
+
+## WULF
+- Q2 財報日：預計 2026-08-07 ｜ Public.com ｜ 7/8 入庫
+
+DIS ｜ Q3 財報日：預計 2026-08-05 或 2026-08-12 ｜ Zacks / Finbox ｜ 7/8 入庫
 ## TDOC（Teladoc）
 - Walmart Better Care Services 合作公告 ｜ 2026-05-28 ｜ Teladoc IR 新聞稿 ｜ 7/8 入庫
   （注意：7 月的聚合站文章持續重炒此舊聞，勿當新催化）
