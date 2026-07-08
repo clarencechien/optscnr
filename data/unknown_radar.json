@@ -1,77 +1,65 @@
 {
-  "updated_at": "2026-07-07T22:36:48.244515",
-  "count": 6,
+  "updated_at": "2026-07-08T22:32:16.308493",
+  "count": 5,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 4,
-      "total_mentions": 30,
-      "consecutive_days": 12,
-      "is_strong": true,
-      "evidence": [
-        "Traders on Kalshi think the Nasdaq-100 will end 2026 above 30,000, predicting a cooler second half o",
-        "Traders on Kalshi think the Nasdaq-100 will end 2026 above 30,000, predicting a cooler second half o"
-      ]
-    },
-    {
-      "name": "TeraWulf",
-      "ticker": "WULF",
+      "name": "Daily",
+      "ticker": "DJCO",
       "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
+      "total_mentions": 6,
+      "consecutive_days": 3,
       "is_strong": true,
       "evidence": [
-        "TeraWulf jumps on $19 billion data center lease deal with Anthropic",
-        "TeraWulf signs 20-year Anthropic lease for 401 MW at Kentucky data campus, sells Abernathy stake for"
+        "Daily – Vickers Top Insider Picks for 07/08/2026",
+        "Daily – Vickers Top Buyers & Sellers for 07/08/2026"
       ]
     },
     {
       "name": "Greenland",
       "ticker": "GLNDW",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "mentions_today": 3,
+      "total_mentions": 5,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "Trump renews Greenland threats at NATO summit, says U.S. could remove troops from Europe",
-        "Trump renews Greenland threats at NATO summit, says U.S. could remove troops from Europe"
+        "Trump pours cold water on NATO allies' united front",
+        "Trump doubles down on push for control over Greenland as Denmark vows to defend it"
       ]
     },
     {
-      "name": "Georgia",
-      "ticker": "GPJA",
+      "name": "Levi Strauss",
+      "ticker": "LEVI",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Judge blocks DOJ subpoena for names of 2020 Fulton County, Georgia, election workers",
-        "Judge blocks DOJ subpoena for names of 2020 Fulton County, Georgia, election workers"
+        "Levi Strauss beats quarterly expectations, raises guidance and dividend",
+        "Levi Strauss beats quarterly expectations, raises guidance and dividend"
       ]
     },
     {
-      "name": "MasTec",
-      "ticker": "MTZ",
+      "name": "Canadian",
+      "ticker": "CNDIF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "MasTec to acquire electrical contractor Superior Group in $1.65 billion deal",
-        "MasTec stock rises on $1.65 billion Superior Group acquisition"
+        "Meta is building its first big Canadian data center as AI expansion crosses the border",
+        "Meta is building its first big Canadian data center as AI expansion crosses the border"
       ]
     },
     {
-      "name": "Superior Group",
-      "ticker": "SGC",
+      "name": "Delta",
+      "ticker": "DAL",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "MasTec to acquire electrical contractor Superior Group in $1.65 billion deal",
-        "MasTec stock rises on $1.65 billion Superior Group acquisition"
+        "Delta launches 'basic business' fares without lounge access, seat selection",
+        "Delta launches 'basic business' fares without lounge access, seat selection"
       ]
     }
   ]

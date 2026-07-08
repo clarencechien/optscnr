@@ -8,9 +8,9 @@
   },
   "Daily": {
     "first_seen": "2026-06-25",
-    "last_seen": "2026-06-30",
-    "consecutive_days": 2,
-    "total_mentions": 4,
+    "last_seen": "2026-07-08",
+    "consecutive_days": 3,
+    "total_mentions": 6,
     "ticker": "DJCO"
   },
   "Billion": {
@@ -19,41 +19,6 @@
     "consecutive_days": 2,
     "total_mentions": 4,
     "ticker": "BGHL"
-  },
-  "Comcast": {
-    "first_seen": "2026-06-29",
-    "last_seen": "2026-06-30",
-    "consecutive_days": 2,
-    "total_mentions": 6,
-    "ticker": "CCZ"
-  },
-  "AeroVironment": {
-    "first_seen": "2026-06-30",
-    "last_seen": "2026-06-30",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "AVAV"
-  },
-  "Digital Realty": {
-    "first_seen": "2026-06-30",
-    "last_seen": "2026-06-30",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "DLR-PJ"
-  },
-  "Allison Transmission": {
-    "first_seen": "2026-06-30",
-    "last_seen": "2026-06-30",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ALSN"
-  },
-  "MidCap": {
-    "first_seen": "2026-06-30",
-    "last_seen": "2026-06-30",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "MFICL"
   },
   "Coupang": {
     "first_seen": "2026-07-01",
@@ -134,9 +99,9 @@
   },
   "Greenland": {
     "first_seen": "2026-07-07",
-    "last_seen": "2026-07-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-07-08",
+    "consecutive_days": 2,
+    "total_mentions": 5,
     "ticker": "GLNDW"
   },
   "Georgia": {
@@ -159,5 +124,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "SGC"
+  },
+  "Levi Strauss": {
+    "first_seen": "2026-07-08",
+    "last_seen": "2026-07-08",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LEVI"
+  },
+  "Canadian": {
+    "first_seen": "2026-07-08",
+    "last_seen": "2026-07-08",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CNDIF"
+  },
+  "Delta": {
+    "first_seen": "2026-07-08",
+    "last_seen": "2026-07-08",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DAL"
   }
 }
