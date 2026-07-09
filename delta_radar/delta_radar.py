@@ -38,6 +38,8 @@ import json
 import os
 import re
 import sys
+import tempfile
+import time
 import traceback
 import urllib.parse
 import urllib.request
@@ -52,6 +54,11 @@ from typing import Any, Callable, Optional
 GREEN, YELLOW, RED, NO_DATA = "GREEN", "YELLOW", "RED", "NO_DATA"
 SEVERITY = {GREEN: 0, NO_DATA: 1, YELLOW: 2, RED: 3}
 EMOJI = {GREEN: "🟢", YELLOW: "🟡", RED: "🔴", NO_DATA: "⚪"}
+
+# Canonical module order + the "full run" definition (BUG-1 partial detection).
+# A run covering exactly this set produces a real overall verdict; anything
+# narrower is recorded as PARTIAL(...). Extend here when adding modules.
+MODULE_ORDER = ("m1", "m2", "m3", "m4", "m5")
 
 UA = "delta-radar/1.0 (+github.com/clarencechien/optscnr)"
 
@@ -68,10 +75,19 @@ def http_get_text(url: str, timeout: int = 30) -> str:
         return r.read().decode("utf-8", errors="replace")
 
 
-def yoy(cur: float, prev: float) -> Optional[float]:
+def pct_change(cur: float, prev: float) -> Optional[float]:
+    """Signed percent change of cur vs prev; None if undefined.
+
+    Semantic-neutral core. Use `yoy` alias for year-over-year comparisons,
+    call `pct_change` directly for QoQ / sequential deltas (BUG-5: M2's QoQ
+    previously borrowed `yoy()`, which read as YoY at the call site)."""
     if prev in (None, 0) or cur is None:
         return None
     return (cur - prev) / abs(prev) * 100.0
+
+
+# YoY is just a percent change over a 12-month-apart pair — same math, clearer name.
+yoy = pct_change
 
 
 def fmt_pct(x: Optional[float]) -> str:
@@ -290,8 +306,8 @@ def run_m2(cfg: dict, fetch: Callable) -> ModuleResult:
     _, inv_now, inv_prev = latest_two(inventory)
     flags = []
 
-    contract_qoq = yoy(c_now, c_prev) if c_prev else None  # reuse pct fn for QoQ
-    inv_qoq = yoy(inv_now, inv_prev) if inv_prev else None
+    contract_qoq = pct_change(c_now, c_prev) if c_prev else None
+    inv_qoq = pct_change(inv_now, inv_prev) if inv_prev else None
 
     fcf_ni = None
     if ocf and ni:
@@ -310,6 +326,13 @@ def run_m2(cfg: dict, fetch: Callable) -> ModuleResult:
         "accounts_used": {"contract": t_c, "inventory": t_i,
                           "ocf": t_o, "capex": t_x, "net_income": t_n},
     }
+    # BUG-4 sanity: net income must not resolve to an equity/balance-sheet account.
+    # If pattern priority ever drifts back onto an Equity* type, the FCF/NI ratio is
+    # silently wrong — surface it as a note so a human catches the schema change.
+    if t_n and re.search(r"equity", t_n, re.I):
+        res.notes.append(f"⚠️ net_income 命中疑似權益科目 '{t_n}'：FCF/淨利 可能失真，"
+                         f"請跑 --dump-accounts 核對並修 config account_patterns.net_income")
+
     got_any = any(res.metrics[k] is not None for k in
                   ("contract_liab_qoq_pct", "inventory_qoq_pct", "fcf_to_net_income"))
     if not got_any:
@@ -400,7 +423,26 @@ def run_m3(cfg: dict, quarterlies: Callable) -> ModuleResult:
 def run_m4(cfg: dict, fetch: Callable) -> ModuleResult:
     res = ModuleResult("M4 customs_flow")
     p = cfg["m4_customs_flow"]
-    rows = fetch(cfg, p["months_back"])
+    # BUG-3: Census intermittently returns an HTML maintenance/rate-limit page
+    # instead of JSON. Retry once with backoff, then degrade to NO_DATA (never
+    # crash the radar). Record the raw prefix so a human can diagnose.
+    retries = p.get("retries", 1)
+    backoff_s = p.get("retry_backoff_s", 30)
+    rows = None
+    last_err = None
+    for attempt in range(retries + 1):
+        try:
+            rows = fetch(cfg, p["months_back"])
+            last_err = None
+            break
+        except Exception as e:
+            last_err = e
+            if attempt < retries:
+                time.sleep(backoff_s)
+    if last_err is not None:
+        res.error = f"Census fetch failed after {retries + 1} tr{'ies' if retries else 'y'}"
+        res.notes.append(f"raw/exception: {str(last_err)[:120]}")
+        return res  # status stays NO_DATA — degraded, not crashed
     if not rows:
         res.error = "empty Census response"
         return res
@@ -496,12 +538,20 @@ def aggregate(results: list[ModuleResult], cfg: dict) -> str:
     return GREEN
 
 
-def render_report(results: list[ModuleResult], overall: str, cfg: dict) -> str:
+def render_report(results: list[ModuleResult], overall: str, cfg: dict,
+                  partial_modules: Optional[list[str]] = None) -> str:
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    if partial_modules:
+        # BUG-1: a partial run has no real overall verdict — show the module
+        # colour only as reference, clearly flagged, never as a总判定.
+        verdict_line = (f"## 總判定：⚪ PARTIAL（僅跑 {','.join(partial_modules)}）"
+                        f"｜模組色僅供參考 {EMOJI.get(overall, '')} {overall}")
+    else:
+        verdict_line = f"## 總判定：{EMOJI[overall]} {overall}"
     lines = [
         f"# Delta Radar (2308.TW) — {now}",
         "",
-        f"## 總判定：{EMOJI[overall]} {overall}",
+        verdict_line,
         "",
         "GS 4500 劇本三大未驗證前提的機械化監控：FCF 轉回 (M2)、合約負債續航 (M2)、",
         "實體出貨上船 (M3/M4)，外加營收動能 (M1) 與敘事風險 (M5)。",
@@ -530,10 +580,12 @@ def render_report(results: list[ModuleResult], overall: str, cfg: dict) -> str:
     return "\n".join(lines)
 
 
-def append_state(results: list[ModuleResult], overall: str, path: str) -> None:
+def append_state(results: list[ModuleResult], overall: str, path: str,
+                 modules_requested: list[str]) -> None:
     entry = {
         "ts": dt.datetime.now(dt.timezone.utc).isoformat(),
         "overall": overall,
+        "modules_requested": sorted(modules_requested),
         "modules": [asdict(r) for r in results],
     }
     history = []
@@ -625,7 +677,13 @@ def main() -> int:
 
     with open(args.config, encoding="utf-8") as f:
         cfg = json.load(f)
-    out_dir = args.output_dir or cfg.get("output_dir", "output")
+    # --selftest must NOT touch the real state.json / report — fixture verdicts
+    # would corrupt the append-only backtest sample. Route output to a throwaway
+    # temp dir. (The report is still printed to stdout so the run is observable.)
+    if args.selftest:
+        out_dir = tempfile.mkdtemp(prefix="delta_radar_selftest_")
+    else:
+        out_dir = args.output_dir or cfg.get("output_dir", "output")
     os.makedirs(out_dir, exist_ok=True)
 
     fx = _fixtures() if args.selftest else {
@@ -655,10 +713,12 @@ def main() -> int:
         "m4": lambda: run_m4(cfg, fx["census"]),
         "m5": lambda: run_m5(cfg, fx["rss"]),
     }
+    ran_keys: list[str] = []
     results: list[ModuleResult] = []
-    for key in ("m1", "m2", "m3", "m4", "m5"):
+    for key in MODULE_ORDER:
         if key not in wanted:
             continue
+        ran_keys.append(key)
         try:
             results.append(runners[key]())
         except Exception as e:  # absolute backstop — never crash the radar
@@ -669,12 +729,18 @@ def main() -> int:
             results.append(r)
 
     overall = aggregate(results, cfg)
-    report = render_report(results, overall, cfg)
+    # BUG-1: only a run covering every module yields a real overall verdict.
+    # Anything narrower is tagged PARTIAL(...) so backtests can filter it out.
+    is_partial = set(ran_keys) != set(MODULE_ORDER)
+    state_overall = (f"PARTIAL({','.join(ran_keys)})" if is_partial else overall)
+    report = render_report(results, overall, cfg,
+                           partial_modules=ran_keys if is_partial else None)
     report_path = os.path.join(out_dir, "delta_radar_report.md")
     state_path = os.path.join(out_dir, "delta_radar_state.json")
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report)
-    append_state(results, overall, state_path)
+    append_state(results, state_overall, state_path, ran_keys)
+
     print(report)
     print(f"\n[written] {report_path}\n[written] {state_path}", file=sys.stderr)
     # exit code mirrors severity so CI can gate on it if desired (0 unless RED)

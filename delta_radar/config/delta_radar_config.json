@@ -29,7 +29,7 @@
       "inventory":            ["^Inventories$", "^inventor"],
       "operating_cash_flow":  ["^CashFlowsFromOperatingActivities$", "operating.*activit"],
       "capex":                ["^PropertyAndPlantAndEquipment$", "propert.*plant.*equip"],
-      "net_income":           ["^EquityAttributableToOwnersOfParent$", "^IncomeAfterTaxes$"]
+      "net_income":           ["^IncomeAfterTaxes$", "^NetIncome$", "^ProfitLossAttributableToOwnersOfParent$", "^ProfitLoss$"]
     }
   },
   "m3_thai_shadow": {
@@ -48,7 +48,9 @@
     "months_back": 30,
     "rolling_window_months": 3,
     "green_yoy_pct": 20.0,
-    "yellow_yoy_pct": 5.0
+    "yellow_yoy_pct": 5.0,
+    "retries": 1,
+    "retry_backoff_s": 30
   },
   "m5_narrative_triggers": {
     "max_items_per_feed": 40,
