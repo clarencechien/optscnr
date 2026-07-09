@@ -73,7 +73,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-11",
+      "entry_close": 2160.0,
+      "t5_ret_pct": -0.46,
+      "t10_ret_pct": -16.2,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-11T05:39:09.526316+00:00",
@@ -149,7 +156,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-11",
+      "entry_close": 2160.0,
+      "t5_ret_pct": -0.46,
+      "t10_ret_pct": -16.2,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-11T05:44:30.355555+00:00",
@@ -225,7 +239,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-11",
+      "entry_close": 2160.0,
+      "t5_ret_pct": -0.46,
+      "t10_ret_pct": -16.2,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-11T05:46:59.629002+00:00",
@@ -239,7 +260,14 @@
         "notes": [],
         "error": "RuntimeError: Census non-JSON response: '\\n<html>\\n    <head>\\n        <title>Missing Key</title>\\n    </head>\\n    <body>\\n        <p>\\n            A valid <em>key</em> must be included with each data API request.\\n            If you do not have a key, you may sign up for one <a href=\"key_signup.html\">here</a>.\\n        </p>\\n        <p>\\n        \\tI'"
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-11",
+      "entry_close": 2160.0,
+      "t5_ret_pct": -0.46,
+      "t10_ret_pct": -16.2,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-11T05:48:33.518185+00:00",
@@ -315,7 +343,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-11",
+      "entry_close": 2160.0,
+      "t5_ret_pct": -0.46,
+      "t10_ret_pct": -16.2,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-11T05:49:42.975538+00:00",
@@ -329,7 +364,14 @@
         "notes": [],
         "error": "RuntimeError: Census non-JSON response: '\\n<html>\\n    <head>\\n        <title>Missing Key</title>\\n    </head>\\n    <body>\\n        <p>\\n            A valid <em>key</em> must be included with each data API request.\\n            If you do not have a key, you may sign up for one <a href=\"key_signup.html\">here</a>.\\n        </p>\\n        <p>\\n        \\tI'"
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-11",
+      "entry_close": 2160.0,
+      "t5_ret_pct": -0.46,
+      "t10_ret_pct": -16.2,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-11T05:53:27.138685+00:00",
@@ -405,7 +447,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-11",
+      "entry_close": 2160.0,
+      "t5_ret_pct": -0.46,
+      "t10_ret_pct": -16.2,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-11T05:57:23.693253+00:00",
@@ -485,7 +534,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-11",
+      "entry_close": 2160.0,
+      "t5_ret_pct": -0.46,
+      "t10_ret_pct": -16.2,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-11T06:17:35.524926+00:00",
@@ -572,7 +628,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-11",
+      "entry_close": 2160.0,
+      "t5_ret_pct": -0.46,
+      "t10_ret_pct": -16.2,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-12T01:02:20.273683+00:00",
@@ -659,7 +722,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-12",
+      "entry_close": 2215.0,
+      "t5_ret_pct": -2.93,
+      "t10_ret_pct": -14.0,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-12T03:02:10.283610+00:00",
@@ -746,7 +816,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-12",
+      "entry_close": 2215.0,
+      "t5_ret_pct": -2.93,
+      "t10_ret_pct": -14.0,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-12T07:03:57.216787+00:00",
@@ -776,7 +853,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-12",
+      "entry_close": 2215.0,
+      "t5_ret_pct": -2.93,
+      "t10_ret_pct": -14.0,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-12T08:47:03.341945+00:00",
@@ -795,7 +879,14 @@
         "notes": [],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-12",
+      "entry_close": 2215.0,
+      "t5_ret_pct": -2.93,
+      "t10_ret_pct": -14.0,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-13T06:37:07.518549+00:00",
@@ -825,7 +916,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-13",
+      "entry_close": 2210.0,
+      "t5_ret_pct": -5.88,
+      "t10_ret_pct": -11.76,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-14T07:06:30.203652+00:00",
@@ -843,7 +941,14 @@
         ],
         "error": "all RSS feeds failed"
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-14",
+      "entry_close": 2210.0,
+      "t5_ret_pct": -5.88,
+      "t10_ret_pct": -11.76,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-15T08:36:45.942221+00:00",
@@ -873,7 +978,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-15",
+      "entry_close": 2210.0,
+      "t5_ret_pct": -5.88,
+      "t10_ret_pct": -11.76,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-15T09:41:54.353718+00:00",
@@ -960,7 +1072,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-15",
+      "entry_close": 2210.0,
+      "t5_ret_pct": -5.88,
+      "t10_ret_pct": -11.76,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-16T08:26:46.597879+00:00",
@@ -990,7 +1109,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-16",
+      "entry_close": 2230.0,
+      "t5_ret_pct": -10.31,
+      "t10_ret_pct": -10.76,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-18T08:23:19.909105+00:00",
@@ -1077,7 +1203,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-18",
+      "entry_close": 2150.0,
+      "t5_ret_pct": -15.81,
+      "t10_ret_pct": -3.49,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-19T07:38:37.178447+00:00",
@@ -1107,7 +1240,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-19",
+      "entry_close": 2150.0,
+      "t5_ret_pct": -11.4,
+      "t10_ret_pct": -7.21,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-22T09:26:28.334922+00:00",
@@ -1194,7 +1334,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-22",
+      "entry_close": 2150.0,
+      "t5_ret_pct": -11.4,
+      "t10_ret_pct": -7.21,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-23T06:32:04.874771+00:00",
@@ -1224,7 +1371,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-23",
+      "entry_close": 2080.0,
+      "t5_ret_pct": -6.25,
+      "t10_ret_pct": -9.13,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-25T06:59:45.450466+00:00",
@@ -1307,7 +1461,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-25",
+      "entry_close": 1980.0,
+      "t5_ret_pct": -0.51,
+      "t10_ret_pct": -5.05,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-25T12:59:26.710911+00:00",
@@ -1390,7 +1551,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-25",
+      "entry_close": 1980.0,
+      "t5_ret_pct": -0.51,
+      "t10_ret_pct": -5.05,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-26T06:34:54.206892+00:00",
@@ -1420,7 +1588,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-26",
+      "entry_close": 1810.0,
+      "t5_ret_pct": 14.64,
+      "t10_ret_pct": null,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-29T08:30:26.161184+00:00",
@@ -1507,7 +1682,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-29",
+      "entry_close": 1905.0,
+      "t5_ret_pct": 4.72,
+      "t10_ret_pct": null,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-06-30T06:37:56.272684+00:00",
@@ -1537,7 +1719,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-06-30",
+      "entry_close": 1950.0,
+      "t5_ret_pct": -3.08,
+      "t10_ret_pct": null,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-07-02T06:53:26.160614+00:00",
@@ -1624,7 +1813,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-07-02",
+      "entry_close": 1970.0,
+      "t5_ret_pct": -4.57,
+      "t10_ret_pct": null,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-07-03T06:08:21.757486+00:00",
@@ -1654,7 +1850,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-07-03",
+      "entry_close": 2075.0,
+      "t5_ret_pct": null,
+      "t10_ret_pct": null,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-07-06T07:59:35.327432+00:00",
@@ -1741,7 +1944,14 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-07-06",
+      "entry_close": 1995.0,
+      "t5_ret_pct": null,
+      "t10_ret_pct": null,
+      "t20_ret_pct": null
+    }
   },
   {
     "ts": "2026-07-07T06:29:04.393658+00:00",
@@ -1771,6 +1981,226 @@
         ],
         "error": null
       }
-    ]
+    ],
+    "outcomes": {
+      "entry_date": "2026-07-07",
+      "entry_close": 1890.0,
+      "t5_ret_pct": null,
+      "t10_ret_pct": null,
+      "t20_ret_pct": null
+    }
+  },
+  {
+    "ts": "2026-07-09T06:40:37.637964+00:00",
+    "overall": "YELLOW",
+    "modules_requested": [
+      "m1",
+      "m2",
+      "m3",
+      "m4",
+      "m5",
+      "m6",
+      "m8"
+    ],
+    "modules": [
+      {
+        "module": "M1 revenue_acceleration",
+        "status": "GREEN",
+        "headline": "2026-05 YoY +43.7%, slope +4.22pp/月, 連續減速 1 個月",
+        "metrics": {
+          "latest_month": "2026-05",
+          "latest_yoy_pct": 43.7,
+          "yoy_slope_pp_per_month": 4.22,
+          "consecutive_decel_months": 1
+        },
+        "notes": [],
+        "error": null
+      },
+      {
+        "module": "M2 bullwhip_health",
+        "status": "YELLOW",
+        "headline": "合約負債 QoQ +7.4% / 存貨 QoQ +17.4% / FCF/淨利 0.37",
+        "metrics": {
+          "as_of": "2026-03-31",
+          "contract_liab_qoq_pct": 7.4,
+          "inventory_qoq_pct": 17.4,
+          "fcf_to_net_income": 0.37,
+          "accounts_used": {
+            "contract": "CurrentContractLiabilities",
+            "inventory": "Inventories",
+            "ocf": "CashFlowsFromOperatingActivities",
+            "capex": "PropertyAndPlantAndEquipment",
+            "net_income": "IncomeAfterTaxes"
+          }
+        },
+        "notes": [],
+        "error": null
+      },
+      {
+        "module": "M3 thai_shadow",
+        "status": "GREEN",
+        "headline": "DELTA.BK 2026-03-31 營收 YoY +47.0%, GM 31.7%",
+        "metrics": {
+          "latest_q": "2026-03-31",
+          "rev_yoy_pct": 47.0,
+          "gross_margin_pct": 31.7
+        },
+        "notes": [],
+        "error": null
+      },
+      {
+        "module": "M4 customs_flow",
+        "status": "GREEN",
+        "headline": "US 進口 HS850440 (TH+TW) 近3月 $1360.1M, YoY +50.5%",
+        "metrics": {
+          "window": "2026-03..2026-05",
+          "rolling_value_usd_m": 1360.1,
+          "rolling_yoy_pct": 50.5,
+          "by_country": {
+            "THAILAND": {
+              "rolling_value_usd_m": 871.7,
+              "rolling_yoy_pct": 48.6
+            },
+            "TAIWAN": {
+              "rolling_value_usd_m": 488.4,
+              "rolling_yoy_pct": 54.0
+            }
+          }
+        },
+        "notes": [],
+        "error": null
+      },
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:3e / vr300_delay:15e(25m) / debt_financed_capex:16e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 3,
+            "vr300_delay": 15,
+            "debt_financed_capex": 16,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 3,
+            "vr300_delay": 25,
+            "debt_financed_capex": 16,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -2.92,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 15,
+              "mentions": 25,
+              "gate": "zscore",
+              "z": 1.32,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 16,
+              "mentions": 16,
+              "gate": "zscore",
+              "z": 0.69,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due for a Pause - Investing.com",
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[capex_cut] 'The odd decouple': JPMorgan says the tech capex surge is masking a troubling slowdown in job growth - Business Insider",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[vr300_delay] Nvidia's Kyber NVL144 reportedly pushed back more than a year, Asian suppliers drop - the-decoder.com",
+          "[debt_financed_capex] Forget the AI bubble. The IMF says the real threat is the mountain of debt behind it — and 60% of planned data centers h",
+          "[debt_financed_capex] Amazon Is Borrowing Another $25 Billion for AI, and Promises This Is the Last Time This Year - 24/7 Wall St.",
+          "[debt_financed_capex] Oracle's AI spending blows past estimates, raising worries over growing debt - Reuters"
+        ],
+        "error": null
+      },
+      {
+        "module": "M6 peer_divergence",
+        "status": "YELLOW",
+        "headline": "cooling:3017領先+24pp",
+        "metrics": {
+          "groups": {
+            "power": {
+              "direction": "peer_lead_risk",
+              "delta_3m_yoy": 41.7,
+              "best_peer": "6282",
+              "best_peer_3m_yoy": 26.0,
+              "peer_lead_pp": -15.7,
+              "status": "GREEN",
+              "peers_3m_yoy": {
+                "2301": 25.8,
+                "6282": 26.0
+              }
+            },
+            "cooling": {
+              "direction": "peer_lead_risk",
+              "delta_3m_yoy": 41.7,
+              "best_peer": "3017",
+              "best_peer_3m_yoy": 66.1,
+              "peer_lead_pp": 24.4,
+              "status": "YELLOW",
+              "peers_3m_yoy": {
+                "3324": 65.6,
+                "3017": 66.1
+              }
+            },
+            "rack": {
+              "direction": "cohort_confirm",
+              "delta_3m_yoy": 41.7,
+              "best_peer": "2382",
+              "best_peer_3m_yoy": 106.0,
+              "peer_lead_pp": 64.3,
+              "status": "GREEN",
+              "peers_3m_yoy": {
+                "2317": 40.5,
+                "2382": 106.0,
+                "6669": 25.9
+              }
+            }
+          }
+        },
+        "notes": [
+          "[cooling] 3017 3m YoY 66.1% vs 2308 41.7%（領先 +24pp）"
+        ],
+        "error": null
+      },
+      {
+        "module": "M8 revision_velocity",
+        "status": "GREEN",
+        "headline": "下修 0/上修 0（樣本不足 <3，暫不評級）",
+        "metrics": {
+          "up_hits": 0,
+          "down_hits": 0,
+          "total": 0,
+          "down_ratio": null
+        },
+        "notes": [],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-07-09",
+      "entry_close": 1880.0,
+      "t5_ret_pct": null,
+      "t10_ret_pct": null,
+      "t20_ret_pct": null
+    }
   }
 ]
