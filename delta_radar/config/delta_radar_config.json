@@ -161,9 +161,11 @@
     }
   },
   "m7_outcome_backfill": {
-    "_basis": "T+5/10/20 forward returns of 2308 onto each state entry — makes the radar falsifiable (gate backtest). Runs after every scan; idempotent.",
+    "_basis": "T+5/10/20 forward returns of 2308 onto each state entry — makes the radar falsifiable (gate backtest). Stores raw return AND excess vs benchmark (2308 − benchmark) so market beta doesn't pollute cohort comparisons. Runs after every scan; idempotent.",
+    "_benchmark_note": "0050 (Taiwan 50 ETF) ~ market proxy; 2308 is a ~2-3% holding so mild self-overlap, acceptable. Assumes beta≈1 (event-study style abnormal return). Switch to a broader index later if needed.",
     "enabled": true,
-    "horizons": [5, 10, 20]
+    "horizons": [5, 10, 20],
+    "benchmark": "0050"
   },
   "m8_revision_velocity": {
     "_basis": "consensus inflection > level. Low-tech RSS: count target-price revision DIRECTION only (headline numbers unreliable). Escalate on two consecutive down-heavy runs.",

@@ -1008,7 +1008,13 @@ def backfill_outcomes(cfg: dict, state_path: str, fetch: Callable) -> int:
 
     delta_radar's whole point is to become falsifiable: without knowing what
     happened to 2308 after each verdict, gate effectiveness can never be
-    backtested and the instrument never graduates. Uses 2308 daily close.
+    backtested and the instrument never graduates.
+
+    Stores BOTH the raw 2308 return and the market-adjusted excess return
+    (2308 − benchmark over the same T+N window). Excess is the number that
+    matters: absolute returns are dominated by market beta (a down month makes
+    every cohort look bad regardless of gate quality); the excess strips that
+    common drift so a gate's *relative* predictive power can surface.
     Returns the number of entries whose outcomes changed this run."""
     if not os.path.exists(state_path):
         return 0
@@ -1016,13 +1022,22 @@ def backfill_outcomes(cfg: dict, state_path: str, fetch: Callable) -> int:
         history = json.load(f)
     if not history:
         return 0
-    horizons = cfg.get("m7_outcome_backfill", {}).get("horizons", [5, 10, 20])
+    m7 = cfg.get("m7_outcome_backfill", {})
+    horizons = m7.get("horizons", [5, 10, 20])
+    bench_id = m7.get("benchmark", "0050")
     entry_dates = [e["ts"][:10] for e in history if e.get("ts")]
     start = (dt.date.fromisoformat(min(entry_dates)) - dt.timedelta(days=15)).isoformat()
     rows = fetch("TaiwanStockPrice", cfg["ticker_tw"], start, cfg)
     series = _price_close_series(rows)
     if not series:
         raise RuntimeError("empty/again-unusable TaiwanStockPrice response")
+    # Benchmark for excess return. Same TWSE calendar → same trading-day index.
+    # Failure to fetch it must NOT lose the raw returns — degrade excess to None.
+    bench_series: list[tuple] = []
+    try:
+        bench_series = _price_close_series(fetch("TaiwanStockPrice", bench_id, start, cfg))
+    except Exception:
+        bench_series = []
 
     changed = 0
     for e in history:
@@ -1030,13 +1045,18 @@ def backfill_outcomes(cfg: dict, state_path: str, fetch: Callable) -> int:
         if not ed:
             continue
         prev = e.get("outcomes") or {}
-        outcomes = {"entry_date": ed}
+        outcomes = {"entry_date": ed, "benchmark": bench_id}
         # entry close = first trading close on/after entry date
         dates = [d for d, _ in series]
         t0 = next((i for i, d in enumerate(dates) if d >= ed), None)
         outcomes["entry_close"] = series[t0][1] if t0 is not None else None
         for n in horizons:
-            outcomes[f"t{n}_ret_pct"] = _forward_return_pct(series, ed, n)
+            stock_ret = _forward_return_pct(series, ed, n)
+            outcomes[f"t{n}_ret_pct"] = stock_ret
+            bench_ret = _forward_return_pct(bench_series, ed, n) if bench_series else None
+            outcomes[f"t{n}_excess_pct"] = (
+                None if stock_ret is None or bench_ret is None
+                else round(stock_ret - bench_ret, 2))
         # only count as changed if any value actually differs (idempotent)
         if {k: prev.get(k) for k in outcomes} != outcomes:
             e["outcomes"] = outcomes
@@ -1055,13 +1075,18 @@ def _module_short(name: str) -> str:
 
 
 def print_hit_rate(cfg: dict, state_path: str) -> int:
-    """Per-(module, status) forward-return table vs the all-entries baseline."""
+    """Per-(module, status) EXCESS-return table (2308 − benchmark).
+
+    Leads with market-adjusted excess so beta doesn't pollute every cohort;
+    the raw market drift is shown once as context, not folded into each row."""
     if not os.path.exists(state_path):
         print("no state file")
         return 1
     with open(state_path, encoding="utf-8") as f:
         history = json.load(f)
-    horizons = cfg.get("m7_outcome_backfill", {}).get("horizons", [5, 10, 20])
+    m7 = cfg.get("m7_outcome_backfill", {})
+    horizons = m7.get("horizons", [5, 10, 20])
+    bench_id = m7.get("benchmark", "0050")
     scored = [e for e in history if e.get("outcomes")]
     if not scored:
         print("no entries have outcomes yet — run the radar (or backfill) first")
@@ -1071,8 +1096,13 @@ def print_hit_rate(cfg: dict, state_path: str) -> int:
         vals = [v for v in vals if v is not None]
         return sum(vals) / len(vals) if vals else None
 
-    # baseline: every scored entry, once
-    base = {n: avg([e["outcomes"].get(f"t{n}_ret_pct") for e in scored]) for n in horizons}
+    def cell(a):
+        return f"{a:+.2f}" if a is not None else "—"
+
+    has_excess = any(e["outcomes"].get(f"t{horizons[0]}_excess_pct") is not None
+                     or any(e["outcomes"].get(f"t{n}_excess_pct") is not None for n in horizons)
+                     for e in scored)
+    metric = "excess_pct" if has_excess else "ret_pct"
 
     # cohorts keyed by "M5=RED" etc; a module contributes its own status per entry
     cohorts: dict[str, list] = {}
@@ -1081,20 +1111,31 @@ def print_hit_rate(cfg: dict, state_path: str) -> int:
             key = f"{_module_short(m['module'])}={m['status']}"
             cohorts.setdefault(key, []).append(e["outcomes"])
 
-    hz_hdr = " | ".join(f"T+{n} avg%" for n in horizons)
-    print(f"\n# delta_radar hit-rate (2308 forward returns) — {len(scored)} scored entries\n")
+    col = "超額%" if has_excess else "絕對%"
+    hz_hdr = " | ".join(f"T+{n} {col}" for n in horizons)
+    label = f"EXCESS vs {bench_id}" if has_excess else "ABSOLUTE (no benchmark yet — re-backfill on next run)"
+    print(f"\n# delta_radar hit-rate — {label} — {len(scored)} scored entries\n")
+    if has_excess:
+        # market drift context: raw 2308 vs raw benchmark, shown once
+        raw2308 = {n: avg([e["outcomes"].get(f"t{n}_ret_pct") for e in scored]) for n in horizons}
+        drift = {n: avg([(e["outcomes"].get(f"t{n}_ret_pct") or 0) - (e["outcomes"].get(f"t{n}_excess_pct") or 0)
+                         for e in scored if e["outcomes"].get(f"t{n}_excess_pct") is not None])
+                 for n in horizons}
+        print("_市場基準同期漂移（beta，看一次即可，不再污染下表每格）："
+              + " ｜ ".join(f"T+{n} {bench_id} {cell(drift[n])} / 2308絕對 {cell(raw2308[n])}" for n in horizons)
+              + "_\n")
     print(f"| cohort | n | {hz_hdr} |")
     print("|---|---|" + "---|" * len(horizons))
-    base_cells = " | ".join(f"{base[n]:+.2f}" if base[n] is not None else "—" for n in horizons)
-    print(f"| **baseline (all)** | {len(scored)} | {base_cells} |")
+    base = {n: avg([e["outcomes"].get(f"t{n}_{metric}") for e in scored]) for n in horizons}
+    print(f"| **baseline (all)** | {len(scored)} | "
+          + " | ".join(cell(base[n]) for n in horizons) + " |")
     for key in sorted(cohorts):
         rowset = cohorts[key]
-        cells = " | ".join(
-            (lambda a: f"{a:+.2f}" if a is not None else "—")(avg([o.get(f"t{n}_ret_pct") for o in rowset]))
-            for n in horizons)
+        cells = " | ".join(cell(avg([o.get(f"t{n}_{metric}") for o in rowset])) for n in horizons)
         print(f"| {key} | {len(rowset)} | {cells} |")
-    print("\n_shadow-mode instrument: forward returns calibrate gate usefulness, "
-          "not a trade signal. Small n — read direction, not precision._")
+    print(f"\n_超額報酬 = 2308 − {bench_id}（同 T+N 交易日視窗），已抽掉市場 beta。"
+          "shadow-mode instrument：校準 gate 有效性，非交易訊號。"
+          "n 小、單一行情時只讀方向不讀精度。_")
     return 0
 
 
@@ -1121,15 +1162,17 @@ def _fixtures() -> dict:
                              "revenue": base * (r ** i), "date": f"{y}-{m+1:02d}-10"})
             return rows
         if dataset == "TaiwanStockPrice":
-            # deterministic daily series: +1% per trading day from 2026-05-01,
-            # weekdays only. Lets M7 backfill compute non-null forward returns.
+            # deterministic daily series, weekdays only, from 2026-05-01.
+            # 2308 +1%/day, benchmark(0050) +0.5%/day → non-trivial excess so the
+            # M7 excess-return path is exercised: t5 excess ≈ 5.10 − 2.53 = +2.57%.
+            per_day = 1.005 if str(data_id) != cfg.get("ticker_tw", "2308") else 1.01
             rows = []
             d = dt.date(2026, 5, 1)
             close = 300.0
             while d <= dt.date(2026, 8, 31):
                 if d.weekday() < 5:  # Mon-Fri
                     rows.append({"date": d.isoformat(), "close": round(close, 2)})
-                    close *= 1.01
+                    close *= per_day
                 d += dt.timedelta(days=1)
             return rows
         if dataset == "TaiwanStockBalanceSheet":
@@ -1356,14 +1399,18 @@ def _selftest_assertions(results: list[ModuleResult], state_path: str,
                    (m6.metrics.get("groups", {}).get("rack", {}).get("status") if m6 and m6.metrics else None)
                    in (GREEN, NO_DATA, None)))
 
-    # M7: forward returns from a +1%/day series → t5≈+5.1, t10≈+10.46, t20≈+22.02.
+    # M7: 2308 +1%/day → t5 raw≈+5.1, t20 raw≈+22.02. Benchmark(0050) +0.5%/day
+    # → t5 excess≈5.10−2.53=+2.57, t20 excess≈22.02−10.49=+11.53.
     try:
         with open(state_path, encoding="utf-8") as f:
             last = json.load(f)[-1]
         oc = last.get("outcomes", {})
         checks.append(("M7 outcomes written", bool(oc)))
-        checks.append(("M7 t5 ~ +5.1%", oc.get("t5_ret_pct") is not None and abs(oc["t5_ret_pct"] - 5.10) < 0.2))
-        checks.append(("M7 t20 ~ +22.0%", oc.get("t20_ret_pct") is not None and abs(oc["t20_ret_pct"] - 22.02) < 0.3))
+        checks.append(("M7 t5 raw ~ +5.1%", oc.get("t5_ret_pct") is not None and abs(oc["t5_ret_pct"] - 5.10) < 0.2))
+        checks.append(("M7 t20 raw ~ +22.0%", oc.get("t20_ret_pct") is not None and abs(oc["t20_ret_pct"] - 22.02) < 0.3))
+        checks.append(("M7 t5 excess ~ +2.57%", oc.get("t5_excess_pct") is not None and abs(oc["t5_excess_pct"] - 2.57) < 0.2))
+        checks.append(("M7 t20 excess ~ +11.5%", oc.get("t20_excess_pct") is not None and abs(oc["t20_excess_pct"] - 11.53) < 0.3))
+        checks.append(("M7 records benchmark id", oc.get("benchmark") == "0050"))
     except Exception as e:
         checks.append((f"M7 state readable ({e})", False))
 
