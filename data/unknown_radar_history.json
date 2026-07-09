@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-07-07",
-    "consecutive_days": 12,
-    "total_mentions": 30,
+    "last_seen": "2026-07-09",
+    "consecutive_days": 13,
+    "total_mentions": 33,
     "ticker": "NDAQ"
   },
   "Daily": {
@@ -19,20 +19,6 @@
     "consecutive_days": 2,
     "total_mentions": 4,
     "ticker": "BGHL"
-  },
-  "Coupang": {
-    "first_seen": "2026-07-01",
-    "last_seen": "2026-07-01",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "CPNG"
-  },
-  "Defense": {
-    "first_seen": "2026-07-01",
-    "last_seen": "2026-07-01",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "DTII"
   },
   "Columbia": {
     "first_seen": "2026-07-02",
@@ -145,5 +131,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "DAL"
+  },
+  "Business": {
+    "first_seen": "2026-07-09",
+    "last_seen": "2026-07-09",
+    "consecutive_days": 1,
+    "total_mentions": 4,
+    "ticker": "BFST"
   }
 }

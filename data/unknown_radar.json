@@ -1,65 +1,29 @@
 {
-  "updated_at": "2026-07-08T22:32:16.308493",
-  "count": 5,
+  "updated_at": "2026-07-09T22:49:25.306564",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Daily",
-      "ticker": "DJCO",
-      "mentions_today": 2,
-      "total_mentions": 6,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "Daily – Vickers Top Insider Picks for 07/08/2026",
-        "Daily – Vickers Top Buyers & Sellers for 07/08/2026"
-      ]
-    },
-    {
-      "name": "Greenland",
-      "ticker": "GLNDW",
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
       "mentions_today": 3,
-      "total_mentions": 5,
-      "consecutive_days": 2,
+      "total_mentions": 33,
+      "consecutive_days": 13,
       "is_strong": true,
       "evidence": [
-        "Trump pours cold water on NATO allies' united front",
-        "Trump doubles down on push for control over Greenland as Denmark vows to defend it"
+        "A huge trade just happened on the Nasdaq 100. Bulls are taking notice",
+        "Why a hidden divergence between the VIX and Nasdaq volatility has the smart money on edge"
       ]
     },
     {
-      "name": "Levi Strauss",
-      "ticker": "LEVI",
-      "mentions_today": 2,
-      "total_mentions": 2,
+      "name": "Business",
+      "ticker": "BFST",
+      "mentions_today": 4,
+      "total_mentions": 4,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Levi Strauss beats quarterly expectations, raises guidance and dividend",
-        "Levi Strauss beats quarterly expectations, raises guidance and dividend"
-      ]
-    },
-    {
-      "name": "Canadian",
-      "ticker": "CNDIF",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Meta is building its first big Canadian data center as AI expansion crosses the border",
-        "Meta is building its first big Canadian data center as AI expansion crosses the border"
-      ]
-    },
-    {
-      "name": "Delta",
-      "ticker": "DAL",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Delta launches 'basic business' fares without lounge access, seat selection",
-        "Delta launches 'basic business' fares without lounge access, seat selection"
+        "How all 50 U.S. states performed over 20 years of Top States for Business",
+        "America's Top States for Business 2026: See the full rankings and where your state finished"
       ]
     }
   ]
