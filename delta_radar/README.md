@@ -44,6 +44,10 @@ M6 不看 2308 的 level，看 **cohort 內對手的 3 月平均 YoY 是否反�
 
 **M7 後果回填（非模組，背景任務）**：每次 run 後把 2308 的 T+5/10/20 遠期報酬回填到
 每筆 state entry，讓 gate 有效性可回測（儀器畢業的前提）。`--hit-rate` 印出分模組報酬表。
+每筆同時存 **raw 報酬**與 **超額報酬**（2308 − benchmark，預設 `0050`，同 T+N 交易日視窗）——
+`--hit-rate` 主表顯示超額報酬、把市場 beta 單獨列一行當 context，避免下跌行情讓每個 cohort
+都變負而看不出 gate 的相對預測力。**樣本不足的 cohort（如 M6/M8 剛上線）顯示 `—`：
+M7 拒絕在 n 太小時評分，這是可信度的證據不是缺陷。**
 
 ## 快速開始（本機 / Actions）
 
@@ -53,7 +57,7 @@ python delta_radar.py                       # 全模組實跑（含 M6；跑完�
 python delta_radar.py --selftest            # 零網路 fixtures 驗證管線（含 M6/M7 斷言）
 python delta_radar.py --modules m1,m6       # 只跑月頻模組（partial run 記為 PARTIAL）
 python delta_radar.py --dump-accounts       # 印出 FinMind 實際科目名（調 M2 regex 用）
-python delta_radar.py --hit-rate            # 印出分模組 T+N 遠期報酬表（需已回填 outcomes）
+python delta_radar.py --hit-rate            # 分模組 T+N 超額報酬表（2308−benchmark；需已回填）
 python delta_radar.py --backfill-only       # 只回填歷史 state 的 outcomes 不跑掃描
 ```
 
@@ -99,6 +103,6 @@ python delta_radar.py --dump-accounts | grep -i contract
 
 - `output/delta_radar_report.md` — 人讀報告
 - `output/delta_radar_state.json` — append-only 歷史，每筆帶 `modules_requested`、
-  M7 回填的 `outcomes`（T+5/10/20 2308 遠期報酬），留給回測 gate 有效性
+  M7 回填的 `outcomes`（T+5/10/20 raw + 超額報酬 vs benchmark），留給回測 gate 有效性
 
 > `--selftest` 一律寫到臨時目錄，永不碰真實 state.json（避免 fixture 判定污染回測樣本）。
