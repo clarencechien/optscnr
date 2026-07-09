@@ -890,7 +890,8 @@ def aggregate(results: list[ModuleResult], cfg: dict) -> str:
 
 
 def render_report(results: list[ModuleResult], overall: str, cfg: dict,
-                  partial_modules: Optional[list[str]] = None) -> str:
+                  partial_modules: Optional[list[str]] = None,
+                  m7: Optional[dict] = None) -> str:
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     if partial_modules:
         # BUG-1: a partial run has no real overall verdict — show the module
@@ -904,8 +905,9 @@ def render_report(results: list[ModuleResult], overall: str, cfg: dict,
         "",
         verdict_line,
         "",
-        "GS 4500 劇本三大未驗證前提的機械化監控：FCF 轉回 (M2)、合約負債續航 (M2)、",
-        "實體出貨上船 (M3/M4)，外加營收動能 (M1) 與敘事風險 (M5)。",
+        "GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、",
+        "敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。",
+        "M7（後果回填，見報告末）為背景校準任務，不出色燈但每次 run 回填 2308 遠期報酬。",
         "",
         "| 模組 | 狀態 | 摘要 |",
         "|---|---|---|",
@@ -925,6 +927,22 @@ def render_report(results: list[ModuleResult], overall: str, cfg: dict,
         if r.error:
             lines.append(f"- ⚠️ degraded: {r.error}")
         lines.append("")
+
+    # M7 is a background task, not a status module — but it must be VISIBLE so a
+    # reader can confirm outcome backfill ran (and check the accumulating sample).
+    lines.append("### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）")
+    if m7 is None:
+        lines.append("- 本次未執行（--modules 未含掃描主流程或 M7 停用）")
+    elif m7.get("error"):
+        lines.append(f"- ⚠️ 本次回填降級：{m7['error']}")
+        lines.append("- （不影響掃描；FinMind 價格暫時抓不到，下次 run 會補）")
+    else:
+        lines.append(f"- 本次回填 **{m7.get('changed', 0)}** 筆；"
+                     f"state 已有 outcomes 的 entry：**{m7.get('scored', 0)}/{m7.get('total', 0)}**")
+        lines.append(f"- 遠期報酬視窗：T+{'/'.join(str(h) for h in m7.get('horizons', []))}"
+                     f"（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表")
+    lines.append("")
+
     lines.append("---")
     lines.append("*delta_radar — optscnr radar family. Shadow-mode instrument: "
                  "this is a measurement device, not a trade signal.*")
@@ -1281,24 +1299,34 @@ def main() -> int:
     # Anything narrower is tagged PARTIAL(...) so backtests can filter it out.
     is_partial = set(ran_keys) != set(MODULE_ORDER)
     state_overall = (f"PARTIAL({','.join(ran_keys)})" if is_partial else overall)
-    report = render_report(results, overall, cfg,
-                           partial_modules=ran_keys if is_partial else None)
     report_path = os.path.join(out_dir, "delta_radar_report.md")
-    with open(report_path, "w", encoding="utf-8") as f:
-        f.write(report)
     append_state(results, state_overall, state_path, ran_keys)
 
-    # M7: after each real run, backfill T+5/10/20 outcomes onto past entries.
-    # Never allowed to crash the run (degrade + log). In --selftest, exercise
-    # the backfill on fixture prices against the throwaway state we just wrote.
-    if cfg.get("m7_outcome_backfill", {}).get("enabled", True):
+    # M7: after each run, backfill T+5/10/20 outcomes onto past entries (runs
+    # BEFORE render so the report can surface it). Never crashes the run.
+    # In --selftest, exercise on fixture prices against the throwaway state.
+    m7_cfg = cfg.get("m7_outcome_backfill", {})
+    m7_summary: Optional[dict] = None
+    if m7_cfg.get("enabled", True):
         fetch = fx["finmind"] if args.selftest else finmind_fetch
         try:
-            n = backfill_outcomes(cfg, state_path, fetch)
-            if n:
-                print(f"[m7] backfilled outcomes on {n} entries", file=sys.stderr)
+            changed = backfill_outcomes(cfg, state_path, fetch)
+            with open(state_path, encoding="utf-8") as f:
+                hist = json.load(f)
+            scored = sum(1 for e in hist if e.get("outcomes"))
+            m7_summary = {"changed": changed, "scored": scored, "total": len(hist),
+                          "horizons": m7_cfg.get("horizons", [5, 10, 20])}
+            print(f"[m7] backfilled {changed} entries ({scored}/{len(hist)} scored)",
+                  file=sys.stderr)
         except Exception as e:
+            m7_summary = {"error": f"{type(e).__name__}: {e}"}
             print(f"[m7] backfill skipped: {type(e).__name__}: {e}", file=sys.stderr)
+
+    report = render_report(results, overall, cfg,
+                           partial_modules=ran_keys if is_partial else None,
+                           m7=m7_summary)
+    with open(report_path, "w", encoding="utf-8") as f:
+        f.write(report)
 
     print(report)
     print(f"\n[written] {report_path}\n[written] {state_path}", file=sys.stderr)
