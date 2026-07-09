@@ -1,4 +1,4 @@
-# Delta Radar (2308.TW) — 2026-07-09 06:59 UTC
+# Delta Radar (2308.TW) — 2026-07-09 07:35 UTC
 
 ## 總判定：🟡 YELLOW
 
@@ -91,14 +91,14 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
       "events": 3,
       "mentions": 3,
       "gate": "zscore",
-      "z": -1.58,
+      "z": -1.3,
       "denial": false
     },
     "vr300_delay": {
       "events": 15,
       "mentions": 25,
       "gate": "zscore",
-      "z": 0.91,
+      "z": 0.77,
       "denial": true
     },
     "debt_financed_capex": {
@@ -185,7 +185,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 ```
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**34/34**
+- 本次回填 **35** 筆；state 已有 outcomes 的 entry：**35/35**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---
