@@ -5,6 +5,10 @@
 > 否則以本庫為準。本庫只增不改；事實被推翻時加註更正、保留原記錄。
 > 每筆格式：事實 ｜ 事件絕對日期 ｜ 查證來源 ｜ 入庫日
 
+## CPRT 
+- Q4 FY2026 財報日：2026-09-09（Before Open, Confirmed）｜ TipRanks / Investing.com ｜ 7/9 入庫
+- CEO 更替：Jeff Liaw 2026-07-31 卸任、Jay Adair 回鍋 CEO ｜ 公告 2026-06-29 ｜ SEC 8-K ｜ 7/9 入庫
+
 ## WULF 
 - 與 Anthropic 簽署 20 年 $19B AI HPC 基礎設施合約 ｜ 2026-07-06 ｜ Barchart ｜ 7/8 入庫
 
