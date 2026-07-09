@@ -115,6 +115,26 @@
     },
     "_calibration_note": "2026-06-11 first live run baseline: capex_cut=6 vr300_delay=10(w/ false pos) debt=18. Thresholds re-centered on this noise floor; switch to z-score vs state.json rolling baseline after ~5 runs."
   },
+  "m6_peer_divergence": {
+    "_basis": "cohort relative momentum; we trade the divergence, not the level. TW mandatory monthly revenue = structural edge (peers report quarterly).",
+    "metric": "yoy_3m_avg",
+    "divergence_yellow_pp": 15.0,
+    "divergence_red_pp": 30.0,
+    "red_requires_consec_months": 2,
+    "cohort": {
+      "power":   {"members": ["2308", "2301", "6282"], "direction": "peer_lead_risk",
+                  "_note": "Lite-On(2301)/Acbel(6282) 反超 2308 = ASIC PSU 份額外溢的先行訊號"},
+      "cooling": {"members": ["2308", "3324", "3017"], "direction": "peer_lead_risk",
+                  "_note": "雙鴻(3324)/AVC(3017) 斜率反超 = sidecar→L2L 遷移、2308 散熱故事打折"},
+      "rack":    {"members": ["2308", "2317", "2382", "6669"], "direction": "cohort_confirm",
+                  "_note": "鴻海/廣達/緯穎 = 下游拉貨 proxy；整鏈同向 = buildout confirm，僅記錄不升級"}
+    }
+  },
+  "m7_outcome_backfill": {
+    "_basis": "T+5/10/20 forward returns of 2308 onto each state entry — makes the radar falsifiable (gate backtest). Runs after every scan; idempotent.",
+    "enabled": true,
+    "horizons": [5, 10, 20]
+  },
   "aggregation": {
     "overall_red_min_reds": 2,
     "overall_yellow_min_yellows": 2,
