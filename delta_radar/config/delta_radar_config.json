@@ -54,6 +54,9 @@
   },
   "m5_narrative_triggers": {
     "max_items_per_feed": 40,
+    "z_yellow": 1.5,
+    "z_red": 2.5,
+    "z_min_samples": 5,
     "buckets": {
       "capex_cut": {
         "query": "hyperscaler capex (cut OR reduce OR pause OR slowdown)",
@@ -92,6 +95,15 @@
           "vr 300",
           "kyber",
           "vera rubin"
+        ],
+        "denial_keywords": [
+          "quashes",
+          "denies",
+          "roadmap intact",
+          "on track",
+          "rumor",
+          "rumours",
+          "debunk"
         ]
       },
       "debt_financed_capex": {
@@ -110,6 +122,24 @@
           "data center",
           "datacenter",
           "hyperscaler"
+        ]
+      },
+      "lc_psu_competition": {
+        "query": "liquid cooled PSU (Lite-On OR Acbel OR Flex OR Greatron) (certification OR mass production OR Ruby)",
+        "keywords": [
+          "liquid cooled",
+          "water cooled",
+          "ruby",
+          "mass production",
+          "certified",
+          "certification"
+        ],
+        "yellow_hits": 2,
+        "red_hits": 5,
+        "must_include": [
+          "psu",
+          "power supply",
+          "power shelf"
         ]
       }
     },
@@ -134,6 +164,16 @@
     "_basis": "T+5/10/20 forward returns of 2308 onto each state entry — makes the radar falsifiable (gate backtest). Runs after every scan; idempotent.",
     "enabled": true,
     "horizons": [5, 10, 20]
+  },
+  "m8_revision_velocity": {
+    "_basis": "consensus inflection > level. Low-tech RSS: count target-price revision DIRECTION only (headline numbers unreliable). Escalate on two consecutive down-heavy runs.",
+    "query": "台達電 (目標價 OR 評等) (上修 OR 下修 OR 調升 OR 調降)",
+    "max_items": 40,
+    "up_keywords": ["上修", "調升", "調高", "buy", "overweight", "raise", "upgrade", "outperform"],
+    "down_keywords": ["下修", "調降", "調低", "sell", "underweight", "cut", "downgrade", "reduce"],
+    "min_total": 3,
+    "yellow_down_ratio": 0.6,
+    "require_consec": true
   },
   "aggregation": {
     "overall_red_min_reds": 2,

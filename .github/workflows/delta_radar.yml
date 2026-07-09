@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
     inputs:
       modules:
-        description: "modules to run (e.g. m1,m2,m3,m4,m5,m6)"
-        default: "m1,m2,m3,m4,m5,m6"
+        description: "modules to run (e.g. m1,m2,m3,m4,m5,m6,m8)"
+        default: "m1,m2,m3,m4,m5,m6,m8"
 
 permissions:
   contents: write
@@ -47,7 +47,7 @@ jobs:
             echo "commit_mode=on_change" >> "$GITHUB_OUTPUT"
             echo "track=narrative-daily" >> "$GITHUB_OUTPUT"
           elif [ "$SCHED" = "30 3 * * 1,4" ]; then
-            echo "modules=m1,m2,m3,m4,m5,m6" >> "$GITHUB_OUTPUT"
+            echo "modules=m1,m2,m3,m4,m5,m6,m8" >> "$GITHUB_OUTPUT"
             echo "commit_mode=always" >> "$GITHUB_OUTPUT"
             echo "track=full-scan" >> "$GITHUB_OUTPUT"
           elif [ "$SCHED" = "30 4 10-12 * *" ]; then

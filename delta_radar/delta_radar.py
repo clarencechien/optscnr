@@ -58,7 +58,8 @@ EMOJI = {GREEN: "🟢", YELLOW: "🟡", RED: "🔴", NO_DATA: "⚪"}
 # Canonical module order + the "full run" definition (BUG-1 partial detection).
 # A run covering exactly this set produces a real overall verdict; anything
 # narrower is recorded as PARTIAL(...). Extend here when adding modules.
-MODULE_ORDER = ("m1", "m2", "m3", "m4", "m5", "m6")
+# (m7 is the outcome-backfill background task, not a status-emitting module.)
+MODULE_ORDER = ("m1", "m2", "m3", "m4", "m5", "m6", "m8")
 
 UA = "delta-radar/1.0 (+github.com/clarencechien/optscnr)"
 
@@ -447,8 +448,12 @@ def run_m4(cfg: dict, fetch: Callable) -> ModuleResult:
         res.error = "empty Census response"
         return res
     monthly: dict[str, float] = {}
+    by_country_monthly: dict[str, dict[str, float]] = {}
     for r in rows:
         monthly[r["time"]] = monthly.get(r["time"], 0.0) + r["value"]
+        cty = r.get("country", "?")
+        by_country_monthly.setdefault(cty, {})[r["time"]] = \
+            by_country_monthly.setdefault(cty, {}).get(r["time"], 0.0) + r["value"]
     months = sorted(monthly)
     w = p["rolling_window_months"]
     if len(months) < 12 + w:
@@ -457,10 +462,23 @@ def run_m4(cfg: dict, fetch: Callable) -> ModuleResult:
     cur = sum(monthly[m] for m in months[-w:])
     prv = sum(monthly[m] for m in months[-w - 12:-12])
     roll_yoy = yoy(cur, prv)
+    # by_country: record only (judgment stays on the aggregate). Surfaces
+    # production-migration tells (Thailand up / Taiwan down) that the sum hides.
+    by_country: dict[str, dict] = {}
+    for cty, mseries in by_country_monthly.items():
+        if len(mseries) < 12 + w:
+            continue
+        cm = sorted(mseries)
+        c_cur = sum(mseries[m] for m in cm[-w:])
+        c_prv = sum(mseries[m] for m in cm[-w - 12:-12])
+        c_yoy = yoy(c_cur, c_prv)
+        by_country[cty] = {"rolling_value_usd_m": round(c_cur / 1e6, 1),
+                           "rolling_yoy_pct": round(c_yoy, 1) if c_yoy is not None else None}
     res.metrics = {
         "window": f"{months[-w]}..{months[-1]}",
         "rolling_value_usd_m": round(cur / 1e6, 1),
         "rolling_yoy_pct": round(roll_yoy, 1) if roll_yoy is not None else None,
+        "by_country": by_country,
     }
     if roll_yoy is None:
         res.error = "zero base period"
@@ -480,43 +498,152 @@ def run_m4(cfg: dict, fetch: Callable) -> ModuleResult:
 # M5 — narrative triggers (RSS keyword buckets)
 # ----------------------------------------------------------------------------
 
-def run_m5(cfg: dict, fetch: Callable) -> ModuleResult:
+_MEDIA_SUFFIX = re.compile(r"\s[-|–—]\s[^-|–—]{1,40}$")  # " - Reuters", " | Tom's Hardware"
+
+
+def _normalize_title(title: str) -> str:
+    """Lowercase, drop trailing media name, strip punctuation → dedup key."""
+    t = _MEDIA_SUFFIX.sub("", title or "")
+    t = re.sub(r"[^a-z0-9 ]+", " ", t.lower())
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def _dedup_events(titles: list[str]) -> tuple[list[str], int]:
+    """Near-dup collapse: same event reported by N outlets = 1 event, N mentions.
+
+    Keyed on the token set of the normalized title (order/outlet independent).
+    Returns (representative_titles, mention_count)."""
+    seen: dict[frozenset, str] = {}
+    for t in titles:
+        key = frozenset(_normalize_title(t).split())
+        if not key:
+            continue
+        # merge into an existing event if token sets substantially overlap
+        matched = None
+        for k in seen:
+            inter = len(key & k)
+            if inter and inter >= 0.6 * min(len(key), len(k)):
+                matched = k
+                break
+        if matched is None:
+            seen[key] = t
+    return list(seen.values()), len(titles)
+
+
+def _m5_baseline(history: list, bucket: str) -> tuple[Optional[float], Optional[float], int]:
+    """Rolling mean/std of a bucket's event count over recent M5 runs in state.
+
+    Prefers the new `events` metric; falls back to legacy `hits` counts so the
+    baseline works during the transition. Returns (mean, std, n_samples)."""
+    vals: list[float] = []
+    for e in history[-11:]:  # last ~10 prior runs
+        for m in e.get("modules", []):
+            if _module_short(m.get("module", "")) != "M5":
+                continue
+            met = m.get("metrics", {}) or {}
+            ev = (met.get("events") or {}).get(bucket)
+            if ev is None:
+                ev = (met.get("hits") or {}).get(bucket)
+            if ev is not None:
+                vals.append(float(ev))
+    if len(vals) < 2:
+        return None, None, len(vals)
+    mean = sum(vals) / len(vals)
+    var = sum((v - mean) ** 2 for v in vals) / (len(vals) - 1)
+    return mean, var ** 0.5, len(vals)
+
+
+def run_m5(cfg: dict, fetch: Callable, history: Optional[list] = None) -> ModuleResult:
+    """RSS narrative buckets with (v2) event dedup, z-score gating, denial cap.
+
+    BUG-2: absolute hit thresholds誤觸 on natural news-volume swings. We now
+    dedup near-dup reports into events, and score each bucket by its z-score
+    vs the bucket's own rolling baseline in state.json. Cold start (<min
+    samples) falls back to absolute event thresholds. An official denial of a
+    rumor caps the bucket at YELLOW ('爭議中') — a denied rumor is a live
+    dispute, not a confirmed RED."""
     res = ModuleResult("M5 narrative_triggers")
     p = cfg["m5_narrative_triggers"]
-    hits: dict[str, list[str]] = {b: [] for b in p["buckets"]}
+    history = history or []
+    z_yellow = p.get("z_yellow", 1.5)
+    z_red = p.get("z_red", 2.5)
+    min_samples = p.get("z_min_samples", 5)
+
+    events: dict[str, int] = {}
+    mentions: dict[str, int] = {}
+    denials: dict[str, bool] = {}
+    reps: dict[str, list[str]] = {}
     fetched_any = False
     for bucket, spec in p["buckets"].items():
-        url = cfg["endpoints"]["gnews_rss"].format(
-            query=urllib.parse.quote(spec["query"]))
+        url = cfg["endpoints"]["gnews_rss"].format(query=urllib.parse.quote(spec["query"]))
         try:
             items = fetch(url)
             fetched_any = True
-        except Exception as e:  # network per-feed failure shouldn't kill module
+        except Exception as e:  # per-feed network failure shouldn't kill the module
             res.notes.append(f"feed {bucket} failed: {e}")
             continue
         kw = [k.lower() for k in spec["keywords"]]
         must = [m.lower() for m in spec.get("must_include", [])]
+        deny_kw = [d.lower() for d in spec.get("denial_keywords", [])]
+        raw_titles: list[str] = []
+        denial_found = False
         for it in items[: p["max_items_per_feed"]]:
             text = (it["title"] + " " + it["summary"]).lower()
             if must and not any(m in text for m in must):
                 continue  # hard topical filter — e.g. consumer-GPU delay noise
             if any(k in text for k in kw):
-                hits[bucket].append(it["title"][:120])
+                raw_titles.append(it["title"][:120])
+                if deny_kw and any(d in text for d in deny_kw):
+                    denial_found = True
+        ev_titles, n_mentions = _dedup_events(raw_titles)
+        events[bucket] = len(ev_titles)
+        mentions[bucket] = n_mentions
+        denials[bucket] = denial_found
+        reps[bucket] = ev_titles
+
     if not fetched_any:
         res.error = "all RSS feeds failed"
         return res
-    counts = {b: len(v) for b, v in hits.items()}
-    res.metrics = {"hits": counts}
-    res.notes += [f"[{b}] {t}" for b, v in hits.items() for t in v[:3]]
+
+    # Per-bucket status: z-score when baseline available, else absolute events.
     worst = GREEN
+    bucket_status: dict[str, str] = {}
+    scoring: dict[str, dict] = {}
     for bucket, spec in p["buckets"].items():
-        n = counts[bucket]
-        if n >= spec["red_hits"]:
-            worst = RED
-        elif n >= spec["yellow_hits"] and SEVERITY[worst] < SEVERITY[YELLOW]:
-            worst = YELLOW
+        n_ev = events.get(bucket, 0)
+        mean, std, n_s = _m5_baseline(history, bucket)
+        used = "absolute"
+        z = None
+        st = GREEN
+        if n_s >= min_samples and std and std > 0:
+            used = "zscore"
+            z = (n_ev - mean) / std
+            if z >= z_red:
+                st = RED
+            elif z >= z_yellow:
+                st = YELLOW
+        else:
+            if n_ev >= spec["red_hits"]:
+                st = RED
+            elif n_ev >= spec["yellow_hits"]:
+                st = YELLOW
+        # denial cap: a rumor officially denied is a live dispute, not a RED
+        if denials.get(bucket) and SEVERITY[st] > SEVERITY[YELLOW]:
+            st = YELLOW
+            res.notes.append(f"[{bucket}] 官方否認偵測 → 上限 🟡（爭議中）")
+        bucket_status[bucket] = st
+        scoring[bucket] = {"events": n_ev, "mentions": mentions.get(bucket, 0),
+                           "gate": used, "z": None if z is None else round(z, 2),
+                           "denial": denials.get(bucket, False)}
+        if SEVERITY[st] > SEVERITY[worst]:
+            worst = st
+
     res.status = worst
-    res.headline = " / ".join(f"{b}:{counts[b]}" for b in counts)
+    res.metrics = {"events": events, "mentions": mentions, "scoring": scoring}
+    res.notes += [f"[{b}] {t}" for b in reps for t in reps[b][:3]]
+    res.headline = " / ".join(
+        f"{b}:{events[b]}e" + (f"({mentions[b]}m)" if mentions[b] != events[b] else "")
+        for b in events)
     return res
 
 
@@ -668,6 +795,79 @@ def run_m6(cfg: dict, fetch: Callable) -> ModuleResult:
         if gd.get("status") in (YELLOW, RED):
             res.notes.append(f"[{gn}] {gd['best_peer']} 3m YoY {gd['best_peer_3m_yoy']}% "
                              f"vs 2308 {gd['delta_3m_yoy']}%（領先 {gd['peer_lead_pp']:+.0f}pp）")
+    return res
+
+
+# ----------------------------------------------------------------------------
+# M8 — analyst revision velocity (target-price up/down direction from RSS)
+# ----------------------------------------------------------------------------
+
+def _last_module_metric(history: list, mod_short: str) -> dict:
+    """Most recent metrics dict for a module across state history ({} if none)."""
+    for e in reversed(history or []):
+        for m in e.get("modules", []):
+            if _module_short(m.get("module", "")) == mod_short:
+                return m.get("metrics", {}) or {}
+    return {}
+
+
+def run_m8(cfg: dict, fetch: Callable, history: Optional[list] = None) -> ModuleResult:
+    """Consensus revision velocity: we can't get sell-side decks, but we can
+    count the direction/frequency of target-price revisions. The inflection
+    matters more than the level. Low-tech RSS version (no target numbers —
+    unreliable in headlines — only up/down direction). A single down-heavy run
+    is not enough: escalation to YELLOW requires two consecutive elevated runs
+    (state-backed consec gate) so one noisy day doesn't flip the light."""
+    res = ModuleResult("M8 revision_velocity")
+    p = cfg["m8_revision_velocity"]
+    history = history or []
+    url = cfg["endpoints"]["gnews_rss"].format(query=urllib.parse.quote(p["query"]))
+    try:
+        items = fetch(url)
+    except Exception as e:
+        res.error = f"revision feed failed: {str(e)[:100]}"
+        return res
+    up_kw = [k.lower() for k in p["up_keywords"]]
+    down_kw = [k.lower() for k in p["down_keywords"]]
+    up, down = 0, 0
+    up_t, down_t = [], []
+    for it in items[: p.get("max_items", 40)]:
+        text = (it["title"] + " " + it.get("summary", "")).lower()
+        mu = any(k in text for k in up_kw)
+        md = any(k in text for k in down_kw)
+        if md and not mu:
+            down += 1
+            down_t.append(it["title"][:120])
+        elif mu and not md:
+            up += 1
+            up_t.append(it["title"][:120])
+        # ambiguous (both / neither) → skip
+    total = up + down
+    down_ratio = (down / total) if total else None
+    res.metrics = {"up_hits": up, "down_hits": down, "total": total,
+                   "down_ratio": None if down_ratio is None else round(down_ratio, 2)}
+
+    if total < p.get("min_total", 3):
+        res.status = GREEN
+        res.headline = f"下修 {down}/上修 {up}（樣本不足 <{p.get('min_total', 3)}，暫不評級）"
+        return res
+
+    yellow_ratio = p.get("yellow_down_ratio", 0.6)
+    elevated = down_ratio >= yellow_ratio
+    prev = _last_module_metric(history, "M8")
+    prev_ratio = prev.get("down_ratio")
+    prev_elevated = prev_ratio is not None and prev_ratio >= yellow_ratio
+
+    if elevated and (prev_elevated or not p.get("require_consec", True)):
+        res.status = YELLOW
+        res.notes.append(f"下修佔比 {down_ratio:.0%} 連 2 次 run 偏高 → 共識轉向徵兆")
+    elif elevated:
+        res.status = GREEN
+        res.notes.append(f"下修佔比 {down_ratio:.0%} 偏高，但單次；待下一 run 確認才升級")
+    else:
+        res.status = GREEN
+    res.notes += [f"[down] {t}" for t in down_t[:3]]
+    res.headline = f"目標價 下修 {down}/上修 {up}（下修佔比 {down_ratio:.0%}）"
     return res
 
 
@@ -950,6 +1150,26 @@ def _fixtures() -> dict:
         return rows
 
     def rss_fake(url):
+        q = urllib.parse.unquote(url).lower()
+        if "kyber" in q or "rubin" in q or "vr300" in q:
+            # M5 vr300 bucket: 4 near-dup delay reports (→ 1 event, 4 mentions)
+            # + 1 official denial (→ separate event, triggers 爭議中 cap).
+            return [
+                {"title": "Nvidia Kyber rack for Rubin Ultra delayed to 2028", "summary": "", "date": ""},
+                {"title": "Nvidia delays Kyber AI rack to 2028 over PCB issues - Tom's Hardware", "summary": "", "date": ""},
+                {"title": "Report: Nvidia Kyber Rubin Ultra rack pushed to 2028", "summary": "", "date": ""},
+                {"title": "Kyber rack for Rubin Ultra delayed to 2028, stopgap axed - DigiTimes", "summary": "", "date": ""},
+                {"title": "NVIDIA quashes Rubin and Kyber rack delay rumors", "summary": "roadmap intact", "date": ""},
+            ]
+        if "目標價" in q or "評等" in q:
+            # M8 revision feed: down-heavy (3 down / 1 up → down_ratio 0.75).
+            return [
+                {"title": "外資下修台達電目標價至 400 元", "summary": "", "date": ""},
+                {"title": "某券商調降台達電評等至中立", "summary": "", "date": ""},
+                {"title": "台達電遭調降目標價", "summary": "", "date": ""},
+                {"title": "分析師上修台達電目標價", "summary": "", "date": ""},
+            ]
+        # capex_cut / debt_financed_capex / lc_psu → benign (0 hits)
         return [{"title": "Hyperscaler reaffirms record capex for AI buildout",
                  "summary": "capital expenditure guidance raised", "date": ""}]
 
@@ -966,7 +1186,7 @@ def main() -> int:
     ap.add_argument("--config", default=os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "config", "delta_radar_config.json"))
     ap.add_argument("--output-dir", default=None)
-    ap.add_argument("--modules", default="m1,m2,m3,m4,m5,m6",
+    ap.add_argument("--modules", default="m1,m2,m3,m4,m5,m6,m8",
                     help="comma list, e.g. m1,m4")
     ap.add_argument("--selftest", action="store_true",
                     help="run full pipeline on bundled fixtures (no network)")
@@ -1019,14 +1239,27 @@ def main() -> int:
         print(f"backfilled outcomes on {n} entries", file=sys.stderr)
         return 0
 
+    # M5 z-score and M8 consec gate read prior runs from the SAME state file we
+    # append to (out_dir). In --selftest out_dir is a fresh temp dir → cold start,
+    # keeping the selftest hermetic (never reads the real backtest history).
+    state_path = os.path.join(out_dir, "delta_radar_state.json")
+    prior_history: list = []
+    if os.path.exists(state_path):
+        try:
+            with open(state_path, encoding="utf-8") as f:
+                prior_history = json.load(f)
+        except Exception:
+            prior_history = []
+
     wanted = {m.strip().lower() for m in args.modules.split(",")}
     runners = {
         "m1": lambda: run_m1(cfg, fx["finmind"]),
         "m2": lambda: run_m2(cfg, fx["finmind"]),
         "m3": lambda: run_m3(cfg, fx["quarterlies"]),
         "m4": lambda: run_m4(cfg, fx["census"]),
-        "m5": lambda: run_m5(cfg, fx["rss"]),
+        "m5": lambda: run_m5(cfg, fx["rss"], prior_history),
         "m6": lambda: run_m6(cfg, fx["finmind"]),
+        "m8": lambda: run_m8(cfg, fx["rss"], prior_history),
     }
     ran_keys: list[str] = []
     results: list[ModuleResult] = []
@@ -1051,7 +1284,6 @@ def main() -> int:
     report = render_report(results, overall, cfg,
                            partial_modules=ran_keys if is_partial else None)
     report_path = os.path.join(out_dir, "delta_radar_report.md")
-    state_path = os.path.join(out_dir, "delta_radar_state.json")
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report)
     append_state(results, state_overall, state_path, ran_keys)
@@ -1072,7 +1304,7 @@ def main() -> int:
     print(f"\n[written] {report_path}\n[written] {state_path}", file=sys.stderr)
 
     if args.selftest:
-        ok = _selftest_assertions(results, state_path)
+        ok = _selftest_assertions(results, state_path, cfg, fx)
         print(f"\n[selftest] {'ALL GREEN ✅' if ok else 'FAILED ❌'}", file=sys.stderr)
         return 0 if ok else 2
 
@@ -1080,7 +1312,8 @@ def main() -> int:
     return 1 if overall == RED and cfg["aggregation"].get("fail_ci_on_red") else 0
 
 
-def _selftest_assertions(results: list[ModuleResult], state_path: str) -> bool:
+def _selftest_assertions(results: list[ModuleResult], state_path: str,
+                         cfg: dict, fx: dict) -> bool:
     """Fixture-level checks so `--selftest` fails loudly on regressions."""
     checks: list[tuple] = []
     by_mod = {_module_short(r.module): r for r in results}
@@ -1105,6 +1338,37 @@ def _selftest_assertions(results: list[ModuleResult], state_path: str) -> bool:
         checks.append(("M7 t20 ~ +22.0%", oc.get("t20_ret_pct") is not None and abs(oc["t20_ret_pct"] - 22.02) < 0.3))
     except Exception as e:
         checks.append((f"M7 state readable ({e})", False))
+
+    # M5 (in pipeline, cold-start baseline → absolute): vr300 bucket dedups 4
+    # near-dup delays to 1 event + a denial event, and the denial caps at YELLOW.
+    m5 = by_mod.get("M5")
+    sc = (m5.metrics.get("scoring", {}).get("vr300_delay", {}) if m5 and m5.metrics else {})
+    checks.append(("M5 present", m5 is not None))
+    checks.append(("M5 dedup: mentions > events", sc.get("mentions", 0) > sc.get("events", 0)))
+    checks.append(("M5 denial detected", sc.get("denial") is True))
+    checks.append(("M5 status capped at YELLOW", bool(m5) and m5.status == YELLOW))
+
+    # M5 z-score path: a spike (events=2) vs a low baseline (mean~0.5) should
+    # engage the z-score gate and escalate. Baseline needs non-zero variance.
+    lowbase = [{"modules": [{"module": "M5 x", "metrics": {"events": {"vr300_delay": v}}}]}
+               for v in (0, 1, 0, 1, 0, 1)]
+    m5z = run_m5(cfg, fx["rss"], lowbase)
+    zsc = m5z.metrics.get("scoring", {}).get("vr300_delay", {})
+    checks.append(("M5 z-score gate engaged", zsc.get("gate") == "zscore"))
+    checks.append(("M5 z-score escalates on spike", m5z.status in (YELLOW, RED)))
+
+    # M8 cold start: down-heavy single run stays GREEN (awaits confirmation).
+    m8 = by_mod.get("M8")
+    checks.append(("M8 present", m8 is not None))
+    checks.append(("M8 down_ratio ~0.75",
+                   bool(m8) and m8.metrics.get("down_ratio") is not None
+                   and abs(m8.metrics["down_ratio"] - 0.75) < 0.01))
+    checks.append(("M8 cold-start not escalated", bool(m8) and m8.status == GREEN))
+
+    # M8 consec gate: with a prior elevated run in history → YELLOW.
+    prior = [{"modules": [{"module": "M8 revision_velocity", "metrics": {"down_ratio": 0.8}}]}]
+    m8c = run_m8(cfg, fx["rss"], prior)
+    checks.append(("M8 escalates on 2nd consecutive down-heavy run", m8c.status == YELLOW))
 
     ok = True
     for name, passed in checks:
