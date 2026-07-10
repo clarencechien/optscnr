@@ -1,29 +1,65 @@
 {
-  "updated_at": "2026-07-09T22:49:25.306564",
-  "count": 2,
+  "updated_at": "2026-07-10T22:31:58.635430",
+  "count": 5,
   "blind_spots": [
     {
       "name": "Nasdaq",
       "ticker": "NDAQ",
-      "mentions_today": 3,
-      "total_mentions": 33,
-      "consecutive_days": 13,
+      "mentions_today": 4,
+      "total_mentions": 37,
+      "consecutive_days": 14,
       "is_strong": true,
       "evidence": [
-        "A huge trade just happened on the Nasdaq 100. Bulls are taking notice",
-        "Why a hidden divergence between the VIX and Nasdaq volatility has the smart money on edge"
+        "SK Hynix rises 13% in Nasdaq debut. Chairman tells CNBC 'demand is enormous'",
+        "SK Hynix’s stock sees double-digit pop in Nasdaq debut"
       ]
     },
     {
       "name": "Business",
       "ticker": "BFST",
-      "mentions_today": 4,
+      "mentions_today": 2,
+      "total_mentions": 6,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "America's Top States for Business 2026: See the full rankings and where your state finished",
+        "America's Top States for Business 2026: See the full rankings and where your state finished"
+      ]
+    },
+    {
+      "name": "Delta",
+      "ticker": "DAL",
+      "mentions_today": 2,
       "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "Delta expects higher airfare to last, bringing 2026 profit goal in reach, CEO says",
+        "Delta expects higher airfare to last, bringing 2026 profit goal in reach, CEO says"
+      ]
+    },
+    {
+      "name": "Stablecoin",
+      "ticker": "SDEV",
+      "mentions_today": 2,
+      "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "How all 50 U.S. states performed over 20 years of Top States for Business",
-        "America's Top States for Business 2026: See the full rankings and where your state finished"
+        "Stablecoin issuer Circle just got the greenlight to operate as a bank. The shares are up 5%",
+        "Stablecoin issuer Circle just got the greenlight to operate as a bank. The shares are up 5%"
+      ]
+    },
+    {
+      "name": "Circle",
+      "ticker": "CRCL",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Stablecoin issuer Circle just got the greenlight to operate as a bank. The shares are up 5%",
+        "Stablecoin issuer Circle just got the greenlight to operate as a bank. The shares are up 5%"
       ]
     }
   ]

@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-07-09",
-    "consecutive_days": 13,
-    "total_mentions": 33,
+    "last_seen": "2026-07-10",
+    "consecutive_days": 14,
+    "total_mentions": 37,
     "ticker": "NDAQ"
   },
   "Daily": {
@@ -19,20 +19,6 @@
     "consecutive_days": 2,
     "total_mentions": 4,
     "ticker": "BGHL"
-  },
-  "Columbia": {
-    "first_seen": "2026-07-02",
-    "last_seen": "2026-07-02",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "COLB"
-  },
-  "State Street": {
-    "first_seen": "2026-07-02",
-    "last_seen": "2026-07-02",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "STT-PG"
   },
   "EasyJet": {
     "first_seen": "2026-07-05",
@@ -127,16 +113,30 @@
   },
   "Delta": {
     "first_seen": "2026-07-08",
-    "last_seen": "2026-07-08",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-07-10",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "DAL"
   },
   "Business": {
     "first_seen": "2026-07-09",
-    "last_seen": "2026-07-09",
-    "consecutive_days": 1,
-    "total_mentions": 4,
+    "last_seen": "2026-07-10",
+    "consecutive_days": 2,
+    "total_mentions": 6,
     "ticker": "BFST"
+  },
+  "Stablecoin": {
+    "first_seen": "2026-07-10",
+    "last_seen": "2026-07-10",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SDEV"
+  },
+  "Circle": {
+    "first_seen": "2026-07-10",
+    "last_seen": "2026-07-10",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CRCL"
   }
 }
