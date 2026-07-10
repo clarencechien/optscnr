@@ -5,6 +5,14 @@
 > 否則以本庫為準。本庫只增不改；事實被推翻時加註更正、保留原記錄。
 > 每筆格式：事實 ｜ 事件絕對日期 ｜ 查證來源 ｜ 入庫日
 
+## NFLX 
+- Q2 2026 財報日：2026-07-16 盤後（~1:01pm PT）｜ Netflix IR 新聞稿 2026-06-15 / MarketBeat ｜ 7/10 入庫
+- 財報前脈絡：YTD −19%，GS 目標價 $110、Bernstein $100（均砍價），訂閱增長壓力、EPS 預期 $0.79 ｜ 2026-07 上旬 ｜ TipRanks ｜ 7/10 入庫
+
+## CMCSA
+- 宣布計畫分拆 NBCUniversal 與 Sky 成為獨立公司，股價大漲後一週內回吐 ｜ 2026-06-29 ｜ Bloomberg / Digrin ｜ 7/10 入庫
+- 前 CFO Michael Angelakis 將回鍋擔任 CEO 主導分拆 ｜ 2026-06-30 ｜ CFODive ｜ 7/10 入庫
+
 ## BAC 
 - Q2 財報日：2026-07-14 盤前 ｜ 公司新聞稿 / Wall Street Horizon ｜ 7/9 入庫
 
