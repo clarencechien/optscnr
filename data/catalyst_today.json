@@ -1,233 +1,45 @@
 {
-  "updated_at": "2026-07-09T21:59:25.025603",
+  "updated_at": "2026-07-10T21:35:31.695514",
   "stats": {
-    "total_items": 105,
-    "items_with_company": 22,
-    "items_with_catalyst": 15,
-    "items_both": 4
+    "total_items": 104,
+    "items_with_company": 17,
+    "items_with_catalyst": 10,
+    "items_both": 3
   },
-  "count": 18,
+  "count": 9,
   "tickers": [
-    "META",
-    "AVGO",
-    "PANW",
     "AAPL",
-    "WMT",
-    "GS",
-    "INTC",
-    "TSLA",
-    "DIS",
-    "AMZN",
-    "COIN",
-    "NFLX",
-    "PLTR",
-    "VRT",
-    "KLAC",
     "NVDA",
+    "META",
+    "PLTR",
+    "GS",
+    "MU",
+    "BAC",
     "F",
-    "MU"
+    "AMZN"
   ],
   "details": [
     {
-      "symbol": "META",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "Meta jumps into AI coding market in effort to chase Anthropic and OpenAI",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Meta’s stock rebounds as agentic AI coding and custom chips ease spending fears",
-          "catalysts": [
-            "rallied"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Everyone Thinks Meta’s Cloud Business Is Bad News for CRWV. Here’s What They’re Missing.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Broadcom’s $200 Billion AI Opportunity Is Drawing New Interest From Investors",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apple expands Broadcom partnership with more than $30 billion US chipmaking commitment",
-          "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "PANW",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Palo Alto CEO Arora says AI pricing needs to fall 90% as token costs skyrocket",
-          "catalysts": [
-            "skyrocket"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
       "symbol": "AAPL",
-      "score": 2,
+      "score": 9.0,
       "evidence": [
         {
-          "title": "Apple expands Broadcom partnership with more than $30 billion US chipmaking commitment",
+          "title": "SK Hynix rises 13% in Nasdaq debut. Chairman tells CNBC 'demand is enormous'",
+          "catalysts": [
+            "soared",
+            "rises"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Apple sues OpenAI alleging trade secret theft, says scheme was 'at every level'",
           "catalysts": [
             "partnership"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Arkansas is America's Most Improved State in 2026 as workers move to Walmart's home for low costs, high quality of life",
-          "catalysts": [],
-          "has_catalyst": false
         },
         {
-          "title": "Can Walmart help the Fed harness real-time U.S. economic data? We’re about to find out.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Goldman Sachs wins $70 billion in asset management deals with Verizon, Lockheed Martin",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Goldman Sachs Sees a $2 Trillion Opportunity in Private Markets",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Nancy Pelosi bets up to $6 million on Intel and Uber, public disclosures show",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Intel stock is currently trading at a level not seen even during the dot-com bubble",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "New ‘Ex-Elon’ ETFs let you avoid SpaceX and Tesla — but are they just a gimmick?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "FuboTV names Disney’s Bowen CEO, removes veteran Gandler",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Amazon’s AWS releases Loom for AWS platform for secure AI agent deployment",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Coinbase’s top attorney who has led crypto’s Washington fight to step down",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Netflix weighs live channels, bundles as viewer engagement slips - WSJ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Palantir says UK police contract wrongly blocked over perceived ’values’",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "VRT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Vertiv Stock Just Flashed an ‘Exhaustion’ Signal. Exploit It Here for Profits.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "KLAC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "What to Expect From KLA Corporation's Q4 2026 Earnings Report",
+          "title": "How Apple stock rode the AI rollercoaster to record highs in 1 chart",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -235,21 +47,61 @@
     },
     {
       "symbol": "NVDA",
-      "score": 0.5,
+      "score": 4,
       "evidence": [
         {
-          "title": "Nvidia Doubles Down on AI Startups With a Historic Revenue Sharing Model",
+          "title": "SK Hynix rises 13% in Nasdaq debut. Chairman tells CNBC 'demand is enormous'",
+          "catalysts": [
+            "soared",
+            "rises"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Traders fall back in love with Meta. Here's where bulls see it going",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta's stock has best week since early 2024 as optimism builds around AI strategy",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta found to breach EU laws with 'addictive' Instagram, Facebook designs ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "F",
+      "symbol": "PLTR",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Palantir Stock: Accelerating Growth Improves the Risk-Reward Profile",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Palantir Wins Larger Contract With Major Mexican Insurer GNP Seguros. This Could Move the Needle for PLTR Stock.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron Just Landed a Major Ford Deal. This Could Be a Game Changer for MU Stock.",
+          "title": "A hedge-fund trade blamed for a massive market blowup in 2024 has made a big comeback, Goldman Sachs says",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -260,7 +112,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron Just Landed a Major Ford Deal. This Could Be a Game Changer for MU Stock.",
+          "title": "Samsung Plans to Raise DRAM Prices by 20% in Q3. What That Means for Rival Micron.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Bank of America Says AI Will Drag Down Adobe Stock",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Ford’s Q2 2026 Earnings: What to Expect",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Here's What to Expect From Amazon.com's Next Earnings Report",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -268,7 +153,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2,
-    "OpenAI (private)": 1
+    "OpenAI (private)": 4
   }
 }
