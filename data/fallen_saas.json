@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T04:35:19.150263",
+  "updated_at": "2026-07-11T04:13:02.270219",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -9,21 +9,7 @@
     "MIN_VOL_RATIO": 1.2,
     "MIN_AVG_VOLUME": 500000
   },
-  "count": 1,
-  "tickers": [
-    "COUR"
-  ],
-  "details": [
-    {
-      "symbol": "COUR",
-      "price": 5.9,
-      "high_52w": 13.56,
-      "low_52w": 5.0,
-      "drawdown_pct": 56.5,
-      "rebound_pct": 18.0,
-      "vol_ratio": 1.33,
-      "market_cap_b": 1.7,
-      "score": 24.65
-    }
-  ]
+  "count": 0,
+  "tickers": [],
+  "details": []
 }
