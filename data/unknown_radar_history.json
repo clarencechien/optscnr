@@ -13,13 +13,6 @@
     "total_mentions": 6,
     "ticker": "DJCO"
   },
-  "Billion": {
-    "first_seen": "2026-06-26",
-    "last_seen": "2026-07-03",
-    "consecutive_days": 2,
-    "total_mentions": 4,
-    "ticker": "BGHL"
-  },
   "EasyJet": {
     "first_seen": "2026-07-05",
     "last_seen": "2026-07-06",
@@ -138,5 +131,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "CRCL"
+  },
+  "Graham": {
+    "first_seen": "2026-07-12",
+    "last_seen": "2026-07-12",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GHM"
+  },
+  "AstraZeneca": {
+    "first_seen": "2026-07-12",
+    "last_seen": "2026-07-12",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "AZN"
   }
 }
