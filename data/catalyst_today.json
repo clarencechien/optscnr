@@ -1,35 +1,38 @@
 {
-  "updated_at": "2026-07-10T21:35:31.695514",
+  "updated_at": "2026-07-12T21:23:44.158639",
   "stats": {
-    "total_items": 104,
-    "items_with_company": 17,
-    "items_with_catalyst": 10,
-    "items_both": 3
+    "total_items": 107,
+    "items_with_company": 23,
+    "items_with_catalyst": 14,
+    "items_both": 4
   },
-  "count": 9,
+  "count": 15,
   "tickers": [
     "AAPL",
     "NVDA",
+    "BRK-B",
+    "TSLA",
+    "TGT",
+    "AMZN",
     "META",
-    "PLTR",
-    "GS",
+    "COST",
     "MU",
-    "BAC",
     "F",
-    "AMZN"
+    "XYZ",
+    "SNDK",
+    "CRM",
+    "WMT",
+    "WDC"
   ],
   "details": [
     {
       "symbol": "AAPL",
-      "score": 9.0,
+      "score": 7.5,
       "evidence": [
         {
-          "title": "SK Hynix rises 13% in Nasdaq debut. Chairman tells CNBC 'demand is enormous'",
-          "catalysts": [
-            "soared",
-            "rises"
-          ],
-          "has_catalyst": true
+          "title": "Elon Musk and Sam Altman spar on X after Apple files OpenAI lawsuit",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
           "title": "Apple sues OpenAI alleging trade secret theft, says scheme was 'at every level'",
@@ -39,17 +42,6 @@
           "has_catalyst": true
         },
         {
-          "title": "How Apple stock rode the AI rollercoaster to record highs in 1 chart",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 4,
-      "evidence": [
-        {
           "title": "SK Hynix rises 13% in Nasdaq debut. Chairman tells CNBC 'demand is enormous'",
           "catalysts": [
             "soared",
@@ -60,8 +52,96 @@
       ]
     },
     {
+      "symbol": "NVDA",
+      "score": 5.5,
+      "evidence": [
+        {
+          "title": "SK Hynix rises 13% in Nasdaq debut. Chairman tells CNBC 'demand is enormous'",
+          "catalysts": [
+            "soared",
+            "rises"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Analyst flags key investor questions on Nvidia stock",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Dow Jones Futures Loom Amid New U.S.-Iran Attacks; Nvidia, Micron, Sandisk Near Buy Points",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Berkshire Hathaway gains ground, but still trails the S&P 500 as '26 enters second half",
+          "catalysts": [
+            "gain",
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "J.P. Morgan Called a Potential Elon Musk SpaceX-Tesla Merger \"Strategically Coherent\"",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Why Citigroup is the one to watch when banks report earnings this week",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "5 big analyst AI moves: SpaceX gets a Street-high target, Samsung selloff overdone",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Costco, Target tie urban expansion to affordable housing boom",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Burnout, frustration and heartbreak: Amazon layoffs take their toll in saturated job market",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Amazon Just Announced Shocking $25 Billion News. Should Investors Worry?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
       "symbol": "META",
-      "score": 2.5,
+      "score": 1.0,
       "evidence": [
         {
           "title": "Traders fall back in love with Meta. Here's where bulls see it going",
@@ -69,39 +149,23 @@
           "has_catalyst": false
         },
         {
-          "title": "Meta's stock has best week since early 2024 as optimism builds around AI strategy",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta found to breach EU laws with 'addictive' Instagram, Facebook designs ",
+          "title": "Meta to put AI chip into production in September as it looks to double computing capacity, memo shows",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "COST",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Palantir Stock: Accelerating Growth Improves the Risk-Reward Profile",
+          "title": "Costco, Target tie urban expansion to affordable housing boom",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Palantir Wins Larger Contract With Major Mexican Insurer GNP Seguros. This Could Move the Needle for PLTR Stock.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "A hedge-fund trade blamed for a massive market blowup in 2024 has made a big comeback, Goldman Sachs says",
+          "title": "Costco and Walmart capture grocery-store crowns",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -109,21 +173,15 @@
     },
     {
       "symbol": "MU",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Samsung Plans to Raise DRAM Prices by 20% in Q3. What That Means for Rival Micron.",
+          "title": "Dow Jones Futures Loom Amid New U.S.-Iran Attacks; Nvidia, Micron, Sandisk Near Buy Points",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BAC",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Bank of America Says AI Will Drag Down Adobe Stock",
+          "title": "Why Micron Technology (MU) Is Securing Long-Term AI Memory Demand With $22 Billion in Customer Commitments",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -134,18 +192,62 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Ford’s Q2 2026 Earnings: What to Expect",
+          "title": "Ford, Canada’s Unifor reach tentative deal on labor contract ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Here's What to Expect From Amazon.com's Next Earnings Report",
+          "title": "Brookfield nears Hudson Square deal as AI firms fuel Manhattan office revival: WSJ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Dow Jones Futures Loom Amid New U.S.-Iran Attacks; Nvidia, Micron, Sandisk Near Buy Points",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Salesforce receives double blow over an AI product",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Costco and Walmart capture grocery-store crowns",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WDC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Western Digital (WDC) Is Benefiting From AI-Driven Storage Demand and Tight HDD Supply Conditions",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -153,6 +255,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 4
+    "OpenAI (private)": 5
   }
 }
