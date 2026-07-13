@@ -50,9 +50,9 @@
   },
   "L3Harris": {
     "first_seen": "2026-07-06",
-    "last_seen": "2026-07-06",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-07-13",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "LHX"
   },
   "Trade": {
@@ -113,9 +113,9 @@
   },
   "Business": {
     "first_seen": "2026-07-09",
-    "last_seen": "2026-07-10",
-    "consecutive_days": 2,
-    "total_mentions": 6,
+    "last_seen": "2026-07-13",
+    "consecutive_days": 3,
+    "total_mentions": 8,
     "ticker": "BFST"
   },
   "Stablecoin": {
@@ -145,5 +145,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "AZN"
+  },
+  "Rithm Property Trust": {
+    "first_seen": "2026-07-13",
+    "last_seen": "2026-07-13",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "RPT-PC"
   }
 }

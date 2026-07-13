@@ -1,29 +1,41 @@
 {
-  "updated_at": "2026-07-12T22:23:32.382036",
-  "count": 2,
+  "updated_at": "2026-07-13T22:26:46.987695",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "Graham",
-      "ticker": "GHM",
+      "name": "Business",
+      "ticker": "BFST",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 8,
+      "consecutive_days": 3,
+      "is_strong": true,
       "evidence": [
-        "Sen. Lindsey Graham, influential lawmaker and Trump ally,  dies at 71 after a brief illness",
-        "Graham’s death complicates myriad GOP goals in Congress"
+        "The 10 best state economies in America in 2026",
+        "The 10 worst state economies in America in 2026"
       ]
     },
     {
-      "name": "AstraZeneca",
-      "ticker": "AZN",
+      "name": "L3Harris",
+      "ticker": "LHX",
+      "mentions_today": 2,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "L3Harris wins $70.8 million Navy contract modification",
+        "L3Harris wins U.S. Space Force contract for 18 missile-tracking AMDT3 satellites"
+      ]
+    },
+    {
+      "name": "Rithm Property Trust",
+      "ticker": "RPT-PC",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "AstraZeneca's trial flop raises a bigger question: Is its pipeline premium becoming more vulnerable?",
-        "AstraZeneca's trial flop raises a bigger question: Is its pipeline premium becoming more vulnerable?"
+        "Rithm Property Trust stock falls on public offering launch",
+        "Rithm Property Trust launches common stock offering"
       ]
     }
   ]
