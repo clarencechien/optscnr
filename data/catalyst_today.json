@@ -1,88 +1,96 @@
 {
-  "updated_at": "2026-07-12T21:23:44.158639",
+  "updated_at": "2026-07-13T21:29:22.976960",
   "stats": {
     "total_items": 107,
-    "items_with_company": 23,
+    "items_with_company": 28,
     "items_with_catalyst": 14,
     "items_both": 4
   },
-  "count": 15,
+  "count": 20,
   "tickers": [
-    "AAPL",
-    "NVDA",
-    "BRK-B",
-    "TSLA",
-    "TGT",
-    "AMZN",
-    "META",
-    "COST",
     "MU",
-    "F",
     "XYZ",
+    "TSM",
+    "FLNC",
+    "NVDA",
+    "META",
+    "AAPL",
     "SNDK",
-    "CRM",
-    "WMT",
-    "WDC"
+    "INTC",
+    "NFLX",
+    "AMZN",
+    "TGT",
+    "BA",
+    "IBM",
+    "GS",
+    "NBIS",
+    "SBUX",
+    "COST",
+    "MSFT",
+    "GOOGL"
   ],
   "details": [
     {
-      "symbol": "AAPL",
-      "score": 7.5,
+      "symbol": "MU",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Elon Musk and Sam Altman spar on X after Apple files OpenAI lawsuit",
+          "title": "Micron and other chip stocks feel the pain of imported volatility — blame SK Hynix",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Apple sues OpenAI alleging trade secret theft, says scheme was 'at every level'",
+          "title": "Why Analysts Still See Big Upside for Micron Stock After Its Massive Rally",
           "catalysts": [
-            "partnership"
+            "rally"
           ],
           "has_catalyst": true
         },
         {
-          "title": "SK Hynix rises 13% in Nasdaq debut. Chairman tells CNBC 'demand is enormous'",
-          "catalysts": [
-            "soared",
-            "rises"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 5.5,
-      "evidence": [
-        {
-          "title": "SK Hynix rises 13% in Nasdaq debut. Chairman tells CNBC 'demand is enormous'",
-          "catalysts": [
-            "soared",
-            "rises"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Analyst flags key investor questions on Nvidia stock",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dow Jones Futures Loom Amid New U.S.-Iran Attacks; Nvidia, Micron, Sandisk Near Buy Points",
+          "title": "Micron Technology Inc. (MU) Is A Top AI Stock In D. E. Shaw’s Holdings",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
-      "score": 4,
+      "symbol": "XYZ",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Berkshire Hathaway gains ground, but still trails the S&P 500 as '26 enters second half",
+          "title": "Paramount, WBD hit with lawsuit from 12 states, including California, to block merger",
           "catalysts": [
-            "gain",
+            "merger"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "California-led states sue to block Paramount’s $110 billion Warner Bros Discovery deal",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "TSMC, the world's largest contract chipmaker, reports 68% surge in June revenue",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "FLNC",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Fluence stock gains on California energy storage deal",
+          "catalysts": [
             "gains"
           ],
           "has_catalyst": true
@@ -90,50 +98,21 @@
       ]
     },
     {
-      "symbol": "TSLA",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "J.P. Morgan Called a Potential Elon Musk SpaceX-Tesla Merger \"Strategically Coherent\"",
-          "catalysts": [
-            "merger"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
+      "symbol": "NVDA",
       "score": 1.5,
       "evidence": [
         {
-          "title": "Why Citigroup is the one to watch when banks report earnings this week",
+          "title": "Nvidia Stock Has Been Flat, But NVDA Price Targets are Higher - Shorting Puts Works",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "5 big analyst AI moves: SpaceX gets a Street-high target, Samsung selloff overdone",
+          "title": "NVIDIA Corporation (NVDA) Is A Top AI Stock In D. E. Shaw’s Holdings",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Costco, Target tie urban expansion to affordable housing boom",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Burnout, frustration and heartbreak: Amazon layoffs take their toll in saturated job market",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Amazon Just Announced Shocking $25 Billion News. Should Investors Worry?",
+          "title": "Nvidia vs. SanDisk: 1 Valuation Gap Jim Cramer Says Is the Most Insulting Trade in Semiconductors Right Now",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -144,66 +123,28 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Traders fall back in love with Meta. Here's where bulls see it going",
+          "title": "Meta's Louisiana data center investment to reach $50 billion, aided by generous tax incentives",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Meta to put AI chip into production in September as it looks to double computing capacity, memo shows",
+          "title": "Meta Platforms Inc. (META) Is A Top AI Stock In D. E. Shaw’s Holdings",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
+      "symbol": "AAPL",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Costco, Target tie urban expansion to affordable housing boom",
+          "title": "Elon Musk and Sam Altman spar on X after Apple files OpenAI lawsuit",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Costco and Walmart capture grocery-store crowns",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures Loom Amid New U.S.-Iran Attacks; Nvidia, Micron, Sandisk Near Buy Points",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Why Micron Technology (MU) Is Securing Long-Term AI Memory Demand With $22 Billion in Customer Commitments",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ford, Canada’s Unifor reach tentative deal on labor contract ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Brookfield nears Hudson Square deal as AI firms fuel Manhattan office revival: WSJ",
+          "title": "Apple Inc. (AAPL) Is A Top Stock In D. E. Shaw’s Holdings",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -211,43 +152,147 @@
     },
     {
       "symbol": "SNDK",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Dow Jones Futures Loom Amid New U.S.-Iran Attacks; Nvidia, Micron, Sandisk Near Buy Points",
+          "title": "Sandisk’s stock is plunging, but some analysts are getting even more bullish",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia vs. SanDisk: 1 Valuation Gap Jim Cramer Says Is the Most Insulting Trade in Semiconductors Right Now",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
+      "symbol": "INTC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Salesforce receives double blow over an AI product",
+          "title": "Trump to claim declassified intel reveals 2020 election interference: MS NOW",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
+      "symbol": "NFLX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Costco and Walmart capture grocery-store crowns",
+          "title": "Traders are betting on a comeback quarter for Netflix",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WDC",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Western Digital (WDC) Is Benefiting From AI-Driven Storage Demand and Tight HDD Supply Conditions",
+          "title": "Burnout, frustration and heartbreak: Amazon layoffs take their toll in saturated job market",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Sandisk’s stock is plunging, but some analysts are getting even more bullish",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Riyadh Air in talks with Airbus and Boeing for widebody jets - Bloomberg",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "IBM Just Unveiled Major Updates to Its Bob AI Platform. How to Play IBM Stock Here.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Goldman Sachs quietly snags a corner of America's retirement money",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NBIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Nebius Rocketed 230% in the First Half of 2026",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SBUX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Starbucks Is Serving Up Your Coffee with a Side of AI. What That Means for SBUX Stock.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COST",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "A Costco worker earns $33 per hour, but is a millionaire with a house and a pool — here's how he built his wealth",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Should You Buy Microsoft Corporation (MSFT)’s Shares?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Alphabet Inc. (GOOGL) A Top AI Stock In D. E. Shaw’s Holdings",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -255,6 +300,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 5
+    "OpenAI (private)": 1
   }
 }
