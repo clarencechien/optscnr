@@ -5,6 +5,13 @@
 > 否則以本庫為準。本庫只增不改；事實被推翻時加註更正、保留原記錄。
 > 每筆格式：事實 ｜ 事件絕對日期 ｜ 查證來源 ｜ 入庫日
 
+## HOOD 
+- Q2 財報日：2026-07-29 盤後 ｜ Robinhood IR ｜ 7/14 入庫
+- 分析師 Piper Sandler/Mizuho 調升目標價與 Buy 評級 ｜ 2026-07-02 至 2026-07-07 ｜ Google Finance ｜ 7/14 入庫
+  
+## NVDA 
+- Q2 財報日：2026-08-26 盤後 ｜ Wall Street Horizon ｜ 7/14 入庫
+
 ## NKE 
 - Q4 2026 財報發布 ｜ 2026-06-30 ｜ Market Chameleon ｜ 7/11 入庫
 - Q1 2027 財報日：預計 2026-09-29 ｜ Public.com ｜ 7/11 入庫
@@ -13,6 +20,7 @@
 - Q2 2026 財報：2026-07-10 盤前，beat；affirmed FY 調整後 EPS 指引 $6.50-7.50、9 月起加股息 +15% ｜ CNBC / SEC 8-K ｜ 7/11 入庫
 - 內部人：過去 6 個月 19 筆全賣出、0 買入（President Hauenstein 賣 ~$33.7M）｜ 揭露至 2026-07 ｜ Quiver/Finnhub ｜ 7/11 入庫
 - 股價脈絡：52 週 +82.9%、YTD +30.6%，財報前高位 ｜ 2026-07 ｜ Yahoo/Barchart ｜ 7/11 入庫
+
 
 ## NFLX 
 - Q2 2026 財報日：2026-07-16 盤後（~1:01pm PT）｜ Netflix IR 新聞稿 2026-06-15 / MarketBeat ｜ 7/10 入庫
