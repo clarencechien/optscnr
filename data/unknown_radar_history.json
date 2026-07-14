@@ -13,34 +13,6 @@
     "total_mentions": 6,
     "ticker": "DJCO"
   },
-  "EasyJet": {
-    "first_seen": "2026-07-05",
-    "last_seen": "2026-07-06",
-    "consecutive_days": 2,
-    "total_mentions": 5,
-    "ticker": "EJTTF"
-  },
-  "Alibaba": {
-    "first_seen": "2026-07-06",
-    "last_seen": "2026-07-06",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BBAAY"
-  },
-  "Klarna": {
-    "first_seen": "2026-07-06",
-    "last_seen": "2026-07-06",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "KLAR"
-  },
-  "Versant": {
-    "first_seen": "2026-07-06",
-    "last_seen": "2026-07-06",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "VSNT"
-  },
   "TeraWulf": {
     "first_seen": "2026-07-06",
     "last_seen": "2026-07-07",
@@ -54,13 +26,6 @@
     "consecutive_days": 2,
     "total_mentions": 4,
     "ticker": "LHX"
-  },
-  "Trade": {
-    "first_seen": "2026-07-06",
-    "last_seen": "2026-07-06",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "TTD"
   },
   "Greenland": {
     "first_seen": "2026-07-07",
@@ -152,5 +117,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "RPT-PC"
+  },
+  "United Airlines": {
+    "first_seen": "2026-07-14",
+    "last_seen": "2026-07-14",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "UAL"
+  },
+  "Lionsgate Studios": {
+    "first_seen": "2026-07-14",
+    "last_seen": "2026-07-14",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LION"
   }
 }

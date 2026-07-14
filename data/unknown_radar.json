@@ -1,41 +1,29 @@
 {
-  "updated_at": "2026-07-13T22:26:46.987695",
-  "count": 3,
+  "updated_at": "2026-07-14T22:29:17.783417",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Business",
-      "ticker": "BFST",
-      "mentions_today": 2,
-      "total_mentions": 8,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "The 10 best state economies in America in 2026",
-        "The 10 worst state economies in America in 2026"
-      ]
-    },
-    {
-      "name": "L3Harris",
-      "ticker": "LHX",
-      "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "L3Harris wins $70.8 million Navy contract modification",
-        "L3Harris wins U.S. Space Force contract for 18 missile-tracking AMDT3 satellites"
-      ]
-    },
-    {
-      "name": "Rithm Property Trust",
-      "ticker": "RPT-PC",
+      "name": "United Airlines",
+      "ticker": "UAL",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Rithm Property Trust stock falls on public offering launch",
-        "Rithm Property Trust launches common stock offering"
+        "United Airlines' new upsell: Keeping other travelers out of the middle seat",
+        "United Airlines' new upsell: Keeping other travelers out of the middle seat"
+      ]
+    },
+    {
+      "name": "Lionsgate Studios",
+      "ticker": "LION",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Exclusive-Lionsgate Studios attracts takeover interest from Bollore, Banijay, sources say",
+        "Lionsgate Studios shares rise on takeover interest reports"
       ]
     }
   ]
