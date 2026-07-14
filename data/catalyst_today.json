@@ -1,232 +1,86 @@
 {
-  "updated_at": "2026-07-13T21:29:22.976960",
+  "updated_at": "2026-07-14T21:31:25.842550",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 28,
-    "items_with_catalyst": 14,
-    "items_both": 4
+    "total_items": 103,
+    "items_with_company": 24,
+    "items_with_catalyst": 21,
+    "items_both": 7
   },
-  "count": 20,
+  "count": 15,
   "tickers": [
-    "MU",
-    "XYZ",
-    "TSM",
-    "FLNC",
-    "NVDA",
-    "META",
-    "AAPL",
-    "SNDK",
-    "INTC",
-    "NFLX",
-    "AMZN",
-    "TGT",
-    "BA",
     "IBM",
+    "LCID",
+    "JPM",
     "GS",
-    "NBIS",
-    "SBUX",
-    "COST",
-    "MSFT",
-    "GOOGL"
+    "META",
+    "HOOD",
+    "BRK-B",
+    "XYZ",
+    "NFLX",
+    "TSLA",
+    "NVDA",
+    "AAPL",
+    "GOOGL",
+    "TGT",
+    "AMZN"
   ],
   "details": [
     {
-      "symbol": "MU",
-      "score": 3.0,
+      "symbol": "IBM",
+      "score": 7.0,
       "evidence": [
         {
-          "title": "Micron and other chip stocks feel the pain of imported volatility — blame SK Hynix",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Why Analysts Still See Big Upside for Micron Stock After Its Massive Rally",
+          "title": "Cybersecurity stocks rally on AI spending change comments from IBM's Krishna",
           "catalysts": [
             "rally"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Micron Technology Inc. (MU) Is A Top AI Stock In D. E. Shaw’s Holdings",
+          "title": "IBM stock craters 25%, the worst day on record, after company issues second-quarter earnings warning",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "What IBM’s profit warning means: Hardware is ‘eating everyone’s lunch’",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "LCID",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Lucid dismisses report that it is weighing filing for bankruptcy or going private after shares plunge",
+          "catalysts": [
+            "plunge"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Lucid denies bankruptcy talk, but the stock still sinks to a record low",
+          "catalysts": [
+            "sinks"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Paramount, WBD hit with lawsuit from 12 states, including California, to block merger",
+          "title": "The AI boom just found two new winners: Goldman Sachs and JPMorgan Chase",
           "catalysts": [
-            "merger"
+            "record revenue"
           ],
           "has_catalyst": true
         },
         {
-          "title": "California-led states sue to block Paramount’s $110 billion Warner Bros Discovery deal",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "TSMC, the world's largest contract chipmaker, reports 68% surge in June revenue",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "FLNC",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Fluence stock gains on California energy storage deal",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Nvidia Stock Has Been Flat, But NVDA Price Targets are Higher - Shorting Puts Works",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "NVIDIA Corporation (NVDA) Is A Top AI Stock In D. E. Shaw’s Holdings",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia vs. SanDisk: 1 Valuation Gap Jim Cramer Says Is the Most Insulting Trade in Semiconductors Right Now",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Meta's Louisiana data center investment to reach $50 billion, aided by generous tax incentives",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta Platforms Inc. (META) Is A Top AI Stock In D. E. Shaw’s Holdings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Elon Musk and Sam Altman spar on X after Apple files OpenAI lawsuit",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apple Inc. (AAPL) Is A Top Stock In D. E. Shaw’s Holdings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Sandisk’s stock is plunging, but some analysts are getting even more bullish",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia vs. SanDisk: 1 Valuation Gap Jim Cramer Says Is the Most Insulting Trade in Semiconductors Right Now",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump to claim declassified intel reveals 2020 election interference: MS NOW",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Traders are betting on a comeback quarter for Netflix",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Burnout, frustration and heartbreak: Amazon layoffs take their toll in saturated job market",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Sandisk’s stock is plunging, but some analysts are getting even more bullish",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Riyadh Air in talks with Airbus and Boeing for widebody jets - Bloomberg",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "IBM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "IBM Just Unveiled Major Updates to Its Bob AI Platform. How to Play IBM Stock Here.",
+          "title": "Analyst Report: JPMorgan Chase & Co",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -234,54 +88,129 @@
     },
     {
       "symbol": "GS",
-      "score": 0.5,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Goldman Sachs quietly snags a corner of America's retirement money",
+          "title": "The AI boom just found two new winners: Goldman Sachs and JPMorgan Chase",
+          "catalysts": [
+            "record revenue"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Goldman Sachs raises $10B in high-grade bond sale - report",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NBIS",
-      "score": 0.5,
+      "symbol": "META",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Why Nebius Rocketed 230% in the First Half of 2026",
+          "title": "Current and former employees sue Meta, alleging discrimination in using AI to conduct layoffs",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Meta Scales Up Louisiana Mega AI Data Center To $50 Billion",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SBUX",
-      "score": 0.5,
+      "symbol": "HOOD",
+      "score": 2,
       "evidence": [
         {
-          "title": "Starbucks Is Serving Up Your Coffee with a Side of AI. What That Means for SBUX Stock.",
+          "title": "‘They are relentless’: A scammer is trying to change the email on my empty Robinhood account. What do they have to gain?",
+          "catalysts": [
+            "gain"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Warren Buffett is accelerating his charitable donations with aim to give away Berkshire wealth by 2034",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Warren Buffett excludes Gates Foundation from his annual donations of Berkshire stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
-      "score": 0.5,
+      "symbol": "XYZ",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "A Costco worker earns $33 per hour, but is a millionaire with a house and a pool — here's how he built his wealth",
+          "title": "Writers Guild sues to block Paramount deal, saying it would hurt writers",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Writers Guild sues to block Paramount’s Warner Bros. Discovery deal",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "NFLX",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Netflix Stock is at New Lows, But Its FCF Is Strong - Is NFLX Too Cheap?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Netflix may be sitting on another tough quarter",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Should You Buy Microsoft Corporation (MSFT)’s Shares?",
+          "title": "Zipline adds ex-Tesla, Uber, Waymo execs to make drone delivery mainstream across U.S.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "U.S. trade official says 'very few' Nvidia H200 AI chips have been shipped to China",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Apple in talks with startup that shrinks AI models to run on an iPhone",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -292,7 +221,29 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Alphabet Inc. (GOOGL) A Top AI Stock In D. E. Shaw’s Holdings",
+          "title": "Google DeepMind chief Demis Hassabis calls for U.S. to spearhead AI standards body",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Target's problems aren't what you think they are",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Amazon, Flexport Alum Dave Clark’s Supply Chain Startup Raises $50M",
           "catalysts": [],
           "has_catalyst": false
         }
