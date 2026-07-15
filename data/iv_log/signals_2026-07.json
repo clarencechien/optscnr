@@ -3699,10 +3699,15 @@
     "volume": 39891,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.09,
+      "spot": 26.889999389648438,
+      "iv": 77.3439765625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.1x)"
   },
   {
     "signal_id": "2026-07-10_SMCI_2026-07-17_31.5",
@@ -3720,10 +3725,15 @@
     "volume": 39516,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.03,
+      "spot": 26.889999389648438,
+      "iv": 90.62509374999999,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.1x)"
   },
   {
     "signal_id": "2026-07-10_SOFI_2026-07-17_20.5",
@@ -3741,10 +3751,15 @@
     "volume": 9597,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.01,
+      "spot": 17.8700008392334,
+      "iv": 79.687703125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "💀歸零(0.10x)"
   },
   {
     "signal_id": "2026-07-10_AMZN_2026-07-17_257.5",
@@ -3762,10 +3777,15 @@
     "volume": 8778,
     "premium_tier": "lottery",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.9,
+      "spot": 254.9600067138672,
+      "iv": 33.521172607421875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "✅噴了(峰2.3x)"
   },
   {
     "signal_id": "2026-07-10_GIS_2026-08-21_40.0",
@@ -3783,10 +3803,15 @@
     "volume": 7685,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.45,
+      "spot": 37.220001220703125,
+      "iv": 31.445998046874994,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.3x/今1.3x)"
   },
   {
     "signal_id": "2026-07-10_MSTR_2026-07-17_106.0",
@@ -3804,10 +3829,15 @@
     "volume": 7596,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.46,
+      "spot": 97.47000122070312,
+      "iv": 80.1759794921875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.5x)"
   },
   {
     "signal_id": "2026-07-10_KR_2026-07-17_62.0",
@@ -3825,10 +3855,15 @@
     "volume": 6822,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.06,
+      "spot": 56.560001373291016,
+      "iv": 53.12546875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-07-10_KO_2026-07-17_84.0",
@@ -3846,10 +3881,15 @@
     "volume": 6547,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.1,
+      "spot": 82.44999694824219,
+      "iv": 20.0203310546875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-07-10_KO_2026-07-17_86.0",
@@ -3867,10 +3907,15 @@
     "volume": 5707,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.03,
+      "spot": 82.44999694824219,
+      "iv": 26.17261328125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-07-10_NKE_2026-07-17_46.0",
@@ -3888,10 +3933,15 @@
     "volume": 5028,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.03,
+      "spot": 42.77000045776367,
+      "iv": 46.0942890625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.1x)"
   },
   {
     "signal_id": "2026-07-10_DKNG_2026-07-17_27.0",
@@ -3909,10 +3959,15 @@
     "volume": 3828,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.05,
+      "spot": 25.25,
+      "iv": 51.17236328125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.1x)"
   },
   {
     "signal_id": "2026-07-10_HOOD_2026-07-17_145.0",
@@ -3930,10 +3985,15 @@
     "volume": 2480,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.01,
+      "spot": 115.54000091552734,
+      "iv": 95.312546875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-07-10_NKE_2026-07-17_44.5",
@@ -3951,10 +4011,15 @@
     "volume": 1469,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.08,
+      "spot": 42.77000045776367,
+      "iv": 34.961587890625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.1x)"
   },
   {
     "signal_id": "2026-07-10_KR_2026-08-21_65.0",
@@ -3972,10 +4037,15 @@
     "volume": 1217,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.27,
+      "spot": 56.560001373291016,
+      "iv": 35.547519531249996,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.3x)"
   },
   {
     "signal_id": "2026-07-10_SOFI_2026-07-17_20.0",
@@ -3993,10 +4063,15 @@
     "volume": 37708,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.02,
+      "spot": 17.8700008392334,
+      "iv": 67.18782812500001,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.1x)"
   },
   {
     "signal_id": "2026-07-10_NVDA_2026-07-17_230.0",
@@ -4014,10 +4089,15 @@
     "volume": 14773,
     "premium_tier": "lottery",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.05,
+      "spot": 212.5,
+      "iv": 41.01621484375,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-07-10_MSTR_2026-07-17_104.0",
@@ -4035,10 +4115,15 @@
     "volume": 11265,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.71,
+      "spot": 97.47000122070312,
+      "iv": 80.1759794921875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.6x/今0.6x)"
   },
   {
     "signal_id": "2026-07-10_NKE_2026-09-18_47.5",
@@ -4056,10 +4141,15 @@
     "volume": 10316,
     "premium_tier": "mid",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.94,
+      "spot": 42.77000045776367,
+      "iv": 35.69400244140625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.6x/今0.6x)"
   },
   {
     "signal_id": "2026-07-10_HOOD_2026-07-17_118.0",
@@ -4077,10 +4167,15 @@
     "volume": 7963,
     "premium_tier": "mid",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.52,
+      "spot": 115.54000091552734,
+      "iv": 61.23085644531252,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_META_2026-07-17_720.0",
@@ -4098,10 +4193,15 @@
     "volume": 7188,
     "premium_tier": "heavy",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.3,
+      "spot": 681.3099975585938,
+      "iv": 46.82670361328125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.3x)"
   },
   {
     "signal_id": "2026-07-10_CRWV_2026-07-17_95.0",
@@ -4119,10 +4219,15 @@
     "volume": 5601,
     "premium_tier": "mid",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.04,
+      "spot": 77.12000274658203,
+      "iv": 104.68797656250001,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "💀歸零(0.02x)"
   },
   {
     "signal_id": "2026-07-10_NVDA_2026-07-17_240.0",
@@ -4140,10 +4245,15 @@
     "volume": 5037,
     "premium_tier": "lottery",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.01,
+      "spot": 212.5,
+      "iv": 49.219257812500004,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-07-10_XYZ_2026-07-17_79.0",
@@ -4161,10 +4271,15 @@
     "volume": 4031,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 3.47,
+      "spot": 81.80999755859375,
+      "iv": 55.762161132812516,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "✅噴了(峰3.2x)"
   },
   {
     "signal_id": "2026-07-10_RKLB_2026-07-17_85.0",
@@ -4182,10 +4297,15 @@
     "volume": 4014,
     "premium_tier": "mid",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.19,
+      "spot": 76.19999694824219,
+      "iv": 81.2501875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "💀歸零(0.10x)"
   },
   {
     "signal_id": "2026-07-10_HOOD_2026-07-17_114.0",
@@ -4203,10 +4323,15 @@
     "volume": 4003,
     "premium_tier": "mid",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 3.4,
+      "spot": 115.54000091552734,
+      "iv": 61.572649902343755,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.2x/今1.2x)"
   },
   {
     "signal_id": "2026-07-10_NKE_2026-10-16_42.5",
@@ -4224,10 +4349,15 @@
     "volume": 3461,
     "premium_tier": "heavy",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 3.7,
+      "spot": 42.77000045776367,
+      "iv": 41.94393994140625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
     "signal_id": "2026-07-10_DAL_2026-08-21_90.0",
@@ -4245,10 +4375,15 @@
     "volume": 3436,
     "premium_tier": "heavy",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 2.59,
+      "spot": 85.95999908447266,
+      "iv": 38.477177734375,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.7x/今0.7x)"
   },
   {
     "signal_id": "2026-07-10_SMCI_2026-07-17_28.5",
@@ -4266,10 +4401,15 @@
     "volume": 3247,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.22,
+      "spot": 26.889999389648438,
+      "iv": 75.00025000000001,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-07-10_NVDA_2026-09-18_310.0",
@@ -4287,10 +4427,15 @@
     "volume": 2622,
     "premium_tier": "lottery",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.49,
+      "spot": 212.5,
+      "iv": 46.70463452148438,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
     "signal_id": "2026-07-10_HOOD_2026-07-17_112.0",
@@ -4308,10 +4453,15 @@
     "volume": 2617,
     "premium_tier": "heavy",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 4.7,
+      "spot": 115.54000091552734,
+      "iv": 63.37927246093751,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.3x/今1.3x)"
   },
   {
     "signal_id": "2026-07-10_AMZN_2026-07-17_300.0",
@@ -4329,10 +4479,15 @@
     "volume": 2075,
     "premium_tier": "lottery",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.01,
+      "spot": 254.9600067138672,
+      "iv": 59.375406250000005,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_META_2026-07-17_725.0",
@@ -4350,10 +4505,15 @@
     "volume": 1940,
     "premium_tier": "heavy",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.03,
+      "spot": 681.3099975585938,
+      "iv": 47.97415307617187,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.3x)"
   },
   {
     "signal_id": "2026-07-10_ONDS_2027-01-15_15.0",
@@ -4371,10 +4531,15 @@
     "volume": 1464,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.53,
+      "spot": 7.050000190734863,
+      "iv": 102.1489267578125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
     "signal_id": "2026-07-10_F_2026-07-17_16.0",
@@ -4392,10 +4557,15 @@
     "volume": 816,
     "premium_tier": "lottery",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.01,
+      "spot": 14.180000305175781,
+      "iv": 62.500375000000005,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_MSFT_2026-07-17_475.0",
@@ -4413,10 +4583,15 @@
     "volume": 674,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.01,
+      "spot": 395.6300048828125,
+      "iv": 62.500375000000005,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_F_2026-07-17_17.0",
@@ -4434,10 +4609,15 @@
     "volume": 652,
     "premium_tier": "lottery",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.01,
+      "spot": 14.180000305175781,
+      "iv": 87.500125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_ACHR_2027-01-15_10.0",
@@ -4455,10 +4635,15 @@
     "volume": 599,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.3,
+      "spot": 4.78000020980835,
+      "iv": 95.11723632812499,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_IBIT_2027-01-15_60.0",
@@ -4476,10 +4661,15 @@
     "volume": 446,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.42,
+      "spot": 36.810001373291016,
+      "iv": 45.16656396484375,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_IBIT_2026-09-18_65.0",
@@ -4497,10 +4687,15 @@
     "volume": 377,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.04,
+      "spot": 36.810001373291016,
+      "iv": 58.20354296875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_F_2026-09-18_17.0",
@@ -4518,10 +4713,15 @@
     "volume": 370,
     "premium_tier": "lottery",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.21,
+      "spot": 14.180000305175781,
+      "iv": 41.1138701171875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_SOFI_2026-09-18_32.0",
@@ -4539,10 +4739,15 @@
     "volume": 193,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.11,
+      "spot": 17.8700008392334,
+      "iv": 76.75804492187501,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
     "signal_id": "2026-07-10_NVDA_2028-01-21_400.0",
@@ -4560,10 +4765,15 @@
     "volume": 152,
     "premium_tier": "heavy",
     "news_at_signal": true,
-    "t5": null,
+    "t5": {
+      "opt_price": 10.7,
+      "spot": 212.5,
+      "iv": 46.45439288330079,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_IBIT_2027-01-15_100.0",
@@ -4581,10 +4791,15 @@
     "volume": 123,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.1,
+      "spot": 36.810001373291016,
+      "iv": 61.52382226562501,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.9x/今0.9x)"
   },
   {
     "signal_id": "2026-07-10_SHOP_2026-09-18_195.0",
@@ -4602,10 +4817,15 @@
     "volume": 85,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.86,
+      "spot": 123.55000305175781,
+      "iv": 63.1839619140625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-10_IBIT_2026-09-18_55.0",
@@ -4623,10 +4843,15 @@
     "volume": 18,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.07,
+      "spot": 36.810001373291016,
+      "iv": 47.5591181640625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.9x/今0.9x)"
   },
   {
     "signal_id": "2026-07-10_DKNG_2026-11-20_37.5",
@@ -4644,10 +4869,15 @@
     "volume": 9,
     "premium_tier": "lottery",
     "news_at_signal": false,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.74,
+      "spot": 25.25,
+      "iv": 58.74064697265625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
     "signal_id": "2026-07-13_HOOD_2026-09-18_200.0",
@@ -5167,6 +5397,342 @@
     "oi": 30601,
     "oi_d7": -3,
     "volume": 12,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_VZ_2026-09-18_48.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "VZ",
+    "expiry": "2026-09-18",
+    "strike": 48.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(345.3x) 🚬菸屁股",
+    "entry_price": 0.47,
+    "entry_iv": 29.444064941406246,
+    "entry_spot": 42.83000183105469,
+    "oi": 1910,
+    "oi_d7": 1910,
+    "volume": 5870,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_CMCSA_2026-12-18_30.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "CMCSA",
+    "expiry": "2026-12-18",
+    "strike": 30.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(42.1x) 🚬菸屁股",
+    "entry_price": 0.53,
+    "entry_iv": 40.08848974609375,
+    "entry_spot": 23.489999771118164,
+    "oi": 1843,
+    "oi_d7": 585,
+    "volume": 5007,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_PYPL_2026-10-16_65.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "PYPL",
+    "expiry": "2026-10-16",
+    "strike": 65.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股",
+    "entry_price": 0.8,
+    "entry_iv": 32.56903369140625,
+    "entry_spot": 55.52000045776367,
+    "oi": 962,
+    "oi_d7": 962,
+    "volume": 2167,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_PFE_2026-08-21_26.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "PFE",
+    "expiry": "2026-08-21",
+    "strike": 26.0,
+    "score": 8,
+    "tags": "🚀點火(52.0x) 🚬菸屁股 🔥萬人塚",
+    "entry_price": 0.21,
+    "entry_iv": 19.727365234375,
+    "entry_spot": 24.81999969482422,
+    "oi": 45828,
+    "oi_d7": 45828,
+    "volume": 12577,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_PYPL_2026-08-21_60.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "PYPL",
+    "expiry": "2026-08-21",
+    "strike": 60.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量",
+    "entry_price": 1.18,
+    "entry_iv": 40.11290356445312,
+    "entry_spot": 55.52000045776367,
+    "oi": 3682,
+    "oi_d7": 3682,
+    "volume": 8506,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_ONDS_2026-12-18_8.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "ONDS",
+    "expiry": "2026-12-18",
+    "strike": 8.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量",
+    "entry_price": 1.48,
+    "entry_iv": 99.804689453125,
+    "entry_spot": 7.050000190734863,
+    "oi": 2387,
+    "oi_d7": 2387,
+    "volume": 7833,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_HIMS_2027-01-15_70.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "HIMS",
+    "expiry": "2027-01-15",
+    "strike": 70.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量",
+    "entry_price": 3.65,
+    "entry_iv": 101.57519915771485,
+    "entry_spot": 37.16999816894531,
+    "oi": 1606,
+    "oi_d7": 1606,
+    "volume": 2035,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_PYPL_2026-12-18_62.5",
+    "snapshot_date": "2026-07-15",
+    "ticker": "PYPL",
+    "expiry": "2026-12-18",
+    "strike": 62.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量",
+    "entry_price": 1.8,
+    "entry_iv": 34.25358715820312,
+    "entry_spot": 55.52000045776367,
+    "oi": 1321,
+    "oi_d7": 1321,
+    "volume": 1632,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_ONDS_2027-01-15_20.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "ONDS",
+    "expiry": "2027-01-15",
+    "strike": 20.0,
+    "score": 8,
+    "tags": "🚀點火(7.5x) 🚬菸屁股 🔥萬人塚",
+    "entry_price": 0.31,
+    "entry_iv": 104.29735351562503,
+    "entry_spot": 7.050000190734863,
+    "oi": 32637,
+    "oi_d7": 450,
+    "volume": 1312,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_IBM_2026-08-21_240.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "IBM",
+    "expiry": "2026-08-21",
+    "strike": 240.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量",
+    "entry_price": 4.6,
+    "entry_iv": 50.159189819335936,
+    "entry_spot": 211.1999969482422,
+    "oi": 754,
+    "oi_d7": 754,
+    "volume": 1221,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_SOFI_2026-09-18_32.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "SOFI",
+    "expiry": "2026-09-18",
+    "strike": 32.0,
+    "score": 8,
+    "tags": "🚀點火(19.8x) 🚬菸屁股 🔥萬人塚",
+    "entry_price": 0.11,
+    "entry_iv": 76.75804492187501,
+    "entry_spot": 17.8700008392334,
+    "oi": 54353,
+    "oi_d7": 58,
+    "volume": 1027,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_PFE_2027-01-15_27.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "PFE",
+    "expiry": "2027-01-15",
+    "strike": 27.0,
+    "score": 8,
+    "tags": "🚀點火(4.5x) 🚬菸屁股 🔥萬人塚",
+    "entry_price": 0.71,
+    "entry_iv": 21.60722924804687,
+    "entry_spot": 24.81999969482422,
+    "oi": 53385,
+    "oi_d7": 53385,
+    "volume": 823,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_PFE_2027-01-15_30.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "PFE",
+    "expiry": "2027-01-15",
+    "strike": 30.0,
+    "score": 8,
+    "tags": "🚀點火(3.6x) 🚬菸屁股 🔥萬人塚",
+    "entry_price": 0.25,
+    "entry_iv": 22.657023437499998,
+    "entry_spot": 24.81999969482422,
+    "oi": 57035,
+    "oi_d7": 57035,
+    "volume": 555,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_SOFI_2027-01-15_35.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "SOFI",
+    "expiry": "2027-01-15",
+    "strike": 35.0,
+    "score": 8,
+    "tags": "🚀點火(5.3x) 🚬菸屁股 🔥萬人塚",
+    "entry_price": 0.53,
+    "entry_iv": 70.898728515625,
+    "entry_spot": 17.8700008392334,
+    "oi": 35166,
+    "oi_d7": 354,
+    "volume": 356,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_CMCSA_2027-01-15_30.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "CMCSA",
+    "expiry": "2027-01-15",
+    "strike": 30.0,
+    "score": 8,
+    "tags": "🚀點火(5.6x) 🚬菸屁股 🔥萬人塚",
+    "entry_price": 0.62,
+    "entry_iv": 37.74476318359375,
+    "entry_spot": 23.489999771118164,
+    "oi": 85433,
+    "oi_d7": 41,
+    "volume": 128,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-07-15_IBIT_2026-09-18_65.0",
+    "snapshot_date": "2026-07-15",
+    "ticker": "IBIT",
+    "expiry": "2026-09-18",
+    "strike": 65.0,
+    "score": 8,
+    "tags": "🚀點火(13.5x) 🚬菸屁股 🔥萬人塚",
+    "entry_price": 0.04,
+    "entry_iv": 58.20354296875,
+    "entry_spot": 36.810001373291016,
+    "oi": 35928,
+    "oi_d7": 405,
+    "volume": 27,
     "premium_tier": "lottery",
     "news_at_signal": false,
     "t5": null,
