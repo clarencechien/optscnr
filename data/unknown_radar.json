@@ -1,29 +1,17 @@
 {
-  "updated_at": "2026-07-14T22:29:17.783417",
-  "count": 2,
+  "updated_at": "2026-07-15T22:28:32.463555",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "United Airlines",
-      "ticker": "UAL",
+      "name": "Advent",
+      "ticker": "AVK",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "United Airlines' new upsell: Keeping other travelers out of the middle seat",
-        "United Airlines' new upsell: Keeping other travelers out of the middle seat"
-      ]
-    },
-    {
-      "name": "Lionsgate Studios",
-      "ticker": "LION",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Exclusive-Lionsgate Studios attracts takeover interest from Bollore, Banijay, sources say",
-        "Lionsgate Studios shares rise on takeover interest reports"
+        "Stripe, Advent make $53 billion takeover offer for PayPal, sending stock soaring",
+        "PayPal rallies 17% on report Stripe, Advent made $53 billion bid"
       ]
     }
   ]

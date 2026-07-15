@@ -13,13 +13,6 @@
     "total_mentions": 6,
     "ticker": "DJCO"
   },
-  "TeraWulf": {
-    "first_seen": "2026-07-06",
-    "last_seen": "2026-07-07",
-    "consecutive_days": 2,
-    "total_mentions": 4,
-    "ticker": "WULF"
-  },
   "L3Harris": {
     "first_seen": "2026-07-06",
     "last_seen": "2026-07-13",
@@ -33,27 +26,6 @@
     "consecutive_days": 2,
     "total_mentions": 5,
     "ticker": "GLNDW"
-  },
-  "Georgia": {
-    "first_seen": "2026-07-07",
-    "last_seen": "2026-07-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GPJA"
-  },
-  "MasTec": {
-    "first_seen": "2026-07-07",
-    "last_seen": "2026-07-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "MTZ"
-  },
-  "Superior Group": {
-    "first_seen": "2026-07-07",
-    "last_seen": "2026-07-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SGC"
   },
   "Levi Strauss": {
     "first_seen": "2026-07-08",
@@ -131,5 +103,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "LION"
+  },
+  "Advent": {
+    "first_seen": "2026-07-15",
+    "last_seen": "2026-07-15",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "AVK"
   }
 }
