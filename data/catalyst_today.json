@@ -1,86 +1,44 @@
 {
-  "updated_at": "2026-07-14T21:31:25.842550",
+  "updated_at": "2026-07-15T21:30:16.574370",
   "stats": {
-    "total_items": 103,
-    "items_with_company": 24,
-    "items_with_catalyst": 21,
-    "items_both": 7
+    "total_items": 100,
+    "items_with_company": 17,
+    "items_with_catalyst": 14,
+    "items_both": 4
   },
-  "count": 15,
+  "count": 16,
   "tickers": [
-    "IBM",
-    "LCID",
-    "JPM",
+    "TGT",
     "GS",
-    "META",
-    "HOOD",
+    "JPM",
+    "MS",
+    "IBM",
+    "PYPL",
     "BRK-B",
-    "XYZ",
-    "NFLX",
-    "TSLA",
-    "NVDA",
     "AAPL",
     "GOOGL",
-    "TGT",
-    "AMZN"
+    "AMZN",
+    "CRWV",
+    "PLTR",
+    "MSFT",
+    "META",
+    "HUT",
+    "BE"
   ],
   "details": [
     {
-      "symbol": "IBM",
-      "score": 7.0,
-      "evidence": [
-        {
-          "title": "Cybersecurity stocks rally on AI spending change comments from IBM's Krishna",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "IBM stock craters 25%, the worst day on record, after company issues second-quarter earnings warning",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "What IBM’s profit warning means: Hardware is ‘eating everyone’s lunch’",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "LCID",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Lucid dismisses report that it is weighing filing for bankruptcy or going private after shares plunge",
-          "catalysts": [
-            "plunge"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Lucid denies bankruptcy talk, but the stock still sinks to a record low",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
+      "symbol": "TGT",
       "score": 2.5,
       "evidence": [
         {
-          "title": "The AI boom just found two new winners: Goldman Sachs and JPMorgan Chase",
+          "title": "J&J falls despite a beat-and-raise quarter. Why we're raising our price target anyways",
           "catalysts": [
-            "record revenue"
+            "falls"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Analyst Report: JPMorgan Chase & Co",
+          "title": "Hut 8 Stock Gets A Price Target Boost As A.I. Pivot Succeeds",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -91,45 +49,76 @@
       "score": 2.5,
       "evidence": [
         {
-          "title": "The AI boom just found two new winners: Goldman Sachs and JPMorgan Chase",
-          "catalysts": [
-            "record revenue"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Goldman Sachs raises $10B in high-grade bond sale - report",
+          "title": "Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing",
           "catalysts": [],
           "has_catalyst": false
+        },
+        {
+          "title": "Morgan Stanley posts record quarterly revenue and profit as equities trading surges 69%",
+          "catalysts": [
+            "surges"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "JPM",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Current and former employees sue Meta, alleging discrimination in using AI to conduct layoffs",
+          "title": "‘Arsenal of democracy’: Jamie Dimon announces $24 million effort to boost American shipbuilding",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Morgan Stanley posts record quarterly revenue and profit as equities trading surges 69%",
           "catalysts": [
-            "rising"
+            "surges"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Morgan Stanley posts record quarterly revenue and profit as equities trading surges 69%",
+          "catalysts": [
+            "surges"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Meta Scales Up Louisiana Mega AI Data Center To $50 Billion",
+          "title": "Analyst Report: Morgan Stanley",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HOOD",
+      "symbol": "IBM",
       "score": 2,
       "evidence": [
         {
-          "title": "‘They are relentless’: A scammer is trying to change the email on my empty Robinhood account. What do they have to gain?",
+          "title": "Historic IBM stock crash sets up unique options strategy",
           "catalysts": [
-            "gain"
+            "crash"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "PYPL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Stripe, Advent make $53 billion takeover offer for PayPal, sending stock soaring",
+          "catalysts": [
+            "takeover"
           ],
           "has_catalyst": true
         }
@@ -140,66 +129,12 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Warren Buffett is accelerating his charitable donations with aim to give away Berkshire wealth by 2034",
+          "title": "Warren Buffett tells CNBC he initiated Berkshire Hathaway's investment in Alphabet",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Warren Buffett excludes Gates Foundation from his annual donations of Berkshire stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Writers Guild sues to block Paramount deal, saying it would hurt writers",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Writers Guild sues to block Paramount’s Warner Bros. Discovery deal",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Netflix Stock is at New Lows, But Its FCF Is Strong - Is NFLX Too Cheap?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Netflix may be sitting on another tough quarter",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Zipline adds ex-Tesla, Uber, Waymo execs to make drone delivery mainstream across U.S.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "U.S. trade official says 'very few' Nvidia H200 AI chips have been shipped to China",
+          "title": "Warren Buffett calls Bill Gates' actions with Epstein 'distasteful' but says people make mistakes",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -207,10 +142,15 @@
     },
     {
       "symbol": "AAPL",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Apple in talks with startup that shrinks AI models to run on an iPhone",
+          "title": "Alibaba’s U.S.-listed shares rise 4% after Qwen AI set to be integrated in Apple Intelligence",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Hedgeye Turns Bearish on Apple With a Fresh Short Idea. It’s Not a Red Flag for AAPL Stock, But It Is Reason for Caution.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -221,18 +161,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Google DeepMind chief Demis Hassabis calls for U.S. to spearhead AI standards body",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Target's problems aren't what you think they are",
+          "title": "Warren Buffett tells CNBC he initiated Berkshire Hathaway's investment in Alphabet",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -243,7 +172,73 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon, Flexport Alum Dave Clark’s Supply Chain Startup Raises $50M",
+          "title": "Amazon senior cloud executive departs after 18 years",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "CoreWeave’s stock suffers another long losing streak. Here’s what’s driving the selling.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft CEO adds fuel to Palantir CEO’s AI warning",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft CEO adds fuel to Palantir CEO’s AI warning",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Meta Platforms Is Moving Closer to Controlling Its AI Supply Chain. Here’s What the Company Is Planning.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HUT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Hut 8 Stock Gets A Price Target Boost As A.I. Pivot Succeeds",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Short Seller Hunterbrook Attacked Bloom Energy’s Supply-Chain Claims. BE Stock Is Bruised, But Not Broken.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -251,6 +246,8 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1
+    "Anthropic (private)": 1,
+    "OpenAI (private)": 1,
+    "Stripe (private)": 1
   }
 }
