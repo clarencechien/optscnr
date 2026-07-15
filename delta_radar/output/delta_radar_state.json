@@ -767,8 +767,8 @@
       "t5_excess_pct": -11.95,
       "t10_ret_pct": -14.0,
       "t10_excess_pct": -16.45,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -16.25,
+      "t20_excess_pct": -18.65
     }
   },
   {
@@ -865,8 +865,8 @@
       "t5_excess_pct": -11.95,
       "t10_ret_pct": -14.0,
       "t10_excess_pct": -16.45,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -16.25,
+      "t20_excess_pct": -18.65
     }
   },
   {
@@ -906,8 +906,8 @@
       "t5_excess_pct": -11.95,
       "t10_ret_pct": -14.0,
       "t10_excess_pct": -16.45,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -16.25,
+      "t20_excess_pct": -18.65
     }
   },
   {
@@ -936,8 +936,8 @@
       "t5_excess_pct": -11.95,
       "t10_ret_pct": -14.0,
       "t10_excess_pct": -16.45,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -16.25,
+      "t20_excess_pct": -18.65
     }
   },
   {
@@ -1789,8 +1789,8 @@
       "entry_close": 1905.0,
       "t5_ret_pct": 4.72,
       "t5_excess_pct": 1.08,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -2.62,
+      "t10_excess_pct": -2.57,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -2065,8 +2065,8 @@
       "entry_date": "2026-07-06",
       "benchmark": "0050",
       "entry_close": 1995.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -7.02,
+      "t5_excess_pct": -3.46,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -3690,6 +3690,87 @@
     ],
     "outcomes": {
       "entry_date": "2026-07-14",
+      "benchmark": "0050",
+      "entry_close": 1855.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-07-15T05:14:03.860684+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "capex_cut:4e / vr300_delay:13e(21m) / debt_financed_capex:16e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 4,
+            "vr300_delay": 13,
+            "debt_financed_capex": 16,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 4,
+            "vr300_delay": 21,
+            "debt_financed_capex": 16,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 4,
+              "mentions": 4,
+              "gate": "zscore",
+              "z": 1.77,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 13,
+              "mentions": 21,
+              "gate": "zscore",
+              "z": -0.43,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 16,
+              "mentions": 16,
+              "gate": "zscore",
+              "z": -1.21,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Can Sovereign AI Buffer Nvidia Against a Potential Hyperscaler Slowdown? - Trefis",
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia's Vera Rubin Hardware Rollout May Be Slightly Delayed, But Analyst Still Expects a 62% Upside—Here - Benzinga",
+          "[vr300_delay] NVDA Stock Climbs Over 1% — Nvidia Says Its AI ‘Roadmap Is Intact’ After Report Of Kyber Rack Delay - Stocktwits",
+          "[debt_financed_capex] Amazon’s $25 Billion Bond Sale: Is the AI-Debt Boom a Warning Sign or a Smart Way to Bankroll a Build-Out? - MarketWise",
+          "[debt_financed_capex] Amazon Is Borrowing Another $25 Billion for AI, and Promises This Is the Last Time This Year - 24/7 Wall St.",
+          "[debt_financed_capex] Oracle's AI spending blows past estimates, raising worries over growing debt - Reuters"
+        ],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-07-15",
       "benchmark": "0050",
       "entry_close": null,
       "t5_ret_pct": null,
