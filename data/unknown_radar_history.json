@@ -6,40 +6,12 @@
     "total_mentions": 37,
     "ticker": "NDAQ"
   },
-  "Daily": {
-    "first_seen": "2026-06-25",
-    "last_seen": "2026-07-08",
-    "consecutive_days": 3,
-    "total_mentions": 6,
-    "ticker": "DJCO"
-  },
   "L3Harris": {
     "first_seen": "2026-07-06",
     "last_seen": "2026-07-13",
     "consecutive_days": 2,
     "total_mentions": 4,
     "ticker": "LHX"
-  },
-  "Greenland": {
-    "first_seen": "2026-07-07",
-    "last_seen": "2026-07-08",
-    "consecutive_days": 2,
-    "total_mentions": 5,
-    "ticker": "GLNDW"
-  },
-  "Levi Strauss": {
-    "first_seen": "2026-07-08",
-    "last_seen": "2026-07-08",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "LEVI"
-  },
-  "Canadian": {
-    "first_seen": "2026-07-08",
-    "last_seen": "2026-07-08",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "CNDIF"
   },
   "Delta": {
     "first_seen": "2026-07-08",
@@ -110,5 +82,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "AVK"
+  },
+  "Gemini": {
+    "first_seen": "2026-07-16",
+    "last_seen": "2026-07-16",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "GEMI"
+  },
+  "AtaiBeckley": {
+    "first_seen": "2026-07-16",
+    "last_seen": "2026-07-16",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ATAI"
   }
 }
