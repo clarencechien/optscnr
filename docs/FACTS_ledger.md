@@ -82,7 +82,7 @@
 - Q2 財報日：預計 2026-08-07 ｜ Public.com ｜ 7/8 入庫
 
 ## DIS 
--Q3 財報日：預計 2026-08-05 或 2026-08-12 ｜ Zacks / Finbox ｜ 7/8 入庫
+- Q3 財報日：預計 2026-08-05 或 2026-08-12 ｜ Zacks / Finbox ｜ 7/8 入庫
 
 ## TDOC（Teladoc）
 - Walmart Better Care Services 合作公告 ｜ 2026-05-28 ｜ Teladoc IR 新聞稿 ｜ 7/8 入庫
