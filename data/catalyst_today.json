@@ -1,123 +1,36 @@
 {
-  "updated_at": "2026-07-15T21:30:16.574370",
+  "updated_at": "2026-07-16T21:33:24.387446",
   "stats": {
-    "total_items": 100,
-    "items_with_company": 17,
-    "items_with_catalyst": 14,
-    "items_both": 4
+    "total_items": 102,
+    "items_with_company": 15,
+    "items_with_catalyst": 15,
+    "items_both": 5
   },
-  "count": 16,
+  "count": 13,
   "tickers": [
-    "TGT",
-    "GS",
-    "JPM",
-    "MS",
-    "IBM",
     "PYPL",
-    "BRK-B",
-    "AAPL",
+    "NFLX",
+    "NVDA",
+    "TSM",
+    "HOOD",
     "GOOGL",
+    "TGT",
+    "TSLA",
     "AMZN",
-    "CRWV",
-    "PLTR",
     "MSFT",
-    "META",
-    "HUT",
-    "BE"
+    "GS",
+    "MS",
+    "AAPL"
   ],
   "details": [
     {
-      "symbol": "TGT",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "J&J falls despite a beat-and-raise quarter. Why we're raising our price target anyways",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Hut 8 Stock Gets A Price Target Boost As A.I. Pivot Succeeds",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Morgan Stanley posts record quarterly revenue and profit as equities trading surges 69%",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "‘Arsenal of democracy’: Jamie Dimon announces $24 million effort to boost American shipbuilding",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Morgan Stanley posts record quarterly revenue and profit as equities trading surges 69%",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Morgan Stanley posts record quarterly revenue and profit as equities trading surges 69%",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Analyst Report: Morgan Stanley",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "IBM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Historic IBM stock crash sets up unique options strategy",
-          "catalysts": [
-            "crash"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
       "symbol": "PYPL",
-      "score": 2,
+      "score": 4,
       "evidence": [
         {
-          "title": "Stripe, Advent make $53 billion takeover offer for PayPal, sending stock soaring",
+          "title": "PayPal Shares Surge Premarket on Reports of $53 Billion Takeover",
           "catalysts": [
+            "surge",
             "takeover"
           ],
           "has_catalyst": true
@@ -125,34 +38,69 @@
       ]
     },
     {
-      "symbol": "BRK-B",
-      "score": 1.0,
+      "symbol": "NFLX",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Warren Buffett tells CNBC he initiated Berkshire Hathaway's investment in Alphabet",
+          "title": "Netflix stock falls as company narrows guidance, says it will give fewer engagement updates",
+          "catalysts": [
+            "falls"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Netflix is getting stingier about its viewing data, and Wall Street isn’t happy",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Warren Buffett calls Bill Gates' actions with Epstein 'distasteful' but says people make mistakes",
+          "title": "Netflix earnings forecast disappoints investors, shares tumble",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 1.0,
+      "symbol": "NVDA",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Alibaba’s U.S.-listed shares rise 4% after Qwen AI set to be integrated in Apple Intelligence",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Nvidia unveils new AI model and expands Japan’s physical AI ecosystem",
+          "catalysts": [
+            "unveils"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Hedgeye Turns Bearish on Apple With a Fresh Short Idea. It’s Not a Red Flag for AAPL Stock, But It Is Reason for Caution.",
+          "title": "Nvidia-backed Fireworks hits $17.5 billion valuation as companies pursue cheaper AI models",
           "catalysts": [],
           "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "TSMC to invest additional $100 billion in Arizona after second-quarter profit soars 77%",
+          "catalysts": [
+            "soars"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "‘They are relentless’: A scammer is trying to change the email on my empty Robinhood account. What do they have to gain?",
+          "catalysts": [
+            "gain"
+          ],
+          "has_catalyst": true
         }
       ]
     },
@@ -161,7 +109,29 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Warren Buffett tells CNBC he initiated Berkshire Hathaway's investment in Alphabet",
+          "title": "Alphabet shares fall on report its most powerful AI model Gemini 3.5 Pro is delayed",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Iran warns U.S. of Hormuz ‘red line,’ says it will retaliate if Trump carries out threats",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "He backed Tesla and SpaceX before anyone else — here is the ‘impossible’ bet he is making now",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -172,29 +142,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon senior cloud executive departs after 18 years",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "CoreWeave’s stock suffers another long losing streak. Here’s what’s driving the selling.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Microsoft CEO adds fuel to Palantir CEO’s AI warning",
+          "title": "One chart reveals why investors are concerned about earnings from Microsoft, Amazon, and other hyperscalers",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -205,49 +153,45 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft CEO adds fuel to Palantir CEO’s AI warning",
+          "title": "One chart reveals why investors are concerned about earnings from Microsoft, Amazon, and other hyperscalers",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "GS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta Platforms Is Moving Closer to Controlling Its AI Supply Chain. Here’s What the Company Is Planning.",
+          "title": "Analyst Report: Goldman Sachs Group Inc/The",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HUT",
+      "symbol": "MS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Hut 8 Stock Gets A Price Target Boost As A.I. Pivot Succeeds",
+          "title": "Morgan Stanley’s Wealth Division Got a Boost From Big IPOs, Too",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BE",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Short Seller Hunterbrook Attacked Bloom Energy’s Supply-Chain Claims. BE Stock Is Bruised, But Not Broken.",
+          "title": "Apple Intelligence approved in China with Alibaba Qwen AI model",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "Anthropic (private)": 1,
-    "OpenAI (private)": 1,
-    "Stripe (private)": 1
-  }
+  "watch_only": {}
 }
