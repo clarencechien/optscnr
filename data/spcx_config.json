@@ -5,7 +5,7 @@
   "ipo_date": "2026-06-12",
   "pricing_date": "2026-06-11",
   "_shares_note": "13.08B = pre-IPO 125.2億 + 6/3 S-1/A 揭露之發行 5.5556億新股。$135 仍為 preliminary prospectus 之『預期』價，6/11 effective+pricing notice 才終定。屆時若 $135 未變即可直接掛單。",
-  "total_shares_b": 13.08,
+  "total_shares_b": 13.16,
   "_ipo_price_note": "6/3 S-1/A 揭露之預期 IPO 價（preliminary）。$135 × 13.08B = 1.77兆，與官方吻合。6/11 定價通知前仍可能變。",
   "ipo_price": 135.0,
   "total_capital": 200000,
