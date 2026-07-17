@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-05-27",
-    "last_seen": "2026-07-10",
-    "consecutive_days": 14,
-    "total_mentions": 37,
+    "last_seen": "2026-07-17",
+    "consecutive_days": 15,
+    "total_mentions": 39,
     "ticker": "NDAQ"
   },
   "L3Harris": {
@@ -96,5 +96,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "ATAI"
+  },
+  "World": {
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "WKC"
+  },
+  "Under": {
+    "first_seen": "2026-07-17",
+    "last_seen": "2026-07-17",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "UA"
   }
 }

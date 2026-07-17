@@ -1,29 +1,41 @@
 {
-  "updated_at": "2026-07-16T22:28:34.935303",
-  "count": 2,
+  "updated_at": "2026-07-17T22:14:13.706341",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "Gemini",
-      "ticker": "GEMI",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 39,
+      "consecutive_days": 15,
+      "is_strong": true,
       "evidence": [
-        "Alphabet shares fall on report its most powerful AI model Gemini 3.5 Pro is delayed",
-        "Alphabet shares fall on report its most powerful AI model Gemini 3.5 Pro is delayed"
+        "SpaceX stock has cratered nearly 23% since the company joined the Nasdaq-100",
+        "Digital Brands Group to implement 1-for-40 reverse stock split to comply with Nasdaq rules"
       ]
     },
     {
-      "name": "AtaiBeckley",
-      "ticker": "ATAI",
+      "name": "World",
+      "ticker": "WKC",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Eli Lilly to buy psychedelics maker AtaiBeckley for $2.8 billion as experimental treatments gain tra",
-        "Eli Lilly to buy psychedelics maker AtaiBeckley for $2.8 billion as experimental treatments gain tra"
+        "World’s largest olive oil company says market has 'definitively' entered new phase",
+        "World stocks fall in semiconductor rout; oil rises on Middle East escalation"
+      ]
+    },
+    {
+      "name": "Under",
+      "ticker": "UA",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Is ZoomInfo Technologies (GTM) One of the Most Undervalued Stocks Under $5 to Buy?",
+        "Kosmos Energy (KOS): One of the Most Undervalued Stocks Under $5 to Buy"
       ]
     }
   ]
