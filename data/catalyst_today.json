@@ -1,93 +1,90 @@
 {
-  "updated_at": "2026-07-16T21:33:24.387446",
+  "updated_at": "2026-07-17T21:21:44.956620",
   "stats": {
-    "total_items": 102,
-    "items_with_company": 15,
-    "items_with_catalyst": 15,
-    "items_both": 5
+    "total_items": 103,
+    "items_with_company": 28,
+    "items_with_catalyst": 5,
+    "items_both": 3
   },
-  "count": 13,
+  "count": 18,
   "tickers": [
-    "PYPL",
+    "BAC",
+    "META",
     "NFLX",
-    "NVDA",
-    "TSM",
     "HOOD",
+    "PYPL",
+    "NVDA",
     "GOOGL",
-    "TGT",
-    "TSLA",
+    "BA",
     "AMZN",
+    "AAPL",
     "MSFT",
-    "GS",
-    "MS",
-    "AAPL"
+    "F",
+    "INTC",
+    "RTX",
+    "MSTR",
+    "TSLA",
+    "COIN",
+    "HPQ"
   ],
   "details": [
     {
-      "symbol": "PYPL",
-      "score": 4,
+      "symbol": "BAC",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "PayPal Shares Surge Premarket on Reports of $53 Billion Takeover",
-          "catalysts": [
-            "surge",
-            "takeover"
-          ],
-          "has_catalyst": true
+          "title": "Bank of America Corporation 4.250% DP PFD QQ declares $0.2656 dividend",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Bank of America Corporation 5% NCUM PFD LL declares $0.3125 dividend",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Bank of America Corporation 5.375 DEP PFD KK declares $0.3359 dividend",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Anthropic in early talks with Meta to acquire compute power",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta's latest move in the AI talent war — plus Cramer's 4 quick hits on the market",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta, Anthropic in talks for potential $10 billion compute lease deal, source says",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "NFLX",
-      "score": 3.0,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Netflix stock falls as company narrows guidance, says it will give fewer engagement updates",
+          "title": "Netflix stock falls as earnings forecast disappoints, company says it will give fewer engagement updates",
           "catalysts": [
             "falls"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Netflix is getting stingier about its viewing data, and Wall Street isn’t happy",
+          "title": "Should You Be Confident in Netflix (NFLX)?",
           "catalysts": [],
           "has_catalyst": false
-        },
-        {
-          "title": "Netflix earnings forecast disappoints investors, shares tumble",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Nvidia unveils new AI model and expands Japan’s physical AI ecosystem",
-          "catalysts": [
-            "unveils"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Nvidia-backed Fireworks hits $17.5 billion valuation as companies pursue cheaper AI models",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "TSMC to invest additional $100 billion in Arizona after second-quarter profit soars 77%",
-          "catalysts": [
-            "soars"
-          ],
-          "has_catalyst": true
         }
       ]
     },
@@ -105,33 +102,56 @@
       ]
     },
     {
+      "symbol": "PYPL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Stripe Wants to Buy PayPal for $53 Billion — Here’s What the Merger Would Mean",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Apple, Nvidia vie for title of world's most valuable company",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Jensen Huang’s key statements shaping NVIDIA’s AI narrative",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
       "symbol": "GOOGL",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Alphabet shares fall on report its most powerful AI model Gemini 3.5 Pro is delayed",
+          "title": "Alphabet, Intel results in focus for AI trade as US earnings rev up",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "I Can’t Stop Buying Alphabet Because of This Emerging Massive AI Cost Advantage",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Iran warns U.S. of Hormuz ‘red line,’ says it will retaliate if Trump carries out threats",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "He backed Tesla and SpaceX before anyone else — here is the ‘impossible’ bet he is making now",
+          "title": "FAA lets Boeing sign off on 737 Max, 787 airworthiness certificates again",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -142,40 +162,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "One chart reveals why investors are concerned about earnings from Microsoft, Amazon, and other hyperscalers",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "One chart reveals why investors are concerned about earnings from Microsoft, Amazon, and other hyperscalers",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Analyst Report: Goldman Sachs Group Inc/The",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Morgan Stanley’s Wealth Division Got a Boost From Big IPOs, Too",
+          "title": "Amazon's Zoox issues software recall after robotaxi drove into heavy smoke",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -186,12 +173,104 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple Intelligence approved in China with Alibaba Qwen AI model",
+          "title": "Apple, Nvidia vie for title of world's most valuable company",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft's Nadella criticizes Anthropic's Fable for being 'editorially controlled'",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "My wife’s 2011 Ford Fiesta was totaled. Should we accept a $2,000 insurance settlement or give up the car for $2,700?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Alphabet, Intel results in focus for AI trade as US earnings rev up",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RTX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Raytheon secures $309.5M U.S. Space Force radar modernization agreement",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Strategy’s (MSTR) Q2 Earnings Test May Help Engineer a Short-Term Pop",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Tesla Stock: Here's What Retail Investors Want To Know Ahead Of Earnings",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COIN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Coinbase’s Base Blockchain Pivots to Trading and AI After Social Initiatives Stall",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HPQ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "HP Inc. (HPQ) Integrates OpenAI’s Frontier Platform to Enhance Workforce Experiences",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "Anthropic (private)": 3,
+    "OpenAI (private)": 1,
+    "Stripe (private)": 1
+  }
 }
