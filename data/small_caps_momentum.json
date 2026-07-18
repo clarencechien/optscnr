@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11T01:45:23.294508",
+  "updated_at": "2026-07-18T01:28:26.654135",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
@@ -14,11 +14,11 @@
     {
       "symbol": "TDUP",
       "price": 6.6,
-      "gain_30d_pct": 38.4,
+      "gain_30d_pct": 37.5,
       "market_cap_m": 852.0,
-      "avg_volume_m": 2.01,
-      "short_pct_float": 22.1,
-      "score": 25.98
+      "avg_volume_m": 1.85,
+      "short_pct_float": 19.1,
+      "score": 22.89
     }
   ]
 }
