@@ -1,88 +1,74 @@
 {
-  "updated_at": "2026-07-17T21:21:44.956620",
+  "updated_at": "2026-07-19T21:25:59.164975",
   "stats": {
-    "total_items": 103,
-    "items_with_company": 28,
-    "items_with_catalyst": 5,
-    "items_both": 3
+    "total_items": 107,
+    "items_with_company": 27,
+    "items_with_catalyst": 9,
+    "items_both": 4
   },
-  "count": 18,
+  "count": 20,
   "tickers": [
-    "BAC",
-    "META",
-    "NFLX",
-    "HOOD",
-    "PYPL",
-    "NVDA",
-    "GOOGL",
-    "BA",
-    "AMZN",
     "AAPL",
-    "MSFT",
-    "F",
+    "GOOGL",
+    "HOOD",
+    "IBM",
+    "BA",
+    "MS",
+    "AMZN",
+    "NVDA",
+    "NFLX",
     "INTC",
-    "RTX",
-    "MSTR",
     "TSLA",
-    "COIN",
-    "HPQ"
+    "TSM",
+    "BRK-B",
+    "TGT",
+    "AMD",
+    "MSTR",
+    "OKLO",
+    "PLTR",
+    "SNDK",
+    "SHOP"
   ],
   "details": [
     {
-      "symbol": "BAC",
-      "score": 3.0,
+      "symbol": "AAPL",
+      "score": 5.0,
       "evidence": [
         {
-          "title": "Bank of America Corporation 4.250% DP PFD QQ declares $0.2656 dividend",
+          "title": "Can the ‘Magnificent Seven’ save a stock market that might be doomed without them?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Bank of America Corporation 5% NCUM PFD LL declares $0.3125 dividend",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Bank of America Corporation 5.375 DEP PFD KK declares $0.3359 dividend",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Anthropic in early talks with Meta to acquire compute power",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta's latest move in the AI talent war — plus Cramer's 4 quick hits on the market",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta, Anthropic in talks for potential $10 billion compute lease deal, source says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Netflix stock falls as earnings forecast disappoints, company says it will give fewer engagement updates",
+          "title": "5 big analyst AI moves: Apple upgraded as HSBC flags ’operational turning point’",
           "catalysts": [
-            "falls"
+            "upgraded"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Should You Be Confident in Netflix (NFLX)?",
+          "title": "Can an Apple lawsuit derail OpenAI’s hardware plans?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Alphabet, Intel results in focus for AI trade as US earnings rev up",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Dow Jones Futures Loom As U.S.-Iran Attacks Escalate; Google, Tesla, AMD Ahead",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Alphabet's Gemini 3.5 Pro Is Late and the Stock Is Slipping. Is the AI Leader Falling Behind?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -102,15 +88,68 @@
       ]
     },
     {
-      "symbol": "PYPL",
+      "symbol": "IBM",
       "score": 2,
       "evidence": [
         {
-          "title": "Stripe Wants to Buy PayPal for $53 Billion — Here’s What the Merger Would Mean",
+          "title": "IBM’s 25% crash reveals AI’s hidden corporate casualty",
           "catalysts": [
-            "merger"
+            "crash"
           ],
           "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "American Airlines CEO lays out his vision to close a more than $3 billion profit gap",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Boeing on track for 2028 Air Force One delivery, costs rise",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Boeing focused on production, not new orders at Farnborough Airshow",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Korean beauty products are becoming mainstream in the U.S. Why there may be even more growth ahead",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "U.S. companies pouring swelling cash balances into growth plans - Morgan Stanley",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Can the ‘Magnificent Seven’ save a stock market that might be doomed without them?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Amazon’s Trillion-Dollar Capex Gamble vs Shopify’s Lean Profitability Strategy",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
@@ -119,19 +158,35 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Apple, Nvidia vie for title of world's most valuable company",
+          "title": "Can the ‘Magnificent Seven’ save a stock market that might be doomed without them?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Jensen Huang’s key statements shaping NVIDIA’s AI narrative",
+          "title": "Jensen Huang's $4 Trillion Artificial Intelligence (AI) Projection Could Propel Nvidia's Market Cap to $20 Trillion",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "NFLX",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Netflix is spending big money on sports. Is the company making the right bets?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Your Netflix bill is up 29% in just over a year. It’s time for Washington to step in.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
       "score": 1.0,
       "evidence": [
         {
@@ -140,84 +195,77 @@
           "has_catalyst": false
         },
         {
-          "title": "I Can’t Stop Buying Alphabet Because of This Emerging Massive AI Cost Advantage",
+          "title": "Jobs, GM, Tesla, Alphabet, Intel, Verizon, and More to Watch This Week",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
-      "score": 0.5,
+      "symbol": "TSLA",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "FAA lets Boeing sign off on 737 Max, 787 airworthiness certificates again",
+          "title": "Dow Jones Futures Loom As U.S.-Iran Attacks Escalate; Google, Tesla, AMD Ahead",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Jobs, GM, Tesla, Alphabet, Intel, Verizon, and More to Watch This Week",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 0.5,
+      "symbol": "TSM",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Amazon's Zoox issues software recall after robotaxi drove into heavy smoke",
+          "title": "Taiwan Semiconductor’s $100 Billion Arizona Expansion Is a Bullish Sign for Investors",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Taiwan Semiconductor Manufacturing Just Showed the Artificial Intelligence (AI) Build-Out Is Alive and Well With This Jaw-Dropping Announcem",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 0.5,
+      "symbol": "BRK-B",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Apple, Nvidia vie for title of world's most valuable company",
+          "title": "68% of Greg Abel's Berkshire Hathaway Portfolio Is Invested in Just 5 Stocks. Here's My Favorite of the Bunch.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Warren Buffett Takes Credit for Berkshire’s Alphabet Stock Buy: ‘I Initiated It’",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft's Nadella criticizes Anthropic's Fable for being 'editorially controlled'",
+          "title": "Your Netflix bill is up 29% in just over a year. It’s time for Washington to step in.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "F",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "My wife’s 2011 Ford Fiesta was totaled. Should we accept a $2,000 insurance settlement or give up the car for $2,700?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Alphabet, Intel results in focus for AI trade as US earnings rev up",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RTX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Raytheon secures $309.5M U.S. Space Force radar modernization agreement",
+          "title": "Dow Jones Futures Loom As U.S.-Iran Attacks Escalate; Google, Tesla, AMD Ahead",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -228,40 +276,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Strategy’s (MSTR) Q2 Earnings Test May Help Engineer a Short-Term Pop",
+          "title": "MicroStrategy CEO: Wall Street’s Biggest Banks are Locked in a Tight Bitcoin Race",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "OKLO",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Tesla Stock: Here's What Retail Investors Want To Know Ahead Of Earnings",
+          "title": "Analysts Project the Oklo Stock Price Will Reach $87 in 2027 -- Is the Risk-to-Reward Scenario Worth It?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COIN",
+      "symbol": "PLTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Coinbase’s Base Blockchain Pivots to Trading and AI After Social Initiatives Stall",
+          "title": "If You'd Put $10,000 in Palantir at Its IPO, Here's What You'd Have Now -- Even After a 37% Drop",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HPQ",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "HP Inc. (HPQ) Integrates OpenAI’s Frontier Platform to Enhance Workforce Experiences",
+          "title": "Sandisk: Even After a 580% Rise in 2026, It's Still a Screaming Buy (NASDAQ: SNDK)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SHOP",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Amazon’s Trillion-Dollar Capex Gamble vs Shopify’s Lean Profitability Strategy",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -269,8 +328,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 1,
-    "Stripe (private)": 1
+    "OpenAI (private)": 1
   }
 }
