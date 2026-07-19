@@ -1,42 +1,5 @@
 {
-  "updated_at": "2026-07-17T22:14:13.706341",
-  "count": 3,
-  "blind_spots": [
-    {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 39,
-      "consecutive_days": 15,
-      "is_strong": true,
-      "evidence": [
-        "SpaceX stock has cratered nearly 23% since the company joined the Nasdaq-100",
-        "Digital Brands Group to implement 1-for-40 reverse stock split to comply with Nasdaq rules"
-      ]
-    },
-    {
-      "name": "World",
-      "ticker": "WKC",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "World’s largest olive oil company says market has 'definitively' entered new phase",
-        "World stocks fall in semiconductor rout; oil rises on Middle East escalation"
-      ]
-    },
-    {
-      "name": "Under",
-      "ticker": "UA",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Is ZoomInfo Technologies (GTM) One of the Most Undervalued Stocks Under $5 to Buy?",
-        "Kosmos Energy (KOS): One of the Most Undervalued Stocks Under $5 to Buy"
-      ]
-    }
-  ]
+  "updated_at": "2026-07-19T22:25:16.065937",
+  "count": 0,
+  "blind_spots": []
 }
