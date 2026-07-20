@@ -1,169 +1,184 @@
 {
-  "updated_at": "2026-07-19T21:25:59.164975",
+  "updated_at": "2026-07-20T21:44:04.998256",
   "stats": {
     "total_items": 107,
-    "items_with_company": 27,
-    "items_with_catalyst": 9,
-    "items_both": 4
+    "items_with_company": 22,
+    "items_with_catalyst": 11,
+    "items_both": 2
   },
-  "count": 20,
+  "count": 18,
   "tickers": [
-    "AAPL",
-    "GOOGL",
-    "HOOD",
-    "IBM",
-    "BA",
-    "MS",
-    "AMZN",
     "NVDA",
-    "NFLX",
-    "INTC",
-    "TSLA",
-    "TSM",
-    "BRK-B",
-    "TGT",
+    "META",
     "AMD",
-    "MSTR",
-    "OKLO",
-    "PLTR",
+    "MSFT",
+    "ORCL",
+    "GOOGL",
+    "TSM",
+    "IBM",
+    "MU",
+    "NFLX",
+    "TGT",
+    "TSLA",
+    "COIN",
+    "BA",
+    "BE",
+    "AMZN",
     "SNDK",
-    "SHOP"
+    "AAPL"
   ],
   "details": [
     {
-      "symbol": "AAPL",
-      "score": 5.0,
+      "symbol": "NVDA",
+      "score": 4.0,
       "evidence": [
         {
-          "title": "Can the ‘Magnificent Seven’ save a stock market that might be doomed without them?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "5 big analyst AI moves: Apple upgraded as HSBC flags ’operational turning point’",
+          "title": "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer",
           "catalysts": [
-            "upgraded"
+            "launches"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Can an Apple lawsuit derail OpenAI’s hardware plans?",
+          "title": "Bezos backs CuspAI as startup teams up with Nvidia to hunt for chipmaking materials",
           "catalysts": [],
           "has_catalyst": false
+        },
+        {
+          "title": "Forget Nvidia. These 5 S&P 500 stocks are quietly going all in on AI.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "SpaceX slides further down the ranks of large companies as it’s overtaken by Meta",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Snap settles addiction case, leaving Meta to face trial - Bloomberg",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "AMD Just Passed Nvidia at the Top of a $45 Billion Semiconductor ETF. Micron Is Closing In.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Microsoft cut 4,800 jobs, filed 2,879 H-1B visas — but the real reason behind its $1.2T market value drop is far bigger",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "GOOGL",
-      "score": 2.5,
+      "score": 2,
       "evidence": [
         {
-          "title": "Alphabet, Intel results in focus for AI trade as US earnings rev up",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dow Jones Futures Loom As U.S.-Iran Attacks Escalate; Google, Tesla, AMD Ahead",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Alphabet's Gemini 3.5 Pro Is Late and the Stock Is Slipping. Is the AI Leader Falling Behind?",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Alphabet stock pops on report it's developing a more efficient AI chip",
+          "catalysts": [
+            "pops"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "HOOD",
-      "score": 2,
+      "symbol": "TSM",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "‘They are relentless’: A scammer is trying to change the email on my empty Robinhood account. What do they have to gain?",
-          "catalysts": [
-            "gain"
-          ],
-          "has_catalyst": true
+          "title": "TSMC is accelerating Arizona factory build-out to capitalize on AI 'megatrend,' CFO says",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Taiwan Semiconductor’s $100 Billion Arizona Expansion Is a Bullish Sign for Investors",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "IBM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "IBM’s 25% crash reveals AI’s hidden corporate casualty",
-          "catalysts": [
-            "crash"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "American Airlines CEO lays out his vision to close a more than $3 billion profit gap",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Boeing on track for 2028 Air Force One delivery, costs rise",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Boeing focused on production, not new orders at Farnborough Airshow",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Korean beauty products are becoming mainstream in the U.S. Why there may be even more growth ahead",
+          "title": "Why IBM Stock Crashed 25% Even as AI Spending Exploded",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "U.S. companies pouring swelling cash balances into growth plans - Morgan Stanley",
+          "title": "What IBM, Micron, and Sandisk all have in common",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "MU",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Can the ‘Magnificent Seven’ save a stock market that might be doomed without them?",
+          "title": "What IBM, Micron, and Sandisk all have in common",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Amazon’s Trillion-Dollar Capex Gamble vs Shopify’s Lean Profitability Strategy",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Can the ‘Magnificent Seven’ save a stock market that might be doomed without them?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Jensen Huang's $4 Trillion Artificial Intelligence (AI) Projection Could Propel Nvidia's Market Cap to $20 Trillion",
+          "title": "AMD Just Passed Nvidia at the Top of a $45 Billion Semiconductor ETF. Micron Is Closing In.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -174,76 +189,12 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Netflix is spending big money on sports. Is the company making the right bets?",
+          "title": "Netflix's growth slowdown exposes a classic shareholder trap: Chart of the Day",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Your Netflix bill is up 29% in just over a year. It’s time for Washington to step in.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Alphabet, Intel results in focus for AI trade as US earnings rev up",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Jobs, GM, Tesla, Alphabet, Intel, Verizon, and More to Watch This Week",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures Loom As U.S.-Iran Attacks Escalate; Google, Tesla, AMD Ahead",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Jobs, GM, Tesla, Alphabet, Intel, Verizon, and More to Watch This Week",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Taiwan Semiconductor’s $100 Billion Arizona Expansion Is a Bullish Sign for Investors",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Taiwan Semiconductor Manufacturing Just Showed the Artificial Intelligence (AI) Build-Out Is Alive and Well With This Jaw-Dropping Announcem",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "68% of Greg Abel's Berkshire Hathaway Portfolio Is Invested in Just 5 Stocks. Here's My Favorite of the Bunch.",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Warren Buffett Takes Credit for Berkshire’s Alphabet Stock Buy: ‘I Initiated It’",
+          "title": "Netflix Tanks on Lower Margins and Flat Outlook - Time to Buy NFLX?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -254,51 +205,62 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Your Netflix bill is up 29% in just over a year. It’s time for Washington to step in.",
+          "title": "Trump says Netanyahu won't be arrested in New York, pushing back on Mamdani",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dow Jones Futures Loom As U.S.-Iran Attacks Escalate; Google, Tesla, AMD Ahead",
+          "title": "The bar for Tesla earnings is sky-high. Here's why and how options traders can capitalize",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSTR",
+      "symbol": "COIN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "MicroStrategy CEO: Wall Street’s Biggest Banks are Locked in a Tight Bitcoin Race",
+          "title": "Coinbase trading results may fall short of expectations, according to prediction markets ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "OKLO",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Analysts Project the Oklo Stock Price Will Reach $87 in 2027 -- Is the Risk-to-Reward Scenario Worth It?",
+          "title": "Boeing CEO says company still needs 'a couple more years' to repair finances before new jet",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "BE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "If You'd Put $10,000 in Palantir at Its IPO, Here's What You'd Have Now -- Even After a 37% Drop",
+          "title": "A $1.7 Billion Reason to Buy Bloom Energy Stock Now",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Amazon closes another major facility, nearly 500 workers affected",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -309,18 +271,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Sandisk: Even After a 580% Rise in 2026, It's Still a Screaming Buy (NASDAQ: SNDK)",
+          "title": "What IBM, Micron, and Sandisk all have in common",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SHOP",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon’s Trillion-Dollar Capex Gamble vs Shopify’s Lean Profitability Strategy",
+          "title": "Apple Intelligence Just Got the Green Light in China. What That Means for AAPL Stock.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -328,6 +290,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1
+    "OpenAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
