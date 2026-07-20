@@ -1,5 +1,54 @@
 {
-  "updated_at": "2026-07-19T22:25:16.065937",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-07-20T22:30:21.631990",
+  "count": 4,
+  "blind_spots": [
+    {
+      "name": "Helios",
+      "ticker": "HLIO",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer",
+        "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer"
+      ]
+    },
+    {
+      "name": "Ryanair",
+      "ticker": "RYAOF",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Ryanair says 'no shortage' of travelers despite Iran war denting profit",
+        "Ryanair says 'no shortage' of travelers despite Iran war denting profit"
+      ]
+    },
+    {
+      "name": "Lumentum",
+      "ticker": "LITE",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Lumentum’s stock just got a lot more interesting — and Barclays has turned bullish",
+        "Lumentum’s stock just got a lot more interesting — and Barclays has turned bullish"
+      ]
+    },
+    {
+      "name": "Daily",
+      "ticker": "DJCO",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Daily – Vickers Top Buyers & Sellers for 07/20/2026",
+        "Daily – Vickers Top Insider Picks for 07/20/2026"
+      ]
+    }
+  ]
 }

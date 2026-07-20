@@ -20,20 +20,6 @@
     "total_mentions": 8,
     "ticker": "BFST"
   },
-  "Graham": {
-    "first_seen": "2026-07-12",
-    "last_seen": "2026-07-12",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GHM"
-  },
-  "AstraZeneca": {
-    "first_seen": "2026-07-12",
-    "last_seen": "2026-07-12",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "AZN"
-  },
   "Rithm Property Trust": {
     "first_seen": "2026-07-13",
     "last_seen": "2026-07-13",
@@ -89,5 +75,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "UA"
+  },
+  "Helios": {
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "HLIO"
+  },
+  "Ryanair": {
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "RYAOF"
+  },
+  "Lumentum": {
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LITE"
+  },
+  "Daily": {
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DJCO"
   }
 }
