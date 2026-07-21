@@ -1,53 +1,53 @@
 {
-  "updated_at": "2026-07-20T22:30:21.631990",
+  "updated_at": "2026-07-21T22:26:26.369551",
   "count": 4,
   "blind_spots": [
     {
-      "name": "Helios",
-      "ticker": "HLIO",
+      "name": "Gemini",
+      "ticker": "GEMI",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 5,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer",
-        "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer"
-      ]
-    },
-    {
-      "name": "Ryanair",
-      "ticker": "RYAOF",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Ryanair says 'no shortage' of travelers despite Iran war denting profit",
-        "Ryanair says 'no shortage' of travelers despite Iran war denting profit"
-      ]
-    },
-    {
-      "name": "Lumentum",
-      "ticker": "LITE",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Lumentum’s stock just got a lot more interesting — and Barclays has turned bullish",
-        "Lumentum’s stock just got a lot more interesting — and Barclays has turned bullish"
+        "Google expands Gemini lineup with cheaper models and new Mythos rival",
+        "Google expands Gemini lineup with cheaper models and new Mythos rival"
       ]
     },
     {
       "name": "Daily",
       "ticker": "DJCO",
       "mentions_today": 2,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "Daily – Vickers Top Buyers & Sellers for 07/21/2026",
+        "Daily – Vickers Top Insider Picks for 07/21/2026"
+      ]
+    },
+    {
+      "name": "Fortinet",
+      "ticker": "FTNT",
+      "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Daily – Vickers Top Buyers & Sellers for 07/20/2026",
-        "Daily – Vickers Top Insider Picks for 07/20/2026"
+        "Intel's foundry lands first named customer under CEO Lip-Bu Tan, as Fortinet signs on for security c",
+        "Intel's foundry lands first named customer under CEO Lip-Bu Tan, as Fortinet signs on for security c"
+      ]
+    },
+    {
+      "name": "Trade",
+      "ticker": "TTD",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Soybean Meal Prices Are Rising Amid Global Supply Disruptions. How to Trade the Uptrend Here.",
+        "MicroStrategy Is Asking MSTR Investors to Make One Big Trade-Off"
       ]
     }
   ]
