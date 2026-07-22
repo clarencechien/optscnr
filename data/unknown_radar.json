@@ -1,53 +1,53 @@
 {
-  "updated_at": "2026-07-21T22:26:26.369551",
+  "updated_at": "2026-07-22T22:32:50.540024",
   "count": 4,
   "blind_spots": [
     {
-      "name": "Gemini",
-      "ticker": "GEMI",
-      "mentions_today": 2,
-      "total_mentions": 5,
-      "consecutive_days": 2,
-      "is_strong": true,
+      "name": "Galaxy",
+      "ticker": "GLXY",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "Google expands Gemini lineup with cheaper models and new Mythos rival",
-        "Google expands Gemini lineup with cheaper models and new Mythos rival"
+        "Samsung ups prices as it launches new foldable smartphones ahead of expected Apple debut",
+        "Samsung ups prices as it launches new foldable smartphones ahead of expected Apple debut"
       ]
     },
     {
-      "name": "Daily",
-      "ticker": "DJCO",
-      "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "Daily – Vickers Top Buyers & Sellers for 07/21/2026",
-        "Daily – Vickers Top Insider Picks for 07/21/2026"
-      ]
-    },
-    {
-      "name": "Fortinet",
-      "ticker": "FTNT",
+      "name": "Southwest Airlines",
+      "ticker": "LUV",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Intel's foundry lands first named customer under CEO Lip-Bu Tan, as Fortinet signs on for security c",
-        "Intel's foundry lands first named customer under CEO Lip-Bu Tan, as Fortinet signs on for security c"
+        "Southwest Airlines' third-quarter forecast falls short as fuel bill climbs",
+        "Southwest Airlines' third-quarter forecast falls short as fuel bill climbs"
       ]
     },
     {
-      "name": "Trade",
-      "ticker": "TTD",
+      "name": "Reddit",
+      "ticker": "RDDT",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Soybean Meal Prices Are Rising Amid Global Supply Disruptions. How to Trade the Uptrend Here.",
-        "MicroStrategy Is Asking MSTR Investors to Make One Big Trade-Off"
+        "Reddit stock sinks on report it may not renew Google AI content deal",
+        "Reddit stock sinks on report it may not renew Google AI content deal"
+      ]
+    },
+    {
+      "name": "Spanish",
+      "ticker": "SPAUF",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Peacock is getting a lift from World Cup, Spanish-language content",
+        "Peacock is getting a lift from World Cup, Spanish-language content"
       ]
     }
   ]

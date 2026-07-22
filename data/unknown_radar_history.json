@@ -6,20 +6,6 @@
     "total_mentions": 39,
     "ticker": "NDAQ"
   },
-  "United Airlines": {
-    "first_seen": "2026-07-14",
-    "last_seen": "2026-07-14",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "UAL"
-  },
-  "Lionsgate Studios": {
-    "first_seen": "2026-07-14",
-    "last_seen": "2026-07-14",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "LION"
-  },
   "Advent": {
     "first_seen": "2026-07-15",
     "last_seen": "2026-07-15",
@@ -96,5 +82,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "TTD"
+  },
+  "Southwest Airlines": {
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LUV"
+  },
+  "Reddit": {
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "RDDT"
+  },
+  "Galaxy": {
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "GLXY"
+  },
+  "Spanish": {
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SPAUF"
   }
 }
