@@ -1,244 +1,174 @@
 {
-  "updated_at": "2026-07-22T21:38:01.861181",
+  "updated_at": "2026-07-23T21:35:42.725140",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 27,
-    "items_with_catalyst": 20,
-    "items_both": 9
+    "total_items": 102,
+    "items_with_company": 33,
+    "items_with_catalyst": 21,
+    "items_both": 10
   },
-  "count": 19,
+  "count": 20,
   "tickers": [
     "INTC",
-    "AMD",
-    "AVGO",
     "GOOGL",
-    "NOW",
-    "TSM",
-    "AAPL",
-    "NBIS",
-    "NVDA",
-    "IBM",
+    "AMD",
+    "MSFT",
     "TSLA",
-    "AMZN",
+    "JPM",
     "META",
-    "MS",
+    "SMCI",
+    "ORCL",
+    "IBM",
     "TGT",
-    "GM",
-    "CEG",
-    "GILD",
-    "CRWD"
+    "AMZN",
+    "GS",
+    "AAPL",
+    "ARM",
+    "NVDA",
+    "WMT",
+    "ANET",
+    "MRVL",
+    "TSM"
   ],
   "details": [
     {
       "symbol": "INTC",
-      "score": 10,
+      "score": 11.0,
       "evidence": [
         {
-          "title": "Intel mulls partnership for Ohio chip fab, SK Hynix among candidates - report",
+          "title": "Intel's stock jumps as chipmaker rides AI boom to fastest revenue growth in almost 15 years",
           "catalysts": [
-            "partnership"
+            "jumps",
+            "rallied"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Intel Jumps 6% on RBC’s Q2 Beat Call, AMD Rises 4%, Broadcom Climbs 3% as Chip Rally Resumes",
+          "title": "Intel forecast crushes estimates as AI boom boosts chip demand; shares jump",
           "catalysts": [
-            "jumps",
-            "rally",
-            "rises",
-            "climbs"
+            "jump"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 9.0,
-      "evidence": [
+        },
         {
-          "title": "AMD to invest up to $5 billion in Anthropic as part of computing power deal",
+          "title": "Why is Intel stock surging after-hours?",
           "catalysts": [],
           "has_catalyst": false
-        },
-        {
-          "title": "AMD Is Expected to Unveil New AI Customers. One Detail Matters Most for AMD Stock.",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Intel Jumps 6% on RBC’s Q2 Beat Call, AMD Rises 4%, Broadcom Climbs 3% as Chip Rally Resumes",
-          "catalysts": [
-            "jumps",
-            "rally",
-            "rises",
-            "climbs"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 8,
-      "evidence": [
-        {
-          "title": "Intel Jumps 6% on RBC’s Q2 Beat Call, AMD Rises 4%, Broadcom Climbs 3% as Chip Rally Resumes",
-          "catalysts": [
-            "jumps",
-            "rally",
-            "rises",
-            "climbs"
-          ],
-          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "GOOGL",
-      "score": 5.0,
+      "score": 7.0,
       "evidence": [
         {
-          "title": "Ex-Google recruiter: Ask this 'insightful' question in an interview and I'll want to hire you 'on the spot'",
+          "title": "Tesla, Alphabet lose hundreds of billions in value in post-earnings stock plunge",
+          "catalysts": [
+            "plunge"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Google Cloud CEO Kurian says customers are spending 50% more as segment blows away expectations",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Reddit stock sinks on report it may not renew Google AI content deal",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Google beats quarterly revenue expectations off of enterprise AI surge",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NOW",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "ServiceNow’s stock rises as earnings show momentum in cybersecurity",
-          "catalysts": [
-            "rises"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "ServiceNow rallies after Q2 beat, lifts annual outlook on AI demand",
-          "catalysts": [
-            "rallies"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Trump's push for American-made AI chips hits TSMC's margins",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "TSMC Plans To Raise Prices, Says Report. Stock Jumps.",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "TSMC’s AI Boom Is Just Getting Started: Why Investors Should Buy the Pullback in TSM Stock Now",
+          "title": "Alphabet and Tesla test Wall Street's patience as AI spending overshadows growth",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 2,
+      "symbol": "AMD",
+      "score": 6.5,
       "evidence": [
         {
-          "title": "Samsung ups prices as it launches new foldable smartphones ahead of expected Apple debut",
+          "title": "Cerebras stock gains on AMD partnership",
           "catalysts": [
-            "launches"
+            "gains",
+            "partnership"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NBIS",
-      "score": 2,
-      "evidence": [
+        },
         {
-          "title": "Nebius Stock Jumps On News Of Nvidia Stake",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Nebius Stock Jumps On News Of Nvidia Stake",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "IBM",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "IBM lowers full-year forecast after earnings warning",
+          "title": "Why is Advanced Micro Devices stock gaining after the close?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "IBM just cut its outlook. Why its stock is bouncing higher anyway.",
+          "title": "AMD, Arm gain after hours following blowout results from Intel",
+          "catalysts": [
+            "gain"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 3.5,
+      "evidence": [
+        {
+          "title": "Amazon and Microsoft pivot cloud gaming strategies to target different players",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "IBM cuts yearly revenue growth forecast as customers prioritize AI infrastructure spending",
+          "title": "S&P 500 flashes sell signals — options traders are bracing for wild swings in Apple, Meta and Microsoft",
           "catalysts": [],
           "has_catalyst": false
+        },
+        {
+          "title": "Tech stocks today: Intel stock soars 25%, Meta to cut 10% of workforce, Microsoft offerings buyouts",
+          "catalysts": [
+            "soars"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "TSLA",
-      "score": 0.5,
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Tesla misses on earnings, as free cash flow turns negative and margins slide ",
+          "title": "Tesla, Alphabet lose hundreds of billions in value in post-earnings stock plunge",
+          "catalysts": [
+            "plunge"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Alphabet and Tesla test Wall Street's patience as AI spending overshadows growth",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Tesla sees a $214 billion wipeout as investors pan Elon Musk’s plan to spend ‘as fast as we can’",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 0.5,
+      "symbol": "JPM",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Amazon cuts some jobs in its artificial general intelligence unit",
+          "title": "House lawmakers grill former JPMorgan executive Jes Staley over Epstein ties",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "JPMorgan report finds dramatic jump in AI-themed ETFs — despite rough quarter",
+          "catalysts": [
+            "jump"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "JPMorgan Chase & Co. (JPM) Stock Lags the Market Despite Earnings Growth",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -246,21 +176,67 @@
     },
     {
       "symbol": "META",
-      "score": 0.5,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Samsung details features of its smart glasses as it enters market dominated by Meta",
+          "title": "S&P 500 flashes sell signals — options traders are bracing for wild swings in Apple, Meta and Microsoft",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Tech stocks today: Intel stock soars 25%, Meta to cut 10% of workforce, Microsoft offerings buyouts",
+          "catalysts": [
+            "soars"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "SMCI",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Super Micro Stock Pops on Upbeat Q4 Forecast. 2 Reasons to Stay Bullish.",
+          "catalysts": [
+            "pops"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Oracle signs 10-year software contract with Pentagon worth up to $7 billion",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Pentagon awards Oracle nearly $7 billion deal in latest software consolidation push",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "AI Is Eating Big Tech’s Free Cash Flow: Why Microsoft and Oracle Face Different Risks",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MS",
-      "score": 0.5,
+      "symbol": "IBM",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "‘Owning a pet has become a luxury’ — vets worry about higher prices and shrinking pet population, survey finds",
+          "title": "IBM's Krishna tries to reassure investors that AI won't disrupt company's software unit",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Market Update: IBM, TXN",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -271,51 +247,106 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Southwest Airlines lowers annual profit target as higher fuel costs bite",
+          "title": "Amazon and Microsoft pivot cloud gaming strategies to target different players",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GM",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Analyst Report: General Motors Co",
+          "title": "Amazon and Microsoft pivot cloud gaming strategies to target different players",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CEG",
+      "symbol": "GS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Constellation Energy's Quarterly Earnings Preview: What You Need to Know",
+          "title": "Brent crude tops $100 a barrel. How the next stop could be $120",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GILD",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Gilead Sciences' Quarterly Earnings Preview: What You Need to Know",
+          "title": "S&P 500 flashes sell signals — options traders are bracing for wild swings in Apple, Meta and Microsoft",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWD",
+      "symbol": "ARM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Analyst Report: Crowdstrike Holdings Inc",
+          "title": "Why is Arm Holdings stock surging today?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Amkor Technology, NVIDIA sign multi-year deal to boost U.S. AI chip packaging",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Walmart Stock’s Extended Downturn Could Trigger a Possible Comeback",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ANET",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Arista Networks (ANET) Strengthens from Exponential Growth in AI",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRVL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Marvell Already Crashed 40% — It May Be the Best Deal to Buy on the Semi Stock Meltdown",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Taiwan Semiconductor Just Doubled Down on the AI Megatrend. Why TSMC Still Has Room to Run.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -324,6 +355,7 @@
   ],
   "watch_only": {
     "OpenAI (private)": 1,
+    "Cerebras (pre-IPO)": 1,
     "Anthropic (private)": 1
   }
 }
