@@ -6,13 +6,6 @@
     "total_mentions": 39,
     "ticker": "NDAQ"
   },
-  "Advent": {
-    "first_seen": "2026-07-15",
-    "last_seen": "2026-07-15",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "AVK"
-  },
   "Gemini": {
     "first_seen": "2026-07-16",
     "last_seen": "2026-07-21",
@@ -110,5 +103,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "SPAUF"
+  },
+  "Defense": {
+    "first_seen": "2026-07-23",
+    "last_seen": "2026-07-23",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DTII"
+  },
+  "Albertsons": {
+    "first_seen": "2026-07-23",
+    "last_seen": "2026-07-23",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ACI"
+  },
+  "Imax": {
+    "first_seen": "2026-07-23",
+    "last_seen": "2026-07-23",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "IMAX"
   }
 }

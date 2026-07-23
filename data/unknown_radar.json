@@ -1,53 +1,41 @@
 {
-  "updated_at": "2026-07-22T22:32:50.540024",
-  "count": 4,
+  "updated_at": "2026-07-23T22:30:53.119228",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "Galaxy",
-      "ticker": "GLXY",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Samsung ups prices as it launches new foldable smartphones ahead of expected Apple debut",
-        "Samsung ups prices as it launches new foldable smartphones ahead of expected Apple debut"
-      ]
-    },
-    {
-      "name": "Southwest Airlines",
-      "ticker": "LUV",
+      "name": "Defense",
+      "ticker": "DTII",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Southwest Airlines' third-quarter forecast falls short as fuel bill climbs",
-        "Southwest Airlines' third-quarter forecast falls short as fuel bill climbs"
+        "Oracle signs 10-year software contract with Pentagon worth up to $7 billion",
+        "Defense tech company Lyntris files for US IPO"
       ]
     },
     {
-      "name": "Reddit",
-      "ticker": "RDDT",
+      "name": "Albertsons",
+      "ticker": "ACI",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Reddit stock sinks on report it may not renew Google AI content deal",
-        "Reddit stock sinks on report it may not renew Google AI content deal"
+        "Albertsons stock plunges as it says weaker grocery spending will cut into sales and earnings",
+        "Albertsons stock plunges as it says weaker grocery spending will cut into sales and earnings"
       ]
     },
     {
-      "name": "Spanish",
-      "ticker": "SPAUF",
+      "name": "Imax",
+      "ticker": "IMAX",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Peacock is getting a lift from World Cup, Spanish-language content",
-        "Peacock is getting a lift from World Cup, Spanish-language content"
+        "'The Odyssey' is cleaning up for Imax. Expect the momentum to continue",
+        "'The Odyssey' is cleaning up for Imax. Expect the momentum to continue"
       ]
     }
   ]
