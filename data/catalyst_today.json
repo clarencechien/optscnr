@@ -1,253 +1,104 @@
 {
-  "updated_at": "2026-07-23T21:35:42.725140",
+  "updated_at": "2026-07-24T21:37:43.214377",
   "stats": {
-    "total_items": 102,
-    "items_with_company": 33,
-    "items_with_catalyst": 21,
-    "items_both": 10
+    "total_items": 103,
+    "items_with_company": 22,
+    "items_with_catalyst": 13,
+    "items_both": 4
   },
-  "count": 20,
+  "count": 16,
   "tickers": [
-    "INTC",
     "GOOGL",
-    "AMD",
-    "MSFT",
     "TSLA",
-    "JPM",
+    "NOW",
     "META",
-    "SMCI",
-    "ORCL",
-    "IBM",
-    "TGT",
     "AMZN",
-    "GS",
-    "AAPL",
-    "ARM",
+    "INTC",
     "NVDA",
-    "WMT",
-    "ANET",
-    "MRVL",
-    "TSM"
+    "COST",
+    "AAPL",
+    "MSFT",
+    "ORCL",
+    "SNDK",
+    "PANW",
+    "COIN",
+    "IBM",
+    "BA"
   ],
   "details": [
     {
-      "symbol": "INTC",
-      "score": 11.0,
-      "evidence": [
-        {
-          "title": "Intel's stock jumps as chipmaker rides AI boom to fastest revenue growth in almost 15 years",
-          "catalysts": [
-            "jumps",
-            "rallied"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Intel forecast crushes estimates as AI boom boosts chip demand; shares jump",
-          "catalysts": [
-            "jump"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Why is Intel stock surging after-hours?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "GOOGL",
-      "score": 7.0,
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Tesla, Alphabet lose hundreds of billions in value in post-earnings stock plunge",
-          "catalysts": [
-            "plunge"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Google Cloud CEO Kurian says customers are spending 50% more as segment blows away expectations",
+          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Alphabet and Tesla test Wall Street's patience as AI spending overshadows growth",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 6.5,
-      "evidence": [
-        {
-          "title": "Cerebras stock gains on AMD partnership",
-          "catalysts": [
-            "gains",
-            "partnership"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Why is Advanced Micro Devices stock gaining after the close?",
+          "title": "Trump defends DOJ subpoenas of NY Times reporters; Google also was targeted",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "AMD, Arm gain after hours following blowout results from Intel",
-          "catalysts": [
-            "gain"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 3.5,
-      "evidence": [
-        {
-          "title": "Amazon and Microsoft pivot cloud gaming strategies to target different players",
+          "title": "Bond market anxiety is growing over AI capex budgets",
           "catalysts": [],
           "has_catalyst": false
-        },
-        {
-          "title": "S&P 500 flashes sell signals — options traders are bracing for wild swings in Apple, Meta and Microsoft",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Tech stocks today: Intel stock soars 25%, Meta to cut 10% of workforce, Microsoft offerings buyouts",
-          "catalysts": [
-            "soars"
-          ],
-          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "TSLA",
-      "score": 3.0,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Tesla, Alphabet lose hundreds of billions in value in post-earnings stock plunge",
+          "title": "Musk's bad week: Tesla suffers worst slump since 2022, SpaceX drops ahead of Starship test flight",
           "catalysts": [
-            "plunge"
+            "drops"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Alphabet and Tesla test Wall Street's patience as AI spending overshadows growth",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Tesla sees a $214 billion wipeout as investors pan Elon Musk’s plan to spend ‘as fast as we can’",
+          "title": "Trader who successfully shorted Tesla into earnings now sets sights on this high flyer ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "JPM",
-      "score": 3.0,
+      "symbol": "NOW",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "House lawmakers grill former JPMorgan executive Jes Staley over Epstein ties",
+          "title": "Analyst Report: ServiceNow Inc",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "JPMorgan report finds dramatic jump in AI-themed ETFs — despite rough quarter",
+          "title": "ServiceNow stock jumps on strong revenue as company shrugs off AI disruption fears",
           "catalysts": [
-            "jump"
+            "jumps"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "JPMorgan Chase & Co. (JPM) Stock Lags the Market Despite Earnings Growth",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "META",
-      "score": 2.5,
+      "score": 2.0,
       "evidence": [
         {
-          "title": "S&P 500 flashes sell signals — options traders are bracing for wild swings in Apple, Meta and Microsoft",
+          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Tech stocks today: Intel stock soars 25%, Meta to cut 10% of workforce, Microsoft offerings buyouts",
-          "catalysts": [
-            "soars"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SMCI",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Super Micro Stock Pops on Upbeat Q4 Forecast. 2 Reasons to Stay Bullish.",
-          "catalysts": [
-            "pops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Oracle signs 10-year software contract with Pentagon worth up to $7 billion",
+          "title": "Bond market anxiety is growing over AI capex budgets",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Pentagon awards Oracle nearly $7 billion deal in latest software consolidation push",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "AI Is Eating Big Tech’s Free Cash Flow: Why Microsoft and Oracle Face Different Risks",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "IBM",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "IBM's Krishna tries to reassure investors that AI won't disrupt company's software unit",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Market Update: IBM, TXN",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Amazon and Microsoft pivot cloud gaming strategies to target different players",
+          "title": "Moody's says 'unprecedented' AI spending threatens credit quality of Amazon, Meta, Alphabet and others",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -255,21 +106,65 @@
     },
     {
       "symbol": "AMZN",
-      "score": 0.5,
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Amazon and Microsoft pivot cloud gaming strategies to target different players",
+          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Bond market anxiety is growing over AI capex budgets",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Moody's says 'unprecedented' AI spending threatens credit quality of Amazon, Meta, Alphabet and others",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
-      "score": 0.5,
+      "symbol": "INTC",
+      "score": 2,
       "evidence": [
         {
-          "title": "Brent crude tops $100 a barrel. How the next stop could be $120",
+          "title": "Intel rides AI boom to fastest revenue growth in almost 15 years, but shares sink",
+          "catalysts": [
+            "jumped"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Nvidia, Microsoft, Meta warn against 'premature restrictions' of open-weight models",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Why Nvidia (NVDA) Stock Faces Sell-the-News Risk Following Its Q2 Earnings Report",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COST",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Why Costco keeps gas prices so low—it's 'straight out of the retail playbook,' expert says",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Will Costco (COST) be Able to Continue High Dividend Growth?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -280,73 +175,84 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "S&P 500 flashes sell signals — options traders are bracing for wild swings in Apple, Meta and Microsoft",
+          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ARM",
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why is Arm Holdings stock surging today?",
+          "title": "Nvidia, Microsoft, Meta warn against 'premature restrictions' of open-weight models",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NVDA",
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amkor Technology, NVIDIA sign multi-year deal to boost U.S. AI chip packaging",
+          "title": "Oracle signs 10-year software contract with Pentagon worth up to $7 billion",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Walmart Stock’s Extended Downturn Could Trigger a Possible Comeback",
+          "title": "What You Need To Know Ahead of Sandisk's Earnings Release",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ANET",
+      "symbol": "PANW",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Arista Networks (ANET) Strengthens from Exponential Growth in AI",
+          "title": "Palo Alto Networks' Q4 2026 Earnings: What to Expect",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRVL",
+      "symbol": "COIN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Marvell Already Crashed 40% — It May Be the Best Deal to Buy on the Semi Stock Meltdown",
+          "title": "Coinbase Global Expands Its Singapore Operations",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSM",
+      "symbol": "IBM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Taiwan Semiconductor Just Doubled Down on the AI Megatrend. Why TSMC Still Has Room to Run.",
+          "title": "What IBM execs think will be different 90 days after a brutal warning",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "As Analysts Bet on Boeing Turnaround, Retail Investors Fixate on One Uncomfortable Fact",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -354,8 +260,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1,
-    "Cerebras (pre-IPO)": 1,
-    "Anthropic (private)": 1
+    "OpenAI (private)": 3,
+    "Anthropic (private)": 2
   }
 }
