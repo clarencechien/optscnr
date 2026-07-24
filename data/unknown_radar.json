@@ -1,42 +1,5 @@
 {
-  "updated_at": "2026-07-23T22:30:53.119228",
-  "count": 3,
-  "blind_spots": [
-    {
-      "name": "Defense",
-      "ticker": "DTII",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Oracle signs 10-year software contract with Pentagon worth up to $7 billion",
-        "Defense tech company Lyntris files for US IPO"
-      ]
-    },
-    {
-      "name": "Albertsons",
-      "ticker": "ACI",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Albertsons stock plunges as it says weaker grocery spending will cut into sales and earnings",
-        "Albertsons stock plunges as it says weaker grocery spending will cut into sales and earnings"
-      ]
-    },
-    {
-      "name": "Imax",
-      "ticker": "IMAX",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "'The Odyssey' is cleaning up for Imax. Expect the momentum to continue",
-        "'The Odyssey' is cleaning up for Imax. Expect the momentum to continue"
-      ]
-    }
-  ]
+  "updated_at": "2026-07-24T22:33:54.132148",
+  "count": 0,
+  "blind_spots": []
 }
