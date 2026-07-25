@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T03:55:39.498188",
+  "updated_at": "2026-07-25T04:11:53.727390",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -9,7 +9,21 @@
     "MIN_VOL_RATIO": 1.2,
     "MIN_AVG_VOLUME": 500000
   },
-  "count": 0,
-  "tickers": [],
-  "details": []
+  "count": 1,
+  "tickers": [
+    "SOUN"
+  ],
+  "details": [
+    {
+      "symbol": "SOUN",
+      "price": 6.16,
+      "high_52w": 22.17,
+      "low_52w": 5.83,
+      "drawdown_pct": 72.2,
+      "rebound_pct": 5.7,
+      "vol_ratio": 1.25,
+      "market_cap_b": 2.7,
+      "score": 31.0
+    }
+  ]
 }
