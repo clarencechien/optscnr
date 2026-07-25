@@ -1,4 +1,4 @@
-# Delta Radar (2308.TW) — 2026-07-24 05:34 UTC
+# Delta Radar (2308.TW) — 2026-07-25 05:27 UTC
 
 ## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
@@ -8,43 +8,43 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟢 GREEN | capex_cut:5e / vr300_delay:16e(24m) / debt_financed_capex:16e / lc_psu_competition:0e |
+| M5 narrative_triggers | 🟡 YELLOW | capex_cut:6e / vr300_delay:16e(23m) / debt_financed_capex:14e / lc_psu_competition:0e |
 
-### M5 narrative_triggers — 🟢 GREEN
+### M5 narrative_triggers — 🟡 YELLOW
 ```json
 {
   "events": {
-    "capex_cut": 5,
+    "capex_cut": 6,
     "vr300_delay": 16,
-    "debt_financed_capex": 16,
+    "debt_financed_capex": 14,
     "lc_psu_competition": 0
   },
   "mentions": {
-    "capex_cut": 5,
-    "vr300_delay": 24,
-    "debt_financed_capex": 16,
+    "capex_cut": 6,
+    "vr300_delay": 23,
+    "debt_financed_capex": 14,
     "lc_psu_competition": 0
   },
   "scoring": {
     "capex_cut": {
-      "events": 5,
-      "mentions": 5,
+      "events": 6,
+      "mentions": 6,
       "gate": "zscore",
-      "z": 0.57,
+      "z": 1.93,
       "denial": false
     },
     "vr300_delay": {
       "events": 16,
-      "mentions": 24,
+      "mentions": 23,
       "gate": "zscore",
-      "z": 0.98,
+      "z": 0.81,
       "denial": true
     },
     "debt_financed_capex": {
-      "events": 16,
-      "mentions": 16,
+      "events": 14,
+      "mentions": 14,
       "gate": "zscore",
-      "z": -0.44,
+      "z": -3.48,
       "denial": false
     },
     "lc_psu_competition": {
@@ -57,18 +57,18 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
   }
 }
 ```
-- [capex_cut] Apple’s AI Strategy: A Different Approach Amidst Hyperscaler Capex Slowdown - SaaS Earnings Trends - dars.gov.et
 - [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
 - [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
+- [capex_cut] Apple’s AI Strategy: A Different Approach Amidst Hyperscaler Capex Slowdown - SaaS Earnings Trends - dars.gov.et
 - [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
 - [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
 - [vr300_delay] Nvidia Kyber NVL144 Slips to 2028 as Physics, Not Software, Defeats the Backup Plan - Tech Times
+- [debt_financed_capex] AI data center debt has climbed to the top of Wall Street's credit risk watchlist - Startup Fortune
 - [debt_financed_capex] Oracle stock sinks as AI spending fuels debt fears - MSN
 - [debt_financed_capex] Goldman Sachs Warns on AI’s Debt Tsunami — Is This the End of the AI Boom? - 24/7 Wall St.
-- [debt_financed_capex] AI data center debt has climbed to the top of Wall Street's credit risk watchlist - Startup Fortune
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**55/55**
+- 本次回填 **9** 筆；state 已有 outcomes 的 entry：**56/56**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---
