@@ -1,31 +1,10 @@
 {
-  "Nasdaq": {
-    "first_seen": "2026-05-27",
-    "last_seen": "2026-07-17",
-    "consecutive_days": 15,
-    "total_mentions": 39,
-    "ticker": "NDAQ"
-  },
   "Gemini": {
     "first_seen": "2026-07-16",
     "last_seen": "2026-07-21",
     "consecutive_days": 2,
     "total_mentions": 5,
     "ticker": "GEMI"
-  },
-  "World": {
-    "first_seen": "2026-07-17",
-    "last_seen": "2026-07-17",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "WKC"
-  },
-  "Under": {
-    "first_seen": "2026-07-17",
-    "last_seen": "2026-07-17",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "UA"
   },
   "Helios": {
     "first_seen": "2026-07-20",
@@ -113,9 +92,9 @@
   },
   "Imax": {
     "first_seen": "2026-07-23",
-    "last_seen": "2026-07-23",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-07-26",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "IMAX"
   }
 }
