@@ -1,34 +1,116 @@
 {
-  "updated_at": "2026-07-24T21:37:43.214377",
+  "updated_at": "2026-07-26T21:27:31.630234",
   "stats": {
-    "total_items": 103,
-    "items_with_company": 22,
-    "items_with_catalyst": 13,
-    "items_both": 4
+    "total_items": 107,
+    "items_with_company": 15,
+    "items_with_catalyst": 17,
+    "items_both": 5
   },
-  "count": 16,
+  "count": 12,
   "tickers": [
-    "GOOGL",
-    "TSLA",
-    "NOW",
-    "META",
-    "AMZN",
-    "INTC",
+    "PLUG",
     "NVDA",
-    "COST",
+    "TSLA",
+    "JPM",
+    "NOW",
+    "GOOGL",
     "AAPL",
-    "MSFT",
-    "ORCL",
-    "SNDK",
-    "PANW",
-    "COIN",
-    "IBM",
-    "BA"
+    "AMZN",
+    "META",
+    "MRVL",
+    "PATH",
+    "CRWV"
   ],
   "details": [
     {
+      "symbol": "PLUG",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Plug Power Stock Jumped 83% in the First 5 Months of 2026 Only to Give up 100% of the Gains. Here's What to Expect From the Hydrogen Stock t",
+          "catalysts": [
+            "jumped",
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Nvidia locks down memory supply from SK Hynix as part of $500 billion AI deal ",
+          "catalysts": [
+            "ai deal"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Nvidia just locked down deal that changes AI race",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Prediction: Nvidia Stock Will Hit $800 Per Share by 2030",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Musk's bad week: Tesla suffers worst slump since 2022, SpaceX drops ahead of Starship test flight",
+          "catalysts": [
+            "drops"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Elon Musk Just Revealed a Quiet Win for Tesla’s AI Ambitions",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Tesla Is Still Overvalued After Its 14% Post-Earnings Drop",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "JPMorgan report finds dramatic jump in AI-themed ETFs — despite rough quarter",
+          "catalysts": [
+            "jump"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NOW",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Down 40% on the Year, Is ServiceNow Stock a Buy as Its Subscription Revenue Surges 25%?",
+          "catalysts": [
+            "surges"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
       "symbol": "GOOGL",
-      "score": 4.5,
+      "score": 1.5,
       "evidence": [
         {
           "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
@@ -41,130 +123,7 @@
           "has_catalyst": false
         },
         {
-          "title": "Bond market anxiety is growing over AI capex budgets",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Musk's bad week: Tesla suffers worst slump since 2022, SpaceX drops ahead of Starship test flight",
-          "catalysts": [
-            "drops"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Trader who successfully shorted Tesla into earnings now sets sights on this high flyer ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NOW",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Analyst Report: ServiceNow Inc",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "ServiceNow stock jumps on strong revenue as company shrugs off AI disruption fears",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Bond market anxiety is growing over AI capex budgets",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Moody's says 'unprecedented' AI spending threatens credit quality of Amazon, Meta, Alphabet and others",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Bond market anxiety is growing over AI capex budgets",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Moody's says 'unprecedented' AI spending threatens credit quality of Amazon, Meta, Alphabet and others",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Intel rides AI boom to fastest revenue growth in almost 15 years, but shares sink",
-          "catalysts": [
-            "jumped"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Nvidia, Microsoft, Meta warn against 'premature restrictions' of open-weight models",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Why Nvidia (NVDA) Stock Faces Sell-the-News Risk Following Its Q2 Earnings Report",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COST",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Why Costco keeps gas prices so low—it's 'straight out of the retail playbook,' expert says",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Will Costco (COST) be Able to Continue High Dividend Growth?",
+          "title": "Google spent $490 million a day on AI and burned $5.9 billion in cash — its first negative quarter since going public",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -172,6 +131,22 @@
     },
     {
       "symbol": "AAPL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Dow Jones Futures Due, Iran News In focus; Apple Leads Earnings Wave, Fed Meeting Ahead",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
@@ -182,85 +157,49 @@
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "META",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia, Microsoft, Meta warn against 'premature restrictions' of open-weight models",
+          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ORCL",
+      "symbol": "MRVL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Oracle signs 10-year software contract with Pentagon worth up to $7 billion",
+          "title": "Marvell Technology vs. UiPath: What Do the Quarterly Revenue Trends of These Artificial Intelligence Companies Tell Investors?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SNDK",
+      "symbol": "PATH",
       "score": 0.5,
       "evidence": [
         {
-          "title": "What You Need To Know Ahead of Sandisk's Earnings Release",
+          "title": "Marvell Technology vs. UiPath: What Do the Quarterly Revenue Trends of These Artificial Intelligence Companies Tell Investors?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PANW",
+      "symbol": "CRWV",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Palo Alto Networks' Q4 2026 Earnings: What to Expect",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Coinbase Global Expands Its Singapore Operations",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "IBM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "What IBM execs think will be different 90 days after a brutal warning",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "As Analysts Bet on Boeing Turnaround, Retail Investors Fixate on One Uncomfortable Fact",
+          "title": "Why CoreWeave Stock Fell 30% in Just 1 Month",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "OpenAI (private)": 3,
-    "Anthropic (private)": 2
-  }
+  "watch_only": {}
 }
