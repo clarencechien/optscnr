@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-07-26T22:29:34.806958",
+  "updated_at": "2026-07-27T22:33:24.751233",
   "count": 1,
   "blind_spots": [
     {
-      "name": "Imax",
-      "ticker": "IMAX",
+      "name": "JetBlue",
+      "ticker": "JBLU",
       "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "Imax 70 mm screenings become the biggest star for Christopher Nolan’s ‘The Odyssey’",
-        "Imax 70 mm screenings become the biggest star for Christopher Nolan’s ‘The Odyssey’"
+        "JetBlue overhauls fare options, from basic first to flexible economy. Here's what to know",
+        "JetBlue overhauls fare options, from basic first to flexible economy. Here's what to know"
       ]
     }
   ]

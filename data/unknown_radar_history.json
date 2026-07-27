@@ -96,5 +96,12 @@
     "consecutive_days": 2,
     "total_mentions": 4,
     "ticker": "IMAX"
+  },
+  "JetBlue": {
+    "first_seen": "2026-07-27",
+    "last_seen": "2026-07-27",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "JBLU"
   }
 }
