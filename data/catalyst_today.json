@@ -1,129 +1,87 @@
 {
-  "updated_at": "2026-07-26T21:27:31.630234",
+  "updated_at": "2026-07-27T21:40:05.854659",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 15,
-    "items_with_catalyst": 17,
-    "items_both": 5
+    "total_items": 104,
+    "items_with_company": 20,
+    "items_with_catalyst": 9,
+    "items_both": 2
   },
-  "count": 12,
+  "count": 15,
   "tickers": [
-    "PLUG",
+    "MU",
+    "MSFT",
     "NVDA",
-    "TSLA",
-    "JPM",
-    "NOW",
-    "GOOGL",
     "AAPL",
-    "AMZN",
     "META",
-    "MRVL",
-    "PATH",
-    "CRWV"
+    "TSLA",
+    "AMZN",
+    "INTC",
+    "NFLX",
+    "NKE",
+    "F",
+    "AMD",
+    "BA",
+    "FCX",
+    "HOOD"
   ],
   "details": [
     {
-      "symbol": "PLUG",
+      "symbol": "MU",
       "score": 4,
       "evidence": [
         {
-          "title": "Plug Power Stock Jumped 83% in the First 5 Months of 2026 Only to Give up 100% of the Gains. Here's What to Expect From the Hydrogen Stock t",
+          "title": "CME launches single stock futures enabling investors to trade SpaceX, Micron and others 23 hours a day",
           "catalysts": [
-            "jumped",
-            "gains"
+            "launches"
           ],
           "has_catalyst": true
+        },
+        {
+          "title": "Micron and other chip stocks fall as China steals the spotlight",
+          "catalysts": [
+            "breakthrough"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Apple ends day as world's most valuable company, passing Nvidia",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "More cracks emerge in AI-related bonds as Meta, Microsoft earnings loom",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "What to Expect in Markets This Week: Amazon, Apple, Meta and Microsoft Earnings; Fed Interest Rate Decision",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "NVDA",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Nvidia locks down memory supply from SK Hynix as part of $500 billion AI deal ",
-          "catalysts": [
-            "ai deal"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Nvidia just locked down deal that changes AI race",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Prediction: Nvidia Stock Will Hit $800 Per Share by 2030",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Musk's bad week: Tesla suffers worst slump since 2022, SpaceX drops ahead of Starship test flight",
-          "catalysts": [
-            "drops"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Elon Musk Just Revealed a Quiet Win for Tesla’s AI Ambitions",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Tesla Is Still Overvalued After Its 14% Post-Earnings Drop",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "JPMorgan report finds dramatic jump in AI-themed ETFs — despite rough quarter",
-          "catalysts": [
-            "jump"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NOW",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Down 40% on the Year, Is ServiceNow Stock a Buy as Its Subscription Revenue Surges 25%?",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
       "score": 1.5,
       "evidence": [
         {
-          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
+          "title": "Apple ends day as world's most valuable company, passing Nvidia",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Trump defends DOJ subpoenas of NY Times reporters; Google also was targeted",
+          "title": "Nvidia and OpenAI in talks for up to $250 billion backstop to fund AI infrastructure plans",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Google spent $490 million a day on AI and burned $5.9 billion in cash — its first negative quarter since going public",
+          "title": "Nvidia's potential $250B backstop for OpenAI is another strike against the AI trade",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -131,26 +89,20 @@
     },
     {
       "symbol": "AAPL",
-      "score": 1.0,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
+          "title": "Apple ends day as world's most valuable company, passing Nvidia",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Dow Jones Futures Due, Iran News In focus; Apple Leads Earnings Wave, Fed Meeting Ahead",
+          "title": "Apple reclaims title of world’s largest company after historic stretch of outperformance",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
+          "title": "What to Expect in Markets This Week: Amazon, Apple, Meta and Microsoft Earnings; Fed Interest Rate Decision",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -158,48 +110,153 @@
     },
     {
       "symbol": "META",
-      "score": 0.5,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Trump threatens EU with 'substantial TARIFF' for 'ROBBING' U.S. tech giants",
+          "title": "Comey asks judge to dismiss Trump 'seashells' case citing lack of 'true threat'",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "More cracks emerge in AI-related bonds as Meta, Microsoft earnings loom",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "What to Expect in Markets This Week: Amazon, Apple, Meta and Microsoft Earnings; Fed Interest Rate Decision",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRVL",
-      "score": 0.5,
+      "symbol": "TSLA",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Marvell Technology vs. UiPath: What Do the Quarterly Revenue Trends of These Artificial Intelligence Companies Tell Investors?",
+          "title": "SpaceX has now lost the equivalent of a full Tesla in market capitalization",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Elon Musk Just Revealed a Quiet Win for Tesla’s AI Ambitions",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PATH",
-      "score": 0.5,
+      "symbol": "AMZN",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Marvell Technology vs. UiPath: What Do the Quarterly Revenue Trends of These Artificial Intelligence Companies Tell Investors?",
+          "title": "Amazon seeks federal approval to launch 5,105 satellites for direct-to-device network",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "What to Expect in Markets This Week: Amazon, Apple, Meta and Microsoft Earnings; Fed Interest Rate Decision",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWV",
+      "symbol": "INTC",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Intel Corp Shows Strong Q2 Results and Free Cash Flow - Shorting INTC Puts is Still the Best Play",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Intel Corporation (INTC) Just Had Its Best Quarter in 15 Years. Is the Turnaround Finally Real?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why CoreWeave Stock Fell 30% in Just 1 Month",
+          "title": "Netflix woes setting up for a Hollywood ending, says trader Mike Khouw",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Ford wants more customers to customize vehicles to boost profits as it eyes 'Nike shoe drop' moments ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Ford wants more customers to customize vehicles to boost profits as it eyes 'Nike shoe drop' moments ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "What a Major Anthropic Chip Deal Really Means for AMD Stock",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Does Boeing’s (BA) FAA Win Signal the 737 MAX Turnaround Is Finally Underway?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "FCX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Freeport-McMoRan Inc. (FCX) and Digital Realty Trust, Inc. (DLR) Highlight the Companies Cashing In on AI Infrastructure",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Robinhood Bets on 3 Crypto Sectors as Blockchain Fees Hit $25 Million",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "OpenAI (private)": 2,
+    "Anthropic (private)": 1
+  }
 }
