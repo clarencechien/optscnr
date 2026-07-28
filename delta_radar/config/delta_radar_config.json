@@ -25,18 +25,43 @@
     "fcf_ni_red": 0.3,
     "inventory_runaway_pct": 15.0,
     "account_patterns": {
-      "contract_liabilities": ["^CurrentContractLiabilities$", "contract.*liab"],
-      "inventory":            ["^Inventories$", "^inventor"],
-      "operating_cash_flow":  ["^CashFlowsFromOperatingActivities$", "operating.*activit"],
-      "capex":                ["^PropertyAndPlantAndEquipment$", "propert.*plant.*equip"],
-      "net_income":           ["^IncomeAfterTaxes$", "^NetIncome$", "^ProfitLossAttributableToOwnersOfParent$", "^ProfitLoss$"]
+      "contract_liabilities": [
+        "^CurrentContractLiabilities$",
+        "contract.*liab"
+      ],
+      "inventory": [
+        "^Inventories$",
+        "^inventor"
+      ],
+      "operating_cash_flow": [
+        "^CashFlowsFromOperatingActivities$",
+        "operating.*activit"
+      ],
+      "capex": [
+        "^PropertyAndPlantAndEquipment$",
+        "propert.*plant.*equip"
+      ],
+      "net_income": [
+        "^IncomeAfterTaxes$",
+        "^NetIncome$",
+        "^ProfitLossAttributableToOwnersOfParent$",
+        "^ProfitLoss$"
+      ]
     }
   },
   "m3_thai_shadow": {
-    "_basis": "DELTA.BK Q1-2026 rev +56.2% YoY, GM 31.7%; sub reports ~2 days ahead of parent",
+    "_basis": "Q2-2026 via override: rev +46.5% YoY, GM 26.8% (below 27% floor => YELLOW). Q1 was +56.2%/31.7%. Disable override once yfinance ingests Q2.",
     "green_rev_yoy_pct": 30.0,
     "yellow_rev_yoy_pct": 15.0,
-    "gm_floor_pct": 27.0
+    "gm_floor_pct": 27.0,
+    "staleness_days": 115,
+    "override": {
+      "enabled": true,
+      "quarter_end": "2026-06-30",
+      "rev_yoy_pct": 46.5,
+      "gross_margin_pct": 26.8,
+      "source": "SET Q2 filing 2026-07-28: rev THB 65.191B +46.5% YoY +6.2% QoQ; GP 17.469B (GM 26.8%, QoQ -10.3%); NI 6.075B +31.3%; causes: material shortage/cost, mix, inventory provisions; EV weak; two new Bang Poo plants online"
+    }
   },
   "m4_customs_flow": {
     "_basis": "US monthly imports of static converters (HS 8504.40) from TH+TW = physical AI-power flow proxy; data lags ~6 weeks",
@@ -152,27 +177,71 @@
     "divergence_red_pp": 30.0,
     "red_requires_consec_months": 2,
     "cohort": {
-      "power":   {"members": ["2308", "2301", "6282"], "direction": "peer_lead_risk",
-                  "_note": "Lite-On(2301)/Acbel(6282) 反超 2308 = ASIC PSU 份額外溢的先行訊號"},
-      "cooling": {"members": ["2308", "3324", "3017"], "direction": "peer_lead_risk",
-                  "_note": "雙鴻(3324)/AVC(3017) 斜率反超 = sidecar→L2L 遷移、2308 散熱故事打折"},
-      "rack":    {"members": ["2308", "2317", "2382", "6669"], "direction": "cohort_confirm",
-                  "_note": "鴻海/廣達/緯穎 = 下游拉貨 proxy；整鏈同向 = buildout confirm，僅記錄不升級"}
+      "power": {
+        "members": [
+          "2308",
+          "2301",
+          "6282"
+        ],
+        "direction": "peer_lead_risk",
+        "_note": "Lite-On(2301)/Acbel(6282) 反超 2308 = ASIC PSU 份額外溢的先行訊號"
+      },
+      "cooling": {
+        "members": [
+          "2308",
+          "3324",
+          "3017"
+        ],
+        "direction": "peer_lead_risk",
+        "_note": "雙鴻(3324)/AVC(3017) 斜率反超 = sidecar→L2L 遷移、2308 散熱故事打折"
+      },
+      "rack": {
+        "members": [
+          "2308",
+          "2317",
+          "2382",
+          "6669"
+        ],
+        "direction": "cohort_confirm",
+        "_note": "鴻海/廣達/緯穎 = 下游拉貨 proxy；整鏈同向 = buildout confirm，僅記錄不升級"
+      }
     }
   },
   "m7_outcome_backfill": {
     "_basis": "T+5/10/20 forward returns of 2308 onto each state entry — makes the radar falsifiable (gate backtest). Stores raw return AND excess vs benchmark (2308 − benchmark) so market beta doesn't pollute cohort comparisons. Runs after every scan; idempotent.",
     "_benchmark_note": "0050 (Taiwan 50 ETF) ~ market proxy; 2308 is a ~2-3% holding so mild self-overlap, acceptable. Assumes beta≈1 (event-study style abnormal return). Switch to a broader index later if needed.",
     "enabled": true,
-    "horizons": [5, 10, 20],
+    "horizons": [
+      5,
+      10,
+      20
+    ],
     "benchmark": "0050"
   },
   "m8_revision_velocity": {
     "_basis": "consensus inflection > level. Low-tech RSS: count target-price revision DIRECTION only (headline numbers unreliable). Escalate on two consecutive down-heavy runs.",
     "query": "台達電 (目標價 OR 評等) (上修 OR 下修 OR 調升 OR 調降)",
     "max_items": 40,
-    "up_keywords": ["上修", "調升", "調高", "buy", "overweight", "raise", "upgrade", "outperform"],
-    "down_keywords": ["下修", "調降", "調低", "sell", "underweight", "cut", "downgrade", "reduce"],
+    "up_keywords": [
+      "上修",
+      "調升",
+      "調高",
+      "buy",
+      "overweight",
+      "raise",
+      "upgrade",
+      "outperform"
+    ],
+    "down_keywords": [
+      "下修",
+      "調降",
+      "調低",
+      "sell",
+      "underweight",
+      "cut",
+      "downgrade",
+      "reduce"
+    ],
     "min_total": 3,
     "yellow_down_ratio": 0.6,
     "require_consec": true
