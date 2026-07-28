@@ -1,73 +1,73 @@
 {
-  "updated_at": "2026-07-27T23:19:44.187238",
+  "updated_at": "2026-07-28T23:15:17.492226",
   "version": "sage_v0.1",
-  "days_since_ipo": 45,
-  "price": 113.5,
+  "days_since_ipo": 46,
+  "price": 116.41000366210938,
   "phase": "P1",
   "level": "L1",
   "iv": {
-    "atm_iv": 1.2666052294921875,
+    "atm_iv": 1.2692093831380207,
     "pctile": 100.0,
-    "n_samples": 38,
+    "n_samples": 39,
     "rel_calm": "False",
     "abs_acceptable": false,
     "stable": false
   },
   "liquidity": {
     "has_leaps": true,
-    "total_int": 276483,
-    "total_vol": 26936,
-    "usable_strikes": 12,
-    "best_spread_pct": 0.042,
+    "total_int": 283117,
+    "total_vol": 26423,
+    "usable_strikes": 25,
+    "best_spread_pct": 0.038,
     "liquid": true,
     "detail": [
       {
         "exp": "2028-12-15",
-        "strike": 95.0,
-        "oi": 63,
-        "spread_pct": 0.052,
-        "bid": 54.4,
-        "ask": 57.3
-      },
-      {
-        "exp": "2027-01-15",
-        "strike": 95.0,
-        "oi": 151,
-        "spread_pct": 0.056,
-        "bid": 33.0,
-        "ask": 34.9
-      },
-      {
-        "exp": "2028-12-15",
         "strike": 50.0,
-        "oi": 288,
-        "spread_pct": 0.058,
-        "bid": 74.3,
-        "ask": 78.7
+        "oi": 292,
+        "spread_pct": 0.043,
+        "bid": 76.7,
+        "ask": 80.1
       },
       {
-        "exp": "2028-12-15",
+        "exp": "2027-03-19",
+        "strike": 75.0,
+        "oi": 118,
+        "spread_pct": 0.045,
+        "bid": 49.7,
+        "ask": 52.0
+      },
+      {
+        "exp": "2028-01-21",
+        "strike": 50.0,
+        "oi": 131,
+        "spread_pct": 0.045,
+        "bid": 72.2,
+        "ask": 75.5
+      },
+      {
+        "exp": "2027-06-17",
         "strike": 90.0,
-        "oi": 94,
-        "spread_pct": 0.058,
-        "bid": 57.0,
-        "ask": 60.4
+        "oi": 52,
+        "spread_pct": 0.05,
+        "bid": 44.5,
+        "ask": 46.8
       },
       {
-        "exp": "2028-12-15",
-        "strike": 80.0,
-        "oi": 319,
-        "spread_pct": 0.061,
-        "bid": 60.6,
-        "ask": 64.4
+        "exp": "2027-03-19",
+        "strike": 85.0,
+        "oi": 105,
+        "spread_pct": 0.054,
+        "bid": 43.6,
+        "ask": 46.0
       }
     ]
   },
   "skew": {
     "skew_type": "neutral",
-    "call_iv": 1.286,
-    "put_iv": 1.282,
-    "pc_vol_ratio": 1.105
+    "call_iv": 1.292,
+    "put_iv": 1.267,
+    "pc_vol_ratio": 0.433
   },
   "viewpoint": {
     "has_viewpoint": true,
