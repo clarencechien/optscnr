@@ -3,13 +3,11 @@
   "ticker_tw": "2308",
   "ticker_th": "DELTA.BK",
   "output_dir": "output",
-
   "endpoints": {
     "finmind": "https://api.finmindtrade.com/api/v4/data",
     "census": "https://api.census.gov/data/timeseries/intltrade/imports/hs",
     "gnews_rss": "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
   },
-
   "m1_revenue_acceleration": {
     "_basis": "2026-05 YoY +43.7%; we monitor the 2nd derivative, not the level",
     "slope_window": 3,
@@ -19,7 +17,6 @@
     "red_consec_decel": 3,
     "red_slope_floor_pp": -5.0
   },
-
   "m2_bullwhip_health": {
     "_basis": "Q1-2026 baseline: FCF/NI = 88.4/205.5 = 0.43; gate: Q2 must recover toward 0.6",
     "contract_qoq_green_pct": 10.0,
@@ -28,56 +25,227 @@
     "fcf_ni_red": 0.3,
     "inventory_runaway_pct": 15.0,
     "account_patterns": {
-      "_note": "FinMind account names drift; regex lists, OR-matched. Use --dump-accounts to inspect live schema and tighten.",
-      "contract_liabilities": ["contract.*liab"],
-      "inventory": ["^inventor"],
-      "operating_cash_flow": ["operating.*activit|CashFlowsFromOperatingActivities|CashProvidedByOperatingActivities"],
-      "capex": ["propert.*plant.*equip|AcquisitionOfPropertyPlantAndEquipment"],
-      "net_income": ["^IncomeAfterTax|^NetIncome$|EquityAttributableToOwnersOfParent"]
+      "contract_liabilities": [
+        "^CurrentContractLiabilities$",
+        "contract.*liab"
+      ],
+      "inventory": [
+        "^Inventories$",
+        "^inventor"
+      ],
+      "operating_cash_flow": [
+        "^CashFlowsFromOperatingActivities$",
+        "operating.*activit"
+      ],
+      "capex": [
+        "^PropertyAndPlantAndEquipment$",
+        "propert.*plant.*equip"
+      ],
+      "net_income": [
+        "^IncomeAfterTaxes$",
+        "^NetIncome$",
+        "^ProfitLossAttributableToOwnersOfParent$",
+        "^ProfitLoss$"
+      ]
     }
   },
-
   "m3_thai_shadow": {
-    "_basis": "DELTA.BK Q1-2026 rev +56.2% YoY, GM 31.7%; sub reports ~2 days ahead of parent",
+    "_basis": "Q2-2026 via override: rev +46.5% YoY, GM 26.8% (below 27% floor => YELLOW). Q1 was +56.2%/31.7%. Disable override once yfinance ingests Q2.",
     "green_rev_yoy_pct": 30.0,
     "yellow_rev_yoy_pct": 15.0,
-    "gm_floor_pct": 27.0
+    "gm_floor_pct": 27.0,
+    "staleness_days": 115,
+    "override": {
+      "enabled": true,
+      "quarter_end": "2026-06-30",
+      "rev_yoy_pct": 46.5,
+      "gross_margin_pct": 26.8,
+      "source": "SET Q2 filing 2026-07-28: rev THB 65.191B +46.5% YoY +6.2% QoQ; GP 17.469B (GM 26.8%, QoQ -10.3%); NI 6.075B +31.3%; causes: material shortage/cost, mix, inventory provisions; EV weak; two new Bang Poo plants online"
+    }
   },
-
   "m4_customs_flow": {
     "_basis": "US monthly imports of static converters (HS 8504.40) from TH+TW = physical AI-power flow proxy; data lags ~6 weeks",
     "hs_code": "850440",
-    "country_codes": { "thailand": "5490", "taiwan": "5830" },
+    "country_codes": {
+      "thailand": "5490",
+      "taiwan": "5830"
+    },
     "months_back": 30,
     "rolling_window_months": 3,
     "green_yoy_pct": 20.0,
-    "yellow_yoy_pct": 5.0
+    "yellow_yoy_pct": 5.0,
+    "retries": 1,
+    "retry_backoff_s": 30
   },
-
   "m5_narrative_triggers": {
     "max_items_per_feed": 40,
+    "z_yellow": 1.5,
+    "z_red": 2.5,
+    "z_min_samples": 5,
     "buckets": {
       "capex_cut": {
         "query": "hyperscaler capex (cut OR reduce OR pause OR slowdown)",
-        "keywords": ["capex cut", "spending cut", "pause", "slowdown", "reduce capital expenditure", "scale back"],
-        "yellow_hits": 2,
-        "red_hits": 5
+        "keywords": [
+          "capex cut",
+          "spending cut",
+          "pause",
+          "slowdown",
+          "reduce capital expenditure",
+          "scale back"
+        ],
+        "yellow_hits": 4,
+        "red_hits": 10,
+        "must_include": [
+          "capex",
+          "capital expenditure",
+          "data center",
+          "datacenter",
+          "ai infrastructure",
+          "hyperscaler"
+        ]
       },
       "vr300_delay": {
         "query": "Nvidia (VR300 OR Kyber OR Rubin Ultra) (delay OR pushed OR postponed)",
-        "keywords": ["delay", "pushed back", "postponed", "slip"],
-        "yellow_hits": 1,
-        "red_hits": 3
+        "keywords": [
+          "delay",
+          "pushed back",
+          "postponed",
+          "slip"
+        ],
+        "yellow_hits": 2,
+        "red_hits": 5,
+        "must_include": [
+          "rubin",
+          "vr300",
+          "vr 300",
+          "kyber",
+          "vera rubin"
+        ],
+        "denial_keywords": [
+          "quashes",
+          "denies",
+          "roadmap intact",
+          "on track",
+          "rumor",
+          "rumours",
+          "debunk"
+        ]
       },
       "debt_financed_capex": {
         "query": "AI data center capex debt (bond OR borrowing OR negative free cash flow)",
-        "keywords": ["debt", "bond sale", "borrowing", "negative free cash flow", "leverage"],
-        "yellow_hits": 4,
-        "red_hits": 8
+        "keywords": [
+          "debt",
+          "bond sale",
+          "borrowing",
+          "negative free cash flow",
+          "leverage"
+        ],
+        "yellow_hits": 12,
+        "red_hits": 25,
+        "must_include": [
+          "ai",
+          "data center",
+          "datacenter",
+          "hyperscaler"
+        ]
+      },
+      "lc_psu_competition": {
+        "query": "liquid cooled PSU (Lite-On OR Acbel OR Flex OR Greatron) (certification OR mass production OR Ruby)",
+        "keywords": [
+          "liquid cooled",
+          "water cooled",
+          "ruby",
+          "mass production",
+          "certified",
+          "certification"
+        ],
+        "yellow_hits": 2,
+        "red_hits": 5,
+        "must_include": [
+          "psu",
+          "power supply",
+          "power shelf"
+        ]
+      }
+    },
+    "_calibration_note": "2026-06-11 first live run baseline: capex_cut=6 vr300_delay=10(w/ false pos) debt=18. Thresholds re-centered on this noise floor; switch to z-score vs state.json rolling baseline after ~5 runs."
+  },
+  "m6_peer_divergence": {
+    "_basis": "cohort relative momentum; we trade the divergence, not the level. TW mandatory monthly revenue = structural edge (peers report quarterly).",
+    "metric": "yoy_3m_avg",
+    "divergence_yellow_pp": 15.0,
+    "divergence_red_pp": 30.0,
+    "red_requires_consec_months": 2,
+    "cohort": {
+      "power": {
+        "members": [
+          "2308",
+          "2301",
+          "6282"
+        ],
+        "direction": "peer_lead_risk",
+        "_note": "Lite-On(2301)/Acbel(6282) 反超 2308 = ASIC PSU 份額外溢的先行訊號"
+      },
+      "cooling": {
+        "members": [
+          "2308",
+          "3324",
+          "3017"
+        ],
+        "direction": "peer_lead_risk",
+        "_note": "雙鴻(3324)/AVC(3017) 斜率反超 = sidecar→L2L 遷移、2308 散熱故事打折"
+      },
+      "rack": {
+        "members": [
+          "2308",
+          "2317",
+          "2382",
+          "6669"
+        ],
+        "direction": "cohort_confirm",
+        "_note": "鴻海/廣達/緯穎 = 下游拉貨 proxy；整鏈同向 = buildout confirm，僅記錄不升級"
       }
     }
   },
-
+  "m7_outcome_backfill": {
+    "_basis": "T+5/10/20 forward returns of 2308 onto each state entry — makes the radar falsifiable (gate backtest). Stores raw return AND excess vs benchmark (2308 − benchmark) so market beta doesn't pollute cohort comparisons. Runs after every scan; idempotent.",
+    "_benchmark_note": "0050 (Taiwan 50 ETF) ~ market proxy; 2308 is a ~2-3% holding so mild self-overlap, acceptable. Assumes beta≈1 (event-study style abnormal return). Switch to a broader index later if needed.",
+    "enabled": true,
+    "horizons": [
+      5,
+      10,
+      20
+    ],
+    "benchmark": "0050"
+  },
+  "m8_revision_velocity": {
+    "_basis": "consensus inflection > level. Low-tech RSS: count target-price revision DIRECTION only (headline numbers unreliable). Escalate on two consecutive down-heavy runs.",
+    "query": "台達電 (目標價 OR 評等) (上修 OR 下修 OR 調升 OR 調降)",
+    "max_items": 40,
+    "up_keywords": [
+      "上修",
+      "調升",
+      "調高",
+      "buy",
+      "overweight",
+      "raise",
+      "upgrade",
+      "outperform"
+    ],
+    "down_keywords": [
+      "下修",
+      "調降",
+      "調低",
+      "sell",
+      "underweight",
+      "cut",
+      "downgrade",
+      "reduce"
+    ],
+    "min_total": 3,
+    "yellow_down_ratio": 0.6,
+    "require_consec": true
+  },
   "aggregation": {
     "overall_red_min_reds": 2,
     "overall_yellow_min_yellows": 2,
