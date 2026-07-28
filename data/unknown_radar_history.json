@@ -6,27 +6,6 @@
     "total_mentions": 5,
     "ticker": "GEMI"
   },
-  "Helios": {
-    "first_seen": "2026-07-20",
-    "last_seen": "2026-07-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "HLIO"
-  },
-  "Ryanair": {
-    "first_seen": "2026-07-20",
-    "last_seen": "2026-07-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "RYAOF"
-  },
-  "Lumentum": {
-    "first_seen": "2026-07-20",
-    "last_seen": "2026-07-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "LITE"
-  },
   "Daily": {
     "first_seen": "2026-07-20",
     "last_seen": "2026-07-21",
@@ -99,9 +78,9 @@
   },
   "JetBlue": {
     "first_seen": "2026-07-27",
-    "last_seen": "2026-07-27",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-07-28",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "JBLU"
   }
 }
