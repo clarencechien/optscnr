@@ -1,129 +1,144 @@
 {
-  "updated_at": "2026-07-27T21:40:05.854659",
+  "updated_at": "2026-07-28T21:39:41.536103",
   "stats": {
-    "total_items": 104,
-    "items_with_company": 20,
-    "items_with_catalyst": 9,
-    "items_both": 2
+    "total_items": 106,
+    "items_with_company": 19,
+    "items_with_catalyst": 6,
+    "items_both": 4
   },
-  "count": 15,
+  "count": 14,
   "tickers": [
-    "MU",
-    "MSFT",
-    "NVDA",
+    "F",
     "AAPL",
     "META",
-    "TSLA",
+    "MSFT",
     "AMZN",
-    "INTC",
-    "NFLX",
-    "NKE",
-    "F",
-    "AMD",
+    "GOOGL",
+    "TSLA",
+    "TGT",
     "BA",
-    "FCX",
-    "HOOD"
+    "BE",
+    "QBTS",
+    "AVGO",
+    "IBM",
+    "HPE"
   ],
   "details": [
     {
-      "symbol": "MU",
-      "score": 4,
+      "symbol": "F",
+      "score": 6,
       "evidence": [
         {
-          "title": "CME launches single stock futures enabling investors to trade SpaceX, Micron and others 23 hours a day",
+          "title": "Ford raises guidance after Q2 earnings beat, says F-Series recovery is on track",
           "catalysts": [
-            "launches"
+            "earnings beat",
+            "raises guidance"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Micron and other chip stocks fall as China steals the spotlight",
+          "title": "Ford matches GM in one crucial way, and the stock jumps",
           "catalysts": [
-            "breakthrough"
+            "jumps"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Apple ends day as world's most valuable company, passing Nvidia",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "More cracks emerge in AI-related bonds as Meta, Microsoft earnings loom",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "What to Expect in Markets This Week: Amazon, Apple, Meta and Microsoft Earnings; Fed Interest Rate Decision",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Apple ends day as world's most valuable company, passing Nvidia",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia and OpenAI in talks for up to $250 billion backstop to fund AI infrastructure plans",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia's potential $250B backstop for OpenAI is another strike against the AI trade",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "AAPL",
-      "score": 1.5,
+      "score": 4,
       "evidence": [
         {
-          "title": "Apple ends day as world's most valuable company, passing Nvidia",
+          "title": "Apple plans to lease iPhones for $17.99 a month through partnership with Klarna",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Apple’s upgrade cycle: China unlock, leasing program, and agentic Siri converge",
+          "catalysts": [
+            "upgrade"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Amazon, Meta and Microsoft face skeptical investors this week after Google report sparked sell-off",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Apple reclaims title of world’s largest company after historic stretch of outperformance",
+          "title": "Meta likely to highlight smart glasses, avoid social media policy on upcoming earnings call, Kalshi traders say ",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "What to Expect in Markets This Week: Amazon, Apple, Meta and Microsoft Earnings; Fed Interest Rate Decision",
+          "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
-      "score": 1.5,
+      "symbol": "MSFT",
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Comey asks judge to dismiss Trump 'seashells' case citing lack of 'true threat'",
+          "title": "Amazon, Meta and Microsoft face skeptical investors this week after Google report sparked sell-off",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "More cracks emerge in AI-related bonds as Meta, Microsoft earnings loom",
+          "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "What to Expect in Markets This Week: Amazon, Apple, Meta and Microsoft Earnings; Fed Interest Rate Decision",
+          "title": "Microsoft is making a $190 billion AI gamble — and investors will soon see if it’s paying off",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 2.0,
+      "evidence": [
+        {
+          "title": "Amazon, Meta and Microsoft face skeptical investors this week after Google report sparked sell-off",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Amazon AWS AI outlook: $244B backlog and margin expansion ahead of earnings",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Amazon, Meta and Microsoft face skeptical investors this week after Google report sparked sell-off",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -139,83 +154,18 @@
           "has_catalyst": false
         },
         {
-          "title": "Elon Musk Just Revealed a Quiet Win for Tesla’s AI Ambitions",
+          "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Amazon seeks federal approval to launch 5,105 satellites for direct-to-device network",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "What to Expect in Markets This Week: Amazon, Apple, Meta and Microsoft Earnings; Fed Interest Rate Decision",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Intel Corp Shows Strong Q2 Results and Free Cash Flow - Shorting INTC Puts is Still the Best Play",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Intel Corporation (INTC) Just Had Its Best Quarter in 15 Years. Is the Turnaround Finally Real?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Netflix woes setting up for a Hollywood ending, says trader Mike Khouw",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ford wants more customers to customize vehicles to boost profits as it eyes 'Nike shoe drop' moments ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ford wants more customers to customize vehicles to boost profits as it eyes 'Nike shoe drop' moments ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "What a Major Anthropic Chip Deal Really Means for AMD Stock",
+          "title": "Senate to set up key vote on Russia sanctions",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -226,37 +176,67 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Does Boeing’s (BA) FAA Win Signal the 737 MAX Turnaround Is Finally Underway?",
+          "title": "Boeing posts wider loss than expected as Air Force One costs weigh on results",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "FCX",
+      "symbol": "BE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Freeport-McMoRan Inc. (FCX) and Digital Realty Trust, Inc. (DLR) Highlight the Companies Cashing In on AI Infrastructure",
+          "title": "Bloom Energy sees sales top $1 billion as AI proves a validation moment for fuel-cell technology",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HOOD",
+      "symbol": "QBTS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Robinhood Bets on 3 Crypto Sectors as Blockchain Fees Hit $25 Million",
+          "title": "Quantum Computing Stocks: D-Wave, AT&T Expand Quantum Agreement",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Broadcom (AVGO) Rose on Strong Custom Silicon Demand and New Client Wins",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Circle Buys Blockchain Patents From IBM",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HPE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Hewlett Packard Enterprise (HPE) Rose on Strong AI Server Demand and Juniper Integration",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "OpenAI (private)": 2,
-    "Anthropic (private)": 1
-  }
+  "watch_only": {}
 }
