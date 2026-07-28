@@ -1,4 +1,4 @@
-# Delta Radar (2308.TW) — 2026-07-28 09:17 UTC
+# Delta Radar (2308.TW) — 2026-07-28 09:27 UTC
 
 ## 總判定：🟡 YELLOW
 
@@ -10,7 +10,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 |---|---|---|
 | M1 revenue_acceleration | 🟢 GREEN | 2026-06 YoY +55.4%, slope +5.94pp/月, 連續減速 0 個月 |
 | M2 bullwhip_health | 🟡 YELLOW | 合約負債 QoQ +7.4% / 存貨 QoQ +17.4% / FCF/淨利 0.37 |
-| M3 thai_shadow | 🟢 GREEN | DELTA.BK 2026-03-31 營收 YoY +47.0%, GM 31.7% |
+| M3 thai_shadow | 🟡 YELLOW | DELTA.BK 2026-06-30 營收 YoY +46.5%, GM 26.8% |
 | M4 customs_flow | 🟢 GREEN | US 進口 HS850440 (TH+TW) 近3月 $1360.1M, YoY +50.5% |
 | M5 narrative_triggers | 🟢 GREEN | capex_cut:5e / vr300_delay:16e(22m) / debt_financed_capex:15e / lc_psu_competition:0e |
 | M6 peer_divergence | 🟡 YELLOW | cooling:3017領先+18pp |
@@ -43,14 +43,16 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 }
 ```
 
-### M3 thai_shadow — 🟢 GREEN
+### M3 thai_shadow — 🟡 YELLOW
 ```json
 {
-  "latest_q": "2026-03-31",
-  "rev_yoy_pct": 47.0,
-  "gross_margin_pct": 31.7
+  "latest_q": "2026-06-30",
+  "rev_yoy_pct": 46.5,
+  "gross_margin_pct": 26.8
 }
 ```
+- 手動覆寫生效(SET Q2 filing 2026-07-28: rev THB 65.191B +46.5% YoY +6.2% QoQ; GP 17.469B (GM 26.8%, QoQ -10.3%); NI 6.075B +31.3%; causes: material shortage/cost, mix, inventory provisions; EV weak; two new Bang Poo plants online),yfinance 入庫後可關閉 override.enabled
+- 泰子公司毛利率 26.8% 跌破 27.0% 地板
 
 ### M4 customs_flow — 🟢 GREEN
 ```json
@@ -98,7 +100,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
       "events": 16,
       "mentions": 22,
       "gate": "zscore",
-      "z": 0.14,
+      "z": 0.07,
       "denial": true
     },
     "debt_financed_capex": {
@@ -185,7 +187,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 ```
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **5** 筆；state 已有 outcomes 的 entry：**60/60**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**61/61**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---
