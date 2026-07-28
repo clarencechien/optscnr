@@ -378,32 +378,51 @@ def run_m2(cfg: dict, fetch: Callable) -> ModuleResult:
 def run_m3(cfg: dict, quarterlies: Callable) -> ModuleResult:
     res = ModuleResult("M3 thai_shadow")
     p = cfg["m3_thai_shadow"]
+    latest, yoy_v, gm = None, None, None
     try:
         data = quarterlies(cfg["ticker_th"])
-    except ImportError:
-        res.error = "yfinance not installed (pip install yfinance)"
-        return res
-    rev = data.get("revenue", {})
-    if len(rev) < 5:
-        # yfinance only exposes ~4-5 quarters; YoY needs 5
-        res.error = f"only {len(rev)} quarters of DELTA.BK revenue available"
-        if len(rev) >= 2:
+        rev = data.get("revenue", {})
+        if len(rev) >= 5:
             ks = sorted(rev)
-            qoq = yoy(rev[ks[-1]], rev[ks[-2]])
-            res.metrics = {"latest_q": ks[-1], "rev_qoq_pct": round(qoq, 1) if qoq else None}
+            latest = ks[-1]
+            yoy_v = yoy(rev[ks[-1]], rev[ks[-5]])
+            gp = data.get("gross_profit", {})
+            if latest in gp and rev[latest]:
+                gm = gp[latest] / rev[latest] * 100.0
+        elif len(rev) >= 1:
+            latest = sorted(rev)[-1]
+            res.notes.append(f"yfinance 僅 {len(rev)} 季,YoY 無法計算")
+    except ImportError:
+        res.notes.append("yfinance not installed (pip install yfinance)")
+
+    # manual override: when the sub has REPORTED but the data source hasn't
+    # ingested yet, numbers can be injected via config (source noted in report)
+    ov = p.get("override", {})
+    if ov.get("enabled") and (latest is None or str(ov["quarter_end"]) > str(latest)):
+        latest = ov["quarter_end"]
+        yoy_v = ov.get("rev_yoy_pct", yoy_v)
+        gm = ov.get("gross_margin_pct", gm)
+        res.notes.append(f"手動覆寫生效({ov.get('source', 'manual')}),"
+                         f"yfinance 入庫後可關閉 override.enabled")
+
+    if latest is None or yoy_v is None:
+        res.error = "no usable DELTA.BK quarterly data (and no override)"
         return res
-    ks = sorted(rev)
-    latest, yoy_v = ks[-1], yoy(rev[ks[-1]], rev[ks[-5]])
-    gm = None
-    gp = data.get("gross_profit", {})
-    if latest in gp and rev[latest]:
-        gm = gp[latest] / rev[latest] * 100.0
-    res.metrics = {"latest_q": latest,
-                   "rev_yoy_pct": round(yoy_v, 1) if yoy_v is not None else None,
-                   "gross_margin_pct": round(gm, 1) if gm is not None else None}
-    if yoy_v is None:
-        res.error = "could not compute YoY"
-        return res
+
+    # staleness self-check: if the latest quarter is older than staleness_days,
+    # the NEXT quarter has likely been filed but not ingested by the source
+    try:
+        q_end = dt.date.fromisoformat(str(latest)[:10])
+        age = (dt.date.today() - q_end).days
+        if age > p.get("staleness_days", 115):
+            res.notes.append(f"⚠️ 資料落後:最新季度距今 {age} 天,"
+                             f"次季財報應已公布——檢查來源或啟用 override")
+    except ValueError:
+        pass
+
+    res.metrics = {"latest_q": str(latest),
+                   "rev_yoy_pct": round(yoy_v, 1),
+                   "gross_margin_pct": None if gm is None else round(gm, 1)}
     if yoy_v >= p["green_rev_yoy_pct"]:
         res.status = GREEN
     elif yoy_v >= p["yellow_rev_yoy_pct"]:
@@ -413,7 +432,8 @@ def run_m3(cfg: dict, quarterlies: Callable) -> ModuleResult:
     if gm is not None and gm < p["gm_floor_pct"]:
         res.status = max(res.status, YELLOW, key=lambda s: SEVERITY[s])
         res.notes.append(f"泰子公司毛利率 {gm:.1f}% 跌破 {p['gm_floor_pct']}% 地板")
-    res.headline = f"DELTA.BK {latest} 營收 YoY {fmt_pct(yoy_v)}, GM {res.metrics['gross_margin_pct']}%"
+    res.headline = (f"DELTA.BK {latest} 營收 YoY {fmt_pct(yoy_v)}, "
+                    f"GM {res.metrics['gross_margin_pct']}%")
     return res
 
 
