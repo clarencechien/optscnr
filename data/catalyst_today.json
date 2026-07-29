@@ -1,86 +1,149 @@
 {
-  "updated_at": "2026-07-28T21:39:41.536103",
+  "updated_at": "2026-07-29T21:26:53.063094",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 19,
-    "items_with_catalyst": 6,
-    "items_both": 4
+    "total_items": 100,
+    "items_with_company": 30,
+    "items_with_catalyst": 16,
+    "items_both": 7
   },
-  "count": 14,
+  "count": 16,
   "tickers": [
-    "F",
-    "AAPL",
     "META",
+    "AAPL",
+    "AMD",
+    "QCOM",
+    "SBUX",
+    "HOOD",
     "MSFT",
+    "F",
+    "LRCX",
+    "HIMS",
+    "NKE",
+    "JPM",
+    "TDOC",
+    "MS",
     "AMZN",
-    "GOOGL",
-    "TSLA",
-    "TGT",
-    "BA",
-    "BE",
-    "QBTS",
-    "AVGO",
-    "IBM",
-    "HPE"
+    "AMAT"
   ],
   "details": [
     {
-      "symbol": "F",
-      "score": 6,
+      "symbol": "META",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Ford raises guidance after Q2 earnings beat, says F-Series recovery is on track",
+          "title": "Meta's stock plunges almost 10% on disappointing guidance, dwindling free cash flow",
           "catalysts": [
-            "earnings beat",
-            "raises guidance"
+            "plunges"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Ford matches GM in one crucial way, and the stock jumps",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
+          "title": "Hims and Hers shares fall 10% as FTC sues company over data, billing practices",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Fed keeps rates steady. The big question now: What will Microsoft and Meta say on AI capex? ",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "AAPL",
+      "score": 4.0,
+      "evidence": [
+        {
+          "title": "Apple shares just hit a record. Here's how trader Mike Khouw is playing the move",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Tim Cook’s last earnings call comes at momentous time for Apple with stock at record",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Qualcomm forecasts weak quarterly profit, expects Apple revenue drop to accelerate",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
       "score": 4,
       "evidence": [
         {
-          "title": "Apple plans to lease iPhones for $17.99 a month through partnership with Klarna",
+          "title": "Core Scientific Partners With Chipmaker AMD On A.I. Data Centre",
           "catalysts": [
-            "partnership"
+            "partners with"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Apple’s upgrade cycle: China unlock, leasing program, and agentic Siri converge",
+          "title": "Advanced Micro Devices (AMD) Surged on an Agentic AI-Driven Server CPU Renaissance",
           "catalysts": [
-            "upgrade"
+            "surged"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "QCOM",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Qualcomm to raise prices during memory crunch as chipmaker issues light earnings guidance",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Qualcomm’s stock falls as memory woes weigh on earnings",
+          "catalysts": [
+            "falls"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Qualcomm forecasts weak quarterly profit, expects Apple revenue drop to accelerate",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SBUX",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Amazon, Meta and Microsoft face skeptical investors this week after Google report sparked sell-off",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Starbucks stock jumps as coffee giant raises full-year outlook",
+          "catalysts": [
+            "jumps"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Meta likely to highlight smart glasses, avoid social media policy on upcoming earnings call, Kalshi traders say ",
+          "title": "Starbucks is becoming cool again. Here’s how it pulled off its turnaround.",
           "catalysts": [],
           "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Robinhood puts up record revenue as volatility drives a trading bonanza",
+          "catalysts": [
+            "record revenue"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
+          "title": "Robinhood beats quarterly profit estimates as trading activity remains robust",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -88,20 +151,102 @@
     },
     {
       "symbol": "MSFT",
-      "score": 2.0,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Amazon, Meta and Microsoft face skeptical investors this week after Google report sparked sell-off",
+          "title": "Microsoft beats Q4 cloud expectations as full-year Azure revenue tops $100 billion",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
+          "title": "Fed keeps rates steady. The big question now: What will Microsoft and Meta say on AI capex? ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Ford’s big-truck bet is paying off — and Wall Street is taking notice",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Microsoft is making a $190 billion AI gamble — and investors will soon see if it’s paying off",
+          "title": "Ford Motor Stock Outlook: Is Wall Street Bullish or Bearish?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LRCX",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Why is Lam Research stock surging today?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Lam Research Corporation (LRCX) Rose on Strong Semiconductor Capital Spending",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HIMS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Hims and Hers shares fall 10% as FTC sues company over data, billing practices",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Nike was once China's sneaker king. Here's why its sales have fallen 30%",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "JPMorgan, Schwab and UBS manage millions in Trump's $858 million investment portfolio",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TDOC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why is Teladoc stock plunging today?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Morgan Stanley Expands Crypto ETF Suite With New Ethereum & Solana Trusts",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -109,134 +254,29 @@
     },
     {
       "symbol": "AMZN",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Amazon, Meta and Microsoft face skeptical investors this week after Google report sparked sell-off",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Amazon AWS AI outlook: $244B backlog and margin expansion ahead of earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Amazon, Meta and Microsoft face skeptical investors this week after Google report sparked sell-off",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "SpaceX has now lost the equivalent of a full Tesla in market capitalization",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Alphabet and Tesla took a hit from soaring AI spending. Will Microsoft, Meta and Amazon be next?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Senate to set up key vote on Russia sanctions",
+          "title": "Amazon.com Stock: Analyst Estimates & Ratings",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "AMAT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Boeing posts wider loss than expected as Air Force One costs weigh on results",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Bloom Energy sees sales top $1 billion as AI proves a validation moment for fuel-cell technology",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "QBTS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Quantum Computing Stocks: D-Wave, AT&T Expand Quantum Agreement",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Broadcom (AVGO) Rose on Strong Custom Silicon Demand and New Client Wins",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "IBM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Circle Buys Blockchain Patents From IBM",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HPE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Hewlett Packard Enterprise (HPE) Rose on Strong AI Server Demand and Juniper Integration",
+          "title": "Applied Materials (AMAT) Rose on AI-Driven Wafer Fabrication Spending",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "OpenAI (private)": 1,
+    "xAI (private)": 1
+  }
 }
