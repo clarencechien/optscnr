@@ -5849,5 +5849,86 @@
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
+  },
+  {
+    "ts": "2026-07-29T05:36:02.210291+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:5e / vr300_delay:15e(21m) / debt_financed_capex:14e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 5,
+            "vr300_delay": 15,
+            "debt_financed_capex": 14,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 5,
+            "vr300_delay": 21,
+            "debt_financed_capex": 14,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 5,
+              "mentions": 5,
+              "gate": "zscore",
+              "z": -0.47,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 15,
+              "mentions": 21,
+              "gate": "zscore",
+              "z": -0.62,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 14,
+              "mentions": 14,
+              "gate": "zscore",
+              "z": -0.97,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[vr300_delay] Nvidia Kyber NVL144 Slips to 2028 as Physics, Not Software, Defeats the Backup Plan - Tech Times",
+          "[debt_financed_capex] Goldman Sachs Warns on AI’s Debt Tsunami — Is This the End of the AI Boom? - 24/7 Wall St.",
+          "[debt_financed_capex] Amazon’s $25 Billion Bond Sale: Is the AI-Debt Boom a Warning Sign or a Smart Way to Bankroll a Build-Out? - MarketWise",
+          "[debt_financed_capex] AI data center debt has climbed to the top of Wall Street's credit risk watchlist - Startup Fortune"
+        ],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-07-29",
+      "benchmark": "0050",
+      "entry_close": null,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
   }
 ]
