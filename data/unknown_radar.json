@@ -1,17 +1,29 @@
 {
-  "updated_at": "2026-07-28T22:33:18.788402",
-  "count": 1,
+  "updated_at": "2026-07-29T22:28:21.413808",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "JetBlue",
-      "ticker": "JBLU",
+      "name": "Schwab",
+      "ticker": "SCHW-PJ",
       "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "JetBlue overhauls fare options, from basic first to flexible economy. Here's what to know",
-        "JetBlue overhauls fare options, from basic first to flexible economy. Here's what to know"
+        "JPMorgan, Schwab and UBS manage millions in Trump's $858 million investment portfolio",
+        "JPMorgan, Schwab and UBS manage millions in Trump's $858 million investment portfolio"
+      ]
+    },
+    {
+      "name": "Novo Nordisk",
+      "ticker": "NONOF",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Why shareholders are suing Novo Nordisk over next-generation weight-loss drug",
+        "Why shareholders are suing Novo Nordisk over next-generation weight-loss drug"
       ]
     }
   ]
