@@ -1,29 +1,41 @@
 {
-  "updated_at": "2026-07-29T22:28:21.413808",
-  "count": 2,
+  "updated_at": "2026-07-30T22:35:13.388901",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "Schwab",
-      "ticker": "SCHW-PJ",
+      "name": "Imax",
+      "ticker": "IMAX",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 6,
+      "consecutive_days": 3,
+      "is_strong": true,
       "evidence": [
-        "JPMorgan, Schwab and UBS manage millions in Trump's $858 million investment portfolio",
-        "JPMorgan, Schwab and UBS manage millions in Trump's $858 million investment portfolio"
+        "'The Odyssey' extends stay in 70 mm Imax theaters as shows sell out weeks in advance",
+        "'The Odyssey' extends stay in 70 mm Imax theaters as shows sell out weeks in advance"
       ]
     },
     {
-      "name": "Novo Nordisk",
-      "ticker": "NONOF",
+      "name": "Reddit",
+      "ticker": "RDDT",
+      "mentions_today": 4,
+      "total_mentions": 6,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "Reddit shares sink 11% on 'choppy' search referrals even as results blow past estimates",
+        "Reddit shares sink 11% on 'choppy' search referrals even as results blow past estimates"
+      ]
+    },
+    {
+      "name": "Stellantis",
+      "ticker": "STLA",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Why shareholders are suing Novo Nordisk over next-generation weight-loss drug",
-        "Why shareholders are suing Novo Nordisk over next-generation weight-loss drug"
+        "Jeep maker Stellantis swings to profit on rising demand in North America",
+        "Jeep maker Stellantis swings to profit on rising demand in North America"
       ]
     }
   ]

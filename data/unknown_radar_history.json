@@ -1,31 +1,10 @@
 {
-  "Southwest Airlines": {
-    "first_seen": "2026-07-22",
-    "last_seen": "2026-07-22",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "LUV"
-  },
   "Reddit": {
     "first_seen": "2026-07-22",
-    "last_seen": "2026-07-22",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-07-30",
+    "consecutive_days": 2,
+    "total_mentions": 6,
     "ticker": "RDDT"
-  },
-  "Galaxy": {
-    "first_seen": "2026-07-22",
-    "last_seen": "2026-07-22",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "GLXY"
-  },
-  "Spanish": {
-    "first_seen": "2026-07-22",
-    "last_seen": "2026-07-22",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SPAUF"
   },
   "Defense": {
     "first_seen": "2026-07-23",
@@ -43,9 +22,9 @@
   },
   "Imax": {
     "first_seen": "2026-07-23",
-    "last_seen": "2026-07-26",
-    "consecutive_days": 2,
-    "total_mentions": 4,
+    "last_seen": "2026-07-30",
+    "consecutive_days": 3,
+    "total_mentions": 6,
     "ticker": "IMAX"
   },
   "JetBlue": {
@@ -68,5 +47,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "NONOF"
+  },
+  "Stellantis": {
+    "first_seen": "2026-07-30",
+    "last_seen": "2026-07-30",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "STLA"
   }
 }
