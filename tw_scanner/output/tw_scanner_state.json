@@ -386,5 +386,19 @@
       "retail_mtx": 65.1,
       "margin_chg": 0.4
     }
+  },
+  {
+    "date": "2026-07-30",
+    "regime": "CAPITULATION",
+    "score": -0.321,
+    "alerts": [
+      "capitulation"
+    ],
+    "pcts": {
+      "f_spot_20d": 2.4,
+      "tx_delta": 75.8,
+      "retail_mtx": 46.4,
+      "margin_chg": 4.0
+    }
   }
 ]
