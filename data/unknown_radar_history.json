@@ -6,20 +6,6 @@
     "total_mentions": 6,
     "ticker": "RDDT"
   },
-  "Defense": {
-    "first_seen": "2026-07-23",
-    "last_seen": "2026-07-23",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "DTII"
-  },
-  "Albertsons": {
-    "first_seen": "2026-07-23",
-    "last_seen": "2026-07-23",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ACI"
-  },
   "Imax": {
     "first_seen": "2026-07-23",
     "last_seen": "2026-07-30",
@@ -54,5 +40,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "STLA"
+  },
+  "Leonardo": {
+    "first_seen": "2026-07-31",
+    "last_seen": "2026-07-31",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DRS"
+  },
+  "Ferguson Enterprises": {
+    "first_seen": "2026-07-31",
+    "last_seen": "2026-07-31",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "FERG"
+  },
+  "Nasdaq": {
+    "first_seen": "2026-07-31",
+    "last_seen": "2026-07-31",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "NDAQ"
   }
 }
