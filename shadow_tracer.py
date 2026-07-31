@@ -161,6 +161,39 @@ def backfill(signals):
     return updated
 
 
+def _mults_of(sig):
+    """回傳該信號已回填檢查點的倍數列表（依 t5→t10→t20 順序）"""
+    entry = sig.get("entry_price", 0)
+    if not entry or entry <= 0:
+        return []
+    out = []
+    for k in ("t5", "t10", "t20"):
+        r = sig.get(k)
+        if r and r.get("opt_price") is not None:
+            out.append(r["opt_price"] / entry)
+    return out
+
+
+def _ladder_return(sig):
+    """階梯出場模擬報酬（倍數，1.0 = 打平）。
+    規則：峰值 >= 2x 時「+100% 賣半」→ 一半在 2x 落袋、剩一半以最後檢查點價出場；
+    沒到 2x 就全部抱到最後檢查點。這是 P3-1 期望值欄的定義——
+    命中率只數贏家（存活者偏差），期望值把歸零票也算進來。"""
+    m = _mults_of(sig)
+    if not m:
+        return None
+    peak, last = max(m), m[-1]
+    if peak >= VERDICT_RULES["spike"]:
+        return 0.5 * VERDICT_RULES["spike"] + 0.5 * last
+    return last
+
+
+def _is_zeroed(sig):
+    """歸零定義：峰值 < 0.2x（連反彈逃命的機會都沒給）"""
+    m = _mults_of(sig)
+    return bool(m) and max(m) < 0.2
+
+
 def generate_shadowlog_md(signals, month_str):
     """產出 SHADOWLOG_YYYY-MM.md，三區塊。
     只記市場事實，不記持有/損益。"""
@@ -177,7 +210,27 @@ def generate_shadowlog_md(signals, month_str):
         md += f"## 📊 整體命中率\n\n"
         md += f"- 已驗證信號：{len(judged)} / {len(signals)}\n"
         md += f"- 噴出（≥2x）：{len(spiked)} 筆 → **命中率 {hit_rate:.0f}%**\n"
-        md += f"- 待驗證（T+N 還沒到）：{len(signals) - len(judged)} 筆\n\n"
+        md += f"- 待驗證（T+N 還沒到）：{len(signals) - len(judged)} 筆\n"
+
+        # === P3-1：歸零率 + 期望值（修存活者偏差——命中率只數贏家，不數屍體）===
+        zeroed = [s for s in judged if _is_zeroed(s)]
+        evs = [v for v in (_ladder_return(s) for s in judged) if v is not None]
+        md += f"- 歸零率（峰值 <0.2x）：{len(zeroed)} 筆 → **{len(zeroed)/len(judged)*100:.0f}%**\n"
+        if evs:
+            avg_ev = sum(evs) / len(evs)
+            md += (f"- 期望值（階梯出場模擬：峰≥2x 賣半、餘以末檢查點出場）："
+                   f"平均 **{avg_ev:.2f}x**（1.0x = 打平）\n")
+
+        # === P3-2：標的-日去重命中率（主指標）===
+        # 同一標的多履約是「同一次擲骰的不同角度」（T 20C/21C/30C 被 2x 線隨機切一刀），
+        # 271 筆樣本實際只有 30-40 個獨立事件。以 (標的, 信號日) 去重後的命中率為主指標。
+        groups = {}
+        for s in judged:
+            groups.setdefault((s["ticker"], s["snapshot_date"]), []).append(s)
+        g_hit = [g for g in groups.values()
+                 if any(x["verdict"].startswith("✅") for x in g)]
+        md += (f"- **標的-日去重命中率（主指標）**：{len(g_hit)} / {len(groups)} 個獨立事件 → "
+               f"**{len(g_hit)/len(groups)*100:.0f}%**（任一履約 ≥2x 即算命中）\n\n")
 
         # === 權利金分層命中率（lottery vs mid vs heavy）===
         # 驗證「$1.28 樂透票 vs $5.5 實彈單」兩類信號的期望值是否有顯著差異
@@ -218,7 +271,7 @@ def generate_shadowlog_md(signals, month_str):
                 return None
 
         md += "### ⏳ DTE 分層命中率\n\n"
-        md += "| 分層 | 已驗證 | 噴出 | 命中率 |\n|---|---|---|---|\n"
+        md += "| 分層 | 已驗證 | 噴出 | 命中率 | 歸零率 | 期望值 |\n|---|---|---|---|---|---|\n"
         dte_buckets = [
             ("<21天（絞肉區）", lambda d: d is not None and d < 21),
             ("21-45天", lambda d: d is not None and 21 <= d <= 45),
@@ -228,8 +281,13 @@ def generate_shadowlog_md(signals, month_str):
             bj = [s for s in judged if cond(_dte_of(s))]
             bs = [s for s in bj if s["verdict"].startswith("✅")]
             rate = f"{len(bs)/len(bj)*100:.0f}%" if bj else "—"
-            md += f"| {label} | {len(bj)} | {len(bs)} | {rate} |\n"
-        md += "\n_驗證進場天期與命中率的關係；樣本 <10 筆僅供參考。_\n\n"
+            bz = [s for s in bj if _is_zeroed(s)]
+            zrate = f"{len(bz)/len(bj)*100:.0f}%" if bj else "—"
+            bev = [v for v in (_ladder_return(s) for s in bj) if v is not None]
+            ev = f"{sum(bev)/len(bev):.2f}x" if bev else "—"
+            md += f"| {label} | {len(bj)} | {len(bs)} | {rate} | {zrate} | {ev} |\n"
+        md += ("\n_命中率有存活者偏差（六月 21-45 天 60% vs 七月 0%，測的是「當月哪批標的動了」"
+               "而非 DTE）——判讀以**期望值**為準；樣本 <10 筆僅供參考。_\n\n")
 
         # === 過濾盲點觀察（只記錄，不改分）===
         # 盲點一：長天期極價外——過濾一要求 DTE<45 才觸發，DTE>45 的極價外漏網
@@ -306,16 +364,33 @@ def generate_shadowlog_md(signals, month_str):
 
     # === 區塊三：全部高分信號 T+N 追蹤 ===
     md += "## 🎯 區塊三：高分信號 T+N 追蹤（全部）\n\n"
-    md += "| 標的 | 日期 | 分 | 進場價 | T+5 | T+10 | T+20 | 判定 |\n"
-    md += "|---|---|---|---|---|---|---|---|\n"
+    md += "| 標的 | 日期 | 分 | 進場價 | T+5 | T+10 | T+20 | 判定 | 歸因 |\n"
+    md += "|---|---|---|---|---|---|---|---|---|\n"
     for s in sorted(signals, key=lambda x: x["snapshot_date"], reverse=True):
         md += (f"| {s['ticker']} {s['strike']:.0f}C | {s['snapshot_date']} | {s['score']} "
                f"| ${s['entry_price']:.2f} | {_fmt_mult(s,'t5')} | {_fmt_mult(s,'t10')} "
-               f"| {_fmt_mult(s,'t20')} | {s.get('verdict') or '待驗證'} |\n")
+               f"| {_fmt_mult(s,'t20')} | {s.get('verdict') or '待驗證'} | {_fmt_attribution(s)} |\n")
     md += "\n"
-    md += "_T+N 欄顯示「當時 option 價格是進場價的幾倍」。`—` = 還沒到檢查點；`💨` = 抓不到資料。_\n"
+    md += ("_T+N 欄顯示「當時 option 價格是進場價的幾倍」。`—` = 還沒到檢查點；`💨` = 抓不到資料。_\n"
+           "_歸因欄（P3-3，人工回填 JSON 的 `signal_day_underlying_move` / `why_it_popped`）：_\n"
+           "_信號日標的漲跌% + 噴發型態（跳空脈衝/慢磨/災後反彈續命/不明），讓贏家分析不用每月從頭查新聞。_\n")
 
     return md
+
+
+def _fmt_attribution(sig):
+    """格式化 P3-3 歸因欄：信號日標的漲跌% + why_it_popped（皆為人工回填，缺就顯示 —）"""
+    parts = []
+    move = sig.get("signal_day_underlying_move")
+    if move is not None:
+        try:
+            parts.append(f"{float(move):+.1f}%")
+        except (TypeError, ValueError):
+            pass
+    why = sig.get("why_it_popped")
+    if why:
+        parts.append(str(why))
+    return " ".join(parts) if parts else "—"
 
 
 def _fmt_mult(sig, key):

@@ -110,14 +110,27 @@ def get_top_tickers(df, top_n=5):
     return ticker_scores.head(top_n).index.tolist()
 
 
+def _is_monthly_expiry(exp_dt):
+    """判定是否為月選到期日（第三個週五，遇假日提前到週四）→ 日在 15-21、週四或週五"""
+    return exp_dt.weekday() in (3, 4) and 15 <= exp_dt.day <= 21
+
+
 def fetch_iv_term_structure(symbol):
     """
     抓取一個標的的 IV term structure
     回傳 dict: {expiry_date: atm_iv_pct}
-    
+
     【v2 修正】
     舊版：抓前 6 個到期日 → 全擠在近月（週選太密）
     新版：智慧選擇不同時間範圍的到期日（近月/中月/遠月/LEAPS）
+
+    【v3 修正】（2026-07-31 handoff P1-1：IV 峰值假陽性）
+    7/29 T、7/30 PYPL 兩個不相關標的連續兩天在同一日期（2026-08-28，週選）出現假峰值，
+    查無任何排定事件——週選流動性稀薄、買賣價差極寬 → IV 反推失真。
+    修法（與 tlt_radar v2 / log.md Bug 5 同型）：
+    1. 只用月選（第三個週五）算 term structure，排除週選
+    2. ATM 合約要求 OI >= 50（TLT skew 區塊已有這道過濾，深度卡漏套）
+    3. IV 5%-200% 合理性過濾
     """
     try:
         tk = yf.Ticker(symbol)
@@ -139,16 +152,27 @@ def fetch_iv_term_structure(symbol):
         today = datetime.now()
         target_dtes = [14, 30, 60, 120, 250, 500]
         
-        # 計算每個 expiry 的 DTE
+        # 計算每個 expiry 的 DTE（v3：只收月選，週選的稀薄流動性會產生假 IV 峰值）
         expiry_dtes = []
         for exp in all_expiries:
             try:
                 exp_dt = datetime.strptime(exp, '%Y-%m-%d')
                 dte = (exp_dt - today).days
-                if dte > 0:
+                if dte > 0 and _is_monthly_expiry(exp_dt):
                     expiry_dtes.append((exp, dte))
             except Exception:
                 continue
+
+        # 防呆：極少數標的可能月選不足（如剛上市），退回全部到期日（總比沒有好）
+        if len(expiry_dtes) < 2:
+            for exp in all_expiries:
+                try:
+                    exp_dt = datetime.strptime(exp, '%Y-%m-%d')
+                    dte = (exp_dt - today).days
+                    if dte > 0 and (exp, dte) not in expiry_dtes:
+                        expiry_dtes.append((exp, dte))
+                except Exception:
+                    continue
         
         # 對每個目標 DTE，找最接近的實際到期日
         selected_expiries = []
@@ -163,6 +187,7 @@ def fetch_iv_term_structure(symbol):
                 used.add(closest[0])
         
         # 對每個選定的到期日抓 ATM call IV
+        # v3：ATM 合約要求 OI >= 50（過濾 stale quote）+ IV 5%-200% 合理性檢查
         term_structure = {}
         for exp in selected_expiries:
             try:
@@ -171,10 +196,14 @@ def fetch_iv_term_structure(symbol):
                 if len(calls) == 0:
                     continue
                 calls = calls.copy()
+                calls['openInterest'] = pd.to_numeric(calls['openInterest'], errors='coerce').fillna(0)
+                calls = calls[calls['openInterest'] >= 50]
+                if len(calls) == 0:
+                    continue
                 calls['distance'] = (calls['strike'] - spot).abs()
                 atm = calls.nsmallest(1, 'distance').iloc[0]
                 iv = atm.get('impliedVolatility', 0) * 100
-                if iv > 0:
+                if 5.0 <= iv <= 200.0:
                     term_structure[exp] = round(iv, 1)
                 time.sleep(random.uniform(0.2, 0.4))
             except Exception:
@@ -279,7 +308,9 @@ def detect_iv_skew_signal(term_structure):
             return f"📈 長月 IV 最高 ({max_iv:.0f}%)，長期不確定性高"
         else:
             peak_exp = sorted_items[max_idx][0]
-            return f"🎯 IV 峰值在 {peak_exp} ({max_iv:.0f}%)，可能對應特定事件"
+            # v3 文案：曾連續多日真的對上財報而開始被信任，7/29-7/30 證明會產生假陽性
+            # （T/PYPL 同日期假峰值）——不再宣稱「對應事件」，強制人工查證
+            return f"🎯 IV 峰值在 {peak_exp} ({max_iv:.0f}%)（未驗證，須人工查證財報/事件日曆）"
     return ""
 
 
