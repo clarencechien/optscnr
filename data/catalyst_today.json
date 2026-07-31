@@ -1,54 +1,48 @@
 {
-  "updated_at": "2026-07-30T21:44:01.595239",
+  "updated_at": "2026-07-31T21:38:36.033618",
   "stats": {
     "total_items": 99,
-    "items_with_company": 24,
-    "items_with_catalyst": 15,
-    "items_both": 4
+    "items_with_company": 23,
+    "items_with_catalyst": 9,
+    "items_both": 1
   },
   "count": 17,
   "tickers": [
     "MSFT",
     "META",
-    "MU",
-    "AMD",
-    "LRCX",
     "AMZN",
-    "COIN",
+    "SBUX",
     "AAPL",
-    "TGT",
-    "PYPL",
-    "RIVN",
-    "CRM",
-    "NOW",
-    "SNDK",
-    "RTX",
+    "GOOGL",
+    "TSLA",
+    "GM",
     "NVDA",
-    "NFLX"
+    "BA",
+    "DDD",
+    "NOW",
+    "MU",
+    "JPM",
+    "GS",
+    "IBM",
+    "AMD"
   ],
   "details": [
     {
       "symbol": "MSFT",
-      "score": 13.0,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Meta sinks 8%, continuing record losing streak, while Microsoft jumps 15% as AI trade splits",
-          "catalysts": [
-            "jumps",
-            "sinks"
-          ],
-          "has_catalyst": true
+          "title": "Alphabet, Amazon and Microsoft added nearly $1.5 trillion in combined value this week",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "AMD and Micron surge, Lam Research climbs 17% as chip stocks rip higher",
-          "catalysts": [
-            "surge",
-            "climbs"
-          ],
-          "has_catalyst": true
+          "title": "Microsoft shares are surging. Here’s how to still make money, says Mike Khouw",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "Software stocks are fading — but these 4 could shine through the rest of the year",
+          "title": "AI stocks may have bottomed out. What investors should watch for next.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -56,116 +50,56 @@
     },
     {
       "symbol": "META",
-      "score": 6.5,
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Meta sinks 8%, continuing record losing streak, while Microsoft jumps 15% as AI trade splits",
-          "catalysts": [
-            "jumps",
-            "sinks"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Meta’s stock falls hard. Here’s why the company is in Wall Street’s doghouse.",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Investors are selling Meta as it heads to its earnings report",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "AMD and Micron surge, Lam Research climbs 17% as chip stocks rip higher",
-          "catalysts": [
-            "surge",
-            "climbs"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Micron, Sandisk and other chip stocks get major boosts in the wake of Microsoft’s earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "AMD and Micron surge, Lam Research climbs 17% as chip stocks rip higher",
-          "catalysts": [
-            "surge",
-            "climbs"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "LRCX",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "AMD and Micron surge, Lam Research climbs 17% as chip stocks rip higher",
-          "catalysts": [
-            "surge",
-            "climbs"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Amazon hikes 2026 capex to $220 billion due to higher memory costs",
+          "title": "Alphabet, Amazon and Microsoft added nearly $1.5 trillion in combined value this week",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Apple and Amazon report after the bell. Here's what the options market is saying",
+          "title": "Dwindling cash and soaring memory costs: Tech's AI buildout has ballooning price tag",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Amazon's Zoox to begin charging for rides in Las Vegas after clearing NHTSA hurdle",
+          "title": "Post Earnings Clarity: Now Investors Know How to View Microsoft and Meta",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COIN",
-      "score": 1.5,
+      "symbol": "AMZN",
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Coinbase shares fall after crypto exchange posts disappointing second-quarter results",
+          "title": "Alphabet, Amazon and Microsoft added nearly $1.5 trillion in combined value this week",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Why is Coinbase stock sliding today?",
+          "title": "Dwindling cash and soaring memory costs: Tech's AI buildout has ballooning price tag",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Coinbase Calls On Canada To Adopt Clear Rules For Crypto",
+          "title": "Amazon says it got $600 million in Trump tariff refunds and will pass return along to some customers",
           "catalysts": [],
           "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SBUX",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Starbucks stock pops as efforts to revive 'third place' pay off, 2026 outlook improves",
+          "catalysts": [
+            "pops"
+          ],
+          "has_catalyst": true
         }
       ]
     },
@@ -174,104 +108,60 @@
       "score": 1.5,
       "evidence": [
         {
-          "title": "Apple and Amazon report after the bell. Here's what the options market is saying",
+          "title": "Alphabet, Amazon and Microsoft added nearly $1.5 trillion in combined value this week",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Why is Apple stock sliding today?",
+          "title": "Supply-chain legend Tim Cook finally meets his match with Apple’s memory crunch",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Apple revenue, profits beat expectations on iPhone sales but services miss targets",
+          "title": "'The market has voted': Michael Burry says Big Tech's AI spending is dragging down the S&P 500 — while Apple wins",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "GOOGL",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Warsh’s Wall Street cred takes a hit as investors doubt the Fed chair’s inflation-fighting resolve",
+          "title": "Alphabet, Amazon and Microsoft added nearly $1.5 trillion in combined value this week",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "What Are Wall Street Analysts' Target Price for RTX Corporation Stock?",
+          "title": "Dwindling cash and soaring memory costs: Tech's AI buildout has ballooning price tag",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PYPL",
+      "symbol": "TSLA",
       "score": 1.0,
       "evidence": [
         {
-          "title": "PayPal Holdings Stock Outlook: Is Wall Street Bullish or Bearish?",
+          "title": "Dwindling cash and soaring memory costs: Tech's AI buildout has ballooning price tag",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Is it safe to store money in apps like Venmo, PayPal, and Cash App?",
+          "title": "Goldman Upgrades Chinese Tesla Rival. New Releases Spur 'Successful Turnaround.'",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RIVN",
+      "symbol": "GM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Rivian reduces 2026 spending plans, narrows earnings guidance",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Software stocks are fading — but these 4 could shine through the rest of the year",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NOW",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Software stocks are fading — but these 4 could shine through the rest of the year",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Micron, Sandisk and other chip stocks get major boosts in the wake of Microsoft’s earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RTX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "What Are Wall Street Analysts' Target Price for RTX Corporation Stock?",
+          "title": "GM to launch proprietary in-vehicle AI system later this year",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -282,18 +172,95 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Cathie Wood Just Bought Nvidia Stock, Is It Finally Time to Buy?",
+          "title": "Did China build a top-tier AI model by itself? A new report suggests Nvidia chips played a role.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NFLX",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Netflix: The Days of Rapid Growth Are Over",
+          "title": "WestJet starts parking Boeing 737 jets ahead of looming labor strike",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DDD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "3D Systems Q2 2026 Earnings Preview",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NOW",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Analyzing ServiceNow’s (NOW) Unique Position in Workflow Automation",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Micron Stock Finally Popped Today",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Are Wall Street Analysts Bullish on JPMorgan Chase Stock?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Goldman Sachs asset arm forms AI investing platform, memo shows",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Circle Just Bought IBM’s Blockchain Patent Portfolio. The Real Test Is How It Gets Deployed.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Wedbush Sees AMD’s Data Center Business Growing Ahead of Expectations. What That Means for Investors Here.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -301,6 +268,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2
+    "OpenAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
