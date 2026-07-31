@@ -1,6 +1,16 @@
 """
 tlt_radar.py — TLT 全套避險訊號雷達
 
+【v2.2 修正】（2026-07-31 handoff P0-1：nan 綠燈事故）
+- 7/27 抓取失敗 → current_price=nan → 三分項全 0 → 輸出「0/100 🟢平靜」
+  整週被誤讀為「市場無避險需求」，與實際市況（油價破 $100、10Y 創高）完全相反。
+- 修法：
+  1. nan / 失敗防呆——任一關鍵值算不出來，一律視為抓取失敗，不輸出分數
+  2. 抓取失敗自動重試 3 次（指數退避）
+  3. 仍失敗 → 報告改寫「⚠️ 無資料」區塊（附上次成功讀數 + TLT現價/10Y 簡易 fallback），
+     絕不輸出溫度燈號——「沒算到」不等於「平靜」
+  4. 成功報告標示「擷取於 X 日，下次更新 X+7 日」，避免週間重複輸出被誤讀為連續確認
+
 每週日跑一次，給出三個獨立訊號的綜合判斷：
 1. Put 巨鯨：價外 Put 的 Notional 異常 + Vol/OI Ratio
 2. IV Skew：Put IV vs Call IV 的偏斜程度（panic 指標）
@@ -19,7 +29,9 @@ tlt_radar.py — TLT 全套避險訊號雷達
 import yfinance as yf
 import pandas as pd
 import json
+import math
 import os
+import time
 import logging
 from datetime import datetime, timedelta
 
@@ -50,17 +62,27 @@ def get_tlt_data():
     tk = yf.Ticker(CONFIG['TICKER'])
     
     try:
-        # 現價
+        # 現價（v2.2：dropna + nan 防呆——nan 流下去會變成「0/100 🟢平靜」的假訊號）
         hist = tk.history(period='5d')
-        current_price = float(hist['Close'].iloc[-1])
-        
+        closes = hist['Close'].dropna()
+        if closes.empty:
+            print("❌ TLT 現價全為 nan / 無資料")
+            return None, None
+        current_price = float(closes.iloc[-1])
+
         # 過去 60 天波動範圍
         hist_60d = tk.history(period='3mo')
-        price_60d_high = float(hist_60d['High'].max())
-        price_60d_low = float(hist_60d['Low'].min())
-        avg_volume = float(hist_60d['Volume'].mean())
-        recent_volume = float(hist_60d['Volume'].tail(10).mean())
-        
+        price_60d_high = float(hist_60d['High'].dropna().max())
+        price_60d_low = float(hist_60d['Low'].dropna().min())
+        avg_volume = float(hist_60d['Volume'].dropna().mean())
+        recent_volume = float(hist_60d['Volume'].dropna().tail(10).mean())
+
+        # 任一關鍵值 nan / 非正數 → 一律當抓取失敗，不讓垃圾值流進計分
+        for v in (current_price, price_60d_high, price_60d_low):
+            if not v or v <= 0 or math.isnan(v):
+                print("❌ TLT 價格資料含 nan / 異常值")
+                return None, None
+
     except Exception as e:
         print(f"❌ 無法取得 TLT 現價：{e}")
         return None, None
@@ -380,6 +402,75 @@ def temperature_to_message(temp):
 
 
 # ==========================================
+# 抓取失敗報告（v2.2 P0-1）
+# ==========================================
+def load_last_good_reading():
+    """從歷史 CSV 讀最後一次成功的溫度讀數，供失敗報告參考用"""
+    if not os.path.exists(HISTORY_PATH):
+        return None
+    try:
+        hist = pd.read_csv(HISTORY_PATH)
+        if hist.empty:
+            return None
+        last = hist.iloc[-1]
+        return {'date': str(last['date']), 'temp': int(last['hedging_temp'])}
+    except Exception:
+        return None
+
+
+def fetch_fallback_snapshot():
+    """簡易 fallback：只抓 TLT 現價 + 10Y 殖利率（^TNX），
+    讓失敗報告至少留一點可判讀的外部錨點。抓不到就算了。"""
+    fb = {}
+    try:
+        closes = yf.Ticker('TLT').history(period='5d')['Close'].dropna()
+        if not closes.empty and not math.isnan(float(closes.iloc[-1])):
+            fb['tlt_price'] = float(closes.iloc[-1])
+    except Exception:
+        pass
+    try:
+        tnx = yf.Ticker('^TNX').history(period='5d')['Close'].dropna()
+        if not tnx.empty and not math.isnan(float(tnx.iloc[-1])):
+            fb['us10y_pct'] = float(tnx.iloc[-1]) / 10.0  # ^TNX 報價 = 殖利率×10
+    except Exception:
+        pass
+    return fb
+
+
+def write_failure_report():
+    """抓取失敗時：不輸出溫度、不輸出燈號——「沒算到」不等於「平靜」。
+    報告改寫失敗聲明 + 上次成功讀數 + 簡易 fallback。"""
+    now_str = datetime.now().strftime('%Y-%m-%d %H:%M UTC')
+    last = load_last_good_reading()
+    fb = fetch_fallback_snapshot()
+
+    md = "\n## 📉 TLT 避險雷達\n\n"
+    md += f"⚠️ **無資料（抓取失敗於 {now_str}，已重試 3 次）**\n\n"
+    md += "- 本次未輸出避險溫度——抓取失敗 ≠ 市場平靜，**請勿把本區當環境訊號**。\n"
+    if last:
+        md += f"- 上次成功讀數：{last['temp']}/100（擷取於 {last['date']}）｜僅供參考，非當前市況。\n"
+    if 'tlt_price' in fb:
+        md += f"- Fallback：TLT 現價 ${fb['tlt_price']:.2f}（簡易替代讀數，非完整訊號）\n"
+    if 'us10y_pct' in fb:
+        md += f"- Fallback：10Y 殖利率 {fb['us10y_pct']:.2f}%（簡易替代讀數，非完整訊號）\n"
+    md += "- 替代判讀：改看 10Y 殖利率、油價、VIX 等外部資料。\n\n"
+
+    with open("data/tlt_radar_report.md", 'w', encoding='utf-8') as f:
+        f.write(md)
+
+    output = {
+        'updated_at': datetime.now().isoformat(),
+        'status': 'fetch_failed',
+        'last_good': last,
+        'fallback': fb,
+    }
+    with open(OUTPUT_PATH, 'w') as f:
+        json.dump(output, f, indent=2, default=str)
+
+    print("⚠️ 已寫入「無資料」失敗報告（不輸出溫度/燈號）")
+
+
+# ==========================================
 # 主程式
 # ==========================================
 def save_to_history(meta, oi_change, temp):
@@ -405,8 +496,14 @@ def generate_report(meta, whales, skew_summary, overall_skew, oi_change, temp, c
     """生成 markdown 報告區塊（會被主 scanner 整合進 README）"""
     label, msg = temperature_to_message(temp)
     
+    # v2.2：標示擷取日期——TLT 為週更設計，主 scanner 每天都會把這份報告貼進 README，
+    # 沒標日期會被誤讀為「連續四天確認」。
+    fetched_date = datetime.now().strftime('%Y-%m-%d')
+    next_update = (datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d')
+
     md = "\n## 📉 TLT 避險雷達\n\n"
-    md += f"**避險溫度**: {temp}/100 {label} — {msg}\n\n"
+    md += f"**避險溫度**: {temp}/100 {label} — {msg}\n"
+    md += f"_（擷取於 {fetched_date}，下次更新 {next_update}；本雷達為週更，週間看到的都是同一份讀數）_\n\n"
     
     md += f"**TLT 現價**: ${meta['current_price']:.2f} "
     md += f"(距 60d 低 +{meta['distance_from_60d_low']:.1f}% / "
@@ -469,9 +566,19 @@ def main():
     if not os.path.exists('data'):
         os.makedirs('data')
     
-    df, meta = get_tlt_data()
-    if df is None:
-        print("❌ 無法取得 TLT 資料")
+    # v2.2：retry 3 次（指數退避）——TLT 是週更，單點失敗會瞎掉一整週
+    df, meta = None, None
+    for attempt in range(3):
+        df, meta = get_tlt_data()
+        if df is not None and meta is not None:
+            break
+        wait = 2 ** (attempt + 1)
+        print(f"⚠️ 第 {attempt + 1} 次抓取失敗，{wait}s 後重試...")
+        time.sleep(wait)
+
+    if df is None or meta is None:
+        print("❌ 重試後仍無法取得 TLT 資料")
+        write_failure_report()
         return
     
     print(f"💎 TLT 現價: ${meta['current_price']:.2f}")

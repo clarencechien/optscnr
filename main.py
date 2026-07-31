@@ -1,5 +1,19 @@
 """
-Scanner 3.9 — 四道假高分過濾
+Scanner 3.10 — 資料品質止血 + 財報日曆標籤 + 表格補欄
+【v3.10 改動】（2026-07-31 handoff，依 17 份每日報表判讀反推的工具問題）
+- P1-2 IV 硬過濾：IV <=1% 或 >300% 的合約直接剔除（IV 0% 數學上不可能，
+    末日區 4-7% 是 IV 計算崩潰——垃圾資料不計分、不顯示）
+- P1-3 點火倍數防爆：前日 Vol < 20 不算倍數（分母太小會出現 16944.7x 天文數字，
+    讓無流動性垃圾票看起來最興奮），改標 🆕低基期不加分；倍數顯示封頂 >50x
+- P0-2/P2-2 財報日曆標籤：接 yfinance earnings dates
+    - 財報在今日盤後/明日盤前 → ⚠️價格已失效（16:00 收盤快照 vs 盤後開牌，報表價是死價格）
+    - 每列標 📅覆蓋財報 / 📅吃不到財報 / 📅財報已過 三選一（只標記不排除——
+      財報後的形狀本身有資訊，見 handoff「不建議現在改的」#4）
+- P2-1 主表加「現價」「OTM%」欄（免每天手動反推 82% OTM 的 HOOD 200C 慘案）
+- P2-3 流動性標籤：合約數 <10 或標的總 OI <10k → ⚠️流動性稀薄（紙上 3x ≠ 拿得到 3x）
+- 信號快照加 P3-3 歸因欄（signal_day_underlying_move / why_it_popped，人工回填）
+- 計分權重不動（維持 2026-07-06 改卷決策：分數只當及格線，樣本不足不重擬權重）
+
 【v3.8 & 3.9 改動】「水快滾前提醒一下」——讓 scanner 在你被高分誘惑時標出陷阱
 - 過濾一 ⚠️尾段價外：履約價距現價 >25%(按IV放寬) + DTE<45 → -3
     擋 F22C/META1100C 這類「極價外+短天期」的投機尾段
@@ -30,7 +44,7 @@ import io
 import time
 import random
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from enrichment import add_oi_delta, format_oi_delta, generate_deep_cards
 
@@ -65,6 +79,13 @@ RULE_CONFIG = {
     # === v3.9 第四道：暴動高 IV 過濾（RUN 暴露的漏洞）===
     'SURGE_IV_MIN': 80.0,      # IV >80% = 暴動已把 IV 炒高
     'SURGE_IV_DTE': 60,        # 且 DTE<60 短天期 → 進場會買在 IV 頂峰，等冷卻
+    # === v3.10 資料品質 + 流動性（2026-07-31 handoff）===
+    'IV_HARD_MIN': 1.0,          # IV <=1% = 資料異常（0% 數學上不可能），直接剔除
+    'IV_HARD_MAX': 300.0,        # IV >300% = 資料異常/流動性崩潰，直接剔除
+    'IGNITION_MIN_PREV_VOL': 20, # 前日 Vol < 20 不算點火倍數（分母爆炸防呆）
+    'IGNITION_DISPLAY_CAP': 50,  # 點火倍數顯示封頂：>50x 一律顯示 >50x
+    'LIQUIDITY_MIN_CONTRACTS': 10,    # 今日掃到合約數 < 10 → 流動性稀薄
+    'LIQUIDITY_MIN_TOTAL_OI': 10000,  # 標的總 OI < 10k → 流動性稀薄
 }
 
 
@@ -168,6 +189,89 @@ def load_unknown_radar():
     except Exception as e:
         print(f"⚠️ unknown_radar 載入失敗：{e}")
         return [], []
+
+
+# ==========================================
+# 2.5 財報日曆（v3.10 P0-2 + P2-2）
+# ==========================================
+def _today_et():
+    """美東今日日期（掃描跑在 UTC 22-23 = 美東 17-19，取 -5 保守換算，同 us_market_traded_today）"""
+    return (datetime.now(timezone.utc) - timedelta(hours=5)).date()
+
+
+_EARNINGS_CACHE = {}
+
+
+def get_earnings_window(symbol):
+    """抓標的的 (下次財報日, 上次財報日)，date 物件；抓不到回 (None, None) 優雅降級。
+
+    P0-2 背景：掃描時間 23:0X UTC，yf 選擇權是 16:00 ET 收盤快照，
+    財報多在 16:05-16:30 ET 開牌 → 當天盤後財報股的報表權利金是財報前的死價格
+    （7/28 F、7/29 SOFI/META、7/30 RIVN 三次應驗）。
+    """
+    if symbol in _EARNINGS_CACHE:
+        return _EARNINGS_CACHE[symbol]
+    nxt, prev = None, None
+    try:
+        tk = yf.Ticker(symbol)
+        edf = tk.get_earnings_dates(limit=12)
+        if edf is not None and len(edf) > 0:
+            today = _today_et()
+            dates = sorted({ts.date() for ts in edf.index})
+            future = [d for d in dates if d >= today]
+            past = [d for d in dates if d < today]
+            nxt = future[0] if future else None
+            prev = past[-1] if past else None
+    except Exception:
+        pass
+    _EARNINGS_CACHE[symbol] = (nxt, prev)
+    return nxt, prev
+
+
+def add_earnings_tags(df):
+    """為每列附加財報標籤（只標記、不改分——handoff「不建議現在改的」#4）：
+
+    1. ⚠️價格已失效：財報在今日盤後（報表價已死）/ 明日盤前（隔夜就死）
+    2. 三選一分流標籤（自動化第⑩格物種閘門，7/28 F、7/29 T、7/30 PYPL 全死在這格）：
+       📅覆蓋財報 = 到期日 >= 下次財報 → 二元事件票
+       📅財報已過 = 14 天內剛開完牌且窗口吃不到下次 → 災後/慶功反彈賭局
+       📅吃不到財報 = 窗口內無事件 → 純動能
+    """
+    today = _today_et()
+    tomorrow = today + timedelta(days=1)
+
+    symbols = list(df['Stock'].unique())
+    print(f"  📅 抓取 {len(symbols)} 檔財報日曆...")
+    for s in symbols:
+        get_earnings_window(s)
+        time.sleep(random.uniform(0.1, 0.3))
+
+    def row_tag(r):
+        nxt, prev = _EARNINGS_CACHE.get(r['Stock'], (None, None))
+        parts = []
+        if nxt == today:
+            parts.append(f"⚠️價格已失效(財報{nxt.strftime('%m-%d')}盤後)")
+        elif nxt == tomorrow:
+            parts.append(f"⚠️價格恐失效(財報{nxt.strftime('%m-%d')}盤前)")
+        try:
+            expiry_d = pd.to_datetime(r['Expiry']).date()
+        except Exception:
+            expiry_d = None
+        if expiry_d is not None:
+            if nxt and expiry_d >= nxt:
+                parts.append(f"📅覆蓋財報({nxt.strftime('%m-%d')})")
+            elif prev and (today - prev).days <= 14:
+                parts.append(f"📅財報已過({prev.strftime('%m-%d')})")
+            elif nxt:
+                parts.append(f"📅吃不到財報(下次{nxt.strftime('%m-%d')})")
+        return " ".join(parts)
+
+    extra = df.apply(row_tag, axis=1)
+    df['Tags'] = (df['Tags'].fillna('') + ' ' + extra).str.strip()
+    n_dead = int(extra.str.contains('價格').sum())
+    n_cover = int(extra.str.contains('覆蓋').sum())
+    print(f"  📅 財報標籤完成：{n_dead} 筆價格失效警示、{n_cover} 筆覆蓋財報")
+    return df
 
 
 # ==========================================
@@ -288,9 +392,17 @@ def apply_rules(row, prev_data=None):
         if not prev_row.empty:
             prev_vol = prev_row.iloc[0]['Volume']
             if prev_vol > 0 and (vol / prev_vol) >= RULE_CONFIG['VOL_SPIKE_RATIO']:
-                tags.append(f"🚀點火({vol/prev_vol:.1f}x)")
-                score += 3
-                ignition = True
+                # v3.10 P1-3：前日只成交幾口時，倍數會出現 16944.7x 這種天文數字，
+                # 讓無流動性垃圾票視覺上最興奮。分母 < 門檻 → 只標低基期，不算倍數、不加分。
+                if prev_vol < RULE_CONFIG['IGNITION_MIN_PREV_VOL']:
+                    tags.append(f"🆕低基期(前日Vol{int(prev_vol)})")
+                else:
+                    ratio = vol / prev_vol
+                    cap = RULE_CONFIG['IGNITION_DISPLAY_CAP']
+                    ratio_str = f">{cap}x" if ratio > cap else f"{ratio:.1f}x"
+                    tags.append(f"🚀點火({ratio_str})")
+                    score += 3
+                    ignition = True
         else:
             if vol > cfg['VOL'] and vol > (oi * 0.2):
                 tags.append("🆕新倉暴量")
@@ -380,6 +492,34 @@ def generate_report(df):
         # 重新依調整後分數排序
         df = df.sort_values(by=['Score', 'Volume'], ascending=[False, False])
 
+    # === v3.10 財報日曆標籤（P0-2 價格已失效 + P2-2 覆蓋/吃不到/已過）===
+    try:
+        df = add_earnings_tags(df)
+    except Exception as e:
+        print(f"  ⚠️ 財報標籤失敗（降級跳過）：{e}")
+
+    # === v3.10 P2-3 流動性標籤：合約數 < 10 或標的總 OI < 10k → ⚠️流動性稀薄 ===
+    # 深度卡本來就有這兩個數字，只是沒進主表（CNP 45C 拿 9 分但全標的只 2 條合約/OI 3,632）。
+    # 出場紀律需要流動性才能執行——紙上 3x 和拿得到 3x 是兩回事。
+    try:
+        depth = df.groupby('Stock').agg(
+            n_contracts=('Strike', 'count'), total_oi=('OpenInterest', 'sum'))
+        thin_info = {
+            sym: (int(row['n_contracts']), int(row['total_oi']))
+            for sym, row in depth.iterrows()
+            if row['n_contracts'] < RULE_CONFIG['LIQUIDITY_MIN_CONTRACTS']
+            or row['total_oi'] < RULE_CONFIG['LIQUIDITY_MIN_TOTAL_OI']
+        }
+        if thin_info:
+            thin_mask = df['Stock'].isin(thin_info)
+            df.loc[thin_mask, 'Tags'] = df.loc[thin_mask].apply(
+                lambda r: f"{r['Tags']} ⚠️流動性稀薄({thin_info[r['Stock']][0]}條/OI{thin_info[r['Stock']][1]:,})".strip(),
+                axis=1
+            )
+            print(f"  💧 流動性稀薄標籤：{len(thin_info)} 檔標的")
+    except Exception as e:
+        print(f"  ⚠️ 流動性標籤失敗（降級跳過）：{e}")
+
     auto_watch = set(load_auto_watch())
     catalyst = set(load_catalyst_today())
     small_caps_mom = set(load_small_caps_momentum())
@@ -395,7 +535,7 @@ def generate_report(df):
         elif symbol in auto_watch: return "🔭候選"
         return ""
 
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.9 / yf Engine)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.10 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
 
     if catalyst:
@@ -428,16 +568,27 @@ def generate_report(df):
 
     df['Expiry'] = pd.to_datetime(df['Expiry'])
 
+    # v3.10 P2-1：每列加「現價」「OTM%」——體檢卡第①②欄，之前只能靠尾段價外標籤反推
+    # （7/13 HOOD 200C 拿全表最高 9 分，實際 82% OTM，深度卡沒涵蓋就完全看不到）
+    if 'Spot' not in df.columns:
+        df['Spot'] = 0.0
+
     def format_view(sub_df):
-        view = sub_df[['Stock', 'Expiry', 'Strike', 'Ask', 'OpenInterest', 'OI_d7', 'Volume', 'IV', 'Tags', 'Score']].copy()
+        view = sub_df[['Stock', 'Expiry', 'Strike', 'Spot', 'Ask', 'OpenInterest', 'OI_d7', 'Volume', 'IV', 'Tags', 'Score']].copy()
         view['Expiry'] = view['Expiry'].dt.strftime('%Y-%m-%d')
+        view['OTM%'] = view.apply(
+            lambda r: f"{(r['Strike'] - r['Spot']) / r['Spot'] * 100:+.0f}%" if r['Spot'] and r['Spot'] > 0 else "—",
+            axis=1
+        )
+        view['Spot'] = view['Spot'].apply(lambda x: f"{x:.2f}" if x and x > 0 else "—")
         view['IV'] = view['IV'].apply(lambda x: f"{x:.1f}%")
         view['OI_d7'] = view['OI_d7'].apply(format_oi_delta)
         view['Tags'] = view.apply(
             lambda r: f"{source_tag(r['Stock'])} {r['Tags']}".strip(),
             axis=1
         )
-        view.columns = ['代號', '到期日', '履約價', '價格', '持倉(OI)', 'Δ7d', '成交(Vol)', 'IV', '標籤', '分數']
+        view = view[['Stock', 'Expiry', 'Strike', 'Spot', 'OTM%', 'Ask', 'OpenInterest', 'OI_d7', 'Volume', 'IV', 'Tags', 'Score']]
+        view.columns = ['代號', '到期日', '履約價', '現價', 'OTM%', '價格', '持倉(OI)', 'Δ7d', '成交(Vol)', 'IV', '標籤', '分數']
         return view
 
     md += "## 🏆 TL;DR 總結 (精選狙擊名單)\n"
@@ -573,6 +724,12 @@ def save_signal_snapshot(df):
             # True=新聞點火型（新聞已公開、flow 確認有人押注）；False=純flow型（沉默佈局）
             # 用途：驗證「新聞×flow 交集 vs 無新聞 flow」兩類命中率差異（2026-06-26 批的觀察）
             "news_at_signal": r['Stock'] in catalyst_set,
+            # v3.10 P3-3 歸因欄（人工回填，shadow_tracer 只顯示不計算）：
+            # signal_day_underlying_move = 信號日標的漲跌 %（驗「逆勢佈局 flow 優於追漲 flow」
+            #   假說用——WMT/CMG 兩贏家信號都在下跌日，3 個樣本，30+ 前不得據此改規則）
+            # why_it_popped = 跳空脈衝 / 慢磨 / 災後反彈續命 / 不明
+            "signal_day_underlying_move": None,
+            "why_it_popped": None,
             # T+N 結果欄位，先留空，由 shadow_tracer 事後回填
             "t5": None, "t10": None, "t20": None,
             "verdict": None,  # 事後判定：噴了/沒噴/歸零
@@ -621,7 +778,7 @@ def us_market_traded_today():
 
 
 def main():
-    print(f"🔥 啟動 Scanner 3.9 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 3.10 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not us_market_traded_today():
         print("🛑 美股今日休市（週末/假日），市場資料為舊收盤殘留。")
         print("   跳過本次掃描與信號快照，避免污染 shadow log。")
@@ -727,6 +884,10 @@ def main():
                     df['IV'] = 0.0
 
                 for _, row in df[df['OpenInterest'] > 500].iterrows():
+                    # v3.10 P1-2：IV 硬過濾——0%/異常低值曾連續多日進 TL;DR（F 4.82C 拿 8 分），
+                    # 末日區 4-7% 是到期日 IV 計算崩潰。垃圾資料不計分、不顯示。
+                    if row['IV'] <= RULE_CONFIG['IV_HARD_MIN'] or row['IV'] > RULE_CONFIG['IV_HARD_MAX']:
+                        continue
                     dte = (datetime.strptime(d_str, "%Y-%m-%d") - datetime.now()).days
                     d_row = {
                         'Stock': symbol, 'Expiry': d_str, 'Strike': row['Strike'], 'Ask': row['Ask'],
