@@ -454,7 +454,13 @@ def main() -> int:
     args = ap.parse_args()
 
     cfg = json.load(open(args.config, encoding="utf-8"))
-    out_dir = args.output_dir or cfg.get("output_dir", "output")
+    # selftest 一律寫到臨時目錄（radar 家族紀律，同 delta_radar）：
+    # fixture 輸出不得污染真實 output/ 與 state.json
+    if args.selftest:
+        import tempfile
+        out_dir = tempfile.mkdtemp(prefix="tw_scanner_selftest_")
+    else:
+        out_dir = args.output_dir or cfg.get("output_dir", "output")
     os.makedirs(out_dir, exist_ok=True)
 
     if args.dump_schema:

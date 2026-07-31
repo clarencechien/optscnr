@@ -16,15 +16,22 @@ SpaceX 6/12 上市，代號 SPCX。這個 radar 不替你決定買什麼，
 - 階段 2：有選擇權但 IV 狂熱 → 累積 IV 歷史，options 池擋住
 - 階段 3：IV 冷卻穩定 → options 池放行
 
-輸出：
-- data/space_radar.json
-- data/space_radar_report.md（附到主 README）
-- data/spcx_iv_history.csv（IV 時間序列）
-- data/spcx_dca_log.json（你的 DCA 紀錄，手動維護）
+輸出（2026-07-31 起集中在 spcx_radar/，路徑由 spcx_common 統一管理）：
+- output/space_radar.json
+- output/space_radar_report.md（由 build_readme.py 組進 spcx_radar/README.md）
+- output/spcx_iv_history.csv（IV 時間序列）
+- config/spcx_dca_log.json（你的 DCA 紀錄，手動維護）
 
-可變參數：data/spcx_config.json（IPO 日期、股數、各池比例…全在這，改它不用動 code）
+可變參數：config/spcx_config.json（IPO 日期、股數、各池比例…全在這，改它不用動 code）
 
 頻率：每天跑（IPO 後）
+
+【v8.7 改動】（2026-07-31 整併進 spcx_radar/）
+- 檔案搬進 spcx_radar/：config/（手動維護）與 output/（產出）分離，路徑統一由 spcx_common 管
+- 與 spcx_options.py 重複的基礎函式（load_config / 現價 / ATM IV / 市值換算 / IV 分位）
+  抽到 spcx_common.py，兩支模組共用一致介面
+- 新增「A/B 池跟進手冊」區塊：A 池佈署近完成、B 池只剩日曆任務，
+  把剩餘動作日曆化（GT90 重掛、解鎖日、180 天終點），8 月起重心移到 C 池（Option Sage）
 
 【v8.3 改動】對齊進場 SOP v8.3
 - A 池改為「首筆市價確保上車 + 4 筆 limit 階梯」，calc_gtc_levels() 加 pool 參數共用
@@ -39,14 +46,15 @@ import os
 import logging
 from datetime import datetime, timedelta
 
+import spcx_common
+
 logging.getLogger("yfinance").setLevel(logging.CRITICAL)
 
 # === 設定 ===
-# 所有「6/11 才定案、可能變動」的參數都集中在 data/spcx_config.json
+# 所有「6/11 才定案、可能變動」的參數都集中在 spcx_radar/config/spcx_config.json
 # code 啟動時讀它；讀不到任一欄位就用下面的內建預設值（防呆）
-# 6/11 定價後，只改 json，不用動 code
 
-CONFIG_PATH = "data/spcx_config.json"
+CONFIG_PATH = spcx_common.CONFIG_PATH
 
 # 內建預設值（config 讀不到時的 fallback）
 _DEFAULTS = {
@@ -90,21 +98,9 @@ _DEFAULTS = {
 
 
 def load_config():
-    """讀 spcx_config.json，缺欄位用 _DEFAULTS 補。讀不到整個檔也不會掛。"""
-    cfg = dict(_DEFAULTS)
-    try:
-        if os.path.exists(CONFIG_PATH):
-            with open(CONFIG_PATH) as f:
-                user_cfg = json.load(f)
-            # 只覆蓋非 _ 開頭的 key（_ 開頭是註解）
-            for k, v in user_cfg.items():
-                if not k.startswith('_') and k in _DEFAULTS:
-                    cfg[k] = v
-            print(f"📋 已讀取 spcx_config.json（IPO 日期：{cfg['ipo_date']}，股數：{cfg['total_shares_b']}B）")
-        else:
-            print(f"⚠️ 找不到 {CONFIG_PATH}，使用內建預設值")
-    except Exception as e:
-        print(f"⚠️ config 讀取失敗（{e}），使用內建預設值")
+    """讀 spcx_config.json（透過 spcx_common 統一載入），缺欄位用 _DEFAULTS 補。"""
+    cfg = spcx_common.load_config(_DEFAULTS)
+    print(f"📋 已讀取 spcx_config.json（IPO 日期：{cfg['ipo_date']}，股數：{cfg['total_shares_b']}B）")
     return cfg
 
 
@@ -166,10 +162,10 @@ IV_CONFIG = {
     'STABLE_DAYS': _CFG['iv_stable_days'],  # 連續幾天 < COOLING 才算「穩定」
 }
 
-IV_HISTORY_PATH = "data/spcx_iv_history.csv"
-DCA_LOG_PATH = "data/spcx_dca_log.json"
-OUTPUT_PATH = "data/space_radar.json"
-REPORT_PATH = "data/space_radar_report.md"
+IV_HISTORY_PATH = spcx_common.IV_HISTORY_PATH
+DCA_LOG_PATH = spcx_common.DCA_LOG_PATH
+OUTPUT_PATH = spcx_common.SPACE_RADAR_JSON
+REPORT_PATH = spcx_common.SPACE_RADAR_REPORT
 
 
 def detect_stage():
@@ -190,14 +186,10 @@ def detect_stage():
 
     tk = yf.Ticker(TICKER)
 
-    # 試著抓價格
-    try:
-        hist = tk.history(period='5d')
-        if len(hist) == 0:
-            return 0, None, None, None  # 還沒上市
-        current_price = float(hist['Close'].iloc[-1])
-    except Exception:
-        return 0, None, None, None
+    # 試著抓價格（spcx_common：dropna + nan 防呆）
+    current_price = spcx_common.get_price(tk)
+    if current_price is None:
+        return 0, None, None, None  # 還沒上市或無有效報價
 
     # 防呆 2：驗證這真的是 SpaceX，不是同名 ETF
     try:
@@ -243,64 +235,31 @@ def get_options_metrics(tk, current_price):
     - SPCX 初期 Put 流動性差，total_put_vol 可能接近 0
     - 若 Put 量 < PC_MIN_PUT_VOL，pc_ratio 回 None（不可信，不觸發警報）
     """
+    # 鏈選擇與 ATM IV 計算統一走 spcx_common（與 Option Sage 同一套，介面一致）
+    _, calls, puts = spcx_common.get_atm_chain(tk, current_price, min_days=14)
+    atm_iv = spcx_common.calc_atm_iv(calls, current_price)
+    if atm_iv is None:
+        return None, None
+
     try:
-        exps = tk.options
-        if not exps:
-            return None, None
+        # PC Ratio（軋空狂熱偵測）
+        total_call_vol = float(calls['volume'].fillna(0).sum())
+        total_put_vol = float(puts['volume'].fillna(0).sum()) if puts is not None and not puts.empty else 0
 
-        today = datetime.now()
-        for exp in exps:
-            exp_dt = datetime.strptime(exp, '%Y-%m-%d')
-            if (exp_dt - today).days < 14:
-                continue
-
-            opt = tk.option_chain(exp)
-            calls = opt.calls.copy()
-            puts = opt.puts.copy()
-
-            # ATM IV
-            calls['dist'] = (calls['strike'] - current_price).abs()
-            atm = calls.nsmallest(3, 'dist')
-            atm_iv = float(atm['impliedVolatility'].mean())
-            if atm_iv <= 0:
-                continue
-
-            # PC Ratio（軋空狂熱偵測）
-            total_call_vol = float(calls['volume'].fillna(0).sum())
-            total_put_vol = float(puts['volume'].fillna(0).sum()) if not puts.empty else 0
-
-            # Put 流動性防呆：量太低不算（避免 0/大數 = 假警報）
-            if total_put_vol < PC_MIN_PUT_VOL or total_call_vol < 1:
-                pc_ratio = None
-            else:
-                pc_ratio = total_put_vol / total_call_vol
-
-            return atm_iv, pc_ratio
-
-        return None, None
+        # Put 流動性防呆：量太低不算（避免 0/大數 = 假警報）
+        if total_put_vol < PC_MIN_PUT_VOL or total_call_vol < 1:
+            pc_ratio = None
+        else:
+            pc_ratio = total_put_vol / total_call_vol
+        return atm_iv, pc_ratio
     except Exception:
-        return None, None
+        return atm_iv, None
 
 
 def get_iv_percentile(atm_iv):
-    """用已累積的 IV 歷史，算當前 IV 的相對分位（0–100）
-
-    回傳 (percentile, n_samples)；資料不足回 (None, n_samples)
-    新股沒有 IV 歷史，絕對門檻（0.80）無基準，所以優先用相對分位。
-    """
-    if not os.path.exists(IV_HISTORY_PATH):
-        return None, 0
-    try:
-        df = pd.read_csv(IV_HISTORY_PATH)
-        ivs = df['atm_iv'].dropna()
-        n = len(ivs)
-        if n < IV_PCTILE_MIN_SAMPLES:
-            return None, n
-        # 當前 IV 在歷史分布中的百分位
-        pctile = (ivs < atm_iv).sum() / n * 100
-        return round(pctile, 1), n
-    except Exception:
-        return None, 0
+    """當前 IV 的相對分位（spcx_common 統一實作）。
+    新股沒有 IV 歷史，絕對門檻（0.80）無基準，所以優先用相對分位。"""
+    return spcx_common.iv_percentile(atm_iv, IV_HISTORY_PATH, IV_PCTILE_MIN_SAMPLES)
 
 
 def classify_iv(atm_iv):
@@ -381,15 +340,13 @@ def calc_a_first_tranche():
 
 
 def price_to_mc_t(price):
-    """價格反推市值（兆）"""
-    return (price * TOTAL_SHARES_B) / 1000
+    """價格反推市值（兆）——spcx_common 統一實作"""
+    return spcx_common.price_to_mc_t(price, TOTAL_SHARES_B)
 
 
 def days_since_ipo():
-    """距上市第幾天（上市前回負數）"""
-    today = datetime.now()
-    ipo_dt = datetime.strptime(IPO_DATE, '%Y-%m-%d')
-    return (today - ipo_dt).days
+    """距上市第幾天（上市前回負數）——spcx_common 統一實作"""
+    return spcx_common.days_since_ipo(IPO_DATE)
 
 
 def get_timeline_status():
@@ -577,10 +534,55 @@ def scan_space_peers():
     return peers_data
 
 
+def _render_followup_manual(dca_metrics):
+    """A/B 池跟進手冊（v8.7，2026-07-31 起）
+
+    背景判斷：A 池 7/1 截止已過、limit 階梯全數觸發（佈署 ~74%），只剩「補滿與否」
+    一個人工決策；B 池 1.5T 錨已觸發，剩下是純日曆任務（GT90 重掛、180 天終點）。
+    → A/B 從「進行中策略」轉為「跟進手冊」：把剩餘動作日曆化，8 月起重心移到
+    C 池（Option Sage，見下方沉思者區塊與 PLAN_2026-08.md）。
+    """
+    d = days_since_ipo()
+    ipo_dt = datetime.strptime(IPO_DATE, '%Y-%m-%d')
+
+    def day_date(n):
+        return (ipo_dt + timedelta(days=n)).strftime('%m/%d')
+
+    md = "### 📒 A/B 池跟進手冊（剩餘動作日曆）\n\n"
+    md += "_A/B 階段性佈署已近完成，以下是僅剩的人工動作。做完打勾，其餘時間不用想它們。_\n\n"
+    md += "| 日期 | 天數 | 池 | 動作 | 狀態 |\n|---|---|---|---|---|\n"
+
+    # A 池：補滿決策（唯一剩餘決策）
+    fill_pct = dca_metrics.get('pool_a_filled_pct') if dca_metrics else None
+    fill_str = f"目前 {fill_pct:.0f}%" if fill_pct is not None else "見上方 A 池表"
+    md += (f"| 進行中 | — | A | 補滿決策：佈署未達 100%（{fill_str}）→ 買區內(<2.2T)限價補滿或明示放棄 | "
+           f"{'✅ 已完成' if fill_pct is not None and fill_pct >= 100 else '⏳ 待決'} |\n")
+
+    calendar = [
+        (70,  'B', f"第 70 天解鎖 +7%（{day_date(70)}）——被動等，不動作"),
+        (GT90_RELIST_DAY, 'B', f"**GT90 到期重掛**（{day_date(GT90_RELIST_DAY)}）——B 池未成交錨單全部重掛一次，撐到第 {LOCKUP_FLOOR_END_DAY} 天"),
+        (105, 'B', f"第 105 天解鎖 +7%（{day_date(105)}）——被動等"),
+        (120, 'B', f"第 120 天解鎖 +7%（{day_date(120)}）——被動等"),
+        (135, 'B', f"第 135 天解鎖 +7%（{day_date(135)}）——被動等"),
+        (LOCKUP_FLOOR_END_DAY, 'B', f"**第 {LOCKUP_FLOOR_END_DAY} 天瀑布終點**（{day_date(LOCKUP_FLOOR_END_DAY)}）——B 池任務結束，未成交餘額解編"),
+    ]
+    for day_n, pool, action in calendar:
+        if d > day_n + 3:
+            status = "✅ 已過"
+        elif abs(d - day_n) <= 3:
+            status = "🔔 **就是現在**"
+        else:
+            status = f"⏳ 還有 {day_n - d} 天"
+        md += f"| {day_date(day_n)} | 第 {day_n} 天 | {pool} | {action} | {status} |\n"
+
+    md += "\n_紀律不變：B 池接不到 = 沒崩 = 好事，絕不上調錨點追價；斷路器 >2.2T 擋一切新單。_\n\n"
+    return md
+
+
 def generate_report(stage, price, atm_iv, pc_ratio, gtc_levels_a, gtc_levels_b,
                     iv_stable, dca_metrics, peers):
     """生成 markdown 報告（v8.3：A 池首筆市價+階梯 / PC 方向修正 / IV 分位）"""
-    md = "\n## 🚀 SPCX 太空雷達 (v8.6)\n\n"
+    md = "\n## 🚀 SPCX 太空雷達 (v8.7)\n\n"
 
     # === 論點破壞檢查清單（v8.6 兩級制：壞掉時照什麼表）===
     md += "### 🛑 論點破壞檢查 (Narrative Breakers) — 兩級制\n\n"
@@ -619,6 +621,9 @@ def generate_report(stage, price, atm_iv, pc_ratio, gtc_levels_a, gtc_levels_b,
     for note in timeline_notes:
         md += f"- {note}\n"
     md += "\n"
+
+    # === A/B 池跟進手冊（v8.7：佈署近完成，剩餘動作日曆化）===
+    md += _render_followup_manual(dca_metrics)
 
     # === DCA 斷路器（Hard Cap）—— 文案修正：擋未投完批次，不影響已建立部位 ===
     if current_mc_t > HARD_CAP_T:
@@ -780,10 +785,8 @@ def _render_pool_c(atm_iv, pc_ratio, iv_stable):
 
 
 def main():
-    print(f"🚀 啟動 SPCX 太空雷達 v8.6: {datetime.now().strftime('%Y-%m-%d')}")
-
-    if not os.path.exists('data'):
-        os.makedirs('data')
+    print(f"🚀 啟動 SPCX 太空雷達 v8.7: {datetime.now().strftime('%Y-%m-%d')}")
+    spcx_common.ensure_dirs()
 
     # 偵測階段
     stage, price, atm_iv, pc_ratio = detect_stage()
@@ -834,7 +837,7 @@ def main():
     # 寫 JSON
     output = {
         'updated_at': datetime.now().isoformat(),
-        'version': 'v8.6',
+        'version': 'v8.7',
         'stage': stage,
         'price': price,
         'market_cap_t': round(price_to_mc_t(price), 3) if price else None,

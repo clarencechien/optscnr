@@ -60,7 +60,7 @@ jobs:
           fi
 
       - name: Install deps
-        run: pip install -r delta_radar/requirements.txt
+        run: pip install -r tw_scanner/requirements.txt
 
       - name: Snapshot previous statuses
         id: prev
@@ -70,7 +70,7 @@ jobs:
           set -euo pipefail
           python - <<'EOF' > prev_status.txt || echo "NONE" > prev_status.txt
           import json
-          h = json.load(open("delta_radar/output/delta_radar_state.json"))
+          h = json.load(open("tw_scanner/output/delta_radar_state.json"))
           print("|".join(f"{m['module']}={m['status']}" for m in h[-1]["modules"]))
           EOF
           echo "statuses=$(cat prev_status.txt)" >> "$GITHUB_OUTPUT"
@@ -80,9 +80,9 @@ jobs:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
           CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
         run: |
-          python delta_radar/delta_radar.py \
-            --config delta_radar/config/delta_radar_config.json \
-            --output-dir delta_radar/output \
+          python tw_scanner/delta_radar.py \
+            --config tw_scanner/config/delta_radar_config.json \
+            --output-dir tw_scanner/output \
             --modules "${{ steps.track.outputs.modules }}"
 
       - name: Decide whether to commit
@@ -95,7 +95,7 @@ jobs:
           fi
           CUR=$(python - <<'EOF'
           import json
-          h = json.load(open("delta_radar/output/delta_radar_state.json"))
+          h = json.load(open("tw_scanner/output/delta_radar_state.json"))
           print("|".join(f"{m['module']}={m['status']}" for m in h[-1]["modules"]))
           EOF
           )
@@ -104,7 +104,7 @@ jobs:
             echo "Status unchanged ($CUR) - skipping commit."
             # Revert the working tree so the redundant state entry is discarded
             # and state.json stays an information-bearing series, not a heartbeat log.
-            git checkout -- delta_radar/output/
+            git checkout -- tw_scanner/output/delta_radar_report.md tw_scanner/output/delta_radar_state.json
             echo "do_commit=false" >> "$GITHUB_OUTPUT"
           else
             echo "Status changed: '$PREV' -> '$CUR'"
@@ -118,8 +118,8 @@ jobs:
         # bug class fixed across this repo's workflows - fail loudly instead.
         run: |
           set -euo pipefail
-          for f in delta_radar/output/delta_radar_report.md \
-                   delta_radar/output/delta_radar_state.json; do
+          for f in tw_scanner/output/delta_radar_report.md \
+                   tw_scanner/output/delta_radar_state.json; do
             if [ -f "$f" ]; then
               git add "$f"
             else
@@ -127,6 +127,9 @@ jobs:
               exit 1
             fi
           done
+          # 重組資料夾 README（tw_scanner + delta_radar 兩區塊，像主 scanner 一樣以 README 為報表）
+          python tw_scanner/build_readme.py
+          git add tw_scanner/README.md
           if git diff --cached --quiet; then
             echo "No content changes to commit."
             exit 0

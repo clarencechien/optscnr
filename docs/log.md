@@ -203,6 +203,32 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 不放寬樂透 size 上限、不放寬絞肉區（DTE<21）閘門、不因單月命中率改規則、
 盤後開牌標的只標記不自動排除。
 
+## 資料夾整併＋子雷達覆核（2026-07-31，第二批）
+
+同日第二批工作（第一批是 Scanner 3.10，見上節）。擁有者主動要求的目錄整理
+（CONTEXT.md 紅線 5 的例外，workflows 同 commit 改路徑＋selftest 驗證）：
+
+### tw_scanner/（delta_radar 併入）
+- delta_radar.py、config、output（含 append-only state.json）全部 git mv 進 tw_scanner/
+- 原 readme 改名：readme.md → MANUAL_tw_scanner.md、delta README → MANUAL_delta_radar.md
+- 新增 build_readme.py：README.md 變成產出報表（天氣簡報＋delta 報告＋回測，像主 scanner）
+- 兩份 workflow 各自 run 後重組 README；requirements 合併；刪除散落的 data/delta_radar_config.json（與正本完全相同的舊拷貝）
+- tw_scanner selftest 補「寫臨時目錄」防呆（radar 家族紀律，原本會污染真實 output/）
+
+### spcx_radar/（SPCX 集中）
+- space_radar.py、spcx_options.py 搬入；data/spcx_* 九個檔案歸位 config/（手動維護）與 output/（產出）；spcx_playbook.md → PLAYBOOK.md
+- 重複碼抽 spcx_common.py：load_config/現價(dropna+nan 防呆)/ATM IV/市值換算/IV 分位，兩模組同一套介面
+- README.md = space_radar＋Option Sage 合併產出（build_readme.py）
+- space_radar v8.7、sage v0.2
+
+### 覆核結論（詳見 tw_scanner/REVIEW_2026-07.md）
+- **tw_scanner 留任**：capitulation 回測與基線分離（60 日中位 +9.80% vs +4.94%、命中 83%），7/30 警報活體測試中
+- **delta_radar 不退役但設死線**：hit-rate 63 筆顯示作為交易訊號零價值（全綠 cohort T+20 超額 -15%），但作為論點監控正產出「前提健在＋價格重挫」的背離資訊。待辦：加背離旗標；退役判準寫死（n≥30 後 GREEN 劣於自家 YELLOW/RED → 模組處決；2026-10 底整支生死判決）
+
+### SPCX 8 月判斷（詳見 spcx_radar/PLAN_2026-08.md）
+- A 池 74% 佈署、階梯全觸發 → 只剩補滿決策；B 池 1.5T 已觸發 → 剩 9/10 GT90 重掛與 12/9 終點 → **A/B 轉跟進手冊**（v8.7 報告新增日曆化區塊）
+- C 池專用模組：**現在是「預備」時機非「出手」時機**——流動性 gate 已過（INT 296k）、IV 分位基準 41 樣本已可用，但 IV 123%/分位 93 歷史最高檔。sage_v0.2 開始記 LEAPS 專屬 IV（在崩之前建基準）＋viewpoint 範例偵測。gates 一條不放寬
+
 ## Shadow log 第一次改卷（2026-07-06）
 
 污染清理（PR #2）+ 雙貼標（premium_tier / news_at_signal，PR #1/#3）完成後，
@@ -231,9 +257,19 @@ optscnr/
 ├── fallen_saas.py
 ├── tlt_radar.py                     (v2.2)
 ├── unknown_radar.py                 (v1.3)
-├── space_radar.py                   (v8.1)
 ├── enrichment.py
 ├── universe_update.py
+├── spcx_radar/                      (2026-07-31 集中)
+│   ├── space_radar.py               (v8.7)
+│   ├── spcx_options.py              (sage_v0.2)
+│   ├── spcx_common.py / build_readme.py
+│   ├── README.md                    (產出報表) / PLAYBOOK.md / PLAN_2026-08.md
+│   ├── config/                      (spcx_config / dca_log / c_viewpoint，手動維護)
+│   └── output/                      (json、iv_history、options_history、報告)
+├── tw_scanner/                      (2026-07-31 併入 delta_radar)
+│   ├── tw_scanner.py / delta_radar.py / build_readme.py
+│   ├── README.md                    (產出報表) / MANUAL_*.md / REVIEW_2026-07.md
+│   ├── config/  ├── output/  └── cache/
 ├── .github/workflows/
 │   ├── scanner.yml
 │   ├── catalyst_fetch.yml
@@ -241,16 +277,14 @@ optscnr/
 │   ├── fallen_saas.yml
 │   ├── tlt_radar.yml
 │   ├── unknown_radar.yml
-│   └── space_radar.yml
+│   ├── space_radar.yml              (路徑指向 spcx_radar/)
+│   ├── delta_radar.yml / tw_scanner.yml (路徑指向 tw_scanner/)
+│   └── ...
 └── data/
     ├── catalyst_today.json
     ├── small_caps_momentum.json
     ├── fallen_saas.json
     ├── tlt_radar.json / _report.md / _history.csv
     ├── unknown_radar.json / _history.json
-    ├── listed_companies.json        (SEC 上市清單 cache)
-    ├── space_radar.json / _report.md
-    ├── spcx_config.json             (SPCX 可變參數，改這裡不用動 code)
-    ├── spcx_dca_log.json            (手動維護 DCA 買進紀錄)
-    └── spcx_iv_history.csv          (選擇權上市後才生成)
+    └── listed_companies.json        (SEC 上市清單 cache)
 ```

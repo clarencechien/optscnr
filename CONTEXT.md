@@ -25,13 +25,16 @@ GitHub Actions 每日掃描 → README.md 妖股報表 + shadow log 信號校準
 | enrichment.py | OI Δ7d 計算 + Top5 深度卡 |
 | tlt_radar.py | TLT 避險溫度計（附加在 README 尾） |
 | catalyst_fetch / fallen_saas / small_cap_momentum / unknown_radar / universe_update | 動態清單餵給主掃描 |
-| space_radar / spcx_options | SPCX 主題獨立雷達 |
-| delta_radar/ tw_scanner/ | 獨立子專案（各有自己的 config/requirements） |
+| spcx_radar/ | SPCX 主題雷達（space_radar + spcx_options/Option Sage；共用碼在 spcx_common.py；config/=手動維護、output/=產出、README.md=每日報表、PLAYBOOK.md=執行手冊、PLAN_2026-08.md=8月後任務） |
+| tw_scanner/ | 台股子專案（tw_scanner 天氣台 + delta_radar 2308 雷達合併於此；README.md=每日報表由 build_readme.py 重組、MANUAL_*.md=維護文件、REVIEW_2026-07.md=改進判準） |
 | data/*.csv | 每日掃描結果（保留一年，靠檔名日期 prune） |
 | data/iv_log/signals_*.json | 信號快照（**永久保存、append-only**） |
 
 **架構原則：平鋪但有序（每雷達一檔+對應 yml）。不做大目錄重構**——
 10 個 workflows 正在跑，重構美觀收益遠低於弄斷每日掃描的風險。
+（2026-07-31 例外：擁有者主動要求將 delta_radar 併入 tw_scanner/、SPCX 檔案集中到
+spcx_radar/——workflows 同 commit 同步改路徑並以 selftest 驗證，紅線的本意
+「不弄斷排程」有被遵守。）
 
 ## 三、Scanner v3.9 的四道過濾（為什麼存在）
 
