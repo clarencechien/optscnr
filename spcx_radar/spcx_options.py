@@ -30,6 +30,15 @@ spcx_options.py — SPCX Option Sage（C 池的沉思者）
 
 可變參數：spcx_config.json（沿用 space_radar 的 config，新增 options_* 欄位）
 頻率：每個交易日收盤後跑一次（D+1）
+
+【sage_v0.2 改動】（2026-07-31，8 月 C 池預備。詳見 PLAN_2026-08.md）
+- 整併進 spcx_radar/：路徑與共用函式（config/現價/ATM IV/分位）統一走 spcx_common
+- 開始記錄 LEAPS 專屬 IV（最長天期 LEAPS 的 ATM IV）：
+  近月 ATM IV 不能代表 LEAPS 保費，等 IV 崩了才開始記就沒有基準了——
+  在崩之前先把序列建起來，是 C 池專用模組此刻存在的主要理由
+- viewpoint 範例偵測：觀點欄還是「（範例）」字樣時明確警示「未填真觀點」，
+  不讓範例文字漲信心後誤觸 gate
+- gates 全部不動（嚴防線 55%、四條件 AND 不放寬）
 """
 import yfinance as yf
 import pandas as pd
@@ -38,15 +47,17 @@ import os
 import logging
 from datetime import datetime, timedelta
 
+import spcx_common
+
 logging.getLogger("yfinance").setLevel(logging.CRITICAL)
 
-# === 共用 space_radar 的 config（單一真相來源）===
-CONFIG_PATH = "data/spcx_config.json"
-IV_HISTORY_PATH = "data/spcx_iv_history.csv"          # 唯讀（space_radar 寫）
-OPTIONS_HISTORY_PATH = "data/spcx_options_history.csv"  # 本模組自己寫
-VIEWPOINT_PATH = "data/spcx_c_viewpoint.json"         # 觀點欄位（user 手動填）
-OUTPUT_PATH = "data/spcx_options.json"
-REPORT_PATH = "data/spcx_options_report.md"
+# === 共用 space_radar 的 config（單一真相來源，路徑統一由 spcx_common 管）===
+CONFIG_PATH = spcx_common.CONFIG_PATH
+IV_HISTORY_PATH = spcx_common.IV_HISTORY_PATH            # 唯讀（space_radar 寫）
+OPTIONS_HISTORY_PATH = spcx_common.OPTIONS_HISTORY_PATH  # 本模組自己寫
+VIEWPOINT_PATH = spcx_common.VIEWPOINT_PATH              # 觀點欄位（user 手動填）
+OUTPUT_PATH = spcx_common.OPTIONS_JSON
+REPORT_PATH = spcx_common.OPTIONS_REPORT
 
 # 本模組專屬的預設值（嚴起點，全部可在 config 覆蓋）
 _OPTION_DEFAULTS = {
@@ -74,28 +85,14 @@ _OPTION_DEFAULTS = {
 
 
 def load_config():
-    """讀 spcx_config.json + 補本模組預設值。
+    """讀 spcx_config.json + 補本模組預設值（spcx_common 統一載入）。
     共用 space_radar 的基礎參數（股數等），加上 options 專屬閾值。
     """
-    cfg = dict(_OPTION_DEFAULTS)
-    try:
-        if os.path.exists(CONFIG_PATH):
-            with open(CONFIG_PATH) as f:
-                user_cfg = json.load(f)
-            for k, v in user_cfg.items():
-                if not k.startswith('_') and k in cfg:
-                    cfg[k] = v
-            # 基礎參數從 space_radar config 取（若有）
-            for base_key in ('ticker', 'ipo_date', 'total_shares_b'):
-                if base_key in user_cfg:
-                    cfg[base_key] = user_cfg[base_key]
-            print(f"📋 已讀取 config（股數 {cfg['total_shares_b']}B）"
-                  f"｜IV 嚴防線 ≤{cfg['opt_iv_abs_acceptable']*100:.0f}%"
-                  f"｜觀點信心門檻 {cfg['opt_viewpoint_min_confidence']}/5")
-        else:
-            print(f"⚠️ 找不到 {CONFIG_PATH}，使用內建嚴起點預設值")
-    except Exception as e:
-        print(f"⚠️ config 讀取失敗（{e}），使用內建預設值")
+    cfg = spcx_common.load_config(
+        _OPTION_DEFAULTS, extra_passthrough_keys=('ticker', 'ipo_date', 'total_shares_b'))
+    print(f"📋 已讀取 config（股數 {cfg['total_shares_b']}B）"
+          f"｜IV 嚴防線 ≤{cfg['opt_iv_abs_acceptable']*100:.0f}%"
+          f"｜觀點信心門檻 {cfg['opt_viewpoint_min_confidence']}/5")
     return cfg
 
 
@@ -118,9 +115,7 @@ VIEWPOINT_MIN_CONFIDENCE = _CFG['opt_viewpoint_min_confidence']
 
 
 def days_since_ipo():
-    today = datetime.now()
-    ipo_dt = datetime.strptime(IPO_DATE, '%Y-%m-%d')
-    return (today - ipo_dt).days
+    return spcx_common.days_since_ipo(IPO_DATE)
 
 
 # ============================================================
@@ -200,6 +195,9 @@ def get_liquidity_signal(tk, current_price):
         'has_leaps': False, 'total_int': 0, 'total_vol': 0,
         'usable_strikes': 0, 'best_spread_pct': None, 'liquid': False,
         'detail': [],
+        # sage_v0.2：LEAPS 專屬 IV（最長天期 LEAPS 的 ATM IV）。
+        # 近月 ATM IV 不能代表 LEAPS 保費——C 池買的是 LEAPS，gate 的基準也該是 LEAPS 的序列。
+        'leaps_atm_iv': None, 'leaps_iv_exp': None,
     }
     try:
         exps = tk.options
@@ -232,6 +230,9 @@ def get_liquidity_signal(tk, current_price):
     # 深價內門檻：strike ≤ 現價 × moneyness
     deep_itm_strike_max = current_price * DEEP_ITM_MONEYNESS
 
+    # 最長天期的 LEAPS 到期日（LEAPS IV 序列的取樣點，固定取最遠端以保持序列一致性）
+    longest_exp = max(leaps_exps, key=lambda x: x[2])[0]
+
     for exp, exp_dt, days in leaps_exps:
         try:
             calls = tk.option_chain(exp).calls.copy()
@@ -242,6 +243,13 @@ def get_liquidity_signal(tk, current_price):
 
         total_int += int(calls['openInterest'].fillna(0).sum())
         total_vol += int(calls['volume'].fillna(0).sum())
+
+        # sage_v0.2：記錄最長天期 LEAPS 的 ATM IV（與 spcx_common.calc_atm_iv 同一套算法）
+        if exp == longest_exp:
+            leaps_iv = spcx_common.calc_atm_iv(calls, current_price)
+            if leaps_iv is not None:
+                result['leaps_atm_iv'] = round(leaps_iv, 4)
+                result['leaps_iv_exp'] = exp
 
         # 只看深價內 call（C 池的工具：delta≈1 的長天期）
         deep = calls[calls['strike'] <= deep_itm_strike_max].copy()
@@ -398,7 +406,8 @@ def get_viewpoint_signal():
     }
     回傳 dict：has_viewpoint, confidence, passes（信心 ≥ 門檻）, detail
     """
-    result = {'has_viewpoint': False, 'confidence': 0, 'passes': False, 'detail': None}
+    result = {'has_viewpoint': False, 'confidence': 0, 'passes': False, 'detail': None,
+              'is_placeholder': False}
     if not os.path.exists(VIEWPOINT_PATH):
         return result
     try:
@@ -407,12 +416,18 @@ def get_viewpoint_signal():
         if not vp.get('active'):
             return result
         conf = int(vp.get('confidence', 0))
+        catalyst = vp.get('catalyst', '')
+        thesis = vp.get('thesis', '')
+        # sage_v0.2：範例偵測——欄位還是「（範例）」字樣 = 真觀點未填。
+        # 防的是：日後把 confidence 改上去卻忘了換文字，讓範例誤觸 gate。
+        placeholder = ('（範例）' in catalyst) or ('（範例）' in thesis)
         result['has_viewpoint'] = True
         result['confidence'] = conf
-        result['passes'] = conf >= VIEWPOINT_MIN_CONFIDENCE
+        result['is_placeholder'] = placeholder
+        result['passes'] = (conf >= VIEWPOINT_MIN_CONFIDENCE) and not placeholder
         result['detail'] = {
-            'catalyst': vp.get('catalyst', ''),
-            'thesis': vp.get('thesis', ''),
+            'catalyst': catalyst,
+            'thesis': thesis,
             'updated': vp.get('updated', ''),
         }
     except Exception:
@@ -467,6 +482,9 @@ def record_options_history(price, iv_sig, liq_sig, skew_sig, phase):
         'price': round(price, 2) if price else None,
         'atm_iv': iv_sig['atm_iv'],
         'iv_pctile': iv_sig['pctile'],
+        # sage_v0.2：LEAPS 專屬 IV 序列（在 IV 崩之前先建基準）
+        'leaps_atm_iv': liq_sig.get('leaps_atm_iv'),
+        'leaps_iv_exp': liq_sig.get('leaps_iv_exp'),
         'total_int': liq_sig['total_int'],
         'total_vol': liq_sig['total_vol'],
         'usable_strikes': liq_sig['usable_strikes'],
@@ -510,6 +528,10 @@ def generate_report(price, iv_sig, liq_sig, skew_sig, phase_code, phase_label,
     md += f"　連續穩定：{'✅' if iv_sig['stable'] else '❌'}\n"
     if iv_sig['rel_calm'] and not iv_sig['abs_acceptable']:
         md += f"  - ⚠️ **相對冷卻但絕對仍貴**：分位說便宜，但 {iv_pct_str} 對買 LEAPS 仍是貴保費。嚴防線擋住，正確。\n"
+    # LEAPS 專屬 IV（sage_v0.2：C 池真正要買的東西的保費水位）
+    if liq_sig.get('leaps_atm_iv') is not None:
+        md += f"- **LEAPS IV（{liq_sig['leaps_iv_exp']}，最長天期）**：{liq_sig['leaps_atm_iv']*100:.0f}%"
+        md += "（序列建立中，供未來 LEAPS gate 校準；近月 ATM IV 不能代表 LEAPS 保費）\n"
     # 流動性
     md += f"- **流動性深度**：{'✅ 可下單' if liq_sig['liquid'] else '❌ 未達標'}"
     md += f"（LEAPS INT 總和 {liq_sig['total_int']}/門檻{LIQ_MIN_TOTAL_INT}"
@@ -533,9 +555,13 @@ def generate_report(price, iv_sig, liq_sig, skew_sig, phase_code, phase_label,
         d = viewpoint_sig['detail']
         md += f"- 催化劑：{d['catalyst']}\n- 論點：{d['thesis']}\n"
         md += f"- 信心：{viewpoint_sig['confidence']}/5"
-        md += f"（門檻 {VIEWPOINT_MIN_CONFIDENCE}）：{'✅ 達標' if viewpoint_sig['passes'] else '❌ 未達標'}\n\n"
+        md += f"（門檻 {VIEWPOINT_MIN_CONFIDENCE}）：{'✅ 達標' if viewpoint_sig['passes'] else '❌ 未達標'}\n"
+        if viewpoint_sig.get('is_placeholder'):
+            md += ("- ⚠️ **觀點欄還是「（範例）」文字——真觀點未填**。"
+                   "範例不會通過 gate（即使信心改到 4+）。8 月功課：填真觀點或明示放棄 C 池。\n")
+        md += "\n"
     else:
-        md += f"- _尚未填入觀點（spcx_c_viewpoint.json）。沒有觀點 = L2 永遠不會亮。_\n\n"
+        md += f"- _尚未填入觀點（config/spcx_c_viewpoint.json）。沒有觀點 = L2 永遠不會亮。_\n\n"
 
     # === 三層輸出 ===
     md += "### 🎯 本回合判斷\n\n"
@@ -575,8 +601,7 @@ def generate_report(price, iv_sig, liq_sig, skew_sig, phase_code, phase_label,
 def main():
     print(f"🧘 SPCX Option Sage（C 池沉思者）D+1: {datetime.now().strftime('%Y-%m-%d')}")
 
-    if not os.path.exists('data'):
-        os.makedirs('data')
+    spcx_common.ensure_dirs()
 
     d = days_since_ipo()
     if d < 0:
@@ -587,36 +612,17 @@ def main():
         return
 
     tk = yf.Ticker(TICKER)
-    # 抓現價
-    try:
-        hist = tk.history(period='5d')
-        price = float(hist['Close'].iloc[-1]) if len(hist) else None
-    except Exception:
-        price = None
-
+    # 抓現價（spcx_common：dropna + nan 防呆）
+    price = spcx_common.get_price(tk)
     if price is None:
         print("⚠️ 無現價，靜默")
         return
 
-    print(f"💎 現價 ${price:.2f}（市值 {price*TOTAL_SHARES_B/1000:.2f}T）")
+    print(f"💎 現價 ${price:.2f}（市值 {spcx_common.price_to_mc_t(price, TOTAL_SHARES_B):.2f}T）")
 
-    # 抓 ATM IV（沿用 space_radar 的方法，但這裡自己算一份當輸入）
-    atm_iv = None
-    try:
-        exps = tk.options
-        today = datetime.now()
-        for exp in exps:
-            if (datetime.strptime(exp, '%Y-%m-%d') - today).days < 14:
-                continue
-            calls = tk.option_chain(exp).calls.copy()
-            calls['dist'] = (calls['strike'] - price).abs()
-            atm = calls.nsmallest(3, 'dist')
-            v = float(atm['impliedVolatility'].mean())
-            if v > 0:
-                atm_iv = v
-                break
-    except Exception:
-        pass
+    # 抓 ATM IV（與 space_radar 同走 spcx_common，同一條鏈同一套算法）
+    _, calls, _ = spcx_common.get_atm_chain(tk, price, min_days=14)
+    atm_iv = spcx_common.calc_atm_iv(calls, price)
 
     # 三訊號
     iv_sig = get_iv_signal(atm_iv)
@@ -650,7 +656,7 @@ def main():
 
     output = {
         'updated_at': datetime.now().isoformat(),
-        'version': 'sage_v0.1',
+        'version': 'sage_v0.2',
         'days_since_ipo': d,
         'price': price,
         'phase': phase_code,

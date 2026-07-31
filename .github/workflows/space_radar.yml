@@ -19,30 +19,34 @@ jobs:
         run: |
           pip install -r requirements.txt
       - name: Run space radar
-        run: python space_radar.py
+        run: python spcx_radar/space_radar.py
       # Option Sage（C 池沉思者）——必須排在 space_radar 之後：
-      # 它唯讀 space_radar 剛寫好的 data/spcx_iv_history.csv。
+      # 它唯讀 space_radar 剛寫好的 spcx_radar/output/spcx_iv_history.csv。
       # continue-on-error：Sage 掛掉不該擋住 space_radar 的 commit。
       - name: Run option sage
-        run: python spcx_options.py
+        run: python spcx_radar/spcx_options.py
         continue-on-error: true
+      # 重組資料夾 README（space_radar + sage 兩區塊，像主 scanner 一樣以 README 為報表）
+      - name: Build folder README
+        run: python spcx_radar/build_readme.py
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           echo "=== 檔案存在狀況 ==="
-          ls -la data/space_radar* data/spcx_* 2>/dev/null || echo "(部分檔案不存在，正常)"
+          ls -la spcx_radar/output/ spcx_radar/config/ 2>/dev/null || echo "(部分檔案不存在，正常)"
           echo "=== 逐檔 add（存在才 add）==="
           for f in \
-            data/space_radar.json \
-            data/space_radar_report.md \
-            data/spcx_iv_history.csv \
-            data/spcx_dca_log.json \
-            data/spcx_config.json \
-            data/spcx_options.json \
-            data/spcx_options_report.md \
-            data/spcx_options_history.csv \
-            data/spcx_c_viewpoint.json
+            spcx_radar/README.md \
+            spcx_radar/output/space_radar.json \
+            spcx_radar/output/space_radar_report.md \
+            spcx_radar/output/spcx_iv_history.csv \
+            spcx_radar/output/spcx_options.json \
+            spcx_radar/output/spcx_options_report.md \
+            spcx_radar/output/spcx_options_history.csv \
+            spcx_radar/config/spcx_dca_log.json \
+            spcx_radar/config/spcx_config.json \
+            spcx_radar/config/spcx_c_viewpoint.json
           do
             if [ -f "$f" ]; then
               git add "$f"

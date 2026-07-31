@@ -1,4 +1,7 @@
-pandas
+# tw_scanner（台股天氣台）+ delta_radar（2308 馬賽克雷達）合併後的共用依賴
+# 2026-07-31 整併：delta_radar/ 併入本資料夾，requirements 一併合併
+pandas>=2.0
 requests
 lxml
 numpy
+yfinance>=0.2.40
