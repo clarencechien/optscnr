@@ -560,12 +560,40 @@ def generate_report(meta, whales, skew_summary, overall_skew, oi_change, temp, c
     return md
 
 
+def week_already_succeeded():
+    """v2.3：檢查本 ISO 週是否已有成功讀數（價格有效的 history 列）。
+
+    設計（handoff #2 P0-1）：排程改每日跑，但「該週第一次成功抓取」後其餘日子跳過——
+    不硬編週幾，週六失敗隔日自動再試，直到成功或該週結束。regime 計算仍是週更。
+    """
+    if not os.path.exists(HISTORY_PATH):
+        return False
+    try:
+        hist = pd.read_csv(HISTORY_PATH)
+        if hist.empty:
+            return False
+        last = hist.iloc[-1]
+        price = pd.to_numeric(last.get('current_price'), errors='coerce')
+        if pd.isna(price) or price <= 0:
+            return False  # 最後一列是失敗殘留，不算成功
+        last_date = datetime.strptime(str(last['date']), '%Y-%m-%d')
+        now = datetime.now()
+        return last_date.isocalendar()[:2] == now.isocalendar()[:2]
+    except Exception:
+        return False
+
+
 def main():
     print(f"📉 TLT 避險雷達啟動: {datetime.now().strftime('%Y-%m-%d')}")
-    
+
     if not os.path.exists('data'):
         os.makedirs('data')
-    
+
+    # v2.3：本週已成功 → 跳過（每日排程只是 retry 機制，regime 仍為週更）
+    if week_already_succeeded():
+        print("✅ 本週已有成功讀數，跳過（每日排程僅作為當週失敗的自動重試）")
+        return
+
     # v2.2：retry 3 次（指數退避）——TLT 是週更，單點失敗會瞎掉一整週
     df, meta = None, None
     for attempt in range(3):

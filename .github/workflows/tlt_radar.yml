@@ -2,9 +2,10 @@ name: Weekly TLT Hedge Radar
 
 on:
   schedule:
-    # 台灣週日早上 10:00 = UTC 週六 02:00
-    # 排在 fallen_saas (UTC 週六 01:00) 後面
-    - cron: '0 2 * * 6'
+    # v2.3（handoff #2 P0-1）：改每日 UTC 02:00 跑，但腳本內建「本週已成功即跳過」——
+    # 實質仍是週更（該週第一次成功抓取），每日排程只是當週失敗的自動重試，
+    # 不硬編週幾（週六失敗隔日自動補），單點失敗不再瞎掉整週。
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 jobs:

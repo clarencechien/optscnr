@@ -347,7 +347,8 @@ def generate_deep_card(symbol, df, hist_date=None):
     term_structure, spot = fetch_iv_term_structure(symbol)
     if term_structure:
         md += f"- 標的現價：${spot:.2f}\n"
-        md += f"- IV 曲線：{format_term_structure(term_structure)}\n"
+        # 標示過濾條件讓報表可自證（handoff #2 P1-1 驗證用：看到這行字＝v3 過濾在跑）
+        md += f"- IV 曲線：{format_term_structure(term_structure)} _（僅月選、ATM OI≥50）_\n"
         signal = detect_iv_skew_signal(term_structure)
         if signal:
             md += f"- {signal}\n"
