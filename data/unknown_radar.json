@@ -1,41 +1,29 @@
 {
-  "updated_at": "2026-07-31T22:32:06.477947",
-  "count": 3,
+  "updated_at": "2026-08-02T22:27:03.823361",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Leonardo",
-      "ticker": "DRS",
-      "mentions_today": 2,
-      "total_mentions": 2,
+      "name": "AstraZeneca",
+      "ticker": "AZN",
+      "mentions_today": 5,
+      "total_mentions": 5,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Leonardo expects more deals as Europe ramps up defense spending",
-        "Leonardo expects more deals as Europe ramps up defense spending"
+        "AstraZeneca in talks with Bristol Myers Squibb on $400 billion megadeal, FT reports",
+        "AstraZeneca in talks with Bristol Myers Squibb on $400 billion megadeal, FT reports"
       ]
     },
     {
-      "name": "Ferguson Enterprises",
-      "ticker": "FERG",
-      "mentions_today": 2,
-      "total_mentions": 2,
+      "name": "Bristol Myers Squibb",
+      "ticker": "CELG-RI",
+      "mentions_today": 3,
+      "total_mentions": 3,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "The S&P 500 is making a change by adding this little-known industrial stock",
-        "Ferguson Enterprises set to join S&P 500, ADI Global Distribution to join S&P SmallCap 600"
-      ]
-    },
-    {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Core AI Holdings receives Nasdaq minimum bid price notice",
-        "Uni-Fuels receives Nasdaq minimum bid price deficiency notice"
+        "AstraZeneca in talks with Bristol Myers Squibb on $400 billion megadeal, FT reports",
+        "AstraZeneca in talks with Bristol Myers Squibb on $400 billion megadeal, FT reports"
       ]
     }
   ]

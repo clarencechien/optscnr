@@ -61,5 +61,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "NDAQ"
+  },
+  "AstraZeneca": {
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "consecutive_days": 1,
+    "total_mentions": 5,
+    "ticker": "AZN"
+  },
+  "Bristol Myers Squibb": {
+    "first_seen": "2026-08-02",
+    "last_seen": "2026-08-02",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "CELG-RI"
   }
 }
