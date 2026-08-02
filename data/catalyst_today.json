@@ -1,124 +1,151 @@
 {
-  "updated_at": "2026-07-31T21:38:36.033618",
+  "updated_at": "2026-08-02T21:25:34.960348",
   "stats": {
-    "total_items": 99,
-    "items_with_company": 23,
-    "items_with_catalyst": 9,
-    "items_both": 1
+    "total_items": 107,
+    "items_with_company": 12,
+    "items_with_catalyst": 13,
+    "items_both": 4
   },
-  "count": 17,
+  "count": 13,
   "tickers": [
-    "MSFT",
-    "META",
+    "BRK-B",
     "AMZN",
-    "SBUX",
-    "AAPL",
-    "GOOGL",
-    "TSLA",
-    "GM",
+    "PYPL",
+    "CRWV",
     "NVDA",
-    "BA",
-    "DDD",
-    "NOW",
-    "MU",
-    "JPM",
-    "GS",
-    "IBM",
-    "AMD"
+    "AAPL",
+    "COST",
+    "WMT",
+    "NFLX",
+    "GOOGL",
+    "SNDK",
+    "AMD",
+    "TSLA"
   ],
   "details": [
     {
-      "symbol": "MSFT",
-      "score": 2.5,
+      "symbol": "BRK-B",
+      "score": 4,
       "evidence": [
         {
-          "title": "Alphabet, Amazon and Microsoft added nearly $1.5 trillion in combined value this week",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft shares are surging. Here’s how to still make money, says Mike Khouw",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "AI stocks may have bottomed out. What investors should watch for next.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Alphabet, Amazon and Microsoft added nearly $1.5 trillion in combined value this week",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dwindling cash and soaring memory costs: Tech's AI buildout has ballooning price tag",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Post Earnings Clarity: Now Investors Know How to View Microsoft and Meta",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Alphabet, Amazon and Microsoft added nearly $1.5 trillion in combined value this week",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dwindling cash and soaring memory costs: Tech's AI buildout has ballooning price tag",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Amazon says it got $600 million in Trump tariff refunds and will pass return along to some customers",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SBUX",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Starbucks stock pops as efforts to revive 'third place' pay off, 2026 outlook improves",
+          "title": " Berkshire Hathaway shares hit eight-month high",
           "catalysts": [
-            "pops"
+            "rallied",
+            "gains"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 1.5,
+      "symbol": "AMZN",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Alphabet, Amazon and Microsoft added nearly $1.5 trillion in combined value this week",
+          "title": "As Americans go direct with GLP-1 prescriptions, Walmart, Costco, Amazon will be big weight-loss winners ",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Supply-chain legend Tim Cook finally meets his match with Apple’s memory crunch",
+          "title": "Here’s what’s worth streaming in August 2026 on Netflix, Hulu, HBO Max and more",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "'The market has voted': Michael Burry says Big Tech's AI spending is dragging down the S&P 500 — while Apple wins",
+          "title": "S&P 500 profit growth is getting even wilder as Amazon makes its mark",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "PYPL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Financial sector tops the S&P 500 in July, led by PayPal's 30% rally",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "CoreWeave Just Scored a Leidos Partnership. What That Means for CRWV Stock Here.",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Trump's AI executive order nears key deadline as regulation debate intensifies",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "What Nvidia Could Be Worth on a $1,000 Investment if History Repeats Itself",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Here’s what’s worth streaming in August 2026 on Netflix, Hulu, HBO Max and more",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "How Apple’s cheap MacBook Neo sparked a war in budget laptops",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COST",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "As Americans go direct with GLP-1 prescriptions, Walmart, Costco, Amazon will be big weight-loss winners ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "As Americans go direct with GLP-1 prescriptions, Walmart, Costco, Amazon will be big weight-loss winners ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Here’s what’s worth streaming in August 2026 on Netflix, Hulu, HBO Max and more",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -126,130 +153,21 @@
     },
     {
       "symbol": "GOOGL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Alphabet, Amazon and Microsoft added nearly $1.5 trillion in combined value this week",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dwindling cash and soaring memory costs: Tech's AI buildout has ballooning price tag",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Dwindling cash and soaring memory costs: Tech's AI buildout has ballooning price tag",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Goldman Upgrades Chinese Tesla Rival. New Releases Spur 'Successful Turnaround.'",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "GM to launch proprietary in-vehicle AI system later this year",
+          "title": "Google pulls AI feature after users create fake satellite images",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NVDA",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Did China build a top-tier AI model by itself? A new report suggests Nvidia chips played a role.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "WestJet starts parking Boeing 737 jets ahead of looming labor strike",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DDD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "3D Systems Q2 2026 Earnings Preview",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NOW",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Analyzing ServiceNow’s (NOW) Unique Position in Workflow Automation",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why Micron Stock Finally Popped Today",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Are Wall Street Analysts Bullish on JPMorgan Chase Stock?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Goldman Sachs asset arm forms AI investing platform, memo shows",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "IBM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Circle Just Bought IBM’s Blockchain Patent Portfolio. The Real Test Is How It Gets Deployed.",
+          "title": "Dow Jones Futures Due As Trump Shifts On Iran; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -260,7 +178,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Wedbush Sees AMD’s Data Center Business Growing Ahead of Expectations. What That Means for Investors Here.",
+          "title": "Dow Jones Futures Due As Trump Shifts On Iran; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Tesla Rival BYD Ramping Up Sales On Overseas Demand, Flash Charging",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -268,7 +197,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1,
+    "OpenAI (private)": 3,
     "Anthropic (private)": 1
   }
 }
