@@ -1,4 +1,17 @@
 """
+Scanner 3.11 — handoff #2（2026-08-01）殘項修正
+【v3.11 改動】
+- P0-1 渲染側 nan 防線：TLT 報告檔含 nan 一律不轉貼，改貼警示區塊
+  （7/27-31 事故：舊程式寫出的 nan 報告被每天照貼，讀成「市場平靜」）
+- P0-1 日更現況條：每天 1 次 API 抓 TLT 收盤，顯示「較快照日 ±%」，
+  |Δ|>3% 警示「週更 regime 讀數可能已過期」（TLT 維持週更是設計決策，不改日更）
+- P1-2 補強：低 IV 門檻 1%→5%，但只殺價外（價內 IV 合法偏低、spot 缺不誤殺）；
+  末日區（DTE<5）IV 欄不顯示（到期日 IV 反推全面失真，7-45% 亂跳）
+- P0-2 最後一哩：財報改用時間戳判斷——今日 16:00 後開牌→⚠️價格已失效、
+  今晨已開→僅標📅財報已過（快照已反映）、明日 09:30 前→⚠️價格恐失效
+- 環境指標：「吃不到財報」每日計數進報表頭與 data/earnings_window_history.csv
+  （乾淨窗口數量可能比 TLT 溫度更貼近「今天有沒有獵物」）
+
 Scanner 3.10 — 資料品質止血 + 財報日曆標籤 + 表格補欄
 【v3.10 改動】（2026-07-31 handoff，依 17 份每日報表判讀反推的工具問題）
 - P1-2 IV 硬過濾：IV <=1% 或 >300% 的合約直接剔除（IV 0% 數學上不可能，
@@ -82,6 +95,10 @@ RULE_CONFIG = {
     # === v3.10 資料品質 + 流動性（2026-07-31 handoff）===
     'IV_HARD_MIN': 1.0,          # IV <=1% = 資料異常（0% 數學上不可能），直接剔除
     'IV_HARD_MAX': 300.0,        # IV >300% = 資料異常/流動性崩潰，直接剔除
+    # === v3.11 P1-2 補強（handoff #2）：7/31 末日區 7.6-8.8% 壞值穿過了 1% 門檻 ===
+    # 低 IV 軟門檻提高到 5%，但只殺「價外」合約——深度價內合約 IV 可以合法偏低，
+    # 抓不到現價（spot=0）時也不殺（不誤殺原則，同 v3.8 過濾一）
+    'IV_SOFT_MIN': 5.0,          # IV <=5% 且價外 → 資料異常，剔除
     'IGNITION_MIN_PREV_VOL': 20, # 前日 Vol < 20 不算點火倍數（分母爆炸防呆）
     'IGNITION_DISPLAY_CAP': 50,  # 點火倍數顯示封頂：>50x 一律顯示 >50x
     'LIQUIDITY_MIN_CONTRACTS': 10,    # 今日掃到合約數 < 10 → 流動性稀薄
@@ -202,12 +219,31 @@ def _today_et():
 _EARNINGS_CACHE = {}
 
 
-def get_earnings_window(symbol):
-    """抓標的的 (下次財報日, 上次財報日)，date 物件；抓不到回 (None, None) 優雅降級。
+def _now_et_naive():
+    """naive 的美東現在時間（UTC-5 保守近似，同 _today_et）"""
+    return (datetime.now(timezone.utc) - timedelta(hours=5)).replace(tzinfo=None)
 
-    P0-2 背景：掃描時間 23:0X UTC，yf 選擇權是 16:00 ET 收盤快照，
+
+def _to_naive_et(ts):
+    """把 yfinance 的 earnings timestamp 轉 naive ET。tz-aware → 轉美東去 tz；naive 視為 ET。"""
+    try:
+        if getattr(ts, 'tzinfo', None) is not None:
+            return ts.tz_convert('America/New_York').tz_localize(None)
+    except Exception:
+        pass
+    return ts
+
+
+def get_earnings_window(symbol):
+    """抓標的的 (下次財報 timestamp, 上次財報 timestamp)，naive ET；抓不到回 (None, None)。
+
+    P0-2 背景：掃描時間 23:0X UTC = 19:0X ET，yf 選擇權是 16:00 ET 收盤快照，
     財報多在 16:05-16:30 ET 開牌 → 當天盤後財報股的報表權利金是財報前的死價格
     （7/28 F、7/29 SOFI/META、7/30 RIVN 三次應驗）。
+
+    v3.11：改保留完整 timestamp（不只日期），過去/未來以「現在」切分——
+    今天 16:05 已開的牌屬於過去（但價格已死，判斷在 add_earnings_tags），
+    今天早上開的牌 16:00 快照已反映（價格有效）。
     """
     if symbol in _EARNINGS_CACHE:
         return _EARNINGS_CACHE[symbol]
@@ -216,10 +252,10 @@ def get_earnings_window(symbol):
         tk = yf.Ticker(symbol)
         edf = tk.get_earnings_dates(limit=12)
         if edf is not None and len(edf) > 0:
-            today = _today_et()
-            dates = sorted({ts.date() for ts in edf.index})
-            future = [d for d in dates if d >= today]
-            past = [d for d in dates if d < today]
+            now_et = _now_et_naive()
+            stamps = sorted({_to_naive_et(ts) for ts in edf.index})
+            future = [t for t in stamps if t > now_et]
+            past = [t for t in stamps if t <= now_et]
             nxt = future[0] if future else None
             prev = past[-1] if past else None
     except Exception:
@@ -247,12 +283,30 @@ def add_earnings_tags(df):
         time.sleep(random.uniform(0.1, 0.3))
 
     def row_tag(r):
-        nxt, prev = _EARNINGS_CACHE.get(r['Stock'], (None, None))
+        nxt_ts, prev_ts = _EARNINGS_CACHE.get(r['Stock'], (None, None))
+        nxt = nxt_ts.date() if nxt_ts is not None else None
+        prev = prev_ts.date() if prev_ts is not None else None
         parts = []
+
+        # === v3.11 P0-2 最後一哩：用時間戳判斷價格是否已死 ===
+        # 已失效：財報「今日 16:00 之後」已開牌（16:00 快照是財報前的死價格）。
+        #   今日早上開的牌快照已反映 → 不標（由下方 📅財報已過 呈現）。
+        #   時間戳只有日期（00:00，來源沒給時間）→ 保守標已失效。
+        if prev == today:
+            t = prev_ts.time()
+            if t.hour == 0 and t.minute == 0:
+                parts.append(f"⚠️價格已失效(財報{prev_ts.strftime('%m-%d')})")
+            elif (t.hour, t.minute) >= (15, 55):
+                parts.append(f"⚠️價格已失效(財報{prev_ts.strftime('%m-%d')}盤後)")
+        # 恐失效：財報在「明日開盤(09:30 ET)前」→ 今晚到明早之間價格會死
+        if nxt == tomorrow:
+            t = nxt_ts.time()
+            if (t.hour == 0 and t.minute == 0) or (t.hour, t.minute) <= (9, 30):
+                parts.append(f"⚠️價格恐失效(財報{nxt_ts.strftime('%m-%d')}盤前)")
+        # 邊界：財報「今晚稍後」才開（掃描 19:0X ET 之後，罕見）→ 視同今日盤後即將失效
         if nxt == today:
-            parts.append(f"⚠️價格已失效(財報{nxt.strftime('%m-%d')}盤後)")
-        elif nxt == tomorrow:
-            parts.append(f"⚠️價格恐失效(財報{nxt.strftime('%m-%d')}盤前)")
+            parts.append(f"⚠️價格恐失效(財報{nxt_ts.strftime('%m-%d')}盤後)")
+
         try:
             expiry_d = pd.to_datetime(r['Expiry']).date()
         except Exception:
@@ -498,6 +552,26 @@ def generate_report(df):
     except Exception as e:
         print(f"  ⚠️ 財報標籤失敗（降級跳過）：{e}")
 
+    # === v3.11 環境指標：「吃不到財報」每日計數（handoff #2 附註）===
+    # 7/31 全表僅 4 筆吃不到財報——連四天三格全過的票全死在物種閘門，
+    # 不是判讀太嚴，是市場上根本沒有乾淨無事件的窗口。這個數字可能比
+    # TLT 溫度更貼近「今天有沒有你要的獵物」，記錄下來當環境序列。
+    clean_window_count = int(df['Tags'].str.contains('吃不到財報', na=False).sum())
+    try:
+        cw_path = os.path.join(DATA_DIR, "earnings_window_history.csv")
+        today_str = datetime.now().strftime('%Y-%m-%d')
+        if os.path.exists(cw_path):
+            cw = pd.read_csv(cw_path)
+            cw = cw[cw['date'] != today_str]  # 同日重跑取代不重複
+        else:
+            cw = pd.DataFrame(columns=['date', 'clean_window_count', 'total_rows'])
+        cw = pd.concat([cw, pd.DataFrame([{
+            'date': today_str, 'clean_window_count': clean_window_count, 'total_rows': len(df)}])],
+            ignore_index=True)
+        cw.to_csv(cw_path, index=False)
+    except Exception as e:
+        print(f"  ⚠️ 乾淨窗口計數寫入失敗：{e}")
+
     # === v3.10 P2-3 流動性標籤：合約數 < 10 或標的總 OI < 10k → ⚠️流動性稀薄 ===
     # 深度卡本來就有這兩個數字，只是沒進主表（CNP 45C 拿 9 分但全標的只 2 條合約/OI 3,632）。
     # 出場紀律需要流動性才能執行——紙上 3x 和拿得到 3x 是兩回事。
@@ -535,8 +609,11 @@ def generate_report(df):
         elif symbol in auto_watch: return "🔭候選"
         return ""
 
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.10 / yf Engine)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.11 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
+    md += (f"**📅 乾淨窗口計數**: 今日 {clean_window_count} 筆「吃不到財報」（窗口內無事件的純動能局）"
+           f"／全表 {len(df)} 筆。數字越小＝市場越被財報事件佔據，今天越沒有你要的獵物"
+           f"（環境序列：`data/earnings_window_history.csv`）\n\n")
 
     if catalyst:
         md += f"**📰 今日催化劑股**: {', '.join(sorted(catalyst))}\n\n"
@@ -575,13 +652,18 @@ def generate_report(df):
 
     def format_view(sub_df):
         view = sub_df[['Stock', 'Expiry', 'Strike', 'Spot', 'Ask', 'OpenInterest', 'OI_d7', 'Volume', 'IV', 'Tags', 'Score']].copy()
+        view['_DTE'] = sub_df['DTE'].values
         view['Expiry'] = view['Expiry'].dt.strftime('%Y-%m-%d')
         view['OTM%'] = view.apply(
             lambda r: f"{(r['Strike'] - r['Spot']) / r['Spot'] * 100:+.0f}%" if r['Spot'] and r['Spot'] > 0 else "—",
             axis=1
         )
         view['Spot'] = view['Spot'].apply(lambda x: f"{x:.2f}" if x and x > 0 else "—")
-        view['IV'] = view['IV'].apply(lambda x: f"{x:.1f}%")
+        # v3.11 P1-2：末日區（DTE<5）IV 計算失真（剩餘時間→0 反推崩潰，7-45% 亂跳），
+        # 整欄不顯示，避免拿它做任何判斷
+        view['IV'] = view.apply(
+            lambda r: "—" if r['_DTE'] < 5 else f"{r['IV']:.1f}%", axis=1)
+        view = view.drop(columns=['_DTE'])
         view['OI_d7'] = view['OI_d7'].apply(format_oi_delta)
         view['Tags'] = view.apply(
             lambda r: f"{source_tag(r['Stock'])} {r['Tags']}".strip(),
@@ -629,7 +711,8 @@ def generate_report(df):
 
         elif action == 'GAMBLE':
             md += f"## 🎲 末日賭博專區 (DTE < 5)\n"
-            md += "> 警告：極端短線結算，高機率為造市商平倉雜訊，若要玩請當樂透買。\n\n"
+            md += "> 警告：極端短線結算，高機率為造市商平倉雜訊，若要玩請當樂透買。\n"
+            md += "> 本區 IV 欄不顯示——到期日剩餘時間趨近 0，IV 反推全面失真，不可用於判斷。\n\n"
             sub_df = sub_df.sort_values(by=['Volume'], ascending=[False]).head(15)
             md += format_view(sub_df).to_markdown(index=False) + "\n\n"
 
@@ -648,13 +731,26 @@ def generate_report(df):
         md += f"\n## 🔬 深度分析\n*（生成失敗：{e}）*\n"
 
     # === TLT 避險雷達（如果有產出，附在最後）===
+    # v3.11（handoff #2 P0-1）：
+    # 1. 渲染側 nan 防線——就算舊程式/壞資料寫出含 nan 的報告檔，主報表也不轉貼，
+    #    改貼警示區塊（7/27-7/31 事故：nan 報告被每天照貼五天，讀成「市場平靜」）
+    # 2. 廉價日更「現況條」——TLT 為週更 regime gauge（維持週更是設計決策），
+    #    每天只多抓 1 次 TLT 收盤價，顯示「較快照日變動 %」告訴你週快照有沒有過期
     tlt_report_path = os.path.join(DATA_DIR, "tlt_radar_report.md")
     if os.path.exists(tlt_report_path):
         try:
             with open(tlt_report_path, encoding='utf-8') as f:
                 tlt_md = f.read()
-            md += tlt_md
-            print("  ✅ TLT 避險雷達已附加")
+            if 'nan' in tlt_md.lower():
+                md += ("\n## 📉 TLT 避險雷達\n\n"
+                       "⚠️ **快照檔含無效資料（nan），本區不轉貼**——"
+                       "「抓取失敗」不等於「市場平靜」，請勿把本區當環境訊號。\n"
+                       "等 tlt_radar 下次成功抓取後自動恢復。\n\n")
+                print("  ⚠️ TLT 報告含 nan，已替換為警示區塊")
+            else:
+                md += tlt_md
+                md += _tlt_daily_status_line()
+                print("  ✅ TLT 避險雷達已附加（含日更現況條）")
         except Exception as e:
             print(f"  ⚠️ TLT 報告載入失敗：{e}")
 
@@ -669,6 +765,41 @@ def generate_report(df):
         save_signal_snapshot(df)
     except Exception as e:
         print(f"  ⚠️ 信號快照儲存失敗：{e}")
+
+
+def _tlt_daily_status_line():
+    """v3.11 P0-1：TLT 週更快照的日更「現況條」。
+
+    只抓 1 次 TLT 收盤價（成本可忽略），與週快照價比較：
+    |Δ| > 3% → 加警示「週更 regime 讀數可能已過期」。
+    補的是 7/22-23 的缺口：45 分讀數是 7/20 抓的，完全沒含入油價破百與
+    殖利率創高的衝擊，而報表沒有任何跡象顯示這件事。
+    任何失敗都靜默跳過（現況條是輔助資訊，不值得為它擋報表）。
+    """
+    try:
+        with open(os.path.join(DATA_DIR, "tlt_radar.json"), encoding='utf-8') as f:
+            snap = json.load(f)
+        snap_price = float(snap.get('tlt_price') or 0)
+        snap_date = str(snap.get('updated_at', ''))[:10]
+        if snap_price <= 0 or not snap_date:
+            return ""
+
+        closes = yf.Ticker('TLT').history(period='5d')['Close'].dropna()
+        if closes.empty:
+            return ""
+        today_close = float(closes.iloc[-1])
+        if today_close <= 0 or pd.isna(today_close):
+            return ""
+
+        delta_pct = (today_close / snap_price - 1) * 100
+        line = (f"**今日 TLT 收盤**: ${today_close:.2f}"
+                f"（較快照日 {snap_date} {delta_pct:+.1f}%）｜日更現況條，僅檢查週快照是否過期\n")
+        if abs(delta_pct) > 3.0:
+            line += (f"\n⚠️ **標的自快照日已變動 {delta_pct:+.1f}%，"
+                     f"上方週更 regime 讀數可能已過期**——請改看即時外部資料（10Y/油價/VIX）。\n")
+        return "\n" + line + "\n"
+    except Exception:
+        return ""
 
 
 def save_signal_snapshot(df):
@@ -778,7 +909,7 @@ def us_market_traded_today():
 
 
 def main():
-    print(f"🔥 啟動 Scanner 3.10 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 3.11 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not us_market_traded_today():
         print("🛑 美股今日休市（週末/假日），市場資料為舊收盤殘留。")
         print("   跳過本次掃描與信號快照，避免污染 shadow log。")
@@ -887,6 +1018,12 @@ def main():
                     # v3.10 P1-2：IV 硬過濾——0%/異常低值曾連續多日進 TL;DR（F 4.82C 拿 8 分），
                     # 末日區 4-7% 是到期日 IV 計算崩潰。垃圾資料不計分、不顯示。
                     if row['IV'] <= RULE_CONFIG['IV_HARD_MIN'] or row['IV'] > RULE_CONFIG['IV_HARD_MAX']:
+                        continue
+                    # v3.11 P1-2 補強：1-5% 的低 IV 只有「價外」才可能是壞值
+                    # （7/31 NVDA 202.5C 8.6%/AAPL 310C 8.4% 等到期日壞值穿過 1% 門檻；
+                    #   價內合約 IV 合法偏低、spot 抓不到時不誤殺）
+                    if (row['IV'] <= RULE_CONFIG['IV_SOFT_MIN']
+                            and spot_price > 0 and row['Strike'] > spot_price):
                         continue
                     dte = (datetime.strptime(d_str, "%Y-%m-%d") - datetime.now()).days
                     d_row = {
