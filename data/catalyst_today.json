@@ -1,36 +1,51 @@
 {
-  "updated_at": "2026-08-02T21:25:34.960348",
+  "updated_at": "2026-08-03T21:41:04.923229",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 12,
-    "items_with_catalyst": 13,
-    "items_both": 4
+    "total_items": 103,
+    "items_with_company": 22,
+    "items_with_catalyst": 19,
+    "items_both": 10
   },
-  "count": 13,
+  "count": 14,
   "tickers": [
-    "BRK-B",
+    "PLTR",
     "AMZN",
-    "PYPL",
-    "CRWV",
-    "NVDA",
+    "MSFT",
+    "BA",
+    "TSLA",
     "AAPL",
-    "COST",
-    "WMT",
-    "NFLX",
-    "GOOGL",
-    "SNDK",
+    "STX",
+    "CRWV",
+    "NET",
+    "NVDA",
+    "PLUG",
     "AMD",
-    "TSLA"
+    "WMT",
+    "CRM"
   ],
   "details": [
     {
-      "symbol": "BRK-B",
-      "score": 4,
+      "symbol": "PLTR",
+      "score": 9.0,
       "evidence": [
         {
-          "title": " Berkshire Hathaway shares hit eight-month high",
+          "title": "Palantir soars 12% on blowout quarter, with U.S. commercial revenue soaring nearly 150% ",
           "catalysts": [
-            "rallied",
+            "soars",
+            "earnings beat"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Can Palantir pull off a Microsoft-style comeback? Here's what options say",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Palantir’s stock gains as AI drives turbocharged growth",
+          "catalysts": [
             "gains"
           ],
           "has_catalyst": true
@@ -39,35 +54,110 @@
     },
     {
       "symbol": "AMZN",
-      "score": 3.0,
+      "score": 4.5,
       "evidence": [
         {
-          "title": "As Americans go direct with GLP-1 prescriptions, Walmart, Costco, Amazon will be big weight-loss winners ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Here’s what’s worth streaming in August 2026 on Netflix, Hulu, HBO Max and more",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "S&P 500 profit growth is getting even wilder as Amazon makes its mark",
+          "title": "Amazon tops $3 trillion market cap as stock continues post-earnings surge",
           "catalysts": [
-            "gains"
+            "surge",
+            "all-time high"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Amazon's debt nearly doubled to $129 billion in 6 months as CEO Jassy defends $220 billion data center spending spree",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Can Palantir pull off a Microsoft-style comeback? Here's what options say",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Microsoft’s stock is on a run not seen in 26 years — erasing its year-to-date losses",
+          "catalysts": [
+            "rally"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "PYPL",
+      "symbol": "BA",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "FAA clears smallest Boeing 737 Max to fly after years of delays",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "A trio of positive developments has Boeing shares soaring",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Boeing clears key hurdle and stock rallies to lead the Dow",
+          "catalysts": [
+            "rallies"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "SpaceX's post-IPO plunge sets tense backdrop for first earnings report",
+          "catalysts": [
+            "plunge"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Tesla and BYD Ride Global EV Boom — Five Countries See Growth More Than Double as Gas Prices Spike",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Apple Delivers Strong Free Cash Flow, But What is the Best AAPL Play?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Is Apple Stock a Buy on the Dip as iPhone Sales Surge?",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "STX",
       "score": 2,
       "evidence": [
         {
-          "title": "Financial sector tops the S&P 500 in July, led by PayPal's 30% rally",
+          "title": "Seagate Rallies on Strong Q4 Results and Guidance. What Does This Mean for STX Stock Here.",
           "catalysts": [
-            "rally"
+            "rallies"
           ],
           "has_catalyst": true
         }
@@ -87,87 +177,33 @@
       ]
     },
     {
+      "symbol": "NET",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Cloudflare CEO slams Vail Resorts’ Hornbuckle pick amid $500M Park City bid",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
       "symbol": "NVDA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Trump's AI executive order nears key deadline as regulation debate intensifies",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "What Nvidia Could Be Worth on a $1,000 Investment if History Repeats Itself",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Here’s what’s worth streaming in August 2026 on Netflix, Hulu, HBO Max and more",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "How Apple’s cheap MacBook Neo sparked a war in budget laptops",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "As Americans go direct with GLP-1 prescriptions, Walmart, Costco, Amazon will be big weight-loss winners ",
+          "title": "Wedbush Flags Near-Term Risks From Nvidia’s Alleged OpenAI Data Center Support",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
+      "symbol": "PLUG",
       "score": 0.5,
       "evidence": [
         {
-          "title": "As Americans go direct with GLP-1 prescriptions, Walmart, Costco, Amazon will be big weight-loss winners ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Here’s what’s worth streaming in August 2026 on Netflix, Hulu, HBO Max and more",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Google pulls AI feature after users create fake satellite images",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures Due As Trump Shifts On Iran; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom",
+          "title": "Plug Power vs. Occidental Petroleum: Which Energy Stock Is a Better Buy in 2026?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -178,18 +214,29 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dow Jones Futures Due As Trump Shifts On Iran; SpaceX, AMD, Sandisk, Eli Lilly Earnings Loom",
+          "title": "Advanced Micro Devices vs. Arm: Which Tech Stock Is a Better Buy in 2026?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Tesla Rival BYD Ramping Up Sales On Overseas Demand, Flash Charging",
+          "title": "Jim Cramer says Wall Street is 'fleeing' AI stocks after a 7% drop — and buying Salesforce, Walmart instead",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Jim Cramer says Wall Street is 'fleeing' AI stocks after a 7% drop — and buying Salesforce, Walmart instead",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -197,7 +244,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 3,
+    "OpenAI (private)": 2,
     "Anthropic (private)": 1
   }
 }
