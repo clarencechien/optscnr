@@ -8,9 +8,9 @@
   },
   "Imax": {
     "first_seen": "2026-07-23",
-    "last_seen": "2026-07-30",
-    "consecutive_days": 3,
-    "total_mentions": 6,
+    "last_seen": "2026-08-03",
+    "consecutive_days": 4,
+    "total_mentions": 10,
     "ticker": "IMAX"
   },
   "JetBlue": {
@@ -64,9 +64,9 @@
   },
   "AstraZeneca": {
     "first_seen": "2026-08-02",
-    "last_seen": "2026-08-02",
-    "consecutive_days": 1,
-    "total_mentions": 5,
+    "last_seen": "2026-08-03",
+    "consecutive_days": 2,
+    "total_mentions": 7,
     "ticker": "AZN"
   },
   "Bristol Myers Squibb": {
@@ -75,5 +75,12 @@
     "consecutive_days": 1,
     "total_mentions": 3,
     "ticker": "CELG-RI"
+  },
+  "Twenty": {
+    "first_seen": "2026-08-03",
+    "last_seen": "2026-08-03",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "XXI"
   }
 }
