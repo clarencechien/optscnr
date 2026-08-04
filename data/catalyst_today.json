@@ -1,209 +1,43 @@
 {
-  "updated_at": "2026-08-03T21:41:04.923229",
+  "updated_at": "2026-08-04T21:49:42.104088",
   "stats": {
-    "total_items": 103,
-    "items_with_company": 22,
-    "items_with_catalyst": 19,
-    "items_both": 10
+    "total_items": 105,
+    "items_with_company": 18,
+    "items_with_catalyst": 14,
+    "items_both": 4
   },
-  "count": 14,
+  "count": 13,
   "tickers": [
-    "PLTR",
     "AMZN",
-    "MSFT",
-    "BA",
-    "TSLA",
-    "AAPL",
-    "STX",
-    "CRWV",
-    "NET",
-    "NVDA",
-    "PLUG",
     "AMD",
-    "WMT",
-    "CRM"
+    "META",
+    "PFE",
+    "AAPL",
+    "PLTR",
+    "LCID",
+    "XYZ",
+    "F",
+    "BAC",
+    "SHOP",
+    "RIVN",
+    "TSLA"
   ],
   "details": [
     {
-      "symbol": "PLTR",
-      "score": 9.0,
-      "evidence": [
-        {
-          "title": "Palantir soars 12% on blowout quarter, with U.S. commercial revenue soaring nearly 150% ",
-          "catalysts": [
-            "soars",
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Can Palantir pull off a Microsoft-style comeback? Here's what options say",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Palantir’s stock gains as AI drives turbocharged growth",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
       "symbol": "AMZN",
-      "score": 4.5,
+      "score": 6.5,
       "evidence": [
         {
-          "title": "Amazon tops $3 trillion market cap as stock continues post-earnings surge",
+          "title": "Jeff Bezos just filed to sell $4 billion in Amazon. The shares are falling",
           "catalysts": [
-            "surge",
+            "climbed",
+            "gains",
             "all-time high"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Amazon's debt nearly doubled to $129 billion in 6 months as CEO Jassy defends $220 billion data center spending spree",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Can Palantir pull off a Microsoft-style comeback? Here's what options say",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Microsoft’s stock is on a run not seen in 26 years — erasing its year-to-date losses",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "FAA clears smallest Boeing 737 Max to fly after years of delays",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "A trio of positive developments has Boeing shares soaring",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Boeing clears key hurdle and stock rallies to lead the Dow",
-          "catalysts": [
-            "rallies"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "SpaceX's post-IPO plunge sets tense backdrop for first earnings report",
-          "catalysts": [
-            "plunge"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Tesla and BYD Ride Global EV Boom — Five Countries See Growth More Than Double as Gas Prices Spike",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Apple Delivers Strong Free Cash Flow, But What is the Best AAPL Play?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Is Apple Stock a Buy on the Dip as iPhone Sales Surge?",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "STX",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Seagate Rallies on Strong Q4 Results and Guidance. What Does This Mean for STX Stock Here.",
-          "catalysts": [
-            "rallies"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "CoreWeave Just Scored a Leidos Partnership. What That Means for CRWV Stock Here.",
-          "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NET",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Cloudflare CEO slams Vail Resorts’ Hornbuckle pick amid $500M Park City bid",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Wedbush Flags Near-Term Risks From Nvidia’s Alleged OpenAI Data Center Support",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLUG",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Plug Power vs. Occidental Petroleum: Which Energy Stock Is a Better Buy in 2026?",
+          "title": "New Jersey sues Amazon on antitrust grounds, alleging it unlawfully wielded its power over delivery contractors",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -211,40 +45,162 @@
     },
     {
       "symbol": "AMD",
-      "score": 0.5,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Advanced Micro Devices vs. Arm: Which Tech Stock Is a Better Buy in 2026?",
+          "title": "AMD's revenue climbs 50% and data center sales doubled, but the stock is down",
+          "catalysts": [
+            "climbs"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "AMD earnings are a key test for chips and momentum stocks. Here's what the options market is saying",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
-      "score": 0.5,
+      "symbol": "META",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Jim Cramer says Wall Street is 'fleeing' AI stocks after a 7% drop — and buying Salesforce, Walmart instead",
+          "title": "Meta CEO Zuckerberg’s AI Gamble Just Got Dirtier",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Rowan Street Capital: Meta Platforms’ (META) Fundamentals Outpace Its Stock Rally",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "PFE",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Pfizer tops estimates, hikes low end of revenue guidance on strength of Eliquis, other drugs",
+          "catalysts": [
+            "tops estimates"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "How the 'Baby iPhone' and an Apple supplier leak explain China's recent supply chain moves",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Why Apple's AI Strategy Looks Different From Everyone Else's",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
+      "symbol": "PLTR",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Palantir stock skyrockets 29%, narrowly missing its best day ever after 'otherworldly' results",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Palantir Aims For 12th Straight Revenue Acceleration, But U.S. Growth Is Key",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LCID",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Jim Cramer says Wall Street is 'fleeing' AI stocks after a 7% drop — and buying Salesforce, Walmart instead",
+          "title": "Lucid begins 'operational reset' as CEO says EV maker will delay midsize vehicle",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Abdul El-Sayed, Haley Stevens square off Tuesday in Michigan Democratic primary",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Ford believes its 10.2% July U.S. sales decline was still a 'good' month",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Citi hires Bank of America’s Rohan Sen to lead technology services banking",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SHOP",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Shopify (SHOP): Evolution from E-Commerce Platform to AI Operating System",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RIVN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Rivian Automotive Stock Asks The Market's Price For Sales That Do Not Yet Pay",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Tesla’s (TSLA) AI Driven Future Beyond Cars",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "OpenAI (private)": 2,
-    "Anthropic (private)": 1
-  }
+  "watch_only": {}
 }
