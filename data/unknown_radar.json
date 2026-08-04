@@ -1,41 +1,17 @@
 {
-  "updated_at": "2026-08-03T22:33:08.786315",
-  "count": 3,
+  "updated_at": "2026-08-04T22:35:10.244201",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Imax",
-      "ticker": "IMAX",
-      "mentions_today": 4,
-      "total_mentions": 10,
-      "consecutive_days": 4,
-      "is_strong": true,
-      "evidence": [
-        "'The Odyssey' fuels Imax stock to all-time high. CEO calls momentum a 'flywheel'",
-        "'The Odyssey' fuels Imax stock to all-time high. CEO calls momentum a 'flywheel'"
-      ]
-    },
-    {
-      "name": "AstraZeneca",
-      "ticker": "AZN",
-      "mentions_today": 2,
-      "total_mentions": 7,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "An AstraZeneca, Bristol Myers Squibb merger could create a cancer-drug giant, but analysts call it ‘",
-        "An AstraZeneca, Bristol Myers Squibb merger could create a cancer-drug giant, but analysts call it ‘"
-      ]
-    },
-    {
-      "name": "Twenty",
-      "ticker": "XXI",
+      "name": "Wayfair",
+      "ticker": "W",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Twenty five states sue Trump administration over latest global tariffs",
-        "Twenty five states sue Trump administration over latest global tariffs"
+        "Wayfair stock jumps 30% as retailer posts strongest U.S. growth since 2020",
+        "Wayfair stock jumps 30% as retailer posts strongest U.S. growth since 2020"
       ]
     }
   ]

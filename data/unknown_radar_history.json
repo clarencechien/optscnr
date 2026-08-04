@@ -82,5 +82,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "XXI"
+  },
+  "Wayfair": {
+    "first_seen": "2026-08-04",
+    "last_seen": "2026-08-04",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "W"
   }
 }
