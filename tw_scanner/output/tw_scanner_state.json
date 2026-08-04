@@ -424,5 +424,17 @@
       "retail_mtx": 61.9,
       "margin_chg": 90.1
     }
+  },
+  {
+    "date": "2026-08-04",
+    "regime": "CAPITULATION",
+    "score": 0.181,
+    "alerts": [],
+    "pcts": {
+      "f_spot_20d": 12.7,
+      "tx_delta": 81.0,
+      "retail_mtx": 45.2,
+      "margin_chg": 87.7
+    }
   }
 ]
