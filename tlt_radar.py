@@ -1,6 +1,14 @@
 """
 tlt_radar.py — TLT 全套避險訊號雷達
 
+【v2.4 修正】（PATCH 2026-08-04：部分失敗仍輸出綠燈）
+- 2026-08-03「模式 B」：價格抓成功（$82.25）但選擇權鏈失敗 → 三分項全 0 →
+  「0/100 🟢 平靜」假綠燈，v2.2 的 nan 防線攔不住（沒有 nan）
+- 修法：多層有效性檢查 tlt_data_is_valid()（價格/鏈存在性/OI 崩塌指紋/Skew 恰 0），
+  任一層失敗 → 輸出「本區無效」報告（保留有效價格＋上次有效讀數），
+  且不寫 history → 「本週已成功即跳過」不成立 → 每日排程持續重試
+- 偵測的是「資料不存在」不是「分數為 0」——真平靜的三分項可以同時為 0（T5 防線）
+
 【v2.2 修正】（2026-07-31 handoff P0-1：nan 綠燈事故）
 - 7/27 抓取失敗 → current_price=nan → 三分項全 0 → 輸出「0/100 🟢平靜」
   整週被誤讀為「市場無避險需求」，與實際市況（油價破 $100、10Y 創高）完全相反。
@@ -402,6 +410,86 @@ def temperature_to_message(temp):
 
 
 # ==========================================
+# 多層資料有效性檢查（v2.4，PATCH 2026-08-04：部分失敗仍輸出綠燈）
+# ==========================================
+def tlt_data_is_valid(meta, skew_summary, overall_skew, oi_change):
+    """回傳 (是否有效, 失效原因)。任一層失敗即判定無效。
+
+    背景：2026-08-03 出現「模式 B」部分失敗——價格與歷史抓成功（$82.25），
+    選擇權鏈抓失敗（Skew 表 0 列、Skew 恰 0.00%、OI -100%/-99.9%）→
+    三分項各自回 0 → 加總 0 → 輸出「0/100 🟢 平靜」假綠燈。
+    v3.11 的 nan 防線攔不住（這次沒有 nan）。
+
+    設計原則（patch §5）：偵測「資料不存在」，而不是「分數為 0」——
+    真正平靜的市場三分項可能同時為 0（Put 巨鯨 0/30 尤其常見），
+    用分數當判準會把「真平靜」誤判成「抓取失敗」，方向剛好相反。
+    """
+    # 層 1：價格 / 歷史（模式 A 指紋；get_tlt_data 已擋，這裡便宜地再驗一次）
+    price = meta.get('current_price')
+    if price is None or (isinstance(price, float) and math.isnan(price)) or price <= 0:
+        return False, "TLT 價格抓取失敗"
+    dist_low = meta.get('distance_from_60d_low')
+    if dist_low is None or (isinstance(dist_low, float) and math.isnan(dist_low)):
+        return False, "TLT 歷史資料抓取失敗"
+
+    # 層 2：選擇權鏈存在性（模式 B 的主要指紋）
+    if not skew_summary:
+        return False, "TLT 選擇權鏈為空（IV Skew 表 0 列）"
+
+    # 層 3：OI 崩塌指紋——TLT 未平倉量不可能歸零，-99% 以下必為鏈缺失
+    if oi_change.get('has_baseline'):
+        near = oi_change.get('near_term_change_pct')
+        far = oi_change.get('far_term_change_pct')
+        if (near is not None and near <= -99.0) or (far is not None and far <= -99.0):
+            return False, f"TLT OI 變化異常（近月 {near}% / 遠月 {far}%，鏈缺失指紋）"
+
+    # 層 4：Skew 恰為 0——真實 skew 幾乎不可能剛好 0.0000，此值等同「無資料」
+    if overall_skew == 0.0:
+        return False, "TLT IV Skew 為 0.00%（等同無資料）"
+
+    return True, ""
+
+
+def write_partial_invalid_report(reason, meta):
+    """部分失敗時的渲染（patch §4.2）：
+    1. 不顯示溫度/燈號/三分項（不得輸出 0/100 🟢）
+    2. 顯示上次有效讀數（使用者才知道最後可信的 regime）
+    3. 價格若有效仍顯示——$82.25 貼近 60 日低點本身有資訊，不連帶丟掉
+    不寫 history → 「本週已成功」不成立 → 每日排程明天自動重試。
+    """
+    now_str = datetime.now().strftime('%Y-%m-%d %H:%M UTC')
+    last = load_last_good_reading()
+
+    md = "\n## 📉 TLT 避險雷達\n\n"
+    md += f"⚠️ **本區無效** — {reason}\n\n"
+    md += f"擷取時間：{now_str}\n\n"
+    if last:
+        label, _ = temperature_to_message(last['temp'])
+        md += f"上次有效讀數：{last['temp']}/100 {label}（{last['date']}）\n\n"
+    price = meta.get('current_price')
+    if price and not (isinstance(price, float) and math.isnan(price)):
+        md += f"**今日 TLT 收盤**: ${price:.2f} "
+        md += f"(距 60d 低 {meta['distance_from_60d_low']:+.1f}% / "
+        md += f"距 60d 高 {meta['distance_from_60d_high']:.1f}%)\n"
+        md += "_價格資料有效，可單獨參考；regime 分數本週無效（每日排程會自動重試）。_\n\n"
+
+    with open("data/tlt_radar_report.md", 'w', encoding='utf-8') as f:
+        f.write(md)
+
+    output = {
+        'updated_at': datetime.now().isoformat(),
+        'status': 'partial_failure',
+        'reason': reason,
+        'tlt_price': price,
+        'last_good': last,
+    }
+    with open(OUTPUT_PATH, 'w') as f:
+        json.dump(output, f, indent=2, default=str)
+
+    print(f"⚠️ 部分失敗（{reason}）——已寫「本區無效」報告，不記 history（明日自動重試）")
+
+
+# ==========================================
 # 抓取失敗報告（v2.2 P0-1）
 # ==========================================
 def load_last_good_reading():
@@ -629,6 +717,12 @@ def main():
     else:
         print(f"   首次跑，無歷史基準（近月 OI 總計: {oi_change['near_term_oi_total']:,}）")
     
+    # === v2.4：多層有效性檢查（部分失敗不得輸出溫度/燈號）===
+    valid, reason = tlt_data_is_valid(meta, skew_summary, overall_skew, oi_change)
+    if not valid:
+        write_partial_invalid_report(reason, meta)
+        return
+
     # 綜合溫度
     temp, components = calc_hedging_temperature(whales, overall_skew, oi_change)
     label, msg = temperature_to_message(temp)

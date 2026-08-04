@@ -556,17 +556,22 @@ def generate_report(df):
     # 7/31 全表僅 4 筆吃不到財報——連四天三格全過的票全死在物種閘門，
     # 不是判讀太嚴，是市場上根本沒有乾淨無事件的窗口。這個數字可能比
     # TLT 溫度更貼近「今天有沒有你要的獵物」，記錄下來當環境序列。
+    # 分母定義（PATCH 2026-08-04 §7.2）：report_rows = 進入報表的信號列數
+    # （通過門檻、score>0 或 action!=HOLD 的合約），不是掃描到的全部合約。
+    # 序列可比性依賴這個定義不變；欄名 report_rows 即為此意。
     clean_window_count = int(df['Tags'].str.contains('吃不到財報', na=False).sum())
     try:
         cw_path = os.path.join(DATA_DIR, "earnings_window_history.csv")
         today_str = datetime.now().strftime('%Y-%m-%d')
         if os.path.exists(cw_path):
             cw = pd.read_csv(cw_path)
+            if 'total_rows' in cw.columns:  # 舊欄名遷移（2026-08-01/02 兩列）
+                cw = cw.rename(columns={'total_rows': 'report_rows'})
             cw = cw[cw['date'] != today_str]  # 同日重跑取代不重複
         else:
-            cw = pd.DataFrame(columns=['date', 'clean_window_count', 'total_rows'])
+            cw = pd.DataFrame(columns=['date', 'clean_window_count', 'report_rows'])
         cw = pd.concat([cw, pd.DataFrame([{
-            'date': today_str, 'clean_window_count': clean_window_count, 'total_rows': len(df)}])],
+            'date': today_str, 'clean_window_count': clean_window_count, 'report_rows': len(df)}])],
             ignore_index=True)
         cw.to_csv(cw_path, index=False)
     except Exception as e:
@@ -612,7 +617,8 @@ def generate_report(df):
     md = "# 🚬 每日妖股獵殺報表 (Scanner 3.11 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
     md += (f"**📅 乾淨窗口計數**: 今日 {clean_window_count} 筆「吃不到財報」（窗口內無事件的純動能局）"
-           f"／全表 {len(df)} 筆。數字越小＝市場越被財報事件佔據，今天越沒有你要的獵物"
+           f"／報表信號 {len(df)} 筆（分母＝進入報表的信號列，非掃描到的全部合約）。"
+           f"數字越小＝市場越被財報事件佔據，今天越沒有你要的獵物"
            f"（環境序列：`data/earnings_window_history.csv`）\n\n")
 
     if catalyst:
@@ -782,6 +788,11 @@ def _tlt_daily_status_line():
         snap_price = float(snap.get('tlt_price') or 0)
         snap_date = str(snap.get('updated_at', ''))[:10]
         if snap_price <= 0 or not snap_date:
+            return ""
+
+        # PATCH 2026-08-04 §7.1：快照日當天不做比較——同日兩次抓取的 0.1% 差
+        # 是來源/時點雜訊，第 0 天的「較快照日 %」沒有資訊
+        if snap_date == datetime.now().strftime('%Y-%m-%d'):
             return ""
 
         closes = yf.Ticker('TLT').history(period='5d')['Close'].dropna()
