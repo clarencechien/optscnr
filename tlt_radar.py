@@ -1,6 +1,16 @@
 """
 tlt_radar.py — TLT 全套避險訊號雷達
 
+【v2.5 修正】（PATCH #2 2026-08-05：根因與時間標示）
+- P0-4 根因：v2.4 的偵測層讓失敗可見，但沒修好失敗本身——8/3、8/4 連續鏈空，
+  根因是獨立排程跑在 04:58 UTC（美股收盤後 9 小時，yfinance 鏈常回空），
+  而主掃描 23:0X UTC 同日抓上百檔鏈全成功 → 方案 A：併入主掃描 session
+  （main.py 呼叫，本週已成功即跳過），獨立排程移除、只留手動觸發
+- 方案 C：鏈抓取失敗記診斷 log（expiry list 長度、exception 型別、逐到期日錯誤）
+  到 data/tlt_fetch_errors.log——沒有這個下次還是只能猜
+- P1-4：價格標示加實際交易日（盤前執行時 history 給前一交易日收盤，
+  標「今日」會誤導）；meta 帶 price_date，報告一律「最近收盤（日期）」
+
 【v2.4 修正】（PATCH 2026-08-04：部分失敗仍輸出綠燈）
 - 2026-08-03「模式 B」：價格抓成功（$82.25）但選擇權鏈失敗 → 三分項全 0 →
   「0/100 🟢 平靜」假綠燈，v2.2 的 nan 防線攔不住（沒有 nan）
@@ -45,6 +55,19 @@ from datetime import datetime, timedelta
 
 OUTPUT_PATH = "data/tlt_radar.json"
 HISTORY_PATH = "data/tlt_radar_history.csv"
+FETCH_ERROR_LOG = "data/tlt_fetch_errors.log"
+
+
+def _log_fetch_error(msg):
+    """v2.5（PATCH #2 P0-4 方案 C）：失敗診斷 log——
+    記時間戳 + expiry list 長度 + exception 型別，沒有這個下次還是只能猜。"""
+    line = f"{datetime.now().isoformat()} {msg}"
+    print(f"🩺 {line}")
+    try:
+        with open(FETCH_ERROR_LOG, 'a', encoding='utf-8') as f:
+            f.write(line + "\n")
+    except Exception:
+        pass
 
 # 壓掉 yfinance 噪音
 logging.getLogger("yfinance").setLevel(logging.CRITICAL)
@@ -77,6 +100,9 @@ def get_tlt_data():
             print("❌ TLT 現價全為 nan / 無資料")
             return None, None
         current_price = float(closes.iloc[-1])
+        # v2.5 P1-4：記下這個收盤價實際屬於哪個交易日——
+        # 盤前執行時 history 給的是前一交易日收盤，標「今日」會誤導
+        price_date = str(closes.index[-1].date())
 
         # 過去 60 天波動範圍
         hist_60d = tk.history(period='3mo')
@@ -98,10 +124,11 @@ def get_tlt_data():
     try:
         all_exps = tk.options
     except Exception as e:
-        print(f"❌ 無法取得選擇權鏈：{e}")
+        _log_fetch_error(f"options_list_exception type={type(e).__name__} msg={e}")
         return None, None
-    
+
     if not all_exps:
+        _log_fetch_error(f"options_list_empty raw={all_exps!r}")
         return None, None
     
     # 智慧選擇代表性到期日（避開週選擠壓）
@@ -136,19 +163,29 @@ def get_tlt_data():
         print(f"     {exp} (DTE {dte})")
     
     all_chains = []
+    chain_errors = []
     for exp in selected_exps:
         try:
             opt = tk.option_chain(exp)
             calls = opt.calls.copy()
             puts = opt.puts.copy()
+            if calls.empty and puts.empty:
+                chain_errors.append(f"{exp}:empty_chain")
+                continue
             calls['Type'] = 'Call'
             puts['Type'] = 'Put'
             chain = pd.concat([calls, puts], ignore_index=True)
             chain['Expiration'] = exp
             all_chains.append(chain)
-        except Exception:
+        except Exception as e:
+            chain_errors.append(f"{exp}:{type(e).__name__}:{e}")
             continue
-    
+
+    if chain_errors:
+        _log_fetch_error(
+            f"chain_fetch_partial expiries_total={len(all_exps)} selected={len(selected_exps)} "
+            f"ok={len(all_chains)} errors=[{'; '.join(chain_errors)}]")
+
     if not all_chains:
         return None, None
     
@@ -171,6 +208,7 @@ def get_tlt_data():
     
     meta = {
         'current_price': current_price,
+        'price_date': price_date,
         'price_60d_high': price_60d_high,
         'price_60d_low': price_60d_low,
         'avg_volume': avg_volume,
@@ -468,10 +506,13 @@ def write_partial_invalid_report(reason, meta):
         md += f"上次有效讀數：{last['temp']}/100 {label}（{last['date']}）\n\n"
     price = meta.get('current_price')
     if price and not (isinstance(price, float) and math.isnan(price)):
-        md += f"**今日 TLT 收盤**: ${price:.2f} "
-        md += f"(距 60d 低 {meta['distance_from_60d_low']:+.1f}% / "
+        price_date = meta.get('price_date', '')
+        md += f"**TLT 最近收盤**: ${price:.2f}"
+        if price_date:
+            md += f"（{price_date}）"
+        md += f" (距 60d 低 {meta['distance_from_60d_low']:+.1f}% / "
         md += f"距 60d 高 {meta['distance_from_60d_high']:.1f}%)\n"
-        md += "_價格資料有效，可單獨參考；regime 分數本週無效（每日排程會自動重試）。_\n\n"
+        md += "_價格資料有效，可單獨參考；regime 分數本週無效（主掃描時段會自動重試）。_\n\n"
 
     with open("data/tlt_radar_report.md", 'w', encoding='utf-8') as f:
         f.write(md)
@@ -593,8 +634,10 @@ def generate_report(meta, whales, skew_summary, overall_skew, oi_change, temp, c
     md += f"**避險溫度**: {temp}/100 {label} — {msg}\n"
     md += f"_（擷取於 {fetched_date}，下次更新 {next_update}；本雷達為週更，週間看到的都是同一份讀數）_\n\n"
     
-    md += f"**TLT 現價**: ${meta['current_price']:.2f} "
-    md += f"(距 60d 低 +{meta['distance_from_60d_low']:.1f}% / "
+    price_date = meta.get('price_date', '')
+    md += f"**TLT 最近收盤**: ${meta['current_price']:.2f}"
+    md += f"（{price_date}）" if price_date else ""
+    md += f" (距 60d 低 +{meta['distance_from_60d_low']:.1f}% / "
     md += f"距 60d 高 {meta['distance_from_60d_high']:.1f}%)\n\n"
     
     # 訊號分數拆解

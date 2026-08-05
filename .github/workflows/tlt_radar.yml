@@ -1,11 +1,10 @@
 name: Weekly TLT Hedge Radar
 
 on:
-  schedule:
-    # v2.3（handoff #2 P0-1）：改每日 UTC 02:00 跑，但腳本內建「本週已成功即跳過」——
-    # 實質仍是週更（該週第一次成功抓取），每日排程只是當週失敗的自動重試，
-    # 不硬編週幾（週六失敗隔日自動補），單點失敗不再瞎掉整週。
-    - cron: '0 2 * * *'
+  # v2.5（PATCH #2 P0-4 方案 A）：獨立排程已移除——02:00-05:00 UTC 時段
+  # yfinance 選擇權鏈常回空（8/3、8/4 連續失敗），而主掃描 23:0X UTC 抓鏈
+  # 全部成功。TLT 現在由 main.py 在主掃描 session 內執行（本週已成功即跳過），
+  # 本 workflow 只保留手動觸發作為備援。
   workflow_dispatch:
 
 jobs:
