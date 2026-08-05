@@ -1,17 +1,29 @@
 {
-  "updated_at": "2026-08-04T22:35:10.244201",
-  "count": 1,
+  "updated_at": "2026-08-05T22:34:05.803741",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Wayfair",
-      "ticker": "W",
+      "name": "Etsy",
+      "ticker": "ETSY",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Wayfair stock jumps 30% as retailer posts strongest U.S. growth since 2020",
-        "Wayfair stock jumps 30% as retailer posts strongest U.S. growth since 2020"
+        "Etsy laying off 12% of staff in bid to streamline business, position for growth",
+        "Etsy laying off 12% of staff in bid to streamline business, position for growth"
+      ]
+    },
+    {
+      "name": "Flutter",
+      "ticker": "FLUT",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Flutter shares plummet on earnings miss and another key leadership change",
+        "Flutter shares plummet on earnings miss and another key leadership change"
       ]
     }
   ]

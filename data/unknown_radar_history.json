@@ -13,13 +13,6 @@
     "total_mentions": 10,
     "ticker": "IMAX"
   },
-  "JetBlue": {
-    "first_seen": "2026-07-27",
-    "last_seen": "2026-07-28",
-    "consecutive_days": 2,
-    "total_mentions": 4,
-    "ticker": "JBLU"
-  },
   "Schwab": {
     "first_seen": "2026-07-29",
     "last_seen": "2026-07-29",
@@ -89,5 +82,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "W"
+  },
+  "Etsy": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ETSY"
+  },
+  "Flutter": {
+    "first_seen": "2026-08-05",
+    "last_seen": "2026-08-05",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "FLUT"
   }
 }
