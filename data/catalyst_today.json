@@ -1,43 +1,93 @@
 {
-  "updated_at": "2026-08-04T21:49:42.104088",
+  "updated_at": "2026-08-05T21:47:41.735815",
   "stats": {
     "total_items": 105,
-    "items_with_company": 18,
-    "items_with_catalyst": 14,
-    "items_both": 4
+    "items_with_company": 25,
+    "items_with_catalyst": 22,
+    "items_both": 6
   },
-  "count": 13,
+  "count": 19,
   "tickers": [
-    "AMZN",
+    "GOOGL",
+    "SNDK",
+    "NVDA",
     "AMD",
-    "META",
-    "PFE",
     "AAPL",
-    "PLTR",
-    "LCID",
-    "XYZ",
+    "META",
+    "MS",
     "F",
+    "DIS",
     "BAC",
-    "SHOP",
-    "RIVN",
-    "TSLA"
+    "TSLA",
+    "ORCL",
+    "CRM",
+    "TGT",
+    "UPST",
+    "COIN",
+    "MSFT",
+    "AVGO",
+    "CRWV"
   ],
   "details": [
     {
-      "symbol": "AMZN",
-      "score": 6.5,
+      "symbol": "GOOGL",
+      "score": 3.5,
       "evidence": [
         {
-          "title": "Jeff Bezos just filed to sell $4 billion in Amazon. The shares are falling",
+          "title": "Google's AI reshuffle: Chief scientist Jeff Dean exits and Demis Hassabis steps down as DeepMind CEO",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Alphabet’s stock drops as Google loses another key AI executive",
           "catalysts": [
-            "climbed",
-            "gains",
-            "all-time high"
+            "drops"
           ],
           "has_catalyst": true
         },
         {
-          "title": "New Jersey sues Amazon on antitrust grounds, alleging it unlawfully wielded its power over delivery contractors",
+          "title": "Dean of Valuation Aswath Damodaran Raises Alarm Bells for Meta, Alphabet, and Microsoft — Should You Be Worried?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Sandisk’s stock falls as the company’s forecast doesn’t live up to high expectations",
+          "catalysts": [
+            "falls"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Sandisk forecasts upbeat quarterly revenue on AI-driven demand",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Why is SanDisk stock sliding in after-hours trading today?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Lisa Su brushes off Musk's Nvidia commitment as AMD stock sinks after earnings",
+          "catalysts": [
+            "sinks"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Nvidia’s stock is basking in the glow of a high-profile endorsement",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -48,16 +98,34 @@
       "score": 2.5,
       "evidence": [
         {
-          "title": "AMD's revenue climbs 50% and data center sales doubled, but the stock is down",
+          "title": "Lisa Su brushes off Musk's Nvidia commitment as AMD stock sinks after earnings",
           "catalysts": [
-            "climbs"
+            "sinks"
           ],
           "has_catalyst": true
         },
         {
-          "title": "AMD earnings are a key test for chips and momentum stocks. Here's what the options market is saying",
+          "title": "Why AMD is a Yahoo Finance AlphaSpace rockstar",
           "catalysts": [],
           "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Why Wall Street Is Panicking About Apple’s Services Business",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Exclusive: Dinari, founded by Stripe and Apple alums, partners with Circle to offer tokenized stocks to U.S. investors",
+          "catalysts": [
+            "partners with"
+          ],
+          "has_catalyst": true
         }
       ]
     },
@@ -66,92 +134,56 @@
       "score": 2.5,
       "evidence": [
         {
-          "title": "Meta CEO Zuckerberg’s AI Gamble Just Got Dirtier",
+          "title": "Dean of Valuation Aswath Damodaran Raises Alarm Bells for Meta, Alphabet, and Microsoft — Should You Be Worried?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Rowan Street Capital: Meta Platforms’ (META) Fundamentals Outpace Its Stock Rally",
+          "title": "Ford Jumped, Meta Dropped on Earnings Surprises — Time to Buy or Sell?",
           "catalysts": [
-            "rally"
+            "jumped"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "PFE",
+      "symbol": "MS",
       "score": 2,
       "evidence": [
         {
-          "title": "Pfizer tops estimates, hikes low end of revenue guidance on strength of Eliquis, other drugs",
+          "title": "SpaceX’s stock falls as Wall Street gets spooked by the extent of AI spending",
           "catalysts": [
-            "tops estimates"
+            "falls"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "How the 'Baby iPhone' and an Apple supplier leak explain China's recent supply chain moves",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Why Apple's AI Strategy Looks Different From Everyone Else's",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Palantir stock skyrockets 29%, narrowly missing its best day ever after 'otherworldly' results",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Palantir Aims For 12th Straight Revenue Acceleration, But U.S. Growth Is Key",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "LCID",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Lucid begins 'operational reset' as CEO says EV maker will delay midsize vehicle",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Abdul El-Sayed, Haley Stevens square off Tuesday in Michigan Democratic primary",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "F",
-      "score": 0.5,
+      "score": 2,
       "evidence": [
         {
-          "title": "Why Ford believes its 10.2% July U.S. sales decline was still a 'good' month",
+          "title": "Ford Jumped, Meta Dropped on Earnings Surprises — Time to Buy or Sell?",
+          "catalysts": [
+            "jumped"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Disney weighs free, ad-supported streaming, says it has sold out Super Bowl ad spots",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "How Disney parks are bucking a travel slowdown",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -159,32 +191,15 @@
     },
     {
       "symbol": "BAC",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Citi hires Bank of America’s Rohan Sen to lead technology services banking",
+          "title": "Situational Awareness hedge fund meltdown was a warning shot for leveraged markets, BofA CEO says",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SHOP",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Shopify (SHOP): Evolution from E-Commerce Platform to AI Operating System",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RIVN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Rivian Automotive Stock Asks The Market's Price For Sales That Do Not Yet Pay",
+          "title": "Bank of America spends $250 million a year on GLP-1 drugs for its employees, CEO says",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -195,12 +210,105 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Tesla’s (TSLA) AI Driven Future Beyond Cars",
+          "title": "SpaceX ramps up Tesla Megapack purchases in Q2 to power its AI data centers",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Marc Benioff gets a new operating chief, as Salesforce promotes Miguel Milano ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Marc Benioff gets a new operating chief, as Salesforce promotes Miguel Milano ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "We're increasing our Eli Lilly price target after another beat-and-raise quarter",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "UPST",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Salad and Go files for Chapter 11 bankruptcy after cyclospora fears worsened its challenges",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COIN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Investor Cathie Wood Buys Coinbase And Circle Stocks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Dean of Valuation Aswath Damodaran Raises Alarm Bells for Meta, Alphabet, and Microsoft — Should You Be Worried?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "What Could Push Broadcom Stock Higher Is Already Sitting In Its Order Book",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "CoreWeave expands into Indonesia, announces first data center in Asia-Pacific",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "Anthropic (private)": 1,
+    "OpenAI (private)": 1,
+    "DeepSeek (private)": 1,
+    "Stripe (private)": 1
+  }
 }
