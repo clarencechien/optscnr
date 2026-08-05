@@ -1,4 +1,17 @@
 """
+Scanner 3.12 — PATCH #2（2026-08-05）：標籤靜默缺漏 / TLT 根因 / 時間標示
+【v3.12 改動】
+- P0-3 📅 標籤靜默缺漏（缺漏比誤標危險——缺漏你看不到）：
+  ETF → 📅無財報(ETF)、個股抓不到 → 📅財報日未知（兩者視覺可分）；
+  報表頭加標籤覆蓋率（X 筆中 Y 筆有財報日）；缺漏 log 原始回傳到
+  data/earnings_fetch_misses.log（8/4 事故：PFE 盤前雙 beat 開牌卻無標籤）
+- P0-4 TLT 鏈抓取根因（方案 A）：獨立排程跑在 04:58 UTC 時段鏈常回空，
+  主掃描 23:0X UTC 抓上百檔鏈全成功 → TLT 併入主掃描 session 執行
+  （本週已成功即跳過；regime 維持週更），tlt_radar.yml 只留手動觸發；
+  方案 C：鏈抓取失敗記診斷 log（expiry 數/exception 型別）到 tlt_fetch_errors.log
+- P1-4 時間標示：「今日 TLT 收盤」→「最近收盤 + 實際交易日」（盤前執行時
+  history 給的是前一交易日收盤）；比對基準同為 history Close 單一資料源
+
 Scanner 3.11 — handoff #2（2026-08-01）殘項修正
 【v3.11 改動】
 - P0-1 渲染側 nan 防線：TLT 報告檔含 nan 一律不轉貼，改貼警示區塊
@@ -234,20 +247,35 @@ def _to_naive_et(ts):
     return ts
 
 
+# 已知無財報的 ETF/基金（quoteType 抓不到時的靜態後盾）
+KNOWN_ETF_TICKERS = {'IBIT'}
+
+
+def _log_earnings_miss(symbol, raw_desc):
+    """v3.12 P0-3：個股財報日抓不到時記下原始回傳，缺漏才有辦法定位（不再只能猜）"""
+    line = f"{datetime.now().isoformat()} {symbol} {raw_desc}\n"
+    print(f"  🩺 財報日缺漏：{symbol}（{raw_desc}）")
+    try:
+        with open(os.path.join(DATA_DIR, "earnings_fetch_misses.log"), 'a', encoding='utf-8') as f:
+            f.write(line)
+    except Exception:
+        pass
+
+
 def get_earnings_window(symbol):
-    """抓標的的 (下次財報 timestamp, 上次財報 timestamp)，naive ET；抓不到回 (None, None)。
+    """抓標的的 (下次財報 ts, 上次財報 ts, kind)，naive ET。
+    kind：'ok'=有財報日 / 'etf'=ETF基金本來就沒財報 / 'unknown'=個股但抓不到（缺漏，須可見）
 
     P0-2 背景：掃描時間 23:0X UTC = 19:0X ET，yf 選擇權是 16:00 ET 收盤快照，
-    財報多在 16:05-16:30 ET 開牌 → 當天盤後財報股的報表權利金是財報前的死價格
-    （7/28 F、7/29 SOFI/META、7/30 RIVN 三次應驗）。
+    財報多在 16:05-16:30 ET 開牌 → 當天盤後財報股的報表權利金是財報前的死價格。
 
-    v3.11：改保留完整 timestamp（不只日期），過去/未來以「現在」切分——
-    今天 16:05 已開的牌屬於過去（但價格已死，判斷在 add_earnings_tags），
-    今天早上開的牌 16:00 快照已反映（價格有效）。
+    v3.12（PATCH #2 P0-3）：缺漏比誤標危險——無標籤會被判讀者讀成「這格沒資訊」，
+    實際是「有資訊但沒抓到」。ETF 與個股資料缺失必須視覺可分，缺漏要 log 原始回傳。
     """
     if symbol in _EARNINGS_CACHE:
         return _EARNINGS_CACHE[symbol]
-    nxt, prev = None, None
+    nxt, prev, kind = None, None, 'unknown'
+    raw_desc = ""
     try:
         tk = yf.Ticker(symbol)
         edf = tk.get_earnings_dates(limit=12)
@@ -258,10 +286,34 @@ def get_earnings_window(symbol):
             past = [t for t in stamps if t <= now_et]
             nxt = future[0] if future else None
             prev = past[-1] if past else None
-    except Exception:
-        pass
-    _EARNINGS_CACHE[symbol] = (nxt, prev)
-    return nxt, prev
+            kind = 'ok'
+        else:
+            raw_desc = f"empty_return:{type(edf).__name__}:len={0 if edf is None else len(edf)}"
+    except Exception as e:
+        raw_desc = f"exception:{type(e).__name__}:{e}"
+
+    if kind != 'ok':
+        # ETF/基金判定：本來就沒財報，不算缺漏
+        if symbol in KNOWN_ETF_TICKERS:
+            kind = 'etf'
+        else:
+            qt = ''
+            try:
+                qt = str(tk.fast_info.get('quoteType', '') or '')
+            except Exception:
+                pass
+            if not qt:
+                try:
+                    qt = str((tk.info or {}).get('quoteType', '') or '')
+                except Exception:
+                    pass
+            if qt.upper() in ('ETF', 'MUTUALFUND', 'INDEX', 'CRYPTOCURRENCY'):
+                kind = 'etf'
+        if kind == 'unknown':
+            _log_earnings_miss(symbol, raw_desc or "no_data")
+
+    _EARNINGS_CACHE[symbol] = (nxt, prev, kind)
+    return nxt, prev, kind
 
 
 def add_earnings_tags(df):
@@ -283,7 +335,11 @@ def add_earnings_tags(df):
         time.sleep(random.uniform(0.1, 0.3))
 
     def row_tag(r):
-        nxt_ts, prev_ts = _EARNINGS_CACHE.get(r['Stock'], (None, None))
+        nxt_ts, prev_ts, kind = _EARNINGS_CACHE.get(r['Stock'], (None, None, 'unknown'))
+        # v3.12 P0-3：兩種「沒有財報日」必須視覺可分——
+        # ETF 本來就沒財報（正常）vs 個股抓不到（缺漏，判讀時要人工查證）
+        if kind == 'etf':
+            return "📅無財報(ETF)"
         nxt = nxt_ts.date() if nxt_ts is not None else None
         prev = prev_ts.date() if prev_ts is not None else None
         parts = []
@@ -318,6 +374,11 @@ def add_earnings_tags(df):
                 parts.append(f"📅財報已過({prev.strftime('%m-%d')})")
             elif nxt:
                 parts.append(f"📅吃不到財報(下次{nxt.strftime('%m-%d')})")
+            else:
+                # v3.12 P0-3：個股但財報日抓不到（或下次未排定）→ 缺漏必須可見。
+                # 8/4 事故：PFE 盤前雙 beat 開牌卻無任何標籤，判讀者讀成「沒資訊」
+                # ——而它正好是當日唯一三格全過的票
+                parts.append("📅財報日未知")
         return " ".join(parts)
 
     extra = df.apply(row_tag, axis=1)
@@ -614,12 +675,13 @@ def generate_report(df):
         elif symbol in auto_watch: return "🔭候選"
         return ""
 
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.11 / yf Engine)\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.12 / yf Engine)\n\n"
     md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
     md += (f"**📅 乾淨窗口計數**: 今日 {clean_window_count} 筆「吃不到財報」（窗口內無事件的純動能局）"
            f"／報表信號 {len(df)} 筆（分母＝進入報表的信號列，非掃描到的全部合約）。"
            f"數字越小＝市場越被財報事件佔據，今天越沒有你要的獵物"
            f"（環境序列：`data/earnings_window_history.csv`）\n\n")
+    md += _earnings_coverage_line(df)
 
     if catalyst:
         md += f"**📰 今日催化劑股**: {', '.join(sorted(catalyst))}\n\n"
@@ -773,6 +835,19 @@ def generate_report(df):
         print(f"  ⚠️ 信號快照儲存失敗：{e}")
 
 
+def _earnings_coverage_line(df):
+    """v3.12 P0-3（T12）：📅 標籤覆蓋率——缺漏率變成可監控的數字，不靠人工發現"""
+    total = len(df)
+    known = int(df['Tags'].str.contains('覆蓋財報|財報已過|吃不到財報', na=False, regex=True).sum())
+    unknown = int(df['Tags'].str.contains('財報日未知', na=False).sum())
+    etf = int(df['Tags'].str.contains(r'無財報\(ETF\)', na=False).sum())
+    line = (f"**📅 標籤覆蓋率**: 報表 {total} 筆中 {known} 筆有財報日"
+            f"（{unknown} 筆未知、{etf} 筆 ETF）")
+    if unknown > 0:
+        line += "——缺漏原始回傳見 `data/earnings_fetch_misses.log`"
+    return line + "\n\n"
+
+
 def _tlt_daily_status_line():
     """v3.11 P0-1：TLT 週更快照的日更「現況條」。
 
@@ -790,21 +865,24 @@ def _tlt_daily_status_line():
         if snap_price <= 0 or not snap_date:
             return ""
 
-        # PATCH 2026-08-04 §7.1：快照日當天不做比較——同日兩次抓取的 0.1% 差
-        # 是來源/時點雜訊，第 0 天的「較快照日 %」沒有資訊
-        if snap_date == datetime.now().strftime('%Y-%m-%d'):
-            return ""
-
         closes = yf.Ticker('TLT').history(period='5d')['Close'].dropna()
         if closes.empty:
             return ""
-        today_close = float(closes.iloc[-1])
-        if today_close <= 0 or pd.isna(today_close):
+        last_close = float(closes.iloc[-1])
+        if last_close <= 0 or pd.isna(last_close):
+            return ""
+        # v3.12 P1-4：這個收盤價實際屬於哪個交易日（盤前執行時是前一交易日，
+        # 標「今日收盤」會誤導）——標籤改「最近收盤」+ 實際日期
+        last_close_date = str(closes.index[-1].date())
+
+        # PATCH 2026-08-04 §7.1：最近收盤與週快照同一交易日 → 不做比較
+        # （同日兩次抓取的 0.1% 差是來源/時點雜訊，第 0 天的比對沒有資訊）
+        if last_close_date == snap_date:
             return ""
 
-        delta_pct = (today_close / snap_price - 1) * 100
-        line = (f"**今日 TLT 收盤**: ${today_close:.2f}"
-                f"（較快照日 {snap_date} {delta_pct:+.1f}%）｜日更現況條，僅檢查週快照是否過期\n")
+        delta_pct = (last_close / snap_price - 1) * 100
+        line = (f"**最近收盤**: ${last_close:.2f}（{last_close_date}）"
+                f"｜較週快照 {snap_date} {delta_pct:+.1f}%｜日更現況條，僅檢查週快照是否過期\n")
         if abs(delta_pct) > 3.0:
             line += (f"\n⚠️ **標的自快照日已變動 {delta_pct:+.1f}%，"
                      f"上方週更 regime 讀數可能已過期**——請改看即時外部資料（10Y/油價/VIX）。\n")
@@ -920,12 +998,23 @@ def us_market_traded_today():
 
 
 def main():
-    print(f"🔥 啟動 Scanner 3.11 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🔥 啟動 Scanner 3.12 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
     if not us_market_traded_today():
         print("🛑 美股今日休市（週末/假日），市場資料為舊收盤殘留。")
         print("   跳過本次掃描與信號快照，避免污染 shadow log。")
         return
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
+
+    # === v3.12 P0-4 方案 A：TLT 雷達併入主掃描時段 ===
+    # 根因：獨立排程跑在 04:58 UTC（美股收盤後 9 小時），yfinance 該時段選擇權鏈
+    # 常回空——同一天主掃描在 23:0X UTC 抓上百檔鏈全部成功。與其修時段不如併時段。
+    # tlt_radar 內建「本週已有有效讀數即跳過」，這裡呼叫成本一週只實跑一次；
+    # regime 維持週更（設計決策），只是換到可靠的執行時段。失敗不擋主掃描。
+    try:
+        import tlt_radar
+        tlt_radar.main()
+    except Exception as e:
+        print(f"⚠️ TLT 雷達執行失敗（不影響主掃描）：{e}")
 
     auto_watch = load_auto_watch()
     catalyst = load_catalyst_today()

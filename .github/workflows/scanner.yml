@@ -61,5 +61,12 @@ jobs:
           git add data/*.csv README.md
           git add data/iv_log/*.json || true
           git add SHADOWLOG_*.md || true
+          # v3.12 P0-4 方案 A：TLT 併入主掃描 session，產出一併 commit
+          # （history csv 已含在 data/*.csv；逐檔存在才 add，見 log.md Bug 4 教訓）
+          for f in data/tlt_radar.json data/tlt_radar_report.md \
+                   data/tlt_fetch_errors.log data/earnings_fetch_misses.log; do
+            [ -f "$f" ] && git add "$f" && echo "added: $f"
+          done
+          true
           git commit -m "📈 Update scanner + shadow log [skip ci]" || exit 0
           git push
