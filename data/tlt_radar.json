@@ -1,10 +1,20 @@
 {
-  "updated_at": "2026-08-04T04:58:35.037366",
-  "status": "partial_failure",
-  "reason": "TLT \u9078\u64c7\u6b0a\u93c8\u70ba\u7a7a\uff08IV Skew \u8868 0 \u5217\uff09",
-  "tlt_price": 82.25,
-  "last_good": {
-    "date": "2026-08-01",
-    "temp": 15
-  }
+  "updated_at": "2026-08-05T22:56:29.239547",
+  "tlt_price": 83.0,
+  "hedging_temperature": 0,
+  "components": {
+    "whales": 0,
+    "skew": 0,
+    "oi_buildup": 0
+  },
+  "overall_skew_pct": 1.7,
+  "oi_change": {
+    "near_term_oi_total": 87663,
+    "far_term_oi_total": 684293,
+    "near_term_change_pct": -90.9,
+    "far_term_change_pct": -50.8,
+    "has_baseline": true
+  },
+  "whale_count": 0,
+  "new_position_whales": 0
 }

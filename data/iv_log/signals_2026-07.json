@@ -7948,7 +7948,12 @@
       "iv": 34.0826904296875,
       "note": "ok"
     },
-    "t20": null,
+    "t20": {
+      "opt_price": 0.6,
+      "spot": 23.059999465942383,
+      "iv": 30.762411132812495,
+      "note": "ok"
+    },
     "verdict": "✅噴了(峰3.2x)"
   },
   {
@@ -7979,8 +7984,13 @@
       "iv": 44.58063232421875,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "❌沒噴(峰0.5x)"
+    "t20": {
+      "opt_price": 0.47,
+      "spot": 219.22000122070312,
+      "iv": 38.81897119140625,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰0.5x/今0.5x)"
   },
   {
     "signal_id": "2026-07-16_TSM_2026-08-21_510.0",
@@ -8010,8 +8020,13 @@
       "iv": 50.56201782226562,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.3x/今0.3x)"
+    "t20": {
+      "opt_price": 0.37,
+      "spot": 414.0,
+      "iv": 51.22119091796875,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.3x/今0.1x)"
   },
   {
     "signal_id": "2026-07-16_ABBV_2026-09-18_280.0",
@@ -8041,8 +8056,13 @@
       "iv": 28.748271118164055,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.0x/今0.9x)"
+    "t20": {
+      "opt_price": 0.94,
+      "spot": 246.1999969482422,
+      "iv": 28.675029663085933,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.0x/今0.2x)"
   },
   {
     "signal_id": "2026-07-16_DKNG_2026-08-21_30.0",
@@ -8072,8 +8092,13 @@
       "iv": 63.7698935546875,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰0.6x/今0.5x)"
+    "t20": {
+      "opt_price": 0.05,
+      "spot": 21.760000228881836,
+      "iv": 80.4689453125,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰0.6x/今0.1x)"
   },
   {
     "signal_id": "2026-07-16_ASTS_2026-10-16_80.0",
@@ -8103,8 +8128,13 @@
       "iv": 106.34812451171878,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.5x/今1.0x)"
+    "t20": {
+      "opt_price": 8.72,
+      "spot": 68.37999725341797,
+      "iv": 107.60544244384766,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.7x/今1.7x)"
   },
   {
     "signal_id": "2026-07-16_IREN_2026-09-18_40.0",
@@ -8134,8 +8164,13 @@
       "iv": 127.93004785156248,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.7x/今1.0x)"
+    "t20": {
+      "opt_price": 5.89,
+      "spot": 38.88999938964844,
+      "iv": 115.99163098144531,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.7x/今1.1x)"
   },
   {
     "signal_id": "2026-07-16_ASTS_2026-11-20_140.0",
@@ -8165,8 +8200,13 @@
       "iv": 109.88814587402346,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.6x/今0.9x)"
+    "t20": {
+      "opt_price": 3.44,
+      "spot": 68.37999725341797,
+      "iv": 113.37933935546877,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.6x/今1.6x)"
   },
   {
     "signal_id": "2026-07-16_RKLB_2026-09-18_90.0",
@@ -8196,8 +8236,13 @@
       "iv": 96.5820654296875,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.1x/今0.8x)"
+    "t20": {
+      "opt_price": 5.15,
+      "spot": 74.81999969482422,
+      "iv": 97.1679970703125,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.2x/今1.2x)"
   },
   {
     "signal_id": "2026-07-16_ASTS_2026-10-16_110.0",
@@ -8227,8 +8272,13 @@
       "iv": 108.32565368652345,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.6x/今0.9x)"
+    "t20": {
+      "opt_price": 3.43,
+      "spot": 68.37999725341797,
+      "iv": 112.72016296386718,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.6x/今1.6x)"
   },
   {
     "signal_id": "2026-07-16_ONDS_2027-01-15_15.0",
@@ -8258,8 +8308,13 @@
       "iv": 105.85984570312502,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.8x/今1.8x)"
+    "t20": {
+      "opt_price": 1.16,
+      "spot": 8.869999885559082,
+      "iv": 110.01021557617187,
+      "note": "ok"
+    },
+    "verdict": "✅噴了(峰2.5x)"
   },
   {
     "signal_id": "2026-07-16_PFE_2026-09-18_28.0",
@@ -8289,8 +8344,13 @@
       "iv": 24.317163085937498,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰0.8x/今0.8x)"
+    "t20": {
+      "opt_price": 0.14,
+      "spot": 25.809999465942383,
+      "iv": 21.289849609375,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.2x/今1.2x)"
   },
   {
     "signal_id": "2026-07-16_ACHR_2027-01-15_10.0",
@@ -8320,8 +8380,13 @@
       "iv": 92.9688203125,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.6x/今1.2x)"
+    "t20": {
+      "opt_price": 0.33,
+      "spot": 5.199999809265137,
+      "iv": 94.33599414062499,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.6x/今1.3x)"
   },
   {
     "signal_id": "2026-07-16_T_2027-01-15_30.0",
@@ -8351,8 +8416,13 @@
       "iv": 27.735097656249998,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.8x/今1.8x)"
+    "t20": {
+      "opt_price": 0.17,
+      "spot": 23.059999465942383,
+      "iv": 30.127651855468752,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.8x/今0.9x)"
   },
   {
     "signal_id": "2026-07-16_IBIT_2026-09-18_55.0",
@@ -8382,8 +8452,13 @@
       "iv": 50.39112109375,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.3x/今0.9x)"
+    "t20": {
+      "opt_price": 0.05,
+      "spot": 36.7400016784668,
+      "iv": 53.12546875,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.3x/今0.7x)"
   },
   {
     "signal_id": "2026-07-16_OPEN_2027-01-15_7.0",
@@ -8413,8 +8488,13 @@
       "iv": 102.53954980468751,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰0.9x/今0.6x)"
+    "t20": {
+      "opt_price": 0.33,
+      "spot": 3.759999990463257,
+      "iv": 100.9770576171875,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰0.9x/今0.5x)"
   },
   {
     "signal_id": "2026-07-16_IREN_2028-01-21_110.0",
@@ -8444,8 +8524,13 @@
       "iv": 110.81587561035158,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.3x/今1.0x)"
+    "t20": {
+      "opt_price": 8.8,
+      "spot": 38.88999938964844,
+      "iv": 104.87108111572267,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.3x/今1.1x)"
   },
   {
     "signal_id": "2026-07-16_IBIT_2027-01-15_100.0",
@@ -8475,8 +8560,13 @@
       "iv": 60.74258007812501,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.1x/今0.7x)"
+    "t20": {
+      "opt_price": 0.06,
+      "spot": 36.7400016784668,
+      "iv": 61.914443359375014,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.1x/今0.6x)"
   },
   {
     "signal_id": "2026-07-16_IBIT_2027-01-15_70.0",
@@ -8506,8 +8596,13 @@
       "iv": 49.31691308593751,
       "note": "ok"
     },
-    "t20": null,
-    "verdict": "➖持平(峰1.2x/今0.9x)"
+    "t20": {
+      "opt_price": 0.17,
+      "spot": 36.7400016784668,
+      "iv": 50.0005,
+      "note": "ok"
+    },
+    "verdict": "➖持平(峰1.2x/今0.8x)"
   },
   {
     "signal_id": "2026-07-17_NFLX_2026-11-20_105.0",
@@ -15489,10 +15584,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.68,
+      "spot": 18.25,
+      "iv": 59.4730615234375,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.7x/今1.7x)"
   },
   {
     "signal_id": "2026-07-31_AAPL_2026-08-21_340.0",
@@ -15512,10 +15612,15 @@
     "news_at_signal": true,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.53,
+      "spot": 311.0,
+      "iv": 27.466545654296876,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.7x/今0.7x)"
   },
   {
     "signal_id": "2026-07-31_INTC_2027-01-15_110.0",
@@ -15535,10 +15640,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 19.05,
+      "spot": 101.05999755859375,
+      "iv": 82.84318914794922,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.4x/今1.4x)"
   },
   {
     "signal_id": "2026-07-31_IBIT_2026-09-18_39.0",
@@ -15558,10 +15668,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.94,
+      "spot": 36.7400016784668,
+      "iv": 35.425450439453115,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.4x/今1.4x)"
   },
   {
     "signal_id": "2026-07-31_NVDA_2026-08-21_225.0",
@@ -15581,10 +15696,15 @@
     "news_at_signal": true,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 4.61,
+      "spot": 219.22000122070312,
+      "iv": 37.793590820312495,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "✅噴了(峰4.9x)"
   },
   {
     "signal_id": "2026-07-31_GOOGL_2026-11-20_470.0",
@@ -15604,10 +15724,15 @@
     "news_at_signal": true,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 4.0,
+      "spot": 362.42999267578125,
+      "iv": 40.73240420532227,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.3x/今1.3x)"
   },
   {
     "signal_id": "2026-07-31_IBIT_2026-11-20_46.0",
@@ -15627,10 +15752,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.67,
+      "spot": 36.7400016784668,
+      "iv": 39.86876538085938,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.3x/今1.3x)"
   },
   {
     "signal_id": "2026-07-31_IBIT_2027-01-15_100.0",
@@ -15650,10 +15780,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.06,
+      "spot": 36.7400016784668,
+      "iv": 61.914443359375014,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-07-31_IBIT_2027-01-15_50.0",
@@ -15673,10 +15808,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.8,
+      "spot": 36.7400016784668,
+      "iv": 42.139250488281256,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.2x/今1.2x)"
   },
   {
     "signal_id": "2026-07-31_T_2026-09-18_25.0",
@@ -15696,10 +15836,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.25,
+      "spot": 23.059999465942383,
+      "iv": 27.88158056640625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
     "signal_id": "2026-07-31_T_2027-01-15_30.0",
@@ -15719,10 +15864,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.17,
+      "spot": 23.059999465942383,
+      "iv": 30.127651855468752,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
     "signal_id": "2026-07-31_DKNG_2026-08-21_30.0",
@@ -15742,9 +15892,14 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.05,
+      "spot": 21.760000228881836,
+      "iv": 80.4689453125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.4x)"
   }
 ]
