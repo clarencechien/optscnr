@@ -1,6 +1,6 @@
-# Delta Radar (2308.TW) — 2026-08-04 05:30 UTC
+# Delta Radar (2308.TW) — 2026-08-06 06:08 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
+## 總判定：🟡 YELLOW
 
 GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、
 敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。
@@ -8,43 +8,105 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟢 GREEN | capex_cut:5e(6m) / vr300_delay:16e(22m) / debt_financed_capex:13e / lc_psu_competition:0e |
+| M1 revenue_acceleration | 🟢 GREEN | 2026-06 YoY +55.4%, slope +5.94pp/月, 連續減速 0 個月 |
+| M2 bullwhip_health | 🟢 GREEN | 合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32 |
+| M3 thai_shadow | 🟡 YELLOW | DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8% |
+| M4 customs_flow | 🟢 GREEN | US 進口 HS850440 (TH+TW) 近3月 $1426.7M, YoY +41.0% |
+| M5 narrative_triggers | 🟢 GREEN | capex_cut:5e(7m) / vr300_delay:14e(21m) / debt_financed_capex:13e / lc_psu_competition:0e |
+| M6 peer_divergence | 🟡 YELLOW | cooling:3324領先+43pp |
+| M8 revision_velocity | 🟢 GREEN | 下修 0/上修 0（樣本不足 <3，暫不評級） |
+
+### M1 revenue_acceleration — 🟢 GREEN
+```json
+{
+  "latest_month": "2026-06",
+  "latest_yoy_pct": 55.4,
+  "yoy_slope_pp_per_month": 5.94,
+  "consecutive_decel_months": 0
+}
+```
+
+### M2 bullwhip_health — 🟢 GREEN
+```json
+{
+  "as_of": "2026-06-30",
+  "contract_liab_qoq_pct": 17.3,
+  "inventory_qoq_pct": 17.0,
+  "fcf_to_net_income": 1.32,
+  "accounts_used": {
+    "contract": "CurrentContractLiabilities",
+    "inventory": "Inventories",
+    "ocf": "CashFlowsFromOperatingActivities",
+    "capex": "PropertyAndPlantAndEquipment",
+    "net_income": "IncomeAfterTaxes"
+  }
+}
+```
+
+### M3 thai_shadow — 🟡 YELLOW
+```json
+{
+  "latest_q": "2026-06-30",
+  "rev_yoy_pct": 52.5,
+  "gross_margin_pct": 26.8
+}
+```
+- 泰子公司毛利率 26.8% 跌破 27.0% 地板
+
+### M4 customs_flow — 🟢 GREEN
+```json
+{
+  "window": "2026-04..2026-06",
+  "rolling_value_usd_m": 1426.7,
+  "rolling_yoy_pct": 41.0,
+  "by_country": {
+    "THAILAND": {
+      "rolling_value_usd_m": 871.4,
+      "rolling_yoy_pct": 30.6
+    },
+    "TAIWAN": {
+      "rolling_value_usd_m": 555.3,
+      "rolling_yoy_pct": 61.1
+    }
+  }
+}
+```
 
 ### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
   "events": {
     "capex_cut": 5,
-    "vr300_delay": 16,
+    "vr300_delay": 14,
     "debt_financed_capex": 13,
     "lc_psu_competition": 0
   },
   "mentions": {
-    "capex_cut": 6,
-    "vr300_delay": 22,
+    "capex_cut": 7,
+    "vr300_delay": 21,
     "debt_financed_capex": 13,
     "lc_psu_competition": 0
   },
   "scoring": {
     "capex_cut": {
       "events": 5,
-      "mentions": 6,
+      "mentions": 7,
       "gate": "zscore",
       "z": -0.45,
       "denial": false
     },
     "vr300_delay": {
-      "events": 16,
-      "mentions": 22,
+      "events": 14,
+      "mentions": 21,
       "gate": "zscore",
-      "z": 0.17,
+      "z": -3.54,
       "denial": true
     },
     "debt_financed_capex": {
       "events": 13,
       "mentions": 13,
       "gate": "zscore",
-      "z": -0.7,
+      "z": -0.57,
       "denial": false
     },
     "lc_psu_competition": {
@@ -61,14 +123,70 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
 - [capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
 - [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
-- [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
-- [vr300_delay] Nvidia Kyber NVL144 Slips to 2028 as Physics, Not Software, Defeats the Backup Plan - techtimes.com
+- [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
+- [vr300_delay] Nvidia Kyber NVL144 Slips to 2028 as Physics, Not Software, Defeats the Backup Plan - Tech Times
 - [debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance
-- [debt_financed_capex] Will Moody's AI Debt Warning Trigger an AI Bubble Crash? - roddubitsky.substack.com
-- [debt_financed_capex] AI data center debt has climbed to the top of Wall Street's credit risk watchlist - Startup Fortune
+- [debt_financed_capex] CICC: Assessing AI-Related Debt Risks through a Minskyan Lens - 富途牛牛
+- [debt_financed_capex] The growing jitters over hyperscaler debt - Axios
+
+### M6 peer_divergence — 🟡 YELLOW
+```json
+{
+  "groups": {
+    "power": {
+      "direction": "peer_lead_risk",
+      "delta_3m_yoy": 47.7,
+      "best_peer": "2301",
+      "best_peer_3m_yoy": 30.3,
+      "peer_lead_pp": -17.3,
+      "status": "GREEN",
+      "peers_3m_yoy": {
+        "2301": 30.3,
+        "6282": 29.7
+      }
+    },
+    "cooling": {
+      "direction": "peer_lead_risk",
+      "delta_3m_yoy": 47.7,
+      "best_peer": "3324",
+      "best_peer_3m_yoy": 90.9,
+      "peer_lead_pp": 43.2,
+      "status": "YELLOW",
+      "peers_3m_yoy": {
+        "3324": 90.9,
+        "3017": 66.1
+      }
+    },
+    "rack": {
+      "direction": "cohort_confirm",
+      "delta_3m_yoy": 47.7,
+      "best_peer": "2382",
+      "best_peer_3m_yoy": 106.0,
+      "peer_lead_pp": 58.3,
+      "status": "GREEN",
+      "peers_3m_yoy": {
+        "2317": 40.5,
+        "2382": 106.0,
+        "6669": 25.9
+      }
+    }
+  }
+}
+```
+- [cooling] 3324 3m YoY 90.9% vs 2308 47.7%（領先 +43pp）
+
+### M8 revision_velocity — 🟢 GREEN
+```json
+{
+  "up_hits": 0,
+  "down_hits": 0,
+  "total": 0,
+  "down_ratio": null
+}
+```
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**66/66**
+- 本次回填 **10** 筆；state 已有 outcomes 的 entry：**67/67**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---
