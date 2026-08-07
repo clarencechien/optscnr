@@ -1,67 +1,76 @@
 {
-  "updated_at": "2026-08-07T00:56:38.436233",
+  "updated_at": "2026-08-07T21:11:29.322766",
   "stats": {
-    "total_items": 99,
-    "items_with_company": 18,
-    "items_with_catalyst": 18,
-    "items_both": 1
+    "total_items": 102,
+    "items_with_company": 15,
+    "items_with_catalyst": 15,
+    "items_both": 2
   },
-  "count": 16,
+  "count": 12,
   "tickers": [
-    "AAPL",
-    "META",
-    "AMD",
-    "F",
-    "TSLA",
-    "GOOGL",
-    "NET",
-    "TGT",
-    "SNDK",
     "NVDA",
-    "NBIS",
-    "NOW",
-    "AVGO",
+    "WDC",
+    "TGT",
+    "META",
+    "AMAT",
+    "DKNG",
+    "AMD",
     "PLTR",
-    "ASML",
-    "NKE"
+    "VRT",
+    "XYZ",
+    "QCOM",
+    "BRK-B"
   ],
   "details": [
     {
-      "symbol": "AAPL",
+      "symbol": "NVDA",
       "score": 2,
       "evidence": [
         {
-          "title": "Apple Acquires PlasmaSolve in a Quiet Materials Science Deal. It’s Probably Not Strategically Significant.",
+          "title": "Two reasons why Nvidia’s stock saw its biggest weekly surge in more than a year",
           "catalysts": [
-            "acquires"
+            "surge"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "WDC",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Why Western Digital Stock Is Tumbling Despite A Big Earnings Beat",
+          "catalysts": [
+            "earnings beat"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
       "score": 1.5,
       "evidence": [
         {
-          "title": "Meta ordered to pay $567 million into abatement fund as remedy to child harms case in New Mexico",
+          "title": "Private equity is circling budget airlines after Apollo's EasyJet deal — and this carrier could be next",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "AMD buys chip startup that hardwires AI models into its silicon",
+          "title": "Are target date funds aggressive enough to give Americans retirement savings that last their lifetimes",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "New Mexico court orders Meta to pay $567 million for teen mental health fund",
+          "title": "Needham keeps TeraWulf target at $33 despite near-term estimate cuts",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "META",
       "score": 1.0,
       "evidence": [
         {
@@ -70,117 +79,45 @@
           "has_catalyst": false
         },
         {
-          "title": "7 numbers from AMD earnings reveal an ultra-bullish future: AlphaSpace stats to know",
+          "title": "Explainer-How could New Mexico’s $567 million ruling change Meta?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "F",
-      "score": 0.5,
+      "symbol": "AMAT",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Ford's new 'Fathom' electric pickup truck will start at $28,000",
+          "title": "Are Wall Street Analysts Predicting Applied Materials Stock Will Climb or Sink?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Dear Applied Materials Stock Fans, Mark Your Calendars for August 13",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "DKNG",
       "score": 0.5,
       "evidence": [
         {
-          "title": "SpaceX ramps up Tesla Megapack purchases in Q2 to power its AI data centers",
+          "title": "Prediction markets take center stage in latest round of quarterly earnings reports",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "As Alphabet burns through cash on AI, it’s turning back to the bond market",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NET",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Cloudflare raises annual outlook above market estimates on AI-driven demand",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "What Are Wall Street Analysts' Target Price for MGM Resorts Stock?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Are Wall Street Analysts Bullish on Sandisk Stock?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "This Nvidia-Backed AI Play Is Booming, But the Valuation Is Hard to Ignore",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NBIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Dear Nebius Stock Fans, Mark Your Calendars for August 5",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NOW",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is ServiceNow (NOW) a Mispriced AI Winner After the Software Sell-Off?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Could Broadcom (AVGO) Become the Biggest Winner From the Shift to Custom AI Chips?",
+          "title": "AMD buys chip startup that hardwires AI models into its silicon",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -191,34 +128,58 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Palantir Just Reported a Blowout Quarter and Raised Its Guidance. Wall Street Is Blown Away by PLTR Stock.",
+          "title": "Palantir’s stock stages best week since 2024 — showing it’s no longer an AI loser",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ASML",
+      "symbol": "VRT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Could ASML Holding N.V. (ASML) Be the Most Durable Winner From the AI Chip Boom?",
+          "title": "Vertiv vs. Eaton: comparing two power infrastructure stocks",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NKE",
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nike stock is underperforming on a historic scale: AlphaSpace stat to know",
+          "title": "Are Wall Street Analysts Bullish on Block Stock?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Qualcomm’s (QCOM) BMW Deal Adds To A Bigger Diversification Push",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Greg Abel's Berkshire Hathaway May Have Repurchased Up to $11 Billion of Its Own Stock Last Quarter. Is This a Bullish Signal for Shareholde",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "DeepSeek (private)": 1
+  }
 }
