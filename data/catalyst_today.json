@@ -1,129 +1,39 @@
 {
-  "updated_at": "2026-08-05T21:47:41.735815",
+  "updated_at": "2026-08-07T00:56:38.436233",
   "stats": {
-    "total_items": 105,
-    "items_with_company": 25,
-    "items_with_catalyst": 22,
-    "items_both": 6
+    "total_items": 99,
+    "items_with_company": 18,
+    "items_with_catalyst": 18,
+    "items_both": 1
   },
-  "count": 19,
+  "count": 16,
   "tickers": [
-    "GOOGL",
-    "SNDK",
-    "NVDA",
-    "AMD",
     "AAPL",
     "META",
-    "MS",
+    "AMD",
     "F",
-    "DIS",
-    "BAC",
     "TSLA",
-    "ORCL",
-    "CRM",
+    "GOOGL",
+    "NET",
     "TGT",
-    "UPST",
-    "COIN",
-    "MSFT",
+    "SNDK",
+    "NVDA",
+    "NBIS",
+    "NOW",
     "AVGO",
-    "CRWV"
+    "PLTR",
+    "ASML",
+    "NKE"
   ],
   "details": [
     {
-      "symbol": "GOOGL",
-      "score": 3.5,
-      "evidence": [
-        {
-          "title": "Google's AI reshuffle: Chief scientist Jeff Dean exits and Demis Hassabis steps down as DeepMind CEO",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Alphabet’s stock drops as Google loses another key AI executive",
-          "catalysts": [
-            "drops"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Dean of Valuation Aswath Damodaran Raises Alarm Bells for Meta, Alphabet, and Microsoft — Should You Be Worried?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Sandisk’s stock falls as the company’s forecast doesn’t live up to high expectations",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Sandisk forecasts upbeat quarterly revenue on AI-driven demand",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Why is SanDisk stock sliding in after-hours trading today?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Lisa Su brushes off Musk's Nvidia commitment as AMD stock sinks after earnings",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Nvidia’s stock is basking in the glow of a high-profile endorsement",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Lisa Su brushes off Musk's Nvidia commitment as AMD stock sinks after earnings",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Why AMD is a Yahoo Finance AlphaSpace rockstar",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "AAPL",
-      "score": 2.5,
+      "score": 2,
       "evidence": [
         {
-          "title": "Why Wall Street Is Panicking About Apple’s Services Business",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Exclusive: Dinari, founded by Stripe and Apple alums, partners with Circle to offer tokenized stocks to U.S. investors",
+          "title": "Apple Acquires PlasmaSolve in a Quiet Materials Science Deal. It’s Probably Not Strategically Significant.",
           "catalysts": [
-            "partners with"
+            "acquires"
           ],
           "has_catalyst": true
         }
@@ -131,75 +41,47 @@
     },
     {
       "symbol": "META",
-      "score": 2.5,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Dean of Valuation Aswath Damodaran Raises Alarm Bells for Meta, Alphabet, and Microsoft — Should You Be Worried?",
+          "title": "Meta ordered to pay $567 million into abatement fund as remedy to child harms case in New Mexico",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Ford Jumped, Meta Dropped on Earnings Surprises — Time to Buy or Sell?",
-          "catalysts": [
-            "jumped"
-          ],
-          "has_catalyst": true
+          "title": "AMD buys chip startup that hardwires AI models into its silicon",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "New Mexico court orders Meta to pay $567 million for teen mental health fund",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MS",
-      "score": 2,
+      "symbol": "AMD",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "SpaceX’s stock falls as Wall Street gets spooked by the extent of AI spending",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
+          "title": "AMD buys chip startup that hardwires AI models into its silicon",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "7 numbers from AMD earnings reveal an ultra-bullish future: AlphaSpace stats to know",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "F",
-      "score": 2,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Ford Jumped, Meta Dropped on Earnings Surprises — Time to Buy or Sell?",
-          "catalysts": [
-            "jumped"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Disney weighs free, ad-supported streaming, says it has sold out Super Bowl ad spots",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "How Disney parks are bucking a travel slowdown",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BAC",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Situational Awareness hedge fund meltdown was a warning shot for leveraged markets, BofA CEO says",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Bank of America spends $250 million a year on GLP-1 drugs for its employees, CEO says",
+          "title": "Ford's new 'Fathom' electric pickup truck will start at $28,000",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -217,22 +99,22 @@
       ]
     },
     {
-      "symbol": "ORCL",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Marc Benioff gets a new operating chief, as Salesforce promotes Miguel Milano ",
+          "title": "As Alphabet burns through cash on AI, it’s turning back to the bond market",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
+      "symbol": "NET",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Marc Benioff gets a new operating chief, as Salesforce promotes Miguel Milano ",
+          "title": "Cloudflare raises annual outlook above market estimates on AI-driven demand",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -243,40 +125,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "We're increasing our Eli Lilly price target after another beat-and-raise quarter",
+          "title": "What Are Wall Street Analysts' Target Price for MGM Resorts Stock?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "UPST",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Salad and Go files for Chapter 11 bankruptcy after cyclospora fears worsened its challenges",
+          "title": "Are Wall Street Analysts Bullish on Sandisk Stock?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COIN",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Investor Cathie Wood Buys Coinbase And Circle Stocks",
+          "title": "This Nvidia-Backed AI Play Is Booming, But the Valuation Is Hard to Ignore",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "NBIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dean of Valuation Aswath Damodaran Raises Alarm Bells for Meta, Alphabet, and Microsoft — Should You Be Worried?",
+          "title": "Dear Nebius Stock Fans, Mark Your Calendars for August 5",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NOW",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is ServiceNow (NOW) a Mispriced AI Winner After the Software Sell-Off?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -287,28 +180,45 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "What Could Push Broadcom Stock Higher Is Already Sitting In Its Order Book",
+          "title": "Could Broadcom (AVGO) Become the Biggest Winner From the Shift to Custom AI Chips?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWV",
+      "symbol": "PLTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "CoreWeave expands into Indonesia, announces first data center in Asia-Pacific",
+          "title": "Palantir Just Reported a Blowout Quarter and Raised Its Guidance. Wall Street Is Blown Away by PLTR Stock.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ASML",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Could ASML Holding N.V. (ASML) Be the Most Durable Winner From the AI Chip Boom?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Nike stock is underperforming on a historic scale: AlphaSpace stat to know",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "Anthropic (private)": 1,
-    "OpenAI (private)": 1,
-    "DeepSeek (private)": 1,
-    "Stripe (private)": 1
-  }
+  "watch_only": {}
 }
