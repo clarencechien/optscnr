@@ -1,38 +1,10 @@
 {
-  "Reddit": {
-    "first_seen": "2026-07-22",
-    "last_seen": "2026-07-30",
-    "consecutive_days": 2,
-    "total_mentions": 6,
-    "ticker": "RDDT"
-  },
   "Imax": {
     "first_seen": "2026-07-23",
     "last_seen": "2026-08-03",
     "consecutive_days": 4,
     "total_mentions": 10,
     "ticker": "IMAX"
-  },
-  "Schwab": {
-    "first_seen": "2026-07-29",
-    "last_seen": "2026-07-29",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SCHW-PJ"
-  },
-  "Novo Nordisk": {
-    "first_seen": "2026-07-29",
-    "last_seen": "2026-07-29",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "NONOF"
-  },
-  "Stellantis": {
-    "first_seen": "2026-07-30",
-    "last_seen": "2026-07-30",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "STLA"
   },
   "Leonardo": {
     "first_seen": "2026-07-31",
@@ -96,5 +68,61 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "FLUT"
+  },
+  "Copper": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LBCMF"
+  },
+  "Airbnb": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 4,
+    "ticker": "ABNB"
+  },
+  "Grindr": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GRND"
+  },
+  "Virginia": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "VABK"
+  },
+  "Sweetgreen": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SG"
+  },
+  "Savers Value Village": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SVV"
+  },
+  "Trade Desk": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "TTD"
+  },
+  "Honeywell Aerospace": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "HONA"
   }
 }
