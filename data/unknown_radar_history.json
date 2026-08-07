@@ -86,15 +86,15 @@
   "Grindr": {
     "first_seen": "2026-08-07",
     "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "GRND"
   },
   "Virginia": {
     "first_seen": "2026-08-07",
     "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "VABK"
   },
   "Sweetgreen": {
@@ -124,5 +124,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "HONA"
+  },
+  "Apollo": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "APOS"
+  },
+  "EasyJet": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "EJTTF"
+  },
+  "Software": {
+    "first_seen": "2026-08-07",
+    "last_seen": "2026-08-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SFWJ"
   }
 }

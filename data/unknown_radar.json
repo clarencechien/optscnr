@@ -1,101 +1,65 @@
 {
-  "updated_at": "2026-08-07T01:03:19.008062",
-  "count": 8,
+  "updated_at": "2026-08-07T22:05:38.737303",
+  "count": 5,
   "blind_spots": [
-    {
-      "name": "Airbnb",
-      "ticker": "ABNB",
-      "mentions_today": 4,
-      "total_mentions": 4,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Airbnb stock soars 9% on earnings and revenue beat, strong guidance for third quarter",
-        "Airbnb stock soars 9% on earnings and revenue beat, strong guidance for third quarter"
-      ]
-    },
-    {
-      "name": "Trade Desk",
-      "ticker": "TTD",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Trade Desk shares tumble on earnings miss and weak outlook",
-        "Trade Desk shares tumble on earnings miss and weak outlook"
-      ]
-    },
-    {
-      "name": "Copper",
-      "ticker": "LBCMF",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Copper jumps to its highest level ever. What the metal is telling us",
-        "Copper jumps to its highest level ever. What the metal is telling us"
-      ]
-    },
-    {
-      "name": "Grindr",
-      "ticker": "GRND",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Grindr's AI spend is paying off and its pricey new tier has had some surprises, CEO says",
-        "Grindr's AI spend is paying off and its pricey new tier has had some surprises, CEO says"
-      ]
-    },
     {
       "name": "Virginia",
       "ticker": "VABK",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
         "Virginia governor to intervene in NextEra, Dominion merger over electricity price concerns",
         "Virginia governor to intervene in NextEra, Dominion merger over electricity price concerns"
       ]
     },
     {
-      "name": "Sweetgreen",
-      "ticker": "SG",
+      "name": "Grindr",
+      "ticker": "GRND",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "Sweetgreen cuts full-year outlook as cyclospora fears weigh on sales",
-        "Sweetgreen recalls jalapenos, details how cyclospora outbreak will weigh on sales"
+        "Grindr's AI spend is paying off and its pricey new tier has had some surprises, CEO says",
+        "Grindr's AI spend is paying off and its pricey new tier has had some surprises, CEO says"
       ]
     },
     {
-      "name": "Savers Value Village",
-      "ticker": "SVV",
+      "name": "Apollo",
+      "ticker": "APOS",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Savers Value Village thrift store launches new AI tool to price items",
-        "Savers Value Village thrift store launches new AI tool to price items"
+        "Private equity is circling budget airlines after Apollo's EasyJet deal — and this carrier could be n",
+        "Private equity is circling budget airlines after Apollo's EasyJet deal — and this carrier could be n"
       ]
     },
     {
-      "name": "Honeywell Aerospace",
-      "ticker": "HONA",
+      "name": "EasyJet",
+      "ticker": "EJTTF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Honeywell Aerospace lands in Wall Street’s ‘penalty box’ after gloomy guidance triggers 23% stock se",
-        "Honeywell Aerospace lands in Wall Street’s ‘penalty box’ after gloomy guidance triggers 23% stock se"
+        "Private equity is circling budget airlines after Apollo's EasyJet deal — and this carrier could be n",
+        "Private equity is circling budget airlines after Apollo's EasyJet deal — and this carrier could be n"
+      ]
+    },
+    {
+      "name": "Software",
+      "ticker": "SFWJ",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Software stocks sink, led by declines from Figma, Datadog",
+        "Stocks Pressured by Weakness in Software and Tech Stocks"
       ]
     }
   ]
