@@ -1,12 +1,24 @@
 {
-  "updated_at": "2026-08-01T01:53:17.092380",
+  "updated_at": "2026-08-08T00:53:12.750443",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 0,
-  "tickers": [],
-  "details": []
+  "count": 1,
+  "tickers": [
+    "AMBA"
+  ],
+  "details": [
+    {
+      "symbol": "AMBA",
+      "price": 86.78,
+      "gain_30d_pct": 39.7,
+      "market_cap_m": 3807.0,
+      "avg_volume_m": 2.09,
+      "short_pct_float": 10.9,
+      "score": 14.86
+    }
+  ]
 }
