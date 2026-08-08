@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（tw_scanner + delta_radar）
 
-_README 由 build_readme.py 於 2026-08-07 14:38 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-08-08 03:49 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -23,7 +23,7 @@ _README 由 build_readme.py 於 2026-08-07 14:38 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-08-07 04:35 UTC
+# Delta Radar (2308.TW) — 2026-08-08 03:49 UTC
 
 ## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
@@ -33,43 +33,43 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟢 GREEN | capex_cut:5e(7m) / vr300_delay:14e(21m) / debt_financed_capex:14e / lc_psu_competition:0e |
+| M5 narrative_triggers | 🟡 YELLOW | capex_cut:5e(7m) / vr300_delay:13e(19m) / debt_financed_capex:11e / lc_psu_competition:0e |
 
-### M5 narrative_triggers — 🟢 GREEN
+### M5 narrative_triggers — 🟡 YELLOW
 ```json
 {
   "events": {
     "capex_cut": 5,
-    "vr300_delay": 14,
-    "debt_financed_capex": 14,
+    "vr300_delay": 13,
+    "debt_financed_capex": 11,
     "lc_psu_competition": 0
   },
   "mentions": {
     "capex_cut": 7,
-    "vr300_delay": 21,
-    "debt_financed_capex": 14,
+    "vr300_delay": 19,
+    "debt_financed_capex": 11,
     "lc_psu_competition": 0
   },
   "scoring": {
     "capex_cut": {
       "events": 5,
       "mentions": 7,
-      "gate": "zscore",
-      "z": -0.3,
+      "gate": "absolute",
+      "z": null,
       "denial": false
     },
     "vr300_delay": {
-      "events": 14,
-      "mentions": 21,
+      "events": 13,
+      "mentions": 19,
       "gate": "zscore",
-      "z": -2.2,
+      "z": -2.72,
       "denial": true
     },
     "debt_financed_capex": {
-      "events": 14,
-      "mentions": 14,
+      "events": 11,
+      "mentions": 11,
       "gate": "zscore",
-      "z": 0.4,
+      "z": -2.26,
       "denial": false
     },
     "lc_psu_competition": {
@@ -88,12 +88,12 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
 - [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
 - [vr300_delay] Nvidia’s Kyber AI rack slips to 2028, and one circuit board is to blame - The Next Web
-- [debt_financed_capex] After a nearly 1,000% surge, the AI debt orgy can’t last forever, while hidden borrowing has exploded to $1.65 trillion 
 - [debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance
-- [debt_financed_capex] The growing jitters over hyperscaler debt - Axios
+- [debt_financed_capex] The growing jitters over hyperscaler debt - axios.com
+- [debt_financed_capex] CICC: Assessing AI-Related Debt Risks through a Minskyan Lens - 富途牛牛
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **5** 筆；state 已有 outcomes 的 entry：**68/68**
+- 本次回填 **8** 筆；state 已有 outcomes 的 entry：**69/69**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---
