@@ -1,50 +1,59 @@
 {
-  "updated_at": "2026-08-02T00:04:03.682727",
+  "updated_at": "2026-08-08T23:36:54.534756",
   "criteria": {
     "MIN_MARKET_CAP": 15000000000.0,
     "MAX_PCT_FROM_52W_LOW": 1.8,
     "MIN_AVG_VOLUME": 5000000.0,
     "MIN_VOL_RATIO_20D": 1.2
   },
-  "count": 4,
+  "count": 5,
   "tickers": [
+    "APP",
     "IBM",
     "T",
-    "ORLY",
-    "ORCL"
+    "ORCL",
+    "FAST"
   ],
   "details": [
     {
+      "symbol": "APP",
+      "price": 346.8,
+      "pct_from_52w_low": 1.04,
+      "vol_ratio_20d": 1.29,
+      "market_cap_b": 116.1,
+      "score": 16.01
+    },
+    {
       "symbol": "IBM",
-      "price": 223.65,
-      "pct_from_52w_low": 1.12,
-      "vol_ratio_20d": 1.62,
-      "market_cap_b": 210.7,
-      "score": 16.88
+      "price": 237.28,
+      "pct_from_52w_low": 1.19,
+      "vol_ratio_20d": 1.59,
+      "market_cap_b": 223.5,
+      "score": 16.01
     },
     {
       "symbol": "T",
-      "price": 23.25,
-      "pct_from_52w_low": 1.17,
-      "vol_ratio_20d": 1.56,
-      "market_cap_b": 159.3,
-      "score": 16.09
-    },
-    {
-      "symbol": "ORLY",
-      "price": 89.35,
-      "pct_from_52w_low": 1.08,
-      "vol_ratio_20d": 1.27,
-      "market_cap_b": 72.9,
-      "score": 15.54
+      "price": 23.79,
+      "pct_from_52w_low": 1.2,
+      "vol_ratio_20d": 1.47,
+      "market_cap_b": 163.0,
+      "score": 15.41
     },
     {
       "symbol": "ORCL",
-      "price": 129.87,
-      "pct_from_52w_low": 1.13,
-      "vol_ratio_20d": 1.27,
-      "market_cap_b": 374.1,
-      "score": 15.02
+      "price": 147.02,
+      "pct_from_52w_low": 1.28,
+      "vol_ratio_20d": 1.25,
+      "market_cap_b": 423.5,
+      "score": 13.42
+    },
+    {
+      "symbol": "FAST",
+      "price": 51.84,
+      "pct_from_52w_low": 1.33,
+      "vol_ratio_20d": 1.2,
+      "market_cap_b": 59.5,
+      "score": 12.71
     }
   ]
 }
