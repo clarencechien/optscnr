@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-01T04:21:41.057827",
+  "updated_at": "2026-08-08T02:54:57.608958",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -9,21 +9,45 @@
     "MIN_VOL_RATIO": 1.2,
     "MIN_AVG_VOLUME": 500000
   },
-  "count": 1,
+  "count": 3,
   "tickers": [
-    "SOUN"
+    "RBLX",
+    "HUBS",
+    "SEDG"
   ],
   "details": [
     {
-      "symbol": "SOUN",
-      "price": 6.13,
-      "high_52w": 22.17,
-      "low_52w": 5.65,
-      "drawdown_pct": 72.4,
-      "rebound_pct": 8.5,
-      "vol_ratio": 1.27,
-      "market_cap_b": 2.7,
-      "score": 30.68
+      "symbol": "RBLX",
+      "price": 37.79,
+      "high_52w": 142.0,
+      "low_52w": 33.88,
+      "drawdown_pct": 73.4,
+      "rebound_pct": 11.5,
+      "vol_ratio": 1.71,
+      "market_cap_b": 27.0,
+      "score": 34.84
+    },
+    {
+      "symbol": "HUBS",
+      "price": 210.45,
+      "high_52w": 525.51,
+      "low_52w": 169.63,
+      "drawdown_pct": 60.0,
+      "rebound_pct": 24.1,
+      "vol_ratio": 1.31,
+      "market_cap_b": 10.8,
+      "score": 24.23
+    },
+    {
+      "symbol": "SEDG",
+      "price": 31.76,
+      "high_52w": 81.25,
+      "low_52w": 24.01,
+      "drawdown_pct": 60.9,
+      "rebound_pct": 32.3,
+      "vol_ratio": 1.41,
+      "market_cap_b": 2.0,
+      "score": 23.94
     }
   ]
 }
