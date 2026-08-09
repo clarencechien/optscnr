@@ -6,27 +6,6 @@
     "total_mentions": 10,
     "ticker": "IMAX"
   },
-  "Leonardo": {
-    "first_seen": "2026-07-31",
-    "last_seen": "2026-07-31",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "DRS"
-  },
-  "Ferguson Enterprises": {
-    "first_seen": "2026-07-31",
-    "last_seen": "2026-07-31",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "FERG"
-  },
-  "Nasdaq": {
-    "first_seen": "2026-07-31",
-    "last_seen": "2026-07-31",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "NDAQ"
-  },
   "AstraZeneca": {
     "first_seen": "2026-08-02",
     "last_seen": "2026-08-03",
