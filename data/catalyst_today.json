@@ -1,69 +1,63 @@
 {
-  "updated_at": "2026-08-07T21:11:29.322766",
+  "updated_at": "2026-08-09T21:02:52.264518",
   "stats": {
-    "total_items": 102,
-    "items_with_company": 15,
-    "items_with_catalyst": 15,
-    "items_both": 2
+    "total_items": 106,
+    "items_with_company": 23,
+    "items_with_catalyst": 9,
+    "items_both": 1
   },
-  "count": 12,
+  "count": 19,
   "tickers": [
-    "NVDA",
-    "WDC",
-    "TGT",
+    "NOW",
+    "BRK-B",
     "META",
-    "AMAT",
+    "AAPL",
     "DKNG",
+    "GS",
+    "FSLR",
+    "BAC",
     "AMD",
-    "PLTR",
-    "VRT",
-    "XYZ",
-    "QCOM",
-    "BRK-B"
+    "IREN",
+    "MRVL",
+    "AMZN",
+    "F",
+    "RKLB",
+    "MU",
+    "TSM",
+    "COST",
+    "ANET",
+    "GOOGL"
   ],
   "details": [
     {
-      "symbol": "NVDA",
+      "symbol": "NOW",
       "score": 2,
       "evidence": [
         {
-          "title": "Two reasons why Nvidia’s stock saw its biggest weekly surge in more than a year",
+          "title": "ServiceNow (NOW) Unveils Autonomous Security to Accelerate Growth",
           "catalysts": [
-            "surge"
+            "unveils"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "WDC",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Why Western Digital Stock Is Tumbling Despite A Big Earnings Beat",
-          "catalysts": [
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
+      "symbol": "BRK-B",
       "score": 1.5,
       "evidence": [
         {
-          "title": "Private equity is circling budget airlines after Apollo's EasyJet deal — and this carrier could be next",
+          "title": "Abel puts a big chunk of Berkshire's cash to work",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Are target date funds aggressive enough to give Americans retirement savings that last their lifetimes",
+          "title": "Berkshire earnings rose last quarter and CEO Greg Abel is starting to deploy Buffett's massive cash hoard",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Needham keeps TeraWulf target at $33 despite near-term estimate cuts",
+          "title": "Berkshire breaks 14-quarter selling streak with $23.5B of stock buys — $10B went to 1 company at a private price",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -74,28 +68,28 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "AMD buys chip startup that hardwires AI models into its silicon",
+          "title": "How a small Israeli startup was linked to rogue AI hacks at OpenAI, Anthropic and Meta",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Explainer-How could New Mexico’s $567 million ruling change Meta?",
+          "title": "Here's Why Iren Has an Edge in the Neocloud Market, According to Meta's Mark Zuckerberg",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMAT",
+      "symbol": "AAPL",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Are Wall Street Analysts Predicting Applied Materials Stock Will Climb or Sink?",
+          "title": "Apple tests China’s CXMT memory chips for iPhones and MacBooks, WSJ reports",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Dear Applied Materials Stock Fans, Mark Your Calendars for August 13",
+          "title": "Apple tests memory chips from China’s CXMT to ease AI-driven supply crunch - WSJ",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -113,66 +107,154 @@
       ]
     },
     {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Goldman Sachs’ Pasquariello sees bull market continuing despite post-Labor Day risks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "FSLR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Solar tariffs are major boost for First Solar, analysts say",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Bank of America spots new curveball for Magnificent Seven stocks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
       "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AMD buys chip startup that hardwires AI models into its silicon",
+          "title": "Core Scientific (CORZ) Shareholders Rejected a $9B Sale. Does the AMD Deal Vindicate Them?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "IREN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Palantir’s stock stages best week since 2024 — showing it’s no longer an AI loser",
+          "title": "IREN (IREN) vs. CORZ and APLD: Can Its AI Cloud Buildout Turn Contracted Demand Into Profits?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "VRT",
+      "symbol": "MRVL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Vertiv vs. Eaton: comparing two power infrastructure stocks",
+          "title": "Marvell (MRVL) vs. AVGO and NVDA: Can AI Interconnect Growth Deliver the Earnings Its Premium Valuation Demands?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Are Wall Street Analysts Bullish on Block Stock?",
+          "title": "Jeff Bezos breaks his own Amazon record",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "QCOM",
+      "symbol": "F",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Qualcomm’s (QCOM) BMW Deal Adds To A Bigger Diversification Push",
+          "title": "Ford’s (F) $28,350 Electric Pickup Bet Meets A Cheap Stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
+      "symbol": "RKLB",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Greg Abel's Berkshire Hathaway May Have Repurchased Up to $11 Billion of Its Own Stock Last Quarter. Is This a Bullish Signal for Shareholde",
+          "title": "Rocket Lab Reports Monday Night. Wall Street Wants $232 Million and 60% Growth.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Unpacking the Latest Pullback in Micron Stock",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "A $10,000 Investment in Taiwan Semiconductor Today Will Be Worth This Much by 2028",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COST",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Costco vs. General Mills: Comparing Revenue Trends Between These Consumer Staples Companies",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ANET",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Arista Networks vs. Arm: Comparing Revenue Growth Trajectories for These Artificial Intelligence Companies",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Sundar Pichai's Alphabet Has Grown Google Cloud Revenue 82% Year Over Year. Here's Why That Growth Rate Justifies the Company's Capex Bet.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -180,6 +262,7 @@
     }
   ],
   "watch_only": {
-    "DeepSeek (private)": 1
+    "OpenAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
