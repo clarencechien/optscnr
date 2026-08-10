@@ -13,13 +13,6 @@
     "total_mentions": 7,
     "ticker": "AZN"
   },
-  "Bristol Myers Squibb": {
-    "first_seen": "2026-08-02",
-    "last_seen": "2026-08-02",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "CELG-RI"
-  },
   "Twenty": {
     "first_seen": "2026-08-03",
     "last_seen": "2026-08-03",
@@ -124,5 +117,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "SFWJ"
+  },
+  "Australian": {
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "COOTW"
+  },
+  "GameStop": {
+    "first_seen": "2026-08-10",
+    "last_seen": "2026-08-10",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GME-WT"
   }
 }
