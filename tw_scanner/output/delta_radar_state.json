@@ -7130,5 +7130,38 @@
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
+  },
+  {
+    "ts": "2026-08-10T05:57:03.126764+00:00",
+    "overall": "PARTIAL(m1)",
+    "modules_requested": [
+      "m1"
+    ],
+    "modules": [
+      {
+        "module": "M1 revenue_acceleration",
+        "status": "GREEN",
+        "headline": "2026-06 YoY +55.4%, slope +5.94pp/月, 連續減速 0 個月",
+        "metrics": {
+          "latest_month": "2026-06",
+          "latest_yoy_pct": 55.4,
+          "yoy_slope_pp_per_month": 5.94,
+          "consecutive_decel_months": 0
+        },
+        "notes": [],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-08-10",
+      "benchmark": "0050",
+      "entry_close": null,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
   }
 ]
