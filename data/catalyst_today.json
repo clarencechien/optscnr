@@ -1,106 +1,180 @@
 {
-  "updated_at": "2026-08-09T21:02:52.264518",
+  "updated_at": "2026-08-10T21:19:49.573029",
   "stats": {
-    "total_items": 106,
+    "total_items": 105,
     "items_with_company": 23,
-    "items_with_catalyst": 9,
-    "items_both": 1
+    "items_with_catalyst": 16,
+    "items_both": 6
   },
-  "count": 19,
+  "count": 20,
   "tickers": [
-    "NOW",
-    "BRK-B",
-    "META",
-    "AAPL",
-    "DKNG",
-    "GS",
-    "FSLR",
-    "BAC",
+    "NVDA",
     "AMD",
-    "IREN",
-    "MRVL",
-    "AMZN",
-    "F",
-    "RKLB",
-    "MU",
+    "CRWD",
+    "GOOGL",
     "TSM",
-    "COST",
-    "ANET",
-    "GOOGL"
+    "MU",
+    "MSFT",
+    "META",
+    "HIMS",
+    "GS",
+    "BA",
+    "ACHR",
+    "MS",
+    "TGT",
+    "RKLB",
+    "AMZN",
+    "OKLO",
+    "AAPL",
+    "LUNR",
+    "CEG"
   ],
   "details": [
     {
-      "symbol": "NOW",
-      "score": 2,
+      "symbol": "NVDA",
+      "score": 6.5,
       "evidence": [
         {
-          "title": "ServiceNow (NOW) Unveils Autonomous Security to Accelerate Growth",
+          "title": "Nvidia lines up $500 billion in financing as CEO Jensen Huang tells CNBC his chips are ‘investable asset’",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "World's biggest chipmaker TSMC's sales surge 45% amid buoyant AI demand ",
           "catalysts": [
-            "unveils"
+            "surge"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "This Nvidia change could spell good news for Micron",
+          "catalysts": [
+            "downgrade"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "BRK-B",
-      "score": 1.5,
+      "symbol": "AMD",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Abel puts a big chunk of Berkshire's cash to work",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Advanced Micro Devices Reported Record Revenue. AMD Stock Sank Anyway.",
+          "catalysts": [
+            "record revenue"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Berkshire earnings rose last quarter and CEO Greg Abel is starting to deploy Buffett's massive cash hoard",
+          "title": "Advanced Micro Devices Dips on Lower FCF, But Short Put Plays Attract Value Investors",
           "catalysts": [],
           "has_catalyst": false
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "score": 2,
+      "evidence": [
         {
-          "title": "Berkshire breaks 14-quarter selling streak with $23.5B of stock buys — $10B went to 1 company at a private price",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "CrowdStrike, Palo Alto hit records after Black Hat cyber conference illuminates rising AI threat",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "World's biggest chipmaker TSMC's sales surge 45% amid buoyant AI demand ",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "World's biggest chipmaker TSMC's sales surge 45% amid buoyant AI demand ",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "This Nvidia change could spell good news for Micron",
+          "catalysts": [
+            "downgrade"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Microsoft’s stock is charging back. Here’s the case for it to rally another 30%.",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "META",
-      "score": 1.0,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "How a small Israeli startup was linked to rogue AI hacks at OpenAI, Anthropic and Meta",
+          "title": "Meta's latest model advances Zuckerberg's vision for personal AI assistants",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Here's Why Iren Has an Edge in the Neocloud Market, According to Meta's Mark Zuckerberg",
+          "title": "Meta to open source its most powerful AI model as it takes swipe at OpenAI, Anthropic",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "SpaceX vs. Meta Platforms: Which Will Reach the $2 Trillion Club First?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 1.0,
+      "symbol": "HIMS",
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Apple tests China’s CXMT memory chips for iPhones and MacBooks, WSJ reports",
+          "title": "Hims & Hers raises annual revenue forecast on strong subscriber growth",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Apple tests memory chips from China’s CXMT to ease AI-driven supply crunch - WSJ",
+          "title": "After-Hours Movers: P, RIOT, BW, RKLB, HIMS, UPWK",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DKNG",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Prediction markets take center stage in latest round of quarterly earnings reports",
+          "title": "Why is Hims & Hers Health stock sliding today?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -111,62 +185,62 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Goldman Sachs’ Pasquariello sees bull market continuing despite post-Labor Day risks",
+          "title": "Three reasons Goldman's co-head of global banking and markets says to stay invested",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "FSLR",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Solar tariffs are major boost for First Solar, analysts say",
+          "title": "Boeing sells eVTOL subsidiaries, takes stake in Archer",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BAC",
+      "symbol": "ACHR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bank of America spots new curveball for Magnificent Seven stocks",
+          "title": "Boeing sells eVTOL subsidiaries, takes stake in Archer",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "MS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Core Scientific (CORZ) Shareholders Rejected a $9B Sale. Does the AMD Deal Vindicate Them?",
+          "title": "Morgan Stanley cuts Global-e rating to equal-weight, raises price target to $44",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IREN",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "IREN (IREN) vs. CORZ and APLD: Can Its AI Cloud Buildout Turn Contracted Demand Into Profits?",
+          "title": "Morgan Stanley cuts Global-e rating to equal-weight, raises price target to $44",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRVL",
+      "symbol": "RKLB",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Marvell (MRVL) vs. AVGO and NVDA: Can AI Interconnect Growth Deliver the Earnings Its Premium Valuation Demands?",
+          "title": "Rocket Lab flags weaker quarterly margins as lower-profit satellite sales increase",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -184,77 +258,44 @@
       ]
     },
     {
-      "symbol": "F",
+      "symbol": "OKLO",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Ford’s (F) $28,350 Electric Pickup Bet Meets A Cheap Stock",
+          "title": "Oklo’s (OKLO) Groves Reactor Hits Criticality In Under A Year",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RKLB",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Rocket Lab Reports Monday Night. Wall Street Wants $232 Million and 60% Growth.",
+          "title": "Apple tests China's CXMT memory chips for iPhones and MacBooks, WSJ reports",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "LUNR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Unpacking the Latest Pullback in Micron Stock",
+          "title": "Dear Intuitive Machines Stock Fans, Mark Your Calendars for August 13",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSM",
+      "symbol": "CEG",
       "score": 0.5,
       "evidence": [
         {
-          "title": "A $10,000 Investment in Taiwan Semiconductor Today Will Be Worth This Much by 2028",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COST",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Costco vs. General Mills: Comparing Revenue Trends Between These Consumer Staples Companies",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ANET",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Arista Networks vs. Arm: Comparing Revenue Growth Trajectories for These Artificial Intelligence Companies",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Sundar Pichai's Alphabet Has Grown Google Cloud Revenue 82% Year Over Year. Here's Why That Growth Rate Justifies the Company's Capex Bet.",
+          "title": "Constellation (CEG) Locks In More Power Deals As Nuclear Output Slips",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -262,7 +303,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1,
-    "Anthropic (private)": 1
+    "OpenAI (private)": 4,
+    "Anthropic (private)": 2
   }
 }
