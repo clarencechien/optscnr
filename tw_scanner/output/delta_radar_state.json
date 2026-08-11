@@ -3058,8 +3058,8 @@
       "t5_excess_pct": -3.37,
       "t10_ret_pct": -7.14,
       "t10_excess_pct": -2.85,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -3.97,
+      "t20_excess_pct": -2.32
     }
   },
   {
@@ -3091,8 +3091,8 @@
       "t5_excess_pct": -3.37,
       "t10_ret_pct": -7.14,
       "t10_excess_pct": -2.85,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -3.97,
+      "t20_excess_pct": -2.32
     }
   },
   {
@@ -3171,8 +3171,8 @@
       "t5_excess_pct": -3.37,
       "t10_ret_pct": -7.14,
       "t10_excess_pct": -2.85,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -3.97,
+      "t20_excess_pct": -2.32
     }
   },
   {
@@ -3204,8 +3204,8 @@
       "t5_excess_pct": -3.37,
       "t10_ret_pct": -7.14,
       "t10_excess_pct": -2.85,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -3.97,
+      "t20_excess_pct": -2.32
     }
   },
   {
@@ -3284,8 +3284,8 @@
       "t5_excess_pct": -3.37,
       "t10_ret_pct": -7.14,
       "t10_excess_pct": -2.85,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -3.97,
+      "t20_excess_pct": -2.32
     }
   },
   {
@@ -3317,8 +3317,8 @@
       "t5_excess_pct": -3.37,
       "t10_ret_pct": -7.14,
       "t10_excess_pct": -2.85,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -3.97,
+      "t20_excess_pct": -2.32
     }
   },
   {
@@ -3398,8 +3398,8 @@
       "t5_excess_pct": -3.37,
       "t10_ret_pct": -7.14,
       "t10_excess_pct": -2.85,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -3.97,
+      "t20_excess_pct": -2.32
     }
   },
   {
@@ -3615,8 +3615,8 @@
       "t5_excess_pct": -3.37,
       "t10_ret_pct": -7.14,
       "t10_excess_pct": -2.85,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -3.97,
+      "t20_excess_pct": -2.32
     }
   },
   {
@@ -5028,8 +5028,8 @@
       "entry_close": 1755.0,
       "t5_ret_pct": -9.97,
       "t5_excess_pct": -10.51,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 3.42,
+      "t10_excess_pct": 0.66,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -5109,8 +5109,8 @@
       "entry_close": 1755.0,
       "t5_ret_pct": -9.97,
       "t5_excess_pct": -10.51,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 3.42,
+      "t10_excess_pct": 0.66,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -5326,8 +5326,8 @@
       "entry_close": 1755.0,
       "t5_ret_pct": -9.97,
       "t5_excess_pct": -10.51,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 3.42,
+      "t10_excess_pct": 0.66,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -6442,8 +6442,8 @@
       "entry_date": "2026-08-03",
       "benchmark": "0050",
       "entry_close": 1580.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 14.87,
+      "t5_excess_pct": 12.66,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -6903,7 +6903,7 @@
     "outcomes": {
       "entry_date": "2026-08-08",
       "benchmark": "0050",
-      "entry_close": null,
+      "entry_close": 1815.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
@@ -7122,7 +7122,7 @@
     "outcomes": {
       "entry_date": "2026-08-10",
       "benchmark": "0050",
-      "entry_close": null,
+      "entry_close": 1815.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
@@ -7154,6 +7154,87 @@
     ],
     "outcomes": {
       "entry_date": "2026-08-10",
+      "benchmark": "0050",
+      "entry_close": 1815.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-08-11T03:59:12.784780+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "RED",
+        "headline": "capex_cut:6e(7m) / vr300_delay:15e(19m) / debt_financed_capex:12e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 6,
+            "vr300_delay": 15,
+            "debt_financed_capex": 12,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 7,
+            "vr300_delay": 19,
+            "debt_financed_capex": 12,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 6,
+              "mentions": 7,
+              "gate": "zscore",
+              "z": 2.85,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 15,
+              "mentions": 19,
+              "gate": "zscore",
+              "z": 0.0,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 12,
+              "mentions": 12,
+              "gate": "zscore",
+              "z": -0.7,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Apple’s AI Strategy: A Different Approach Amidst Hyperscaler Capex Slowdown - Dividend Earnings Report - po-news-eg.net",
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia’s Kyber AI rack slips to 2028, and one circuit board is to blame - The Next Web",
+          "[vr300_delay] Nvidia Kyber NVL144 Slips to 2028 as Physics, Not Software, Defeats the Backup Plan - Tech Times",
+          "[debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance",
+          "[debt_financed_capex] The growing jitters over hyperscaler debt - Axios",
+          "[debt_financed_capex] Will Moody's AI Debt Warning Trigger an AI Bubble Crash? - Substack"
+        ],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-08-11",
       "benchmark": "0050",
       "entry_close": null,
       "t5_ret_pct": null,
