@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-08-10T22:05:57.620096",
+  "updated_at": "2026-08-11T22:11:22.001105",
   "count": 2,
   "blind_spots": [
     {
-      "name": "Australian",
-      "ticker": "COOTW",
+      "name": "Credit",
+      "ticker": "CACC",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Australian rare earth miner surges after U.S. Department of Defense investment",
-        "Australian rare earth miner surges after U.S. Department of Defense investment"
+        "Credit card debt climbs to $1.26 trillion as ‘K-shaped’ divide persists, New York Fed research finds",
+        "Credit card debt climbs to $1.26 trillion as ‘K-shaped’ divide persists, New York Fed research finds"
       ]
     },
     {
-      "name": "GameStop",
-      "ticker": "GME-WT",
+      "name": "Daily",
+      "ticker": "DJCO",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "EBay may dodge a GameStop takeover — but there’s a new twist in the Ryan Cohen saga",
-        "EBay may dodge a GameStop takeover — but there’s a new twist in the Ryan Cohen saga"
+        "Daily – Vickers Top Buyers & Sellers for 08/11/2026",
+        "Daily – Vickers Top Insider Picks for 08/11/2026"
       ]
     }
   ]
