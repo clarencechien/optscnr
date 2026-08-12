@@ -3696,8 +3696,8 @@
       "t5_excess_pct": 0.74,
       "t10_ret_pct": -14.82,
       "t10_excess_pct": -7.88,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -2.7,
+      "t20_excess_pct": -2.89
     }
   },
   {
@@ -5407,8 +5407,8 @@
       "entry_close": 1580.0,
       "t5_ret_pct": 2.53,
       "t5_excess_pct": -1.07,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 14.24,
+      "t10_excess_pct": 6.57,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -5624,8 +5624,8 @@
       "entry_close": 1580.0,
       "t5_ret_pct": 2.53,
       "t5_excess_pct": -1.07,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 14.24,
+      "t10_excess_pct": 6.57,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -5844,8 +5844,8 @@
       "entry_close": 1580.0,
       "t5_ret_pct": 2.53,
       "t5_excess_pct": -1.07,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 14.24,
+      "t10_excess_pct": 6.57,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -6523,8 +6523,8 @@
       "entry_date": "2026-08-04",
       "benchmark": "0050",
       "entry_close": 1620.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 11.42,
+      "t5_excess_pct": 7.5,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -7236,7 +7236,7 @@
     "outcomes": {
       "entry_date": "2026-08-11",
       "benchmark": "0050",
-      "entry_close": null,
+      "entry_close": 1805.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
@@ -7268,6 +7268,87 @@
     ],
     "outcomes": {
       "entry_date": "2026-08-11",
+      "benchmark": "0050",
+      "entry_close": 1805.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-08-12T04:21:19.005544+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:5e(6m) / vr300_delay:13e(19m) / debt_financed_capex:12e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 5,
+            "vr300_delay": 13,
+            "debt_financed_capex": 12,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 6,
+            "vr300_delay": 19,
+            "debt_financed_capex": 12,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 5,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": -0.5,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 13,
+              "mentions": 19,
+              "gate": "zscore",
+              "z": -1.79,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 12,
+              "mentions": 12,
+              "gate": "zscore",
+              "z": -0.44,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Apple’s AI Strategy: A Different Approach Amidst Hyperscaler Capex Slowdown - Dividend Earnings Report - po-news-eg.net",
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] SemiAnalysis reports again: NVIDIA's Kyber NVL144 rack has been delayed by over 12 months due to 'difficulties in manufa",
+          "[vr300_delay] Nvidia Kyber NVL144 Slips to 2028 as Physics, Not Software, Defeats the Backup Plan - Tech Times",
+          "[debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance",
+          "[debt_financed_capex] Will Moody's AI Debt Warning Trigger an AI Bubble Crash? - roddubitsky.substack.com",
+          "[debt_financed_capex] Amazon’s $25 Billion Bond Sale: Is the AI-Debt Boom a Warning Sign or a Smart Way to Bankroll a Build-Out? - MarketWise"
+        ],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-08-12",
       "benchmark": "0050",
       "entry_close": null,
       "t5_ret_pct": null,
