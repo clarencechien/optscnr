@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-08-11T22:11:22.001105",
+  "updated_at": "2026-08-12T22:10:00.577180",
   "count": 2,
   "blind_spots": [
-    {
-      "name": "Credit",
-      "ticker": "CACC",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Credit card debt climbs to $1.26 trillion as ‘K-shaped’ divide persists, New York Fed research finds",
-        "Credit card debt climbs to $1.26 trillion as ‘K-shaped’ divide persists, New York Fed research finds"
-      ]
-    },
     {
       "name": "Daily",
       "ticker": "DJCO",
       "mentions_today": 2,
-      "total_mentions": 2,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "Daily – Vickers Top Buyers & Sellers for 08/12/2026",
+        "Daily – Vickers Top Insider Picks for 08/12/2026"
+      ]
+    },
+    {
+      "name": "Cisco",
+      "ticker": "CSCO",
+      "mentions_today": 4,
+      "total_mentions": 4,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Daily – Vickers Top Buyers & Sellers for 08/11/2026",
-        "Daily – Vickers Top Insider Picks for 08/11/2026"
+        "Cisco's stock drops despite earnings, revenue beat",
+        "Cisco's stock drops despite earnings, revenue beat"
       ]
     }
   ]

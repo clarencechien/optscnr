@@ -1,11 +1,4 @@
 {
-  "Wayfair": {
-    "first_seen": "2026-08-04",
-    "last_seen": "2026-08-04",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "W"
-  },
   "Etsy": {
     "first_seen": "2026-08-05",
     "last_seen": "2026-08-05",
@@ -120,9 +113,16 @@
   },
   "Daily": {
     "first_seen": "2026-08-11",
-    "last_seen": "2026-08-11",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-08-12",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "DJCO"
+  },
+  "Cisco": {
+    "first_seen": "2026-08-12",
+    "last_seen": "2026-08-12",
+    "consecutive_days": 1,
+    "total_mentions": 4,
+    "ticker": "CSCO"
   }
 }
