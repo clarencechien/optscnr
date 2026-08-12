@@ -1,119 +1,66 @@
 {
-  "updated_at": "2026-08-11T21:22:36.373285",
+  "updated_at": "2026-08-12T21:20:49.326735",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 32,
-    "items_with_catalyst": 19,
-    "items_both": 8
+    "total_items": 103,
+    "items_with_company": 21,
+    "items_with_catalyst": 22,
+    "items_both": 3
   },
-  "count": 20,
+  "count": 19,
   "tickers": [
     "CRWV",
-    "CRM",
-    "GOLD",
-    "META",
-    "TSM",
+    "NBIS",
     "NVDA",
-    "GILD",
-    "TGT",
-    "JPM",
-    "XYZ",
-    "RIOT",
     "INTC",
-    "ORCL",
-    "MS",
-    "SMCI",
-    "ASML",
     "GOOGL",
-    "WDAY",
-    "VST",
-    "ANET"
+    "RIOT",
+    "AMZN",
+    "DIS",
+    "TSLA",
+    "BA",
+    "AAPL",
+    "META",
+    "GS",
+    "TGT",
+    "NFLX",
+    "BAC",
+    "MU",
+    "MSFT",
+    "ONDS"
   ],
   "details": [
     {
       "symbol": "CRWV",
-      "score": 6.5,
+      "score": 8.5,
       "evidence": [
         {
-          "title": "CoreWeave stock pops 15% as revenue doubles on accelerating AI infrastructure demand",
-          "catalysts": [
-            "pops"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "CoreWeave’s stock soars as earnings show major AI momentum",
-          "catalysts": [
-            "soars"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Why is CoreWeave stock surging today?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "American Public Education stock rises on Salesforce AI deal",
-          "catalysts": [
-            "rises",
-            "ai deal"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOLD",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Barrick Gold Falls, Newmont Rises As Miners Agree On IPO",
-          "catalysts": [
-            "rises",
-            "falls"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Manus to return as independent company after China forced Meta to unwind $2 billion deal",
+          "title": "CoreWeave counters a key bear case on the AI trade. What it means for our data center stocks",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Meta Stock Climbs On Open-Source Model Launch; Zuckerberg Criticizes AI Rivals",
+          "title": "CoreWeave gains 19%, Nebius surges 34% in post-earnings neocloud rally",
           "catalysts": [
-            "climbs"
+            "surges",
+            "jumped",
+            "rally",
+            "gains"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "TSM",
-      "score": 2.5,
+      "symbol": "NBIS",
+      "score": 8,
       "evidence": [
         {
-          "title": "Why Taiwan Semiconductor (TSM) Could Be a Top AI Infrastructure Winner",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "TSMC Revenue Surges as AI Chip Demand Hold",
+          "title": "CoreWeave gains 19%, Nebius surges 34% in post-earnings neocloud rally",
           "catalysts": [
-            "surges"
+            "surges",
+            "jumped",
+            "rally",
+            "gains"
           ],
           "has_catalyst": true
         }
@@ -121,92 +68,20 @@
     },
     {
       "symbol": "NVDA",
-      "score": 2.0,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Why Jensen Huang’s $500 billion AI financing plan faces a big risk from China",
+          "title": "CoreWeave counters a key bear case on the AI trade. What it means for our data center stocks",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Wall Street just endorsed Jensen Huang's 'big concept' for AI. What now?",
+          "title": "Meta and Nvidia plant 'very firm flag' in open-weight AI race led by Chinese Labs",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia just soothed a major market fear about AI, analysts say",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GILD",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "MacroGenics stock rises on $10M Gilead option exercise",
-          "catalysts": [
-            "rises"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Target appoints its first chief AI officer as big retailers bet on AI",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "We're lifting our price target on Cardinal Health after issuing rosy profit guidance ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "What Are Wall Street Analysts' Target Price for GoDaddy Stock?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Why JPMorgan is investing big in the 2028 LA Olympics",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Memory chip supply crunch will last 2 more years, JPMorgan warns",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump says NYC pied-à-terre tax 'must be stopped,' eyes federal block",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RIOT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Riot Platforms strikes deal with Anthropic as bitcoin miners shift focus to AI infrastructure ",
+          "title": "Nvidia, Intel, Google: Wall Street is partying like it’s 1999",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -214,98 +89,199 @@
     },
     {
       "symbol": "INTC",
-      "score": 0.5,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Intel upsizes stock offering to $20 billion at $95 per share as AI demand accelerates",
+          "title": "Nvidia, Intel, Google: Wall Street is partying like it’s 1999",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Oracle’s stock has taken a hit as AI spending concerns resurface",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nvidia just soothed a major market fear about AI, analysts say",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SMCI",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why is Super Micro Computer stock surging today?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASML",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why ASML Holding (ASML) Could Be the Biggest AI Chip Enabler",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Intel's huge rally is helping pay for its AI comeback: Chart of the Day",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "GOOGL",
-      "score": 0.5,
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Is Alphabet (GOOGL) Still One of the Best AI Stocks to Own?",
+          "title": "Google’s new Pixel 11 puts Gemini at center of AI phone battle with Apple",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia, Intel, Google: Wall Street is partying like it’s 1999",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Alphabet’s stock slips as Nvidia’s $500 billion financing deal threatens custom chips",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WDAY",
-      "score": 0.5,
+      "symbol": "RIOT",
+      "score": 2,
       "evidence": [
         {
-          "title": "Workday (WDAY) Faces an AI Threat. Is the Investment Case Broken?",
+          "title": "Riot Platforms Soars 17% on $9.1B Anthropic Data Center Deal; AI Infrastructure Peers IREN, Applied Digital, TeraWulf Head Higher",
+          "catalysts": [
+            "soars"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Amazon shares appear stuck in a rut. Trader Mike Khouw is betting things will stay that way",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Hinde Group Boosts Amazon.com (AMZN) Amid AI Capacity Bottlenecks and High Enterprise Backlog in AWS",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "VST",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Vistra Corp (VST) Stock’s Underperformance Could Open Up a Contrarian Options Trade",
+          "title": "Bob Iger, Joshua Kushner buy Los Angeles Lakers at a $12.5 billion valuation, source says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ANET",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Arista Networks Stock: Analyst Estimates & Ratings",
+          "title": "EVs dominate China’s car market: 5 takeaways from the country's latest auto sales data",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "China’s answer to Boeing and Airbus makes first international flight — could COMAC challenge the aviation duopoly?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Google’s new Pixel 11 puts Gemini at center of AI phone battle with Apple",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Meta and Nvidia plant 'very firm flag' in open-weight AI race led by Chinese Labs",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Goldman’s latest deal underscores how ‘boomer candy’ ETFs are now big business on Wall Street",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Raymond James cuts On Holding target on wholesale weakness",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "PodcastOne signals more Netflix distribution over next 6 to 12 months as video monetization expands",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Bank of America sends blunt message to Nvidia stock investors",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "The Changing Dynamics Behind Micron Technology (MU)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft stock just cleared a big hurdle but still trails the S&P 500",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ONDS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Ondas (ONDS) Stock Presents a Bold Opportunity for Aggressive Options Traders",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -313,7 +289,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2,
+    "Cerebras (pre-IPO)": 2,
     "Anthropic (private)": 1
   }
 }
