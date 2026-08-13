@@ -1,29 +1,53 @@
 {
-  "updated_at": "2026-08-12T22:10:00.577180",
-  "count": 2,
+  "updated_at": "2026-08-13T22:09:54.944795",
+  "count": 4,
   "blind_spots": [
-    {
-      "name": "Daily",
-      "ticker": "DJCO",
-      "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "Daily – Vickers Top Buyers & Sellers for 08/12/2026",
-        "Daily – Vickers Top Insider Picks for 08/12/2026"
-      ]
-    },
     {
       "name": "Cisco",
       "ticker": "CSCO",
-      "mentions_today": 4,
-      "total_mentions": 4,
+      "mentions_today": 2,
+      "total_mentions": 6,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "Cisco shares slide 8% despite earnings beat and stronger-than-expected guidance",
+        "Cisco shares slide 8% despite earnings beat and stronger-than-expected guidance"
+      ]
+    },
+    {
+      "name": "Reddit",
+      "ticker": "RDDT",
+      "mentions_today": 2,
+      "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Cisco's stock drops despite earnings, revenue beat",
-        "Cisco's stock drops despite earnings, revenue beat"
+        "Reddit stock jumps on inclusion in S&P 500",
+        "Reddit stock jumps on inclusion in S&P 500"
+      ]
+    },
+    {
+      "name": "Greenland",
+      "ticker": "GLNDW",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Trump-linked oil venture delays Greenland drilling plans after government warning",
+        "Trump-linked oil venture delays Greenland drilling plans after government warning"
+      ]
+    },
+    {
+      "name": "BridgeBio",
+      "ticker": "BBIO",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "BridgeBio shares fall as KKR launches secondary offering",
+        "BridgeBio discloses 5M share secondary offering by KKR affiliate"
       ]
     }
   ]

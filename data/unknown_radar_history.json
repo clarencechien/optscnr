@@ -1,18 +1,4 @@
 {
-  "Etsy": {
-    "first_seen": "2026-08-05",
-    "last_seen": "2026-08-05",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ETSY"
-  },
-  "Flutter": {
-    "first_seen": "2026-08-05",
-    "last_seen": "2026-08-05",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "FLUT"
-  },
   "Copper": {
     "first_seen": "2026-08-07",
     "last_seen": "2026-08-07",
@@ -120,9 +106,30 @@
   },
   "Cisco": {
     "first_seen": "2026-08-12",
-    "last_seen": "2026-08-12",
-    "consecutive_days": 1,
-    "total_mentions": 4,
+    "last_seen": "2026-08-13",
+    "consecutive_days": 2,
+    "total_mentions": 6,
     "ticker": "CSCO"
+  },
+  "Reddit": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "RDDT"
+  },
+  "Greenland": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GLNDW"
+  },
+  "BridgeBio": {
+    "first_seen": "2026-08-13",
+    "last_seen": "2026-08-13",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BBIO"
   }
 }
