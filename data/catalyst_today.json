@@ -1,188 +1,100 @@
 {
-  "updated_at": "2026-08-12T21:20:49.326735",
+  "updated_at": "2026-08-13T21:22:03.782079",
   "stats": {
-    "total_items": 103,
-    "items_with_company": 21,
-    "items_with_catalyst": 22,
-    "items_both": 3
+    "total_items": 102,
+    "items_with_company": 15,
+    "items_with_catalyst": 12,
+    "items_both": 5
   },
-  "count": 19,
+  "count": 14,
   "tickers": [
     "CRWV",
-    "NBIS",
-    "NVDA",
-    "INTC",
-    "GOOGL",
-    "RIOT",
-    "AMZN",
-    "DIS",
-    "TSLA",
-    "BA",
-    "AAPL",
+    "WDAY",
+    "NKE",
+    "ORCL",
     "META",
-    "GS",
-    "TGT",
-    "NFLX",
+    "AAPL",
+    "XYZ",
+    "SNDK",
+    "AMAT",
+    "NVDA",
     "BAC",
-    "MU",
-    "MSFT",
-    "ONDS"
+    "MRVL",
+    "KTOS",
+    "PLTR"
   ],
   "details": [
     {
       "symbol": "CRWV",
-      "score": 8.5,
+      "score": 6,
       "evidence": [
         {
-          "title": "CoreWeave counters a key bear case on the AI trade. What it means for our data center stocks",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "CoreWeave gains 19%, Nebius surges 34% in post-earnings neocloud rally",
-          "catalysts": [
-            "surges",
-            "jumped",
-            "rally",
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NBIS",
-      "score": 8,
-      "evidence": [
-        {
-          "title": "CoreWeave gains 19%, Nebius surges 34% in post-earnings neocloud rally",
-          "catalysts": [
-            "surges",
-            "jumped",
-            "rally",
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "CoreWeave counters a key bear case on the AI trade. What it means for our data center stocks",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta and Nvidia plant 'very firm flag' in open-weight AI race led by Chinese Labs",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia, Intel, Google: Wall Street is partying like it’s 1999",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Nvidia, Intel, Google: Wall Street is partying like it’s 1999",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Intel's huge rally is helping pay for its AI comeback: Chart of the Day",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Google’s new Pixel 11 puts Gemini at center of AI phone battle with Apple",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia, Intel, Google: Wall Street is partying like it’s 1999",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Alphabet’s stock slips as Nvidia’s $500 billion financing deal threatens custom chips",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RIOT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Riot Platforms Soars 17% on $9.1B Anthropic Data Center Deal; AI Infrastructure Peers IREN, Applied Digital, TeraWulf Head Higher",
+          "title": "CoreWeave stock soars after earnings and 'an important inflection point'",
           "catalysts": [
             "soars"
           ],
           "has_catalyst": true
+        },
+        {
+          "title": "CoreWeave Earnings Beat Amid Operating Margin Upside. AI Stock Jumps.",
+          "catalysts": [
+            "jumps",
+            "earnings beat"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "WDAY",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Workday shares post best day in 10 years on Silver Lake takeover report",
+          "catalysts": [
+            "takeover"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "US anti-bias agency says Nike complied with subpoena, drops lawsuit",
+          "catalysts": [
+            "drops"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Quantinuum Rises Amid First Post-IPO Earnings Report, Oracle System Sale",
+          "catalysts": [
+            "rises"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "META",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Amazon shares appear stuck in a rut. Trader Mike Khouw is betting things will stay that way",
+          "title": "‘I didn’t know what else to do:’ Patients take their health-insurance battles to Facebook and LinkedIn",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Hinde Group Boosts Amazon.com (AMZN) Amid AI Capacity Bottlenecks and High Enterprise Backlog in AWS",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Bob Iger, Joshua Kushner buy Los Angeles Lakers at a $12.5 billion valuation, source says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "EVs dominate China’s car market: 5 takeaways from the country's latest auto sales data",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "China’s answer to Boeing and Airbus makes first international flight — could COMAC challenge the aviation duopoly?",
+          "title": "The Market Shaved 10% Off Meta Over a Month: One Analyst Targets 87% Returns Over The Next Year",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -193,51 +105,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Google’s new Pixel 11 puts Gemini at center of AI phone battle with Apple",
+          "title": "Apple's Tim Cook joined by Howard Lutnick in opening Houston manufacturing plant",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta and Nvidia plant 'very firm flag' in open-weight AI race led by Chinese Labs",
+          "title": "New federal rules could end mortgage escrow interest for some homeowners. States are suing to block them",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Goldman’s latest deal underscores how ‘boomer candy’ ETFs are now big business on Wall Street",
+          "title": "Sandisk’s stock is flying higher. Here are the new targets that are exciting Wall Street.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "AMAT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Raymond James cuts On Holding target on wholesale weakness",
+          "title": "Why is Applied Materials stock sliding today?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NFLX",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "PodcastOne signals more Netflix distribution over next 6 to 12 months as video monetization expands",
+          "title": "Bank of America sends blunt message to Nvidia stock investors",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -255,33 +167,33 @@
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "MRVL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "The Changing Dynamics Behind Micron Technology (MU)",
+          "title": "Marvell Technology (MRVL) Stock Might Offer a Quick Bounce Before Earnings",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "KTOS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft stock just cleared a big hurdle but still trails the S&P 500",
+          "title": "Strong Fundamentals Position Kratos Defense & Security Solutions (KTOS) for Long-Term Upside",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ONDS",
+      "symbol": "PLTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Ondas (ONDS) Stock Presents a Bold Opportunity for Aggressive Options Traders",
+          "title": "Jefferies' Latest Warning on Palantir Sends Clear Message: Stay Cautious on PLTR Stock",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -289,7 +201,8 @@
     }
   ],
   "watch_only": {
-    "Cerebras (pre-IPO)": 2,
-    "Anthropic (private)": 1
+    "Anthropic (private)": 3,
+    "OpenAI (private)": 1,
+    "Cerebras (pre-IPO)": 1
   }
 }
