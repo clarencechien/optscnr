@@ -1,75 +1,75 @@
 {
-  "updated_at": "2026-08-13T23:02:43.866365",
+  "updated_at": "2026-08-14T22:40:59.607671",
   "version": "sage_v0.2",
-  "days_since_ipo": 62,
-  "price": 141.2899932861328,
+  "days_since_ipo": 63,
+  "price": 140.0,
   "phase": "P1",
   "level": "L1",
   "iv": {
-    "atm_iv": 0.6696810375976564,
-    "pctile": 5.8,
-    "n_samples": 52,
+    "atm_iv": 0.6269975451660157,
+    "pctile": 5.7,
+    "n_samples": 53,
     "rel_calm": "True",
     "abs_acceptable": false,
     "stable": true
   },
   "liquidity": {
     "has_leaps": true,
-    "total_int": 482696,
-    "total_vol": 53556,
-    "usable_strikes": 98,
-    "best_spread_pct": 0.024,
+    "total_int": 507281,
+    "total_vol": 48676,
+    "usable_strikes": 94,
+    "best_spread_pct": 0.032,
     "liquid": true,
     "detail": [
       {
-        "exp": "2028-12-15",
-        "strike": 60.0,
-        "oi": 444,
-        "spread_pct": 0.024,
-        "bid": 95.05,
-        "ask": 97.4
+        "exp": "2027-01-15",
+        "strike": 70.0,
+        "oi": 87,
+        "spread_pct": 0.032,
+        "bid": 71.05,
+        "ask": 73.35
       },
       {
-        "exp": "2028-01-21",
-        "strike": 120.0,
-        "oi": 2068,
-        "spread_pct": 0.026,
-        "bid": 55.4,
-        "ask": 56.85
+        "exp": "2027-12-17",
+        "strike": 100.0,
+        "oi": 156,
+        "spread_pct": 0.033,
+        "bid": 61.15,
+        "ask": 63.2
+      },
+      {
+        "exp": "2027-03-19",
+        "strike": 75.0,
+        "oi": 123,
+        "spread_pct": 0.035,
+        "bid": 68.25,
+        "ask": 70.7
+      },
+      {
+        "exp": "2027-06-17",
+        "strike": 95.0,
+        "oi": 410,
+        "spread_pct": 0.035,
+        "bid": 56.75,
+        "ask": 58.8
       },
       {
         "exp": "2027-01-15",
-        "strike": 110.0,
-        "oi": 2366,
-        "spread_pct": 0.032,
-        "bid": 41.65,
-        "ask": 43.0
-      },
-      {
-        "exp": "2028-12-15",
-        "strike": 115.0,
-        "oi": 483,
-        "spread_pct": 0.032,
-        "bid": 67.8,
-        "ask": 70.0
-      },
-      {
-        "exp": "2028-12-15",
-        "strike": 55.0,
-        "oi": 436,
-        "spread_pct": 0.033,
-        "bid": 97.55,
-        "ask": 100.8
+        "strike": 100.0,
+        "oi": 1003,
+        "spread_pct": 0.038,
+        "bid": 46.5,
+        "ask": 48.3
       }
     ],
-    "leaps_atm_iv": 0.7411,
+    "leaps_atm_iv": 0.7207,
     "leaps_iv_exp": "2028-12-15"
   },
   "skew": {
     "skew_type": "neutral",
-    "call_iv": 0.691,
-    "put_iv": 0.654,
-    "pc_vol_ratio": 0.984
+    "call_iv": 0.646,
+    "put_iv": 0.619,
+    "pc_vol_ratio": 1.383
   },
   "viewpoint": {
     "has_viewpoint": true,
