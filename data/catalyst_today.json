@@ -1,144 +1,99 @@
 {
-  "updated_at": "2026-08-13T21:22:03.782079",
+  "updated_at": "2026-08-14T20:56:31.227463",
   "stats": {
-    "total_items": 102,
-    "items_with_company": 15,
+    "total_items": 107,
+    "items_with_company": 11,
     "items_with_catalyst": 12,
-    "items_both": 5
+    "items_both": 1
   },
-  "count": 14,
+  "count": 12,
   "tickers": [
-    "CRWV",
-    "WDAY",
-    "NKE",
-    "ORCL",
-    "META",
-    "AAPL",
-    "XYZ",
     "SNDK",
-    "AMAT",
+    "GOOGL",
+    "INTC",
+    "DIS",
+    "GILD",
     "NVDA",
-    "BAC",
-    "MRVL",
-    "KTOS",
-    "PLTR"
+    "AAPL",
+    "F",
+    "BRK-B",
+    "MU",
+    "TGT",
+    "SMCI"
   ],
   "details": [
     {
-      "symbol": "CRWV",
-      "score": 6,
+      "symbol": "SNDK",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "CoreWeave stock soars after earnings and 'an important inflection point'",
+          "title": "Sandisk’s stock has rebounded nearly 35% this week. This is the latest catalyst.",
           "catalysts": [
-            "soars"
+            "rally"
           ],
           "has_catalyst": true
         },
         {
-          "title": "CoreWeave Earnings Beat Amid Operating Margin Upside. AI Stock Jumps.",
-          "catalysts": [
-            "jumps",
-            "earnings beat"
-          ],
-          "has_catalyst": true
+          "title": "Appaloosa takes new position in American Airlines, exits Sandisk in Q2 moves",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WDAY",
-      "score": 2,
+      "symbol": "GOOGL",
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Workday shares post best day in 10 years on Silver Lake takeover report",
-          "catalysts": [
-            "takeover"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
-      "score": 2,
-      "evidence": [
+          "title": "Alphabet’s SpaceX bet grows 100-fold over a decade to $94 billion",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
-          "title": "US anti-bias agency says Nike complied with subpoena, drops lawsuit",
-          "catalysts": [
-            "drops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 2,
-      "evidence": [
+          "title": "Berkshire Hathaway bulks up on Alphabet, Delta Air, exits Constellation Brands, among Q2 trades",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
-          "title": "Quantinuum Rises Amid First Post-IPO Earnings Report, Oracle System Sale",
-          "catalysts": [
-            "rises"
-          ],
-          "has_catalyst": true
+          "title": "Duquesne Family Office adds Alphabet, Riot in Q2, exits Intel, Micron Technology",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "INTC",
       "score": 1.0,
       "evidence": [
         {
-          "title": "‘I didn’t know what else to do:’ Patients take their health-insurance battles to Facebook and LinkedIn",
+          "title": "Goldman’s latest cash cow is all about funding the AI infrastructure boom",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "The Market Shaved 10% Off Meta Over a Month: One Analyst Targets 87% Returns Over The Next Year",
+          "title": "Duquesne Family Office adds Alphabet, Riot in Q2, exits Intel, Micron Technology",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple's Tim Cook joined by Howard Lutnick in opening Houston manufacturing plant",
+          "title": "Disney CEO Josh D'Amaro tells CNBC parks were 'big surprise' in last quarter, company has 'clarity' and 'stability'",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "GILD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "New federal rules could end mortgage escrow interest for some homeowners. States are suing to block them",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Sandisk’s stock is flying higher. Here are the new targets that are exciting Wall Street.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMAT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why is Applied Materials stock sliding today?",
+          "title": "Court rules companies can't import Gilead medications from overseas in blow to AFP health programs",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -149,51 +104,73 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bank of America sends blunt message to Nvidia stock investors",
+          "title": "Goldman’s latest cash cow is all about funding the AI infrastructure boom",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BAC",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bank of America sends blunt message to Nvidia stock investors",
+          "title": "From Apple to Ford: How Chinese tech is becoming harder for global companies to ignore",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRVL",
+      "symbol": "F",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Marvell Technology (MRVL) Stock Might Offer a Quick Bounce Before Earnings",
+          "title": "From Apple to Ford: How Chinese tech is becoming harder for global companies to ignore",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "KTOS",
+      "symbol": "BRK-B",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Strong Fundamentals Position Kratos Defense & Security Solutions (KTOS) for Long-Term Upside",
+          "title": "Berkshire Hathaway bulks up on Alphabet, Delta Air, exits Constellation Brands, among Q2 trades",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Jefferies' Latest Warning on Palantir Sends Clear Message: Stay Cautious on PLTR Stock",
+          "title": "Duquesne Family Office adds Alphabet, Riot in Q2, exits Intel, Micron Technology",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "What Are Wall Street Analysts' Target Price for S&P Global Stock?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SMCI",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Wall Street Isn't Buying Super Micro's $60 Billion Backlog Quite Yet",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -201,8 +178,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 1,
-    "Cerebras (pre-IPO)": 1
+    "OpenAI (private)": 2,
+    "Nintendo": 1
   }
 }
