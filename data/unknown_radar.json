@@ -1,54 +1,5 @@
 {
-  "updated_at": "2026-08-13T22:09:54.944795",
-  "count": 4,
-  "blind_spots": [
-    {
-      "name": "Cisco",
-      "ticker": "CSCO",
-      "mentions_today": 2,
-      "total_mentions": 6,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "Cisco shares slide 8% despite earnings beat and stronger-than-expected guidance",
-        "Cisco shares slide 8% despite earnings beat and stronger-than-expected guidance"
-      ]
-    },
-    {
-      "name": "Reddit",
-      "ticker": "RDDT",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Reddit stock jumps on inclusion in S&P 500",
-        "Reddit stock jumps on inclusion in S&P 500"
-      ]
-    },
-    {
-      "name": "Greenland",
-      "ticker": "GLNDW",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Trump-linked oil venture delays Greenland drilling plans after government warning",
-        "Trump-linked oil venture delays Greenland drilling plans after government warning"
-      ]
-    },
-    {
-      "name": "BridgeBio",
-      "ticker": "BBIO",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "BridgeBio shares fall as KKR launches secondary offering",
-        "BridgeBio discloses 5M share secondary offering by KKR affiliate"
-      ]
-    }
-  ]
+  "updated_at": "2026-08-14T21:49:22.036129",
+  "count": 0,
+  "blind_spots": []
 }
