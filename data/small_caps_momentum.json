@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T00:53:12.750443",
+  "updated_at": "2026-08-15T00:39:37.292635",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
@@ -8,17 +8,17 @@
   },
   "count": 1,
   "tickers": [
-    "AMBA"
+    "AEHR"
   ],
   "details": [
     {
-      "symbol": "AMBA",
-      "price": 86.78,
-      "gain_30d_pct": 39.7,
-      "market_cap_m": 3807.0,
-      "avg_volume_m": 2.09,
-      "short_pct_float": 10.9,
-      "score": 14.86
+      "symbol": "AEHR",
+      "price": 134.06,
+      "gain_30d_pct": 85.3,
+      "market_cap_m": 4373.0,
+      "avg_volume_m": 2.71,
+      "short_pct_float": 13.9,
+      "score": 22.4
     }
   ]
 }
