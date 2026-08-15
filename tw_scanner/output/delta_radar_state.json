@@ -4156,8 +4156,8 @@
       "t5_excess_pct": 1.04,
       "t10_ret_pct": -5.75,
       "t10_excess_pct": -8.45,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 8.33,
+      "t20_excess_pct": 2.09
     }
   },
   {
@@ -6225,8 +6225,8 @@
       "entry_close": 1640.0,
       "t5_ret_pct": 0.61,
       "t5_excess_pct": 0.61,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 14.94,
+      "t10_excess_pct": 11.49,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -6823,8 +6823,8 @@
       "entry_date": "2026-08-07",
       "benchmark": "0050",
       "entry_close": 1650.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 14.24,
+      "t5_excess_pct": 10.79,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -7763,6 +7763,87 @@
     ],
     "outcomes": {
       "entry_date": "2026-08-14",
+      "benchmark": "0050",
+      "entry_close": 1885.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-08-15T03:11:48.220572+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "capex_cut:5e(6m) / vr300_delay:13e(16m) / debt_financed_capex:14e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 5,
+            "vr300_delay": 13,
+            "debt_financed_capex": 14,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 6,
+            "vr300_delay": 16,
+            "debt_financed_capex": 14,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 5,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": -0.54,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 13,
+              "mentions": 16,
+              "gate": "zscore",
+              "z": -1.05,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 14,
+              "mentions": 14,
+              "gate": "zscore",
+              "z": 1.62,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Will the next recession be caused by an AI capex cut-off? - investordaily.com.au",
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[capex_cut] Apple’s AI Strategy: A Different Approach Amidst Hyperscaler Capex Slowdown - Dividend Earnings Report - po-news-eg.net",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia next-gen 'Kyber' AI rack delayed to 2028 on manufacturing snags: report (NVDA:NASDAQ) - Seeking Alpha",
+          "[vr300_delay] SemiAnalysis reports again: NVIDIA's Kyber NVL144 rack has been delayed by over 12 months due to 'difficulties in manufa",
+          "[debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance",
+          "[debt_financed_capex] Alphabet Stock Forecast: GOOGL Faces AI Spending, Debt and Regulatory Pressure - tradingkey.com",
+          "[debt_financed_capex] Will Moody's AI Debt Warning Trigger an AI Bubble Crash? - Substack"
+        ],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-08-15",
       "benchmark": "0050",
       "entry_close": null,
       "t5_ret_pct": null,
