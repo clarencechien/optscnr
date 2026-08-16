@@ -1,40 +1,103 @@
 {
-  "updated_at": "2026-08-14T20:56:31.227463",
+  "updated_at": "2026-08-16T20:49:07.457072",
   "stats": {
     "total_items": 107,
-    "items_with_company": 11,
-    "items_with_catalyst": 12,
-    "items_both": 1
+    "items_with_company": 17,
+    "items_with_catalyst": 10,
+    "items_both": 3
   },
-  "count": 12,
+  "count": 17,
   "tickers": [
-    "SNDK",
-    "GOOGL",
-    "INTC",
-    "DIS",
-    "GILD",
     "NVDA",
     "AAPL",
-    "F",
-    "BRK-B",
-    "MU",
+    "WDAY",
+    "MSFT",
+    "TSLA",
+    "GOOGL",
     "TGT",
-    "SMCI"
+    "WMT",
+    "GS",
+    "RIVN",
+    "INTC",
+    "BRK-B",
+    "DIS",
+    "RKLB",
+    "SNDK",
+    "MS",
+    "AMD"
   ],
   "details": [
     {
-      "symbol": "SNDK",
-      "score": 2.5,
+      "symbol": "NVDA",
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Sandisk’s stock has rebounded nearly 35% this week. This is the latest catalyst.",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
+          "title": "Nvidia discloses $21 billion stake in SpaceX at end of second quarter",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "Appaloosa takes new position in American Airlines, exits Sandisk in Q2 moves",
+          "title": "Inflation moderated as Intel and Nvidia fueled the AI trade in last week's market",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "NVIDIA’s $3 Billion Bet on the Power Behind AI",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "5 big analyst AI moves: Bullish on memory names; Apple and Cisco downgraded",
+          "catalysts": [
+            "downgraded"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "WDAY",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Workday Has Its Best Day in a Decade on Report of a Potential $43 Billion Buyout",
+          "catalysts": [
+            "buyout"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Satya Nadella's Microsoft Stock Jumped 18% in a Week After Azure's Annual Revenue Topped $100 Billion for the First Time. Is It Still a Buy?",
+          "catalysts": [
+            "jumped"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "I drove Tesla FSD, Rivian Autonomy+ ‘hands-free’ driving systems. Here’s how they compare",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Morgan Stanley sends a blunt Tesla message to investors",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -42,20 +105,69 @@
     },
     {
       "symbol": "GOOGL",
-      "score": 1.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Alphabet’s SpaceX bet grows 100-fold over a decade to $94 billion",
+          "title": "Berkshire adds $17 billion to Alphabet stake",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Berkshire Hathaway bulks up on Alphabet, Delta Air, exits Constellation Brands, among Q2 trades",
+          "title": "Google’s (GOOGL) Latest AI Model Arrives Amid A Bigger Balancing Act",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Walmart and Target are about to reveal the health of the U.S. consumer",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Duquesne Family Office adds Alphabet, Riot in Q2, exits Intel, Micron Technology",
+          "title": "The Newest Income ETFs ‘Target’ Fixed Payouts of 12 to 20 Percent a Year. Here’s How That Actually Works",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Walmart and Target are about to reveal the health of the U.S. consumer",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Dow Jones Futures: Nvidia Leads 5 Stocks In Buy Areas, Sandisk Needs This; Walmart Looms",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Secret outperformer: Dispelling the 'myths' about an unloved stock market",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RIVN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "I drove Tesla FSD, Rivian Autonomy+ ‘hands-free’ driving systems. Here’s how they compare",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -63,15 +175,21 @@
     },
     {
       "symbol": "INTC",
-      "score": 1.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Goldman’s latest cash cow is all about funding the AI infrastructure boom",
+          "title": "Inflation moderated as Intel and Nvidia fueled the AI trade in last week's market",
           "catalysts": [],
           "has_catalyst": false
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
         {
-          "title": "Duquesne Family Office adds Alphabet, Riot in Q2, exits Intel, Micron Technology",
+          "title": "Berkshire adds $17 billion to Alphabet stake",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -89,88 +207,44 @@
       ]
     },
     {
-      "symbol": "GILD",
+      "symbol": "RKLB",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Court rules companies can't import Gilead medications from overseas in blow to AFP health programs",
+          "title": "Rocket Lab-built satellites for MDA Space begin operations in orbit",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NVDA",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Goldman’s latest cash cow is all about funding the AI infrastructure boom",
+          "title": "Dow Jones Futures: Nvidia Leads 5 Stocks In Buy Areas, Sandisk Needs This; Walmart Looms",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "MS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "From Apple to Ford: How Chinese tech is becoming harder for global companies to ignore",
+          "title": "Morgan Stanley sends a blunt Tesla message to investors",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "F",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "From Apple to Ford: How Chinese tech is becoming harder for global companies to ignore",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Berkshire Hathaway bulks up on Alphabet, Delta Air, exits Constellation Brands, among Q2 trades",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Duquesne Family Office adds Alphabet, Riot in Q2, exits Intel, Micron Technology",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "What Are Wall Street Analysts' Target Price for S&P Global Stock?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SMCI",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why Wall Street Isn't Buying Super Micro's $60 Billion Backlog Quite Yet",
+          "title": "1 Major Red Flag AMD Investors Can't Afford to Ignore",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -178,7 +252,8 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2,
-    "Nintendo": 1
+    "Anthropic (private)": 1,
+    "xAI (private)": 1,
+    "OpenAI (private)": 1
   }
 }
