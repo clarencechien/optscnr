@@ -1,81 +1,4 @@
 {
-  "Copper": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "LBCMF"
-  },
-  "Airbnb": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 4,
-    "ticker": "ABNB"
-  },
-  "Grindr": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 2,
-    "total_mentions": 4,
-    "ticker": "GRND"
-  },
-  "Virginia": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 2,
-    "total_mentions": 4,
-    "ticker": "VABK"
-  },
-  "Sweetgreen": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SG"
-  },
-  "Savers Value Village": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SVV"
-  },
-  "Trade Desk": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "TTD"
-  },
-  "Honeywell Aerospace": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "HONA"
-  },
-  "Apollo": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "APOS"
-  },
-  "EasyJet": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "EJTTF"
-  },
-  "Software": {
-    "first_seen": "2026-08-07",
-    "last_seen": "2026-08-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SFWJ"
-  },
   "Australian": {
     "first_seen": "2026-08-10",
     "last_seen": "2026-08-10",
@@ -131,5 +54,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BBIO"
+  },
+  "Connecticut": {
+    "first_seen": "2026-08-16",
+    "last_seen": "2026-08-16",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CNLHN"
+  },
+  "Beijing": {
+    "first_seen": "2026-08-16",
+    "last_seen": "2026-08-16",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BGTCF"
   }
 }

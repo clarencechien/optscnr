@@ -1,5 +1,30 @@
 {
-  "updated_at": "2026-08-14T21:49:22.036129",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-08-16T21:43:41.483747",
+  "count": 2,
+  "blind_spots": [
+    {
+      "name": "Connecticut",
+      "ticker": "CNLHN",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "What the results of a Connecticut congressional primary race may mean for Social Security",
+        "What the results of a Connecticut congressional primary race may mean for Social Security"
+      ]
+    },
+    {
+      "name": "Beijing",
+      "ticker": "BGTCF",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Beijing is said to move to clarify tax rules stoking confusion among China's ultra-wealthy",
+        "Beijing is said to move to clarify tax rules stoking confusion among China's ultra-wealthy"
+      ]
+    }
+  ]
 }
