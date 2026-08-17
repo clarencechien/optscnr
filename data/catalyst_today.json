@@ -1,87 +1,136 @@
 {
-  "updated_at": "2026-08-16T20:49:07.457072",
+  "updated_at": "2026-08-17T20:54:48.294440",
   "stats": {
     "total_items": 107,
-    "items_with_company": 17,
-    "items_with_catalyst": 10,
-    "items_both": 3
+    "items_with_company": 27,
+    "items_with_catalyst": 15,
+    "items_both": 4
   },
-  "count": 17,
+  "count": 20,
   "tickers": [
     "NVDA",
-    "AAPL",
-    "WDAY",
-    "MSFT",
-    "TSLA",
     "GOOGL",
-    "TGT",
+    "XYZ",
+    "AMZN",
+    "NBIS",
     "WMT",
-    "GS",
-    "RIVN",
-    "INTC",
+    "TSLA",
+    "TGT",
     "BRK-B",
+    "MSFT",
+    "META",
     "DIS",
-    "RKLB",
+    "RIVN",
+    "MU",
     "SNDK",
     "MS",
-    "AMD"
+    "AAPL",
+    "TSM",
+    "CRWV",
+    "GM"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 2.0,
+      "score": 6.5,
       "evidence": [
         {
-          "title": "Nvidia discloses $21 billion stake in SpaceX at end of second quarter",
+          "title": "Nvidia backing $105 billion in financing for OpenAI data center in Ohio",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Inflation moderated as Intel and Nvidia fueled the AI trade in last week's market",
+          "title": "Nvidia financing initiative follows SEC guidance that takes sponsors off the hook for data center investments",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "NVIDIA’s $3 Billion Bet on the Power Behind AI",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "5 big analyst AI moves: Bullish on memory names; Apple and Cisco downgraded",
+          "title": "SpaceX’s stock is rising, and that’s a good sign for Nvidia and Google",
           "catalysts": [
-            "downgraded"
+            "rising",
+            "gains"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "WDAY",
-      "score": 2,
+      "symbol": "GOOGL",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Workday Has Its Best Day in a Decade on Report of a Potential $43 Billion Buyout",
+          "title": "SpaceX’s stock is rising, and that’s a good sign for Nvidia and Google",
           "catalysts": [
-            "buyout"
+            "rising",
+            "gains"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Google wins Spirit Airlines data auction for AI training",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Prediction market traders see roughly 1-in-4 odds Paramount’s bid to buy Warner Bros. Discovery fails",
+          "catalysts": [
+            "acquisition",
+            "merger"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "AMZN",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Synchrony, credit card issuer to Amazon and Walmart, partners with OpenAI for ChatGPT shopping",
+          "catalysts": [
+            "partners with"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Here’s how Amazon’s stock could nearly double by the end of next year, according to Morgan Stanley",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NBIS",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Nebius (NBIS) Soared 48% Last Week. Is It Time to Sell?",
+          "catalysts": [
+            "soared"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "CoreWeave vs Nebius: Both Companies Reported Strong Earnings, But Here’s the Stock You Should Buy",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
       "score": 2,
       "evidence": [
         {
-          "title": "Satya Nadella's Microsoft Stock Jumped 18% in a Week After Azure's Annual Revenue Topped $100 Billion for the First Time. Is It Still a Buy?",
+          "title": "Synchrony, credit card issuer to Amazon and Walmart, partners with OpenAI for ChatGPT shopping",
           "catalysts": [
-            "jumped"
+            "partners with"
           ],
           "has_catalyst": true
         }
@@ -89,7 +138,7 @@
     },
     {
       "symbol": "TSLA",
-      "score": 1.0,
+      "score": 1.5,
       "evidence": [
         {
           "title": "I drove Tesla FSD, Rivian Autonomy+ ‘hands-free’ driving systems. Here’s how they compare",
@@ -97,23 +146,12 @@
           "has_catalyst": false
         },
         {
-          "title": "Morgan Stanley sends a blunt Tesla message to investors",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Berkshire adds $17 billion to Alphabet stake",
+          "title": "Tesla to launch Cybercab in Austin this month - report",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Google’s (GOOGL) Latest AI Model Arrives Amid A Bigger Balancing Act",
+          "title": "Uber, Lyft trade lower on report of August launch of Tesla’s CyberCab",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -124,39 +162,66 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Walmart and Target are about to reveal the health of the U.S. consumer",
+          "title": "Here’s how Amazon’s stock could nearly double by the end of next year, according to Morgan Stanley",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "The Newest Income ETFs ‘Target’ Fixed Payouts of 12 to 20 Percent a Year. Here’s How That Actually Works",
+          "title": "Canada stocks slip as inflation hits top of target range",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
+      "symbol": "BRK-B",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Walmart and Target are about to reveal the health of the U.S. consumer",
+          "title": "Warren Buffett's Berkshire raises stake in world's largest airline",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Dow Jones Futures: Nvidia Leads 5 Stocks In Buy Areas, Sandisk Needs This; Walmart Looms",
+          "title": "Greg Abel Starts Spending: Berkshire’s Cash Hoard Finally Gets Put to Work",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "MSFT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Investors in Microsoft Love Shorting Out-of-the-Money MSFT Puts",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Microsoft's Maia 300 Chip Targets NVIDIA's AI Dominance",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Secret outperformer: Dispelling the 'myths' about an unloved stock market",
+          "title": "Meta faces ‘astronomical’ consequences as legal fight reaches critical moment in California",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Disney's new parks boss outlines investment strategy, with superfans at the fore",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -174,44 +239,11 @@
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Inflation moderated as Intel and Nvidia fueled the AI trade in last week's market",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Berkshire adds $17 billion to Alphabet stake",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Disney CEO Josh D'Amaro tells CNBC parks were 'big surprise' in last quarter, company has 'clarity' and 'stability'",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RKLB",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Rocket Lab-built satellites for MDA Space begin operations in orbit",
+          "title": "Micron, Sandisk and other chip stocks climb as investors get more confident about AI spending",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -222,7 +254,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dow Jones Futures: Nvidia Leads 5 Stocks In Buy Areas, Sandisk Needs This; Walmart Looms",
+          "title": "Micron, Sandisk and other chip stocks climb as investors get more confident about AI spending",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -233,18 +265,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Morgan Stanley sends a blunt Tesla message to investors",
+          "title": "Here’s how Amazon’s stock could nearly double by the end of next year, according to Morgan Stanley",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "1 Major Red Flag AMD Investors Can't Afford to Ignore",
+          "title": "Apple to modify ad tracking rules after German probe",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Should You Buy Taiwan Semiconductor Stock Below $440? Here's What History Says.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "CoreWeave vs Nebius: Both Companies Reported Strong Earnings, But Here’s the Stock You Should Buy",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Jim Cramer Advises Ditching Stellantis (STLA) for General Motors (GM)",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -252,8 +317,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1,
-    "xAI (private)": 1,
-    "OpenAI (private)": 1
+    "OpenAI (private)": 3,
+    "Anthropic (private)": 2
   }
 }
