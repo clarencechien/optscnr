@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（tw_scanner + delta_radar）
 
-_README 由 build_readme.py 於 2026-08-16 03:26 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-08-17 03:27 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -23,7 +23,7 @@ _README 由 build_readme.py 於 2026-08-16 03:26 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-08-16 03:26 UTC
+# Delta Radar (2308.TW) — 2026-08-17 03:27 UTC
 
 ## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
@@ -33,43 +33,43 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟢 GREEN | capex_cut:5e(6m) / vr300_delay:13e(17m) / debt_financed_capex:12e / lc_psu_competition:0e |
+| M5 narrative_triggers | 🟡 YELLOW | capex_cut:6e(7m) / vr300_delay:16e(19m) / debt_financed_capex:13e / lc_psu_competition:0e |
 
-### M5 narrative_triggers — 🟢 GREEN
+### M5 narrative_triggers — 🟡 YELLOW
 ```json
 {
   "events": {
-    "capex_cut": 5,
-    "vr300_delay": 13,
-    "debt_financed_capex": 12,
+    "capex_cut": 6,
+    "vr300_delay": 16,
+    "debt_financed_capex": 13,
     "lc_psu_competition": 0
   },
   "mentions": {
-    "capex_cut": 6,
-    "vr300_delay": 17,
-    "debt_financed_capex": 12,
+    "capex_cut": 7,
+    "vr300_delay": 19,
+    "debt_financed_capex": 13,
     "lc_psu_competition": 0
   },
   "scoring": {
     "capex_cut": {
-      "events": 5,
-      "mentions": 6,
+      "events": 6,
+      "mentions": 7,
       "gate": "zscore",
-      "z": -0.54,
+      "z": 1.62,
       "denial": false
     },
     "vr300_delay": {
-      "events": 13,
-      "mentions": 17,
+      "events": 16,
+      "mentions": 19,
       "gate": "zscore",
-      "z": -0.85,
+      "z": 2.54,
       "denial": true
     },
     "debt_financed_capex": {
-      "events": 12,
-      "mentions": 12,
+      "events": 13,
+      "mentions": 13,
       "gate": "zscore",
-      "z": -0.54,
+      "z": 0.5,
       "denial": false
     },
     "lc_psu_competition": {
@@ -82,18 +82,19 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
   }
 }
 ```
+- [vr300_delay] 官方否認偵測 → 上限 🟡（爭議中）
 - [capex_cut] Will the next recession be caused by an AI capex cut-off? - investordaily.com.au
-- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
-- [capex_cut] Can Sovereign AI Buffer Nvidia Against a Potential Hyperscaler Slowdown? - Trefis
+- [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 247wallst.com
+- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 247wallst.com
 - [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
 - [vr300_delay] Nvidia next-gen 'Kyber' AI rack delayed to 2028 on manufacturing snags: report (NVDA:NASDAQ) - Seeking Alpha
-- [vr300_delay] Nvidia Kyber NVL144 Slips to 2028 as Physics, Not Software, Defeats the Backup Plan - Tech Times
+- [vr300_delay] Nvidia Kyber NVL144 Slips to 2028 as Physics, Not Software, Defeats the Backup Plan - techtimes.com
 - [debt_financed_capex] Alphabet Stock Forecast: GOOGL Faces AI Spending, Debt and Regulatory Pressure - TradingKey
 - [debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance
-- [debt_financed_capex] Will Moody's AI Debt Warning Trigger an AI Bubble Crash? - Substack
+- [debt_financed_capex] After a nearly 1,000% surge, the AI debt orgy can’t last forever, while hidden borrowing has exploded to $1.65 trillion 
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**80/80**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**81/81**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---
