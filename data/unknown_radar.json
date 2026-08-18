@@ -1,41 +1,17 @@
 {
-  "updated_at": "2026-08-17T21:49:42.768044",
-  "count": 3,
+  "updated_at": "2026-08-18T21:47:00.391805",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Connecticut",
-      "ticker": "CNLHN",
-      "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "What the results of a Connecticut congressional primary race may mean for Social Security",
-        "What the results of a Connecticut congressional primary race may mean for Social Security"
-      ]
-    },
-    {
-      "name": "Synchrony",
-      "ticker": "SYF-PB",
+      "name": "Delta",
+      "ticker": "DAL",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Synchrony, credit card issuer to Amazon and Walmart, partners with OpenAI for ChatGPT shopping",
-        "Synchrony, credit card issuer to Amazon and Walmart, partners with OpenAI for ChatGPT shopping"
-      ]
-    },
-    {
-      "name": "Vista Energy",
-      "ticker": "VSOGF",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Vista Energy up 4% after billionaire Peter Thiel buys stake in the Argentine shale oil producer",
-        "Vista Energy up 4% after billionaire Peter Thiel buys stake in the Argentine shale oil producer"
+        "American Airlines to add seatback screens, bigger first class in race to catch up to Delta and Unite",
+        "American Airlines to add seatback screens, bigger first class in race to catch up to Delta and Unite"
       ]
     }
   ]

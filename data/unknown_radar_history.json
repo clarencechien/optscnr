@@ -1,18 +1,4 @@
 {
-  "Australian": {
-    "first_seen": "2026-08-10",
-    "last_seen": "2026-08-10",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "COOTW"
-  },
-  "GameStop": {
-    "first_seen": "2026-08-10",
-    "last_seen": "2026-08-10",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GME-WT"
-  },
   "Credit": {
     "first_seen": "2026-08-11",
     "last_seen": "2026-08-11",
@@ -82,5 +68,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "VSOGF"
+  },
+  "Delta": {
+    "first_seen": "2026-08-18",
+    "last_seen": "2026-08-18",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DAL"
   }
 }
