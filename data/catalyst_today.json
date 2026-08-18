@@ -1,205 +1,80 @@
 {
-  "updated_at": "2026-08-17T20:54:48.294440",
+  "updated_at": "2026-08-18T20:50:59.819556",
   "stats": {
     "total_items": 107,
-    "items_with_company": 27,
-    "items_with_catalyst": 15,
-    "items_both": 4
+    "items_with_company": 12,
+    "items_with_catalyst": 6,
+    "items_both": 1
   },
-  "count": 20,
+  "count": 9,
   "tickers": [
-    "NVDA",
-    "GOOGL",
-    "XYZ",
-    "AMZN",
-    "NBIS",
-    "WMT",
-    "TSLA",
     "TGT",
-    "BRK-B",
-    "MSFT",
-    "META",
     "DIS",
-    "RIVN",
+    "COST",
     "MU",
-    "SNDK",
-    "MS",
+    "META",
     "AAPL",
-    "TSM",
-    "CRWV",
-    "GM"
+    "HIMS",
+    "NVDA",
+    "IONQ"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 6.5,
-      "evidence": [
-        {
-          "title": "Nvidia backing $105 billion in financing for OpenAI data center in Ohio",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia financing initiative follows SEC guidance that takes sponsors off the hook for data center investments",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "SpaceX’s stock is rising, and that’s a good sign for Nvidia and Google",
-          "catalysts": [
-            "rising",
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "SpaceX’s stock is rising, and that’s a good sign for Nvidia and Google",
-          "catalysts": [
-            "rising",
-            "gains"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Google wins Spirit Airlines data auction for AI training",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Prediction market traders see roughly 1-in-4 odds Paramount’s bid to buy Warner Bros. Discovery fails",
-          "catalysts": [
-            "acquisition",
-            "merger"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Synchrony, credit card issuer to Amazon and Walmart, partners with OpenAI for ChatGPT shopping",
-          "catalysts": [
-            "partners with"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Here’s how Amazon’s stock could nearly double by the end of next year, according to Morgan Stanley",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NBIS",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Nebius (NBIS) Soared 48% Last Week. Is It Time to Sell?",
-          "catalysts": [
-            "soared"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "CoreWeave vs Nebius: Both Companies Reported Strong Earnings, But Here’s the Stock You Should Buy",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
+      "symbol": "TGT",
       "score": 2,
       "evidence": [
         {
-          "title": "Synchrony, credit card issuer to Amazon and Walmart, partners with OpenAI for ChatGPT shopping",
+          "title": "We upgraded Home Depot and raised our price target. It made the best of a terrible hand",
           "catalysts": [
-            "partners with"
+            "upgraded"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "TSLA",
-      "score": 1.5,
+      "symbol": "DIS",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "I drove Tesla FSD, Rivian Autonomy+ ‘hands-free’ driving systems. Here’s how they compare",
+          "title": "Disney-owned ABC files First Amendment lawsuit against FCC ",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Tesla to launch Cybercab in Austin this month - report",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Uber, Lyft trade lower on report of August launch of Tesla’s CyberCab",
+          "title": "FCC chair defends Disney DEI probe, says no decision made yet",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "COST",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Here’s how Amazon’s stock could nearly double by the end of next year, according to Morgan Stanley",
+          "title": "Soon you can buy Medicare Advantage plans at Costco. What you need to know.",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Canada stocks slip as inflation hits top of target range",
+          "title": "Costco launching Medicare Advantage plans with SCAN Group",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
+      "symbol": "MU",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Warren Buffett's Berkshire raises stake in world's largest airline",
+          "title": "This Micron Covered Call Could Pay You 63% to Sit and Wait",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Greg Abel Starts Spending: Berkshire’s Cash Hoard Finally Gets Put to Work",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Investors in Microsoft Love Shorting Out-of-the-Money MSFT Puts",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft's Maia 300 Chip Targets NVIDIA's AI Dominance",
+          "title": "Micron stock heats up again, crossing $1,000",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -217,107 +92,49 @@
       ]
     },
     {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Disney's new parks boss outlines investment strategy, with superfans at the fore",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RIVN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "I drove Tesla FSD, Rivian Autonomy+ ‘hands-free’ driving systems. Here’s how they compare",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Micron, Sandisk and other chip stocks climb as investors get more confident about AI spending",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Micron, Sandisk and other chip stocks climb as investors get more confident about AI spending",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Here’s how Amazon’s stock could nearly double by the end of next year, according to Morgan Stanley",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple to modify ad tracking rules after German probe",
+          "title": "Apple overhauls Europe app store fees to resolve payments clash",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSM",
+      "symbol": "HIMS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Should You Buy Taiwan Semiconductor Stock Below $440? Here's What History Says.",
+          "title": "Hims & Hers CEO says FTC lawsuit misunderstands how the company works",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWV",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "CoreWeave vs Nebius: Both Companies Reported Strong Earnings, But Here’s the Stock You Should Buy",
+          "title": "Nvidia's AI moat is shifting from chips to capital",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GM",
+      "symbol": "IONQ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Jim Cramer Advises Ditching Stellantis (STLA) for General Motors (GM)",
+          "title": "Stocks to watch on Tuesday after hours: KEYS, WYFI, IONQ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "OpenAI (private)": 3,
-    "Anthropic (private)": 2
-  }
+  "watch_only": {}
 }
