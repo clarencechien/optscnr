@@ -1,91 +1,91 @@
 {
-  "updated_at": "2026-08-17T22:40:58.182852",
+  "updated_at": "2026-08-18T22:41:27.285025",
   "version": "sage_v0.2",
-  "days_since_ipo": 66,
-  "price": 146.22999572753906,
+  "days_since_ipo": 67,
+  "price": 143.33999633789062,
   "phase": "P1",
   "level": "L1",
   "iv": {
-    "atm_iv": 0.6606479248046876,
-    "pctile": 10.9,
-    "n_samples": 55,
+    "atm_iv": 0.6474644628906251,
+    "pctile": 7.1,
+    "n_samples": 56,
     "rel_calm": "True",
     "abs_acceptable": false,
     "stable": true
   },
   "liquidity": {
     "has_leaps": true,
-    "total_int": 527018,
-    "total_vol": 57045,
-    "usable_strikes": 107,
-    "best_spread_pct": 0.035,
+    "total_int": 551125,
+    "total_vol": 39716,
+    "usable_strikes": 109,
+    "best_spread_pct": 0.022,
     "liquid": true,
     "detail": [
       {
-        "exp": "2028-01-21",
-        "strike": 55.0,
-        "oi": 333,
-        "spread_pct": 0.035,
-        "bid": 96.0,
-        "ask": 99.4
+        "exp": "2027-06-17",
+        "strike": 90.0,
+        "oi": 167,
+        "spread_pct": 0.022,
+        "bid": 63.7,
+        "ask": 65.1
       },
       {
         "exp": "2028-12-15",
-        "strike": 75.0,
-        "oi": 139,
-        "spread_pct": 0.035,
-        "bid": 88.9,
-        "ask": 92.1
-      },
-      {
-        "exp": "2028-01-21",
-        "strike": 65.0,
-        "oi": 153,
-        "spread_pct": 0.036,
-        "bid": 88.75,
-        "ask": 92.0
-      },
-      {
-        "exp": "2027-01-15",
-        "strike": 120.0,
-        "oi": 2245,
-        "spread_pct": 0.037,
-        "bid": 38.3,
-        "ask": 39.75
+        "strike": 70.0,
+        "oi": 316,
+        "spread_pct": 0.024,
+        "bid": 89.5,
+        "ask": 91.7
       },
       {
         "exp": "2027-03-19",
-        "strike": 120.0,
-        "oi": 785,
-        "spread_pct": 0.037,
-        "bid": 42.35,
-        "ask": 43.95
+        "strike": 100.0,
+        "oi": 372,
+        "spread_pct": 0.028,
+        "bid": 52.45,
+        "ask": 53.95
+      },
+      {
+        "exp": "2028-01-21",
+        "strike": 90.0,
+        "oi": 126,
+        "spread_pct": 0.029,
+        "bid": 70.85,
+        "ask": 72.95
+      },
+      {
+        "exp": "2028-12-15",
+        "strike": 100.0,
+        "oi": 3576,
+        "spread_pct": 0.029,
+        "bid": 74.35,
+        "ask": 76.5
       }
     ],
-    "leaps_atm_iv": 0.7144,
+    "leaps_atm_iv": 0.7117,
     "leaps_iv_exp": "2028-12-15"
   },
   "skew": {
     "skew_type": "neutral",
-    "call_iv": 0.676,
-    "put_iv": 0.643,
-    "pc_vol_ratio": 0.718
+    "call_iv": 0.657,
+    "put_iv": 0.636,
+    "pc_vol_ratio": 0.741
   },
   "viewpoint": {
     "has_viewpoint": true,
     "confidence": 5,
-    "passes": false,
+    "passes": true,
     "detail": {
-      "catalyst": "\uff08\u7bc4\u4f8b\uff092027 S&P 500 \u7d0d\u5165\u524d\u7684\u56db\u5b63\u7372\u5229\u9a57\u8b49\u7a97\u53e3",
-      "thesis": "\uff08\u7bc4\u4f8b\uff09\u5e02\u5834\u4f4e\u4f30 Q3 Starlink ARPU \u7684 B2G \u5546\u696d\u5316\u901f\u5ea6\uff0c\u7372\u5229\u9054\u6a19\u6703\u6bd4\u5171\u8b58\u65e9\u4e00\u5b63",
-      "updated": "2026-06-25"
+      "catalyst": "2027 S&P 500 \u7d0d\u5165\u524d\u7684\u56db\u5b63\u7372\u5229\u9a57\u8b49\u7a97\u53e3",
+      "thesis": "\u5e02\u5834\u4f4e\u4f30 Q3 Starlink ARPU \u7684 B2G \u5546\u696d\u5316\u901f\u5ea6\uff0c\u7372\u5229\u9054\u6a19\u6703\u6bd4\u5171\u8b58\u65e9\u4e00\u5b63",
+      "updated": "2026-08-18"
     },
-    "is_placeholder": true
+    "is_placeholder": false
   },
   "conditions": {
     "IV \u76f8\u5c0d\u51b7\u537b\u4e14\u7a69\u5b9a": true,
     "IV \u7d55\u5c0d\u53ef\u63a5\u53d7\uff08\u2264\u9632\u7dda\uff09": false,
     "\u6d41\u52d5\u6027\u904e\u95dc": true,
-    "\u89c0\u9ede\u4fe1\u5fc3\u9054\u6a19": false
+    "\u89c0\u9ede\u4fe1\u5fc3\u9054\u6a19": true
   }
 }
