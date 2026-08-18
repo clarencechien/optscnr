@@ -4237,8 +4237,8 @@
       "t5_excess_pct": 0.66,
       "t10_ret_pct": -7.33,
       "t10_excess_pct": -10.15,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 10.56,
+      "t20_excess_pct": 3.25
     }
   },
   {
@@ -4455,8 +4455,8 @@
       "t5_excess_pct": 0.66,
       "t10_ret_pct": -7.33,
       "t10_excess_pct": -10.15,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 10.56,
+      "t20_excess_pct": 3.25
     }
   },
   {
@@ -6444,8 +6444,8 @@
       "entry_close": 1580.0,
       "t5_ret_pct": 14.87,
       "t5_excess_pct": 12.66,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 19.3,
+      "t10_excess_pct": 14.94,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -6904,8 +6904,8 @@
       "entry_date": "2026-08-08",
       "benchmark": "0050",
       "entry_close": 1815.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 3.86,
+      "t5_excess_pct": 1.75,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -7123,8 +7123,8 @@
       "entry_date": "2026-08-10",
       "benchmark": "0050",
       "entry_close": 1815.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 3.86,
+      "t5_excess_pct": 1.75,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -7156,8 +7156,8 @@
       "entry_date": "2026-08-10",
       "benchmark": "0050",
       "entry_close": 1815.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 3.86,
+      "t5_excess_pct": 1.75,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -7845,7 +7845,7 @@
     "outcomes": {
       "entry_date": "2026-08-15",
       "benchmark": "0050",
-      "entry_close": null,
+      "entry_close": 1885.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
@@ -7926,7 +7926,7 @@
     "outcomes": {
       "entry_date": "2026-08-16",
       "benchmark": "0050",
-      "entry_close": null,
+      "entry_close": 1885.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
@@ -8008,7 +8008,7 @@
     "outcomes": {
       "entry_date": "2026-08-17",
       "benchmark": "0050",
-      "entry_close": null,
+      "entry_close": 1885.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
@@ -8226,6 +8226,87 @@
     ],
     "outcomes": {
       "entry_date": "2026-08-17",
+      "benchmark": "0050",
+      "entry_close": 1885.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-08-18T03:22:24.041109+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "RED",
+        "headline": "capex_cut:7e(8m) / vr300_delay:15e(17m) / debt_financed_capex:13e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 7,
+            "vr300_delay": 15,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 8,
+            "vr300_delay": 17,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 7,
+              "mentions": 8,
+              "gate": "zscore",
+              "z": 3.33,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 15,
+              "mentions": 17,
+              "gate": "zscore",
+              "z": 0.89,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 13,
+              "mentions": 13,
+              "gate": "zscore",
+              "z": 0.33,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Will the next recession be caused by an AI capex cut-off? - investordaily.com.au",
+          "[capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review",
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia next-gen 'Kyber' AI rack delayed to 2028 on manufacturing snags: report (NVDA:NASDAQ) - Seeking Alpha",
+          "[vr300_delay] Jensen Huang Takes Stage at Morgan Stanley Roadshow: Quarterly Revenue Nears $100 Billion, Nvidia Denies Rubin Ultra Del",
+          "[debt_financed_capex] AI infrastructure debt exceeds $236 billion in 2026, as tech giants shift to Wall Street financing. - KuCoin",
+          "[debt_financed_capex] Tech companies’ AI debt surges as Oracle nears junk credit rating - The Cryptonomist",
+          "[debt_financed_capex] After a nearly 1,000% surge, the AI debt orgy can’t last forever, while hidden borrowing has exploded to $1.65 trillion "
+        ],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-08-18",
       "benchmark": "0050",
       "entry_close": null,
       "t5_ret_pct": null,
