@@ -3559,10 +3559,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.01,
+      "spot": 3.359999895095825,
+      "iv": 93.7500625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-08-13_OPEN_2026-08-21_3.5",
@@ -3582,10 +3587,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.06,
+      "spot": 3.359999895095825,
+      "iv": 78.12521875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-08-13_RBLX_2026-08-21_40.0",
@@ -3605,10 +3615,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.15,
+      "spot": 37.66999816894531,
+      "iv": 58.39885351562499,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.3x)"
   },
   {
     "signal_id": "2026-08-13_NKE_2026-08-21_41.5",
@@ -3628,10 +3643,15 @@
     "news_at_signal": true,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.1,
+      "spot": 40.060001373291016,
+      "iv": 35.547519531249996,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.1x)"
   },
   {
     "signal_id": "2026-08-13_U_2026-08-21_47.0",
@@ -3651,10 +3671,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.94,
+      "spot": 46.7400016784668,
+      "iv": 53.4184345703125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
     "signal_id": "2026-08-13_DKNG_2026-11-20_32.5",
@@ -3674,10 +3699,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.57,
+      "spot": 24.040000915527344,
+      "iv": 54.59029785156251,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
     "signal_id": "2026-08-13_HIMS_2026-09-18_37.0",
@@ -3697,10 +3727,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.32,
+      "spot": 27.389999389648438,
+      "iv": 81.2501875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.4x)"
   },
   {
     "signal_id": "2026-08-13_INTC_2026-09-18_135.0",
@@ -3720,10 +3755,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.58,
+      "spot": 96.68499755859375,
+      "iv": 71.33817724609376,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.3x)"
   },
   {
     "signal_id": "2026-08-13_MSTR_2026-08-21_105.0",
@@ -3743,10 +3783,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.18,
+      "spot": 92.5199966430664,
+      "iv": 75.00025000000001,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.1x)"
   },
   {
     "signal_id": "2026-08-13_PLTR_2026-08-21_180.0",
@@ -3766,10 +3811,15 @@
     "news_at_signal": true,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.6,
+      "spot": 171.5399932861328,
+      "iv": 44.0435283203125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.1x)"
   },
   {
     "signal_id": "2026-08-13_MSTR_2026-08-21_103.0",
@@ -3789,10 +3839,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.28,
+      "spot": 92.5199966430664,
+      "iv": 74.804939453125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-08-13_TSLA_2026-08-21_340.0",
@@ -3812,10 +3867,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 4.06,
+      "spot": 336.8699951171875,
+      "iv": 39.087523193359374,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.5x/今0.5x)"
   },
   {
     "signal_id": "2026-08-13_MSTR_2026-08-21_98.0",
@@ -3835,10 +3895,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.79,
+      "spot": 92.5199966430664,
+      "iv": 67.57844921875001,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-08-13_SMCI_2026-08-21_41.0",
@@ -3858,10 +3923,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.24,
+      "spot": 37.40999984741211,
+      "iv": 80.85956640625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-08-13_PLTR_2026-08-21_185.0",
@@ -3881,10 +3951,15 @@
     "news_at_signal": true,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.22,
+      "spot": 171.5399932861328,
+      "iv": 46.680220703125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "💀歸零(0.08x)"
   },
   {
     "signal_id": "2026-08-13_INTC_2026-08-21_120.0",
@@ -3904,10 +3979,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.03,
+      "spot": 96.68499755859375,
+      "iv": 85.1563984375,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "💀歸零(0.05x)"
   },
   {
     "signal_id": "2026-08-13_TSLA_2026-08-21_360.0",
@@ -3927,10 +4007,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.51,
+      "spot": 336.8699951171875,
+      "iv": 43.89704541015625,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.3x)"
   },
   {
     "signal_id": "2026-08-13_TSLA_2026-08-21_330.0",
@@ -3950,10 +4035,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 9.5,
+      "spot": 336.8699951171875,
+      "iv": 40.67442138671875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.7x/今0.7x)"
   },
   {
     "signal_id": "2026-08-13_HOOD_2026-08-21_105.0",
@@ -3973,10 +4063,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.07,
+      "spot": 91.52999877929688,
+      "iv": 65.23472265625001,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "💀歸零(0.05x)"
   },
   {
     "signal_id": "2026-08-13_PLTR_2026-08-21_190.0",
@@ -3996,10 +4091,15 @@
     "news_at_signal": true,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.11,
+      "spot": 171.5399932861328,
+      "iv": 50.7817421875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "💀歸零(0.07x)"
   },
   {
     "signal_id": "2026-08-13_CSCO_2026-08-21_115.0",
@@ -4019,10 +4119,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.3,
+      "spot": 111.61000061035156,
+      "iv": 30.51827294921875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.2x)"
   },
   {
     "signal_id": "2026-08-13_IREN_2026-10-16_75.0",
@@ -4042,10 +4147,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.89,
+      "spot": 42.0,
+      "iv": 102.73486132812502,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.6x/今0.6x)"
   },
   {
     "signal_id": "2026-08-13_META_2027-01-15_1250.0",
@@ -4065,10 +4175,15 @@
     "news_at_signal": true,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.61,
+      "spot": 543.6699829101562,
+      "iv": 52.954572021484395,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.6x/今0.6x)"
   },
   {
     "signal_id": "2026-08-13_SMCI_2026-12-18_52.0",
@@ -4088,10 +4203,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 2.95,
+      "spot": 37.40999984741211,
+      "iv": 82.39763696289062,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.7x/今0.7x)"
   },
   {
     "signal_id": "2026-08-13_DKNG_2026-11-20_27.5",
@@ -4111,10 +4231,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.44,
+      "spot": 24.040000915527344,
+      "iv": 55.93305786132813,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.7x/今0.7x)"
   },
   {
     "signal_id": "2026-08-13_CSCO_2026-10-16_115.0",
@@ -4134,10 +4259,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 4.1,
+      "spot": 111.61000061035156,
+      "iv": 31.323928955078124,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.7x/今0.7x)"
   },
   {
     "signal_id": "2026-08-13_HOOD_2026-08-21_107.0",
@@ -4157,10 +4287,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.04,
+      "spot": 91.52999877929688,
+      "iv": 70.312796875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "💀歸零(0.03x)"
   },
   {
     "signal_id": "2026-08-13_OPEN_2028-01-21_10.0",
@@ -4180,10 +4315,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.67,
+      "spot": 3.359999895095825,
+      "iv": 109.27779736328125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
     "signal_id": "2026-08-13_SOFI_2027-01-15_35.0",
@@ -4203,10 +4343,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.17,
+      "spot": 17.65999984741211,
+      "iv": 62.2074091796875,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.6x/今0.6x)"
   },
   {
     "signal_id": "2026-08-13_MRVL_2026-10-16_450.0",
@@ -4226,10 +4371,15 @@
     "news_at_signal": true,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.74,
+      "spot": 216.0,
+      "iv": 86.98743481445312,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "❌沒噴(峰0.5x)"
   },
   {
     "signal_id": "2026-08-13_OPEN_2028-01-21_5.0",
@@ -4249,10 +4399,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 1.17,
+      "spot": 3.359999895095825,
+      "iv": 100.1958115234375,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰0.9x/今0.9x)"
   },
   {
     "signal_id": "2026-08-13_IBIT_2027-01-15_50.0",
@@ -4272,10 +4427,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.71,
+      "spot": 36.599998474121094,
+      "iv": 42.236905761718745,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.2x/今1.2x)"
   },
   {
     "signal_id": "2026-08-13_IBIT_2027-01-15_60.0",
@@ -4295,10 +4455,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.27,
+      "spot": 36.599998474121094,
+      "iv": 46.680220703125,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.1x/今1.1x)"
   },
   {
     "signal_id": "2026-08-13_IBIT_2027-01-15_100.0",
@@ -4318,10 +4483,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.05,
+      "spot": 36.599998474121094,
+      "iv": 63.47692773437501,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.2x/今1.2x)"
   },
   {
     "signal_id": "2026-08-13_T_2027-01-15_30.0",
@@ -4341,10 +4511,15 @@
     "news_at_signal": false,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
-    "t5": null,
+    "t5": {
+      "opt_price": 0.34,
+      "spot": 24.899999618530273,
+      "iv": 26.660889648437504,
+      "note": "ok"
+    },
     "t10": null,
     "t20": null,
-    "verdict": null
+    "verdict": "➖持平(峰1.2x/今1.2x)"
   },
   {
     "signal_id": "2026-08-14_NVDA_2026-08-21_235.0",
@@ -5006,6 +5181,259 @@
     "volume": 154,
     "premium_tier": "lottery",
     "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_PCG_2026-09-18_21.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "PCG",
+    "expiry": "2026-09-18",
+    "strike": 21.0,
+    "score": 8,
+    "tags": "🚀點火(3.6x) 🚬菸屁股 🔥萬人塚 📅吃不到財報(下次10-22)",
+    "entry_price": 0.32,
+    "entry_iv": 58.39885351562499,
+    "entry_spot": 17.81999969482422,
+    "oi": 89165,
+    "oi_d7": 89165,
+    "volume": 3883,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_META_2026-09-18_625.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "META",
+    "expiry": "2026-09-18",
+    "strike": 625.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-28)",
+    "entry_price": 3.17,
+    "entry_iv": 37.71424591064453,
+    "entry_spot": 543.6699829101562,
+    "oi": 1795,
+    "oi_d7": 1795,
+    "volume": 3764,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_PCG_2026-09-18_19.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "PCG",
+    "expiry": "2026-09-18",
+    "strike": 19.0,
+    "score": 8,
+    "tags": "🚀點火(5.2x) 🚬菸屁股 🔥萬人塚 📅吃不到財報(下次10-22)",
+    "entry_price": 0.76,
+    "entry_iv": 57.7152666015625,
+    "entry_spot": 17.81999969482422,
+    "oi": 152889,
+    "oi_d7": 152889,
+    "volume": 3315,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_PCG_2026-09-18_22.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "PCG",
+    "expiry": "2026-09-18",
+    "strike": 22.0,
+    "score": 8,
+    "tags": "🚀點火(>50x) 🚬菸屁股 🔥萬人塚 📅吃不到財報(下次10-22)",
+    "entry_price": 0.22,
+    "entry_iv": 58.39885351562499,
+    "entry_spot": 17.81999969482422,
+    "oi": 95887,
+    "oi_d7": 95887,
+    "volume": 3296,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_NVDA_2028-01-21_300.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "NVDA",
+    "expiry": "2028-01-21",
+    "strike": 300.0,
+    "score": 8,
+    "tags": "🚀點火(9.2x) 🔭LEAPS 🔥萬人塚 📅覆蓋財報(08-26)",
+    "entry_price": 22.5,
+    "entry_iv": 44.168649139404295,
+    "entry_spot": 219.74000549316406,
+    "oi": 93695,
+    "oi_d7": 360,
+    "volume": 1245,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_OPEN_2028-01-21_5.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "OPEN",
+    "expiry": "2028-01-21",
+    "strike": 5.0,
+    "score": 8,
+    "tags": "🚀點火(5.3x) 🔭LEAPS 🔥萬人塚 📅覆蓋財報(11-05)",
+    "entry_price": 1.17,
+    "entry_iv": 100.1958115234375,
+    "entry_spot": 3.359999895095825,
+    "oi": 35971,
+    "oi_d7": 639,
+    "volume": 1143,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_XYZ_2026-12-18_90.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "XYZ",
+    "expiry": "2026-12-18",
+    "strike": 90.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(11-09)",
+    "entry_price": 4.95,
+    "entry_iv": 46.436082519531254,
+    "entry_spot": 79.43000030517578,
+    "oi": 807,
+    "oi_d7": 807,
+    "volume": 1138,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_T_2027-01-15_30.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "T",
+    "expiry": "2027-01-15",
+    "strike": 30.0,
+    "score": 8,
+    "tags": "🚀點火(3.8x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(10-21)",
+    "entry_price": 0.34,
+    "entry_iv": 26.660889648437504,
+    "entry_spot": 24.899999618530273,
+    "oi": 51287,
+    "oi_d7": 209,
+    "volume": 737,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_NVDA_2028-01-21_250.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "NVDA",
+    "expiry": "2028-01-21",
+    "strike": 250.0,
+    "score": 8,
+    "tags": "🚀點火(2.5x) 🔭LEAPS 🔥萬人塚 📅覆蓋財報(08-26)",
+    "entry_price": 36.15,
+    "entry_iv": 45.43816769409179,
+    "entry_spot": 219.74000549316406,
+    "oi": 37757,
+    "oi_d7": 439,
+    "volume": 290,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_TSLA_2027-01-15_960.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "TSLA",
+    "expiry": "2027-01-15",
+    "strike": 960.0,
+    "score": 8,
+    "tags": "🚀點火(7.4x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(10-21)",
+    "entry_price": 0.7,
+    "entry_iv": 68.48176049804688,
+    "entry_spot": 336.8699951171875,
+    "oi": 111489,
+    "oi_d7": -58,
+    "volume": 185,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-18_META_2027-01-15_1430.0",
+    "snapshot_date": "2026-08-18",
+    "ticker": "META",
+    "expiry": "2027-01-15",
+    "strike": 1430.0,
+    "score": 8,
+    "tags": "🚀點火(2.5x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(10-28)",
+    "entry_price": 0.36,
+    "entry_iv": 56.10395458984375,
+    "entry_spot": 543.6699829101562,
+    "oi": 45935,
+    "oi_d7": 15,
+    "volume": 63,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
     "signal_day_underlying_move": null,
     "why_it_popped": null,
     "t5": null,
