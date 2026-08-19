@@ -1,18 +1,5 @@
 {
-  "updated_at": "2026-08-18T21:47:00.391805",
-  "count": 1,
-  "blind_spots": [
-    {
-      "name": "Delta",
-      "ticker": "DAL",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "American Airlines to add seatback screens, bigger first class in race to catch up to Delta and Unite",
-        "American Airlines to add seatback screens, bigger first class in race to catch up to Delta and Unite"
-      ]
-    }
-  ]
+  "updated_at": "2026-08-19T21:49:57.412843",
+  "count": 0,
+  "blind_spots": []
 }
