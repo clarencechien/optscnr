@@ -1,80 +1,144 @@
 {
-  "updated_at": "2026-08-18T20:50:59.819556",
+  "updated_at": "2026-08-19T20:54:53.008273",
   "stats": {
     "total_items": 107,
-    "items_with_company": 12,
-    "items_with_catalyst": 6,
-    "items_both": 1
+    "items_with_company": 13,
+    "items_with_catalyst": 18,
+    "items_both": 4
   },
-  "count": 9,
+  "count": 11,
   "tickers": [
-    "TGT",
-    "DIS",
-    "COST",
-    "MU",
-    "META",
-    "AAPL",
-    "HIMS",
+    "MRNA",
+    "MRK",
     "NVDA",
-    "IONQ"
+    "MRVL",
+    "GOOGL",
+    "GS",
+    "META",
+    "AVGO",
+    "TGT",
+    "COST",
+    "MU"
   ],
   "details": [
     {
-      "symbol": "TGT",
-      "score": 2,
+      "symbol": "MRNA",
+      "score": 8,
       "evidence": [
         {
-          "title": "We upgraded Home Depot and raised our price target. It made the best of a terrible hand",
+          "title": "Cancer vaccine from Moderna, Merck shows promise in late-stage trial; both stocks soar",
           "catalysts": [
-            "upgraded"
+            "soar"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Moderna’s cancer-vaccine breakthrough drives broad biopharma stock rally",
+          "catalysts": [
+            "rally",
+            "breakthrough"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Moderna’s experimental vaccine prevents cancer recurrence, in ‘historic’ win for personalized medicine. Its stock soared.",
+          "catalysts": [
+            "soared"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "DIS",
-      "score": 1.0,
+      "symbol": "MRK",
+      "score": 4,
       "evidence": [
         {
-          "title": "Disney-owned ABC files First Amendment lawsuit against FCC ",
+          "title": "Cancer vaccine from Moderna, Merck shows promise in late-stage trial; both stocks soar",
+          "catalysts": [
+            "soar"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Moderna’s experimental vaccine prevents cancer recurrence, in ‘historic’ win for personalized medicine. Its stock soared.",
+          "catalysts": [
+            "soared"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Nvidia plays matchmaker in Nordics, sources tell CNBC, as AI data center deals boom in region",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "FCC chair defends Disney DEI probe, says no decision made yet",
+          "title": "Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares",
+          "catalysts": [
+            "pops"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "The U.S. banned Nvidia's best chips from going to China. Now it's trying to close a crucial loophole",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
-      "score": 1.0,
+      "symbol": "MRVL",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Soon you can buy Medicare Advantage plans at Costco. What you need to know.",
+          "title": "Where we stand on Broadcom after Marvell muscles in on its key customer Google",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Costco launching Medicare Advantage plans with SCAN Group",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares",
+          "catalysts": [
+            "pops"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "MU",
-      "score": 1.0,
+      "symbol": "GOOGL",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "This Micron Covered Call Could Pay You 63% to Sit and Wait",
+          "title": "Where we stand on Broadcom after Marvell muscles in on its key customer Google",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Micron stock heats up again, crossing $1,000",
+          "title": "Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares",
+          "catalysts": [
+            "pops"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Goldman studied where AI is squeezing labor markets. Here's what it found",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Goldman Sachs to buy real estate investment firm for $410M",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -85,56 +149,60 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta faces ‘astronomical’ consequences as legal fight reaches critical moment in California",
+          "title": "Meta's legal troubles has options traders eyeing the 'jade lizard'",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "AVGO",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple overhauls Europe app store fees to resolve payments clash",
+          "title": "Where we stand on Broadcom after Marvell muscles in on its key customer Google",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HIMS",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Hims & Hers CEO says FTC lawsuit misunderstands how the company works",
+          "title": "Target says its turnaround is picking up steam, with help from a big tariff refund",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NVDA",
+      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia's AI moat is shifting from chips to capital",
+          "title": "Costco launching Medicare Advantage plans with SCAN Group",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IONQ",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Stocks to watch on Tuesday after hours: KEYS, WYFI, IONQ",
+          "title": "Micron Vs. SK Hynix: The Newcomer is a Legitimate Threat",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "Anthropic (private)": 2,
+    "OpenAI (private)": 1,
+    "Stripe (private)": 1
+  }
 }
