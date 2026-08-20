@@ -1,110 +1,113 @@
 {
-  "updated_at": "2026-08-19T20:54:53.008273",
+  "updated_at": "2026-08-20T20:57:03.024780",
   "stats": {
     "total_items": 107,
-    "items_with_company": 13,
-    "items_with_catalyst": 18,
+    "items_with_company": 14,
+    "items_with_catalyst": 17,
     "items_both": 4
   },
-  "count": 11,
+  "count": 15,
   "tickers": [
+    "MU",
+    "WMT",
+    "XYZ",
     "MRNA",
-    "MRK",
-    "NVDA",
-    "MRVL",
-    "GOOGL",
-    "GS",
-    "META",
-    "AVGO",
+    "SNDK",
     "TGT",
-    "COST",
-    "MU"
+    "GOOGL",
+    "NVDA",
+    "CRWV",
+    "AVGO",
+    "BAC",
+    "MRVL",
+    "NBIS",
+    "AAPL",
+    "MSFT"
   ],
   "details": [
     {
-      "symbol": "MRNA",
-      "score": 8,
-      "evidence": [
-        {
-          "title": "Cancer vaccine from Moderna, Merck shows promise in late-stage trial; both stocks soar",
-          "catalysts": [
-            "soar"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Moderna’s cancer-vaccine breakthrough drives broad biopharma stock rally",
-          "catalysts": [
-            "rally",
-            "breakthrough"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Moderna’s experimental vaccine prevents cancer recurrence, in ‘historic’ win for personalized medicine. Its stock soared.",
-          "catalysts": [
-            "soared"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MRK",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Cancer vaccine from Moderna, Merck shows promise in late-stage trial; both stocks soar",
-          "catalysts": [
-            "soar"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Moderna’s experimental vaccine prevents cancer recurrence, in ‘historic’ win for personalized medicine. Its stock soared.",
-          "catalysts": [
-            "soared"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
+      "symbol": "MU",
       "score": 3.0,
       "evidence": [
         {
-          "title": "Nvidia plays matchmaker in Nordics, sources tell CNBC, as AI data center deals boom in region",
+          "title": "How Micron's $50 billion Boise buildout is reshaping its hometown",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares",
+          "title": "Dow Jones Futures Waver After Sandisk, Micron, Credo Lead AI Losses; Target Earnings Beat",
           "catalysts": [
-            "pops"
+            "earnings beat"
           ],
           "has_catalyst": true
         },
         {
-          "title": "The U.S. banned Nvidia's best chips from going to China. Now it's trying to close a crucial loophole",
+          "title": "Micron Technology (MU) Is Earning More Than Apple or Microsoft, but Can It Last?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRVL",
-      "score": 2.5,
+      "symbol": "WMT",
+      "score": 2,
       "evidence": [
         {
-          "title": "Where we stand on Broadcom after Marvell muscles in on its key customer Google",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares",
+          "title": "Walmart stock tumbles 9% after outlook disappoints Wall Street",
           "catalysts": [
-            "pops"
+            "tumbles"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "California AG tells CNBC that settling Paramount-WBD lawsuit would require 'robust structural remedies'",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MRNA",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Moderna’s personalized mRNA shot could reshape the fight against skin cancer — but it may also be overhyped",
+          "catalysts": [
+            "breakthrough"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Dow Jones Futures Waver After Sandisk, Micron, Credo Lead AI Losses; Target Earnings Beat",
+          "catalysts": [
+            "earnings beat"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Dow Jones Futures Waver After Sandisk, Micron, Credo Lead AI Losses; Target Earnings Beat",
+          "catalysts": [
+            "earnings beat"
           ],
           "has_catalyst": true
         }
@@ -112,44 +115,42 @@
     },
     {
       "symbol": "GOOGL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Where we stand on Broadcom after Marvell muscles in on its key customer Google",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares",
-          "catalysts": [
-            "pops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Goldman studied where AI is squeezing labor markets. Here's what it found",
+          "title": "Marvell gives Google option to buy $12.2 billion stake in custom AI chip deal",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Goldman Sachs to buy real estate investment firm for $410M",
+          "title": "Alphabet’s (GOOGL) Small Data Deal Hints At A Bigger AI Appetite",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "NVDA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Is NVIDIA’s (NVDA) AI Dominance About to Face Its Biggest Test Yet?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia’s (NVDA) $105B Ohio Bet: Ecosystem Expansion or Strategic Circularity?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta's legal troubles has options traders eyeing the 'jade lizard'",
+          "title": "Neocloud stocks like CoreWeave are having a moment — and time’s running out to cash in",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -160,40 +161,62 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Where we stand on Broadcom after Marvell muscles in on its key customer Google",
+          "title": "Broadcom seeks more than $60 billion in latest AI debt deal, Bloomberg News reports",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "BAC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Target says its turnaround is picking up steam, with help from a big tariff refund",
+          "title": "Bank of America sends message on Capital One stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
+      "symbol": "MRVL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Costco launching Medicare Advantage plans with SCAN Group",
+          "title": "Marvell gives Google option to buy $12.2 billion stake in custom AI chip deal",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "NBIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron Vs. SK Hynix: The Newcomer is a Legitimate Threat",
+          "title": "Nebius says its $5 billion convertible underscores data centre demand",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron Technology (MU) Is Earning More Than Apple or Microsoft, but Can It Last?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron Technology (MU) Is Earning More Than Apple or Microsoft, but Can It Last?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -201,8 +224,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2,
-    "OpenAI (private)": 1,
     "Stripe (private)": 1
   }
 }
