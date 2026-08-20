@@ -1,11 +1,4 @@
 {
-  "Daily": {
-    "first_seen": "2026-08-11",
-    "last_seen": "2026-08-12",
-    "consecutive_days": 2,
-    "total_mentions": 4,
-    "ticker": "DJCO"
-  },
   "Cisco": {
     "first_seen": "2026-08-12",
     "last_seen": "2026-08-13",
@@ -68,5 +61,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "DAL"
+  },
+  "Boise": {
+    "first_seen": "2026-08-20",
+    "last_seen": "2026-08-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BCC"
+  },
+  "Hyperliquid": {
+    "first_seen": "2026-08-20",
+    "last_seen": "2026-08-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "PURR"
+  },
+  "Alibaba": {
+    "first_seen": "2026-08-20",
+    "last_seen": "2026-08-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BBAAY"
   }
 }
