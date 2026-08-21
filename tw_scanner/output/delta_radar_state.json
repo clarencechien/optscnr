@@ -4651,8 +4651,8 @@
       "t5_excess_pct": -8.61,
       "t10_ret_pct": -10.64,
       "t10_excess_pct": -10.06,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -7.18,
+      "t20_excess_pct": -7.08
     }
   },
   {
@@ -4868,8 +4868,8 @@
       "t5_excess_pct": -8.61,
       "t10_ret_pct": -10.64,
       "t10_excess_pct": -10.06,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -7.18,
+      "t20_excess_pct": -7.08
     }
   },
   {
@@ -6744,8 +6744,8 @@
       "entry_close": 1680.0,
       "t5_ret_pct": 12.2,
       "t5_excess_pct": 8.91,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 3.87,
+      "t10_excess_pct": 3.39,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -7465,8 +7465,8 @@
       "entry_date": "2026-08-13",
       "benchmark": "0050",
       "entry_close": 1885.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -7.43,
+      "t5_excess_pct": -4.71,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -7684,8 +7684,8 @@
       "entry_date": "2026-08-13",
       "benchmark": "0050",
       "entry_close": 1885.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -7.43,
+      "t5_excess_pct": -4.71,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -8607,6 +8607,87 @@
     ],
     "outcomes": {
       "entry_date": "2026-08-20",
+      "benchmark": "0050",
+      "entry_close": 1745.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-08-21T03:29:34.255312+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "capex_cut:8e / vr300_delay:16e(18m) / debt_financed_capex:13e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 8,
+            "vr300_delay": 16,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 8,
+            "vr300_delay": 18,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 8,
+              "mentions": 8,
+              "gate": "zscore",
+              "z": 1.91,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 16,
+              "mentions": 18,
+              "gate": "zscore",
+              "z": 1.91,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 13,
+              "mentions": 13,
+              "gate": "zscore",
+              "z": 0.32,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review",
+          "[capex_cut] Will the next recession be caused by an AI capex cut-off? - investordaily.com.au",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[vr300_delay] Nvidia’s Rubin Ultra delays raise 2028 risk for AI dominance - Ticker News",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[debt_financed_capex] AI infrastructure debt exceeds $236 billion in 2026, as tech giants shift to Wall Street financing. - KuCoin",
+          "[debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance",
+          "[debt_financed_capex] The growing jitters over hyperscaler debt - Axios"
+        ],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-08-21",
       "benchmark": "0050",
       "entry_close": null,
       "t5_ret_pct": null,
