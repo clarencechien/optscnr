@@ -1,156 +1,132 @@
 {
-  "updated_at": "2026-08-20T20:57:03.024780",
+  "updated_at": "2026-08-21T20:50:53.310421",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 14,
-    "items_with_catalyst": 17,
-    "items_both": 4
+    "total_items": 106,
+    "items_with_company": 24,
+    "items_with_catalyst": 14,
+    "items_both": 2
   },
-  "count": 15,
+  "count": 17,
   "tickers": [
-    "MU",
-    "WMT",
-    "XYZ",
-    "MRNA",
-    "SNDK",
-    "TGT",
-    "GOOGL",
+    "TSLA",
     "NVDA",
-    "CRWV",
-    "AVGO",
+    "MDB",
+    "JPM",
     "BAC",
-    "MRVL",
-    "NBIS",
+    "XYZ",
+    "AVGO",
+    "SBUX",
+    "NKE",
+    "META",
+    "MU",
     "AAPL",
-    "MSFT"
+    "BA",
+    "SNDK",
+    "ACHR",
+    "TGT",
+    "COST"
   ],
   "details": [
     {
-      "symbol": "MU",
-      "score": 3.0,
+      "symbol": "TSLA",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "How Micron's $50 billion Boise buildout is reshaping its hometown",
+          "title": "Tesla recalls 3 million vehicles in China over doorhandle safety, driver monitoring",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Dow Jones Futures Waver After Sandisk, Micron, Credo Lead AI Losses; Target Earnings Beat",
+          "title": "Tesla’s stock jumps as the company gets cleared for a Las Vegas robotaxi launch",
           "catalysts": [
-            "earnings beat"
+            "jumps"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "Micron Technology (MU) Is Earning More Than Apple or Microsoft, but Can It Last?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Walmart stock tumbles 9% after outlook disappoints Wall Street",
-          "catalysts": [
-            "tumbles"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "California AG tells CNBC that settling Paramount-WBD lawsuit would require 'robust structural remedies'",
-          "catalysts": [
-            "merger"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MRNA",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Moderna’s personalized mRNA shot could reshape the fight against skin cancer — but it may also be overhyped",
-          "catalysts": [
-            "breakthrough"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures Waver After Sandisk, Micron, Credo Lead AI Losses; Target Earnings Beat",
-          "catalysts": [
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures Waver After Sandisk, Micron, Credo Lead AI Losses; Target Earnings Beat",
-          "catalysts": [
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Marvell gives Google option to buy $12.2 billion stake in custom AI chip deal",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Alphabet’s (GOOGL) Small Data Deal Hints At A Bigger AI Appetite",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "NVDA",
-      "score": 1.0,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Is NVIDIA’s (NVDA) AI Dominance About to Face Its Biggest Test Yet?",
+          "title": "An overlooked AI winner names a new CFO — plus, Nvidia's key earnings loom",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia’s (NVDA) $105B Ohio Bet: Ecosystem Expansion or Strategic Circularity?",
+          "title": "The Treasury, the Fed and the threat to your money",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia fiscal Q2 2027 earnings outlook: what to watch on August 26",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWV",
+      "symbol": "MDB",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "MongoDB gets bullish call as Atlas, AI and enterprise push gain traction",
+          "catalysts": [
+            "gain"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Trump admin taps former JPMorgan Chase exec Matt Zames to advise Social Security agency",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "U.S. bond intervention is like 'paying your mortgage with your credit card,' JPMorgan's Sullivan says ",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Former JPMorgan exec takes on Social Security advisory role",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "SEC charges former Bank of America investment banker with insider trading",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Bank of America sends message on Capital One stock",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Bank of America warns Kevin Warsh’s Fed strategy ‘works like a tax on the economy’ — how to protect your money",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Neocloud stocks like CoreWeave are having a moment — and time’s running out to cash in",
+          "title": "Ken Griffin says Citadel unwound more than 80% of risk tied to Situational Awareness portfolio",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -161,40 +137,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Broadcom seeks more than $60 billion in latest AI debt deal, Bloomberg News reports",
+          "title": "Broadcom debt deal expected to reach upwards of $70 billion, sources say",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BAC",
+      "symbol": "SBUX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bank of America sends message on Capital One stock",
+          "title": "Why some of America's biggest brands are losing ground in China",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRVL",
+      "symbol": "NKE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Marvell gives Google option to buy $12.2 billion stake in custom AI chip deal",
+          "title": "Why some of America's biggest brands are losing ground in China",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NBIS",
+      "symbol": "META",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nebius says its $5 billion convertible underscores data centre demand",
+          "title": "No more doom scrolling or Instagram Stories? A Meta trial loss could end the social media we know",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron CEO: AI has 'totally changed' the equation for the boom-and-bust memory industry",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -205,18 +192,62 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron Technology (MU) Is Earning More Than Apple or Microsoft, but Can It Last?",
+          "title": "The Treasury, the Fed and the threat to your money",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron Technology (MU) Is Earning More Than Apple or Microsoft, but Can It Last?",
+          "title": "Boeing white-collar union rejects contract offer",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "SanDisk’s Long-Term Financial Outlook Is Turning Heads on Wall Street",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ACHR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Archer Aviation (ACHR) Bets Big On Becoming More Than An Air Taxi Company",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "What Are Wall Street Analysts' Target Price for Roper Technologies Stock?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COST",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Should you buy a Medicare Advantage plan from Costco? What you'll want to know.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -224,6 +255,6 @@
     }
   ],
   "watch_only": {
-    "Stripe (private)": 1
+    "Anthropic (private)": 1
   }
 }
