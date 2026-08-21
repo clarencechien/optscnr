@@ -1,42 +1,5 @@
 {
-  "updated_at": "2026-08-20T21:53:20.960114",
-  "count": 3,
-  "blind_spots": [
-    {
-      "name": "Boise",
-      "ticker": "BCC",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "How Micron's $50 billion Boise buildout is reshaping its hometown",
-        "How Micron's $50 billion Boise buildout is reshaping its hometown"
-      ]
-    },
-    {
-      "name": "Hyperliquid",
-      "ticker": "PURR",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Call-buying bonanza around Trump's Hyperliquid comments includes some eyebrow-raising trades",
-        "Call-buying bonanza around Trump's Hyperliquid comments includes some eyebrow-raising trades"
-      ]
-    },
-    {
-      "name": "Alibaba",
-      "ticker": "BBAAY",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Alibaba shares fall 5% as AI spending drives 75% drop in net income",
-        "Alibaba shares fall 5% as AI spending drives 75% drop in net income"
-      ]
-    }
-  ]
+  "updated_at": "2026-08-21T21:48:25.392443",
+  "count": 0,
+  "blind_spots": []
 }
