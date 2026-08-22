@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T02:13:37.828498",
+  "updated_at": "2026-08-22T02:15:54.615582",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -9,57 +9,7 @@
     "MIN_VOL_RATIO": 1.2,
     "MIN_AVG_VOLUME": 500000
   },
-  "count": 4,
-  "tickers": [
-    "RBLX",
-    "SEDG",
-    "HUBS",
-    "UPST"
-  ],
-  "details": [
-    {
-      "symbol": "RBLX",
-      "price": 38.23,
-      "high_52w": 142.0,
-      "low_52w": 33.88,
-      "drawdown_pct": 73.1,
-      "rebound_pct": 12.8,
-      "vol_ratio": 1.36,
-      "market_cap_b": 27.3,
-      "score": 30.95
-    },
-    {
-      "symbol": "SEDG",
-      "price": 32.42,
-      "high_52w": 81.25,
-      "low_52w": 28.21,
-      "drawdown_pct": 60.1,
-      "rebound_pct": 14.9,
-      "vol_ratio": 1.43,
-      "market_cap_b": 2.0,
-      "score": 27.37
-    },
-    {
-      "symbol": "HUBS",
-      "price": 224.14,
-      "high_52w": 525.51,
-      "low_52w": 169.63,
-      "drawdown_pct": 57.3,
-      "rebound_pct": 32.1,
-      "vol_ratio": 1.43,
-      "market_cap_b": 11.5,
-      "score": 23.04
-    },
-    {
-      "symbol": "UPST",
-      "price": 30.43,
-      "high_52w": 76.95,
-      "low_52w": 23.96,
-      "drawdown_pct": 60.5,
-      "rebound_pct": 27.0,
-      "vol_ratio": 1.21,
-      "market_cap_b": 3.0,
-      "score": 22.86
-    }
-  ]
+  "count": 0,
+  "tickers": [],
+  "details": []
 }
