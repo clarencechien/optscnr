@@ -1,22 +1,22 @@
 {
-  "updated_at": "2026-08-21T22:41:47.155587",
+  "updated_at": "2026-08-23T22:38:10.865727",
   "version": "sage_v0.2",
-  "days_since_ipo": 70,
+  "days_since_ipo": 72,
   "price": 136.97000122070312,
   "phase": "P1",
   "level": "L1",
   "iv": {
-    "atm_iv": 0.5594119580078126,
-    "pctile": 6.8,
-    "n_samples": 59,
+    "atm_iv": 0.5867147448730469,
+    "pctile": 8.3,
+    "n_samples": 60,
     "rel_calm": "True",
     "abs_acceptable": false,
     "stable": true
   },
   "liquidity": {
     "has_leaps": true,
-    "total_int": 584219,
-    "total_vol": 29429,
+    "total_int": 584222,
+    "total_vol": 29430,
     "usable_strikes": 102,
     "best_spread_pct": 0.02,
     "liquid": true,
@@ -62,14 +62,14 @@
         "ask": 44.65
       }
     ],
-    "leaps_atm_iv": 0.6835,
+    "leaps_atm_iv": 0.6843,
     "leaps_iv_exp": "2028-12-15"
   },
   "skew": {
     "skew_type": "neutral",
-    "call_iv": 0.577,
-    "put_iv": 0.562,
-    "pc_vol_ratio": 0.814
+    "call_iv": 0.606,
+    "put_iv": 0.589,
+    "pc_vol_ratio": 0.823
   },
   "viewpoint": {
     "has_viewpoint": true,
