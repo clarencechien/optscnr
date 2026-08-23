@@ -1,154 +1,111 @@
 {
-  "updated_at": "2026-08-21T20:50:53.310421",
+  "updated_at": "2026-08-23T20:50:20.946635",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 24,
-    "items_with_catalyst": 14,
-    "items_both": 2
+    "total_items": 107,
+    "items_with_company": 19,
+    "items_with_catalyst": 8,
+    "items_both": 1
   },
-  "count": 17,
+  "count": 14,
   "tickers": [
-    "TSLA",
     "NVDA",
-    "MDB",
-    "JPM",
-    "BAC",
-    "XYZ",
-    "AVGO",
-    "SBUX",
-    "NKE",
+    "WMT",
+    "BRK-B",
     "META",
-    "MU",
-    "AAPL",
-    "BA",
-    "SNDK",
-    "ACHR",
+    "GILD",
+    "NKE",
+    "SBUX",
+    "XYZ",
+    "PFE",
     "TGT",
-    "COST"
+    "AMZN",
+    "ORCL",
+    "VST",
+    "AVGO"
   ],
   "details": [
     {
-      "symbol": "TSLA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Tesla recalls 3 million vehicles in China over doorhandle safety, driver monitoring",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Tesla’s stock jumps as the company gets cleared for a Las Vegas robotaxi launch",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
       "symbol": "NVDA",
-      "score": 2.5,
+      "score": 3.0,
       "evidence": [
         {
-          "title": "An overlooked AI winner names a new CFO — plus, Nvidia's key earnings loom",
+          "title": "Here are the 2 big things we're watching in the stock market this week",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "The Treasury, the Fed and the threat to your money",
+          "title": "Nvidia customers reportedly warned about AI-related price hikes ",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia fiscal Q2 2027 earnings outlook: what to watch on August 26",
+          "title": "Nvidia is the beating heart of the AI boom and the stock market — which sets up a big test",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MDB",
-      "score": 2,
+      "symbol": "WMT",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "MongoDB gets bullish call as Atlas, AI and enterprise push gain traction",
+          "title": "Walmart launching clothing brand Scenario in bid to appeal to younger shoppers",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Walmart Just Posted Its Biggest One-Day Drop Since 2022. History Says What Its Big Drops Have Been Worth.",
           "catalysts": [
-            "gain"
+            "drops"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "JPM",
-      "score": 1.5,
+      "symbol": "BRK-B",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Trump admin taps former JPMorgan Chase exec Matt Zames to advise Social Security agency",
+          "title": "Trump reshuffled his portfolio in June, selling names like Meta and buying Berkshire Hathaway",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "U.S. bond intervention is like 'paying your mortgage with your credit card,' JPMorgan's Sullivan says ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Former JPMorgan exec takes on Social Security advisory role",
+          "title": "Warren Buffett Watch: It's Buffett, not Abel, who appears to be calling the shots on stocks",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BAC",
-      "score": 1.5,
+      "symbol": "META",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "SEC charges former Bank of America investment banker with insider trading",
+          "title": "Trump reshuffled his portfolio in June, selling names like Meta and buying Berkshire Hathaway",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Bank of America sends message on Capital One stock",
+          "title": "Meta is the latest tech giant to land in her courtroom. Meet Judge Yvonne Gonzalez Rogers",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GILD",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Gilead’s Revenue Is Accelerating, But are its Acquisitions Worth the Cost?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Bank of America warns Kevin Warsh’s Fed strategy ‘works like a tax on the economy’ — how to protect your money",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ken Griffin says Citadel unwound more than 80% of risk tied to Situational Awareness portfolio",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Broadcom debt deal expected to reach upwards of $70 billion, sources say",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SBUX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why some of America's biggest brands are losing ground in China",
+          "title": "Pfizer vs. Gilead: Which Drugmaker Has the Stronger Growth Story?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -166,66 +123,33 @@
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "SBUX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "No more doom scrolling or Instagram Stories? A Meta trial loss could end the social media we know",
+          "title": "Why some of America's biggest brands are losing ground in China",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron CEO: AI has 'totally changed' the equation for the boom-and-bust memory industry",
+          "title": "Ken Griffin says Citadel unwound more than 80% of risk tied to Situational Awareness portfolio",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "PFE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "The Treasury, the Fed and the threat to your money",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Boeing white-collar union rejects contract offer",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "SanDisk’s Long-Term Financial Outlook Is Turning Heads on Wall Street",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ACHR",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Archer Aviation (ACHR) Bets Big On Becoming More Than An Air Taxi Company",
+          "title": "Pfizer vs. Gilead: Which Drugmaker Has the Stronger Growth Story?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -236,18 +160,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "What Are Wall Street Analysts' Target Price for Roper Technologies Stock?",
+          "title": "UBS revamps S&P 500 target for rest of 2026",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Should you buy a Medicare Advantage plan from Costco? What you'll want to know.",
+          "title": "Oracle vs. Amazon: Which Is the Better AI Cloud Stock to Own for the Next 5 Years?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Oracle vs. Amazon: Which Is the Better AI Cloud Stock to Own for the Next 5 Years?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "VST",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Vistra Is the Quietest Big Winner of the AI Power Boom. Here's Why.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Billionaires Stanley Druckenmiller and Dan Loeb Both Sold Broadcom and Piled Into This Virtual Monopoly Artificial Intelligence (AI) Stock I",
           "catalysts": [],
           "has_catalyst": false
         }
