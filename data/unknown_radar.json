@@ -1,65 +1,29 @@
 {
-  "updated_at": "2026-08-23T21:45:17.598119",
-  "count": 5,
+  "updated_at": "2026-08-24T21:53:07.100834",
+  "count": 2,
   "blind_spots": [
     {
       "name": "Alibaba",
       "ticker": "BBAAY",
-      "mentions_today": 3,
-      "total_mentions": 5,
-      "consecutive_days": 2,
+      "mentions_today": 2,
+      "total_mentions": 7,
+      "consecutive_days": 3,
       "is_strong": true,
       "evidence": [
-        "Burry exits Alibaba, builds large JD.com position over valuation concerns",
-        "Alibaba launches $10 billion Hong Kong share placement to fund AI spending"
+        "Alibaba plunges after announcing $10.2 billion share placement to fund AI push",
+        "Alibaba plunges after announcing $10.2 billion share placement to fund AI push"
       ]
     },
     {
-      "name": "Smart",
-      "ticker": "SND",
+      "name": "Canadian",
+      "ticker": "CNDIF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "38-year-old runs a mobile pizzeria out of his Smart car in New York City: It's 'like a circus or a m",
-        "38-year-old runs a mobile pizzeria out of his Smart car in New York City: It's 'like a circus or a m"
-      ]
-    },
-    {
-      "name": "Airbnb",
-      "ticker": "ABNB",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Airbnb's new fee change frustrates hosts—what to know before renting out your home",
-        "Airbnb's new fee change frustrates hosts—what to know before renting out your home"
-      ]
-    },
-    {
-      "name": "German",
-      "ticker": "GABC",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Commerzbank chair calls for review of German takeover rules",
-        "Commerzbank chair calls for review of German takeover rules after UniCredit bid"
-      ]
-    },
-    {
-      "name": "Billion",
-      "ticker": "BGHL",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "This Company Just Paid Out $6.8 Billion. Its AI Bill Was 4x That",
-        "$22 Billion in Customer Deposits Did Not Stop This Chip CEO From Selling $37 Million"
+        "Ford’s $3 billion Canadian bet is getting caught in trade-war crosshairs",
+        "Ford’s $3 billion Canadian bet is getting caught in trade-war crosshairs"
       ]
     }
   ]
