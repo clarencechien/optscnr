@@ -1,35 +1,38 @@
 {
-  "updated_at": "2026-08-23T20:50:20.946635",
+  "updated_at": "2026-08-24T20:59:52.296643",
   "stats": {
     "total_items": 107,
-    "items_with_company": 19,
-    "items_with_catalyst": 8,
-    "items_both": 1
+    "items_with_company": 20,
+    "items_with_catalyst": 12,
+    "items_both": 2
   },
-  "count": 14,
+  "count": 12,
   "tickers": [
     "NVDA",
-    "WMT",
-    "BRK-B",
+    "MU",
+    "MSFT",
     "META",
-    "GILD",
-    "NKE",
-    "SBUX",
-    "XYZ",
-    "PFE",
     "TGT",
-    "AMZN",
-    "ORCL",
-    "VST",
-    "AVGO"
+    "WMT",
+    "GS",
+    "BA",
+    "GOOGL",
+    "F",
+    "JPM",
+    "AMZN"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 3.0,
+      "score": 3.5,
       "evidence": [
         {
-          "title": "Here are the 2 big things we're watching in the stock market this week",
+          "title": "Nvidia says Groq racks will be online this year following $20 billion purchase",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "From Nvidia earnings to trade war tape bombs, a simple strategy could be this week's best bet",
           "catalysts": [],
           "has_catalyst": false
         },
@@ -37,54 +40,41 @@
           "title": "Nvidia customers reportedly warned about AI-related price hikes ",
           "catalysts": [],
           "has_catalyst": false
-        },
-        {
-          "title": "Nvidia is the beating heart of the AI boom and the stock market — which sets up a big test",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
-      "score": 2.5,
+      "symbol": "MU",
+      "score": 2,
       "evidence": [
         {
-          "title": "Walmart launching clothing brand Scenario in bid to appeal to younger shoppers",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Walmart Just Posted Its Biggest One-Day Drop Since 2022. History Says What Its Big Drops Have Been Worth.",
+          "title": "Micron Technology: Is MU Stock a No-Brainer Buy as AI Memory Demand Surges in 2026?",
           "catalysts": [
-            "drops"
+            "surges"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "BRK-B",
-      "score": 1.0,
+      "symbol": "MSFT",
+      "score": 2,
       "evidence": [
         {
-          "title": "Trump reshuffled his portfolio in June, selling names like Meta and buying Berkshire Hathaway",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Warren Buffett Watch: It's Buffett, not Abel, who appears to be calling the shots on stocks",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Microsoft Stock Dropped 30% From Its All-Time High: 2 Reasons It Could Double by 2030",
+          "catalysts": [
+            "all-time high"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "META",
-      "score": 1.0,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Trump reshuffled his portfolio in June, selling names like Meta and buying Berkshire Hathaway",
+          "title": "Jim Cramer says don't sell Meta on litigation risk — the stock is worth the wait",
           "catalysts": [],
           "has_catalyst": false
         },
@@ -92,64 +82,9 @@
           "title": "Meta is the latest tech giant to land in her courtroom. Meet Judge Yvonne Gonzalez Rogers",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GILD",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Gilead’s Revenue Is Accelerating, But are its Acquisitions Worth the Cost?",
-          "catalysts": [],
-          "has_catalyst": false
         },
         {
-          "title": "Pfizer vs. Gilead: Which Drugmaker Has the Stronger Growth Story?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why some of America's biggest brands are losing ground in China",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SBUX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why some of America's biggest brands are losing ground in China",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ken Griffin says Citadel unwound more than 80% of risk tied to Situational Awareness portfolio",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PFE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Pfizer vs. Gilead: Which Drugmaker Has the Stronger Growth Story?",
+          "title": "1 Reason Why Meta Might Be the Best Artificial Intelligence (AI) Stock to Buy and Hold for 5 Years and Beyond",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -157,10 +92,86 @@
     },
     {
       "symbol": "TGT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Target apologizes for children’s clown Halloween costume after backlash",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Walmart stock price target reset by JPMorgan after earnings",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Walmart stock price target reset by JPMorgan after earnings",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Walmart isn't losing any retail war",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "UBS revamps S&P 500 target for rest of 2026",
+          "title": "Goldman Sachs partner warns of 'huge danger' in letting AI replace bankers' reasoning skills",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "United's next decision: What to do with all those Boeing 737 Max 10 seats it ordered years ago",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Ex-Google recruiter: This common mistake makes your resume 'invisible'—you have 'six seconds to prove you can do the work'",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Ford’s $3 billion Canadian bet is getting caught in trade-war crosshairs",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Walmart stock price target reset by JPMorgan after earnings",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -171,47 +182,12 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Oracle vs. Amazon: Which Is the Better AI Cloud Stock to Own for the Next 5 Years?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Oracle vs. Amazon: Which Is the Better AI Cloud Stock to Own for the Next 5 Years?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "VST",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Vistra Is the Quietest Big Winner of the AI Power Boom. Here's Why.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Billionaires Stanley Druckenmiller and Dan Loeb Both Sold Broadcom and Piled Into This Virtual Monopoly Artificial Intelligence (AI) Stock I",
+          "title": "If Amazon Is a Top Growth Stock, Then Why Does It Trade at Just 21.3x Forward Earnings While the S&P 500 Trades at 20.4x? This Is the Only A",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "Anthropic (private)": 1
-  }
+  "watch_only": {}
 }
