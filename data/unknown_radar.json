@@ -1,30 +1,5 @@
 {
-  "updated_at": "2026-08-24T21:53:07.100834",
-  "count": 2,
-  "blind_spots": [
-    {
-      "name": "Alibaba",
-      "ticker": "BBAAY",
-      "mentions_today": 2,
-      "total_mentions": 7,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "Alibaba plunges after announcing $10.2 billion share placement to fund AI push",
-        "Alibaba plunges after announcing $10.2 billion share placement to fund AI push"
-      ]
-    },
-    {
-      "name": "Canadian",
-      "ticker": "CNDIF",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Ford’s $3 billion Canadian bet is getting caught in trade-war crosshairs",
-        "Ford’s $3 billion Canadian bet is getting caught in trade-war crosshairs"
-      ]
-    }
-  ]
+  "updated_at": "2026-08-25T21:52:49.558617",
+  "count": 0,
+  "blind_spots": []
 }

@@ -1,25 +1,4 @@
 {
-  "Connecticut": {
-    "first_seen": "2026-08-16",
-    "last_seen": "2026-08-17",
-    "consecutive_days": 2,
-    "total_mentions": 4,
-    "ticker": "CNLHN"
-  },
-  "Synchrony": {
-    "first_seen": "2026-08-17",
-    "last_seen": "2026-08-17",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SYF-PB"
-  },
-  "Vista Energy": {
-    "first_seen": "2026-08-17",
-    "last_seen": "2026-08-17",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "VSOGF"
-  },
   "Delta": {
     "first_seen": "2026-08-18",
     "last_seen": "2026-08-18",
