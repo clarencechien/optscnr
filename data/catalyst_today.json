@@ -1,177 +1,156 @@
 {
-  "updated_at": "2026-08-24T20:59:52.296643",
+  "updated_at": "2026-08-25T20:56:12.458673",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 20,
-    "items_with_catalyst": 12,
-    "items_both": 2
+    "total_items": 106,
+    "items_with_company": 18,
+    "items_with_catalyst": 17,
+    "items_both": 3
   },
-  "count": 12,
+  "count": 19,
   "tickers": [
+    "SMCI",
     "NVDA",
-    "MU",
-    "MSFT",
-    "META",
-    "TGT",
-    "WMT",
-    "GS",
-    "BA",
+    "CRM",
+    "CRWD",
+    "INTC",
+    "AMD",
+    "NFLX",
+    "AAPL",
+    "TSLA",
+    "AMZN",
+    "LRCX",
+    "GOOG",
     "GOOGL",
-    "F",
+    "TGT",
+    "ARM",
+    "IONQ",
+    "RGTI",
     "JPM",
-    "AMZN"
+    "SBUX"
   ],
   "details": [
+    {
+      "symbol": "SMCI",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Super Micro Computer climbs 9% on Cisco partnership",
+          "catalysts": [
+            "climbs",
+            "partnership"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
     {
       "symbol": "NVDA",
       "score": 3.5,
       "evidence": [
         {
-          "title": "Nvidia says Groq racks will be online this year following $20 billion purchase",
+          "title": "Nvidia’s dependence on hyperscalers faces big test in earnings report",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "From Nvidia earnings to trade war tape bombs, a simple strategy could be this week's best bet",
+          "title": "Options traders are betting on the quietest Nvidia earnings reaction in years. It could be an opportunity for AI bulls.",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia customers reportedly warned about AI-related price hikes ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Micron Technology: Is MU Stock a No-Brainer Buy as AI Memory Demand Surges in 2026?",
+          "title": "Why AMD can beat rivals Intel and Nvidia in the market for data-center CPUs",
           "catalysts": [
-            "surges"
+            "gain"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "CRM",
       "score": 2,
       "evidence": [
         {
-          "title": "Microsoft Stock Dropped 30% From Its All-Time High: 2 Reasons It Could Double by 2030",
+          "title": "2 of our software stocks face major tests of whether their rallies are for real",
           "catalysts": [
-            "all-time high"
+            "rallies"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "META",
-      "score": 1.5,
+      "symbol": "CRWD",
+      "score": 2,
       "evidence": [
         {
-          "title": "Jim Cramer says don't sell Meta on litigation risk — the stock is worth the wait",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta is the latest tech giant to land in her courtroom. Meet Judge Yvonne Gonzalez Rogers",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "1 Reason Why Meta Might Be the Best Artificial Intelligence (AI) Stock to Buy and Hold for 5 Years and Beyond",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "2 of our software stocks face major tests of whether their rallies are for real",
+          "catalysts": [
+            "rallies"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "INTC",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Why AMD can beat rivals Intel and Nvidia in the market for data-center CPUs",
+          "catalysts": [
+            "gain"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Why AMD can beat rivals Intel and Nvidia in the market for data-center CPUs",
+          "catalysts": [
+            "gain"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Target apologizes for children’s clown Halloween costume after backlash",
+          "title": "Streaming Scale and Global Base Power Netflix’s (NFLX) Next Phase of Monetization",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Walmart stock price target reset by JPMorgan after earnings",
+          "title": "Is Netflix (NFLX) Facing a Growth Slowdown After Its Strong First Quarter?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Walmart stock price target reset by JPMorgan after earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Walmart isn't losing any retail war",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Goldman Sachs partner warns of 'huge danger' in letting AI replace bankers' reasoning skills",
+          "title": "Apple announces new Mac Mini and Mac Studio models with AI upgrades",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "United's next decision: What to do with all those Boeing 737 Max 10 seats it ordered years ago",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ex-Google recruiter: This common mistake makes your resume 'invisible'—you have 'six seconds to prove you can do the work'",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ford’s $3 billion Canadian bet is getting caught in trade-war crosshairs",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Walmart stock price target reset by JPMorgan after earnings",
+          "title": "This driverless-truck company could be a ‘long-term winner’ in a market Tesla plans to enter soon",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -182,12 +161,113 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "If Amazon Is a Top Growth Stock, Then Why Does It Trade at Just 21.3x Forward Earnings While the S&P 500 Trades at 20.4x? This Is the Only A",
+          "title": "Amazon.com (AMZN) Trades at Significant Discount to Intrinsic Value",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LRCX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Are Wall Street Analysts Predicting Lam Research Stock Will Climb or Sink?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOG",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Alphabet’s (GOOG) Sustainable Growth Outlook Appears Stronger Than Expectations",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Alphabet’s (GOOG) Sustainable Growth Outlook Appears Stronger Than Expectations",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "What Are Wall Street Analysts' Target Price for Lockheed Martin Stock?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ARM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Arm Holdings (ARM) Shifts Strategy to Sell Own Data Center Chips",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IONQ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "IonQ vs. Rigetti: The Better Quantum Computing Stock for Long-Term Investors",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "IonQ vs. Rigetti: The Better Quantum Computing Stock for Long-Term Investors",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "JP Morgan Warns of Fall Sell-Off Potential: 5 Defensive Dividend Stocks to Buy",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SBUX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Starbucks to Lay Off Over 200 Workers at Seattle HQ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "OpenAI (private)": 1
+  }
 }
