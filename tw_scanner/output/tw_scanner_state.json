@@ -604,5 +604,17 @@
       "retail_mtx": 51.6,
       "margin_chg": 45.6
     }
+  },
+  {
+    "date": "2026-08-26",
+    "regime": "NEUTRAL",
+    "score": 0.726,
+    "alerts": [],
+    "pcts": {
+      "f_spot_20d": 98.8,
+      "tx_delta": 77.4,
+      "retail_mtx": 22.2,
+      "margin_chg": 91.3
+    }
   }
 ]
