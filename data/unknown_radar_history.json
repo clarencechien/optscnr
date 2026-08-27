@@ -1,11 +1,4 @@
 {
-  "Delta": {
-    "first_seen": "2026-08-18",
-    "last_seen": "2026-08-18",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "DAL"
-  },
   "Boise": {
     "first_seen": "2026-08-20",
     "last_seen": "2026-08-20",
@@ -61,5 +54,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "CNDIF"
+  },
+  "Las Vegas Sands": {
+    "first_seen": "2026-08-27",
+    "last_seen": "2026-08-27",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LVS"
   }
 }

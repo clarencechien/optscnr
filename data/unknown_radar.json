@@ -1,5 +1,18 @@
 {
-  "updated_at": "2026-08-25T21:52:49.558617",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-08-27T00:57:11.018918",
+  "count": 1,
+  "blind_spots": [
+    {
+      "name": "Las Vegas Sands",
+      "ticker": "LVS",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Las Vegas Sands shares are about to 'catch a heater,' says Mike Khouw",
+        "Las Vegas Sands shares are about to 'catch a heater,' says Mike Khouw"
+      ]
+    }
+  ]
 }
