@@ -5409,8 +5409,8 @@
       "t5_excess_pct": -1.07,
       "t10_ret_pct": 14.24,
       "t10_excess_pct": 6.57,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 8.23,
+      "t20_excess_pct": 0.77
     }
   },
   {
@@ -5626,8 +5626,8 @@
       "t5_excess_pct": -1.07,
       "t10_ret_pct": 14.24,
       "t10_excess_pct": 6.57,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 8.23,
+      "t20_excess_pct": 0.77
     }
   },
   {
@@ -5846,8 +5846,8 @@
       "t5_excess_pct": -1.07,
       "t10_ret_pct": 14.24,
       "t10_excess_pct": 6.57,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 8.23,
+      "t20_excess_pct": 0.77
     }
   },
   {
@@ -5927,8 +5927,8 @@
       "t5_excess_pct": -0.41,
       "t10_ret_pct": 19.73,
       "t10_excess_pct": 7.46,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 17.06,
+      "t20_excess_pct": 4.04
     }
   },
   {
@@ -6146,8 +6146,8 @@
       "t5_excess_pct": -0.68,
       "t10_ret_pct": 23.2,
       "t10_excess_pct": 9.08,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 15.69,
+      "t20_excess_pct": 2.27
     }
   },
   {
@@ -7239,8 +7239,8 @@
       "entry_close": 1805.0,
       "t5_ret_pct": 0.83,
       "t5_excess_pct": 0.54,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -5.26,
+      "t10_excess_pct": -5.07,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -7272,8 +7272,8 @@
       "entry_close": 1805.0,
       "t5_ret_pct": 0.83,
       "t5_excess_pct": 0.54,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -5.26,
+      "t10_excess_pct": -5.07,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -7353,8 +7353,8 @@
       "entry_close": 1790.0,
       "t5_ret_pct": -1.4,
       "t5_excess_pct": 0.6,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -2.23,
+      "t10_excess_pct": -2.9,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -7386,8 +7386,8 @@
       "entry_close": 1790.0,
       "t5_ret_pct": -1.4,
       "t5_excess_pct": 0.6,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -2.23,
+      "t10_excess_pct": -2.9,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -7467,8 +7467,8 @@
       "entry_close": 1885.0,
       "t5_ret_pct": -7.43,
       "t5_excess_pct": -4.71,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -6.1,
+      "t10_excess_pct": -5.49,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -7686,8 +7686,8 @@
       "entry_close": 1885.0,
       "t5_ret_pct": -7.43,
       "t5_excess_pct": -4.71,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -6.1,
+      "t10_excess_pct": -5.49,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -8309,8 +8309,8 @@
       "entry_date": "2026-08-18",
       "benchmark": "0050",
       "entry_close": 1820.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -6.04,
+      "t5_excess_pct": -5.56,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -8390,8 +8390,8 @@
       "entry_date": "2026-08-19",
       "benchmark": "0050",
       "entry_close": 1765.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -0.85,
+      "t5_excess_pct": -3.57,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -8609,8 +8609,8 @@
       "entry_date": "2026-08-20",
       "benchmark": "0050",
       "entry_close": 1745.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 1.43,
+      "t5_excess_pct": -0.74,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -8977,7 +8977,226 @@
     "outcomes": {
       "entry_date": "2026-08-25",
       "benchmark": "0050",
-      "entry_close": null,
+      "entry_close": 1710.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-08-27T14:23:16.521577+00:00",
+    "overall": "YELLOW",
+    "modules_requested": [
+      "m1",
+      "m2",
+      "m3",
+      "m4",
+      "m5",
+      "m6",
+      "m8"
+    ],
+    "modules": [
+      {
+        "module": "M1 revenue_acceleration",
+        "status": "GREEN",
+        "headline": "2026-07 YoY +47.7%, slope +1.28pp/月, 連續減速 1 個月",
+        "metrics": {
+          "latest_month": "2026-07",
+          "latest_yoy_pct": 47.7,
+          "yoy_slope_pp_per_month": 1.28,
+          "consecutive_decel_months": 1
+        },
+        "notes": [],
+        "error": null
+      },
+      {
+        "module": "M2 bullwhip_health",
+        "status": "GREEN",
+        "headline": "合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32",
+        "metrics": {
+          "as_of": "2026-06-30",
+          "contract_liab_qoq_pct": 17.3,
+          "inventory_qoq_pct": 17.0,
+          "fcf_to_net_income": 1.32,
+          "accounts_used": {
+            "contract": "CurrentContractLiabilities",
+            "inventory": "Inventories",
+            "ocf": "CashFlowsFromOperatingActivities",
+            "capex": "PropertyAndPlantAndEquipment",
+            "net_income": "IncomeAfterTaxes"
+          }
+        },
+        "notes": [],
+        "error": null
+      },
+      {
+        "module": "M3 thai_shadow",
+        "status": "YELLOW",
+        "headline": "DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8%",
+        "metrics": {
+          "latest_q": "2026-06-30",
+          "rev_yoy_pct": 52.5,
+          "gross_margin_pct": 26.8
+        },
+        "notes": [
+          "泰子公司毛利率 26.8% 跌破 27.0% 地板"
+        ],
+        "error": null
+      },
+      {
+        "module": "M4 customs_flow",
+        "status": "GREEN",
+        "headline": "US 進口 HS850440 (TH+TW) 近3月 $1426.7M, YoY +41.0%",
+        "metrics": {
+          "window": "2026-04..2026-06",
+          "rolling_value_usd_m": 1426.7,
+          "rolling_yoy_pct": 41.0,
+          "by_country": {
+            "THAILAND": {
+              "rolling_value_usd_m": 871.4,
+              "rolling_yoy_pct": 30.6
+            },
+            "TAIWAN": {
+              "rolling_value_usd_m": 555.3,
+              "rolling_yoy_pct": 61.1
+            }
+          }
+        },
+        "notes": [],
+        "error": null
+      },
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:5e / vr300_delay:16e(20m) / debt_financed_capex:13e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 5,
+            "vr300_delay": 16,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 5,
+            "vr300_delay": 20,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 5,
+              "mentions": 5,
+              "gate": "zscore",
+              "z": -1.01,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 16,
+              "mentions": 20,
+              "gate": "zscore",
+              "z": 1.07,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 13,
+              "mentions": 13,
+              "gate": "zscore",
+              "z": 0.57,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Will the next recession be caused by an AI capex cut-off? - investordaily.com.au",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] Nvidia’s Rubin Ultra delays raise 2028 risk for AI dominance - Ticker News",
+          "[debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance",
+          "[debt_financed_capex] After a nearly 1,000% surge, the AI debt orgy can’t last forever, while hidden borrowing has exploded to $1.65 trillion ",
+          "[debt_financed_capex] The growing jitters over hyperscaler debt - Axios"
+        ],
+        "error": null
+      },
+      {
+        "module": "M6 peer_divergence",
+        "status": "YELLOW",
+        "headline": "cooling:3324領先+42pp",
+        "metrics": {
+          "groups": {
+            "power": {
+              "direction": "peer_lead_risk",
+              "delta_3m_yoy": 48.9,
+              "best_peer": "2301",
+              "best_peer_3m_yoy": 34.7,
+              "peer_lead_pp": -14.2,
+              "status": "GREEN",
+              "peers_3m_yoy": {
+                "2301": 34.7,
+                "6282": 32.3
+              }
+            },
+            "cooling": {
+              "direction": "peer_lead_risk",
+              "delta_3m_yoy": 48.9,
+              "best_peer": "3324",
+              "best_peer_3m_yoy": 90.9,
+              "peer_lead_pp": 41.9,
+              "status": "YELLOW",
+              "peers_3m_yoy": {
+                "3324": 90.9,
+                "3017": 61.4
+              }
+            },
+            "rack": {
+              "direction": "cohort_confirm",
+              "delta_3m_yoy": 48.9,
+              "best_peer": "2382",
+              "best_peer_3m_yoy": 109.5,
+              "peer_lead_pp": 60.6,
+              "status": "GREEN",
+              "peers_3m_yoy": {
+                "2317": 48.6,
+                "2382": 109.5,
+                "6669": 29.1
+              }
+            }
+          }
+        },
+        "notes": [
+          "[cooling] 3324 3m YoY 90.9% vs 2308 48.9%（領先 +42pp）"
+        ],
+        "error": null
+      },
+      {
+        "module": "M8 revision_velocity",
+        "status": "GREEN",
+        "headline": "下修 0/上修 0（樣本不足 <3，暫不評級）",
+        "metrics": {
+          "up_hits": 0,
+          "down_hits": 0,
+          "total": 0,
+          "down_ratio": null
+        },
+        "notes": [],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-08-27",
+      "benchmark": "0050",
+      "entry_close": 1770.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
