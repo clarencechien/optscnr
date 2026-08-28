@@ -1,74 +1,75 @@
 {
-  "updated_at": "2026-08-26T23:58:21.088684",
+  "updated_at": "2026-08-28T04:25:44.365405",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 24,
-    "items_with_catalyst": 20,
+    "total_items": 107,
+    "items_with_company": 22,
+    "items_with_catalyst": 18,
     "items_both": 8
   },
-  "count": 15,
+  "count": 18,
   "tickers": [
-    "CRM",
     "CRWD",
+    "CRM",
     "NVDA",
-    "META",
     "OKTA",
-    "CRWV",
-    "AMZN",
-    "XYZ",
     "AAPL",
-    "MU",
-    "BA",
-    "RKLB",
-    "SMR",
-    "TGT",
-    "NBIS"
+    "PYPL",
+    "GILD",
+    "QCOM",
+    "GOOGL",
+    "MRVL",
+    "BAC",
+    "META",
+    "JPM",
+    "TSLA",
+    "AMD",
+    "INTC",
+    "IBM",
+    "F"
   ],
   "details": [
-    {
-      "symbol": "CRM",
-      "score": 7.5,
-      "evidence": [
-        {
-          "title": "Salesforce stock jumps 12% on AI growth and Anthropic investment gain",
-          "catalysts": [
-            "jumps",
-            "gain"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Salesforce, Anthropic expand partnership as Benioff responds to ‘SaaSpocalypse’ concerns",
-          "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Salesforce CEO Marc Benioff says the ‘SaaSpocalypse’ is nonsense. Here's why",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
     {
       "symbol": "CRWD",
       "score": 6,
       "evidence": [
         {
-          "title": "CrowdStrike jumps 11% on record second quarter as 'Mythos moment' drives AI cyber wave",
+          "title": "CrowdStrike posts best day ever, Okta's stock pops nearly 29% as rising AI threat lifts earnings",
           "catalysts": [
-            "surged",
-            "jumps"
+            "rising",
+            "pops"
           ],
           "has_catalyst": true
         },
         {
-          "title": "CrowdStrike’s stock soars after AI fuels the cybersecurity company’s ‘best quarter in history’",
+          "title": "CrowdStrike’s stock jumps after record-breaking earnings. Wall Street is lapping it up.",
           "catalysts": [
-            "soars"
+            "jumps"
           ],
           "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 5.0,
+      "evidence": [
+        {
+          "title": "Jim Cramer says Nvidia and Salesforce earnings upended two bear narratives",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Salesforce rockets 22% for second-best day ever, leading software rally",
+          "catalysts": [
+            "rally",
+            "partnership"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Salesforce’s stock rockets 20% and gives the software sector a major lift",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
@@ -77,54 +78,32 @@
       "score": 4.5,
       "evidence": [
         {
-          "title": "OpenAI’s Jalapeño AI chip brings new 'threat' to Nvidia margins as custom silicon gains ground",
+          "title": "Jim Cramer says Nvidia and Salesforce earnings upended two bear narratives",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia is bolstering support for Chinese open AI models as it warns of White House crackdown",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Is Nvidia heading for $1 trillion in annual revenue? One analyst now thinks that’s possible.",
           "catalysts": [
-            "gains"
+            "soars"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "Nvidia stock jumps after early dip following results; AI fever is unabated",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Louis Navellier has blunt message on Nvidia’s reign before earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Meta settles social media addiction case with California, other states for $16.7 billion",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron elevates two executives. Plus, what the Meta settlement means for its top line",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta dodges ‘Big Tobacco’ nightmare with $18 billion settlement in child-safety lawsuit",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "OKTA",
-      "score": 2,
+      "score": 4,
       "evidence": [
         {
-          "title": "Okta pops 20% after topping estimates as AI threat spikes demand for identity security",
+          "title": "CrowdStrike posts best day ever, Okta's stock pops nearly 29% as rising AI threat lifts earnings",
           "catalysts": [
+            "rising",
             "pops"
           ],
           "has_catalyst": true
@@ -132,112 +111,172 @@
       ]
     },
     {
-      "symbol": "CRWV",
-      "score": 2,
+      "symbol": "AAPL",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "CoreWeave Just Landed a Multibillion-Dollar AI Deal. How to Play CRWV Stock.",
+          "title": "What's expected at Apple's September event — plus, an uneven rally in AI stocks",
           "catalysts": [
-            "ai deal"
+            "rally"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "From Apple (AAPL) to Ford Motor Company (F): Why Global Giants Can’t Quit Chinese Technology",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PYPL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Advent, Stripe drop $50 bln pursuit of PayPal, Bloomberg reports",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "PayPal stock tumbles 12% after-hours, here’s why",
+          "catalysts": [
+            "tumbles"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "GILD",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "FDA approves daily HIV pill from Gilead designed to simplify treatment for some patients",
+          "catalysts": [
+            "fda approves"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Vietnam urges Qualcomm, Samsung to deepen AI, chip investment as it seeks tech upgrade",
+          "catalysts": [
+            "upgrade"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon service Bezos once called 'artificial artificial intelligence' is shutting down",
+          "title": "Marvell boosts its forecasts, but the stock slides as Wall Street wonders if there’s more to the story",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "MRVL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Federal judge lifts final block on Trump mail-in voting order, clearing way for midterm restrictions",
+          "title": "Marvell boosts its forecasts, but the stock slides as Wall Street wonders if there’s more to the story",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "BAC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple sets iPhone launch event for Sept. 9, first under new CEO John Ternus ",
+          "title": "Bank of America doubles down on Nvidia stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "META",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron elevates two executives. Plus, what the Meta settlement means for its top line",
+          "title": "Why Meta Platforms Stock Popped Today",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "JPM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Boeing posts contract jobs in labor dispute’s latest escalation",
+          "title": "JPMorgan Chase & Co. (JPM) Could Soon Be Worth $1 Trillion. One Analyst Says $2 Trillion Is Next",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RKLB",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Rocket Lab Stock: Launch This Bear Put Spread That Aims For A $295 Profit",
+          "title": "Ferrari (RACE) vs. Tesla (TSLA): Ferrari’s $40M EV Record Shows How Luxury Scarcity Beats Tesla’s Mass-Market Volume",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SMR",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "NuScale Power Short Seller Profits Send Stark Warning to Investors",
+          "title": "Advanced Micro Devices (AMD) and Intel (INTC) Both Just Raised Billions for AI. Here’s How Their Strategies Differ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "INTC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "What Are Wall Street Analysts' Target Price for F5 Stock?",
+          "title": "Advanced Micro Devices (AMD) and Intel (INTC) Both Just Raised Billions for AI. Here’s How Their Strategies Differ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NBIS",
+      "symbol": "IBM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nebius Is Raising Money Through a Debt Offering After a Major Run-Up. What This Means for NBIS Stock.",
+          "title": "Jim Cramer Says IBM Is A Hated Stock That Deserves Better",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "From Apple (AAPL) to Ford Motor Company (F): Why Global Giants Can’t Quit Chinese Technology",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -245,7 +284,9 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 4,
-    "OpenAI (private)": 2
+    "Anthropic (private)": 5,
+    "DeepSeek (private)": 2,
+    "OpenAI (private)": 1,
+    "Stripe (private)": 1
   }
 }
