@@ -1,17 +1,53 @@
 {
-  "updated_at": "2026-08-27T00:57:11.018918",
-  "count": 1,
+  "updated_at": "2026-08-28T05:31:58.180164",
+  "count": 4,
   "blind_spots": [
     {
-      "name": "Las Vegas Sands",
-      "ticker": "LVS",
+      "name": "Beijing",
+      "ticker": "BGTCF",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Trump ratchets up rhetoric against Beijing as U.S.-China officials meet for Xi's Washington visit",
+        "Trump ratchets up rhetoric against Beijing as U.S.-China officials meet for Xi's Washington visit"
+      ]
+    },
+    {
+      "name": "Greenland",
+      "ticker": "GLNDW",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Las Vegas Sands shares are about to 'catch a heater,' says Mike Khouw",
-        "Las Vegas Sands shares are about to 'catch a heater,' says Mike Khouw"
+        "Trump’s Greenland fixation puts security at the heart of Iceland’s knife-edge EU vote",
+        "Trump’s Greenland fixation puts security at the heart of Iceland’s knife-edge EU vote"
+      ]
+    },
+    {
+      "name": "Mixue",
+      "ticker": "MXUBY",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Mixue shares extend slide after profit drop as ice cream-and-tea chain sees costs rise",
+        "Mixue shares extend slide after profit drop as ice cream-and-tea chain sees costs rise"
+      ]
+    },
+    {
+      "name": "Advent",
+      "ticker": "AVK",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Advent, Stripe drop $50 bln pursuit of PayPal, Bloomberg reports",
+        "Stripe, Advent abandon pursuit to acquire PayPal: report"
       ]
     }
   ]

@@ -1,18 +1,4 @@
 {
-  "Boise": {
-    "first_seen": "2026-08-20",
-    "last_seen": "2026-08-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BCC"
-  },
-  "Hyperliquid": {
-    "first_seen": "2026-08-20",
-    "last_seen": "2026-08-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "PURR"
-  },
   "Alibaba": {
     "first_seen": "2026-08-20",
     "last_seen": "2026-08-24",
@@ -61,5 +47,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "LVS"
+  },
+  "Greenland": {
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GLNDW"
+  },
+  "Beijing": {
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "BGTCF"
+  },
+  "Mixue": {
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "MXUBY"
+  },
+  "Advent": {
+    "first_seen": "2026-08-28",
+    "last_seen": "2026-08-28",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "AVK"
   }
 }
