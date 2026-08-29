@@ -1,34 +1,75 @@
 {
-  "updated_at": "2026-08-28T06:07:34.479787",
+  "updated_at": "2026-08-29T03:43:08.194460",
   "version": "sage_v0.2",
-  "days_since_ipo": 77,
-  "price": 140.8699951171875,
-  "phase": "P0",
-  "level": "L1",
+  "days_since_ipo": 78,
+  "price": 141.5,
+  "phase": "P1",
+  "level": "L2",
   "iv": {
-    "atm_iv": 0.0032651757812500004,
-    "pctile": 4.7,
-    "n_samples": 64,
+    "atm_iv": 0.4964243066406251,
+    "pctile": 7.7,
+    "n_samples": 65,
     "rel_calm": "True",
     "abs_acceptable": true,
     "stable": true
   },
   "liquidity": {
     "has_leaps": true,
-    "total_int": 59,
-    "total_vol": 39157,
-    "usable_strikes": 0,
-    "best_spread_pct": 0.043,
-    "liquid": false,
-    "detail": [],
-    "leaps_atm_iv": 0.0013,
+    "total_int": 636418,
+    "total_vol": 36736,
+    "usable_strikes": 111,
+    "best_spread_pct": 0.018,
+    "liquid": true,
+    "detail": [
+      {
+        "exp": "2028-01-21",
+        "strike": 100.0,
+        "oi": 1368,
+        "spread_pct": 0.018,
+        "bid": 59.65,
+        "ask": 60.75
+      },
+      {
+        "exp": "2027-12-17",
+        "strike": 100.0,
+        "oi": 453,
+        "spread_pct": 0.019,
+        "bid": 58.65,
+        "ask": 59.75
+      },
+      {
+        "exp": "2028-12-15",
+        "strike": 100.0,
+        "oi": 4750,
+        "spread_pct": 0.022,
+        "bid": 68.85,
+        "ask": 70.4
+      },
+      {
+        "exp": "2027-06-17",
+        "strike": 120.0,
+        "oi": 1383,
+        "spread_pct": 0.024,
+        "bid": 39.6,
+        "ask": 40.55
+      },
+      {
+        "exp": "2028-12-15",
+        "strike": 110.0,
+        "oi": 857,
+        "spread_pct": 0.028,
+        "bid": 64.0,
+        "ask": 65.8
+      }
+    ],
+    "leaps_atm_iv": 0.6413,
     "leaps_iv_exp": "2028-12-15"
   },
   "skew": {
-    "skew_type": "put",
-    "call_iv": 0.063,
-    "put_iv": 0.125,
-    "pc_vol_ratio": 1.474
+    "skew_type": "neutral",
+    "call_iv": 0.491,
+    "put_iv": 0.504,
+    "pc_vol_ratio": 0.515
   },
   "viewpoint": {
     "has_viewpoint": true,
@@ -44,7 +85,7 @@
   "conditions": {
     "IV \u76f8\u5c0d\u51b7\u537b\u4e14\u7a69\u5b9a": true,
     "IV \u7d55\u5c0d\u53ef\u63a5\u53d7\uff08\u2264\u9632\u7dda\uff09": true,
-    "\u6d41\u52d5\u6027\u904e\u95dc": false,
+    "\u6d41\u52d5\u6027\u904e\u95dc": true,
     "\u89c0\u9ede\u4fe1\u5fc3\u9054\u6a19": true
   }
 }
