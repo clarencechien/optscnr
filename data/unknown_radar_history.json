@@ -29,9 +29,9 @@
   },
   "Billion": {
     "first_seen": "2026-08-23",
-    "last_seen": "2026-08-23",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-08-29",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "BGHL"
   },
   "Canadian": {
@@ -75,5 +75,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "AVK"
+  },
+  "Imax": {
+    "first_seen": "2026-08-29",
+    "last_seen": "2026-08-29",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "IMAX"
+  },
+  "BitGo": {
+    "first_seen": "2026-08-29",
+    "last_seen": "2026-08-29",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BTGO"
   }
 }
