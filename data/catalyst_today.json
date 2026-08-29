@@ -1,73 +1,49 @@
 {
-  "updated_at": "2026-08-28T04:25:44.365405",
+  "updated_at": "2026-08-29T02:53:13.339731",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 22,
-    "items_with_catalyst": 18,
-    "items_both": 8
+    "total_items": 106,
+    "items_with_company": 25,
+    "items_with_catalyst": 12,
+    "items_both": 5
   },
   "count": 18,
   "tickers": [
-    "CRWD",
-    "CRM",
+    "MRVL",
     "NVDA",
+    "WDAY",
+    "TGT",
+    "CRM",
+    "MSFT",
     "OKTA",
     "AAPL",
-    "PYPL",
-    "GILD",
-    "QCOM",
-    "GOOGL",
-    "MRVL",
-    "BAC",
+    "AFRM",
     "META",
-    "JPM",
-    "TSLA",
-    "AMD",
-    "INTC",
-    "IBM",
-    "F"
+    "XYZ",
+    "BAC",
+    "AVGO",
+    "MU",
+    "UPST",
+    "ASTS",
+    "GOOGL",
+    "AMAT"
   ],
   "details": [
     {
-      "symbol": "CRWD",
-      "score": 6,
+      "symbol": "MRVL",
+      "score": 5.5,
       "evidence": [
         {
-          "title": "CrowdStrike posts best day ever, Okta's stock pops nearly 29% as rising AI threat lifts earnings",
-          "catalysts": [
-            "rising",
-            "pops"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "CrowdStrike’s stock jumps after record-breaking earnings. Wall Street is lapping it up.",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 5.0,
-      "evidence": [
-        {
-          "title": "Jim Cramer says Nvidia and Salesforce earnings upended two bear narratives",
+          "title": "Marvell shares tumble 6% as outlook underwhelms despite 37% revenue growth",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Salesforce rockets 22% for second-best day ever, leading software rally",
-          "catalysts": [
-            "rally",
-            "partnership"
-          ],
-          "has_catalyst": true
+          "title": "Nvidia, Micron, Salesforce, Marvell, Veeva, Okta, Hormel, and More Stocks That Explain Today’s Market",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "Salesforce’s stock rockets 20% and gives the software sector a major lift",
+          "title": "Marvell (MRVL) Is Betting on Microsoft, AWS and Google to Power Its Next Growth Wave",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -75,120 +51,149 @@
     },
     {
       "symbol": "NVDA",
-      "score": 4.5,
+      "score": 5.5,
       "evidence": [
         {
-          "title": "Jim Cramer says Nvidia and Salesforce earnings upended two bear narratives",
+          "title": "Nvidia’s revenue forecast is so huge that Wall Street wonders if SpaceX is the reason",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia is bolstering support for Chinese open AI models as it warns of White House crackdown",
+          "title": "Bank of America doubles down on Nvidia stock",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Is Nvidia heading for $1 trillion in annual revenue? One analyst now thinks that’s possible.",
+          "title": "Stock Market Today: Nasdaq Up, Nvidia Teases New Entry As Salesforce Nears Buy Point (Live Coverage)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WDAY",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Workday Stock Falls As Earnings Beat, Guidance Underwhelms",
           "catalysts": [
-            "soars"
+            "falls",
+            "earnings beat"
           ],
           "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Target (TGT) Rallied in 2026. Can its Turnaround Start Producing Margin Growth?",
+          "catalysts": [
+            "rallied"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Deutsche (DB) Completed a €1B Buyback and Started Another €500M Program. Is Its 60% Payout Target Sustainable?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Marc Benioff is getting his mojo back as Salesforce's AI strength quiets skeptics",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Stock Market Today: Nasdaq Up, Nvidia Teases New Entry As Salesforce Nears Buy Point (Live Coverage)",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia, Micron, Salesforce, Marvell, Veeva, Okta, Hormel, and More Stocks That Explain Today’s Market",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Microsoft’s stock seals its longest winning streak of the year as AI software fears fade",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Marvell (MRVL) Is Betting on Microsoft, AWS and Google to Power Its Next Growth Wave",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "OKTA",
-      "score": 4,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "CrowdStrike posts best day ever, Okta's stock pops nearly 29% as rising AI threat lifts earnings",
-          "catalysts": [
-            "rising",
-            "pops"
-          ],
-          "has_catalyst": true
+          "title": "Okta’s AI boom just created a new security problem",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia, Micron, Salesforce, Marvell, Veeva, Okta, Hormel, and More Stocks That Explain Today’s Market",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "AAPL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "What's expected at Apple's September event — plus, an uneven rally in AI stocks",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "From Apple (AAPL) to Ford Motor Company (F): Why Global Giants Can’t Quit Chinese Technology",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PYPL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Advent, Stripe drop $50 bln pursuit of PayPal, Bloomberg reports",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "PayPal stock tumbles 12% after-hours, here’s why",
-          "catalysts": [
-            "tumbles"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GILD",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "FDA approves daily HIV pill from Gilead designed to simplify treatment for some patients",
-          "catalysts": [
-            "fda approves"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "QCOM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Vietnam urges Qualcomm, Samsung to deepen AI, chip investment as it seeks tech upgrade",
-          "catalysts": [
-            "upgrade"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Marvell boosts its forecasts, but the stock slides as Wall Street wonders if there’s more to the story",
+          "title": "Apple hikes subscription prices for Apple TV and Apple One in the U.S.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRVL",
+      "symbol": "AFRM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Marvell boosts its forecasts, but the stock slides as Wall Street wonders if there’s more to the story",
+          "title": "CEO of buy now, pay later giant Affirm says high gas prices are hitting U.S. shoppers",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Meta's $17 billion settlement mandates new safeguards for kids—many are promising, says safety expert",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Kalshi cannot block Nevada oversight of prediction markets, US appeals court rules",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -206,77 +211,66 @@
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "AVGO",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Meta Platforms Stock Popped Today",
+          "title": "Spicy Stocks: Why BNP Thinks Jalapeño Could Benefit Broadcom Stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "JPM",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "JPMorgan Chase & Co. (JPM) Could Soon Be Worth $1 Trillion. One Analyst Says $2 Trillion Is Next",
+          "title": "Nvidia, Micron, Salesforce, Marvell, Veeva, Okta, Hormel, and More Stocks That Explain Today’s Market",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "UPST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Ferrari (RACE) vs. Tesla (TSLA): Ferrari’s $40M EV Record Shows How Luxury Scarcity Beats Tesla’s Mass-Market Volume",
+          "title": "AST SpaceMobile vs. Firefly Aerospace: Which Outer Space Upstart Is a Better Buy in 2026?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "ASTS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Advanced Micro Devices (AMD) and Intel (INTC) Both Just Raised Billions for AI. Here’s How Their Strategies Differ",
+          "title": "AST SpaceMobile vs. Firefly Aerospace: Which Outer Space Upstart Is a Better Buy in 2026?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Advanced Micro Devices (AMD) and Intel (INTC) Both Just Raised Billions for AI. Here’s How Their Strategies Differ",
+          "title": "Marvell (MRVL) Is Betting on Microsoft, AWS and Google to Power Its Next Growth Wave",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IBM",
+      "symbol": "AMAT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Jim Cramer Says IBM Is A Hated Stock That Deserves Better",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "From Apple (AAPL) to Ford Motor Company (F): Why Global Giants Can’t Quit Chinese Technology",
+          "title": "The AI Buildout Is Turning Applied Materials (AMAT) Into A Profit Machine",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -284,9 +278,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 5,
-    "DeepSeek (private)": 2,
-    "OpenAI (private)": 1,
-    "Stripe (private)": 1
+    "OpenAI (private)": 1
   }
 }
