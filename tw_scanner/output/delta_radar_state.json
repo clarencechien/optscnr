@@ -9285,5 +9285,38 @@
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
+  },
+  {
+    "ts": "2026-08-30T08:28:07.647315+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "NO_DATA",
+        "headline": "",
+        "metrics": {},
+        "notes": [
+          "feed capex_cut failed: HTTP Error 503: Service Unavailable",
+          "feed vr300_delay failed: HTTP Error 503: Service Unavailable",
+          "feed debt_financed_capex failed: HTTP Error 503: Service Unavailable",
+          "feed lc_psu_competition failed: HTTP Error 503: Service Unavailable"
+        ],
+        "error": "all RSS feeds failed"
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-08-30",
+      "benchmark": "0050",
+      "entry_close": null,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
   }
 ]
