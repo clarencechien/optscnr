@@ -1,59 +1,68 @@
 {
-  "updated_at": "2026-08-22T23:28:33.233084",
+  "updated_at": "2026-08-30T01:14:06.548634",
   "criteria": {
     "MIN_MARKET_CAP": 15000000000.0,
     "MAX_PCT_FROM_52W_LOW": 1.8,
     "MIN_AVG_VOLUME": 5000000.0,
     "MIN_VOL_RATIO_20D": 1.2
   },
-  "count": 5,
+  "count": 6,
   "tickers": [
-    "APP",
-    "RDDT",
+    "TJX",
     "WMT",
+    "APP",
     "PCG",
+    "RDDT",
     "MNST"
   ],
   "details": [
     {
-      "symbol": "APP",
-      "price": 305.77,
-      "pct_from_52w_low": 1.03,
-      "vol_ratio_20d": 1.35,
-      "market_cap_b": 102.7,
-      "score": 16.49
-    },
-    {
-      "symbol": "RDDT",
-      "price": 153.29,
-      "pct_from_52w_low": 1.29,
-      "vol_ratio_20d": 1.68,
-      "market_cap_b": 29.5,
-      "score": 15.54
+      "symbol": "TJX",
+      "price": 135.12,
+      "pct_from_52w_low": 1.01,
+      "vol_ratio_20d": 1.24,
+      "market_cap_b": 149.3,
+      "score": 16.09
     },
     {
       "symbol": "WMT",
-      "price": 103.7,
-      "pct_from_52w_low": 1.09,
-      "vol_ratio_20d": 1.2,
-      "market_cap_b": 825.3,
-      "score": 15.14
+      "price": 103.09,
+      "pct_from_52w_low": 1.07,
+      "vol_ratio_20d": 1.24,
+      "market_cap_b": 820.4,
+      "score": 15.5
+    },
+    {
+      "symbol": "APP",
+      "price": 317.76,
+      "pct_from_52w_low": 1.07,
+      "vol_ratio_20d": 1.21,
+      "market_cap_b": 106.7,
+      "score": 15.37
     },
     {
       "symbol": "PCG",
-      "price": 17.6,
-      "pct_from_52w_low": 1.23,
-      "vol_ratio_20d": 1.24,
-      "market_cap_b": 38.8,
-      "score": 13.9
+      "price": 16.6,
+      "pct_from_52w_low": 1.16,
+      "vol_ratio_20d": 1.34,
+      "market_cap_b": 36.6,
+      "score": 15.11
+    },
+    {
+      "symbol": "RDDT",
+      "price": 153.0,
+      "pct_from_52w_low": 1.28,
+      "vol_ratio_20d": 1.36,
+      "market_cap_b": 29.4,
+      "score": 13.97
     },
     {
       "symbol": "MNST",
-      "price": 47.79,
-      "pct_from_52w_low": 1.57,
-      "vol_ratio_20d": 1.37,
-      "market_cap_b": 93.6,
-      "score": 11.16
+      "price": 46.86,
+      "pct_from_52w_low": 1.51,
+      "vol_ratio_20d": 1.45,
+      "market_cap_b": 91.8,
+      "score": 12.12
     }
   ]
 }
