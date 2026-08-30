@@ -1,102 +1,97 @@
 {
-  "updated_at": "2026-08-29T02:53:13.339731",
+  "updated_at": "2026-08-30T22:53:22.469927",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 25,
+    "total_items": 107,
+    "items_with_company": 16,
     "items_with_catalyst": 12,
-    "items_both": 5
+    "items_both": 1
   },
-  "count": 18,
+  "count": 15,
   "tickers": [
-    "MRVL",
-    "NVDA",
-    "WDAY",
-    "TGT",
+    "CRWD",
+    "PANW",
+    "GOOGL",
+    "META",
+    "AVGO",
     "CRM",
-    "MSFT",
-    "OKTA",
+    "BRK-B",
     "AAPL",
     "AFRM",
-    "META",
-    "XYZ",
-    "BAC",
-    "AVGO",
-    "MU",
-    "UPST",
-    "ASTS",
-    "GOOGL",
-    "AMAT"
+    "TGT",
+    "SNDK",
+    "RKLB",
+    "MRVL",
+    "PYPL",
+    "TSLA"
   ],
   "details": [
     {
-      "symbol": "MRVL",
-      "score": 5.5,
-      "evidence": [
-        {
-          "title": "Marvell shares tumble 6% as outlook underwhelms despite 37% revenue growth",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia, Micron, Salesforce, Marvell, Veeva, Okta, Hormel, and More Stocks That Explain Today’s Market",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Marvell (MRVL) Is Betting on Microsoft, AWS and Google to Power Its Next Growth Wave",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 5.5,
-      "evidence": [
-        {
-          "title": "Nvidia’s revenue forecast is so huge that Wall Street wonders if SpaceX is the reason",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Bank of America doubles down on Nvidia stock",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Stock Market Today: Nasdaq Up, Nvidia Teases New Entry As Salesforce Nears Buy Point (Live Coverage)",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WDAY",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Workday Stock Falls As Earnings Beat, Guidance Underwhelms",
-          "catalysts": [
-            "falls",
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
+      "symbol": "CRWD",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Target (TGT) Rallied in 2026. Can its Turnaround Start Producing Margin Growth?",
-          "catalysts": [
-            "rallied"
-          ],
-          "has_catalyst": true
+          "title": "CrowdStrike Just Lit a Fire Under Cybersecurity Stocks. Is Palo Alto Networks Next?",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "Deutsche (DB) Completed a €1B Buyback and Started Another €500M Program. Is Its 60% Payout Target Sustainable?",
+          "title": "Is It Too Late to Buy CrowdStrike Stock After Its 20% Surge?",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "PANW",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Here are the 3 big things we're watching in the stock market in the week ahead",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "CrowdStrike Just Lit a Fire Under Cybersecurity Stocks. Is Palo Alto Networks Next?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Google Maps will show ’Lake America’ in US, not ’Lake Ontario’",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Congressman Sold Alphabet Stock Three Months After Buying It, and He Might Have Lost Money",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "He beat Big Tobacco. Will the same playbook work against Meta and social media?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Here are the 3 big things we're watching in the stock market in the week ahead",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -104,52 +99,21 @@
     },
     {
       "symbol": "CRM",
-      "score": 1.5,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Marc Benioff is getting his mojo back as Salesforce's AI strength quiets skeptics",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Stock Market Today: Nasdaq Up, Nvidia Teases New Entry As Salesforce Nears Buy Point (Live Coverage)",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia, Micron, Salesforce, Marvell, Veeva, Okta, Hormel, and More Stocks That Explain Today’s Market",
+          "title": "Op-ed: Salesforce just revealed the next battleground in AI — and it's not the models",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
-      "score": 1.0,
+      "symbol": "BRK-B",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft’s stock seals its longest winning streak of the year as AI software fears fade",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Marvell (MRVL) Is Betting on Microsoft, AWS and Google to Power Its Next Growth Wave",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "OKTA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Okta’s AI boom just created a new security problem",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia, Micron, Salesforce, Marvell, Veeva, Okta, Hormel, and More Stocks That Explain Today’s Market",
+          "title": "Buffett remains active at 96, but Berkshire's shares aren't doing much",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -171,106 +135,73 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "CEO of buy now, pay later giant Affirm says high gas prices are hitting U.S. shoppers",
+          "title": "What Affirm’s (AFRM) Blowout Quarter and Cautious CEO Say About the Consumer",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta's $17 billion settlement mandates new safeguards for kids—many are promising, says safety expert",
+          "title": "Target Is Still an Attractive Value Stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Kalshi cannot block Nevada oversight of prediction markets, US appeals court rules",
+          "title": "Can SanDisk Avoid the Memory Trap That’s Burned Investors Before?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BAC",
+      "symbol": "RKLB",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bank of America doubles down on Nvidia stock",
+          "title": "A Rocket Lab President Sells Over 15,000 Shares After a 54% One-Year Return",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AVGO",
+      "symbol": "MRVL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Spicy Stocks: Why BNP Thinks Jalapeño Could Benefit Broadcom Stock",
+          "title": "Jim Cramer Says Marvell Is Expensive Unless Everything Works, and Then It Is Cheap",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "PYPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia, Micron, Salesforce, Marvell, Veeva, Okta, Hormel, and More Stocks That Explain Today’s Market",
+          "title": "PayPal just lost its $53 billion safety net",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "UPST",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AST SpaceMobile vs. Firefly Aerospace: Which Outer Space Upstart Is a Better Buy in 2026?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASTS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "AST SpaceMobile vs. Firefly Aerospace: Which Outer Space Upstart Is a Better Buy in 2026?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Marvell (MRVL) Is Betting on Microsoft, AWS and Google to Power Its Next Growth Wave",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMAT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "The AI Buildout Is Turning Applied Materials (AMAT) Into A Profit Machine",
+          "title": "The Biggest Risk Facing Tesla Stock Right Now",
           "catalysts": [],
           "has_catalyst": false
         }
