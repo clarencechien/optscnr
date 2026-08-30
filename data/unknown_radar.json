@@ -1,41 +1,17 @@
 {
-  "updated_at": "2026-08-29T03:13:56.592476",
-  "count": 3,
+  "updated_at": "2026-08-30T23:41:07.604808",
+  "count": 1,
   "blind_spots": [
-    {
-      "name": "Billion",
-      "ticker": "BGHL",
-      "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "Nvidia’s Big Day Adds $442 Billion in Market Cap",
-        "Alibaba Raises $10 Billion for AI — Why BofA Is Looking Past the Dilution"
-      ]
-    },
     {
       "name": "Imax",
       "ticker": "IMAX",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "mentions_today": 4,
+      "total_mentions": 6,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
         "Imax says it's open to a sale. Why is no one buying?",
         "Imax says it's open to a sale. Why is no one buying?"
-      ]
-    },
-    {
-      "name": "BitGo",
-      "ticker": "BTGO",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "BitGo to acquire NYDIG’s institutional trading business as crypto trading rebounds",
-        "BitGo to acquire NYDIG’s institutional trading business as crypto trading rebounds"
       ]
     }
   ]

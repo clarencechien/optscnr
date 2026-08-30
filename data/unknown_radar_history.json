@@ -78,9 +78,9 @@
   },
   "Imax": {
     "first_seen": "2026-08-29",
-    "last_seen": "2026-08-29",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-08-30",
+    "consecutive_days": 2,
+    "total_mentions": 6,
     "ticker": "IMAX"
   },
   "BitGo": {
