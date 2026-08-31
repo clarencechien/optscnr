@@ -640,5 +640,17 @@
       "retail_mtx": 31.3,
       "margin_chg": 88.5
     }
+  },
+  {
+    "date": "2026-08-31",
+    "regime": "NEUTRAL",
+    "score": 0.383,
+    "alerts": [],
+    "pcts": {
+      "f_spot_20d": 99.2,
+      "tx_delta": 63.1,
+      "retail_mtx": 46.0,
+      "margin_chg": 60.3
+    }
   }
 ]
