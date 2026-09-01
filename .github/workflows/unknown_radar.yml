@@ -4,7 +4,7 @@ on:
   schedule:
     # 跟 catalyst_fetch 同時間跑（UTC 週一到五 21:00 = 台灣早上 5:00）
     # 比 catalyst 晚 30 分鐘，避免同時搶 RSS
-    - cron: '30 21 * * 0-5'
+    - cron: '43 21 * * 0-5'
   workflow_dispatch:
 
 jobs:

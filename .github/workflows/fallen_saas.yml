@@ -4,7 +4,7 @@ on:
   schedule:
     # 台灣週日早上 9:00 = UTC 週六 01:00
     # 排在 small_cap_momentum (UTC 週六 00:00) 後面，避免衝突
-    - cron: '0 1 * * 6'
+    - cron: '19 1 * * 6'
   workflow_dispatch:
 
 jobs:

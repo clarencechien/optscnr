@@ -3,7 +3,7 @@ name: Weekly Universe Update
 on:
   schedule:
     # universe_update.yml — 台灣週日 07:00
-    - cron: '0 23 * * 6'      # UTC 23:00 週六
+    - cron: '9 23 * * 6'      # UTC 23:00 週六
   workflow_dispatch:  # 允許手動觸發
 
 jobs:

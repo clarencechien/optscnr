@@ -2,9 +2,9 @@ name: delta-radar
 
 on:
   schedule:
-    - cron: "30 2 * * *"     # daily   02:30 UTC = 10:30 Taipei - M5 narrative only
-    - cron: "30 3 * * 1,4"   # Mon/Thu 03:30 UTC = 11:30 Taipei - full scan (offset from daily)
-    - cron: "30 4 10-12 * *" # 10th-12th 04:30 UTC = 12:30 Taipei - M1 revenue-judgment window
+    - cron: "41 2 * * *"     # daily   02:30 UTC = 10:30 Taipei - M5 narrative only
+    - cron: "47 3 * * 1,4"   # Mon/Thu 03:30 UTC = 11:30 Taipei - full scan (offset from daily)
+    - cron: "53 4 10-12 * *" # 10th-12th 04:30 UTC = 12:30 Taipei - M1 revenue-judgment window
   workflow_dispatch:
     inputs:
       modules:
@@ -42,15 +42,15 @@ jobs:
             echo "modules=${{ github.event.inputs.modules }}" >> "$GITHUB_OUTPUT"
             echo "commit_mode=always" >> "$GITHUB_OUTPUT"
             echo "track=manual" >> "$GITHUB_OUTPUT"
-          elif [ "$SCHED" = "30 2 * * *" ]; then
+          elif [ "$SCHED" = "41 2 * * *" ]; then
             echo "modules=m5" >> "$GITHUB_OUTPUT"
             echo "commit_mode=on_change" >> "$GITHUB_OUTPUT"
             echo "track=narrative-daily" >> "$GITHUB_OUTPUT"
-          elif [ "$SCHED" = "30 3 * * 1,4" ]; then
+          elif [ "$SCHED" = "47 3 * * 1,4" ]; then
             echo "modules=m1,m2,m3,m4,m5,m6,m8" >> "$GITHUB_OUTPUT"
             echo "commit_mode=always" >> "$GITHUB_OUTPUT"
             echo "track=full-scan" >> "$GITHUB_OUTPUT"
-          elif [ "$SCHED" = "30 4 10-12 * *" ]; then
+          elif [ "$SCHED" = "53 4 10-12 * *" ]; then
             echo "modules=m1" >> "$GITHUB_OUTPUT"
             echo "commit_mode=on_change" >> "$GITHUB_OUTPUT"
             echo "track=revenue-day" >> "$GITHUB_OUTPUT"
