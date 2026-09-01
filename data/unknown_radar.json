@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-09-01T00:43:06.836292",
+  "updated_at": "2026-09-01T23:33:34.462733",
   "count": 2,
   "blind_spots": [
     {
-      "name": "Billion",
-      "ticker": "BGHL",
-      "mentions_today": 2,
-      "total_mentions": 6,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "Hock Tan Guided Broadcom Past $100 Billion of AI Revenue in 2027. The Stock Is 25% off Its High.",
-        "Marvell Wins Wall Street. Google Bets $12 Billion. Amazon Fears Fade."
-      ]
-    },
-    {
-      "name": "Manhattan",
-      "ticker": "MANH",
+      "name": "GoPro",
+      "ticker": "GPRO",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Manhattan's luxury rental market is booming, with units reaching $100,000 a month",
-        "Manhattan's luxury rental market is booming, with units reaching $100,000 a month"
+        "GoPro joins AI bonanza with pivot into data centers as shares skyrocket 40%",
+        "GoPro joins AI bonanza with pivot into data centers as shares skyrocket 40%"
+      ]
+    },
+    {
+      "name": "Dropbox",
+      "ticker": "DBX",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Why is Dropbox stock sliding today?",
+        "Dropbox stock falls after Bloomberg reports data breach"
       ]
     }
   ]

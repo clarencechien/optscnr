@@ -61,5 +61,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "MANH"
+  },
+  "GoPro": {
+    "first_seen": "2026-09-01",
+    "last_seen": "2026-09-01",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GPRO"
+  },
+  "Dropbox": {
+    "first_seen": "2026-09-01",
+    "last_seen": "2026-09-01",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DBX"
   }
 }
