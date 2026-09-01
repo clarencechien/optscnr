@@ -1,86 +1,106 @@
 {
-  "updated_at": "2026-08-30T22:53:22.469927",
+  "updated_at": "2026-09-01T00:01:12.174196",
   "stats": {
     "total_items": 107,
-    "items_with_company": 16,
-    "items_with_catalyst": 12,
-    "items_both": 1
+    "items_with_company": 19,
+    "items_with_catalyst": 9,
+    "items_both": 0
   },
-  "count": 15,
+  "count": 16,
   "tickers": [
-    "CRWD",
-    "PANW",
-    "GOOGL",
-    "META",
-    "AVGO",
-    "CRM",
-    "BRK-B",
-    "AAPL",
-    "AFRM",
+    "AMZN",
+    "NVDA",
     "TGT",
-    "SNDK",
-    "RKLB",
+    "DELL",
+    "MSFT",
+    "AVGO",
+    "MRNA",
+    "TSLA",
+    "BA",
+    "GS",
     "MRVL",
-    "PYPL",
-    "TSLA"
+    "GOOGL",
+    "AFRM",
+    "NFLX",
+    "AMD",
+    "INTC"
   ],
   "details": [
     {
-      "symbol": "CRWD",
-      "score": 2.5,
+      "symbol": "AMZN",
+      "score": 2.0,
       "evidence": [
         {
-          "title": "CrowdStrike Just Lit a Fire Under Cybersecurity Stocks. Is Palo Alto Networks Next?",
+          "title": "FTC sues Amazon, accusing the e-commerce giant of misleading advertisers",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Is It Too Late to Buy CrowdStrike Stock After Its 20% Surge?",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
+          "title": "Amazon’s stock slips as the FTC alleges billions of dollars in hidden ad fees",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Marvell Wins Wall Street. Google Bets $12 Billion. Amazon Fears Fade.",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PANW",
+      "symbol": "NVDA",
+      "score": 2.0,
+      "evidence": [
+        {
+          "title": "Anthropic signs $35 billion cloud deal with Nvidia-backed Lambda, WSJ reports",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Despite Impressive Results, Nvidia Stock May Be Stuck in a Range - What's the Best Play?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "A Major $12.9 Billion Catalyst Is Brewing for Nvidia Stock",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Here are the 3 big things we're watching in the stock market in the week ahead",
+          "title": "Trump says U.S. growth could hit 20%. It’s happened only once since WWII",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "CrowdStrike Just Lit a Fire Under Cybersecurity Stocks. Is Palo Alto Networks Next?",
+          "title": "Target Is Up 66% This Year. Here's Whether the Dividend King Still Has Room to Run After Earnings.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Google Maps will show ’Lake America’ in US, not ’Lake Ontario’",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Congressman Sold Alphabet Stock Three Months After Buying It, and He Might Have Lost Money",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
+      "symbol": "DELL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "He beat Big Tobacco. Will the same playbook work against Meta and social media?",
+          "title": "Trump Account holders may receive $250 Dell grant starting Monday, Dell Foundation says",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft Outlook and OpenAI's ChatGPT Work are experiencing user outages ",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -91,40 +111,73 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Here are the 3 big things we're watching in the stock market in the week ahead",
+          "title": "Broadcom reports earnings this week. Mike Khouw says this trade could be a winner",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
+      "symbol": "MRNA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Op-ed: Salesforce just revealed the next battleground in AI — and it's not the models",
+          "title": "23 best-performing stocks of August, as the software industry continues its recovery",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Buffett remains active at 96, but Berkshire's shares aren't doing much",
+          "title": "Tesla’s stock among S&P 500’s top gainers as investors prepare for a Cybercab launch",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple hikes subscription prices for Apple TV and Apple One in the U.S.",
+          "title": "Boeing, engineers union to resume contract negotiations on Sept 8, union says",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Goldman Sachs sends blunt message on oil price, economy",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRVL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Marvell Wins Wall Street. Google Bets $12 Billion. Amazon Fears Fade.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Marvell Wins Wall Street. Google Bets $12 Billion. Amazon Fears Fade.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -142,66 +195,33 @@
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "NFLX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Target Is Still an Attractive Value Stock",
+          "title": "Is Netflix Stock Underperforming the S&P 500?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SNDK",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Can SanDisk Avoid the Memory Trap That’s Burned Investors Before?",
+          "title": "Nvidia Just Delivered Bad News for AMD and Intel",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RKLB",
+      "symbol": "INTC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "A Rocket Lab President Sells Over 15,000 Shares After a 54% One-Year Return",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MRVL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Jim Cramer Says Marvell Is Expensive Unless Everything Works, and Then It Is Cheap",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PYPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "PayPal just lost its $53 billion safety net",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "The Biggest Risk Facing Tesla Stock Right Now",
+          "title": "Nvidia Just Delivered Bad News for AMD and Intel",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -209,6 +229,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1
+    "OpenAI (private)": 4,
+    "Anthropic (private)": 2
   }
 }
