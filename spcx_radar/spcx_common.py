@@ -14,7 +14,7 @@ space_radar.py（A/B 池 + 階段機）與 spcx_options.py（Option Sage，C 池
 import json
 import math
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_DIR = os.path.join(HERE, "config")
@@ -64,6 +64,39 @@ def days_since_ipo(ipo_date_str):
     """距上市第幾天（上市前回負數）"""
     ipo_dt = datetime.strptime(ipo_date_str, '%Y-%m-%d')
     return (datetime.now() - ipo_dt).days
+
+
+def market_freshness():
+    """美股資料是否新鮮（同主 scanner v3.13 市場基準日邏輯的簡化版）。
+
+    背景：space_radar/option sage 原 cron 含 UTC 週日（台灣週一早上），
+    該時段抓到的是週五收盤殘留 → 每週固定把重複價寫進 IV/結構歷史
+    （2026-09-01 盤點：iv_history 66 列有 13 列是週末殘留，分位樣本被灌 20% 重複值）。
+
+    規則（以 SPY 最後交易日為錨，ET 用 UTC-5 保守近似）：
+    - 最後交易日 == 今日(ET) → (True, 該日)：正常
+    - 最後交易日 < 今日(ET) 且 ET 未開盤(<09:30) → (True, 最後交易日)：
+      排程延遲跨日的補跑，資料仍是該交易日收盤，記錄日期用最後交易日
+    - 其他（週末白天/假日）→ (False, 最後交易日)：殘留重播，別記
+    - 抓不到 → fail-open (True, 今日 ET)，不誤殺每日儀表板
+    """
+    import yfinance as yf
+    from datetime import timezone
+    now_et = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(hours=5)
+    today_et = now_et.date()
+    try:
+        spy = yf.Ticker("SPY").history(period="5d")
+        if spy.empty:
+            return True, today_et
+        last_trade = spy.index[-1].date()
+    except Exception:
+        return True, today_et
+
+    if last_trade == today_et:
+        return True, last_trade
+    if last_trade < today_et and (now_et.hour, now_et.minute) < (9, 30):
+        return True, last_trade
+    return False, last_trade
 
 
 def get_price(tk):
