@@ -476,9 +476,9 @@ def evaluate_action_level(iv_sig, liq_sig, viewpoint_sig):
 # ============================================================
 # 歷史記錄（本模組自己寫，唯一寫入者）
 # ============================================================
-def record_options_history(price, iv_sig, liq_sig, skew_sig, phase):
+def record_options_history(price, iv_sig, liq_sig, skew_sig, phase, record_date=None):
     record = {
-        'date': datetime.now().strftime('%Y-%m-%d'),
+        'date': (record_date or datetime.now().strftime('%Y-%m-%d')),
         'price': round(price, 2) if price else None,
         'atm_iv': iv_sig['atm_iv'],
         'iv_pctile': iv_sig['pctile'],
@@ -603,6 +603,12 @@ def main():
 
     spcx_common.ensure_dirs()
 
+    # sage_v0.3：美股新鮮度防呆（同 space_radar v8.8——休市殘留不記歷史）
+    fresh, market_date = spcx_common.market_freshness()
+    if not fresh:
+        print(f"🛑 美股休市時段（最後交易日 {market_date}）——跳過，避免殘留寫進結構歷史")
+        return
+
     d = days_since_ipo()
     if d < 0:
         print(f"⏳ 距上市還有 {abs(d)} 天，選擇權市場未開，靜默")
@@ -646,7 +652,7 @@ def main():
     print(f"🎯 本回合：{level}")
 
     # 記錄歷史
-    record_options_history(price, iv_sig, liq_sig, skew_sig, phase_code)
+    record_options_history(price, iv_sig, liq_sig, skew_sig, phase_code, record_date=str(market_date))
 
     # 報告
     md = generate_report(price, iv_sig, liq_sig, skew_sig, phase_code, phase_label,
@@ -656,7 +662,7 @@ def main():
 
     output = {
         'updated_at': datetime.now().isoformat(),
-        'version': 'sage_v0.2',
+        'version': 'sage_v0.3',
         'days_since_ipo': d,
         'price': price,
         'phase': phase_code,

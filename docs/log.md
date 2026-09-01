@@ -46,11 +46,11 @@ GitHub Actions 排程驅動的選擇權異動掃描系統。主 scanner 讀多�
 - 抓 FIG 級「殞落軟體股重生」：從 52 週高跌 55%+、從低點反彈 3–35%（早期）、量能 +20%+、市值 $1B–$500B、有期權
 - ~55 檔候選池（設計/開發者工具/CRM/視訊/AI 應用/Fintech）
 
-### 4. tlt_radar.py (v2.1)
+### 4. tlt_radar.py (v2.5)
 - TLT 避險「溫度計」0–100 分（Put 巨鯨 + IV Skew + OI 週累積三訊號合成）
 - **v2 修 bug**：原本 `tk.options[:6]` 全抓到週選近月 → IV term structure 失真（ATM Call IV 出現 1.2% 等垃圾值）。改智慧 DTE 選擇 `[30,60,90,180,240,365,500]`
 - 加 IV 5%–200% 過濾 + OI≥50 要求（濾 stale quote）
-- 每週六 UTC 02:00 跑
+- 週更（v2.5 起併入主掃描 session，每 ISO 週第一次成功抓取）
 
 ### 5. unknown_radar.py (v1.3) — 「擦鞋童雷達」
 - 目標：抓「新聞反覆出現但不在我字典裡」的標的（認知盲點）
@@ -59,7 +59,7 @@ GitHub Actions 排程驅動的選擇權異動掃描系統。主 scanner 讀多�
 - 連續 2+ 天出現 = 強訊號，ticker 自動進主掃描
 - 雜訊清理是迭代式的：第一版抓到 Here/Iran/Singapore/Chinese 等誤判，逐步加進 COMMON_WORDS
 
-### 6. space_radar.py (v8.1) — SPCX (SpaceX IPO，預計 6/12)
+### 6. space_radar.py (v8.8) — SPCX（已上市，檔案在 spcx_radar/）
 最複雜的模組，多次迭代。核心設計：
 
 **資金編制（60/30/10，硬上限 $200k）**
@@ -118,19 +118,26 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 
 ---
 
-## GitHub Actions 排程（UTC，台灣 = UTC+8）
+## GitHub Actions 排程（UTC，台灣 = UTC+8；2026-09-01 更新）
 
-| 雷達 | cron | 台灣時間 |
-|---|---|---|
-| catalyst_fetch | `0 21 * * 0-5` | 平日 05:00 |
-| unknown_radar | `30 21 * * 0-5` | 平日 05:30 |
-| main scanner | `0 22 * * 0-5` | 平日 06:00 |
-| space_radar | `15 22 * * 0-5` | 平日 06:15 |
-| small_cap_momentum | `0 0 * * 6` | 週六 08:00 |
-| fallen_saas | `0 1 * * 6` | 週六 09:00 |
-| tlt_radar | `0 2 * * 6` | 週六 10:00 |
+| 雷達 | cron (UTC) | 台灣時間 | 備註 |
+|---|---|---|---|
+| catalyst_fetch | `37 20 * * 0-5` | 週一~六 04:37 | 餵 scanner |
+| unknown_radar | `43 21 * * 0-5` | 週一~六 05:43 | 餵 scanner |
+| main scanner | `17 22 * * 1-5` | **週二~六 06:17** | 掃前一晚美股收盤；台灣週一早上「不跑」是設計（美股無新資料） |
+| space_radar + sage | `26 22 * * 1-5` | 週二~六 06:26 | v8.8 起排除 UTC 週日（週末殘留曾污染 IV 歷史） |
+| tlt_radar | 無 cron | 跟主掃描 | v2.5 起併入主掃描 session，每 ISO 週第一次成功即跳過；yml 只留手動 |
+| delta_radar | `41 2 * * *` / `47 3 * * 1,4` / `53 4 10-12 * *` | 每日 10:41 / 一四 11:47 / 10-12 日 12:53 | schedule 路由字串與 cron 同步 |
+| tw_scanner | `52 13 * * 1-5` / `58 14 1 * *` | 週一~五 21:52 / 每月 1 日 22:58 | 融資 21:00 公布後 |
+| small_cap_momentum | `13 0 * * 6` | 週六 08:13 | |
+| fallen_saas | `19 1 * * 6` | 週六 09:19 | |
+| universe_update | `9 23 * * 6` | 週日 07:09 | |
 
-週末雷達刻意錯開，避免同時搶 RSS / API。
+- **分鐘全部避開 :00/:15/:30/:45**——GitHub 排程在熱門分鐘最容易延遲/丟棄
+  （2026-08-26~31 事故：全 repo 延遲 3-8 小時、8/31 直接沒發，見 3.13 專節）。
+- 排程延遲的自我防護：主 scanner 用「市場基準日」補跑（v3.13）、
+  spcx 用 market_freshness()（v8.8）——延遲跨日不再標錯天或誤殺。
+- 週末雷達刻意錯開，避免同時搶 RSS / API。
 
 ---
 
@@ -225,6 +232,15 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 4. **資料清理**：快照重標 8/27→8/26（7 筆，t5 已回填保留）、8/29→8/28（97 筆）、
    9/1→8/31（16 筆，移回 8 月檔、刪空的 9 月檔）；csv 改名同步；環境序列日期修正。
    定性：標籤錯誤修正，非竄改預測內容（append-only 紅線精神不變）
+
+### 補充修正（同日第二批）
+- **docs/log.md 排程表更新**：舊表還寫著 `0 22`/tlt 週六 cron 等已不存在的排程，
+  已換成現行 cron 全表＋台灣時間對照＋「台灣週一早上不跑是設計」註記
+- **space_radar v8.8 / sage v0.3 週末殘留**：原 cron 含 UTC 週日（台灣週一早上），
+  每週把週五收盤殘留再寫一列進歷史（iv_history 66 列中 13 列、options_history
+  50 列中 9 列是週末重複值，IV 分位樣本被灌 20%）。修：cron 改 1-5 ＋
+  spcx_common.market_freshness() 防呆（假日也擋、延遲跨日以最後交易日補跑）＋
+  記錄日期改用市場交易日；兩份歷史的週末列已清除（53/41 列）
 
 ### 逃生門
 docs/PROJECT_ESCAPE_DOOR.md：Cloudflare 遷移評估（R2/觀看層/Python 三問直答）。

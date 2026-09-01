@@ -2,7 +2,9 @@ name: Daily SPCX Space Radar
 on:
   schedule:
     # 每天 UTC 22:15（台灣早上 6:15），跟主 scanner 接近
-    - cron: '26 22 * * 0-5'
+    # v8.8：排除 UTC 週日（台灣週一早上）——美股沒新資料，跑了只會把週五殘留價
+    # 再寫進 IV 歷史（分位樣本曾被灌 20% 週末重複值）。假日由程式內新鮮度防呆擋。
+    - cron: '26 22 * * 1-5'
   workflow_dispatch:
 jobs:
   scan:

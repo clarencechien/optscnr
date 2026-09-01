@@ -26,6 +26,12 @@ SpaceX 6/12 上市，代號 SPCX。這個 radar 不替你決定買什麼，
 
 頻率：每天跑（IPO 後）
 
+【v8.8 改動】（2026-09-01：週末殘留污染 IV 歷史）
+- 原 cron 含 UTC 週日（台灣週一早上）→ 每週把週五收盤殘留再寫一列進 iv_history，
+  分位樣本被灌 20% 重複值。修：cron 改 1-5 + spcx_common.market_freshness() 防呆
+  （假日也擋；排程延遲跨日則以最後交易日補跑記錄）+ 記錄日期用市場交易日
+- 資料清理：iv_history 移除 13 列、options_history 移除 9 列週末殘留
+
 【v8.7 改動】（2026-07-31 整併進 spcx_radar/）
 - 檔案搬進 spcx_radar/：config/（手動維護）與 output/（產出）分離，路徑統一由 spcx_common 管
 - 與 spcx_options.py 重複的基礎函式（load_config / 現價 / ATM IV / 市值換算 / IV 分位）
@@ -407,10 +413,11 @@ def get_timeline_status():
     return f"上市第 {d} 天", notes
 
 
-def record_iv_history(atm_iv, current_price):
-    """記錄 IV 時間序列"""
+def record_iv_history(atm_iv, current_price, record_date=None):
+    """記錄 IV 時間序列（v8.8：日期用市場交易日，不用 runner 時鐘——
+    排程延遲跨日曾把 8/28 的價記成週六 8/29）"""
     record = {
-        'date': datetime.now().strftime('%Y-%m-%d'),
+        'date': (record_date or datetime.now().strftime('%Y-%m-%d')),
         'price': round(current_price, 2),
         'atm_iv': round(atm_iv, 4),
     }
@@ -785,8 +792,15 @@ def _render_pool_c(atm_iv, pc_ratio, iv_stable):
 
 
 def main():
-    print(f"🚀 啟動 SPCX 太空雷達 v8.7: {datetime.now().strftime('%Y-%m-%d')}")
+    print(f"🚀 啟動 SPCX 太空雷達 v8.8: {datetime.now().strftime('%Y-%m-%d')}")
     spcx_common.ensure_dirs()
+
+    # v8.8：美股新鮮度防呆——UTC 週日/假日抓到的是收盤殘留，
+    # 記進 IV 歷史會灌重複樣本、污染分位基準（cron 也已改 1-5 雙保險）
+    fresh, market_date = spcx_common.market_freshness()
+    if not fresh:
+        print(f"🛑 美股休市時段（最後交易日 {market_date}）——跳過，避免殘留價寫進 IV 歷史")
+        return
 
     # 偵測階段
     stage, price, atm_iv, pc_ratio = detect_stage()
@@ -819,7 +833,7 @@ def main():
             print(f"   PC ratio：{pc_ratio:.2f}")
             if iv_hot and pc_extreme:
                 print(f"   🚫 C 池凍結：IV 狂熱 + call 狂熱，IV crush 風險最高")
-        iv_df = record_iv_history(atm_iv, price)
+        iv_df = record_iv_history(atm_iv, price, record_date=str(market_date))
         iv_stable = check_iv_stable(iv_df)
         print(f"   IV 穩定冷卻：{'✅ 可評估 LEAPS' if iv_stable else '⏳ 尚未，持現金'}")
 
