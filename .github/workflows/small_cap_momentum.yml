@@ -4,7 +4,7 @@ on:
   schedule:
     # 台灣週日早上 8:00 = UTC 週六 00:00
     # 比 universe_update 早一點，這樣它們可以分散資料寫入
-    - cron: '0 0 * * 6'
+    - cron: '13 0 * * 6'
   workflow_dispatch:
 
 jobs:

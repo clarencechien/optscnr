@@ -4,7 +4,9 @@ on:
     # scanner.yml — 台灣週二到週六 06:00
     # UTC 週日不跑：美股週末休市，該次掃描只會是週五收盤的重播，
     # 寫進 signals 快照就是污染 shadow log（詳見 CONTEXT.md 污染事件記錄）
-    - cron: '17 22 * * 1-5'    # UTC 22:00 週一~週五
+    - cron: '17 22 * * 1-5'    # UTC ~22:17 週一~週五
+    # 分鐘刻意避開 :00/:15/:30/:45——GitHub 排程在熱門分鐘最容易被延遲/丟棄
+    # （2026-08-26~31 事故：全 repo 排程延遲 3-8 小時、8/31 直接沒發，詳見 docs/log.md）
   workflow_dispatch: # 允許手動按按鈕觸發
 permissions:
   contents: write

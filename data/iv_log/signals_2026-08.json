@@ -8903,8 +8903,8 @@
     "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
-    "signal_id": "2026-08-27_NVDA_2026-10-16_255.0",
-    "snapshot_date": "2026-08-27",
+    "signal_id": "2026-08-26_NVDA_2026-10-16_255.0",
+    "snapshot_date": "2026-08-26",
     "ticker": "NVDA",
     "expiry": "2026-10-16",
     "strike": 255.0,
@@ -8931,8 +8931,8 @@
     "verdict": "➖持平(峰0.9x/今0.9x)"
   },
   {
-    "signal_id": "2026-08-27_PCG_2026-09-18_19.0",
-    "snapshot_date": "2026-08-27",
+    "signal_id": "2026-08-26_PCG_2026-09-18_19.0",
+    "snapshot_date": "2026-08-26",
     "ticker": "PCG",
     "expiry": "2026-09-18",
     "strike": 19.0,
@@ -8959,8 +8959,8 @@
     "verdict": "💀歸零(0.05x)"
   },
   {
-    "signal_id": "2026-08-27_PCG_2026-09-18_20.0",
-    "snapshot_date": "2026-08-27",
+    "signal_id": "2026-08-26_PCG_2026-09-18_20.0",
+    "snapshot_date": "2026-08-26",
     "ticker": "PCG",
     "expiry": "2026-09-18",
     "strike": 20.0,
@@ -8987,8 +8987,8 @@
     "verdict": "💀歸零(0.02x)"
   },
   {
-    "signal_id": "2026-08-27_NVDA_2028-01-21_300.0",
-    "snapshot_date": "2026-08-27",
+    "signal_id": "2026-08-26_NVDA_2028-01-21_300.0",
+    "snapshot_date": "2026-08-26",
     "ticker": "NVDA",
     "expiry": "2028-01-21",
     "strike": 300.0,
@@ -9015,8 +9015,8 @@
     "verdict": "➖持平(峰1.2x/今1.2x)"
   },
   {
-    "signal_id": "2026-08-27_TSLA_2027-01-15_960.0",
-    "snapshot_date": "2026-08-27",
+    "signal_id": "2026-08-26_TSLA_2027-01-15_960.0",
+    "snapshot_date": "2026-08-26",
     "ticker": "TSLA",
     "expiry": "2027-01-15",
     "strike": 960.0,
@@ -9043,8 +9043,8 @@
     "verdict": "➖持平(峰1.1x/今1.1x)"
   },
   {
-    "signal_id": "2026-08-27_IBIT_2028-06-16_100.0",
-    "snapshot_date": "2026-08-27",
+    "signal_id": "2026-08-26_IBIT_2028-06-16_100.0",
+    "snapshot_date": "2026-08-26",
     "ticker": "IBIT",
     "expiry": "2028-06-16",
     "strike": 100.0,
@@ -9071,8 +9071,8 @@
     "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
-    "signal_id": "2026-08-27_NVDA_2028-01-21_400.0",
-    "snapshot_date": "2026-08-27",
+    "signal_id": "2026-08-26_NVDA_2028-01-21_400.0",
+    "snapshot_date": "2026-08-26",
     "ticker": "NVDA",
     "expiry": "2028-01-21",
     "strike": 400.0,
@@ -9099,8 +9099,8 @@
     "verdict": "➖持平(峰1.1x/今1.1x)"
   },
   {
-    "signal_id": "2026-08-29_NVDA_2026-09-04_230.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_NVDA_2026-09-04_230.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "NVDA",
     "expiry": "2026-09-04",
     "strike": 230.0,
@@ -9122,8 +9122,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_NVDA_2026-09-04_225.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_NVDA_2026-09-04_225.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "NVDA",
     "expiry": "2026-09-04",
     "strike": 225.0,
@@ -9145,8 +9145,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_NVDA_2026-09-04_237.5",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_NVDA_2026-09-04_237.5",
+    "snapshot_date": "2026-08-28",
     "ticker": "NVDA",
     "expiry": "2026-09-04",
     "strike": 237.5,
@@ -9168,8 +9168,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_SMCI_2026-09-04_41.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_SMCI_2026-09-04_41.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "SMCI",
     "expiry": "2026-09-04",
     "strike": 41.0,
@@ -9191,8 +9191,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_SMCI_2026-09-04_38.5",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_SMCI_2026-09-04_38.5",
+    "snapshot_date": "2026-08-28",
     "ticker": "SMCI",
     "expiry": "2026-09-04",
     "strike": 38.5,
@@ -9214,8 +9214,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_SOFI_2026-09-04_19.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_SOFI_2026-09-04_19.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "SOFI",
     "expiry": "2026-09-04",
     "strike": 19.0,
@@ -9237,8 +9237,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_IBIT_2026-09-04_45.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_IBIT_2026-09-04_45.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "IBIT",
     "expiry": "2026-09-04",
     "strike": 45.0,
@@ -9260,8 +9260,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PCG_2026-09-04_18.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PCG_2026-09-04_18.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "PCG",
     "expiry": "2026-09-04",
     "strike": 18.0,
@@ -9283,8 +9283,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_SMCI_2026-09-04_39.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_SMCI_2026-09-04_39.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "SMCI",
     "expiry": "2026-09-04",
     "strike": 39.0,
@@ -9306,8 +9306,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_NVDA_2026-09-04_250.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_NVDA_2026-09-04_250.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "NVDA",
     "expiry": "2026-09-04",
     "strike": 250.0,
@@ -9329,8 +9329,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_IBIT_2026-09-04_46.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_IBIT_2026-09-04_46.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "IBIT",
     "expiry": "2026-09-04",
     "strike": 46.0,
@@ -9352,8 +9352,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_SOFI_2026-09-04_19.5",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_SOFI_2026-09-04_19.5",
+    "snapshot_date": "2026-08-28",
     "ticker": "SOFI",
     "expiry": "2026-09-04",
     "strike": 19.5,
@@ -9375,8 +9375,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PCG_2026-12-18_18.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PCG_2026-12-18_18.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "PCG",
     "expiry": "2026-12-18",
     "strike": 18.0,
@@ -9398,8 +9398,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MRVL_2026-09-04_250.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MRVL_2026-09-04_250.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MRVL",
     "expiry": "2026-09-04",
     "strike": 250.0,
@@ -9421,8 +9421,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_HOOD_2026-09-04_114.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_HOOD_2026-09-04_114.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "HOOD",
     "expiry": "2026-09-04",
     "strike": 114.0,
@@ -9444,8 +9444,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MRVL_2026-09-04_260.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MRVL_2026-09-04_260.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MRVL",
     "expiry": "2026-09-04",
     "strike": 260.0,
@@ -9467,8 +9467,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PCG_2026-09-04_17.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PCG_2026-09-04_17.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "PCG",
     "expiry": "2026-09-04",
     "strike": 17.0,
@@ -9490,8 +9490,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_BAC_2026-09-04_62.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_BAC_2026-09-04_62.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "BAC",
     "expiry": "2026-09-04",
     "strike": 62.0,
@@ -9513,8 +9513,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PLTR_2026-09-04_200.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PLTR_2026-09-04_200.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "PLTR",
     "expiry": "2026-09-04",
     "strike": 200.0,
@@ -9536,8 +9536,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_ONDS_2026-09-04_8.5",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_ONDS_2026-09-04_8.5",
+    "snapshot_date": "2026-08-28",
     "ticker": "ONDS",
     "expiry": "2026-09-04",
     "strike": 8.5,
@@ -9559,8 +9559,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_SMCI_2026-09-04_40.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_SMCI_2026-09-04_40.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "SMCI",
     "expiry": "2026-09-04",
     "strike": 40.0,
@@ -9582,8 +9582,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MRVL_2026-09-04_270.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MRVL_2026-09-04_270.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MRVL",
     "expiry": "2026-09-04",
     "strike": 270.0,
@@ -9605,8 +9605,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_ONDS_2026-09-04_8.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_ONDS_2026-09-04_8.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "ONDS",
     "expiry": "2026-09-04",
     "strike": 8.0,
@@ -9628,8 +9628,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_WMT_2026-09-04_104.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_WMT_2026-09-04_104.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "WMT",
     "expiry": "2026-09-04",
     "strike": 104.0,
@@ -9651,8 +9651,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_SOFI_2026-09-18_19.5",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_SOFI_2026-09-18_19.5",
+    "snapshot_date": "2026-08-28",
     "ticker": "SOFI",
     "expiry": "2026-09-18",
     "strike": 19.5,
@@ -9674,8 +9674,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_DKNG_2026-09-04_26.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_DKNG_2026-09-04_26.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "DKNG",
     "expiry": "2026-09-04",
     "strike": 26.0,
@@ -9697,8 +9697,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_GOOGL_2026-09-04_360.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_GOOGL_2026-09-04_360.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "GOOGL",
     "expiry": "2026-09-04",
     "strike": 360.0,
@@ -9720,8 +9720,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_WMT_2026-09-04_106.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_WMT_2026-09-04_106.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "WMT",
     "expiry": "2026-09-04",
     "strike": 106.0,
@@ -9743,8 +9743,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_HOOD_2026-09-04_115.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_HOOD_2026-09-04_115.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "HOOD",
     "expiry": "2026-09-04",
     "strike": 115.0,
@@ -9766,8 +9766,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_HOOD_2026-09-04_113.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_HOOD_2026-09-04_113.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "HOOD",
     "expiry": "2026-09-04",
     "strike": 113.0,
@@ -9789,8 +9789,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_DKNG_2026-09-04_27.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_DKNG_2026-09-04_27.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "DKNG",
     "expiry": "2026-09-04",
     "strike": 27.0,
@@ -9812,8 +9812,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_CRWV_2026-09-04_95.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_CRWV_2026-09-04_95.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "CRWV",
     "expiry": "2026-09-04",
     "strike": 95.0,
@@ -9835,8 +9835,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_HIMS_2026-09-04_30.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_HIMS_2026-09-04_30.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "HIMS",
     "expiry": "2026-09-04",
     "strike": 30.0,
@@ -9858,8 +9858,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_HIMS_2026-09-04_32.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_HIMS_2026-09-04_32.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "HIMS",
     "expiry": "2026-09-04",
     "strike": 32.0,
@@ -9881,8 +9881,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_RKLB_2026-09-04_70.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_RKLB_2026-09-04_70.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "RKLB",
     "expiry": "2026-09-04",
     "strike": 70.0,
@@ -9904,8 +9904,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MRVL_2026-09-04_245.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MRVL_2026-09-04_245.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MRVL",
     "expiry": "2026-09-04",
     "strike": 245.0,
@@ -9927,8 +9927,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_DKNG_2026-10-16_30.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_DKNG_2026-10-16_30.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "DKNG",
     "expiry": "2026-10-16",
     "strike": 30.0,
@@ -9950,8 +9950,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_GOOGL_2026-09-04_370.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_GOOGL_2026-09-04_370.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "GOOGL",
     "expiry": "2026-09-04",
     "strike": 370.0,
@@ -9973,8 +9973,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PCG_2026-09-18_18.5",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PCG_2026-09-18_18.5",
+    "snapshot_date": "2026-08-28",
     "ticker": "PCG",
     "expiry": "2026-09-18",
     "strike": 18.5,
@@ -9996,8 +9996,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_ASTS_2026-09-04_65.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_ASTS_2026-09-04_65.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "ASTS",
     "expiry": "2026-09-04",
     "strike": 65.0,
@@ -10019,8 +10019,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MU_2026-09-04_1200.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MU_2026-09-04_1200.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MU",
     "expiry": "2026-09-04",
     "strike": 1200.0,
@@ -10042,8 +10042,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_JOBY_2026-09-04_7.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_JOBY_2026-09-04_7.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "JOBY",
     "expiry": "2026-09-04",
     "strike": 7.0,
@@ -10065,8 +10065,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_WMT_2026-09-04_109.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_WMT_2026-09-04_109.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "WMT",
     "expiry": "2026-09-04",
     "strike": 109.0,
@@ -10088,8 +10088,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_CRM_2026-09-04_275.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_CRM_2026-09-04_275.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "CRM",
     "expiry": "2026-09-04",
     "strike": 275.0,
@@ -10111,8 +10111,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_RDDT_2026-09-04_170.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_RDDT_2026-09-04_170.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "RDDT",
     "expiry": "2026-09-04",
     "strike": 170.0,
@@ -10134,8 +10134,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_NVDA_2026-09-04_240.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_NVDA_2026-09-04_240.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "NVDA",
     "expiry": "2026-09-04",
     "strike": 240.0,
@@ -10157,8 +10157,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_NVDA_2026-09-04_235.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_NVDA_2026-09-04_235.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "NVDA",
     "expiry": "2026-09-04",
     "strike": 235.0,
@@ -10180,8 +10180,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MSTR_2026-09-04_142.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MSTR_2026-09-04_142.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MSTR",
     "expiry": "2026-09-04",
     "strike": 142.0,
@@ -10203,8 +10203,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_TSLA_2026-09-04_360.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_TSLA_2026-09-04_360.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "TSLA",
     "expiry": "2026-09-04",
     "strike": 360.0,
@@ -10226,8 +10226,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PCG_2026-09-18_20.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PCG_2026-09-18_20.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "PCG",
     "expiry": "2026-09-18",
     "strike": 20.0,
@@ -10249,8 +10249,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PLTR_2026-09-04_190.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PLTR_2026-09-04_190.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "PLTR",
     "expiry": "2026-09-04",
     "strike": 190.0,
@@ -10272,8 +10272,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MSTR_2026-09-04_135.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MSTR_2026-09-04_135.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MSTR",
     "expiry": "2026-09-04",
     "strike": 135.0,
@@ -10295,8 +10295,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_AAPL_2026-09-04_330.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_AAPL_2026-09-04_330.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "AAPL",
     "expiry": "2026-09-04",
     "strike": 330.0,
@@ -10318,8 +10318,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_TSLA_2026-09-04_370.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_TSLA_2026-09-04_370.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "TSLA",
     "expiry": "2026-09-04",
     "strike": 370.0,
@@ -10341,8 +10341,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PCG_2026-09-18_19.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PCG_2026-09-18_19.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "PCG",
     "expiry": "2026-09-18",
     "strike": 19.0,
@@ -10364,8 +10364,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MSTR_2026-09-04_141.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MSTR_2026-09-04_141.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MSTR",
     "expiry": "2026-09-04",
     "strike": 141.0,
@@ -10387,8 +10387,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_GOOGL_2026-09-04_350.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_GOOGL_2026-09-04_350.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "GOOGL",
     "expiry": "2026-09-04",
     "strike": 350.0,
@@ -10410,8 +10410,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PLTR_2026-09-04_187.5",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PLTR_2026-09-04_187.5",
+    "snapshot_date": "2026-08-28",
     "ticker": "PLTR",
     "expiry": "2026-09-04",
     "strike": 187.5,
@@ -10433,8 +10433,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PLTR_2026-09-04_192.5",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PLTR_2026-09-04_192.5",
+    "snapshot_date": "2026-08-28",
     "ticker": "PLTR",
     "expiry": "2026-09-04",
     "strike": 192.5,
@@ -10456,8 +10456,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_HOOD_2026-09-04_110.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_HOOD_2026-09-04_110.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "HOOD",
     "expiry": "2026-09-04",
     "strike": 110.0,
@@ -10479,8 +10479,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MU_2026-09-04_1000.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MU_2026-09-04_1000.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MU",
     "expiry": "2026-09-04",
     "strike": 1000.0,
@@ -10502,8 +10502,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PCG_2026-10-16_20.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PCG_2026-10-16_20.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "PCG",
     "expiry": "2026-10-16",
     "strike": 20.0,
@@ -10525,8 +10525,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_WMT_2026-09-04_103.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_WMT_2026-09-04_103.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "WMT",
     "expiry": "2026-09-04",
     "strike": 103.0,
@@ -10548,8 +10548,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_IREN_2026-11-20_55.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_IREN_2026-11-20_55.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "IREN",
     "expiry": "2026-11-20",
     "strike": 55.0,
@@ -10571,8 +10571,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_IREN_2027-01-15_110.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_IREN_2027-01-15_110.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "IREN",
     "expiry": "2027-01-15",
     "strike": 110.0,
@@ -10594,8 +10594,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_GOOGL_2026-09-04_355.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_GOOGL_2026-09-04_355.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "GOOGL",
     "expiry": "2026-09-04",
     "strike": 355.0,
@@ -10617,8 +10617,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_IREN_2026-11-20_40.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_IREN_2026-11-20_40.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "IREN",
     "expiry": "2026-11-20",
     "strike": 40.0,
@@ -10640,8 +10640,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MRVL_2026-09-04_240.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MRVL_2026-09-04_240.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MRVL",
     "expiry": "2026-09-04",
     "strike": 240.0,
@@ -10663,8 +10663,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MRVL_2026-10-16_300.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MRVL_2026-10-16_300.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MRVL",
     "expiry": "2026-10-16",
     "strike": 300.0,
@@ -10686,8 +10686,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MRVL_2026-11-20_420.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MRVL_2026-11-20_420.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MRVL",
     "expiry": "2026-11-20",
     "strike": 420.0,
@@ -10709,8 +10709,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_SOFI_2026-09-18_22.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_SOFI_2026-09-18_22.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "SOFI",
     "expiry": "2026-09-18",
     "strike": 22.0,
@@ -10732,8 +10732,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_NBIS_2026-09-04_230.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_NBIS_2026-09-04_230.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "NBIS",
     "expiry": "2026-09-04",
     "strike": 230.0,
@@ -10755,8 +10755,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MRVL_2026-09-04_220.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MRVL_2026-09-04_220.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MRVL",
     "expiry": "2026-09-04",
     "strike": 220.0,
@@ -10778,8 +10778,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_NBIS_2026-09-04_220.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_NBIS_2026-09-04_220.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "NBIS",
     "expiry": "2026-09-04",
     "strike": 220.0,
@@ -10801,8 +10801,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_INTC_2026-09-18_110.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_INTC_2026-09-18_110.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "INTC",
     "expiry": "2026-09-18",
     "strike": 110.0,
@@ -10824,8 +10824,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_META_2026-09-04_590.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_META_2026-09-04_590.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "META",
     "expiry": "2026-09-04",
     "strike": 590.0,
@@ -10847,8 +10847,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_GOOGL_2026-09-04_347.5",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_GOOGL_2026-09-04_347.5",
+    "snapshot_date": "2026-08-28",
     "ticker": "GOOGL",
     "expiry": "2026-09-04",
     "strike": 347.5,
@@ -10870,8 +10870,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_NBIS_2026-09-04_240.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_NBIS_2026-09-04_240.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "NBIS",
     "expiry": "2026-09-04",
     "strike": 240.0,
@@ -10893,8 +10893,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_CRWV_2026-09-04_90.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_CRWV_2026-09-04_90.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "CRWV",
     "expiry": "2026-09-04",
     "strike": 90.0,
@@ -10916,8 +10916,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_OPEN_2028-01-21_10.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_OPEN_2028-01-21_10.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "OPEN",
     "expiry": "2028-01-21",
     "strike": 10.0,
@@ -10939,8 +10939,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_SMCI_2026-09-04_37.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_SMCI_2026-09-04_37.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "SMCI",
     "expiry": "2026-09-04",
     "strike": 37.0,
@@ -10962,8 +10962,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_WMT_2026-09-04_102.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_WMT_2026-09-04_102.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "WMT",
     "expiry": "2026-09-04",
     "strike": 102.0,
@@ -10985,8 +10985,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_CRWV_2026-09-04_85.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_CRWV_2026-09-04_85.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "CRWV",
     "expiry": "2026-09-04",
     "strike": 85.0,
@@ -11008,8 +11008,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MU_2026-09-04_1050.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MU_2026-09-04_1050.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MU",
     "expiry": "2026-09-04",
     "strike": 1050.0,
@@ -11031,8 +11031,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_HOOD_2026-09-04_111.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_HOOD_2026-09-04_111.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "HOOD",
     "expiry": "2026-09-04",
     "strike": 111.0,
@@ -11054,8 +11054,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_IREN_2026-09-18_35.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_IREN_2026-09-18_35.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "IREN",
     "expiry": "2026-09-18",
     "strike": 35.0,
@@ -11077,8 +11077,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_APP_2026-09-04_350.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_APP_2026-09-04_350.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "APP",
     "expiry": "2026-09-04",
     "strike": 350.0,
@@ -11100,8 +11100,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_SMCI_2026-09-04_38.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_SMCI_2026-09-04_38.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "SMCI",
     "expiry": "2026-09-04",
     "strike": 38.0,
@@ -11123,8 +11123,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_ONDS_2028-01-21_30.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_ONDS_2028-01-21_30.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "ONDS",
     "expiry": "2028-01-21",
     "strike": 30.0,
@@ -11146,8 +11146,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_META_2026-09-04_610.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_META_2026-09-04_610.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "META",
     "expiry": "2026-09-04",
     "strike": 610.0,
@@ -11169,8 +11169,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_HOOD_2026-09-04_106.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_HOOD_2026-09-04_106.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "HOOD",
     "expiry": "2026-09-04",
     "strike": 106.0,
@@ -11192,8 +11192,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_MRVL_2026-10-16_330.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_MRVL_2026-10-16_330.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "MRVL",
     "expiry": "2026-10-16",
     "strike": 330.0,
@@ -11215,8 +11215,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_OPEN_2028-01-21_7.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_OPEN_2028-01-21_7.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "OPEN",
     "expiry": "2028-01-21",
     "strike": 7.0,
@@ -11238,8 +11238,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_IREN_2028-01-21_110.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_IREN_2028-01-21_110.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "IREN",
     "expiry": "2028-01-21",
     "strike": 110.0,
@@ -11261,8 +11261,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PCG_2026-09-18_21.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PCG_2026-09-18_21.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "PCG",
     "expiry": "2026-09-18",
     "strike": 21.0,
@@ -11284,8 +11284,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_PCG_2027-01-15_25.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_PCG_2027-01-15_25.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "PCG",
     "expiry": "2027-01-15",
     "strike": 25.0,
@@ -11307,8 +11307,8 @@
     "verdict": null
   },
   {
-    "signal_id": "2026-08-29_ONDS_2027-01-15_30.0",
-    "snapshot_date": "2026-08-29",
+    "signal_id": "2026-08-28_ONDS_2027-01-15_30.0",
+    "snapshot_date": "2026-08-28",
     "ticker": "ONDS",
     "expiry": "2027-01-15",
     "strike": 30.0,
@@ -11320,6 +11320,374 @@
     "oi": 81585,
     "oi_d7": -71,
     "volume": 197,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_PCG_2026-12-18_17.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "PCG",
+    "expiry": "2026-12-18",
+    "strike": 17.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅覆蓋財報(10-22)",
+    "entry_price": 0.25,
+    "entry_iv": 46.3872548828125,
+    "entry_spot": 13.270000457763672,
+    "oi": 24041,
+    "oi_d7": 24041,
+    "volume": 38656,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_PCG_2026-09-18_16.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "PCG",
+    "expiry": "2026-09-18",
+    "strike": 16.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次10-22)",
+    "entry_price": 0.14,
+    "entry_iv": 67.38313867187502,
+    "entry_spot": 13.270000457763672,
+    "oi": 2953,
+    "oi_d7": 2953,
+    "volume": 28370,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_PCG_2027-01-15_15.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "PCG",
+    "expiry": "2027-01-15",
+    "strike": 15.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅覆蓋財報(10-22)",
+    "entry_price": 0.7,
+    "entry_iv": 44.87359814453124,
+    "entry_spot": 13.270000457763672,
+    "oi": 7256,
+    "oi_d7": 7256,
+    "volume": 17101,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_PCG_2026-12-18_15.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "PCG",
+    "expiry": "2026-12-18",
+    "strike": 15.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅覆蓋財報(10-22)",
+    "entry_price": 0.58,
+    "entry_iv": 44.824770507812495,
+    "entry_spot": 13.270000457763672,
+    "oi": 1144,
+    "oi_d7": 1144,
+    "volume": 14410,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_PCG_2026-09-18_15.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "PCG",
+    "expiry": "2026-09-18",
+    "strike": 15.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次10-22)",
+    "entry_price": 0.27,
+    "entry_iv": 60.937890625000016,
+    "entry_spot": 13.270000457763672,
+    "oi": 890,
+    "oi_d7": 890,
+    "volume": 7821,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_BBAI_2026-09-18_3.5",
+    "snapshot_date": "2026-08-31",
+    "ticker": "BBAI",
+    "expiry": "2026-09-18",
+    "strike": 3.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次11-02)",
+    "entry_price": 0.06,
+    "entry_iv": 64.8441015625,
+    "entry_spot": 3.130000114440918,
+    "oi": 1365,
+    "oi_d7": 1365,
+    "volume": 2241,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_OPEN_2026-09-18_3.5",
+    "snapshot_date": "2026-08-31",
+    "ticker": "OPEN",
+    "expiry": "2026-09-18",
+    "strike": 3.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(3.4x) 🚬菸屁股 📅吃不到財報(下次11-05)",
+    "entry_price": 0.1,
+    "entry_iv": 71.87528125,
+    "entry_spot": 3.200000047683716,
+    "oi": 1606,
+    "oi_d7": 1606,
+    "volume": 2214,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_UUUU_2026-10-16_19.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "UUUU",
+    "expiry": "2026-10-16",
+    "strike": 19.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次11-02)",
+    "entry_price": 0.39,
+    "entry_iv": 74.02369726562499,
+    "entry_spot": 14.75,
+    "oi": 804,
+    "oi_d7": 804,
+    "volume": 1030,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_IBIT_2026-11-20_57.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "IBIT",
+    "expiry": "2026-11-20",
+    "strike": 57.0,
+    "score": 8,
+    "tags": "🚀點火(>50x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 0.61,
+    "entry_iv": 44.336494140625,
+    "entry_spot": 44.66999816894531,
+    "oi": 34578,
+    "oi_d7": 3256,
+    "volume": 30182,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_IBIT_2026-09-18_50.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "IBIT",
+    "expiry": "2026-09-18",
+    "strike": 50.0,
+    "score": 8,
+    "tags": "🚀點火(3.6x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 0.21,
+    "entry_iv": 41.309180664062495,
+    "entry_spot": 44.66999816894531,
+    "oi": 40232,
+    "oi_d7": -5094,
+    "volume": 28712,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_IBIT_2026-10-16_54.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "IBIT",
+    "expiry": "2026-10-16",
+    "strike": 54.0,
+    "score": 8,
+    "tags": "🚀點火(30.8x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 0.35,
+    "entry_iv": 41.602146484375,
+    "entry_spot": 44.66999816894531,
+    "oi": 35373,
+    "oi_d7": 288,
+    "volume": 7822,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_PCG_2027-01-15_13.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "PCG",
+    "expiry": "2027-01-15",
+    "strike": 13.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(10-22)",
+    "entry_price": 1.55,
+    "entry_iv": 43.7505625,
+    "entry_spot": 13.270000457763672,
+    "oi": 1166,
+    "oi_d7": 1166,
+    "volume": 2512,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_GOOGL_2026-10-16_410.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "GOOGL",
+    "expiry": "2026-10-16",
+    "strike": 410.0,
+    "score": 8,
+    "tags": "🚀點火(5.3x) 🚬菸屁股 🔥萬人塚 📅吃不到財報(下次10-28)",
+    "entry_price": 0.95,
+    "entry_iv": 33.130551513671875,
+    "entry_spot": 339.3500061035156,
+    "oi": 33779,
+    "oi_d7": -22555,
+    "volume": 2211,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_IONQ_2026-11-20_45.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "IONQ",
+    "expiry": "2026-11-20",
+    "strike": 45.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(11-04)",
+    "entry_price": 3.9,
+    "entry_iv": 83.74039697265624,
+    "entry_spot": 39.310001373291016,
+    "oi": 1118,
+    "oi_d7": 1118,
+    "volume": 2152,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_OPEN_2028-01-21_5.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "OPEN",
+    "expiry": "2028-01-21",
+    "strike": 5.0,
+    "score": 8,
+    "tags": "🚀點火(6.4x) 🔭LEAPS 🔥萬人塚 📅覆蓋財報(11-05)",
+    "entry_price": 1.02,
+    "entry_iv": 97.85158398437501,
+    "entry_spot": 3.200000047683716,
+    "oi": 37082,
+    "oi_d7": 520,
+    "volume": 566,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-08-31_SHOP_2026-09-18_175.0",
+    "snapshot_date": "2026-08-31",
+    "ticker": "SHOP",
+    "expiry": "2026-09-18",
+    "strike": 175.0,
+    "score": 8,
+    "tags": "🚀點火(7.2x) 🚬菸屁股 🔥萬人塚 📅吃不到財報(下次11-03) ⚠️流動性稀薄(5條/OI302,379)",
+    "entry_price": 0.35,
+    "entry_iv": 48.58449853515625,
+    "entry_spot": 147.3699951171875,
+    "oi": 44582,
+    "oi_d7": 185,
+    "volume": 266,
     "premium_tier": "lottery",
     "news_at_signal": false,
     "signal_day_underlying_move": null,

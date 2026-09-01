@@ -2,8 +2,8 @@ name: tw-scanner
 
 on:
   schedule:
-    - cron: "45 13 * * 1-5"  # 13:45 UTC = 21:45 Taipei, Mon-Fri - after margin (~21:00) publishes; all 4 features complete
-    - cron: "15 14 1 * *"    # monthly, 1st - backtest revalidation: re-judge the capitulation alert on accrued data
+    - cron: "52 13 * * 1-5"  # 13:45 UTC = 21:45 Taipei, Mon-Fri - after margin (~21:00) publishes; all 4 features complete
+    - cron: "58 14 1 * *"    # monthly, 1st - backtest revalidation: re-judge the capitulation alert on accrued data
   workflow_dispatch:
     inputs:
       mode:
@@ -36,7 +36,7 @@ jobs:
           set -euo pipefail
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "mode=${{ github.event.inputs.mode }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "15 14 1 * *" ]; then
+          elif [ "${{ github.event.schedule }}" = "58 14 1 * *" ]; then
             echo "mode=backtest" >> "$GITHUB_OUTPUT"
           else
             echo "mode=briefing" >> "$GITHUB_OUTPUT"

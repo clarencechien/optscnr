@@ -2,7 +2,7 @@ name: Daily SPCX Space Radar
 on:
   schedule:
     # 每天 UTC 22:15（台灣早上 6:15），跟主 scanner 接近
-    - cron: '15 22 * * 0-5'
+    - cron: '26 22 * * 0-5'
   workflow_dispatch:
 jobs:
   scan:

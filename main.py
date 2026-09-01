@@ -1,4 +1,16 @@
 """
+Scanner 3.13 — 市場基準日（2026-09-01：GitHub 排程延遲事故）
+【v3.13 改動】
+- 背景：8/26-31 GitHub schedule 全 repo 延遲 3-8 小時甚至丟棄——
+  8/27 的 run 延到 ET 凌晨被休市防呆誤殺（整天沒掃）、8/28 的盤被標成
+  週六 8/29（csv 檔名 + 97 筆信號 snapshot_date）、8/31 排程沒發（手動補）
+- 修法：引入「市場基準日」= SPY 最後交易日。CSV 檔名、snapshot_date、
+  財報時態比較、環境序列日期全部改用它，不再用 runner 時鐘
+- resolve_market_date()：正常（最後交易日==今日ET）/ 補跑（延遲跨日、ET 未開盤，
+  仍掃並以正確交易日標記；signal_id 天然去重，重跑無害）/ 休市（跳過）
+- 報表頭監控行：市場基準日與執行時間分開標，補跑模式明示——延遲一眼可見
+- cron 全面錯峰（避開 :00/:15/:30/:45 熱門分鐘，GitHub 在熱門分鐘最容易延遲）
+
 Scanner 3.12 — PATCH #2（2026-08-05）：標籤靜默缺漏 / TLT 根因 / 時間標示
 【v3.12 改動】
 - P0-3 📅 標籤靜默缺漏（缺漏比誤標危險——缺漏你看不到）：
@@ -325,7 +337,9 @@ def add_earnings_tags(df):
        📅財報已過 = 14 天內剛開完牌且窗口吃不到下次 → 災後/慶功反彈賭局
        📅吃不到財報 = 窗口內無事件 → 純動能
     """
-    today = _today_et()
+    # v3.13：「今日」= 市場基準日（補跑模式下 = 快照所屬的那個交易日，
+    # 財報「今日盤後已失效/明日盤前恐失效」的時態才會對）
+    today = market_today()
     tomorrow = today + timedelta(days=1)
 
     symbols = list(df['Stock'].unique())
@@ -426,9 +440,10 @@ def fetch_yesterday_data_from_github():
     GitHub raw 對剛 commit 的檔案有 CDN cache 延遲，
     讀本地檔可以完全繞過這個問題。
     """
-    # 嘗試本地 1-5 天前的 CSV
+    # 嘗試本地 1-5 天前的 CSV（v3.13：從市場基準日往回推，不用 runner 時鐘）
+    base = market_today()
     for days_back in range(1, 6):
-        target_date = (datetime.now() - timedelta(days=days_back)).strftime('%Y-%m-%d')
+        target_date = (base - timedelta(days=days_back)).strftime('%Y-%m-%d')
         local_path = os.path.join(DATA_DIR, f"{target_date}.csv")
         if os.path.exists(local_path):
             try:
@@ -623,7 +638,7 @@ def generate_report(df):
     clean_window_count = int(df['Tags'].str.contains('吃不到財報', na=False).sum())
     try:
         cw_path = os.path.join(DATA_DIR, "earnings_window_history.csv")
-        today_str = datetime.now().strftime('%Y-%m-%d')
+        today_str = market_today().strftime('%Y-%m-%d')  # v3.13：市場基準日
         if os.path.exists(cw_path):
             cw = pd.read_csv(cw_path)
             if 'total_rows' in cw.columns:  # 舊欄名遷移（2026-08-01/02 兩列）
@@ -675,8 +690,13 @@ def generate_report(df):
         elif symbol in auto_watch: return "🔭候選"
         return ""
 
-    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.12 / yf Engine)\n\n"
-    md += f"**掃描時間**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
+    md = "# 🚬 每日妖股獵殺報表 (Scanner 3.13 / yf Engine)\n\n"
+    # v3.13 監控行：市場基準日與執行時間分開標——排程延遲一眼可見，
+    # 不再要靠人工發現「怎麼沒跑/跑錯天」（2026-08-26~31 事故）
+    md += f"**市場基準日**: {market_today().strftime('%Y-%m-%d')}"
+    if _MARKET['mode'] == 'catchup':
+        md += "　⏰ **補跑模式**（排程延遲跨日，本報表仍為該交易日收盤快照）"
+    md += f"\n**掃描執行於**: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}\n\n"
     md += (f"**📅 乾淨窗口計數**: 今日 {clean_window_count} 筆「吃不到財報」（窗口內無事件的純動能局）"
            f"／報表信號 {len(df)} 筆（分母＝進入報表的信號列，非掃描到的全部合約）。"
            f"數字越小＝市場越被財報事件佔據，今天越沒有你要的獵物"
@@ -902,7 +922,9 @@ def save_signal_snapshot(df):
     iv_log_dir = os.path.join(DATA_DIR, "iv_log")
     os.makedirs(iv_log_dir, exist_ok=True)
 
-    today = datetime.now()
+    # v3.13：snapshot_date = 市場基準日（8/28 的盤曾因排程延遲被標成週六 8/29，
+    # 97 筆信號進了錯的日期——T+N 檢查點、非交易日防污染全部歪掉）
+    today = market_today()
     today_str = today.strftime("%Y-%m-%d")
     month_str = today.strftime("%Y-%m")
     snapshot_path = os.path.join(iv_log_dir, f"signals_{month_str}.json")
@@ -977,32 +999,71 @@ def save_signal_snapshot(df):
 # ==========================================
 # 6. 主執行程序
 # ==========================================
-def us_market_traded_today():
-    """檢查美股今天（美東日期）是否有交易。
+# v3.13：市場基準日（module-level，main() 開頭設定；未設時 fallback 今日 ET）
+# 所有日期標籤（CSV 檔名/snapshot_date/財報比較/環境序列）一律用它，
+# 不用 runner 時鐘——排程延遲跨日不再讓資料標錯天。
+_MARKET = {'date': None, 'mode': 'normal'}
 
-    方法：SPY 最後一根日 K 的日期 vs 今天美東日期比對。
-    - 掃描跑在 UTC 22:00 = 美東 17-18:00，UTC-4/-5 換算到同一天，取 -5 保守即可
-    - 抓不到資料時 fail-open（回 True），避免 yfinance 偶發故障誤殺每日掃描
-    - 此防護與 cron 修正是雙保險：cron 擋週日、這裡擋假日（如 7/3 落平日）
+
+def market_today():
+    """本次掃描的市場基準日（date 物件）。resolve 前 fallback 今日 ET。"""
+    return _MARKET['date'] or _today_et()
+
+
+def resolve_market_date():
+    """v3.13：決定「市場基準日」與是否該跑。回傳 (market_date, should_run, mode)。
+
+    背景（2026-08-26~31 排程延遲事故，詳見 docs/log.md）：
+    GitHub schedule 延遲 3-8 小時甚至丟棄——
+    - 延遲跨過 UTC 午夜 → datetime.now() 日期標籤錯位（8/28 的盤存成週六 8/29.csv、
+      97 筆信號 snapshot_date 標成週六）
+    - 延遲跨過 ET 午夜 → 舊的休市防呆把平日 run 當假日跳過（8/27 整天沒掃）
+
+    規則（以 SPY 最後交易日為錨）：
+    - 最後交易日 == 今日(ET) → normal：正常掃
+    - 最後交易日 < 今日(ET) 且現在 ET 未開盤(<09:30) → catchup：補跑模式——
+      這就是「排程延遲到隔天凌晨」的形狀，資料仍是該交易日的完整收盤快照，
+      掃它並以最後交易日為基準日（同 signal_id 天然去重，重跑無害）
+    - 其他（週末白天/假日）→ 不跑：收盤重播，掃了污染 shadow log
+    - SPY 抓不到 → fail-open：今日 ET + normal（沿用舊行為，不誤殺）
+
+    註：ET 用 UTC-5 保守近似（夏令實為 -4），09:30 門檻在夏令等效於實際 10:30 ET
+    前都算補跑——寬一小時方向安全（多補跑無害、不會漏跑）。
     """
+    today_et = _today_et()
     try:
-        from datetime import timezone
         spy = yf.Ticker("SPY").history(period="5d")
         if spy.empty:
-            return True  # fail-open
+            return today_et, True, 'normal'  # fail-open
         last_trade = spy.index[-1].date()
-        today_et = (datetime.now(timezone.utc) - timedelta(hours=5)).date()
-        return last_trade == today_et
     except Exception:
-        return True  # fail-open
+        return today_et, True, 'normal'  # fail-open
+
+    if last_trade == today_et:
+        return last_trade, True, 'normal'
+
+    now_et = _now_et_naive()
+    if last_trade < today_et and (now_et.hour, now_et.minute) < (9, 30):
+        return last_trade, True, 'catchup'
+
+    return last_trade, False, 'closed'
 
 
 def main():
-    print(f"🔥 啟動 Scanner 3.12 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d')}")
-    if not us_market_traded_today():
-        print("🛑 美股今日休市（週末/假日），市場資料為舊收盤殘留。")
+    print(f"🔥 啟動 Scanner 3.13 (yfinance Engine): {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}")
+
+    market_date, should_run, mode = resolve_market_date()
+    if not should_run:
+        print(f"🛑 美股休市時段（最後交易日 {market_date}），市場資料為舊收盤殘留。")
         print("   跳過本次掃描與信號快照，避免污染 shadow log。")
         return
+    _MARKET['date'] = market_date
+    _MARKET['mode'] = mode
+    if mode == 'catchup':
+        print(f"⏰ 補跑模式：排程延遲跨日，本次掃描以市場基準日 {market_date} 標記"
+              f"（runner 時鐘 {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}）")
+    else:
+        print(f"📅 市場基準日：{market_date}")
     if not os.path.exists(DATA_DIR): os.makedirs(DATA_DIR)
 
     # === v3.12 P0-4 方案 A：TLT 雷達併入主掃描時段 ===
@@ -1146,7 +1207,7 @@ def main():
 
     if results:
         final_df = pd.DataFrame(results).sort_values(by=['Score', 'Volume'], ascending=[False, False])
-        today_str = datetime.now().strftime("%Y-%m-%d")
+        today_str = market_today().strftime("%Y-%m-%d")  # v3.13：CSV 以市場基準日命名
 
         final_df.to_csv(f"{DATA_DIR}/{today_str}.csv", index=False)
         final_df.to_csv(f"{DATA_DIR}/latest.csv", index=False)
