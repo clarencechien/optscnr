@@ -1,17 +1,29 @@
 {
-  "updated_at": "2026-08-30T23:41:07.604808",
-  "count": 1,
+  "updated_at": "2026-09-01T00:43:06.836292",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Imax",
-      "ticker": "IMAX",
-      "mentions_today": 4,
+      "name": "Billion",
+      "ticker": "BGHL",
+      "mentions_today": 2,
       "total_mentions": 6,
-      "consecutive_days": 2,
+      "consecutive_days": 3,
       "is_strong": true,
       "evidence": [
-        "Imax says it's open to a sale. Why is no one buying?",
-        "Imax says it's open to a sale. Why is no one buying?"
+        "Hock Tan Guided Broadcom Past $100 Billion of AI Revenue in 2027. The Stock Is 25% off Its High.",
+        "Marvell Wins Wall Street. Google Bets $12 Billion. Amazon Fears Fade."
+      ]
+    },
+    {
+      "name": "Manhattan",
+      "ticker": "MANH",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Manhattan's luxury rental market is booming, with units reaching $100,000 a month",
+        "Manhattan's luxury rental market is booming, with units reaching $100,000 a month"
       ]
     }
   ]
