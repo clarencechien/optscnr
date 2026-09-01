@@ -1,47 +1,83 @@
 {
-  "updated_at": "2026-09-01T00:01:12.174196",
+  "updated_at": "2026-09-01T22:45:44.436181",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 19,
-    "items_with_catalyst": 9,
-    "items_both": 0
+    "total_items": 106,
+    "items_with_company": 22,
+    "items_with_catalyst": 17,
+    "items_both": 5
   },
   "count": 16,
   "tickers": [
-    "AMZN",
-    "NVDA",
-    "TGT",
+    "PANW",
     "DELL",
-    "MSFT",
     "AVGO",
-    "MRNA",
-    "TSLA",
-    "BA",
-    "GS",
-    "MRVL",
+    "NVDA",
+    "AAPL",
+    "META",
+    "TGT",
     "GOOGL",
-    "AFRM",
-    "NFLX",
-    "AMD",
-    "INTC"
+    "AMZN",
+    "CRWD",
+    "RTX",
+    "NEE",
+    "AMAT",
+    "SMCI",
+    "DIS",
+    "MU"
   ],
   "details": [
     {
-      "symbol": "AMZN",
-      "score": 2.0,
+      "symbol": "PANW",
+      "score": 6,
       "evidence": [
         {
-          "title": "FTC sues Amazon, accusing the e-commerce giant of misleading advertisers",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Palo Alto Networks beats quarterly estimates on AI demand, continues acquisition spree",
+          "catalysts": [
+            "acquisition"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Amazon’s stock slips as the FTC alleges billions of dollars in hidden ad fees",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Palo Alto Networks’ stock falls despite strong AI cybersecurity demand",
+          "catalysts": [
+            "falls",
+            "earnings beat"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Dell surges 9% after lifting fiscal 2027 forecast on AI server strength",
+          "catalysts": [
+            "surges"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Marvell Wins Wall Street. Google Bets $12 Billion. Amazon Fears Fade.",
+          "title": "Dell’s AI servers drive a stellar earnings performance, and a raised outlook",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Broadcom earnings need to answer these questions for the stock to rally again",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Dear Broadcom Stock Fans, Mark Your Calendars for August 31",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -49,20 +85,44 @@
     },
     {
       "symbol": "NVDA",
-      "score": 2.0,
+      "score": 2,
       "evidence": [
         {
-          "title": "Anthropic signs $35 billion cloud deal with Nvidia-backed Lambda, WSJ reports",
+          "title": "OneRail launches AI platform with Nvidia for retailers to make faster delivery decisions",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Apple enters John Ternus era as AI challenges and memory crunch intensify",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Despite Impressive Results, Nvidia Stock May Be Stuck in a Range - What's the Best Play?",
+          "title": "Apple Maps changes name of Lake Ontario to ’Lake America’",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Looking for evidence that Meta's AI investments are paying off? Here are 2 ways",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "A Major $12.9 Billion Catalyst Is Brewing for Nvidia Stock",
+          "title": "Meta Vs. Google: Analyst Says AI Boost Puts Facebook Parent On Track For Ad Crown",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -73,100 +133,12 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Trump says U.S. growth could hit 20%. It’s happened only once since WWII",
+          "title": "Fed Governor Barr says he'll support rate hike if inflation doesn't ease",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Target Is Up 66% This Year. Here's Whether the Dividend King Still Has Room to Run After Earnings.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DELL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump Account holders may receive $250 Dell grant starting Monday, Dell Foundation says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Microsoft Outlook and OpenAI's ChatGPT Work are experiencing user outages ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Broadcom reports earnings this week. Mike Khouw says this trade could be a winner",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MRNA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "23 best-performing stocks of August, as the software industry continues its recovery",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Tesla’s stock among S&P 500’s top gainers as investors prepare for a Cybercab launch",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Boeing, engineers union to resume contract negotiations on Sept 8, union says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Goldman Sachs sends blunt message on oil price, economy",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MRVL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Marvell Wins Wall Street. Google Bets $12 Billion. Amazon Fears Fade.",
+          "title": "Trump says U.S. growth could hit 20%. It’s happened only once since WWII",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -174,54 +146,103 @@
     },
     {
       "symbol": "GOOGL",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Marvell Wins Wall Street. Google Bets $12 Billion. Amazon Fears Fade.",
+          "title": "Google prepares Gemini 3.8 Flash to narrow AI coding gap, WSJ reports",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta Vs. Google: Analyst Says AI Boost Puts Facebook Parent On Track For Ad Crown",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AFRM",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "What Affirm’s (AFRM) Blowout Quarter and Cautious CEO Say About the Consumer",
+          "title": "Waymo and Zoox expand into more U.S. markets as robotaxi race heats up",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NFLX",
+      "symbol": "CRWD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Netflix Stock Underperforming the S&P 500?",
+          "title": "Russian cybercrime operation being dismantled after two decades, US officials and CrowdStrike say",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "RTX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia Just Delivered Bad News for AMD and Intel",
+          "title": "Raytheon wins $42.5M Navy air traffic contract",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "NEE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia Just Delivered Bad News for AMD and Intel",
+          "title": "NextEra Energy Stock: Is NEE Outperforming the Utilities Sector?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Corning vs. Applied Materials: One Stock Beat the Other by 75 Percentage Points. The Better AI Infrastructure Play Is Clear.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SMCI",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Cisco and Supermicro Are Joining Forces in the AI Data Center Boom. How to Play Their Stocks Now.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Walt Disney Stock Underperforming the Dow?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron Technology Stock Finally Looks Like a Contrarian Opportunity",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -229,7 +250,8 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 4,
-    "Anthropic (private)": 2
+    "OpenAI (private)": 2,
+    "Anthropic (private)": 1,
+    "Cerebras (pre-IPO)": 1
   }
 }
