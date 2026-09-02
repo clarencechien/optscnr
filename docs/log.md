@@ -242,6 +242,14 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
   spcx_common.market_freshness() 防呆（假日也擋、延遲跨日以最後交易日補跑）＋
   記錄日期改用市場交易日；兩份歷史的週末列已清除（53/41 列）
 
+### 補充修正（2026-09-02：push 競態）
+排程延遲的第二種傷害：多個 workflow 被擠到同一時段跑，scanner 掃完 9 分鐘要 push 時
+別的 workflow 已先 push → non-fast-forward 被拒 → **整次掃描結果隨 runner 銷毀**
+（9/2 台灣早上事故；那次 log 同時證明 3.13 正確：延遲 run 仍標市場基準日 9/1）。
+修：8 支沒有 `git pull --rebase` 的 workflow（scanner/catalyst/unknown/space/tlt/
+small_cap/fallen/universe）push 前一律 `pull --rebase --autostash` ＋ 3 次重試，
+三次皆失敗才大聲失敗（delta/tw 原本就有）。各 workflow 寫的檔案互不重疊，rebase 不衝突。
+
 ### 逃生門
 docs/PROJECT_ESCAPE_DOOR.md：Cloudflare 遷移評估（R2/觀看層/Python 三問直答）。
 結論：**現在不搬**——五項 GitHub 依賴只壞排程一項；Phase 1 備援=CF Worker 當

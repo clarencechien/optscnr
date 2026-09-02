@@ -34,4 +34,12 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/tlt_radar.json data/tlt_radar_report.md data/tlt_radar_history.csv
           git diff --quiet --cached || git commit -m "📉 Weekly TLT hedge radar [skip ci]"
-          git push
+          # push 前先 rebase 到最新 main：排程延遲會讓多個 workflow 擠在同一時段 push，
+          # 沒 rebase 就被 non-fast-forward 拒絕、整次掃描結果丟失（2026-09-02 事故）。
+          # 各 workflow 寫的檔案互不重疊，rebase 不會衝突；三次重試後仍失敗就大聲失敗。
+          ok=0
+          for i in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push; then ok=1; break; fi
+            echo "::warning::push 第 $i 次失敗，$((i * 10))s 後重試"; sleep $((i * 10))
+          done
+          [ "$ok" = 1 ] || { echo "::error::push 三次皆失敗"; exit 1; }
