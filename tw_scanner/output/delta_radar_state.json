@@ -6746,8 +6746,8 @@
       "t5_excess_pct": 8.91,
       "t10_ret_pct": 3.87,
       "t10_excess_pct": 3.39,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 4.76,
+      "t20_excess_pct": 1.95
     }
   },
   {
@@ -8392,8 +8392,8 @@
       "entry_close": 1765.0,
       "t5_ret_pct": -0.85,
       "t5_excess_pct": -3.57,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -1.98,
+      "t10_excess_pct": -5.57,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -8611,8 +8611,8 @@
       "entry_close": 1745.0,
       "t5_ret_pct": 1.43,
       "t5_excess_pct": -0.74,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 0.86,
+      "t10_excess_pct": -1.45,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -9197,8 +9197,8 @@
       "entry_date": "2026-08-27",
       "benchmark": "0050",
       "entry_close": 1770.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -0.56,
+      "t5_excess_pct": -0.7,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -9680,6 +9680,87 @@
       "entry_date": "2026-09-01",
       "benchmark": "0050",
       "entry_close": 1865.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-09-03T07:22:35.127121+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "capex_cut:3e / vr300_delay:18e(21m) / debt_financed_capex:12e(13m) / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 3,
+            "vr300_delay": 18,
+            "debt_financed_capex": 12,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 3,
+            "vr300_delay": 21,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -1.65,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 18,
+              "mentions": 21,
+              "gate": "zscore",
+              "z": 1.54,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 12,
+              "mentions": 13,
+              "gate": "zscore",
+              "z": -0.32,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[capex_cut] 'The odd decouple': JPMorgan says the tech capex surge is masking a troubling slowdown in job growth - Business Insider",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] Jensen Huang Takes Stage at Morgan Stanley Roadshow: Quarterly Revenue Nears $100 Billion, Nvidia Denies Rubin Ultra Del",
+          "[debt_financed_capex] AI Boom Triggers Tech Debt Binge - StartupHub.ai",
+          "[debt_financed_capex] The growing jitters over hyperscaler debt - axios.com",
+          "[debt_financed_capex] AI data center debt has climbed to the top of Wall Street's credit risk watchlist - Startup Fortune"
+        ],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-09-03",
+      "benchmark": "0050",
+      "entry_close": 1760.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
