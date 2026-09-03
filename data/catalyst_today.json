@@ -1,301 +1,148 @@
 {
-  "updated_at": "2026-09-02T22:47:22.258124",
+  "updated_at": "2026-09-03T22:45:10.901778",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 34,
-    "items_with_catalyst": 14,
-    "items_both": 4
+    "total_items": 106,
+    "items_with_company": 22,
+    "items_with_catalyst": 19,
+    "items_both": 8
   },
-  "count": 20,
+  "count": 17,
   "tickers": [
-    "GOOGL",
-    "DELL",
-    "AVGO",
-    "HPE",
-    "AAPL",
-    "PLTR",
-    "SNOW",
-    "ORCL",
-    "TGT",
-    "MSFT",
-    "F",
-    "BA",
-    "BRK-B",
     "NVDA",
+    "HOOD",
+    "TSLA",
+    "ZS",
+    "CHPT",
+    "DELL",
+    "MSFT",
+    "COST",
+    "META",
+    "COIN",
+    "DIS",
+    "ASTS",
+    "GOOGL",
+    "LRCX",
     "CRWD",
-    "JPM",
-    "GOLD",
-    "AMBA",
-    "CRM",
-    "COST"
+    "TSM",
+    "BA"
   ],
   "details": [
     {
-      "symbol": "GOOGL",
-      "score": 3.5,
+      "symbol": "NVDA",
+      "score": 6.5,
       "evidence": [
         {
-          "title": "Berkshire CEO Abel says Alphabet a 'significant player' in AI after growing stake in Q2",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Palantir’s stock is slumping. Why bond yields and Google may be to blame.",
+          "title": "Hugging Face approached Nvidia’s Huang weeks ahead of $12.9B acquisition, CEO tells CNBC",
           "catalysts": [
-            "rally"
+            "acquisition"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Marvell Stock: The AI Growth Story Is Getting Bigger, But the Google Deal Is Still a Problem",
+          "title": "Here’s what Nvidia’s $13 billion Hugging Face deal means for the world of AI",
+          "catalysts": [
+            "acquisition"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Nvidia takes back control of the AI trade as Big Tech nears record highs",
           "catalysts": [],
           "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "score": 6,
+      "evidence": [
+        {
+          "title": "Piper Sandler expects Robinhood to kickstart football season with a win",
+          "catalysts": [
+            "jump"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Options volume erupts in retail trading favorites as Robinhood, Tesla surge",
+          "catalysts": [
+            "surge",
+            "options volume"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 4.5,
+      "evidence": [
+        {
+          "title": "Options volume erupts in retail trading favorites as Robinhood, Tesla surge",
+          "catalysts": [
+            "surge",
+            "options volume"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "'No steering wheel, no pedals': Tesla teases fans ahead of long-awaited Cybercab update",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ZS",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Zscaler stock rises on earnings beat, upbeat guidance",
+          "catalysts": [
+            "rises",
+            "earnings beat"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "CHPT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "ChargePoint CEO says 70% stock surge 'is the beginning of the momentum'",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "DELL",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Nvidia’s stock is climbing as investors get more confidence in an expanding base of AI customers",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "HPE follows in Dell’s footsteps as it rides the AI server boom to a big earnings beat",
-          "catalysts": [
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "SA Asks: Is Dell a buy, sell, or hold after its Q2 earnings report?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Broadcom delivers strong earnings view as CEO touts growth with AI labs",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Broadcom’s stock falls despite upbeat earnings, extending a frustrating stretch for investors",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "HPE",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "HPE follows in Dell’s footsteps as it rides the AI server boom to a big earnings beat",
-          "catalysts": [
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "HPE raises forecasts on AI demand, shares fall on supply concerns",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Apple shares are doing something they haven't done in 20 years. Here’s what’s happening",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Dear Apple Stock Fans, Mark Your Calendars for September 1",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apple's accusations are making things uncomfortable for OpenAI",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
       "score": 2,
       "evidence": [
         {
-          "title": "Palantir’s stock is slumping. Why bond yields and Google may be to blame.",
+          "title": "Dell stock surges on record orders for AI servers",
           "catalysts": [
-            "rally"
+            "surges"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SNOW",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Snowflake’s stock soars as the company blows away estimates with its AI-fueled forecast",
-          "catalysts": [
-            "soars"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "AI trade faces test with next week's Oracle earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "How Oracle’s ‘extremely controversial’ stock could more than double from here",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Travel industry presses Trump to target 100 million international visitors in Oval Office meeting",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Best credit cards for shopping at Target (2026)",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "MSFT",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Microsoft to start disclosing Azure quarterly revenue as company consolidates business units",
+          "title": "Microsoft to impose time limits on Xbox cloud gaming subscribers as costs continue to climb",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Ford's production of highly profitable Super Duty trucks hits 20-year high as it recovers from supplier fires",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "American Airlines continues premium push with redesigned Boeing planes",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Berkshire CEO Abel says Alphabet a 'significant player' in AI after growing stake in Q2",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nvidia’s stock is climbing as investors get more confidence in an expanding base of AI customers",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Russian cybercrime operation being dismantled after two decades, US officials and CrowdStrike say",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "JPMorgan scales back Jane Street financing amid growing bond market rivalry - FT",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOLD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Barrick weighs delaying North America gold IPO to 2027 - Bloomberg",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMBA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ambarella Q2 2027 Earnings Preview",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Agentforce: Scaling the Next Generation of Salesforce (CRM)",
+          "title": "This subtle Microsoft change could be a big win for investors",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -306,7 +153,106 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Costco shuts down key service without notice",
+          "title": "Here's why Jim Cramer is putting Costco stock in the penalty box ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "How Meta will pull off massive changes to its social media apps",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COIN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Coinbase files for SEC approval to offer equity perpetuals",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "FCC asks court to reject Disney lawsuit over station licenses",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ASTS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "AST SpaceMobile Fell More Than 50%. A Director Just Made Her Biggest Buy Yet",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Google defeats US bid to force ad tech sale",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LRCX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Lam Research Corporation (LRCX) is Exploring Growth Opportunities in the Semiconductor Equipment Market",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "How CrowdStrike (CRWD) is Defending Against Evolving Threats",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM): The Powerhouse of Advanced Semiconductor Manufacturing",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Boeing Stock Underperforming the Nasdaq?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -314,7 +260,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2,
-    "OpenAI (private)": 1
+    "OpenAI (private)": 3,
+    "Anthropic (private)": 1
   }
 }
