@@ -1,5 +1,42 @@
 {
-  "updated_at": "2026-09-02T23:33:26.575918",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-09-03T23:31:26.107009",
+  "count": 3,
+  "blind_spots": [
+    {
+      "name": "Piper Sandler",
+      "ticker": "PIPR",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Piper Sandler expects Robinhood to kickstart football season with a win",
+        "Piper Sandler expects Robinhood to kickstart football season with a win"
+      ]
+    },
+    {
+      "name": "Fidelity",
+      "ticker": "FIS",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Average 401(k), IRA balances hit record highs — but more workers are raiding their accounts, Fidelit",
+        "Average 401(k), IRA balances hit record highs — but more workers are raiding their accounts, Fidelit"
+      ]
+    },
+    {
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Is Analog Devices Stock Outperforming the Nasdaq?",
+        "Is Boeing Stock Underperforming the Nasdaq?"
+      ]
+    }
+  ]
 }

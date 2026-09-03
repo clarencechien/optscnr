@@ -75,5 +75,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "DBX"
+  },
+  "Piper Sandler": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "PIPR"
+  },
+  "Fidelity": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "FIS"
+  },
+  "Nasdaq": {
+    "first_seen": "2026-09-03",
+    "last_seen": "2026-09-03",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "NDAQ"
   }
 }
