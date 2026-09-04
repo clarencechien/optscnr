@@ -1,130 +1,63 @@
 {
-  "updated_at": "2026-09-03T22:45:10.901778",
+  "updated_at": "2026-09-04T22:29:14.286842",
   "stats": {
     "total_items": 106,
-    "items_with_company": 22,
-    "items_with_catalyst": 19,
-    "items_both": 8
+    "items_with_company": 15,
+    "items_with_catalyst": 17,
+    "items_both": 4
   },
-  "count": 17,
+  "count": 12,
   "tickers": [
-    "NVDA",
-    "HOOD",
     "TSLA",
-    "ZS",
-    "CHPT",
+    "BE",
+    "NFLX",
+    "AAPL",
+    "NVDA",
+    "MU",
+    "ORCL",
+    "XYZ",
+    "BA",
     "DELL",
-    "MSFT",
-    "COST",
-    "META",
-    "COIN",
-    "DIS",
-    "ASTS",
-    "GOOGL",
-    "LRCX",
-    "CRWD",
-    "TSM",
-    "BA"
+    "MRNA",
+    "AMZN"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 6.5,
-      "evidence": [
-        {
-          "title": "Hugging Face approached Nvidia’s Huang weeks ahead of $12.9B acquisition, CEO tells CNBC",
-          "catalysts": [
-            "acquisition"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Here’s what Nvidia’s $13 billion Hugging Face deal means for the world of AI",
-          "catalysts": [
-            "acquisition"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Nvidia takes back control of the AI trade as Big Tech nears record highs",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HOOD",
-      "score": 6,
-      "evidence": [
-        {
-          "title": "Piper Sandler expects Robinhood to kickstart football season with a win",
-          "catalysts": [
-            "jump"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Options volume erupts in retail trading favorites as Robinhood, Tesla surge",
-          "catalysts": [
-            "surge",
-            "options volume"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
       "symbol": "TSLA",
-      "score": 4.5,
+      "score": 5.0,
       "evidence": [
         {
-          "title": "Options volume erupts in retail trading favorites as Robinhood, Tesla surge",
+          "title": "Tesla's stock drops 6% as Cybercab update 'underwhelms' Wall Street",
           "catalysts": [
-            "surge",
-            "options volume"
+            "drops"
           ],
           "has_catalyst": true
         },
         {
-          "title": "'No steering wheel, no pedals': Tesla teases fans ahead of long-awaited Cybercab update",
+          "title": "Mike Khouw: Cybercabs are a game changer—here's how I'm trading Tesla",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ZS",
-      "score": 4,
-      "evidence": [
+        },
         {
-          "title": "Zscaler stock rises on earnings beat, upbeat guidance",
+          "title": "Tesla’s stock falls as Cybercab launch lands with a thud",
           "catalysts": [
-            "rises",
-            "earnings beat"
+            "falls"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "CHPT",
-      "score": 2,
+      "symbol": "BE",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "ChargePoint CEO says 70% stock surge 'is the beginning of the momentum'",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "DELL",
-      "score": 2,
-      "evidence": [
+          "title": "Bloom Energy was just named to the S&P 500. These other stocks are joining the index as well.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
-          "title": "Dell stock surges on record orders for AI servers",
+          "title": "Bloom Energy surges on inclusion to S&P 500; Illumina, Everpure also added",
           "catalysts": [
             "surges"
           ],
@@ -133,115 +66,70 @@
       ]
     },
     {
-      "symbol": "MSFT",
-      "score": 1.0,
+      "symbol": "NFLX",
+      "score": 2,
       "evidence": [
         {
-          "title": "Microsoft to impose time limits on Xbox cloud gaming subscribers as costs continue to climb",
-          "catalysts": [],
-          "has_catalyst": false
-        },
+          "title": "Here’s what’s worth streaming in September 2026 on Netflix, Hulu, HBO Max and more",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 2,
+      "evidence": [
         {
-          "title": "This subtle Microsoft change could be a big win for investors",
+          "title": "Here’s what’s worth streaming in September 2026 on Netflix, Hulu, HBO Max and more",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Nvidia's 'defensive move' to acquire Hugging Face is about much more than chips",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Here's why Jim Cramer is putting Costco stock in the penalty box ",
+          "title": "Micron is doubling down on AI memory chips. That could pay off big time for investors.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "How Meta will pull off massive changes to its social media apps",
+          "title": "Why Oracle’s stock looks like a compelling buy ahead of earnings",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COIN",
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Coinbase files for SEC approval to offer equity perpetuals",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "FCC asks court to reject Disney lawsuit over station licenses",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASTS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "AST SpaceMobile Fell More Than 50%. A Director Just Made Her Biggest Buy Yet",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Google defeats US bid to force ad tech sale",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "LRCX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Lam Research Corporation (LRCX) is Exploring Growth Opportunities in the Semiconductor Equipment Market",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "How CrowdStrike (CRWD) is Defending Against Evolving Threats",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM): The Powerhouse of Advanced Semiconductor Manufacturing",
+          "title": "Musk’s xAI loses court bid to block Minnesota’s AI ‘nudification’ ban",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -252,7 +140,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Boeing Stock Underperforming the Nasdaq?",
+          "title": "Boeing gets $241.34M contract boost to repair Navy fighter aircraft",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Bullish Option Traders Might Like This Play On Dell Stock",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRNA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "This Fund Bought Moderna Before It Nearly Tripled. See Its 2 New Stock Picks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Amazon.com (AMZN): AI Exposure Adds, But Other Businesses Drive Results",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -260,7 +181,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 3,
-    "Anthropic (private)": 1
+    "OpenAI (private)": 1,
+    "xAI (private)": 1
   }
 }
