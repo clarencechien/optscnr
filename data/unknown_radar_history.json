@@ -6,13 +6,6 @@
     "total_mentions": 6,
     "ticker": "BGHL"
   },
-  "Las Vegas Sands": {
-    "first_seen": "2026-08-27",
-    "last_seen": "2026-08-27",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "LVS"
-  },
   "Greenland": {
     "first_seen": "2026-08-28",
     "last_seen": "2026-08-28",
@@ -96,5 +89,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "NDAQ"
+  },
+  "German": {
+    "first_seen": "2026-09-04",
+    "last_seen": "2026-09-04",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GABC"
+  },
+  "Illumina": {
+    "first_seen": "2026-09-04",
+    "last_seen": "2026-09-04",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ILMN"
+  },
+  "Everpure": {
+    "first_seen": "2026-09-04",
+    "last_seen": "2026-09-04",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "P"
+  },
+  "Huntington Ingalls": {
+    "first_seen": "2026-09-04",
+    "last_seen": "2026-09-04",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "HII"
   }
 }

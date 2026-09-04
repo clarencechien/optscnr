@@ -1,41 +1,53 @@
 {
-  "updated_at": "2026-09-03T23:31:26.107009",
-  "count": 3,
+  "updated_at": "2026-09-04T23:20:13.051694",
+  "count": 4,
   "blind_spots": [
     {
-      "name": "Piper Sandler",
-      "ticker": "PIPR",
+      "name": "German",
+      "ticker": "GABC",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Piper Sandler expects Robinhood to kickstart football season with a win",
-        "Piper Sandler expects Robinhood to kickstart football season with a win"
+        "Volkswagen plans 50,000 job cuts as analysts see ‘halo effect’ for German auto industry",
+        "Exclusive-OpenAI agents hijacked German website in previously undisclosed AI breakout this spring"
       ]
     },
     {
-      "name": "Fidelity",
-      "ticker": "FIS",
+      "name": "Illumina",
+      "ticker": "ILMN",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Average 401(k), IRA balances hit record highs — but more workers are raiding their accounts, Fidelit",
-        "Average 401(k), IRA balances hit record highs — but more workers are raiding their accounts, Fidelit"
+        "Bloom Energy, Illumina, and Everpure set to join S&P 500 in quarterly rebalance",
+        "Bloom Energy surges on inclusion to S&P 500; Illumina, Everpure also added"
       ]
     },
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
+      "name": "Everpure",
+      "ticker": "P",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Is Analog Devices Stock Outperforming the Nasdaq?",
-        "Is Boeing Stock Underperforming the Nasdaq?"
+        "Bloom Energy, Illumina, and Everpure set to join S&P 500 in quarterly rebalance",
+        "Bloom Energy surges on inclusion to S&P 500; Illumina, Everpure also added"
+      ]
+    },
+    {
+      "name": "Huntington Ingalls",
+      "ticker": "HII",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Huntington Ingalls wins $336 million Navy contract for CVN 82",
+        "Huntington Ingalls wins $336M contract for long-lead carrier materials"
       ]
     }
   ]
