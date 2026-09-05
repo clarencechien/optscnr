@@ -1,214 +1,44 @@
 {
-  "updated_at": "2026-08-29T04:47:33.582908",
+  "updated_at": "2026-09-05T04:30:25.947128",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 20,
+  "count": 3,
   "tickers": [
-    "VELO",
+    "CHPT",
     "DDD",
-    "NNDM",
-    "FLNC",
-    "PLUG",
-    "BLDP",
-    "SEDG",
-    "RUN",
-    "SOUN",
-    "BBAI",
-    "LUNR",
-    "SMR",
-    "NNE",
-    "UUUU",
-    "ACHR",
-    "EVGO",
-    "TDOC",
-    "NTLA",
-    "BEAM",
-    "EDIT"
+    "BRZE"
   ],
   "details": [
     {
-      "symbol": "VELO",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 382.0,
-      "avg_volume_m": 1.65,
-      "short_pct_float": 30.4,
-      "score": NaN
+      "symbol": "CHPT",
+      "price": 9.89,
+      "gain_30d_pct": 82.8,
+      "market_cap_m": 267.0,
+      "avg_volume_m": 3.26,
+      "short_pct_float": 22.6,
+      "score": 30.87
     },
     {
       "symbol": "DDD",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 545.0,
-      "avg_volume_m": 3.65,
+      "price": 3.46,
+      "gain_30d_pct": 31.6,
+      "market_cap_m": 575.0,
+      "avg_volume_m": 2.17,
       "short_pct_float": 27.2,
-      "score": NaN
+      "score": 30.35
     },
     {
-      "symbol": "NNDM",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 333.0,
-      "avg_volume_m": 1.81,
-      "short_pct_float": 5.2,
-      "score": NaN
-    },
-    {
-      "symbol": "FLNC",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 2023.0,
-      "avg_volume_m": 7.89,
-      "short_pct_float": 33.4,
-      "score": NaN
-    },
-    {
-      "symbol": "PLUG",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 3060.0,
-      "avg_volume_m": 65.51,
-      "short_pct_float": 23.5,
-      "score": NaN
-    },
-    {
-      "symbol": "BLDP",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 678.0,
-      "avg_volume_m": 3.16,
-      "short_pct_float": 6.0,
-      "score": NaN
-    },
-    {
-      "symbol": "SEDG",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 1933.0,
-      "avg_volume_m": 4.09,
-      "short_pct_float": 23.2,
-      "score": NaN
-    },
-    {
-      "symbol": "RUN",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 2094.0,
-      "avg_volume_m": 8.8,
-      "short_pct_float": 32.3,
-      "score": NaN
-    },
-    {
-      "symbol": "SOUN",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 3158.0,
-      "avg_volume_m": 30.6,
-      "short_pct_float": 39.9,
-      "score": NaN
-    },
-    {
-      "symbol": "BBAI",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 1462.0,
-      "avg_volume_m": 20.39,
-      "short_pct_float": 30.7,
-      "score": NaN
-    },
-    {
-      "symbol": "LUNR",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 2466.0,
-      "avg_volume_m": 10.6,
-      "short_pct_float": 27.1,
-      "score": NaN
-    },
-    {
-      "symbol": "SMR",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 3813.0,
-      "avg_volume_m": 34.25,
-      "short_pct_float": 18.4,
-      "score": NaN
-    },
-    {
-      "symbol": "NNE",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 965.0,
-      "avg_volume_m": 1.84,
-      "short_pct_float": 34.0,
-      "score": NaN
-    },
-    {
-      "symbol": "UUUU",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 3667.0,
-      "avg_volume_m": 7.34,
-      "short_pct_float": 21.4,
-      "score": NaN
-    },
-    {
-      "symbol": "ACHR",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 4428.0,
-      "avg_volume_m": 40.09,
+      "symbol": "BRZE",
+      "price": 31.96,
+      "gain_30d_pct": 35.9,
+      "market_cap_m": 3600.0,
+      "avg_volume_m": 2.52,
       "short_pct_float": 13.7,
-      "score": NaN
-    },
-    {
-      "symbol": "EVGO",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 434.0,
-      "avg_volume_m": 3.45,
-      "short_pct_float": 30.9,
-      "score": NaN
-    },
-    {
-      "symbol": "TDOC",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 1181.0,
-      "avg_volume_m": 4.06,
-      "short_pct_float": 13.1,
-      "score": NaN
-    },
-    {
-      "symbol": "NTLA",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 1803.0,
-      "avg_volume_m": 3.48,
-      "short_pct_float": 40.4,
-      "score": NaN
-    },
-    {
-      "symbol": "BEAM",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 3028.0,
-      "avg_volume_m": 1.67,
-      "short_pct_float": 36.5,
-      "score": NaN
-    },
-    {
-      "symbol": "EDIT",
-      "price": NaN,
-      "gain_30d_pct": NaN,
-      "market_cap_m": 485.0,
-      "avg_volume_m": 2.63,
-      "short_pct_float": 16.1,
-      "score": NaN
+      "score": 17.31
     }
   ]
 }
