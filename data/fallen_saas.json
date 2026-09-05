@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-29T07:41:08.200196",
+  "updated_at": "2026-09-05T05:50:11.819965",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -9,69 +9,7 @@
     "MIN_VOL_RATIO": 1.2,
     "MIN_AVG_VOLUME": 500000
   },
-  "count": 5,
-  "tickers": [
-    "ESTC",
-    "OKTA",
-    "BRZE",
-    "AFRM",
-    "COIN"
-  ],
-  "details": [
-    {
-      "symbol": "ESTC",
-      "price": NaN,
-      "high_52w": 108.0,
-      "low_52w": 42.05,
-      "drawdown_pct": NaN,
-      "rebound_pct": NaN,
-      "vol_ratio": 1.5,
-      "market_cap_b": 10.5,
-      "score": NaN
-    },
-    {
-      "symbol": "OKTA",
-      "price": NaN,
-      "high_52w": 174.85,
-      "low_52w": 62.66,
-      "drawdown_pct": NaN,
-      "rebound_pct": NaN,
-      "vol_ratio": 1.25,
-      "market_cap_b": 29.1,
-      "score": NaN
-    },
-    {
-      "symbol": "BRZE",
-      "price": NaN,
-      "high_52w": 37.33,
-      "low_52w": 15.26,
-      "drawdown_pct": NaN,
-      "rebound_pct": NaN,
-      "vol_ratio": 1.2,
-      "market_cap_b": 3.9,
-      "score": NaN
-    },
-    {
-      "symbol": "AFRM",
-      "price": NaN,
-      "high_52w": 93.2,
-      "low_52w": 42.09,
-      "drawdown_pct": NaN,
-      "rebound_pct": NaN,
-      "vol_ratio": 1.42,
-      "market_cap_b": 26.0,
-      "score": NaN
-    },
-    {
-      "symbol": "COIN",
-      "price": NaN,
-      "high_52w": 402.16,
-      "low_52w": 139.11,
-      "drawdown_pct": NaN,
-      "rebound_pct": NaN,
-      "vol_ratio": 1.38,
-      "market_cap_b": 47.1,
-      "score": NaN
-    }
-  ]
+  "count": 0,
+  "tickers": [],
+  "details": []
 }
