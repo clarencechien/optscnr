@@ -1,38 +1,10 @@
 {
   "Billion": {
     "first_seen": "2026-08-23",
-    "last_seen": "2026-09-01",
-    "consecutive_days": 3,
-    "total_mentions": 6,
+    "last_seen": "2026-09-06",
+    "consecutive_days": 4,
+    "total_mentions": 8,
     "ticker": "BGHL"
-  },
-  "Greenland": {
-    "first_seen": "2026-08-28",
-    "last_seen": "2026-08-28",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GLNDW"
-  },
-  "Beijing": {
-    "first_seen": "2026-08-28",
-    "last_seen": "2026-08-28",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "BGTCF"
-  },
-  "Mixue": {
-    "first_seen": "2026-08-28",
-    "last_seen": "2026-08-28",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "MXUBY"
-  },
-  "Advent": {
-    "first_seen": "2026-08-28",
-    "last_seen": "2026-08-28",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "AVK"
   },
   "Imax": {
     "first_seen": "2026-08-29",
@@ -40,13 +12,6 @@
     "consecutive_days": 2,
     "total_mentions": 6,
     "ticker": "IMAX"
-  },
-  "BitGo": {
-    "first_seen": "2026-08-29",
-    "last_seen": "2026-08-29",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BTGO"
   },
   "Manhattan": {
     "first_seen": "2026-09-01",
@@ -117,5 +82,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "HII"
+  },
+  "DoorDash": {
+    "first_seen": "2026-09-06",
+    "last_seen": "2026-09-06",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DASH"
+  },
+  "Miami": {
+    "first_seen": "2026-09-06",
+    "last_seen": "2026-09-06",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "MIAX"
+  },
+  "Sigma Lithium": {
+    "first_seen": "2026-09-06",
+    "last_seen": "2026-09-06",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SGML"
   }
 }

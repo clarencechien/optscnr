@@ -1,53 +1,53 @@
 {
-  "updated_at": "2026-09-04T23:20:13.051694",
+  "updated_at": "2026-09-06T23:09:42.687582",
   "count": 4,
   "blind_spots": [
     {
-      "name": "German",
-      "ticker": "GABC",
+      "name": "Billion",
+      "ticker": "BGHL",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 8,
+      "consecutive_days": 4,
+      "is_strong": true,
       "evidence": [
-        "Volkswagen plans 50,000 job cuts as analysts see ‘halo effect’ for German auto industry",
-        "Exclusive-OpenAI agents hijacked German website in previously undisclosed AI breakout this spring"
+        "South Korea Just Bet $20 Billion on SK hynix Stock",
+        "Anthropic Has Committed More Than $100 Billion to AWS, and Its Prospectus Could Reveal More Details "
       ]
     },
     {
-      "name": "Illumina",
-      "ticker": "ILMN",
-      "mentions_today": 2,
-      "total_mentions": 2,
+      "name": "Miami",
+      "ticker": "MIAX",
+      "mentions_today": 3,
+      "total_mentions": 3,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Bloom Energy, Illumina, and Everpure set to join S&P 500 in quarterly rebalance",
-        "Bloom Energy surges on inclusion to S&P 500; Illumina, Everpure also added"
+        "At least 5 killed in Amazon Prime Air cargo plane crash in Miami",
+        "Boeing 767 cargo plane bearing Amazon logo overruns Miami runway, halts flights"
       ]
     },
     {
-      "name": "Everpure",
-      "ticker": "P",
+      "name": "DoorDash",
+      "ticker": "DASH",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Bloom Energy, Illumina, and Everpure set to join S&P 500 in quarterly rebalance",
-        "Bloom Energy surges on inclusion to S&P 500; Illumina, Everpure also added"
+        "Why Walmart is moving in on DoorDash, Uber Eats delivery action, starting with donuts, coffee and sa",
+        "Why Walmart is moving in on DoorDash, Uber Eats delivery action, starting with donuts, coffee and sa"
       ]
     },
     {
-      "name": "Huntington Ingalls",
-      "ticker": "HII",
+      "name": "Sigma Lithium",
+      "ticker": "SGML",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Huntington Ingalls wins $336 million Navy contract for CVN 82",
-        "Huntington Ingalls wins $336M contract for long-lead carrier materials"
+        "Brazilian court suspends licenses for Sigma Lithium mine",
+        "Brazil court suspends operations at Sigma Lithium’s sole producing mine"
       ]
     }
   ]
