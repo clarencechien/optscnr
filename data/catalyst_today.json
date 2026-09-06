@@ -1,30 +1,82 @@
 {
-  "updated_at": "2026-09-04T22:29:14.286842",
+  "updated_at": "2026-09-06T22:15:04.549226",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 15,
-    "items_with_catalyst": 17,
+    "total_items": 107,
+    "items_with_company": 20,
+    "items_with_catalyst": 12,
     "items_both": 4
   },
-  "count": 12,
+  "count": 20,
   "tickers": [
-    "TSLA",
-    "BE",
-    "NFLX",
-    "AAPL",
+    "AMZN",
     "NVDA",
-    "MU",
-    "ORCL",
-    "XYZ",
+    "TSLA",
+    "PYPL",
+    "HOOD",
+    "OKTA",
+    "AAPL",
+    "GOOGL",
+    "META",
+    "GM",
+    "F",
+    "WMT",
+    "BRK-B",
     "BA",
-    "DELL",
-    "MRNA",
-    "AMZN"
+    "SNDK",
+    "MU",
+    "CRM",
+    "NFLX",
+    "IBM",
+    "ANET"
   ],
   "details": [
     {
+      "symbol": "AMZN",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "At least 5 killed in Amazon Prime Air cargo plane crash in Miami",
+          "catalysts": [
+            "crash"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Boeing 767 cargo plane bearing Amazon logo overruns Miami runway, halts flights",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "At least 5 dead after Amazon cargo plane overruns Miami airport runway",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "‘Model fatigue’ sets in as AI labs race to roll out new versions at frenetic pace",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Dow Jones Futures Eye Iran With Apple, Inflation In Focus; Nvidia, Micron, Sandisk Flash Buy Signals",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Can Nvidia (NVDA) Prove it Doesn’t Live or Die by a Handful of Hyperscalers?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
       "symbol": "TSLA",
-      "score": 5.0,
+      "score": 2.5,
       "evidence": [
         {
           "title": "Tesla's stock drops 6% as Cybercab update 'underwhelms' Wall Street",
@@ -34,45 +86,46 @@
           "has_catalyst": true
         },
         {
-          "title": "Mike Khouw: Cybercabs are a game changer—here's how I'm trading Tesla",
+          "title": "Goldman sees Cybercab giving Tesla a cost advantage in robotaxis",
           "catalysts": [],
           "has_catalyst": false
-        },
-        {
-          "title": "Tesla’s stock falls as Cybercab launch lands with a thud",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "BE",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Bloom Energy was just named to the S&P 500. These other stocks are joining the index as well.",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Bloom Energy surges on inclusion to S&P 500; Illumina, Everpure also added",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
+      "symbol": "PYPL",
       "score": 2,
       "evidence": [
         {
-          "title": "Here’s what’s worth streaming in September 2026 on Netflix, Hulu, HBO Max and more",
+          "title": "Finance stocks' biggest August movers: Robinhood rallies 36% as Aon, PayPal sink",
           "catalysts": [
-            "rising"
+            "rallies"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Finance stocks' biggest August movers: Robinhood rallies 36% as Aon, PayPal sink",
+          "catalysts": [
+            "rallies"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "OKTA",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Okta Jumps 20% as AI-Driven Security Fears Fuel a Beat-and-Raise Quarter",
+          "catalysts": [
+            "jumps"
           ],
           "has_catalyst": true
         }
@@ -80,56 +133,86 @@
     },
     {
       "symbol": "AAPL",
-      "score": 2,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Here’s what’s worth streaming in September 2026 on Netflix, Hulu, HBO Max and more",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
+          "title": "KeyBanc warns Apple’s iPhone 18 launch may be a negative catalyst for shares",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
-          "title": "Why Nvidia's 'defensive move' to acquire Hugging Face is about much more than chips",
+          "title": "Dow Jones Futures Eye Iran With Apple, Inflation In Focus; Nvidia, Micron, Sandisk Flash Buy Signals",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple (AAPL)’s New Mac Mini and Studio Bet Big on On-Device AI",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron is doubling down on AI memory chips. That could pay off big time for investors.",
+          "title": "‘Model fatigue’ sets in as AI labs race to roll out new versions at frenetic pace",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ORCL",
+      "symbol": "META",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Oracle’s stock looks like a compelling buy ahead of earnings",
+          "title": "‘Model fatigue’ sets in as AI labs race to roll out new versions at frenetic pace",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "GM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Musk’s xAI loses court bid to block Minnesota’s AI ‘nudification’ ban",
+          "title": "GM vs. Ford: U.S. defense, energy sectors add to automakers' century-old rivalry",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "GM vs. Ford: U.S. defense, energy sectors add to automakers' century-old rivalry",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Walmart is moving in on DoorDash, Uber Eats delivery action, starting with donuts, coffee and sandwiches ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Abel: Two ways Berkshire hopes to cash in on AI",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -140,40 +223,73 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Boeing gets $241.34M contract boost to repair Navy fighter aircraft",
+          "title": "Boeing 767 cargo plane bearing Amazon logo overruns Miami runway, halts flights",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DELL",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bullish Option Traders Might Like This Play On Dell Stock",
+          "title": "Dow Jones Futures Eye Iran With Apple, Inflation In Focus; Nvidia, Micron, Sandisk Flash Buy Signals",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRNA",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "This Fund Bought Moderna Before It Nearly Tripled. See Its 2 New Stock Picks",
+          "title": "Dow Jones Futures Eye Iran With Apple, Inflation In Focus; Nvidia, Micron, Sandisk Flash Buy Signals",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "CRM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon.com (AMZN): AI Exposure Adds, But Other Businesses Drive Results",
+          "title": "Salesforce (CRM)’s AI Numbers Just Gave Benioff His Swagger Back",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Netflix Raised U.K. Prices Again. History Says a Netflix Price Increase Has Never Cost It a Year of Revenue Growth.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Arista Networks vs. IBM: Comparing Quarterly Revenue Trends Between These Artificial Intelligence Giants",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ANET",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Arista Networks vs. IBM: Comparing Quarterly Revenue Trends Between These Artificial Intelligence Giants",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -181,7 +297,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1,
-    "xAI (private)": 1
+    "OpenAI (private)": 3,
+    "Anthropic (private)": 2
   }
 }
