@@ -30,7 +30,7 @@
 | 樣本 | n / 事件 | A 死抱 | B 2x賣半 | C 分類綁定 | 逐月（事件等權）A / B / C |
 |---|---|---|---|---|---|
 | 全部 | 579 / 357 | 1.17 | 1.10 | **1.20** | 6月 1.92/1.52/1.93；7月 1.02/1.01/1.05；8月 1.02/0.92/1.05 |
-| 規則 B 篩後 | 118 / 96 | 1.79 | 1.48 | **1.83** | 6月 4.13/2.88/4.15；7月 1.24/1.18/1.26；8月 2.35/1.63/2.32 |
+| 規則 B 篩後（含 Δ7d>0，與程式一致） | 111 / 93 | 1.77 | 1.47 | **1.81** | 6月 4.13/2.88/4.16；7月 1.29/1.22/1.31；8月 2.15/1.53/2.13 |
 
 - C 三個月都不輸 A、B，但 C 是**看完矩陣才定義的**（樣本內），真實優勢要打折；它的價值是「一個可預先登記的假說」，不是結論。
 - B（你現在的規則）三個月都墊底：2x 賣半是保險，保費 ≈ 0.1–0.3x EV。命中票 51% 峰值在 T+20、66% 到 T+20 仍 ≥2x——贏家一直跑，2x 太早。
@@ -186,10 +186,10 @@ Custom domain（`wrangler.toml` 的 `[[routes]]` 解開填自己的網域）—�
 
 | 批 | 內容 | 驗收 |
 |---|---|---|
-| 1（本週） | P0-a schema v2、P0-b 路徑紀錄、P0-d 矩陣 JSON | 明日 SHADOWLOG 出現矩陣節；`path[]` 開始累積 |
-| 2（本週） | P0-c 結構候選＋`structural_pass`、P1 賣點欄位、候選 JSON 輸出 | README 出現 🎯 區塊；`data/dashboard/candidates_*.json` 每日產出 |
+| 1（**已實作 2026-09-08**） | P0-a schema v2（`entry_bid/entry_ask/last_trade_at/quote_at`）、P0-b 路徑紀錄（`shadow_tracer.record_paths` → `path[]`）、P0-d 矩陣（`strategy_lab.compute_matrix` → `data/strategy_matrix.json` + SHADOWLOG「🧭 策略矩陣」節） | 明日 SHADOWLOG 出現矩陣節；`path[]` 開始累積 |
+| 2（**已實作 2026-09-08**） | P0-c 結構候選（`strategy_lab.structural_pass`、README「🎯 結構候選」、快照 `structural_pass`、SHADOWLOG cohort 表）、P1 賣點（`strategy_lab.sell_points`）、候選 JSON（`data/dashboard/candidates_<市場日>.json` + `latest.json`） | README 出現 🎯 區塊；`data/dashboard/candidates_*.json` 每日產出 |
 | 3（**已建骨架**） | `cloudflare/` 第二鬧鐘 + `/api/health` + 排程健康頁（不接 LLM）；擁有者在 CF dashboard 連 repo、設 `GITHUB_TOKEN`、（選）自訂網域 | 排程延遲 >65 分鐘時 Worker 補發；`/api/health` 看得到各 workflow 觸發時間 |
-| 4（下週） | 同一 Worker 的 dashboard 加：今日候選 + History 矩陣（讀 raw JSON） | 手機能開、矩陣每格顯示 n/EV/狀態 |
+| 4（**已實作**，等第 1-2 批資料落地） | `cloudflare/public/index.html` 讀 raw `data/dashboard/latest.json` 與 `data/strategy_matrix.json`：今日候選 + History 矩陣 | 手機能開、矩陣每格顯示 n/EV/狀態 |
 | 5 | Worker 接 LLM + decisions log | `data/decisions/` 每交易日一檔；T8 開始累積 |
 | 6 | P0-e 語義修復、P1 對照組 | T6 開始累積 |
 

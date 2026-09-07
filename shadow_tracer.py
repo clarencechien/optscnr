@@ -89,10 +89,86 @@ def fetch_option_price(ticker, expiry, strike):
             "opt_price": float(row.get('lastPrice', 0)),
             "spot": spot,
             "iv": float(row.get('impliedVolatility', 0)) * 100,
+            # schema v2：T+N 也記 bid/ask（可成交價；舊紀錄沒有這兩欄）
+            "bid": _num(row.get('bid')), "ask": _num(row.get('ask')),
             "note": "ok",
         }
     except Exception as e:
         return {"opt_price": None, "spot": None, "iv": None, "note": f"err:{e}"}
+
+
+def _num(x):
+    try:
+        v = float(x)
+        return None if v != v else v
+    except (TypeError, ValueError):
+        return None
+
+
+def market_date_str():
+    """市場基準日（SPY 最後交易日；抓不到 fallback 今日）——路徑紀錄的日期標籤用，
+    與 main.py v3.13 同一套錨，排程延遲跨日不會標錯天。"""
+    try:
+        spy = yf.Ticker("SPY").history(period="5d")
+        if not spy.empty:
+            return spy.index[-1].date().isoformat()
+    except Exception:
+        pass
+    return datetime.now().date().isoformat()
+
+
+def record_paths(all_month_signals, mkt_date, max_chains=250):
+    """PLAN 4.1 P0-b：每日路徑紀錄。對「未到期且信號 ≤60 天」的高分信號，
+    每天 append 一筆 {date,last,bid,ask,spot,iv} 到 sig['path']（append-only，同日不重複）。
+    同 (ticker, expiry) 只抓一次鏈；回答 tracker T1（剩餘半倉抱到 DTE 21 的下場）與 T9。
+    回傳 (更新筆數, 抓鏈次數)。"""
+    today = datetime.strptime(mkt_date, "%Y-%m-%d").date()
+    open_sigs = {}
+    for sig in all_month_signals:
+        try:
+            exp = datetime.strptime(sig["expiry"], "%Y-%m-%d").date()
+            snap = datetime.strptime(sig["snapshot_date"], "%Y-%m-%d").date()
+        except Exception:
+            continue
+        if exp < today or (today - snap).days > 60:
+            continue
+        if any(p.get("date") == mkt_date for p in (sig.get("path") or [])):
+            continue  # 今天記過了（手動重跑保護）
+        open_sigs.setdefault((sig["ticker"], sig["expiry"]), []).append(sig)
+    if not open_sigs:
+        print("  🛤️  路徑紀錄：沒有未到期信號。")
+        return 0, 0
+    keys = list(open_sigs)[:max_chains]
+    print(f"  🛤️  路徑紀錄：{sum(len(v) for v in open_sigs.values())} 筆未到期信號、{len(keys)} 條鏈...")
+    updated = 0
+    for ticker, expiry in keys:
+        try:
+            tk = yf.Ticker(ticker)
+            spot = None
+            try:
+                h = tk.history(period="1d")
+                spot = float(h['Close'].iloc[-1]) if not h.empty else None
+            except Exception:
+                pass
+            calls = tk.option_chain(expiry).calls
+        except Exception as e:
+            print(f"    💨 {ticker} {expiry}: {type(e).__name__}")
+            continue
+        for sig in open_sigs[(ticker, expiry)]:
+            m = calls[calls['strike'] == sig["strike"]]
+            entry = {"date": mkt_date, "spot": spot}
+            if m.empty:
+                entry.update({"last": None, "bid": None, "ask": None, "iv": None, "note": "strike_gone"})
+            else:
+                row = m.iloc[0]
+                entry.update({"last": _num(row.get('lastPrice')), "bid": _num(row.get('bid')),
+                              "ask": _num(row.get('ask')),
+                              "iv": (_num(row.get('impliedVolatility')) or 0) * 100 or None})
+            sig.setdefault("path", []).append(entry)
+            updated += 1
+        time.sleep(random.uniform(0.2, 0.5))
+    print(f"  🛤️  路徑紀錄完成：{updated} 筆")
+    return updated, len(keys)
 
 
 def make_verdict(entry_price, results):
@@ -194,7 +270,7 @@ def _is_zeroed(sig):
     return bool(m) and max(m) < 0.2
 
 
-def generate_shadowlog_md(signals, month_str):
+def generate_shadowlog_md(signals, month_str, matrix_md=""):
     """產出 SHADOWLOG_YYYY-MM.md，三區塊。
     只記市場事實，不記持有/損益。"""
     md = f"# 🌑 SHADOWLOG {month_str} — 信號校準報告\n\n"
@@ -333,6 +409,27 @@ def generate_shadowlog_md(signals, month_str):
         md += f"| 其他 tag 組合 | {len(ot_j)} | {len(ot_hit)} | {or_} |\n"
         md += "\n_指紋假說出自事後分析（post-hoc），以本表的後續樣本為準；樣本 <10 筆僅供參考。_\n\n"
 
+    # === 🎯 結構候選 cohort（PLAN 4.1 P0-c；舊信號即時推導 structural_pass）===
+    try:
+        import strategy_lab as SL
+        judged_all = [s for s in signals if s.get("verdict")]
+        sp = [s for s in judged_all if SL.sig_structural_pass(s)]
+        nsp = [s for s in judged_all if not SL.sig_structural_pass(s)]
+        md += "## 🎯 結構候選 vs 其他（規則 B：DTE 21–120、IV<50、OTM<25%、Δ7d>0）\n\n"
+        md += "| cohort | 已驗證 | 噴出 | 命中率 | 歸零率 | 期望值(階梯) |\n|---|---|---|---|---|---|\n"
+        for name, grp in (("🎯 結構候選", sp), ("其他", nsp)):
+            hit = [s for s in grp if s["verdict"].startswith("✅")]
+            zr = [s for s in grp if _is_zeroed(s)]
+            evs = [v for v in (_ladder_return(s) for s in grp) if v is not None]
+            md += (f"| {name} | {len(grp)} | {len(hit)} | {len(hit)/len(grp)*100:.0f}% | {len(zr)/len(grp)*100:.0f}% "
+                   f"| {sum(evs)/len(evs):.2f}x |\n") if grp else f"| {name} | 0 | — | — | — | — |\n"
+        md += "\n_預先登記 2026-09-08；100 筆出樣本 T+20 前不改門檻。_\n\n"
+    except Exception as e:
+        md += f"_（結構候選 cohort 計算失敗：{e}）_\n\n"
+
+    if matrix_md:
+        md += matrix_md
+
     # === 區塊一：暴動高 IV 過濾驗證 ===
     md += "## 🔥 區塊一：暴動高 IV 過濾驗證\n\n"
     md += "> 被 v3.9「⚠️暴動高IV」標記的，後來真的該擋嗎？（驗證 IV>80% 門檻）\n\n"
@@ -417,6 +514,8 @@ def main():
     prev_month = (now.replace(day=1) - timedelta(days=1)).strftime("%Y-%m")
     months.append(prev_month)
 
+    mkt_date = market_date_str()
+    loaded = {}
     for month_str in months:
         signals, path = load_month_signals(month_str)
         if signals is None:
@@ -425,17 +524,39 @@ def main():
 
         print(f"\n📂 處理 {month_str}（{len(signals)} 筆信號）")
         updated = backfill(signals)
+        # PLAN 4.1 P0-b：每日路徑紀錄（未到期信號）
+        try:
+            record_paths(signals, mkt_date)
+        except Exception as e:
+            print(f"  ⚠️ 路徑紀錄失敗（不影響回填）：{e}")
 
         # 寫回 JSON（即使沒回填也重算 verdict）
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(signals, f, ensure_ascii=False, indent=2)
+        loaded[month_str] = signals
 
-        # 產出 md
-        md = generate_shadowlog_md(signals, month_str)
+    # PLAN 4.1 P0-d：策略矩陣——用全部月份（含已封存的）重算，寫 JSON + 附進各月 SHADOWLOG
+    matrix_md = ""
+    try:
+        import strategy_lab as SL
+        all_sigs = []
+        for f in sorted(glob(os.path.join(IV_LOG_DIR, "signals_*.json"))):
+            with open(f, encoding='utf-8') as fh:
+                all_sigs.extend(json.load(fh))
+        mx = SL.compute_matrix(all_sigs)
+        with open(os.path.join(DATA_DIR, "strategy_matrix.json"), 'w', encoding='utf-8') as f:
+            json.dump(mx, f, ensure_ascii=False, indent=2)
+        matrix_md = SL.render_matrix_md(mx)
+        print(f"  🧭 策略矩陣：成熟 {mx['n_mature']} / {mx['n_signals']} 筆 → data/strategy_matrix.json")
+    except Exception as e:
+        print(f"  ⚠️ 策略矩陣失敗：{e}")
+
+    for month_str, signals in loaded.items():
+        md = generate_shadowlog_md(signals, month_str, matrix_md=matrix_md)
         md_path = f"SHADOWLOG_{month_str}.md"
         with open(md_path, 'w', encoding='utf-8') as f:
             f.write(md)
-        print(f"  📝 {md_path} 已生成（{'有回填' if updated else '無新回填，僅刷新'}）")
+        print(f"  📝 {md_path} 已生成")
 
     print("\n✅ Shadow Tracer 完成。")
 
