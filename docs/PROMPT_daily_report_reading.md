@@ -1,5 +1,10 @@
 # PROMPT：每日妖股報表判讀指南 v3.0（給接手的 Claude session）
 
+> **2026-09-08 起的分工**：本檔是「人在對話裡判讀」用的完整版。
+> 每日自動化的三題事實題（Worker → LLM → `data/decisions/`）用的是短版
+> `PROMPT_daily_report_reading_v4.md`；本檔的七月判例已整理到 `CASEBOOK_2026-07.md`，
+> 之後新判例加在 casebook，不再往這裡塞。
+
 > 用途：使用者每天會貼一份 optscnr scanner 的妖股獵殺報表給你。
 > 本文件教你怎麼解讀、怎麼回應、怎麼找出值得一看的標的。
 > 搭配 CONTEXT.md（系統原則）使用。**回應一律台灣正體中文，勿簡體、勿中國用語。**

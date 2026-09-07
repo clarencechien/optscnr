@@ -210,6 +210,36 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 不放寬樂透 size 上限、不放寬絞肉區（DTE<21）閘門、不因單月命中率改規則、
 盤後開牌標的只標記不自動排除。
 
+## 第 5 批：Worker 接 LLM decisions + 事實庫活用 + dashboard 改版（2026-09-08，第三批）
+
+- **cloudflare/src/index.js**：每發 cron 都跑「第二鬧鐘 → decisions」。decisions 冪等：讀 main 的
+  `latest.json` → `data/decisions/<市場日>.json` 已存在就跳過；候選 0 筆不呼叫 LLM 直接記檔；否則
+  prompt（`docs/PROMPT_daily_report_reading_v4.md` 的 ```prompt 區塊，**改 prompt 不用重部署**）＋候選＋
+  事實庫 → OpenRouter（OpenAI 相容，預設 `anthropic/claude-opus-5`，web 外掛給第 (a) 題找來源）→ GitHub
+  Contents API 建檔。LLM 失敗也留檔（T8 分母）。新端點 `POST /api/decide`、`/api/decisions`、`/api/facts`。
+  cron 加 02:05 UTC 第三發（補發的 scanner 跑完後補 decisions）。週末第二鬧鐘不補發（休市重播）。
+- **Cloudflare Access（選用）**：設 `ACCESS_TEAM_DOMAIN` + `ACCESS_AUD` 後 Worker 驗每個請求的 JWT
+  （RS256、aud、exp；certs 快取 1 小時）。Access policy 設錯時 `/api/decide` 這種會花錢的端點仍 401。
+- **事實庫活用（擁有者當日要求）**：`docs/FACTS_ledger.md` 重整（只搬不改字，字數核對 29,109 相同）：
+  合併重複段、「其他」段逐條歸位、標的段依代號排序、檔頭寫機器可讀規則、尾端加「待審（LLM 提案）」段。
+  Worker `parseLedger()` 把候選標的段＋通用段（環境/判決/校準/工具）最新 5 條帶進 payload.facts；
+  prompt v4.1 加「事實庫優先／衝突標記」；LLM 回 `facts_proposed`（必附 URL）→ Worker 附加到待審段
+  （同來源去重、sha 衝突重試 3 次）。人審過後搬到該標的段落。
+- **PAT 權限變更**：`GITHUB_TOKEN` 要 Contents **read+write**（寫 decisions 與 ledger 待審段）。
+- **shadow_tracer.backfill_decisions**：對每個 decisions 檔逐筆補 `outcome`（T+5/10/20 倍數、peak、mature、
+  verdict；只補空的或未成熟的，不動答案）；彙整 `data/dashboard/decisions_log.json` 含 T8 摘要
+  （事件答「有／無／未確認」各自的成熟命中率）。scanner.yml commit 加 `data/decisions/*.json`。
+- **main.py**：候選 JSON 加 `oi_delta_status/features/warnings/events/recent_spots`（近 6 日 universe 收盤，
+  第 (b) 題用，跳空＝日對日 >8% 近似）；README 加「🤖 LLM 三題」節（前一市場日的答案）——**雙軌**：
+  軌 A README（Python 渲染，CF 掛了也在）、軌 B CF dashboard（加 History/Decisions/事實庫/排程）。
+- **dashboard 改版**：dataviz 調色盤 tokens（淺/深各自選色）、四個 stat tile、五個分頁、EV 長條圖
+  （最佳政策藍、其餘灰、1.0x 紅線）、候選表附 LLM 三題與事實庫條數、Decisions 逐日展開含 outcome、
+  事實庫可搜尋、排程頁台北時間。用 Playwright 對 mock 資料截圖核對三種尺寸/深淺。
+- **docs**：`PROMPT_daily_report_reading_v4.md`（機器用短版）、`CASEBOOK_2026-07.md`（判例從 v3 搬出）、
+  v3 檔頭加分工說明。
+- 模型費用估算：Opus 5 每交易日 ≈ US$0.05–0.15（候選 0 筆時零）；`model_served` 入檔，T8 可分模型比。
+- 未做：LLM 三題答對率的人工抽查機制（先累積 20 個交易日再設計）；ledger 待審段的「一鍵入庫」（刻意不做，入庫要人審）。
+
 ## 審計 bug 修復 + P0-e 語義 + P1 對照組（2026-09-08，第二批）
 
 - **shadow_tracer 回填 bug**：`err:*` 失敗結果一存進去就被當「已填」永久略過（註解寫「明天再補」）。

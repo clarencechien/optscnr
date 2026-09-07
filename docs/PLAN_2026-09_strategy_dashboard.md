@@ -155,8 +155,10 @@ Custom domain（`wrangler.toml` 的 `[[routes]]` 解開填自己的網域）—�
 
 - 資料主權在 git（append-only 審計）；dashboard 直接讀 raw.githubusercontent 的 JSON，**不需要 R2**
   （之後若 raw CDN 快取延遲惱人，再加 R2 當讀取快取，可隨時從 git 重建）。
-- PAT：fine-grained、只授權本 repo，Actions read+write（補發）、Contents read（第 5 批寫 decisions 時改 write）。
-- LLM 回答 log 格式（`data/decisions/<市場日>.json`）：`{prompt_version, model, decided_at, candidates:[{signal_id, strategy, sell_points, q_event, q_gap, q_delta, status}], raw_answer}`；事後由 tracer 回填 `outcome`，**不回寫當時答案**。
+- PAT：fine-grained、只授權本 repo，Actions read+write（補發）、Contents **read+write**（第 5 批起：寫 decisions 與 FACTS_ledger 待審段）。
+- LLM 回答 log 格式（`data/decisions/<市場日>.json`）：`{market_date, prompt_version, model, model_served, decided_at, llm_called, web_search, usage, facts_general_n, candidates:[{signal_id, ticker, expiry, strike, entry_price, strategy, strategy_label, sell_points, facts_used, q_event, q_gap, q_delta, note, status}], facts_proposed:[{ticker, fact, date, source}], facts_appended, raw_answer, error}`；事後由 tracer 回填每筆 `outcome`，**不回寫當時答案**。
+- 事實庫進出（第 5 批）：`docs/FACTS_ledger.md` 候選標的段＋通用段最新 5 條 → payload.facts；LLM `facts_proposed`（必附 URL）→ 待審段 → 人審後搬到標的段。事實庫是**人維護的**，程式只寫待審段。
+- 雙軌：軌 A＝GitHub README（Python 渲染：🎯 結構候選＋前一市場日 🤖 LLM 三題；CF 掛了也在），軌 B＝CF dashboard（同一批 JSON＋History/Decisions/事實庫/排程）。兩軌讀同一份資料，差別只在呈現與互動。
 
 ### 4.3 Dashboard「History」區要長什麼樣
 
@@ -190,7 +192,7 @@ Custom domain（`wrangler.toml` 的 `[[routes]]` 解開填自己的網域）—�
 | 2（**已實作 2026-09-08**） | P0-c 結構候選（`strategy_lab.structural_pass`、README「🎯 結構候選」、快照 `structural_pass`、SHADOWLOG cohort 表）、P1 賣點（`strategy_lab.sell_points`）、候選 JSON（`data/dashboard/candidates_<市場日>.json` + `latest.json`） | README 出現 🎯 區塊；`data/dashboard/candidates_*.json` 每日產出 |
 | 3（**已建骨架**） | `cloudflare/` 第二鬧鐘 + `/api/health` + 排程健康頁（不接 LLM）；擁有者在 CF dashboard 連 repo、設 `GITHUB_TOKEN`、（選）自訂網域 | 排程延遲 >65 分鐘時 Worker 補發；`/api/health` 看得到各 workflow 觸發時間 |
 | 4（**已實作**，等第 1-2 批資料落地） | `cloudflare/public/index.html` 讀 raw `data/dashboard/latest.json` 與 `data/strategy_matrix.json`：今日候選 + History 矩陣 | 手機能開、矩陣每格顯示 n/EV/狀態 |
-| 5 | Worker 接 LLM + decisions log | `data/decisions/` 每交易日一檔；T8 開始累積 |
+| 5（**已實作 2026-09-08**） | Worker 接 LLM + decisions log：`runDecision()` 冪等（同市場日一檔）、prompt 從 `docs/PROMPT_daily_report_reading_v4.md` 讀（v4.1，帶事實庫）、OpenRouter `anthropic/claude-opus-5`、候選 0 筆不呼叫；`facts_proposed` → `FACTS_ledger.md` 待審段；tracer `backfill_decisions` 補 outcome + `decisions_log.json`（T8 摘要）；README 加 🤖 節（軌 A）；dashboard 加 Decisions／事實庫頁（軌 B）；（選）Cloudflare Access JWT 驗證 | `data/decisions/` 每交易日一檔；T8 開始累積 |
 | 6（**已實作 2026-09-08**） | P0-e：快照加 `features/warnings/events` 結構欄（`strategy_lab.split_tags`，🆕新倉暴量 → key `first_seen_in_feed`）、OI Δ7d 缺歷史→null＋`oi_delta_status`、指紋 cohort 改 feature 判定；P1 對照組：`data/universe_spots/<市場日>.json` 每日記全 universe spot，`strategy_lab.control_group_stats` 從後續日檔算 20 日漲>10% 比例（上榜 vs universe），矩陣 JSON `control` 節＋SHADOWLOG 一行 | T6 開始累積 |
 | 7（**已實作 2026-09-08**，審計 bug） | tracer 回填 `err:*` 永久略過→改重試（終態只有有價/expiry_gone/strike_gone/missed_window）、回填記 `observed_at/late_days`、`today` 用市場基準日；`get_target_dates` 週五重複；快照月檔損壞→隔離不重建、原子寫入 | 回填失敗隔日自動補；週五到期日不再漏 |
 
