@@ -228,7 +228,15 @@ const pct = x => (x == null ? '—' : (x * 100).toFixed(0) + '%');
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const tpe = iso => { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(iso)); } catch { return iso; } };
 const ago = iso => { const m = Math.round((Date.now() - new Date(iso)) / 60000); return m < 60 ? `${m} 分前` : m < 1440 ? `${Math.round(m / 60)} 小時前` : `${Math.round(m / 1440)} 天前`; };
-const getJson = async (u, opts) => { const r = await fetch(u, { cache: 'no-store', ...opts }); if (!r.ok) throw new Error(`${u} ${r.status}`); return r.json(); };
+const getJson = async (u, opts) => {
+  const r = await fetch(u, { cache: 'no-store', ...opts });
+  if (!r.ok) {
+    let detail = '';
+    try { const j = await r.json(); detail = j.reason ? `${j.reason}：${j.hint || ''}` : (j.error || ''); } catch {}
+    throw new Error(`${u} ${r.status}${detail ? '｜' + detail : ''}`);
+  }
+  return r.json();
+};
 const chip = (el, cls, text) => { el.className = 'chip ' + cls; el.innerHTML = '<i></i>' + esc(text); };
 
 // ---------- tabs ----------
@@ -454,13 +462,22 @@ async function loadDecisions() {
   state.decisions = { days: days || [], t8_by_event_answer: t8 || {} };
   renderDecisions(); renderCandidates();
 }
+function apiFail(where, e) {
+  const msg = String(e.message || e);
+  $('#ts').textContent = `${where} 失敗：${msg}`;
+  $('#ts').style.color = 'var(--crit)';
+  if (msg.includes(' 401')) {
+    chip($('#schedChip'), 'bad', 'Worker 拒絕 /api（Access 驗證）');
+    if (!$('#accessBanner')) $('.wrap').insertAdjacentHTML('afterbegin', `<div id="accessBanner" class="card" style="border-color:var(--crit)"><div class="card-b"><b>頁面開得了，但 Worker 對所有 /api 回 401。</b><br><span class="note">靜態頁不經過 Worker，所以看得到版面；API 走 Worker 的 Cloudflare Access 檢查沒過。原因：${esc(msg.split('｜')[1] || msg)}</span></div></div>`);
+  }
+}
 async function loadHealth() {
   try { renderHealth(await getJson('/api/health')); }
-  catch (e) { $('#ts').textContent = '/api/health 失敗：' + e; chip($('#schedChip'), 'bad', '排程狀態未知'); }
+  catch (e) { if (!String(e.message || e).includes(' 401')) chip($('#schedChip'), 'bad', '排程狀態未知'); apiFail('/api/health', e); }
 }
 async function loadFacts() {
   try { state.facts = await getJson('/api/facts'); }
-  catch { $('#factsMeta').textContent = '（/api/facts 讀取失敗）'; return; }
+  catch (e) { $('#factsMeta').textContent = `（/api/facts 讀取失敗：${String(e.message || e).split('｜')[0]}）`; return; }
   renderFacts(); renderCandidates();
 }
 loadLatest(); loadMatrix(); loadDecisions(); loadHealth(); loadFacts();
