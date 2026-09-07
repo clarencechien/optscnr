@@ -1,0 +1,21 @@
+{
+  "market_date": "2026-09-04",
+  "decided_at": "2026-09-07T06:36:22.572Z",
+  "source": "manual",
+  "prompt_version": "v4.1",
+  "model": "anthropic/claude-opus-5",
+  "model_served": null,
+  "llm_called": false,
+  "web_search": true,
+  "candidates_generated_at": "2026-09-07T06:26:13Z",
+  "n_candidates": 0,
+  "facts_general_n": 0,
+  "facts_error": null,
+  "candidates": [],
+  "facts_proposed": [],
+  "facts_appended": 0,
+  "raw_answer": null,
+  "usage": null,
+  "error": null,
+  "note": "今日無結構候選（空手是正確執行，不補名額；未呼叫 LLM）"
+}
