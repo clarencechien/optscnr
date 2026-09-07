@@ -65,6 +65,8 @@ jobs:
           git add SHADOWLOG_*.md || true
           # PLAN 2026-09：結構候選 JSON（dashboard 讀）+ 策略矩陣
           git add data/dashboard/*.json data/strategy_matrix.json 2>/dev/null || true
+          # P1 對照組：全 universe 每日 spot（tracker T6）
+          git add data/universe_spots/*.json 2>/dev/null || true
           # v3.12 P0-4 方案 A：TLT 併入主掃描 session，產出一併 commit
           # （history csv 已含在 data/*.csv；逐檔存在才 add，見 log.md Bug 4 教訓）
           for f in data/tlt_radar.json data/tlt_radar_report.md \

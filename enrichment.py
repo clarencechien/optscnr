@@ -52,28 +52,33 @@ def add_oi_delta(df):
     若找不到歷史紀錄，OI_d7 顯示為 OI 本身（代表「新增倉位」）
     """
     hist_df, hist_date = load_historical_csv(days_back=7)
-    
+
     if hist_df is None:
         print("⚠️ 找不到 7 天前的 CSV，OI Δ7d 標示為「N/A」")
         df['OI_d7'] = None
+        df['OI_d7_status'] = 'no_history'
         return df, None
-    
+
     # 建立歷史 OI 查詢字典
     hist_lookup = {}
     for _, row in hist_df.iterrows():
         key = (row['Stock'], str(row['Expiry']), float(row['Strike']))
         hist_lookup[key] = int(row.get('OpenInterest', 0))
-    
-    # 計算 delta
+
+    # 計算 delta（P0-e，2026-09-08）：
+    # 舊版找不到 7 日前合約就回「當前 OI」——把「缺歷史」當成「7 天前 OI=0」，
+    # 八月 376 筆快照有 206 筆 oi_d7==oi 就是這樣灌出來的（GPT 審計 P0-C）。
+    # 而且歷史 CSV 只存通過篩選的列，不是完整合約宇宙：昨天沒它 ≠ 它是新的。
+    # 現在：缺歷史 → None + status='no_history'；只有前後兩筆都觀測到才算 confirmed。
     def get_delta(row):
         key = (row['Stock'], str(row['Expiry'])[:10], float(row['Strike']))
         prev_oi = hist_lookup.get(key)
-        current_oi = int(row['OpenInterest'])
         if prev_oi is None:
-            return current_oi  # 全新合約 → delta = 當前 OI
-        return current_oi - prev_oi
-    
+            return None
+        return int(row['OpenInterest']) - prev_oi
+
     df['OI_d7'] = df.apply(get_delta, axis=1)
+    df['OI_d7_status'] = df['OI_d7'].apply(lambda v: 'no_history' if pd.isna(v) else 'confirmed')
     return df, hist_date
 
 

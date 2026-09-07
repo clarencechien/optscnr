@@ -191,7 +191,8 @@ Custom domain（`wrangler.toml` 的 `[[routes]]` 解開填自己的網域）—�
 | 3（**已建骨架**） | `cloudflare/` 第二鬧鐘 + `/api/health` + 排程健康頁（不接 LLM）；擁有者在 CF dashboard 連 repo、設 `GITHUB_TOKEN`、（選）自訂網域 | 排程延遲 >65 分鐘時 Worker 補發；`/api/health` 看得到各 workflow 觸發時間 |
 | 4（**已實作**，等第 1-2 批資料落地） | `cloudflare/public/index.html` 讀 raw `data/dashboard/latest.json` 與 `data/strategy_matrix.json`：今日候選 + History 矩陣 | 手機能開、矩陣每格顯示 n/EV/狀態 |
 | 5 | Worker 接 LLM + decisions log | `data/decisions/` 每交易日一檔；T8 開始累積 |
-| 6 | P0-e 語義修復、P1 對照組 | T6 開始累積 |
+| 6（**已實作 2026-09-08**） | P0-e：快照加 `features/warnings/events` 結構欄（`strategy_lab.split_tags`，🆕新倉暴量 → key `first_seen_in_feed`）、OI Δ7d 缺歷史→null＋`oi_delta_status`、指紋 cohort 改 feature 判定；P1 對照組：`data/universe_spots/<市場日>.json` 每日記全 universe spot，`strategy_lab.control_group_stats` 從後續日檔算 20 日漲>10% 比例（上榜 vs universe），矩陣 JSON `control` 節＋SHADOWLOG 一行 | T6 開始累積 |
+| 7（**已實作 2026-09-08**，審計 bug） | tracer 回填 `err:*` 永久略過→改重試（終態只有有價/expiry_gone/strike_gone/missed_window）、回填記 `observed_at/late_days`、`today` 用市場基準日；`get_target_dates` 週五重複；快照月檔損壞→隔離不重建、原子寫入 | 回填失敗隔日自動補；週五到期日不再漏 |
 
 ---
 
