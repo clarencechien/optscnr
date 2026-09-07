@@ -6,13 +6,6 @@
     "total_mentions": 8,
     "ticker": "BGHL"
   },
-  "Imax": {
-    "first_seen": "2026-08-29",
-    "last_seen": "2026-08-30",
-    "consecutive_days": 2,
-    "total_mentions": 6,
-    "ticker": "IMAX"
-  },
   "Manhattan": {
     "first_seen": "2026-09-01",
     "last_seen": "2026-09-01",
@@ -57,9 +50,9 @@
   },
   "German": {
     "first_seen": "2026-09-04",
-    "last_seen": "2026-09-04",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-09-07",
+    "consecutive_days": 2,
+    "total_mentions": 5,
     "ticker": "GABC"
   },
   "Illumina": {
@@ -92,9 +85,9 @@
   },
   "Miami": {
     "first_seen": "2026-09-06",
-    "last_seen": "2026-09-06",
-    "consecutive_days": 1,
-    "total_mentions": 3,
+    "last_seen": "2026-09-07",
+    "consecutive_days": 2,
+    "total_mentions": 5,
     "ticker": "MIAX"
   },
   "Sigma Lithium": {
@@ -103,5 +96,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "SGML"
+  },
+  "Greenland": {
+    "first_seen": "2026-09-07",
+    "last_seen": "2026-09-07",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GLNDW"
   }
 }

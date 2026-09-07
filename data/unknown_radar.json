@@ -1,53 +1,41 @@
 {
-  "updated_at": "2026-09-06T23:09:42.687582",
-  "count": 4,
+  "updated_at": "2026-09-07T23:45:33.660457",
+  "count": 3,
   "blind_spots": [
-    {
-      "name": "Billion",
-      "ticker": "BGHL",
-      "mentions_today": 2,
-      "total_mentions": 8,
-      "consecutive_days": 4,
-      "is_strong": true,
-      "evidence": [
-        "South Korea Just Bet $20 Billion on SK hynix Stock",
-        "Anthropic Has Committed More Than $100 Billion to AWS, and Its Prospectus Could Reveal More Details "
-      ]
-    },
     {
       "name": "Miami",
       "ticker": "MIAX",
+      "mentions_today": 2,
+      "total_mentions": 5,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "Crashed Amazon cargo jet struck two vehicles, ended up 1,300 feet past runway, NTSB says",
+        "At least five killed in Amazon Prime Air cargo plane crash in Miami"
+      ]
+    },
+    {
+      "name": "German",
+      "ticker": "GABC",
       "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 5,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "At least 5 killed in Amazon Prime Air cargo plane crash in Miami",
-        "Boeing 767 cargo plane bearing Amazon logo overruns Miami runway, halts flights"
+        "SpaceX rival launches rocket in historic first, says industry is 'desperate' for more",
+        "Far-right AfD landslide in German state piles pressure on federal government"
       ]
     },
     {
-      "name": "DoorDash",
-      "ticker": "DASH",
+      "name": "Greenland",
+      "ticker": "GLNDW",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Why Walmart is moving in on DoorDash, Uber Eats delivery action, starting with donuts, coffee and sa",
-        "Why Walmart is moving in on DoorDash, Uber Eats delivery action, starting with donuts, coffee and sa"
-      ]
-    },
-    {
-      "name": "Sigma Lithium",
-      "ticker": "SGML",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Brazilian court suspends licenses for Sigma Lithium mine",
-        "Brazil court suspends operations at Sigma Lithium’s sole producing mine"
+        "Greenland welcomes major funding boost from EU amid Trump’s annexation threats",
+        "Greenland welcomes major funding boost from EU amid Trump’s annexation threats"
       ]
     }
   ]
