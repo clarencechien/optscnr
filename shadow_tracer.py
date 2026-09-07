@@ -130,7 +130,9 @@ def record_paths(all_month_signals, mkt_date, max_chains=250):
             snap = datetime.strptime(sig["snapshot_date"], "%Y-%m-%d").date()
         except Exception:
             continue
-        if exp < today or (today - snap).days > 60:
+        # exp == today 也跳過：到期日當天收盤後鏈已下架，yfinance 對已到期 expiry 一律 ValueError
+        # （2026-09-07 log：27 條鏈全是 9/4 到期的八月信號，白抓）；到期日價值由 T+N 回填負責
+        if exp <= today or (today - snap).days > 60:
             continue
         if any(p.get("date") == mkt_date for p in (sig.get("path") or [])):
             continue  # 今天記過了（手動重跑保護）
@@ -152,7 +154,7 @@ def record_paths(all_month_signals, mkt_date, max_chains=250):
                 pass
             calls = tk.option_chain(expiry).calls
         except Exception as e:
-            print(f"    💨 {ticker} {expiry}: {type(e).__name__}")
+            print(f"    💨 {ticker} {expiry}: {type(e).__name__} {str(e)[:80]}")
             continue
         for sig in open_sigs[(ticker, expiry)]:
             m = calls[calls['strike'] == sig["strike"]]
