@@ -20,15 +20,24 @@ GitHub Actions 每日掃描 → README.md 妖股報表 + shadow log 信號校準
 
 | 檔案 | 職責 |
 |---|---|
-| main.py | 主掃描（Scanner 3.9），四道假高分過濾，產 README + 信號快照 |
-| shadow_tracer.py | 回填信號 T+5/T+10/T+20 結果，產 SHADOWLOG_YYYY-MM.md |
-| enrichment.py | OI Δ7d 計算 + Top5 深度卡 |
-| tlt_radar.py | TLT 避險溫度計（附加在 README 尾） |
+| main.py | 主掃描（Scanner 3.13：市場基準日、四道假高分過濾、財報標籤、🎯 結構候選、🤖 LLM 三題節），產 README + 信號快照 + 候選 JSON + universe spot |
+| strategy_lab.py | 純計算：分類邊界、三策略 A/B/C 與四種出場政策、規則 B `structural_pass`、賣點、策略矩陣、對照組、tags→features 拆解（預先登記 2026-09-08） |
+| shadow_tracer.py | 回填信號 T+5/T+10/T+20 結果、每日路徑 `path[]`、策略矩陣 `data/strategy_matrix.json`、decisions 的 `outcome` 回填，產 SHADOWLOG_YYYY-MM.md |
+| enrichment.py | OI Δ7d 計算（缺 7 日歷史 → null + `OI_d7_status`）+ Top5 深度卡 |
+| tlt_radar.py | TLT 避險溫度計（週更、併入主掃描 session，附加在 README 尾） |
 | catalyst_fetch / fallen_saas / small_cap_momentum / unknown_radar / universe_update | 動態清單餵給主掃描 |
+| cloudflare/ | Cloudflare Worker（獨立資料夾、dashboard Git 連動部署）：第二鬧鐘（GitHub 排程沒發就 `workflow_dispatch`）、每交易日盤後 LLM 三題 → `data/decisions/`、dashboard 靜態頁。**Python 一行都不在這裡**，見 `cloudflare/README.md` |
 | spcx_radar/ | SPCX 主題雷達（space_radar + spcx_options/Option Sage；共用碼在 spcx_common.py；config/=手動維護、output/=產出、README.md=每日報表、PLAYBOOK.md=執行手冊、PLAN_2026-08.md=8月後任務） |
 | tw_scanner/ | 台股子專案（tw_scanner 天氣台 + delta_radar 2308 雷達合併於此；README.md=每日報表由 build_readme.py 重組、MANUAL_*.md=維護文件、REVIEW_2026-07.md=改進判準） |
-| data/*.csv | 每日掃描結果（保留一年，靠檔名日期 prune） |
-| data/iv_log/signals_*.json | 信號快照（**永久保存、append-only**） |
+| data/*.csv | 每日掃描結果（保留一年，靠檔名日期 prune；也是 OI Δ7d 的歷史來源） |
+| data/iv_log/signals_*.json | 信號快照（**永久保存、append-only**；schema v2 含 bid/ask、features、path[]） |
+| data/dashboard/ | `candidates_<市場日>.json` + `latest.json`（結構候選＋綁定策略＋賣點，dashboard 與 Worker 讀）、`decisions_log.json`（tracer 彙整） |
+| data/decisions/ | `<市場日>.json`：Worker 寫的 LLM 三題答案（**append-only**；tracer 只補 `outcome`） |
+| data/universe_spots/ | 每日全 universe 收盤（對照組 T6、LLM 第 (b) 題） |
+| data/strategy_matrix.json | 分類 × 出場政策矩陣（每天重算） |
+| docs/ | CONTEXT 之外的文件：`PLAN_2026-09_strategy_dashboard.md`（預先登記書＋建置）、`PROJECT_ESCAPE_DOOR.md`（GitHub 依賴評估）、`FACTS_ledger.md`（事實庫，人維護、Worker 只寫待審段）、`PROMPT_daily_report_reading.md`（人用 v3）／`_v4.md`（機器用）、`CASEBOOK_2026-07.md`、`exit_playbook.md`、`log.md` |
+
+**雙軌呈現**：軌 A ＝ GitHub README（Python 渲染，CF 掛了也在）；軌 B ＝ CF dashboard（同一批 JSON，多 History／Decisions／事實庫／排程健康）。資料主權永遠在 git。
 
 **架構原則：平鋪但有序（每雷達一檔+對應 yml）。不做大目錄重構**——
 10 個 workflows 正在跑，重構美觀收益遠低於弄斷每日掃描的風險。
@@ -170,6 +179,12 @@ free ride 與死抱在本樣本幾乎無差，因為只有 3 筆碰過 +100% 賣
 - **SURGE_IV_MIN 驗證**：等 SHADOWLOG 區塊一樣本累積。
 - repo 整理 P1（requirements.txt 統一）P2（docs/ 歸攏）已完成（PR #1）；
   P3（抽 utils.py）等系統穩定；P4（大重構）不做。
+- **策略矩陣預先登記（2026-09-08 起，docs/PLAN_2026-09_strategy_dashboard.md）**：三策略 A 死抱／B 2x 賣半／
+  C 分類綁定＋規則 B 結構候選已凍結三個月；每天自動重算矩陣、記路徑、記對照組、記 LLM 三題。
+  判準：100 筆出樣本 T+20 成熟後 C 在規則 B 上 EV ≥1.25x 且命中 ≥25% 才算成立。
+  **累積期間不看單日、不看單月、不改綁定。** tracker T1–T9 的現況見該文件第 2、8 節。
+- **LLM 三題（第 5 批，2026-09-08 起）**：Worker 每交易日盤後只問三題事實題（排定事件／近 5 日跳空／Δ7d 是否 confirmed），
+  不做可玩判斷。答對率與候選命中率由 T8 累積 60 個交易日後看；人工抽查機制等 20 個交易日後再設計。
 
 ## 九、紅線（任何 session 都不得越過）
 
@@ -180,10 +195,15 @@ free ride 與死抱在本樣本幾乎無差，因為只有 3 筆碰過 +100% 賣
 4. **不竄改交易日信號的既有欄位**——append-only。
 5. **不做大目錄重構**——10 個 workflows 會斷。
 6. **所有面向擁有者的文字一律台灣正體中文**（勿簡體、勿中國用語）。
+7. **預先登記期間（2026-09-08 起三個月／100 筆出樣本）不改策略綁定、規則 B 門檻、分類邊界**——改了 PLAN 文件作廢。
+8. **decisions 與事實庫的 append-only**：`data/decisions/` 的 LLM 答案不回寫（tracer 只補 `outcome`）；
+   `docs/FACTS_ledger.md` 程式只能寫「待審（LLM 提案）」段，入庫永遠是人。
+9. **LLM 只答事實題，不做可玩/跳過判斷、不填機率**；改 prompt 要進位 `prompt_version`，讓 decisions 分得出版本。
+10. **Secrets（GITHUB_TOKEN、LLM_API_KEY、ACCESS_*）只在 Cloudflare dashboard 設**，永不進 git；`cloudflare/` 只靠 Git 連動部署，`workers.dev` 關閉。
 
 ## 十、給接手 session 的最短路徑
 
 1. 讀本文件（你正在做）
-2. 看 SHADOWLOG_當月.md 了解校準現況
-3. 看 docs/log.md / docs/exit_playbook.md 了解交易紀律脈絡
-4. 動手前檢查：這個改動有沒有踩第九節紅線？有沒有重複第六節的靜默失敗模式？
+2. 看 SHADOWLOG_當月.md 了解校準現況；看 CF dashboard 的 History／Decisions（或 `data/strategy_matrix.json`、`data/dashboard/decisions_log.json`）
+3. 看 docs/PLAN_2026-09_strategy_dashboard.md 第 0、2、3、8 節（預先登記與 tracker 現況）、docs/log.md、docs/exit_playbook.md
+4. 動手前檢查：這個改動有沒有踩第九節紅線？有沒有重複第六節的靜默失敗模式？改 `cloudflare/` 要跑 `node --check` 與離線 mock 測試（docs/log.md 第 5 批專節）

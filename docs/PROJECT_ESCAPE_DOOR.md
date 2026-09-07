@@ -76,20 +76,27 @@
 - ✅ 報表頭監控行：市場基準日 + 執行時間 + 補跑標記，延遲一眼可見
 - 效果：GitHub 排程再犯同樣的病，傷害從「資料污染 + 整天漏掃」降為「晚幾小時拿到報表」
 
-### Phase 1 — 第二個鬧鐘（條件觸發，半天工）
+### Phase 1 — 第二個鬧鐘（✅ 已完成 2026-09-06～08，觸發條件在 9/2 又壞一次時達成）
 用 Cloudflare Worker（免費額度綽綽有餘）做**外部喚醒器**，不搬任何東西：
 ```
-CF Cron Trigger（23:30 UTC 平日）
-  → GitHub API: 查 scanner.yml 今日是否已有 run
+CF Cron Trigger（23:05 UTC 平日；00:35 / 02:05 UTC 週二~六再查；週末不補）
+  → GitHub API: 查 scanner.yml 22:00 UTC 後是否已有 run
   → 沒有 → POST /actions/workflows/scanner.yml/dispatches（workflow_dispatch）
 ```
-- 需要：一個 fine-grained PAT（僅 actions:write）放 CF secret，約 40 行 Worker JS
-- 這一步拿到「CF 級的排程可靠性」而 Python/資料/觀看全部原地不動
-- **觸發條件：Phase 0 上線後，任何一個月仍有 ≥2 個交易日排程沒發**
+- 實作在 `cloudflare/`（獨立資料夾，只靠 CF dashboard 的 Git 連動部署，`workers.dev` 關閉、走自訂網域＋Zero Trust Access）
+- PAT 後來擴成 Actions read+write ＋ Contents read+write（Phase 1.5 要寫檔）
+- 觀察到的形狀：GitHub 的 22:17 排程實際每天 00:09–00:20 UTC 才發（穩定晚 2 小時），Worker 23:05 先補發、
+  遲到的排程再跑一次是無害重播（v3.13 市場基準日＋去重）。**排程可靠性問題到此解決，不再是搬家理由。**
 
-### Phase 2 — 觀看層上 CF（純加分項，隨時可做可不做）
-- 報表 md→html 上 R2 + Pages；GitHub README 照舊並存
-- 觸發條件：真的想要更好的手機閱讀體驗，或報表要給不看 GitHub 的人看
+### Phase 1.5 — Worker 上的 LLM 三題（✅ 2026-09-08，PLAN_2026-09 第 5 批）
+- 運算仍不搬：Python 產 `data/dashboard/latest.json`，Worker 只做「讀 JSON → 問 LLM 三題事實題 → 寫回 `data/decisions/`」，
+  外加把 `docs/FACTS_ledger.md` 帶進 prompt、LLM 提案寫回待審段。全部走 GitHub Contents API，**資料主權與審計仍在 git**。
+- 這是本文件原本沒預期的一層：不是「搬」，是把「需要外部 API 與準時」的那一小段放到 CF，其餘照舊。
+
+### Phase 2 — 觀看層上 CF（✅ 2026-09-08，做法比原規劃更省）
+- 沒做 md→html：dashboard 是一頁靜態 HTML，直接讀 raw.githubusercontent 的 JSON（候選、矩陣、decisions log）
+  與 Worker 的 `/api/*`；**不需要 R2**（之後若 raw CDN 快取延遲惱人再加 R2 當讀取快取）。
+- GitHub README 照舊並存（軌 A），dashboard 是軌 B——兩軌讀同一份資料，差別只在呈現。
 
 ### Phase 3 — 大型 CSV 分層進 R2（遠期，門檻高）
 - 觸發條件：repo 大小影響 clone/checkout 速度（Actions 每次 checkout 變慢 >1 分鐘），
@@ -105,8 +112,11 @@ CF Cron Trigger（23:30 UTC 平日）
 ## 四、逃生門總開關（什麼情況下推翻本文件、真的全面搬）
 
 同時滿足才動：
-1. Phase 1 的第二個鬧鐘上線後，**連續兩個月**每月仍有 ≥3 個交易日掃描沒跑成
+1. Phase 1 的第二個鬧鐘上線後（2026-09-08 起算），**連續兩個月**每月仍有 ≥3 個交易日掃描沒跑成
+   （dashboard「排程」頁與 `/api/health` 是證據來源；Worker 補發也失敗才算「沒跑成」）
 2. 且 GitHub 官方明確改變 Actions 免費政策（額度/排程），使現架構不可持續
+
+> 2026-09-08 狀態：Phase 0/1/1.5/2 全部完成，Phase 3 未觸發（repo 大小仍正常）。逃生門關著。
 
 屆時的目的地也不必然是 Cloudflare——按當時行情重新比價（Fly.io / 一台 $5 VPS + cron /
 CF Containers）。**一台 VPS + crontab 其實是這個工作型態最古老也最對症的解**，

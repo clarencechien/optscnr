@@ -77,19 +77,20 @@ EV 欄依序：死抱 / 2x 賣半 / 3x 賣半 / 4 口 2-4-8 / -50% 停+2x 半。
 每格判準：**n ≥ 30 且 ≥ 2 個月方向一致**才從 ⚠ 變「可用」；未達標前矩陣該格顯示佔位數字＋「累積中」。
 累積速度：成熟樣本每月約 130–410 筆（依行情），中間價位每月約 20–40 筆 → 中間價位各格約需 **3–5 個月**。
 
-| # | 問題 | 需要的資料 | 現有 n | 目標 | 預估 |
+| # | 問題 | 需要的資料 | 現有 n（2026-09-08） | 目標 | 預估 |
 |---|---|---|---|---|---|
-| T1 | 剩餘半倉「抱到 DTE 21」vs「T+20 出」哪個好？ | **每日路徑**（T+20 後到到期） | 0 | 50 個命中事件 | 需先上路徑紀錄，之後 2–3 個月 |
+| T1 | 剩餘半倉「抱到 DTE 21」vs「T+20 出」哪個好？ | **每日路徑**（T+20 後到到期） | 0（`path[]` 自 9/8 起每日記） | 50 個命中事件 | 2–3 個月 |
 | T2 | 中間價位（$1.5–3）綁哪種出場？ | 矩陣中間三格 | 23 | 每格 30 | 3–5 個月 |
 | T3 | 樂透 IV≥50 21-45 真的別玩？ | 該格 | 14 | 30 | 2 個月 |
 | T4 | 實彈 21-45 階梯優勢是否成立？ | 該格 | 17 | 30 | 2 個月 |
-| T5 | 策略 C 出樣本 EV | 2026-09-08 起新信號 | 0 | 100 筆 T+20 成熟 | 2–3 個月（含 P0 結構候選判準） |
-| T6 | 「選標的」有沒有 edge？ | **對照組**（全 universe 的 20 日漲幅） | 0 | 100 個標的-日 | 需先上對照組紀錄，之後 2 個月 |
-| T7 | 扣真實價差後的 EV | **bid/ask 快照** | 0 | 3 個月 | 需先上 schema v2 |
-| T8 | LLM 三題問卷答對率／候選命中率 | **decisions log** | 0 | 60 個交易日 | dashboard 上線後 3 個月 |
+| T5 | 策略 C 出樣本 EV | 2026-09-08 起新信號 | 0（`oos_*` 自動累積） | 100 筆 T+20 成熟 | 2–3 個月（含 P0 結構候選判準） |
+| T6 | 「選標的」有沒有 edge？ | **對照組**（全 universe 的 20 日漲幅） | 1 個日檔（9/4） | 100 個標的-日 | 20 個交易日後開始出數字，之後 2 個月 |
+| T7 | 扣真實價差後的 EV | **bid/ask 快照** | 0（schema v2 自 9/8 起） | 3 個月 | 3 個月 |
+| T8 | LLM 三題問卷答對率／候選命中率 | **decisions log** | 1 個交易日（9/4，0 候選） | 60 個交易日 | 3 個月 |
 | T9 | 第一階梯 2x→3x 是否穩定較好 | 路徑資料（T1 同源） | 樣本內 +0.1x | 與 T1 同 | 與 T1 同 |
 
-**T1/T6/T7/T8 現在是 0 不是因為樣本少，是因為沒在記。** 這四項是第 4 節的建置理由。
+**T1/T6/T7/T8 的量尺已於 2026-09-08 上線**（第 1、5、6 批），從 0 開始每天自動累積；在此之前是 0 是因為沒在記。
+量尺的所在：路徑 `data/iv_log/*.json` 的 `path[]`；對照組 `data/universe_spots/`；價差 `entry_bid/entry_ask`；三題 `data/decisions/`。
 
 ---
 
@@ -139,18 +140,20 @@ Variables and Secrets 設定，不進 git。**`*.workers.dev` 與 Preview URLs �
 Custom domain（`wrangler.toml` 的 `[[routes]]` 解開填自己的網域）——沒網域時 cron 照跑、只是沒網頁。
 
 ```
-┌ Worker scheduled()（第二鬧鐘：23:05 UTC 平日 + 00:35 UTC 跨日再查一次）──────┐
-│ 1. GitHub API：22:00 UTC 之後 scanner.yml 有無任何 run？沒有 → workflow_dispatch  │
-│ 2.（第 5 批）等 main 出現 data/dashboard/candidates_<市場日>.json                  │
-│ 3.（第 5 批）組 prompt（第 5 節 v4 短版）→ 呼叫 LLM → GitHub API commit          │
-│              data/decisions/<市場日>.json                                         │
-└──────────────────────────────────────────────────────────────────────────────────┘
-┌ Worker fetch()（同一個 Worker；靜態 dashboard 讀 raw.githubusercontent 的 JSON）──┐
-│ 排程健康：各 workflow 近 36 小時觸發 vs 排定（已實作：/api/health）＋「立即補發」鈕  │
-│ 今日候選：結構候選 + 綁定策略 + 賣點 + LLM 三題答案 + 狀態碼（第 4 批）             │
-│ History：三策略 shadow 矩陣（1.2 的表，每格 n/EV/狀態，自動更新）（第 4 批）        │
-│ Decisions：逐日 LLM 回答 log（prompt 版本、模型、答案、事後結果回填）（第 5 批）    │
-└──────────────────────────────────────────────────────────────────────────────────┘
+┌ Worker scheduled()（23:05 UTC 平日、00:35 / 02:05 UTC 週二~六；週末不補發）──────────┐
+│ 1. 第二鬧鐘：22:00 UTC 之後 scanner.yml 有無任何 run？沒有 → workflow_dispatch        │
+│ 2. decisions（冪等）：main 的 data/dashboard/latest.json 市場日 → 已有                 │
+│    data/decisions/<市場日>.json 就跳過；候選 0 筆直接記檔不呼叫 LLM                    │
+│ 3. 否則：docs/PROMPT_daily_report_reading_v4.md 的 ```prompt 區塊（v4.1）＋候選＋      │
+│    docs/FACTS_ledger.md 候選標的段/通用段 → OpenRouter（anthropic/claude-opus-5，web） │
+│    → GitHub Contents API 建檔；facts_proposed（必附 URL）→ 事實庫「待審」段            │
+└───────────────────────────────────────────────────────────────────────────────────┘
+┌ Worker fetch()（同一個 Worker；靜態頁由 CF 先供檔，/api/* 才進 Worker；可加 Access）─┐
+│ /api/health 排程健康（84 小時窗）＋「立即補發」鈕；POST /api/decide 手動產生今日     │
+│ /api/decisions 最近 N 天（含 tracer 補的 outcome）；/api/facts 解析後的事實庫          │
+│ 頁面：今日候選（＋LLM 三題、事實庫條數）／History（矩陣、逐月、對照組）／Decisions    │
+│（逐日展開、T8 tiles）／事實庫（可搜尋、待審段置頂）／排程                           │
+└───────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 - 資料主權在 git（append-only 審計）；dashboard 直接讀 raw.githubusercontent 的 JSON，**不需要 R2**
@@ -197,6 +200,25 @@ Custom domain（`wrangler.toml` 的 `[[routes]]` 解開填自己的網域）—�
 | 7（**已實作 2026-09-08**，審計 bug） | tracer 回填 `err:*` 永久略過→改重試（終態只有有價/expiry_gone/strike_gone/missed_window）、回填記 `observed_at/late_days`、`today` 用市場基準日；`get_target_dates` 週五重複；快照月檔損壞→隔離不重建、原子寫入 | 回填失敗隔日自動補；週五到期日不再漏 |
 
 ---
+
+## 8. 現況（2026-09-08 收工時）
+
+**上線了什麼**：第 1、2、4、5、6、7 批全部在 main；Cloudflare Worker 已部署到自訂網域並開 Access；
+PAT 為 Actions read+write、Contents read+write；`LLM_API_KEY`（OpenRouter）已設；模型 `anthropic/claude-opus-5`。
+
+**第一次實跑（09-07，市場日 9/4 休市補跑）核對結果**：README 🎯 區塊、`latest.json`、`strategy_matrix.json`
+（成熟 579/1099）、`universe_spots/2026-09-04.json`、`decisions/2026-09-04.json`（0 候選、未呼叫 LLM）全部落地；
+零候選經 CSV 逐條核對是真的零（F 16C／TJX 140C 無 7 日歷史、GOOGL 410C Δ7d −575），詳見 log.md。
+
+**從明天起不需要任何手動操作**：06:17 scanner（或 07:05 Worker 補發）→ 07:05／08:35／10:05 Worker 寫 decisions
+→ tracer 每天補 outcome 與 `decisions_log.json`。看 dashboard 或 README 即可。
+
+**還沒做、且刻意等的**：
+- LLM 三題答對率的人工抽查機制——等 20 個交易日的 decisions 再設計（先知道它常錯在哪一題）。
+- 對照組判準——20 個交易日後 `control` 才有第一個數字；100 個上榜標的-日後才判。
+- 事實庫「一鍵入庫」——不做，入庫要人審；待審段長到礙眼再談 UI。
+- delta_radar 背離旗標（tw_scanner REVIEW，10 月中前）、tracer 的日曆日/歷史價限制、catalyst 來源 URL——與本計劃無關，列在 log.md。
+- **任何門檻、綁定、計分的變更——2026-12-08 或 100 筆出樣本之前一律不動。**
 
 ## 7. 不做的事（重申）
 
