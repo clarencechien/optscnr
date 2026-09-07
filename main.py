@@ -761,6 +761,16 @@ def generate_report(df):
         view.columns = ['代號', '到期日', '履約價', '現價', 'OTM%', '價格', '持倉(OI)', 'Δ7d', '成交(Vol)', 'IV', '標籤', '分數']
         return view
 
+    # === 🎯 結構候選（PLAN 4.1 P0-c + P1：規則 B 預先登記，只加欄位不改分）===
+    try:
+        df = add_structural_candidates(df)
+        md += render_structural_section(df, format_view)
+        write_candidates_json(df)
+    except Exception as e:
+        print(f"  ⚠️ 結構候選區塊失敗（降級跳過）：{e}")
+        if 'StructuralPass' not in df.columns:
+            df['StructuralPass'] = False
+
     md += "## 🏆 TL;DR 總結 (精選狙擊名單)\n"
     md += "> 策略：過濾掉結算日雜訊，直擊 Score >= 8 的核心異動。**Δ7d** 顯示「過去 7 天 OI 累積變化」——大正數代表機構在持續建倉。\n\n"
     tldr_df = df[(df['Score'] >= 8) & (df['Action'] != 'GAMBLE')].sort_values(by=['Score', 'Volume'], ascending=[False, False]).head(10)
@@ -911,6 +921,87 @@ def _tlt_daily_status_line():
         return ""
 
 
+_QUOTE_AT = datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')  # 本次掃描報價時點（UTC）
+
+
+def add_structural_candidates(df):
+    """規則 B（預先登記 2026-09-08）：Score≥8、非 GAMBLE、DTE 21–120、IV<50、OTM<25%、Δ7d>0。
+    只加三欄（StructuralPass / Strategy / SellPoints），不動分數與排序。"""
+    import strategy_lab as SL
+
+    def otm_pct(r):
+        return (r['Strike'] - r['Spot']) / r['Spot'] * 100 if r.get('Spot', 0) and r['Spot'] > 0 else None
+
+    df['StructuralPass'] = df.apply(
+        lambda r: SL.structural_pass(r['Score'], r['Action'], r['DTE'], r['IV'], otm_pct(r),
+                                     r['OI_d7'] if 'OI_d7' in r and pd.notna(r['OI_d7']) else None), axis=1)
+    df['Strategy'] = df.apply(lambda r: SL.bound_strategy(r['Ask'], r['IV'])['code'], axis=1)
+    df['SellPoints'] = df.apply(
+        lambda r: SL.sell_points(r['Ask'], r['Expiry'], r['Strategy']) if r['StructuralPass'] else None, axis=1)
+    n = int(df['StructuralPass'].sum())
+    print(f"  🎯 結構候選：{n} 筆（{df.loc[df['StructuralPass'], 'Stock'].nunique()} 檔）")
+    return df
+
+
+def _structural_sorted(df):
+    """排序：DTE 21–45 優先 → 分數 → 成交量"""
+    c = df[df['StructuralPass']].copy()
+    c['_pri'] = (c['DTE'] > 45).astype(int)
+    return c.sort_values(by=['_pri', 'Score', 'Volume'], ascending=[True, False, False])
+
+
+def render_structural_section(df, format_view):
+    import strategy_lab as SL
+    c = _structural_sorted(df)
+    md = "## 🎯 結構候選（規則 B，預先登記 2026-09-08）\n"
+    md += ("> DTE 21–120、IV<50、OTM<25%、Δ7d>0、Score≥8。**只是「動了之後最能換到倍數」的合約結構，"
+           "不是誰會動的預測。** 綁定策略＝策略 C（樂透∧IV<50 死抱／實彈 4 口階梯／其餘 -50% 停＋2x 半），"
+           "賣點為 DTE 21 出場手冊換算；shadow 追蹤在 SHADOWLOG「🧭 策略矩陣」。\n\n")
+    if c.empty:
+        return md + "*今日無結構候選（空手是正確執行，不補名額）。*\n\n"
+    view = format_view(c)
+    view.insert(len(view.columns), '綁定策略', [SL.bound_strategy(p, iv)['label'].split('（')[0]
+                                              for p, iv in zip(c['Ask'], c['IV'])])
+    view.insert(len(view.columns), '賣點', [
+        ("TP " + "/".join(f"${x}" for x in sp['take_profit']) if sp and sp['take_profit'] else "不賣半")
+        + (f"｜停 ${sp['stop']}" if sp and sp.get('stop') else "")
+        + (f"｜末點 {sp['exit_by']}" if sp and sp.get('exit_by') else "")
+        for sp in c['SellPoints']])
+    md += view.to_markdown(index=False) + "\n\n"
+    return md
+
+
+def write_candidates_json(df):
+    """data/dashboard/candidates_<市場日>.json + latest.json（dashboard 讀；append-only 逐日一檔）"""
+    import strategy_lab as SL
+    out_dir = os.path.join(DATA_DIR, "dashboard")
+    os.makedirs(out_dir, exist_ok=True)
+    mkt = market_today().strftime('%Y-%m-%d')
+    c = _structural_sorted(df)
+    rows = []
+    for _, r in c.iterrows():
+        expiry_str = r['Expiry'].strftime('%Y-%m-%d') if hasattr(r['Expiry'], 'strftime') else str(r['Expiry'])[:10]
+        spot = float(r.get('Spot', 0) or 0)
+        rows.append({
+            "signal_id": f"{mkt}_{r['Stock']}_{expiry_str}_{r['Strike']}",
+            "ticker": r['Stock'], "expiry": expiry_str, "strike": float(r['Strike']), "dte": int(r['DTE']),
+            "spot": spot, "otm_pct": round((r['Strike'] - spot) / spot * 100, 1) if spot > 0 else None,
+            "last": float(r['Ask']), "bid": float(r.get('Bid', 0) or 0), "ask": float(r.get('AskReal', 0) or 0),
+            "iv": round(float(r['IV']), 1), "oi": int(r['OpenInterest']),
+            "oi_d7": int(r['OI_d7']) if pd.notna(r.get('OI_d7')) else None, "volume": int(r['Volume']),
+            "score": int(r['Score']), "tags": r.get('Tags', ''),
+            "tier": SL.tier_of(float(r['Ask'])), "strategy": r['Strategy'],
+            "strategy_label": SL.bound_strategy(float(r['Ask']), float(r['IV']))['label'],
+            "sell_points": r['SellPoints'],
+        })
+    payload = {"market_date": mkt, "generated_at": _QUOTE_AT, "prereg_date": SL.PREREG_DATE,
+               "n_candidates": len(rows), "n_report_rows": int(len(df)), "candidates": rows}
+    for name in (f"candidates_{mkt}.json", "latest.json"):
+        with open(os.path.join(out_dir, name), 'w', encoding='utf-8') as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+    print(f"  📤 候選 JSON：{len(rows)} 筆 → data/dashboard/candidates_{mkt}.json")
+
+
 def save_signal_snapshot(df):
     """把今天 TL;DR 高分信號存成 append-only 月檔，供 shadow_tracer 事後回填。
 
@@ -972,6 +1063,19 @@ def save_signal_snapshot(df):
             # why_it_popped = 跳空脈衝 / 慢磨 / 災後反彈續命 / 不明
             "signal_day_underlying_move": None,
             "why_it_popped": None,
+            # === schema v2（2026-09-08，PLAN 4.1 P0-a）：可審計的報價欄位 ===
+            # entry_price 保留＝lastPrice（歷史相容）；以下才是可成交價與時點
+            "entry_bid": float(r.get('Bid', 0) or 0),
+            "entry_ask": float(r.get('AskReal', 0) or 0),
+            "last_trade_at": str(r.get('LastTradeAt', '') or ''),
+            "quote_at": _QUOTE_AT,
+            "underlying_at": _QUOTE_AT,
+            # === 結構候選 + 綁定策略 + 賣點（PLAN 4.1 P0-c / P1；預先登記，不改分）===
+            "structural_pass": bool(r.get('StructuralPass', False)),
+            "strategy": r.get('Strategy'),
+            "sell_points": r.get('SellPoints'),
+            # 每日路徑（PLAN 4.1 P0-b）：shadow_tracer 逐日 append {date,last,bid,ask,spot,iv}
+            "path": [],
             # T+N 結果欄位，先留空，由 shadow_tracer 事後回填
             "t5": None, "t10": None, "t20": None,
             "verdict": None,  # 事後判定：噴了/沒噴/歸零
@@ -1187,10 +1291,20 @@ def main():
                             and spot_price > 0 and row['Strike'] > spot_price):
                         continue
                     dte = (datetime.strptime(d_str, "%Y-%m-%d") - datetime.now()).days
+                    # schema v2（PLAN 第 4.1 P0-a）：'Ask' 欄其實是 lastPrice（歷史相容，不改名），
+                    # 另存真正的 bid / ask / 最後成交時間，讓價差與可成交價可審計
+                    def _num(x):
+                        try:
+                            v = float(x)
+                            return 0.0 if v != v else v  # nan → 0
+                        except (TypeError, ValueError):
+                            return 0.0
                     d_row = {
                         'Stock': symbol, 'Expiry': d_str, 'Strike': row['Strike'], 'Ask': row['Ask'],
                         'OpenInterest': int(row['OpenInterest']), 'Volume': int(row['Volume']),
-                        'IV': row['IV'], 'DTE': dte, 'Spot': spot_price
+                        'IV': row['IV'], 'DTE': dte, 'Spot': spot_price,
+                        'Bid': _num(row.get('bid')), 'AskReal': _num(row.get('ask')),
+                        'LastTradeAt': str(row.get('lastTradeDate', '') or '')[:19],
                     }
                     tags, action, score = apply_rules(d_row, prev_df)
                     if score > 0 or action != "HOLD":

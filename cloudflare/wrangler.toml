@@ -1,0 +1,40 @@
+# optscnr Cloudflare Worker — 第二鬧鐘 + dashboard
+# 部署方式：Cloudflare dashboard → Workers & Pages → Create → Import a repository
+#          → 選 clarencechien/optscnr → Root directory = "cloudflare" → Deploy command = "npx wrangler deploy"
+#          之後每次 push main 自動部署，本機不需要 wrangler login。
+# 詳見 cloudflare/README.md
+
+name = "optscnr"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# 關掉 *.workers.dev 與預覽網址（擁有者要求：只走自訂網域）
+workers_dev = false
+preview_urls = false
+
+# 自訂網域：在 Cloudflare 有 zone 後把下面兩行解開並改成你的網域。
+# 沒設 route 時 Worker 仍會部署、cron 照跑，只是 dashboard 無法用 HTTP 開。
+# [[routes]]
+# pattern = "optscnr.example.com"
+# custom_domain = true
+
+# 第二鬧鐘（UTC）：主 scanner cron 是 22:17 UTC 平日；GitHub 若 45 分鐘內沒發，
+# 23:05 這發會補 workflow_dispatch；00:35 再檢查一次（GitHub 延遲 3-8 小時的事故形狀）。
+[triggers]
+crons = ["5 23 * * 1-5", "35 0 * * 2-6"]
+
+# 靜態 dashboard（cloudflare/public/）由 Worker 直接供檔，不另開 Pages 專案
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[vars]
+GITHUB_OWNER = "clarencechien"
+GITHUB_REPO = "optscnr"
+SCANNER_WORKFLOW = "scanner.yml"
+SCANNER_CRON_UTC_HOUR = "22"        # 主 scanner 排定的 UTC 小時（判斷「今天該跑的那一發」）
+DEFAULT_BRANCH = "main"
+
+# Secrets（在 dashboard → Worker → Settings → Variables and Secrets 設定，不進 git）：
+#   GITHUB_TOKEN   fine-grained PAT，只給本 repo：Actions (read+write)、Contents (read)
+#   LLM_API_KEY    第 5 批接 LLM 時才需要

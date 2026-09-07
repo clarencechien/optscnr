@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>optscnr dashboard</title>
+<style>
+  :root { color-scheme: light dark; font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif; }
+  body { margin: 0; padding: 16px; max-width: 960px; margin-inline: auto; }
+  h1 { font-size: 1.25rem; } h2 { font-size: 1.05rem; margin-top: 1.5rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  th, td { border-bottom: 1px solid #8884; padding: 6px 8px; text-align: left; white-space: nowrap; }
+  .wrap { overflow-x: auto; }
+  .ok { color: #1a7f37; } .late { color: #b35900; } .bad { color: #c62828; }
+  .muted { opacity: .65; font-size: .85rem; }
+  button { padding: 6px 12px; }
+</style>
+</head>
+<body>
+<h1>optscnr dashboard <span class="muted" id="ts"></span></h1>
+
+<h2>排程健康（各 workflow 近 36 小時觸發）</h2>
+<div class="wrap"><table id="health"><thead><tr><th>workflow</th><th>觸發</th><th>時間 (UTC)</th><th>狀態</th></tr></thead><tbody></tbody></table></div>
+<p><button id="alarm">立即檢查並補發 scanner</button> <span id="alarmMsg" class="muted"></span></p>
+
+<h2>今日結構候選 <span class="muted" id="candMeta"></span></h2>
+<div class="wrap"><table id="cand"><thead><tr><th>代號</th><th>到期</th><th>履約</th><th>DTE</th><th>現價</th><th>OTM%</th><th>last</th><th>bid/ask</th><th>IV</th><th>Δ7d</th><th>分</th><th>綁定策略</th><th>賣點</th></tr></thead><tbody></tbody></table></div>
+
+<h2>History：分類 × 出場政策（shadow 矩陣）<span class="muted" id="mxMeta"></span></h2>
+<div class="wrap"><table id="mxTop"><thead><tr><th>樣本</th><th>n / 事件</th><th>命中</th><th>A 死抱</th><th>B 2x賣半</th><th>C 分類綁定</th></tr></thead><tbody></tbody></table></div>
+<p class="muted" id="monthly"></p>
+<div class="wrap"><table id="mx"><thead><tr><th>分類</th><th>n/事件</th><th>命中</th><th>死抱</th><th>2x半</th><th>3x半</th><th>4口階梯</th><th>停+2x半</th><th>最佳</th><th>狀態</th></tr></thead><tbody></tbody></table></div>
+<p class="muted">EV＝等權平均倍數、未扣價差。「累積中」＝n&lt;30 只是佔位。預先登記 2026-09-08，100 筆出樣本前不改綁定。</p>
+
+<h2>Decisions（LLM 三題 log）</h2>
+<p class="muted">第 5 批：Worker cron 接 LLM 後寫 <code>data/decisions/&lt;市場日&gt;.json</code>，這裡列出。</p>
+
+<script>
+const RAW = 'https://raw.githubusercontent.com/clarencechien/optscnr/main/';
+const f2 = x => (x == null ? '—' : Number(x).toFixed(2));
+async function loadCandidates() {
+  try {
+    const j = await (await fetch(RAW + 'data/dashboard/latest.json', { cache: 'no-store' })).json();
+    document.getElementById('candMeta').textContent = `市場日 ${j.market_date}｜${j.n_candidates} 筆 / 報表 ${j.n_report_rows} 列`;
+    const tb = document.querySelector('#cand tbody'); tb.innerHTML = '';
+    if (!j.candidates.length) { tb.innerHTML = '<tr><td colspan="13">今日無結構候選（空手是正確執行）</td></tr>'; return; }
+    for (const c of j.candidates) {
+      const sp = c.sell_points || {};
+      const sell = (sp.take_profit && sp.take_profit.length ? 'TP ' + sp.take_profit.map(x => '$' + x).join('/') : '不賣半')
+        + (sp.stop ? `｜停 $${sp.stop}` : '') + (sp.exit_by ? `｜末點 ${sp.exit_by}` : '');
+      tb.insertAdjacentHTML('beforeend', `<tr><td>${c.ticker}</td><td>${c.expiry}</td><td>${c.strike}</td><td>${c.dte}</td><td>${f2(c.spot)}</td><td>${c.otm_pct ?? '—'}%</td><td>${f2(c.last)}</td><td>${f2(c.bid)}/${f2(c.ask)}</td><td>${c.iv}%</td><td>${c.oi_d7 ?? '—'}</td><td>${c.score}</td><td>${c.strategy_label.split('（')[0]}</td><td>${sell}</td></tr>`);
+    }
+  } catch (e) { document.getElementById('candMeta').textContent = '（candidates JSON 尚未產生）'; }
+}
+async function loadMatrix() {
+  try {
+    const m = await (await fetch(RAW + 'data/strategy_matrix.json', { cache: 'no-store' })).json();
+    document.getElementById('mxMeta').textContent = `更新 ${m.generated_at}｜成熟 ${m.n_mature}/${m.n_signals}`;
+    const top = document.querySelector('#mxTop tbody'); top.innerHTML = '';
+    for (const [name, key] of [['全部成熟', 'overall'], ['規則 B', 'rule_b'], [`出樣本（≥${m.prereg_date}）`, 'oos_all'], ['出樣本 規則 B', 'oos_rule_b']]) {
+      const c = m[key];
+      top.insertAdjacentHTML('beforeend', c && c.n ? `<tr><td>${name}</td><td>${c.n} / ${c.events}</td><td>${(c.hit*100).toFixed(0)}%</td><td>${f2(c.ev.A_hold)}</td><td>${f2(c.ev.B_half2x)}</td><td>${f2(c.ev.C_bound)}</td></tr>`
+        : `<tr><td>${name}</td><td>0</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>`);
+    }
+    document.getElementById('monthly').textContent = '逐月（事件等權）：' + Object.entries(m.monthly).map(([mo, v]) => `${mo} n=${v.n} A ${f2(v.A_hold)} / B ${f2(v.B_half2x)} / C ${f2(v.C_bound)}`).join('；');
+    const tb = document.querySelector('#mx tbody'); tb.innerHTML = '';
+    for (const c of m.cells) {
+      if (!c.n) continue;
+      const cls = c.status === '可用' ? 'ok' : 'late';
+      tb.insertAdjacentHTML('beforeend', `<tr><td>${c.iv} ${c.tier_label} ${c.dte}</td><td>${c.n}/${c.events}</td><td>${(c.hit*100).toFixed(0)}%</td><td>${f2(c.ev.A_hold)}</td><td>${f2(c.ev.B_half2x)}</td><td>${f2(c.ev.half3x)}</td><td>${f2(c.ev.rungs248)}</td><td>${f2(c.ev.stop_half)}</td><td>${m.policy_label[c.best]}</td><td class="${cls}">${c.status}</td></tr>`);
+    }
+  } catch (e) { document.getElementById('mxMeta').textContent = '（strategy_matrix.json 尚未產生）'; }
+}
+loadCandidates(); loadMatrix();
+async function loadHealth() {
+  const r = await fetch('/api/health'); const j = await r.json();
+  document.getElementById('ts').textContent = '更新於 ' + j.generated_at;
+  const tb = document.querySelector('#health tbody'); tb.innerHTML = '';
+  for (const [wf, runs] of Object.entries(j.workflows)) {
+    if (!Array.isArray(runs) || runs.length === 0) {
+      tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td colspan="3" class="bad">近 36 小時無觸發</td></tr>`); continue;
+    }
+    for (const x of runs) {
+      const cls = x.conclusion === 'success' ? 'ok' : (x.status === 'completed' ? 'bad' : 'late');
+      tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td>${x.event}</td><td>${x.created_at}</td><td class="${cls}"><a href="${x.url}" target="_blank" rel="noopener">${x.conclusion || x.status}</a></td></tr>`);
+    }
+  }
+}
+document.getElementById('alarm').onclick = async () => {
+  const el = document.getElementById('alarmMsg'); el.textContent = '檢查中…';
+  const j = await (await fetch('/api/alarm/check')).json();
+  el.textContent = j.action === 'dispatched' ? '已補發 workflow_dispatch' : `不需補發（排定時刻後已有 ${j.runs} 次 run）`;
+  loadHealth();
+};
+loadHealth();
+</script>
+</body>
+</html>

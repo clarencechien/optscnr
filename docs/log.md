@@ -210,6 +210,21 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 不放寬樂透 size 上限、不放寬絞肉區（DTE<21）閘門、不因單月命中率改規則、
 盤後開牌標的只標記不自動排除。
 
+## 策略矩陣 shadow + 結構候選 + dashboard 資料層（2026-09-08，PLAN_2026-09_strategy_dashboard.md 第 1、2、4 批）
+
+- **strategy_lab.py（新）**：預先登記的分類邊界（$1.5/$3、DTE 20/45/120、IV 50）、三策略
+  A 死抱 / B 2x賣半 / C 分類綁定、規則 B `structural_pass`、賣點換算、`compute_matrix()`。純計算零網路。
+- **main.py**：schema v2——`Ask` 欄仍是 lastPrice（歷史相容），另存 `Bid/AskReal/LastTradeAt` 進 CSV，
+  快照加 `entry_bid/entry_ask/last_trade_at/quote_at/underlying_at`；`structural_pass/strategy/sell_points/path`；
+  README 新增「🎯 結構候選」區塊（DTE 21-45 優先）；輸出 `data/dashboard/candidates_<市場日>.json` + `latest.json`
+- **shadow_tracer.py**：`record_paths()` 每日對未到期高分信號 append `{date,last,bid,ask,spot,iv}`（同 (ticker,expiry)
+  一鏈、同日不重複、市場基準日標籤）；T+N 回填加 bid/ask；每天重算全月份矩陣 → `data/strategy_matrix.json`；
+  SHADOWLOG 新增「🎯 結構候選 vs 其他」cohort 表與「🧭 策略矩陣」節
+- **scanner.yml** commit 清單加 `data/dashboard/*.json data/strategy_matrix.json`
+- **cloudflare/public/index.html** 讀 raw JSON 渲染今日候選與 History 矩陣
+- 數字對齊：規則 B 含 Δ7d>0 後 111 筆（非 118），A/B/C = 1.77/1.47/1.81（方向不變）
+- 不動的：計分、停損規則、任何門檻——100 筆出樣本前不改（預先登記 2026-09-08）
+
 ## Scanner 3.13 — 市場基準日 + 排程延遲事故（2026-09-01）
 
 ### 事故（光看 GitHub Actions 就能定位）
