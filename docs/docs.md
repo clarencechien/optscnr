@@ -1,5 +1,10 @@
 # 妖股獵殺報表 — 使用手冊（新手友善版）
 
+> **2026-09-08 註**：本手冊是 2026-06 的新手版，Score 與 Action 的描述停在早期版本（現行 Scanner 3.13 的分數
+> 上限 11、TL;DR 門檻 ≥8，並多了財報標籤、🎯 結構候選、🤖 LLM 三題等區塊）。要看現行系統請讀 `CONTEXT.md`；
+> 人在對話裡判讀用 `PROMPT_daily_report_reading.md`（v3）；每天自動跑的三題見 `PROMPT_daily_report_reading_v4.md`；
+> 策略與 tracker 見 `PLAN_2026-09_strategy_dashboard.md`。這份留著給第一次接觸的人建立心態，鐵則那段仍然成立。
+
 > 這份手冊有兩個用途：
 > 1. **給你看**：看懂每天的 `README.md`（妖股獵殺報表）在說什麼。
 > 2. **給 AI 看**：搭配下方的「System Prompt」，貼到 ChatGPT / Gemini / Claude，把報表丟進去，AI 會用白話幫你摘要、標風險、列出你該自己想清楚的問題。

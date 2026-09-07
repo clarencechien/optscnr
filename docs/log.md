@@ -24,6 +24,9 @@ GitHub Actions 排程驅動的選擇權異動掃描系統。主 scanner 讀多�
 | **v3.7** | 整合 unknown_radar；加 🛸盲點 標籤；連續 2+ 天的盲點標的自動進主掃描 |
 | v3.8/3.9 | 四道假高分過濾（尾段價外/當沖刷量/機構場/暴動高IV）；Spot 抓取；信號快照 |
 | **v3.10** | **2026-07-31 handoff 修正批**（見下方專節）：IV 硬過濾、點火低基期防爆、財報日曆標籤、主表加現價/OTM%、流動性稀薄標籤、IV term structure 月選過濾、SHADOWLOG 歸零率/去重/歸因 |
+| v3.11 / 3.12 | handoff #2 殘項；TLT 併入主掃描 session（方案 A）、盤後財報價格失效標籤（見各專節） |
+| **v3.13** | **市場基準日**（排程延遲跨日不標錯天、休市補跑無害）＋ 報表頭監控行（2026-09-01） |
+| 3.13＋（2026-09-08 批） | schema v2 快照、🎯 結構候選（規則 B）、候選 JSON、universe spot、features/warnings/events 結構欄、OI Δ7d null 語義、🤖 LLM 三題節、📚 文件導覽行（見「策略矩陣」「審計 bug」「第 5 批」三個專節） |
 
 **source_tag 優先序**：📰催化劑 > 💀重生 > 🛸盲點 > 🎰動能 > 🔭候選
 
@@ -132,11 +135,15 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 | small_cap_momentum | `13 0 * * 6` | 週六 08:13 | |
 | fallen_saas | `19 1 * * 6` | 週六 09:19 | |
 | universe_update | `9 23 * * 6` | 週日 07:09 | |
+| **Cloudflare Worker**（`cloudflare/wrangler.toml`） | `5 23 * * 1-5` / `35 0 * * 2-6` / `5 2 * * 2-6` | 週二~六 07:05 / 08:35 / 10:05 | 每發都做：①第二鬧鐘（22:00 UTC 後 scanner 沒 run → `workflow_dispatch`）②decisions（`latest.json` 有新市場日且無 `data/decisions/<日>.json` → LLM 三題）。週末不補發 |
 
 - **分鐘全部避開 :00/:15/:30/:45**——GitHub 排程在熱門分鐘最容易延遲/丟棄
   （2026-08-26~31 事故：全 repo 延遲 3-8 小時、8/31 直接沒發，見 3.13 專節）。
 - 排程延遲的自我防護：主 scanner 用「市場基準日」補跑（v3.13）、
   spcx 用 market_freshness()（v8.8）——延遲跨日不再標錯天或誤殺。
+- **2026-09 觀察**：GitHub 的 22:17 排程實際上每天在 00:09–00:20 UTC 才發（穩定晚 2 小時）；
+  Worker 23:05 那發會先補發，之後遲到的排程 run 再跑一次是無害的重播（市場基準日＋signal_id 去重）。
+  delta_radar 每日 02:41 那發也常晚 4–5 小時，未納入第二鬧鐘（只更新敘事，不急）。
 - 週末雷達刻意錯開，避免同時搶 RSS / API。
 
 ---
@@ -239,6 +246,22 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
   v3 檔頭加分工說明。
 - 模型費用估算：Opus 5 每交易日 ≈ US$0.05–0.15（候選 0 筆時零）；`model_served` 入檔，T8 可分模型比。
 - 未做：LLM 三題答對率的人工抽查機制（先累積 20 個交易日再設計）；ledger 待審段的「一鍵入庫」（刻意不做，入庫要人審）。
+
+### 同日下午：上線驗證與修補
+
+- **首次實跑（擁有者手動 Run workflow，09-07 06:26 UTC，市場日 9/4 休市補跑）**：README 出現 🎯 區塊、
+  `data/dashboard/latest.json`、`data/strategy_matrix.json`（成熟 579/1099）、`data/universe_spots/2026-09-04.json` 都落地；
+  dashboard 按「立即產生」→ `data/decisions/2026-09-04.json`（0 候選、未呼叫 LLM、note 正確）；待審段空。
+- **零候選核對**：Score≥8 非末日 24 張 → DTE 21–120 剩 10 → IV<50 剩 3（F 16C、TJX 140C、GOOGL 410C）→ Δ7d>0 全滅：
+  F/TJX 在 8/31 歷史 CSV 裡沒有（🆕 first_seen_in_feed → Δ7d null，P0-e 語義下不算 confirmed）；
+  GOOGL 33,204 vs 33,779 ＝ −575。**是真的零，不是 bug**；也證實規則 B 對「首次出現」合約是排除的，之後矩陣回答對不對。
+- **dashboard 修補**：排程健康視窗 36→84 小時（週一下午不把週末正常沒跑的標紅）；對照組無資料時顯示「累積中」而非 `null pp`；
+  候選 tile 的分母改「掃描 N 張」（`n_report_rows` 是進報表的合約數）。
+- **Access 上線的坑**：靜態頁由 Cloudflare 先供檔不經 Worker，Access 變數設好前後會出現「頁面開得了、/api 全 401」。
+  Worker 的 401 改回 JSON `reason/hint`（no_token／aud_mismatch／certs_fetch_failed／kid_not_found／expired），
+  頁面頂端顯示紅色說明條；`ACCESS_TEAM_DOMAIN` 自動去掉 `https://`。
+- **本 session 無法做的**：從沙盒打不到 dashboard（Cloudflare Challenge/Access）、也無 `workflow_dispatch` 權限，
+  實跑與按鈕都由擁有者操作，我從 git 核對產物。
 
 ## 審計 bug 修復 + P0-e 語義 + P1 對照組（2026-09-08，第二批）
 
@@ -445,15 +468,33 @@ data/ 被主 scanner 每天照貼（8/1 週六排程用 v2.2 跑出正常讀數�
 ## 檔案清單
 
 ```
-optscnr/
-├── main.py                          (v3.10)
+optscnr/                             (2026-09-08 更新)
+├── CONTEXT.md                       (系統脈絡＋紅線，接手先讀)
+├── README.md                        (每日報表，main.py 產出＝軌 A)
+├── SHADOWLOG_YYYY-MM.md             (shadow_tracer 產出)
+├── main.py                          (v3.13＋)
+├── strategy_lab.py                  (純計算：策略矩陣／規則 B／賣點／對照組／tags 拆解)
+├── shadow_tracer.py                 (T+N 回填、路徑、矩陣、decisions outcome)
 ├── catalyst_fetch.py                (v6)
 ├── small_cap_momentum.py
 ├── fallen_saas.py
-├── tlt_radar.py                     (v2.2)
+├── tlt_radar.py                     (v2.5)
 ├── unknown_radar.py                 (v1.3)
-├── enrichment.py
+├── enrichment.py                    (OI Δ7d null 語義)
 ├── universe_update.py
+├── cloudflare/                      (Worker：第二鬧鐘＋LLM 三題＋dashboard＝軌 B；只靠 CF Git 連動部署)
+│   ├── wrangler.toml                (workers_dev=false、crons、vars；secrets 只在 CF dashboard)
+│   ├── src/index.js                 (scheduled/fetch、GitHub Contents API、OpenRouter、parseLedger、Access JWT)
+│   ├── public/index.html            (dashboard：今日候選/History/Decisions/事實庫/排程)
+│   └── README.md                    (一次性設定、模型選擇、Access 步驟)
+├── docs/
+│   ├── PLAN_2026-09_strategy_dashboard.md   (預先登記書＋建置批次＋tracker＋現況)
+│   ├── PROJECT_ESCAPE_DOOR.md       (GitHub 依賴評估＋路線圖，Phase 1/2 已完成)
+│   ├── FACTS_ledger.md              (事實庫：人維護；Worker 只寫「待審」段)
+│   ├── PROMPT_daily_report_reading.md      (v3，人在對話裡用)
+│   ├── PROMPT_daily_report_reading_v4.md   (v4.1，Worker 每天讀的 ```prompt 區塊)
+│   ├── CASEBOOK_2026-07.md          (判例，從 v3 搬出)
+│   ├── exit_playbook.md / docs.md / log.md
 ├── spcx_radar/                      (2026-07-31 集中)
 │   ├── space_radar.py               (v8.7)
 │   ├── spcx_options.py              (sage_v0.2)
@@ -476,6 +517,12 @@ optscnr/
 │   ├── delta_radar.yml / tw_scanner.yml (路徑指向 tw_scanner/)
 │   └── ...
 └── data/
+    ├── YYYY-MM-DD.csv / latest.csv  (每日掃描；OI Δ7d 的歷史來源；留 365 天)
+    ├── iv_log/signals_YYYY-MM.json  (信號快照，append-only，schema v2 含 path[])
+    ├── dashboard/                   (candidates_<市場日>.json、latest.json、decisions_log.json)
+    ├── decisions/<市場日>.json      (Worker 寫的 LLM 三題；tracer 只補 outcome)
+    ├── universe_spots/<市場日>.json (全 universe 收盤；對照組 T6)
+    ├── strategy_matrix.json         (每天重算)
     ├── catalyst_today.json
     ├── small_caps_momentum.json
     ├── fallen_saas.json

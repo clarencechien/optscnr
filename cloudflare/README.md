@@ -69,6 +69,13 @@ Cron 不走 HTTP，不受 Access 影響。原本的 WAF Challenge 可以拿掉�
 
 補發是安全的：主 scanner v3.13 用市場基準日與 signal_id 去重，跟稍後真的發出的排程 run 重疊不會重複記信號。
 
+## 現況（2026-09-08）
+
+- 已部署到自訂網域、Access 已開（`/api/health` 回 `access.enforced: true`）、PAT 與 `LLM_API_KEY` 已設。
+- 首次實跑（09-07，市場日 9/4）：`data/decisions/2026-09-04.json` 由「立即產生」按鈕寫入，0 候選未呼叫 LLM。
+- 靜態頁由 Cloudflare 先供檔、不經 Worker：Access 變數設錯時會「頁面開得了、/api 全 401」，401 的 JSON 帶 `reason/hint`，頁面頂端會顯示。
+- 改 `src/index.js` 前先跑 `node --check`，並用離線 mock 測試（GitHub API、OpenRouter、Access 全 mock；見 docs/log.md 第 5 批專節）。
+
 ## 本機測試（選用）
 
 ```bash
