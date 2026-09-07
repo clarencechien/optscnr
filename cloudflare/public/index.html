@@ -271,7 +271,7 @@ function renderCandidates() {
   const tb = $('#cand tbody'); tb.innerHTML = '';
   const dec = (state.decisions?.days || []).find(d => d.market_date === j.market_date);
   const byId = new Map((dec?.candidates || []).map(c => [c.signal_id, c]));
-  $('#candMeta').textContent = `市場日 ${j.market_date}｜報表 ${j.n_report_rows} 列中 ${j.n_candidates} 筆通過${dec ? `｜LLM ${dec.llm_called ? (dec.model_served || dec.model) : '未呼叫'}` : ''}`;
+  $('#candMeta').textContent = `市場日 ${j.market_date}｜掃描 ${j.n_report_rows} 張合約，${j.n_candidates} 張通過規則 B${dec ? `｜LLM ${dec.llm_called ? (dec.model_served || dec.model) : '未呼叫'}` : ''}`;
   if (!j.candidates.length) { tb.innerHTML = '<tr><td colspan="11"><div class="empty"><b>今日無結構候選</b>空手是正確執行，不補名額。</div></td></tr>'; return; }
   for (const c of j.candidates) {
     const d7 = c.oi_d7 == null ? '<span class="muted">無歷史</span>' : (c.oi_d7 > 0 ? '+' : '') + c.oi_d7;
@@ -352,7 +352,7 @@ function renderMatrix() {
       + `<td>${esc(m.policy_label[c.best] || '—')}</td><td><span class="chip ${st}"><i></i>${esc(c.status)}</span></td></tr>`);
   }
   const ctl = m.control || {};
-  $('#ctlNote').textContent = ctl.listed_n != null
+  $('#ctlNote').textContent = ctl.edge_pp != null
     ? `對照組（T6）：上榜組 ${pct(ctl.listed_rate)}（n=${ctl.listed_n}） vs 全 universe ${pct(ctl.universe_rate)}（${ctl.n_ticker_days} 標的-日／${ctl.n_days} 日），edge ${ctl.edge_pp > 0 ? '+' : ''}${ctl.edge_pp} 個百分點。${ctl.verdict_rule || ''}`
     : `對照組（T6）：累積中（${ctl.note || '需要 ≥20 個交易日的 universe_spots 日檔'}）。`;
   drawEvChart(state.cohort);
@@ -433,7 +433,7 @@ async function loadLatest() {
     state.latest = await getJson(RAW + 'data/dashboard/latest.json');
     const j = state.latest;
     chip($('#mktChip'), 'info', `市場日 ${j.market_date}`);
-    $('#tCand').innerHTML = `${j.n_candidates}<small>/ ${j.n_report_rows} 列</small>`;
+    $('#tCand').innerHTML = `${j.n_candidates}<small>/ 掃描 ${j.n_report_rows} 張</small>`;
   } catch { $('#candMeta').textContent = '（candidates JSON 尚未產生——等下一次 scanner）'; $('#tCand').textContent = '—'; }
   renderCandidates();
 }
@@ -449,7 +449,7 @@ async function loadMatrix() {
       $('#tEvSub').textContent = `規則 B：C ${f2(rb.ev?.C_bound)}x／A ${f2(rb.ev?.A_hold)}x／B ${f2(rb.ev?.B_half2x)}x`;
     }
     const ctl = m.control || {};
-    if (ctl.listed_n != null) { $('#tCtl').innerHTML = `${ctl.edge_pp > 0 ? '+' : ''}${ctl.edge_pp}<small>pp</small>`; $('#tCtlSub').textContent = `上榜 ${pct(ctl.listed_rate)} vs universe ${pct(ctl.universe_rate)}（${ctl.n_days} 日）`; }
+    if (ctl.edge_pp != null) { $('#tCtl').innerHTML = `${ctl.edge_pp > 0 ? '+' : ''}${ctl.edge_pp}<small>pp</small>`; $('#tCtlSub').textContent = `上榜 ${pct(ctl.listed_rate)} vs universe ${pct(ctl.universe_rate)}（${ctl.n_days} 日）`; }
     else { $('#tCtl').textContent = '累積中'; $('#tCtlSub').textContent = `universe_spots 日檔 ${ctl.n_days || 0}/20`; }
   } catch { $('#mxMeta').textContent = '（strategy_matrix.json 尚未產生）'; }
   renderMatrix();
