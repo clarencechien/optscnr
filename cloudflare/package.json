@@ -1,6 +1,7 @@
 {
   "name": "optscnr-cloudflare",
   "private": true,
+  "type": "module",
   "version": "0.1.0",
   "description": "optscnr 第二鬧鐘 + dashboard（Cloudflare Worker）。部署由 Cloudflare Workers Builds 連 GitHub 自動進行。",
   "scripts": {

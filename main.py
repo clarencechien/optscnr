@@ -768,6 +768,7 @@ def generate_report(df):
         df = add_structural_candidates(df)
         md += render_structural_section(df, format_view)
         write_candidates_json(df)
+        md += render_decisions_section()   # 軌 A（README）也看得到 LLM 三題；軌 B 是 CF dashboard
     except Exception as e:
         print(f"  ⚠️ 結構候選區塊失敗（降級跳過）：{e}")
         if 'StructuralPass' not in df.columns:
@@ -991,6 +992,66 @@ def render_structural_section(df, format_view):
     return md
 
 
+def render_decisions_section():
+    """README 軌：最近一個交易日的 LLM 三題（Worker 盤後寫 data/decisions/<市場日>.json，
+    所以 README 看到的是「前一個市場日」的答案；當日答案要等盤後，或看 CF dashboard）。"""
+    d = os.path.join(DATA_DIR, "decisions")
+    files = sorted(f for f in os.listdir(d) if f.endswith(".json")) if os.path.isdir(d) else []
+    if not files:
+        return ""
+    try:
+        with open(os.path.join(d, files[-1]), encoding='utf-8') as f:
+            dec = json.load(f)
+    except Exception as e:
+        return f"## 🤖 LLM 三題\n*decisions 檔讀取失敗：{e}*\n\n"
+    md = f"## 🤖 LLM 三題（市場日 {dec.get('market_date')}｜{dec.get('model_served') or dec.get('model') or '—'}｜prompt {dec.get('prompt_version', '—')}）\n"
+    md += ("> 只答事實：(a) 到期前有無排定事件 (b) 近 5 日有無 >8% 跳空 (c) Δ7d 是否 confirmed。"
+           "不做可玩判斷；事實庫 `docs/FACTS_ledger.md` 帶入、新事實回寫「待審」段。"
+           "完整 log 與事後結果在 CF dashboard「Decisions」。\n\n")
+    cands = dec.get("candidates") or []
+    if not cands:
+        return md + f"*{dec.get('note') or '今日無結構候選'}*\n\n"
+    if dec.get("error"):
+        md += f"*⚠️ {dec['error']}*\n\n"
+    md += "| 標的 | 事件 (a) | 跳空 (b) | Δ7d (c) | 備註 |\n|---|---|---|---|---|\n"
+    for c in cands:
+        e, g, dl = c.get("q_event") or {}, c.get("q_gap") or {}, c.get("q_delta") or {}
+        if c.get("status") != "answered":
+            md += f"| {c['ticker']} {c['strike']:g}C {c['expiry']} | *未回答* | | | |\n"
+            continue
+        ev = f"{e.get('answer', '—')}" + (f" {e['date']}" if e.get('date') else "") + (f"・{e['what']}" if e.get('what') else "")
+        if e.get('source') and str(e['source']).startswith('http'):
+            ev += f" [來源]({e['source']})"
+        gap = f"{g.get('answer', '—')}" + ({'up': ' ▲', 'down': ' ▼'}.get(g.get('direction'), '')) + (f" {g['pct']}%" if g.get('pct') is not None else "")
+        dlt = ("正" if dl.get('positive') else ("非正" if dl.get('positive') is not None else "—")) + ("・confirmed" if dl.get('confirmed') else "・無歷史")
+        md += f"| {c['ticker']} {c['strike']:g}C {c['expiry']} | {ev} | {gap} | {dlt} | {c.get('note') or ''} |\n"
+    props = dec.get("facts_proposed") or []
+    if props:
+        md += f"\n*事實庫提案 {len(props)} 條（已附加 {dec.get('facts_appended', 0)} 條到 FACTS_ledger 待審段）*\n"
+    return md + "\n"
+
+
+def recent_spot_paths(tickers, n_days=6):
+    """第 5 批（LLM 第 (b) 題用）：從 data/universe_spots/ 的最近 n 個日檔取每檔的收盤序列
+    [{date, spot}...]（舊→新）。只有每日收盤，所以「跳空」在這裡是「日對日 >8%」的近似。
+    檔不夠時回傳有多少算多少；沒有就空 list——LLM 該答「未確認」而不是編。"""
+    out = {t: [] for t in tickers}
+    d = os.path.join(DATA_DIR, "universe_spots")
+    if not os.path.isdir(d):
+        return out
+    files = sorted(f for f in os.listdir(d) if f.endswith(".json"))[-n_days:]
+    for fn in files:
+        try:
+            with open(os.path.join(d, fn), encoding='utf-8') as f:
+                spots = json.load(f).get("spots", {})
+        except Exception:
+            continue
+        for t in tickers:
+            if t in spots:
+                out[t].append({"date": fn[:-5], "spot": spots[t]})
+    return out
+
+
 def write_candidates_json(df):
     """data/dashboard/candidates_<市場日>.json + latest.json（dashboard 讀；append-only 逐日一檔）"""
     import strategy_lab as SL
@@ -998,18 +1059,25 @@ def write_candidates_json(df):
     os.makedirs(out_dir, exist_ok=True)
     mkt = market_today().strftime('%Y-%m-%d')
     c = _structural_sorted(df)
+    paths = recent_spot_paths(sorted(set(c['Stock'])))
     rows = []
     for _, r in c.iterrows():
         expiry_str = r['Expiry'].strftime('%Y-%m-%d') if hasattr(r['Expiry'], 'strftime') else str(r['Expiry'])[:10]
         spot = float(r.get('Spot', 0) or 0)
+        has_d7 = 'OI_d7' in r and pd.notna(r.get('OI_d7'))
         rows.append({
             "signal_id": f"{mkt}_{r['Stock']}_{expiry_str}_{r['Strike']}",
             "ticker": r['Stock'], "expiry": expiry_str, "strike": float(r['Strike']), "dte": int(r['DTE']),
             "spot": spot, "otm_pct": round((r['Strike'] - spot) / spot * 100, 1) if spot > 0 else None,
             "last": float(r['Ask']), "bid": float(r.get('Bid', 0) or 0), "ask": float(r.get('AskReal', 0) or 0),
             "iv": round(float(r['IV']), 1), "oi": int(r['OpenInterest']),
-            "oi_d7": int(r['OI_d7']) if pd.notna(r.get('OI_d7')) else None, "volume": int(r['Volume']),
+            "oi_d7": int(r['OI_d7']) if has_d7 else None,
+            "oi_delta_status": "confirmed" if has_d7 else "no_history",
+            "volume": int(r['Volume']),
             "score": int(r['Score']), "tags": r.get('Tags', ''),
+            # P0-e 結構標籤（與信號快照同一套 key）＋ 第 (b) 題用的近 6 日收盤
+            **SL.split_tags(r.get('Tags', '')),
+            "recent_spots": paths.get(r['Stock'], []),
             "tier": SL.tier_of(float(r['Ask'])), "strategy": r['Strategy'],
             "strategy_label": SL.bound_strategy(float(r['Ask']), float(r['IV']))['label'],
             "sell_points": r['SellPoints'],

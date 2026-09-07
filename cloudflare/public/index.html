@@ -3,96 +3,467 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>optscnr dashboard</title>
+<meta name="color-scheme" content="light dark">
+<title>optscnr</title>
 <style>
-  :root { color-scheme: light dark; font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif; }
-  body { margin: 0; padding: 16px; max-width: 960px; margin-inline: auto; }
-  h1 { font-size: 1.25rem; } h2 { font-size: 1.05rem; margin-top: 1.5rem; }
-  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
-  th, td { border-bottom: 1px solid #8884; padding: 6px 8px; text-align: left; white-space: nowrap; }
-  .wrap { overflow-x: auto; }
-  .ok { color: #1a7f37; } .late { color: #b35900; } .bad { color: #c62828; }
-  .muted { opacity: .65; font-size: .85rem; }
-  button { padding: 6px 12px; }
+  /* ---- tokens（dataviz 參考調色盤；淺/深各自選過對比，不是自動反相） ---- */
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb; --surface-2: #f3f2ee;
+    --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+    --hair: #e1e0d9; --axis: #c3c2b7; --ring: rgba(11,11,11,.10);
+    --accent: #2a78d6; --accent-soft: #cde2fb;
+    --good: #0ca30c; --good-text: #006300; --warn: #fab219; --serious: #ec835a; --crit: #d03b3b;
+    --deemph: #c3c2b7;
+    --radius: 14px; --radius-s: 8px;
+    --shadow: 0 1px 2px rgba(11,11,11,.04), 0 8px 24px -12px rgba(11,11,11,.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19; --surface-2: #222220;
+      --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+      --hair: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,.10);
+      --accent: #3987e5; --accent-soft: #1c3a5e;
+      --good-text: #0ca30c; --deemph: #383835;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--page); color: var(--ink);
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "PingFang TC", sans-serif; }
+  a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
+  button { font: inherit; color: inherit; }
+
+  /* ---- app bar ---- */
+  .bar { position: sticky; top: 0; z-index: 5; backdrop-filter: blur(10px);
+    background: color-mix(in srgb, var(--page) 82%, transparent); border-bottom: 1px solid var(--hair); }
+  .bar-in { max-width: 1120px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .brand { font-weight: 700; letter-spacing: .02em; display: flex; align-items: center; gap: 8px; }
+  .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .spacer { flex: 1; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+    font-size: 12px; font-weight: 600; background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--hair); white-space: nowrap; }
+  .chip i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); display: inline-block; }
+  .chip.ok i { background: var(--good); } .chip.warn i { background: var(--warn); } .chip.bad i { background: var(--crit); } .chip.info i { background: var(--accent); }
+  .ts { color: var(--muted); font-size: 12px; }
+
+  /* ---- layout ---- */
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 18px 16px 60px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 18px; }
+  .tile { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); min-height: 96px; }
+  .tile .label { color: var(--ink-2); font-size: 12px; }
+  .tile .value { font-size: 30px; font-weight: 600; line-height: 1.15; margin-top: 4px; }
+  .tile .value small { font-size: 14px; color: var(--muted); font-weight: 500; margin-left: 4px; }
+  .tile .sub { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .delta { font-weight: 600; } .delta.up { color: var(--good-text); } .delta.down { color: var(--crit); }
+
+  .tabs { display: inline-flex; background: var(--surface-2); border: 1px solid var(--hair); border-radius: 999px; padding: 3px; gap: 2px; margin-bottom: 14px; max-width: 100%; overflow-x: auto; }
+  .tabs button { border: 0; background: transparent; padding: 6px 14px; border-radius: 999px; cursor: pointer; color: var(--ink-2); font-weight: 600; white-space: nowrap; }
+  .tabs button[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+  section[hidden] { display: none; }
+
+  .card { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 14px; overflow: hidden; }
+  .card-h { display: flex; align-items: baseline; gap: 10px; padding: 12px 16px; border-bottom: 1px solid var(--hair); flex-wrap: wrap; }
+  .card-h h2 { font-size: 15px; margin: 0; } .card-h .meta { color: var(--muted); font-size: 12px; }
+  .card-b { padding: 12px 16px; }
+  .note { color: var(--muted); font-size: 12px; line-height: 1.6; }
+  .empty { padding: 28px 16px; text-align: center; color: var(--ink-2); }
+  .empty b { display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+
+  /* ---- tables ---- */
+  .tbl { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th { text-align: left; font-weight: 600; color: var(--ink-2); font-size: 12px; padding: 8px 10px; border-bottom: 1px solid var(--hair); white-space: nowrap; position: sticky; top: 0; background: var(--surface); }
+  td { padding: 9px 10px; border-bottom: 1px solid var(--hair); vertical-align: top; white-space: nowrap; }
+  tr:last-child td { border-bottom: 0; }
+  tbody tr:hover td { background: var(--surface-2); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .tk { font-weight: 700; } .tk small { display: block; font-weight: 500; color: var(--muted); font-size: 11px; }
+  .tag { display: inline-block; padding: 1px 7px; border-radius: 6px; font-size: 11px; font-weight: 600; background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--hair); margin-right: 4px; }
+  .tag.acc { background: var(--accent-soft); color: var(--ink); border-color: transparent; }
+  .wrapcell { white-space: normal; min-width: 120px; max-width: 220px; }
+  td.chips { white-space: normal; min-width: 110px; max-width: 150px; } td.chips .tag { margin-bottom: 3px; }
+  td.qacell { white-space: normal; min-width: 220px; }
+  .muted { color: var(--muted); }
+  .best { font-weight: 700; color: var(--ink); } .dim { color: var(--muted); }
+
+  /* ---- controls ---- */
+  .seg { display: inline-flex; border: 1px solid var(--hair); border-radius: 999px; overflow: hidden; }
+  .seg button { border: 0; background: transparent; padding: 4px 12px; cursor: pointer; color: var(--ink-2); font-size: 12px; font-weight: 600; }
+  .seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .btn { border: 1px solid var(--hair); background: var(--surface); border-radius: 999px; padding: 6px 14px; cursor: pointer; font-weight: 600; font-size: 13px; }
+  .btn:hover { background: var(--surface-2); } .btn.primary { background: var(--accent); color: #fff; border-color: transparent; }
+  .btn[disabled] { opacity: .5; cursor: default; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+  /* ---- chart ---- */
+  .chart { width: 100%; height: auto; display: block; }
+  .chart text { font: 12px system-ui, sans-serif; fill: var(--ink-2); }
+  .chart .val { fill: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .chart .grid { stroke: var(--hair); stroke-width: 1; } .chart .base { stroke: var(--axis); stroke-width: 1; }
+  .chart .ref { stroke: var(--crit); stroke-width: 1; }
+  .bar-mark { fill: var(--deemph); } .bar-mark.best { fill: var(--accent); }
+  .legend { display: flex; gap: 14px; font-size: 12px; color: var(--ink-2); flex-wrap: wrap; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+
+  /* ---- decisions ---- */
+  details { border-bottom: 1px solid var(--hair); }
+  details:last-child { border-bottom: 0; }
+  summary { cursor: pointer; padding: 10px 16px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary .d { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .qa { font-size: 12px; white-space: normal; min-width: 200px; max-width: 460px; line-height: 1.5; }
+  .qa b { color: var(--ink-2); font-weight: 600; }
+
+  @media (max-width: 640px) {
+    .tile .value { font-size: 24px; }
+    td, th { padding: 7px 8px; }
+  }
 </style>
 </head>
 <body>
-<h1>optscnr dashboard <span class="muted" id="ts"></span></h1>
+<header class="bar"><div class="bar-in">
+  <div class="brand"><span class="dot"></span>optscnr</div>
+  <span class="chip info" id="mktChip"><i></i>市場日 —</span>
+  <span class="chip" id="schedChip"><i></i>排程 —</span>
+  <span class="chip" id="llmChip"><i></i>LLM —</span>
+  <span class="spacer"></span>
+  <span class="ts" id="ts">載入中…</span>
+</div></header>
 
-<h2>排程健康（各 workflow 近 36 小時觸發）</h2>
-<div class="wrap"><table id="health"><thead><tr><th>workflow</th><th>觸發</th><th>時間 (UTC)</th><th>狀態</th></tr></thead><tbody></tbody></table></div>
-<p><button id="alarm">立即檢查並補發 scanner</button> <span id="alarmMsg" class="muted"></span></p>
+<main class="wrap">
+  <div class="tiles">
+    <div class="tile"><div class="label">今日結構候選</div><div class="value" id="tCand">—</div><div class="sub" id="tCandSub">規則 B（DTE 21–120、IV&lt;50、OTM&lt;25%、Δ7d&gt;0）</div></div>
+    <div class="tile"><div class="label">規則 B 歷史命中（≥2x）</div><div class="value" id="tHit">—</div><div class="sub" id="tHitSub">成熟樣本</div></div>
+    <div class="tile"><div class="label">策略 C 期望值（等權）</div><div class="value" id="tEv">—</div><div class="sub" id="tEvSub">vs A 死抱</div></div>
+    <div class="tile"><div class="label">對照組 edge（20 日 +10%）</div><div class="value" id="tCtl">—</div><div class="sub" id="tCtlSub">上榜 − 全 universe</div></div>
+  </div>
 
-<h2>今日結構候選 <span class="muted" id="candMeta"></span></h2>
-<div class="wrap"><table id="cand"><thead><tr><th>代號</th><th>到期</th><th>履約</th><th>DTE</th><th>現價</th><th>OTM%</th><th>last</th><th>bid/ask</th><th>IV</th><th>Δ7d</th><th>分</th><th>綁定策略</th><th>賣點</th></tr></thead><tbody></tbody></table></div>
+  <div class="tabs" role="tablist">
+    <button role="tab" data-tab="today" aria-selected="true">今日候選</button>
+    <button role="tab" data-tab="history">History</button>
+    <button role="tab" data-tab="decisions">Decisions</button>
+    <button role="tab" data-tab="facts">事實庫</button>
+    <button role="tab" data-tab="sched">排程</button>
+  </div>
 
-<h2>History：分類 × 出場政策（shadow 矩陣）<span class="muted" id="mxMeta"></span></h2>
-<div class="wrap"><table id="mxTop"><thead><tr><th>樣本</th><th>n / 事件</th><th>命中</th><th>A 死抱</th><th>B 2x賣半</th><th>C 分類綁定</th></tr></thead><tbody></tbody></table></div>
-<p class="muted" id="monthly"></p>
-<div class="wrap"><table id="mx"><thead><tr><th>分類</th><th>n/事件</th><th>命中</th><th>死抱</th><th>2x半</th><th>3x半</th><th>4口階梯</th><th>停+2x半</th><th>最佳</th><th>狀態</th></tr></thead><tbody></tbody></table></div>
-<p class="muted">EV＝等權平均倍數、未扣價差。「累積中」＝n&lt;30 只是佔位。預先登記 2026-09-08，100 筆出樣本前不改綁定。</p>
+  <!-- ===================== 今日候選 ===================== -->
+  <section id="tab-today">
+    <div class="card">
+      <div class="card-h"><h2>🎯 結構候選</h2><span class="meta" id="candMeta"></span></div>
+      <div class="tbl"><table id="cand">
+        <thead><tr><th>標的</th><th class="num">DTE</th><th class="num">現價</th><th class="num">OTM</th><th class="num">權利金</th><th class="num">IV</th><th class="num">Δ7d</th><th class="num">分</th><th>綁定策略</th><th>賣點</th><th>LLM 三題</th></tr></thead>
+        <tbody></tbody></table></div>
+      <div class="card-b note">權利金＝掃描時 ask 快照（16:00 ET 收盤），bid/ask 在括號內。「不是誰會動的預測」——只是動了之後最能換到倍數的合約結構；空手是正確執行。LLM 三題只答事實（排定事件／近 5 日跳空／Δ7d 是否 confirmed），不做可玩判斷。</div>
+    </div>
+  </section>
 
-<h2>Decisions（LLM 三題 log）</h2>
-<p class="muted">第 5 批：Worker cron 接 LLM 後寫 <code>data/decisions/&lt;市場日&gt;.json</code>，這裡列出。</p>
+  <!-- ===================== History ===================== -->
+  <section id="tab-history" hidden>
+    <div class="card">
+      <div class="card-h"><h2>出場政策 × 樣本群：期望值（倍數，等權、未扣價差）</h2><span class="meta" id="mxMeta"></span>
+        <span class="spacer"></span>
+        <div class="seg" id="cohortSeg"><button data-c="overall" aria-pressed="true">全部成熟</button><button data-c="rule_b">規則 B</button><button data-c="oos_all">出樣本</button><button data-c="oos_rule_b">出樣本·B</button></div>
+      </div>
+      <div class="card-b">
+        <svg class="chart" id="evChart" viewBox="0 0 720 230" role="img" aria-label="各出場政策期望值長條圖"></svg>
+        <div class="legend" style="margin-top:6px"><span><i style="background:var(--accent)"></i>該群最佳政策</span><span><i style="background:var(--deemph)"></i>其他政策</span><span><i style="background:var(--crit);height:2px;vertical-align:3px"></i>1.0x 打平線</span></div>
+      </div>
+      <div class="tbl"><table id="mxTop"><thead><tr><th>樣本群</th><th class="num">n / 事件</th><th class="num">命中</th><th class="num">A 死抱</th><th class="num">B 2x賣半</th><th class="num">C 分類綁定</th><th>最佳</th></tr></thead><tbody></tbody></table></div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h2>逐月（事件等權）</h2><span class="meta">單月反轉一眼可見——防止用單月改規則</span></div>
+      <div class="tbl"><table id="monthly"><thead><tr><th>月份</th><th class="num">n</th><th class="num">A 死抱</th><th class="num">B 2x賣半</th><th class="num">C 分類綁定</th></tr></thead><tbody></tbody></table></div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h2>分類矩陣：IV × 權利金 tier × DTE</h2><span class="meta">每格 n / 事件 / 命中 / 各政策 EV；n&lt;30 只是佔位</span></div>
+      <div class="tbl"><table id="mx"><thead><tr><th>分類</th><th class="num">n / 事件</th><th class="num">命中</th><th class="num">死抱</th><th class="num">2x半</th><th class="num">3x半</th><th class="num">4口階梯</th><th class="num">停+2x半</th><th>最佳</th><th>狀態</th></tr></thead><tbody></tbody></table></div>
+      <div class="card-b note" id="ctlNote"></div>
+      <div class="card-b note">預先登記 2026-09-08：策略綁定與規則 B 門檻凍結 3 個月／100 筆出樣本前不改。「出樣本」＝登記日之後的信號。</div>
+    </div>
+  </section>
+
+  <!-- ===================== Decisions ===================== -->
+  <section id="tab-decisions" hidden>
+    <div class="tiles" id="t8Tiles"></div>
+    <div class="card">
+      <div class="card-h"><h2>🤖 每日 LLM 三題 log</h2><span class="meta" id="decMeta"></span><span class="spacer"></span>
+        <button class="btn" id="decideBtn">立即產生今日 decisions</button><span class="note" id="decideMsg"></span></div>
+      <div id="decList"></div>
+      <div class="card-b note">每個交易日盤後 Worker 讀 <code>latest.json</code> → prompt v4 → LLM → 寫 <code>data/decisions/&lt;市場日&gt;.json</code>（append-only）。事後 tracer 只補 outcome，不改當時答案。T8：LLM 說「到期前有排定事件」的候選，成熟後命中率是否高於「無／未確認」。</div>
+    </div>
+  </section>
+
+  <!-- ===================== 事實庫 ===================== -->
+  <section id="tab-facts" hidden>
+    <div class="card">
+      <div class="card-h"><h2>📚 FACTS_ledger（已查證事實庫）</h2><span class="meta" id="factsMeta"></span><span class="spacer"></span>
+        <input id="factsQ" type="search" placeholder="篩標的或關鍵字…" style="padding:6px 12px;border:1px solid var(--hair);border-radius:999px;background:var(--surface);color:var(--ink);min-width:200px">
+      </div>
+      <div id="factsPending"></div>
+      <div id="factsList"></div>
+      <div class="card-b note">每個交易日 Worker 把「候選標的段落＋通用段最新 5 條」帶給 LLM；LLM 查到的新事實附 URL 寫進「待審」段，人審過後搬到該標的段落（直接改 <code>docs/FACTS_ledger.md</code>）。本頁唯讀。</div>
+    </div>
+  </section>
+
+  <!-- ===================== 排程 ===================== -->
+  <section id="tab-sched" hidden>
+    <div class="card">
+      <div class="card-h"><h2>排程健康（各 workflow 近 36 小時）</h2><span class="meta" id="healthMeta"></span><span class="spacer"></span>
+        <button class="btn" id="alarm">立即檢查並補發 scanner</button><span class="note" id="alarmMsg"></span></div>
+      <div class="tbl"><table id="health"><thead><tr><th>workflow</th><th>觸發</th><th>時間（台北）</th><th>狀態</th></tr></thead><tbody></tbody></table></div>
+      <div class="card-b note">主 scanner 排定 22:17 UTC（台北 06:17）；Worker 23:05 / 00:35 / 02:05 UTC 各查一次，沒發就 <code>workflow_dispatch</code>。補發是安全的：v3.13 市場基準日 + signal_id 去重。</div>
+    </div>
+  </section>
+</main>
 
 <script>
 const RAW = 'https://raw.githubusercontent.com/clarencechien/optscnr/main/';
-const f2 = x => (x == null ? '—' : Number(x).toFixed(2));
-async function loadCandidates() {
-  try {
-    const j = await (await fetch(RAW + 'data/dashboard/latest.json', { cache: 'no-store' })).json();
-    document.getElementById('candMeta').textContent = `市場日 ${j.market_date}｜${j.n_candidates} 筆 / 報表 ${j.n_report_rows} 列`;
-    const tb = document.querySelector('#cand tbody'); tb.innerHTML = '';
-    if (!j.candidates.length) { tb.innerHTML = '<tr><td colspan="13">今日無結構候選（空手是正確執行）</td></tr>'; return; }
-    for (const c of j.candidates) {
-      const sp = c.sell_points || {};
-      const sell = (sp.take_profit && sp.take_profit.length ? 'TP ' + sp.take_profit.map(x => '$' + x).join('/') : '不賣半')
-        + (sp.stop ? `｜停 $${sp.stop}` : '') + (sp.exit_by ? `｜末點 ${sp.exit_by}` : '');
-      tb.insertAdjacentHTML('beforeend', `<tr><td>${c.ticker}</td><td>${c.expiry}</td><td>${c.strike}</td><td>${c.dte}</td><td>${f2(c.spot)}</td><td>${c.otm_pct ?? '—'}%</td><td>${f2(c.last)}</td><td>${f2(c.bid)}/${f2(c.ask)}</td><td>${c.iv}%</td><td>${c.oi_d7 ?? '—'}</td><td>${c.score}</td><td>${c.strategy_label.split('（')[0]}</td><td>${sell}</td></tr>`);
+const $ = s => document.querySelector(s);
+const f2 = x => (x == null || isNaN(x) ? '—' : Number(x).toFixed(2));
+const pct = x => (x == null ? '—' : (x * 100).toFixed(0) + '%');
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const tpe = iso => { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(iso)); } catch { return iso; } };
+const ago = iso => { const m = Math.round((Date.now() - new Date(iso)) / 60000); return m < 60 ? `${m} 分前` : m < 1440 ? `${Math.round(m / 60)} 小時前` : `${Math.round(m / 1440)} 天前`; };
+const getJson = async (u, opts) => { const r = await fetch(u, { cache: 'no-store', ...opts }); if (!r.ok) throw new Error(`${u} ${r.status}`); return r.json(); };
+const chip = (el, cls, text) => { el.className = 'chip ' + cls; el.innerHTML = '<i></i>' + esc(text); };
+
+// ---------- tabs ----------
+for (const b of document.querySelectorAll('[role=tab]')) b.onclick = () => showTab(b.dataset.tab);
+function showTab(name) {
+  for (const b of document.querySelectorAll('[role=tab]')) b.setAttribute('aria-selected', b.dataset.tab === name);
+  for (const s of document.querySelectorAll('main > section')) s.hidden = s.id !== 'tab-' + name;
+  try { history.replaceState(null, '', '#' + name); } catch {}
+}
+const tabFromHash = () => { const t = location.hash.slice(1); if (t && $('#tab-' + t)) showTab(t); };
+window.addEventListener('hashchange', tabFromHash); tabFromHash();
+
+// ---------- 今日候選 ----------
+const state = { latest: null, matrix: null, decisions: null, facts: null, cohort: 'overall' };
+
+function sellText(sp) {
+  sp = sp || {};
+  return (sp.take_profit && sp.take_profit.length ? 'TP ' + sp.take_profit.map(x => '$' + x).join('/') : '不賣半')
+    + (sp.stop ? `｜停 $${sp.stop}` : '') + (sp.exit_by ? `｜末點 ${sp.exit_by}` : '');
+}
+function qaHtml(c) {
+  if (!c) return '<span class="muted">尚未產生</span>';
+  if (c.status !== 'answered') return `<span class="muted">${esc(c.status === 'error' ? 'LLM 失敗' : '未回答')}</span>`;
+  const e = c.q_event || {}, g = c.q_gap || {}, d = c.q_delta || {};
+  const src = e.source ? ` <a href="${esc(e.source)}" target="_blank" rel="noopener">來源</a>` : '';
+  return `<div class="qa"><b>事件</b> ${esc(e.answer ?? '—')}${e.date ? ' ' + esc(e.date) : ''}${e.what ? '・' + esc(e.what) : ''}${src}<br>`
+    + `<b>跳空</b> ${esc(g.answer ?? '—')}${g.direction ? (g.direction === 'up' ? ' ▲' : ' ▼') : ''}${g.pct != null ? ' ' + esc(g.pct) + '%' : ''}${g.date ? ' ' + esc(g.date) : ''}<br>`
+    + `<b>Δ7d</b> ${d.positive == null ? '—' : d.positive ? '正' : '非正'}${d.confirmed ? '・confirmed' : '・無歷史'}${c.note ? '<br><span class="muted">' + esc(c.note) + '</span>' : ''}</div>`;
+}
+function renderCandidates() {
+  const j = state.latest; if (!j) return;
+  const tb = $('#cand tbody'); tb.innerHTML = '';
+  const dec = (state.decisions?.days || []).find(d => d.market_date === j.market_date);
+  const byId = new Map((dec?.candidates || []).map(c => [c.signal_id, c]));
+  $('#candMeta').textContent = `市場日 ${j.market_date}｜報表 ${j.n_report_rows} 列中 ${j.n_candidates} 筆通過${dec ? `｜LLM ${dec.llm_called ? (dec.model_served || dec.model) : '未呼叫'}` : ''}`;
+  if (!j.candidates.length) { tb.innerHTML = '<tr><td colspan="11"><div class="empty"><b>今日無結構候選</b>空手是正確執行，不補名額。</div></td></tr>'; return; }
+  for (const c of j.candidates) {
+    const d7 = c.oi_d7 == null ? '<span class="muted">無歷史</span>' : (c.oi_d7 > 0 ? '+' : '') + c.oi_d7;
+    tb.insertAdjacentHTML('beforeend', `<tr>
+      <td><span class="tk">${esc(c.ticker)}<small>${esc(c.strike)}C ${esc(c.expiry)}</small></span></td>
+      <td class="num">${c.dte}</td><td class="num">${f2(c.spot)}</td><td class="num">${c.otm_pct ?? '—'}%</td>
+      <td class="num">$${f2(c.last)}<br><span class="muted">${f2(c.bid)} / ${f2(c.ask)}</span></td>
+      <td class="num">${c.iv}%</td><td class="num">${d7}</td><td class="num">${c.score}</td>
+      <td class="chips"><span class="tag acc">${esc((c.strategy_label || '').split('（')[0])}</span><span class="tag">${esc(c.tier)}</span>${factsCount(c.ticker) ? `<span class="tag" title="事實庫條數">📚 ${factsCount(c.ticker)}</span>` : ''}</td>
+      <td class="wrapcell">${esc(sellText(c.sell_points))}</td>
+      <td class="qacell">${qaHtml(byId.get(c.signal_id))}</td></tr>`);
+  }
+}
+function factsCount(t) { return (state.facts?.sections || []).filter(s => s.key === t).reduce((a, s) => a + s.items.length, 0); }
+
+// ---------- 事實庫 ----------
+function factItemHtml(it) {
+  // 「事實 ｜ 日期 ｜ 來源 ｜ 入庫日 入庫」——把 URL 變連結
+  return esc(it).replace(/(https?:\/\/[^\s｜)]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+}
+function renderFacts() {
+  const L = state.facts, list = $('#factsList'), pend = $('#factsPending'); if (!L) return;
+  const q = ($('#factsQ').value || '').trim().toLowerCase();
+  const secs = L.sections.filter(s => s.key !== '__pending__');
+  $('#factsMeta').textContent = `${secs.length} 段、${secs.reduce((a, s) => a + s.items.length, 0)} 條`;
+  const pending = L.sections.find(s => s.key === '__pending__');
+  pend.innerHTML = pending && pending.items.length
+    ? `<div class="card-b" style="background:var(--surface-2)"><b>⏳ 待審（LLM 提案）${pending.items.length} 條</b><ul style="margin:6px 0 0;padding-left:18px">${pending.items.map(i => `<li class="qa" style="max-width:none">${factItemHtml(i)}</li>`).join('')}</ul></div>`
+    : '';
+  list.innerHTML = '';
+  for (const s of secs) {
+    const items = q ? s.items.filter(i => (s.key + ' ' + s.title + ' ' + i).toLowerCase().includes(q)) : s.items;
+    if (!items.length) continue;
+    list.insertAdjacentHTML('beforeend', `<details ${q ? 'open' : ''}><summary><span class="d">${esc(s.title)}</span><span class="muted">${items.length} 條</span></summary><ul style="margin:0 0 10px;padding:0 16px 0 34px">${items.map(i => `<li class="qa" style="max-width:none;padding:3px 0">${factItemHtml(i)}</li>`).join('')}</ul></details>`);
+  }
+}
+$('#factsQ').oninput = renderFacts;
+
+// ---------- History ----------
+const POLICIES = ['A_hold', 'B_half2x', 'C_bound', 'half3x', 'rungs248', 'stop_half'];
+function drawEvChart(cohort) {
+  const m = state.matrix, svg = $('#evChart'); if (!m) return;
+  const c = m[cohort];
+  if (!c || !c.n) { svg.innerHTML = `<text x="360" y="120" text-anchor="middle">此樣本群尚無成熟樣本（累積中）</text>`; return; }
+  const W = 720, L = 120, R = 60, top = 14, rowH = 32, H = top + POLICIES.length * rowH + 30;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  const vals = POLICIES.map(p => c.ev[p] ?? 0), maxV = Math.max(1.2, ...vals) * 1.08;
+  const x = v => L + (v / maxV) * (W - L - R);
+  let s = '';
+  for (let t = 0; t <= maxV; t += 0.5) s += `<line class="grid" x1="${x(t)}" x2="${x(t)}" y1="${top}" y2="${H - 26}"/><text x="${x(t)}" y="${H - 10}" text-anchor="middle">${t.toFixed(1)}x</text>`;
+  s += `<line class="base" x1="${L}" x2="${L}" y1="${top}" y2="${H - 26}"/><line class="ref" x1="${x(1)}" x2="${x(1)}" y1="${top}" y2="${H - 26}"/>`;
+  POLICIES.forEach((p, i) => {
+    const y = top + i * rowH + 6, h = 20, v = c.ev[p];
+    s += `<text x="${L - 10}" y="${y + 14}" text-anchor="end">${esc(m.policy_label[p])}</text>`
+      + `<rect class="bar-mark ${p === c.best ? 'best' : ''}" x="${L}" y="${y}" width="${Math.max(0, x(v) - L)}" height="${h}" rx="4" ry="4"/>`
+      + `<text class="val" x="${x(v) + 6}" y="${y + 14}">${f2(v)}x</text>`;
+  });
+  svg.innerHTML = s;
+}
+function renderMatrix() {
+  const m = state.matrix; if (!m) return;
+  $('#mxMeta').textContent = `更新 ${m.generated_at}｜成熟 ${m.n_mature} / ${m.n_signals}｜出樣本起 ${m.prereg_date}`;
+  const top = $('#mxTop tbody'); top.innerHTML = '';
+  for (const [name, key] of [['全部成熟', 'overall'], ['規則 B', 'rule_b'], ['出樣本（全部）', 'oos_all'], ['出樣本 規則 B', 'oos_rule_b']]) {
+    const c = m[key];
+    top.insertAdjacentHTML('beforeend', c && c.n
+      ? `<tr><td>${name}</td><td class="num">${c.n} / ${c.events}</td><td class="num">${pct(c.hit)}</td>${['A_hold', 'B_half2x', 'C_bound'].map(p => `<td class="num ${p === c.best ? 'best' : ''}">${f2(c.ev[p])}</td>`).join('')}<td>${esc(m.policy_label[c.best])}</td></tr>`
+      : `<tr><td>${name}</td><td class="num muted">0</td><td class="muted" colspan="5">累積中</td></tr>`);
+  }
+  const mo = $('#monthly tbody'); mo.innerHTML = '';
+  for (const [k, v] of Object.entries(m.monthly || {})) mo.insertAdjacentHTML('beforeend', `<tr><td>${k}</td><td class="num">${v.n}</td><td class="num">${f2(v.A_hold)}</td><td class="num">${f2(v.B_half2x)}</td><td class="num">${f2(v.C_bound)}</td></tr>`);
+  const tb = $('#mx tbody'); tb.innerHTML = '';
+  for (const c of m.cells) {
+    if (!c.n) continue;
+    const st = c.status === '可用' ? 'ok' : (c.status === '已驗證' ? 'info' : 'warn');
+    tb.insertAdjacentHTML('beforeend', `<tr><td>${esc(c.iv)} <b>${esc(c.tier_label)}</b> ${esc(c.dte)}</td><td class="num">${c.n} / ${c.events}</td><td class="num">${pct(c.hit)}</td>`
+      + ['A_hold', 'B_half2x', 'half3x', 'rungs248', 'stop_half'].map(p => `<td class="num ${p === c.best ? 'best' : 'dim'}">${f2(c.ev[p])}</td>`).join('')
+      + `<td>${esc(m.policy_label[c.best] || '—')}</td><td><span class="chip ${st}"><i></i>${esc(c.status)}</span></td></tr>`);
+  }
+  const ctl = m.control || {};
+  $('#ctlNote').textContent = ctl.listed_n != null
+    ? `對照組（T6）：上榜組 ${pct(ctl.listed_rate)}（n=${ctl.listed_n}） vs 全 universe ${pct(ctl.universe_rate)}（${ctl.n_ticker_days} 標的-日／${ctl.n_days} 日），edge ${ctl.edge_pp > 0 ? '+' : ''}${ctl.edge_pp} 個百分點。${ctl.verdict_rule || ''}`
+    : `對照組（T6）：累積中（${ctl.note || '需要 ≥20 個交易日的 universe_spots 日檔'}）。`;
+  drawEvChart(state.cohort);
+}
+for (const b of document.querySelectorAll('#cohortSeg button')) b.onclick = () => {
+  state.cohort = b.dataset.c;
+  for (const x of document.querySelectorAll('#cohortSeg button')) x.setAttribute('aria-pressed', x === b);
+  drawEvChart(state.cohort);
+};
+
+// ---------- Decisions ----------
+function renderDecisions() {
+  const log = state.decisions, list = $('#decList'), tiles = $('#t8Tiles');
+  list.innerHTML = ''; tiles.innerHTML = '';
+  const days = log?.days || [];
+  $('#decMeta').textContent = days.length ? `${days.length} 個交易日` : '';
+  const t8 = log?.t8_by_event_answer || {};
+  for (const [k, v] of Object.entries(t8)) tiles.insertAdjacentHTML('beforeend', `<div class="tile"><div class="label">T8｜事件答「${esc(k)}」</div><div class="value">${pct(v.hit_rate)}<small>n=${v.n}</small></div><div class="sub">成熟後 ≥2x 命中；平均峰值 ${f2(v.avg_peak)}x</div></div>`);
+  if (!Object.keys(t8).length) tiles.insertAdjacentHTML('beforeend', `<div class="tile"><div class="label">T8｜三題 vs 結果</div><div class="value">累積中</div><div class="sub">候選成熟（T+20）後開始統計</div></div>`);
+  if (!days.length) { list.innerHTML = '<div class="empty"><b>還沒有 decisions</b>第一個交易日盤後 Worker 會寫入；也可以按右上角按鈕立即產生。</div>'; return; }
+  for (const d of days) {
+    const n = d.candidates?.length || 0;
+    const status = d.error ? 'bad' : (d.llm_called ? 'ok' : 'warn');
+    const label = d.error ? '失敗' : (d.llm_called ? (d.model_served || d.model || 'LLM') : (n ? '未呼叫' : '無候選'));
+    let rows = n ? `<div class="tbl"><table><thead><tr><th>標的</th><th class="num">進場</th><th>策略</th><th>LLM 三題</th><th>結果</th></tr></thead><tbody>` : '';
+    for (const c of d.candidates || []) {
+      const o = c.outcome;
+      const oc = o ? `${o.mature ? '' : '<span class="muted">未成熟 </span>'}峰 <b>${f2(o.peak)}x</b> <span class="muted">(${f2(o.t5)}/${f2(o.t10)}/${f2(o.t20)})</span>${o.verdict ? '<br>' + esc(o.verdict) : ''}` : '<span class="muted">待回填</span>';
+      rows += `<tr><td><span class="tk">${esc(c.ticker)}<small>${esc(c.strike)}C ${esc(c.expiry)}</small></span></td><td class="num">$${f2(c.entry_price)}</td><td class="wrapcell"><span class="tag acc">${esc((c.strategy_label || c.strategy || '').split('（')[0])}</span><br><span class="muted">${esc(sellText(c.sell_points))}</span></td><td class="qacell">${qaHtml(c)}</td><td>${oc}</td></tr>`;
     }
-  } catch (e) { document.getElementById('candMeta').textContent = '（candidates JSON 尚未產生）'; }
+    if (n) rows += '</tbody></table></div>';
+    const fp = d.facts_proposed || [];
+    if (fp.length) rows += `<div class="card-b note">📚 事實庫提案 ${fp.length} 條（附加 ${d.facts_appended ?? 0} 條到待審段）：${fp.map(p => `${esc(p.ticker)}・${esc(p.fact)}${p.date ? ' ' + esc(p.date) : ''}${p.source ? ` <a href="${esc(p.source)}" target="_blank" rel="noopener">來源</a>` : ''}`).join('；')}</div>`;
+    list.insertAdjacentHTML('beforeend', `<details ${d === days[0] ? 'open' : ''}><summary><span class="d">${esc(d.market_date)}</span><span class="chip ${status}"><i></i>${esc(label)}</span><span class="muted">${n} 筆候選</span>${d.prompt_version ? `<span class="tag">${esc(d.prompt_version)}</span>` : ''}${d.usage ? `<span class="muted">${d.usage.prompt_tokens ?? '?'}→${d.usage.completion_tokens ?? '?'} tok</span>` : ''}${d.error ? `<span class="muted">${esc(String(d.error).slice(0, 120))}</span>` : ''}</summary>${rows || `<div class="card-b note">${esc(d.note || '今日無結構候選')}</div>`}</details>`);
+  }
+}
+$('#decideBtn').onclick = async () => {
+  const btn = $('#decideBtn'), el = $('#decideMsg'); btn.disabled = true; el.textContent = '產生中（LLM 約 30–90 秒）…';
+  try {
+    const j = await getJson('/api/decide', { method: 'POST' });
+    el.textContent = { written: `已寫入 ${j.market_date}（${j.n_candidates} 筆${j.llm_called ? '' : '，未呼叫 LLM'}${j.error ? '；錯誤：' + j.error : ''}）`, exists: `${j.market_date} 已有 decisions，不重寫`, no_latest_json: 'main 上還沒有 latest.json', llm_not_configured: 'Worker 未設 LLM_API_KEY' }[j.action] || JSON.stringify(j);
+    await loadDecisions();
+  } catch (e) { el.textContent = '失敗：' + e; }
+  btn.disabled = false;
+};
+
+// ---------- 排程 ----------
+function renderHealth(j) {
+  $('#healthMeta').textContent = `查於 ${tpe(j.generated_at)}`;
+  $('#ts').textContent = '更新 ' + tpe(j.generated_at);
+  chip($('#llmChip'), j.llm?.configured ? 'ok' : 'warn', j.llm?.configured ? `LLM ${j.llm.model}` : 'LLM 未設定');
+  const tb = $('#health tbody'); tb.innerHTML = '';
+  for (const [wf, runs] of Object.entries(j.workflows)) {
+    if (!Array.isArray(runs) || !runs.length) { tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td colspan="3"><span class="chip bad"><i></i>近 36 小時無觸發</span></td></tr>`); continue; }
+    for (const x of runs) {
+      const cls = x.conclusion === 'success' ? 'ok' : (x.status === 'completed' ? 'bad' : 'warn');
+      tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td><span class="tag">${esc(x.event)}</span></td><td>${tpe(x.created_at)} <span class="muted">${ago(x.created_at)}</span></td><td><a href="${esc(x.url)}" target="_blank" rel="noopener"><span class="chip ${cls}"><i></i>${esc(x.conclusion || x.status)}</span></a></td></tr>`);
+    }
+  }
+  // 頂欄排程狀態：排定時刻之後 scanner 有沒有 run
+  const exp = new Date(j.expected_scanner_fire), runs = Array.isArray(j.workflows['scanner.yml']) ? j.workflows['scanner.yml'] : [];
+  const after = runs.filter(r => new Date(r.created_at) >= new Date(exp.getTime() - 10 * 60000));
+  const dow = new Date().getUTCDay();
+  if (after.length) chip($('#schedChip'), after[0].conclusion === 'success' ? 'ok' : (after[0].status === 'completed' ? 'bad' : 'warn'), `scanner ${after[0].conclusion || after[0].status}・${ago(after[0].created_at)}`);
+  else if (dow === 0 || dow === 6) chip($('#schedChip'), 'info', '週末休市');
+  else chip($('#schedChip'), Date.now() - exp.getTime() > 65 * 60000 ? 'bad' : 'warn', Date.now() - exp.getTime() > 65 * 60000 ? 'scanner 今日尚未觸發' : '等待排程');
+}
+$('#alarm').onclick = async () => {
+  const el = $('#alarmMsg'); el.textContent = '檢查中…';
+  try { const j = await getJson('/api/alarm/check'); el.textContent = { dispatched: '已補發 workflow_dispatch', weekend_skip: '週末不補發', none: `不需補發（排定時刻後已有 ${j.runs} 次 run）` }[j.action] || JSON.stringify(j); }
+  catch (e) { el.textContent = '失敗：' + e; }
+  loadHealth();
+};
+
+// ---------- loaders ----------
+async function loadLatest() {
+  try {
+    state.latest = await getJson(RAW + 'data/dashboard/latest.json');
+    const j = state.latest;
+    chip($('#mktChip'), 'info', `市場日 ${j.market_date}`);
+    $('#tCand').innerHTML = `${j.n_candidates}<small>/ ${j.n_report_rows} 列</small>`;
+  } catch { $('#candMeta').textContent = '（candidates JSON 尚未產生——等下一次 scanner）'; $('#tCand').textContent = '—'; }
+  renderCandidates();
 }
 async function loadMatrix() {
   try {
-    const m = await (await fetch(RAW + 'data/strategy_matrix.json', { cache: 'no-store' })).json();
-    document.getElementById('mxMeta').textContent = `更新 ${m.generated_at}｜成熟 ${m.n_mature}/${m.n_signals}`;
-    const top = document.querySelector('#mxTop tbody'); top.innerHTML = '';
-    for (const [name, key] of [['全部成熟', 'overall'], ['規則 B', 'rule_b'], [`出樣本（≥${m.prereg_date}）`, 'oos_all'], ['出樣本 規則 B', 'oos_rule_b']]) {
-      const c = m[key];
-      top.insertAdjacentHTML('beforeend', c && c.n ? `<tr><td>${name}</td><td>${c.n} / ${c.events}</td><td>${(c.hit*100).toFixed(0)}%</td><td>${f2(c.ev.A_hold)}</td><td>${f2(c.ev.B_half2x)}</td><td>${f2(c.ev.C_bound)}</td></tr>`
-        : `<tr><td>${name}</td><td>0</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>`);
+    state.matrix = await getJson(RAW + 'data/strategy_matrix.json');
+    const m = state.matrix, rb = m.rule_b || {}, ov = m.overall || {};
+    $('#tHit').innerHTML = rb.n ? `${pct(rb.hit)}<small>n=${rb.n}</small>` : '累積中';
+    $('#tHitSub').textContent = rb.n ? `事件 ${rb.events}｜全部成熟 ${pct(ov.hit)}（n=${ov.n}）` : '成熟樣本';
+    if (ov.n) {
+      const dC = ov.ev.C_bound - ov.ev.A_hold;
+      $('#tEv').innerHTML = `${f2(ov.ev.C_bound)}x<small><span class="delta ${dC >= 0 ? 'up' : 'down'}">${dC >= 0 ? '+' : ''}${f2(dC)}</span> vs A</small>`;
+      $('#tEvSub').textContent = `規則 B：C ${f2(rb.ev?.C_bound)}x／A ${f2(rb.ev?.A_hold)}x／B ${f2(rb.ev?.B_half2x)}x`;
     }
-    document.getElementById('monthly').textContent = '逐月（事件等權）：' + Object.entries(m.monthly).map(([mo, v]) => `${mo} n=${v.n} A ${f2(v.A_hold)} / B ${f2(v.B_half2x)} / C ${f2(v.C_bound)}`).join('；');
-    const tb = document.querySelector('#mx tbody'); tb.innerHTML = '';
-    for (const c of m.cells) {
-      if (!c.n) continue;
-      const cls = c.status === '可用' ? 'ok' : 'late';
-      tb.insertAdjacentHTML('beforeend', `<tr><td>${c.iv} ${c.tier_label} ${c.dte}</td><td>${c.n}/${c.events}</td><td>${(c.hit*100).toFixed(0)}%</td><td>${f2(c.ev.A_hold)}</td><td>${f2(c.ev.B_half2x)}</td><td>${f2(c.ev.half3x)}</td><td>${f2(c.ev.rungs248)}</td><td>${f2(c.ev.stop_half)}</td><td>${m.policy_label[c.best]}</td><td class="${cls}">${c.status}</td></tr>`);
-    }
-  } catch (e) { document.getElementById('mxMeta').textContent = '（strategy_matrix.json 尚未產生）'; }
+    const ctl = m.control || {};
+    if (ctl.listed_n != null) { $('#tCtl').innerHTML = `${ctl.edge_pp > 0 ? '+' : ''}${ctl.edge_pp}<small>pp</small>`; $('#tCtlSub').textContent = `上榜 ${pct(ctl.listed_rate)} vs universe ${pct(ctl.universe_rate)}（${ctl.n_days} 日）`; }
+    else { $('#tCtl').textContent = '累積中'; $('#tCtlSub').textContent = `universe_spots 日檔 ${ctl.n_days || 0}/20`; }
+  } catch { $('#mxMeta').textContent = '（strategy_matrix.json 尚未產生）'; }
+  renderMatrix();
 }
-loadCandidates(); loadMatrix();
+async function loadDecisions() {
+  // 優先 Worker /api/decisions（讀 GitHub 最新，含 tracer 補的 outcome）；T8 摘要來自 tracer 彙整檔
+  let days = null, t8 = null;
+  try { days = (await getJson('/api/decisions?limit=30')).days; } catch {}
+  try { const lg = await getJson(RAW + 'data/dashboard/decisions_log.json'); t8 = lg.t8_by_event_answer; if (!days) days = lg.days; } catch {}
+  state.decisions = { days: days || [], t8_by_event_answer: t8 || {} };
+  renderDecisions(); renderCandidates();
+}
 async function loadHealth() {
-  const r = await fetch('/api/health'); const j = await r.json();
-  document.getElementById('ts').textContent = '更新於 ' + j.generated_at;
-  const tb = document.querySelector('#health tbody'); tb.innerHTML = '';
-  for (const [wf, runs] of Object.entries(j.workflows)) {
-    if (!Array.isArray(runs) || runs.length === 0) {
-      tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td colspan="3" class="bad">近 36 小時無觸發</td></tr>`); continue;
-    }
-    for (const x of runs) {
-      const cls = x.conclusion === 'success' ? 'ok' : (x.status === 'completed' ? 'bad' : 'late');
-      tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td>${x.event}</td><td>${x.created_at}</td><td class="${cls}"><a href="${x.url}" target="_blank" rel="noopener">${x.conclusion || x.status}</a></td></tr>`);
-    }
-  }
+  try { renderHealth(await getJson('/api/health')); }
+  catch (e) { $('#ts').textContent = '/api/health 失敗：' + e; chip($('#schedChip'), 'bad', '排程狀態未知'); }
 }
-document.getElementById('alarm').onclick = async () => {
-  const el = document.getElementById('alarmMsg'); el.textContent = '檢查中…';
-  const j = await (await fetch('/api/alarm/check')).json();
-  el.textContent = j.action === 'dispatched' ? '已補發 workflow_dispatch' : `不需補發（排定時刻後已有 ${j.runs} 次 run）`;
-  loadHealth();
-};
-loadHealth();
+async function loadFacts() {
+  try { state.facts = await getJson('/api/facts'); }
+  catch { $('#factsMeta').textContent = '（/api/facts 讀取失敗）'; return; }
+  renderFacts(); renderCandidates();
+}
+loadLatest(); loadMatrix(); loadDecisions(); loadHealth(); loadFacts();
 </script>
 </body>
 </html>

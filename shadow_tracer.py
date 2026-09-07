@@ -529,6 +529,102 @@ def _fmt_mult(sig, key):
     return f"{mult:.1f}x"
 
 
+# ---------------------------------------------------------------- 第 5 批：LLM decisions 事後結果回填
+DECISIONS_DIR = os.path.join(DATA_DIR, "decisions")
+
+
+def _outcome_of(sig):
+    """一筆信號的事後結果（只用已回填的 T+N）；三點都沒價回 None。"""
+    entry = sig.get("entry_price") or 0
+    if entry <= 0:
+        return None
+    mult = {}
+    for k in ("t5", "t10", "t20"):
+        r = sig.get(k)
+        if r and r.get("opt_price") is not None:
+            mult[k] = round(r["opt_price"] / entry, 2)
+    if not mult:
+        return None
+    return {
+        **{k: mult.get(k) for k in ("t5", "t10", "t20")},
+        "peak": max(mult.values()),
+        "mature": len(mult) == 3,
+        "verdict": sig.get("verdict"),
+    }
+
+
+def backfill_decisions(all_signals):
+    """把 Worker 寫的 data/decisions/<市場日>.json 逐筆補上 outcome（append-only：
+    只補空的或未成熟的 outcome，當時的 LLM 答案一字不改），
+    並彙整成 data/dashboard/decisions_log.json 給 dashboard「Decisions」頁與 T8 統計。"""
+    if not os.path.isdir(DECISIONS_DIR):
+        return
+    by_id = {s["signal_id"]: s for s in all_signals if s.get("signal_id")}
+    filled_at = market_date_str()
+    days = []
+    for path in sorted(glob(os.path.join(DECISIONS_DIR, "*.json"))):
+        try:
+            with open(path, encoding='utf-8') as f:
+                d = json.load(f)
+        except Exception as e:
+            print(f"  ⚠️ decisions 檔損壞，略過：{path}（{e}）")
+            continue
+        changed = False
+        for c in d.get("candidates", []):
+            prev = c.get("outcome")
+            if prev and prev.get("mature"):
+                continue
+            sig = by_id.get(c.get("signal_id"))
+            if not sig:
+                continue
+            new = _outcome_of(sig)
+            if new and new != prev:
+                new["filled_at"] = filled_at
+                c["outcome"] = new
+                changed = True
+        if changed:
+            tmp = path + ".tmp"
+            with open(tmp, 'w', encoding='utf-8') as f:
+                json.dump(d, f, ensure_ascii=False, indent=2)
+            os.replace(tmp, path)
+        days.append({
+            "market_date": d.get("market_date"), "decided_at": d.get("decided_at"),
+            "model": d.get("model_served") or d.get("model"), "prompt_version": d.get("prompt_version"),
+            "llm_called": d.get("llm_called"), "error": d.get("error"),
+            "n_candidates": len(d.get("candidates", [])),
+            "candidates": [{k: c.get(k) for k in ("signal_id", "ticker", "expiry", "strike", "entry_price",
+                                                   "strategy", "sell_points", "q_event", "q_gap", "q_delta",
+                                                   "note", "status", "outcome")}
+                           for c in d.get("candidates", [])],
+        })
+
+    # T8 摘要：LLM 說「到期前有排定事件」的 vs 沒有的，成熟後命中率各多少（樣本夠了才有意義）
+    def _bucket(c):
+        a = (c.get("q_event") or {}).get("answer") if isinstance(c.get("q_event"), dict) else None
+        return a if a in ("有", "無", "未確認") else "未答"
+    stats = {}
+    for day in days:
+        for c in day["candidates"]:
+            o = c.get("outcome")
+            if not o or not o.get("mature"):
+                continue
+            b = stats.setdefault(_bucket(c), {"n": 0, "hit_2x": 0, "peaks": []})
+            b["n"] += 1
+            b["hit_2x"] += int(o["peak"] >= VERDICT_RULES["spike"])
+            b["peaks"].append(o["peak"])
+    summary = {k: {"n": v["n"], "hit_rate": round(v["hit_2x"] / v["n"], 3),
+                   "avg_peak": round(sum(v["peaks"]) / v["n"], 2)} for k, v in stats.items()}
+    out = {"generated_at": datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ'), "n_days": len(days),
+           "t8_by_event_answer": summary, "days": list(reversed(days))}
+    os.makedirs(os.path.join(DATA_DIR, "dashboard"), exist_ok=True)
+    out_path = os.path.join(DATA_DIR, "dashboard", "decisions_log.json")
+    tmp = out_path + ".tmp"
+    with open(tmp, 'w', encoding='utf-8') as f:
+        json.dump(out, f, ensure_ascii=False, indent=1)
+    os.replace(tmp, out_path)
+    print(f"  🤖 decisions：{len(days)} 天 → data/dashboard/decisions_log.json")
+
+
 def main():
     print(f"🌑 啟動 Shadow Tracer：{datetime.now().strftime('%Y-%m-%d %H:%M')}")
     os.makedirs(IV_LOG_DIR, exist_ok=True)
@@ -577,6 +673,12 @@ def main():
         print(f"  🧭 策略矩陣：成熟 {mx['n_mature']} / {mx['n_signals']} 筆 → data/strategy_matrix.json")
     except Exception as e:
         print(f"  ⚠️ 策略矩陣失敗：{e}")
+
+    # 第 5 批：LLM decisions 的事後結果回填（讀 all_sigs；失敗不擋 SHADOWLOG）
+    try:
+        backfill_decisions(all_sigs)
+    except Exception as e:
+        print(f"  ⚠️ decisions 回填失敗：{e}")
 
     for month_str, signals in loaded.items():
         md = generate_shadowlog_md(signals, month_str, matrix_md=matrix_md)

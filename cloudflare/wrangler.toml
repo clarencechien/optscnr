@@ -1,4 +1,4 @@
-# optscnr Cloudflare Worker — 第二鬧鐘 + dashboard
+# optscnr Cloudflare Worker — 第二鬧鐘 + LLM decisions + dashboard
 # 部署方式：Cloudflare dashboard → Workers & Pages → Create → Import a repository
 #          → 選 clarencechien/optscnr → Root directory = "cloudflare" → Deploy command = "npx wrangler deploy"
 #          之後每次 push main 自動部署，本機不需要 wrangler login。
@@ -18,10 +18,13 @@ preview_urls = false
 # pattern = "optscnr.example.com"
 # custom_domain = true
 
-# 第二鬧鐘（UTC）：主 scanner cron 是 22:17 UTC 平日；GitHub 若 45 分鐘內沒發，
-# 23:05 這發會補 workflow_dispatch；00:35 再檢查一次（GitHub 延遲 3-8 小時的事故形狀）。
+# Cron（UTC）。每一發都做兩件事：第二鬧鐘檢查 + decisions（冪等，同一市場日只寫一次）。
+#   23:05 平日   主 scanner 22:17 排定；45 分鐘內沒發 → 補 workflow_dispatch。scanner 通常 20-30 分跑完，
+#                準時的話這發就能寫 decisions
+#   00:35 週二~六 GitHub 延遲 3-8 小時的事故形狀，跨日再檢查一次
+#   02:05 週二~六 decisions 最後一次補：補發的 scanner 到這時也該跑完了
 [triggers]
-crons = ["5 23 * * 1-5", "35 0 * * 2-6"]
+crons = ["5 23 * * 1-5", "35 0 * * 2-6", "5 2 * * 2-6"]
 
 # 靜態 dashboard（cloudflare/public/）由 Worker 直接供檔，不另開 Pages 專案
 [assets]
@@ -35,6 +38,16 @@ SCANNER_WORKFLOW = "scanner.yml"
 SCANNER_CRON_UTC_HOUR = "22"        # 主 scanner 排定的 UTC 小時（判斷「今天該跑的那一發」）
 DEFAULT_BRANCH = "main"
 
+# 第 5 批 LLM（OpenRouter，OpenAI 相容 chat/completions）
+LLM_BASE_URL = "https://openrouter.ai/api/v1"
+LLM_MODEL = "anthropic/claude-opus-5"   # 三題事實題＋要附來源；每交易日一次，Opus 5 約 US$0.05-0.15/日
+LLM_WEB_SEARCH = "1"                    # OpenRouter web 外掛（第 (a) 題要 URL 來源）；出問題設 "0"
+LLM_WEB_MAX_RESULTS = "5"
+LLM_MAX_TOKENS = "6000"
+
 # Secrets（在 dashboard → Worker → Settings → Variables and Secrets 設定，不進 git）：
-#   GITHUB_TOKEN   fine-grained PAT，只給本 repo：Actions (read+write)、Contents (read)
-#   LLM_API_KEY    第 5 批接 LLM 時才需要
+#   GITHUB_TOKEN   fine-grained PAT，只給本 repo：Actions (read+write)、Contents (read+write — 第 5 批要寫 decisions)
+#   LLM_API_KEY    OpenRouter API key
+# （選）Cloudflare Access 二次驗證——兩個都設了 Worker 才會驗 JWT；建議也用 dashboard 變數設，不進 git：
+#   ACCESS_TEAM_DOMAIN  例如 yourteam.cloudflareaccess.com
+#   ACCESS_AUD          Access 應用程式的 Application Audience (AUD) Tag

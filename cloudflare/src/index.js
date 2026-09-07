@@ -1,16 +1,29 @@
 /**
- * optscnr Cloudflare Worker — 第二鬧鐘 + dashboard 供檔
+ * optscnr Cloudflare Worker — 第二鬧鐘 + LLM decisions + dashboard 供檔
  *
  * 職責（刻意極小，Python 全部留在 GitHub Actions）：
- *   1. scheduled()：檢查今天「該發的那一發」scanner run 發了沒；沒發 → workflow_dispatch
- *   2. fetch()：/api/health 回傳各 workflow 今日觸發時間 vs 排定時間；其餘路徑由靜態資產供檔
+ *   1. scheduled()：
+ *      a. 第二鬧鐘：今天「該發的那一發」scanner run 發了沒；沒發 → workflow_dispatch
+ *      b. 第 5 批：main 上的 data/dashboard/latest.json 若是新市場日且還沒有
+ *         data/decisions/<市場日>.json → 讀 docs/PROMPT_daily_report_reading_v4.md 的 prompt
+ *         → 呼叫 LLM（OpenRouter，OpenAI 相容格式）→ GitHub Contents API 建檔（append-only）
+ *   2. fetch()：/api/health、/api/alarm/check、/api/decide、/api/decisions；其餘靜態 dashboard
+ *   3. （選）Cloudflare Access：設了 ACCESS_TEAM_DOMAIN + ACCESS_AUD 就驗每個請求的 JWT，
+ *      Access 設錯時 /api/decide 這種會花錢的端點也不會裸奔
  *
  * 背景：2026-08-26 起 GitHub schedule 反覆延遲 3-8 小時甚至丟棄（docs/log.md 3.13 專節、
  * docs/PROJECT_ESCAPE_DOOR.md Phase 1）。Cloudflare Cron Trigger 準時，所以用它當外部鬧鐘。
  */
 
 const GH = "https://api.github.com";
+const PROMPT_PATH = "docs/PROMPT_daily_report_reading_v4.md";
+const LEDGER_PATH = "docs/FACTS_ledger.md";
+const LATEST_PATH = "data/dashboard/latest.json";
+const DECISIONS_DIR = "data/decisions";
+const LEDGER_GENERAL = ["環境", "判決", "校準", "工具"];
+const LEDGER_PENDING = "待審（LLM 提案）";
 
+// ------------------------------------------------------------------ GitHub
 function ghHeaders(env) {
   return {
     "Authorization": `Bearer ${env.GITHUB_TOKEN}`,
@@ -20,6 +33,65 @@ function ghHeaders(env) {
   };
 }
 
+function repoUrl(env, path) {
+  return `${GH}/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/${path}`;
+}
+
+/** 讀 main 上的檔（Contents API，不走 raw CDN：raw 有 5 分鐘快取，剛 push 的檔會讀到舊的）。
+ *  不存在回 null；其餘錯誤丟出。 */
+async function ghGetFile(env, path) {
+  const ref = env.DEFAULT_BRANCH || "main";
+  const r = await fetch(repoUrl(env, `contents/${path}?ref=${ref}`), { headers: ghHeaders(env) });
+  if (r.status === 404) return null;
+  if (!r.ok) throw new Error(`get ${path}: ${r.status}`);
+  const j = await r.json();
+  const bytes = Uint8Array.from(atob(j.content.replace(/\n/g, "")), c => c.charCodeAt(0));
+  return { sha: j.sha, text: new TextDecoder().decode(bytes) };
+}
+
+async function ghGetJson(env, path) {
+  const f = await ghGetFile(env, path);
+  return f ? JSON.parse(f.text) : null;
+}
+
+/** 建新檔（append-only：不傳 sha，檔已存在時 GitHub 回 422，我們就當「別人先寫了」放棄）。 */
+async function ghCreateFile(env, path, text, message) {
+  const bytes = new TextEncoder().encode(text);
+  let bin = "";
+  for (const b of bytes) bin += String.fromCharCode(b);
+  const r = await fetch(repoUrl(env, `contents/${path}`), {
+    method: "PUT",
+    headers: { ...ghHeaders(env), "Content-Type": "application/json" },
+    body: JSON.stringify({ message, content: btoa(bin), branch: env.DEFAULT_BRANCH || "main" }),
+  });
+  if (r.status === 422) return { created: false, reason: "exists" };
+  if (!r.ok) throw new Error(`create ${path}: ${r.status} ${await r.text()}`);
+  return { created: true, commit: (await r.json()).commit?.sha };
+}
+
+/** 更新既有檔（需要讀到的 sha；別人先改了會 409，呼叫端自行重讀重試） */
+async function ghUpdateFile(env, path, text, message, sha) {
+  const bytes = new TextEncoder().encode(text);
+  let bin = "";
+  for (const b of bytes) bin += String.fromCharCode(b);
+  const r = await fetch(repoUrl(env, `contents/${path}`), {
+    method: "PUT",
+    headers: { ...ghHeaders(env), "Content-Type": "application/json" },
+    body: JSON.stringify({ message, content: btoa(bin), sha, branch: env.DEFAULT_BRANCH || "main" }),
+  });
+  if (r.status === 409 || r.status === 422) return { updated: false, status: r.status };
+  if (!r.ok) throw new Error(`update ${path}: ${r.status} ${await r.text()}`);
+  return { updated: true, commit: (await r.json()).commit?.sha };
+}
+
+async function ghListDir(env, path) {
+  const r = await fetch(repoUrl(env, `contents/${path}?ref=${env.DEFAULT_BRANCH || "main"}`), { headers: ghHeaders(env) });
+  if (r.status === 404) return [];
+  if (!r.ok) throw new Error(`list ${path}: ${r.status}`);
+  return (await r.json()).filter(x => x.type === "file" && x.name.endsWith(".json")).map(x => x.name);
+}
+
+// ------------------------------------------------------------------ 第二鬧鐘
 /** 今天（UTC）該發的那一發的「排定時刻」：以 SCANNER_CRON_UTC_HOUR 為準。
  *  00:35 那發檢查的是「前一個 UTC 日」的排定 run（跨日補檢查）。 */
 function expectedFireTime(now, env) {
@@ -30,7 +102,7 @@ function expectedFireTime(now, env) {
 }
 
 async function listRunsSince(env, workflowFile, sinceIso) {
-  const url = `${GH}/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/actions/workflows/${workflowFile}/runs`
+  const url = repoUrl(env, `actions/workflows/${workflowFile}/runs`)
     + `?created=%3E%3D${encodeURIComponent(sinceIso)}&per_page=10`;
   const r = await fetch(url, { headers: ghHeaders(env) });
   if (!r.ok) throw new Error(`list runs ${workflowFile}: ${r.status}`);
@@ -38,8 +110,7 @@ async function listRunsSince(env, workflowFile, sinceIso) {
 }
 
 async function dispatch(env, workflowFile) {
-  const url = `${GH}/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/actions/workflows/${workflowFile}/dispatches`;
-  const r = await fetch(url, {
+  const r = await fetch(repoUrl(env, `actions/workflows/${workflowFile}/dispatches`), {
     method: "POST",
     headers: { ...ghHeaders(env), "Content-Type": "application/json" },
     body: JSON.stringify({ ref: env.DEFAULT_BRANCH || "main" }),
@@ -47,8 +118,11 @@ async function dispatch(env, workflowFile) {
   if (r.status !== 204) throw new Error(`dispatch ${workflowFile}: ${r.status} ${await r.text()}`);
 }
 
-/** 第二鬧鐘核心：排定時刻之後有沒有任何 run（schedule 或 dispatch 都算）；沒有就補發。 */
+/** 第二鬧鐘核心：排定時刻之後有沒有任何 run（schedule 或 dispatch 都算）；沒有就補發。
+ *  週末（UTC 週六/日）不補：美股休市，補發只會重播週五收盤。 */
 async function secondAlarm(env, now) {
+  const dow = now.getUTCDay();
+  if (dow === 0 || dow === 6) return { checked_at: now.toISOString(), action: "weekend_skip" };
   const expected = expectedFireTime(now, env);
   // 排定時刻前 10 分鐘起算，涵蓋 GitHub 偶爾提早幾分鐘發的情況
   const since = new Date(expected.getTime() - 10 * 60 * 1000).toISOString();
@@ -62,7 +136,7 @@ async function secondAlarm(env, now) {
   return result;
 }
 
-/** /api/health：各 workflow 最近一次觸發時間，dashboard「排程健康」區用 */
+/** /api/health：各 workflow 最近一次觸發時間，dashboard「排程」區用 */
 async function health(env) {
   const now = new Date();
   const since = new Date(now.getTime() - 36 * 3600 * 1000).toISOString();
@@ -79,22 +153,303 @@ async function health(env) {
       out[wf] = { error: String(e) };
     }
   }
-  return { generated_at: now.toISOString(), expected_scanner_fire: expectedFireTime(now, env).toISOString(), workflows: out };
+  return {
+    generated_at: now.toISOString(),
+    expected_scanner_fire: expectedFireTime(now, env).toISOString(),
+    llm: { configured: Boolean(env.LLM_API_KEY), model: env.LLM_MODEL || null, web_search: env.LLM_WEB_SEARCH === "1" },
+    access: { enforced: Boolean(env.ACCESS_TEAM_DOMAIN && env.ACCESS_AUD) },
+    workflows: out,
+  };
 }
+
+// ------------------------------------------------------------------ 第 5 批：LLM decisions
+/** 從 docs/PROMPT_daily_report_reading_v4.md 抽 ```prompt 區塊；第一行 prompt_version: 是版本。 */
+async function loadPrompt(env) {
+  const f = await ghGetFile(env, PROMPT_PATH);
+  if (!f) throw new Error(`${PROMPT_PATH} 不存在`);
+  const m = f.text.match(/```prompt\s*\n([\s\S]*?)\n```/);
+  if (!m) throw new Error("prompt 檔沒有 ```prompt 區塊");
+  const body = m[1];
+  const v = body.match(/^prompt_version:\s*(\S+)/m);
+  return { version: v ? v[1] : "unknown", text: body.replace(/^prompt_version:.*\n?/m, "").trim() };
+}
+
+// ---- 事實庫（docs/FACTS_ledger.md）：格式規則寫在該檔檔頭 ----
+/** 解析成 {sections: [{key, title, items:[...]}]}；key＝段名第一個大寫英數 token（T（AT&T）→ T）或通用段名。 */
+export function parseLedger(md) {
+  const sections = [];
+  let cur = null;
+  for (const line of md.split("\n")) {
+    const h = line.match(/^##\s+(.+?)\s*$/);
+    if (h) {
+      const title = h[1];
+      const tk = title.match(/^([A-Z][A-Z0-9.\-]*)/);
+      const key = LEDGER_GENERAL.includes(title) ? title : (title.startsWith(LEDGER_PENDING) ? "__pending__" : (tk ? tk[1] : title));
+      cur = { key, title, items: [] };
+      sections.push(cur);
+      continue;
+    }
+    if (!cur) continue;
+    const t = line.trim();
+    if (t.startsWith("- ")) cur.items.push(t.slice(2));
+    else if (t && !t.startsWith("<!--") && cur.items.length && line.startsWith("  ")) cur.items[cur.items.length - 1] += " " + t;
+  }
+  return { sections };
+}
+
+/** 給 LLM 的事實：候選標的各段全部（每條截 600 字、最多 12 條）＋ 通用段最新 5 條 */
+function factsFor(ledger, tickers) {
+  const clip = s => (s.length > 600 ? s.slice(0, 600) + "…" : s);
+  const by_ticker = {};
+  for (const t of tickers) {
+    const items = ledger.sections.filter(s => s.key === t).flatMap(s => s.items);
+    if (items.length) by_ticker[t] = items.slice(-12).map(clip);
+  }
+  const general = {};
+  for (const g of LEDGER_GENERAL) {
+    const items = ledger.sections.filter(s => s.key === g).flatMap(s => s.items);
+    if (items.length) general[g] = items.slice(-5).map(clip);
+  }
+  return { by_ticker, general, source: LEDGER_PATH };
+}
+
+/** 把 LLM 的 facts_proposed 附加到「待審（LLM 提案）」段（沒有 URL 的不收；段不存在就補在檔尾） */
+async function appendProposals(env, proposals, mkt) {
+  const rows = (proposals || []).filter(p => p && p.ticker && p.fact && /^https?:\/\//.test(String(p.source || "")))
+    .map(p => `- ${String(p.ticker).toUpperCase().slice(0, 12)} ｜ ${String(p.fact).replace(/\s*\n\s*/g, " ").slice(0, 400)} ｜ ${p.date || "日期未知"} ｜ ${p.source} ｜ ${mkt} LLM 提案`);
+  if (!rows.length) return { appended: 0 };
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const f = await ghGetFile(env, LEDGER_PATH);
+    if (!f) return { appended: 0, reason: "ledger_missing" };
+    const marker = `## ${LEDGER_PENDING}`;
+    let text = f.text.replace(/\s+$/, "") + "\n";
+    if (!text.includes(marker)) text += `\n---\n\n${marker}\n<!-- Worker 自動附加；審過請搬到該標的段落 -->\n`;
+    // 去重：同 ticker 同 source 已在檔內就不再附
+    const fresh = rows.filter(r => { const src = r.split(" ｜ ")[3]; return !text.includes(src); });
+    if (!fresh.length) return { appended: 0, reason: "duplicate" };
+    text += fresh.join("\n") + "\n";
+    const res = await ghUpdateFile(env, LEDGER_PATH, text, `📚 FACTS 待審：${mkt} LLM 提案 ${fresh.length} 條 [skip ci]`, f.sha);
+    if (res.updated) return { appended: fresh.length };
+  }
+  return { appended: 0, reason: "conflict" };
+}
+
+/** 送給 LLM 的候選欄位（去掉 dashboard 用的顯示欄，保留三題需要的） */
+function trimCandidate(c) {
+  const keep = ["signal_id", "ticker", "expiry", "strike", "dte", "spot", "otm_pct", "last", "iv", "oi", "oi_d7",
+    "oi_delta_status", "volume", "score", "features", "warnings", "events", "recent_spots", "strategy_label"];
+  const o = {};
+  for (const k of keep) if (c[k] !== undefined) o[k] = c[k];
+  return o;
+}
+
+/** 從 LLM 回覆抽 JSON（模型偶爾還是會包 ``` 圍欄或前後加一句話） */
+function extractJson(text) {
+  const t = String(text || "").trim();
+  try { return JSON.parse(t); } catch {}
+  const fenced = t.match(/```(?:json)?\s*\n?([\s\S]*?)```/);
+  if (fenced) { try { return JSON.parse(fenced[1].trim()); } catch {} }
+  const a = t.indexOf("{"), b = t.lastIndexOf("}");
+  if (a >= 0 && b > a) { try { return JSON.parse(t.slice(a, b + 1)); } catch {} }
+  return null;
+}
+
+async function callLLM(env, systemPrompt, userPayload) {
+  const base = (env.LLM_BASE_URL || "https://openrouter.ai/api/v1").replace(/\/$/, "");
+  const body = {
+    model: env.LLM_MODEL || "anthropic/claude-opus-5",
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: JSON.stringify(userPayload) },
+    ],
+    temperature: 0,
+    max_tokens: parseInt(env.LLM_MAX_TOKENS || "6000", 10),
+  };
+  // OpenRouter web 外掛：第 (a) 題「排定事件＋來源 URL」要靠它；不要就把 LLM_WEB_SEARCH 設成 0
+  if (env.LLM_WEB_SEARCH === "1") body.plugins = [{ id: "web", max_results: parseInt(env.LLM_WEB_MAX_RESULTS || "5", 10) }];
+  const r = await fetch(`${base}/chat/completions`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${env.LLM_API_KEY}`,
+      "Content-Type": "application/json",
+      "HTTP-Referer": "https://github.com/clarencechien/optscnr",
+      "X-Title": "optscnr decisions",
+    },
+    body: JSON.stringify(body),
+  });
+  const text = await r.text();
+  if (!r.ok) throw new Error(`LLM ${r.status}: ${text.slice(0, 500)}`);
+  const j = JSON.parse(text);
+  const content = j.choices?.[0]?.message?.content ?? "";
+  return { content: typeof content === "string" ? content : JSON.stringify(content), model_served: j.model || body.model, usage: j.usage || null };
+}
+
+/**
+ * 決策流程（冪等：同一市場日只寫一次）：
+ *   latest.json 的 market_date → 已有 decisions/<日>.json？有 → 跳過
+ *   候選 0 筆 → 不呼叫 LLM，直接記「今日無結構候選」
+ *   否則 → prompt v4 + 候選 → LLM → 組檔 → Contents API 建檔
+ */
+async function runDecision(env, { source = "cron" } = {}) {
+  const startedAt = new Date().toISOString();
+  const latest = await ghGetJson(env, LATEST_PATH);
+  if (!latest) return { action: "no_latest_json" };
+  const mkt = latest.market_date;
+  const path = `${DECISIONS_DIR}/${mkt}.json`;
+  if (await ghGetFile(env, path)) return { action: "exists", market_date: mkt };
+  if (!env.LLM_API_KEY) return { action: "llm_not_configured", market_date: mkt };
+
+  const prompt = await loadPrompt(env);
+  const cands = latest.candidates || [];
+  // 事實庫：讀不到也照跑（facts 空），但記在 record 裡
+  let facts = { by_ticker: {}, general: {}, source: LEDGER_PATH, error: null };
+  if (cands.length) {
+    try { facts = { ...factsFor(parseLedger((await ghGetFile(env, LEDGER_PATH))?.text || ""), [...new Set(cands.map(c => c.ticker))]), error: null }; }
+    catch (e) { facts.error = String(e); }
+  }
+  const base = c => ({
+    signal_id: c.signal_id, ticker: c.ticker, expiry: c.expiry, strike: c.strike, entry_price: c.last,
+    strategy: c.strategy, strategy_label: c.strategy_label, sell_points: c.sell_points,
+    facts_used: (facts.by_ticker[c.ticker] || []).length,
+  });
+  const record = {
+    market_date: mkt, decided_at: startedAt, source, prompt_version: prompt.version,
+    model: env.LLM_MODEL || "anthropic/claude-opus-5", model_served: null,
+    llm_called: false, web_search: env.LLM_WEB_SEARCH === "1",
+    candidates_generated_at: latest.generated_at, n_candidates: cands.length,
+    facts_general_n: Object.values(facts.general).reduce((a, b) => a + b.length, 0), facts_error: facts.error,
+    candidates: [], facts_proposed: [], facts_appended: 0, raw_answer: null, usage: null, error: null,
+  };
+
+  if (cands.length === 0) {
+    record.note = "今日無結構候選（空手是正確執行，不補名額；未呼叫 LLM）";
+  } else {
+    try {
+      const { error: _e, ...factsPayload } = facts;
+      const res = await callLLM(env, prompt.text, { market_date: mkt, candidates: cands.map(trimCandidate), facts: factsPayload });
+      record.llm_called = true;
+      record.model_served = res.model_served;
+      record.usage = res.usage;
+      record.raw_answer = res.content;
+      const parsed = extractJson(res.content);
+      const byId = new Map(((parsed && parsed.candidates) || []).map(x => [x.signal_id, x]));
+      record.candidates = cands.map(c => {
+        const a = byId.get(c.signal_id);
+        return a
+          ? { ...base(c), q_event: a.q_event ?? null, q_gap: a.q_gap ?? null, q_delta: a.q_delta ?? null, note: a.note ?? null, status: "answered" }
+          : { ...base(c), q_event: null, q_gap: null, q_delta: null, note: null, status: "unanswered" };
+      });
+      if (!parsed) record.error = "LLM 回覆不是可解析的 JSON（raw_answer 保留）";
+      record.facts_proposed = Array.isArray(parsed?.facts_proposed) ? parsed.facts_proposed.slice(0, 20) : [];
+      if (record.facts_proposed.length) {
+        try { record.facts_appended = (await appendProposals(env, record.facts_proposed, mkt)).appended; }
+        catch (e) { record.facts_error = `append: ${String(e).slice(0, 300)}`; }
+      }
+    } catch (e) {
+      // LLM 失敗也要留檔：T8 的分母是「有候選的交易日」，缺檔會讓後面的統計偏樂觀
+      record.error = String(e).slice(0, 1000);
+      record.candidates = cands.map(c => ({ ...base(c), q_event: null, q_gap: null, q_delta: null, note: null, status: "error" }));
+    }
+  }
+
+  const put = await ghCreateFile(env, path, JSON.stringify(record, null, 2) + "\n",
+    `🤖 decisions ${mkt}（${record.llm_called ? record.model_served : "no-llm"}）[skip ci]`);
+  const out = { action: put.created ? "written" : "exists", market_date: mkt, n_candidates: cands.length,
+    llm_called: record.llm_called, error: record.error, usage: record.usage,
+    facts_proposed: record.facts_proposed.length, facts_appended: record.facts_appended };
+  console.log(JSON.stringify({ event: "decision", ...out }));
+  return out;
+}
+
+/** /api/decisions：最近 N 天的 decisions 檔（dashboard「Decisions」頁；tracer 補的 outcome 也在裡面） */
+async function listDecisions(env, limit) {
+  const names = (await ghListDir(env, DECISIONS_DIR)).sort().reverse().slice(0, limit);
+  const days = [];
+  for (const n of names) {
+    try { days.push(await ghGetJson(env, `${DECISIONS_DIR}/${n}`)); } catch (e) { days.push({ market_date: n.replace(".json", ""), error: String(e) }); }
+  }
+  return { generated_at: new Date().toISOString(), days };
+}
+
+// ------------------------------------------------------------------ Cloudflare Access（選用）
+let _certCache = { at: 0, keys: [] };
+
+async function accessKeys(env) {
+  if (Date.now() - _certCache.at < 3600 * 1000 && _certCache.keys.length) return _certCache.keys;
+  const r = await fetch(`https://${env.ACCESS_TEAM_DOMAIN}/cdn-cgi/access/certs`);
+  if (!r.ok) throw new Error(`access certs ${r.status}`);
+  _certCache = { at: Date.now(), keys: (await r.json()).keys || [] };
+  return _certCache.keys;
+}
+
+function b64urlToBytes(s) {
+  const b64 = s.replace(/-/g, "+").replace(/_/g, "/") + "=".repeat((4 - s.length % 4) % 4);
+  return Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+}
+
+/** 驗 Cf-Access-Jwt-Assertion（或 CF_Authorization cookie）：簽章、aud、exp。
+ *  沒設 ACCESS_TEAM_DOMAIN/ACCESS_AUD → 不驗（回 true），行為與以前一樣。 */
+async function verifyAccess(request, env) {
+  if (!env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD) return true;
+  let token = request.headers.get("Cf-Access-Jwt-Assertion");
+  if (!token) {
+    const m = (request.headers.get("Cookie") || "").match(/(?:^|;\s*)CF_Authorization=([^;]+)/);
+    token = m ? m[1] : null;
+  }
+  if (!token) return false;
+  try {
+    const [h, p, s] = token.split(".");
+    const header = JSON.parse(new TextDecoder().decode(b64urlToBytes(h)));
+    const payload = JSON.parse(new TextDecoder().decode(b64urlToBytes(p)));
+    const auds = Array.isArray(payload.aud) ? payload.aud : [payload.aud];
+    if (!auds.includes(env.ACCESS_AUD)) return false;
+    if (!payload.exp || payload.exp * 1000 < Date.now()) return false;
+    const jwk = (await accessKeys(env)).find(k => k.kid === header.kid);
+    if (!jwk) return false;
+    const key = await crypto.subtle.importKey("jwk", jwk, { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" }, false, ["verify"]);
+    return await crypto.subtle.verify("RSASSA-PKCS1-v1_5", key, b64urlToBytes(s), new TextEncoder().encode(`${h}.${p}`));
+  } catch (e) {
+    console.log(JSON.stringify({ event: "access_verify_error", error: String(e) }));
+    return false;
+  }
+}
+
+// ------------------------------------------------------------------ entry points
+const noStore = { "Cache-Control": "no-store" };
 
 export default {
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(secondAlarm(env, new Date()));
+    const now = new Date();
+    ctx.waitUntil((async () => {
+      try { await secondAlarm(env, now); } catch (e) { console.log(JSON.stringify({ event: "second_alarm_error", error: String(e) })); }
+      // 第二鬧鐘先查，再看 decisions：scanner 若剛被補發，latest.json 還是舊市場日 → exists → 下一發 cron 再來
+      try { await runDecision(env, { source: `cron ${event.cron}` }); } catch (e) { console.log(JSON.stringify({ event: "decision_error", error: String(e) })); }
+    })());
   },
 
   async fetch(request, env) {
-    const url = new URL(request.url);
-    if (url.pathname === "/api/health") {
-      return Response.json(await health(env), { headers: { "Cache-Control": "no-store" } });
+    if (!(await verifyAccess(request, env))) {
+      return new Response("unauthorized（Cloudflare Access JWT 無效或缺失）", { status: 401, headers: noStore });
     }
-    if (url.pathname === "/api/alarm/check") {
-      // 手動觸發第二鬧鐘檢查（dashboard 上的「立即補發」按鈕）
-      return Response.json(await secondAlarm(env, new Date()));
+    const url = new URL(request.url);
+    try {
+      if (url.pathname === "/api/health") return Response.json(await health(env), { headers: noStore });
+      if (url.pathname === "/api/alarm/check") return Response.json(await secondAlarm(env, new Date()), { headers: noStore }); // 手動補發
+      if (url.pathname === "/api/decide") {
+        if (request.method !== "POST") return new Response("POST only", { status: 405 });
+        return Response.json(await runDecision(env, { source: "manual" }), { headers: noStore });
+      }
+      if (url.pathname === "/api/decisions") {
+        const limit = Math.min(60, Math.max(1, parseInt(url.searchParams.get("limit") || "20", 10)));
+        return Response.json(await listDecisions(env, limit), { headers: noStore });
+      }
+      if (url.pathname === "/api/facts") {
+        // dashboard「事實庫」頁：解析後的 ledger（讀 main 最新版，含 Worker 剛附加的待審條目）
+        const f = await ghGetFile(env, LEDGER_PATH);
+        return Response.json({ generated_at: new Date().toISOString(), sha: f?.sha || null, ...parseLedger(f?.text || "") }, { headers: noStore });
+      }
+    } catch (e) {
+      return Response.json({ error: String(e) }, { status: 500, headers: noStore });
     }
     // 其餘：靜態 dashboard（cloudflare/public/）
     return env.ASSETS.fetch(request);
