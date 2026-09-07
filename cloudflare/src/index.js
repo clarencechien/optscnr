@@ -390,29 +390,37 @@ function b64urlToBytes(s) {
 }
 
 /** 驗 Cf-Access-Jwt-Assertion（或 CF_Authorization cookie）：簽章、aud、exp。
- *  沒設 ACCESS_TEAM_DOMAIN/ACCESS_AUD → 不驗（回 true），行為與以前一樣。 */
+ *  沒設 ACCESS_TEAM_DOMAIN/ACCESS_AUD → 不驗，行為與以前一樣。
+ *  回 {ok, reason}：reason 會放進 401 的 JSON，dashboard 直接顯示，設錯時不用猜。
+ *  注意：靜態頁（public/）由 Cloudflare 先供檔、不經過這裡，所以「頁面開得了但 /api 全 401」
+ *  就是這個檢查沒過——不是頁面壞了。 */
 async function verifyAccess(request, env) {
-  if (!env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD) return true;
+  if (!env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD) return { ok: true };
+  const team = String(env.ACCESS_TEAM_DOMAIN).replace(/^https?:\/\//, "").replace(/\/.*$/, "");
   let token = request.headers.get("Cf-Access-Jwt-Assertion");
   if (!token) {
     const m = (request.headers.get("Cookie") || "").match(/(?:^|;\s*)CF_Authorization=([^;]+)/);
     token = m ? m[1] : null;
   }
-  if (!token) return false;
+  if (!token) return { ok: false, reason: "no_token", hint: "請求沒帶 Access JWT：這個網域還沒被 Zero Trust Access 應用程式保護，或你是用舊分頁。先在 Zero Trust 建好 Self-hosted 應用程式再設 ACCESS_* 變數；不想用 Access 就把兩個變數刪掉。" };
   try {
     const [h, p, s] = token.split(".");
     const header = JSON.parse(new TextDecoder().decode(b64urlToBytes(h)));
     const payload = JSON.parse(new TextDecoder().decode(b64urlToBytes(p)));
     const auds = Array.isArray(payload.aud) ? payload.aud : [payload.aud];
-    if (!auds.includes(env.ACCESS_AUD)) return false;
-    if (!payload.exp || payload.exp * 1000 < Date.now()) return false;
-    const jwk = (await accessKeys(env)).find(k => k.kid === header.kid);
-    if (!jwk) return false;
+    if (!auds.includes(env.ACCESS_AUD)) return { ok: false, reason: "aud_mismatch", hint: `token 的 aud 是 ${auds.map(a => String(a).slice(0, 8) + "…").join(",")}，Worker 設的 ACCESS_AUD 開頭是 ${String(env.ACCESS_AUD).slice(0, 8)}…；請從 Access 應用程式 Overview 重抄 Application Audience Tag。` };
+    if (!payload.exp || payload.exp * 1000 < Date.now()) return { ok: false, reason: "expired", hint: "Access session 過期，重新整理頁面重新登入。" };
+    let keys;
+    try { keys = await accessKeys({ ACCESS_TEAM_DOMAIN: team }); }
+    catch (e) { return { ok: false, reason: "certs_fetch_failed", hint: `抓不到 https://${team}/cdn-cgi/access/certs：ACCESS_TEAM_DOMAIN 應是 <team>.cloudflareaccess.com（不含 https://）。${String(e).slice(0, 120)}` }; }
+    const jwk = keys.find(k => k.kid === header.kid);
+    if (!jwk) return { ok: false, reason: "kid_not_found", hint: "token 的簽章 key 不在這個 team 的 certs 裡：ACCESS_TEAM_DOMAIN 填到別的 team 了。" };
     const key = await crypto.subtle.importKey("jwk", jwk, { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" }, false, ["verify"]);
-    return await crypto.subtle.verify("RSASSA-PKCS1-v1_5", key, b64urlToBytes(s), new TextEncoder().encode(`${h}.${p}`));
+    const good = await crypto.subtle.verify("RSASSA-PKCS1-v1_5", key, b64urlToBytes(s), new TextEncoder().encode(`${h}.${p}`));
+    return good ? { ok: true } : { ok: false, reason: "bad_signature", hint: "簽章不符。" };
   } catch (e) {
     console.log(JSON.stringify({ event: "access_verify_error", error: String(e) }));
-    return false;
+    return { ok: false, reason: "verify_error", hint: String(e).slice(0, 200) };
   }
 }
 
@@ -430,8 +438,9 @@ export default {
   },
 
   async fetch(request, env) {
-    if (!(await verifyAccess(request, env))) {
-      return new Response("unauthorized（Cloudflare Access JWT 無效或缺失）", { status: 401, headers: noStore });
+    const access = await verifyAccess(request, env);
+    if (!access.ok) {
+      return Response.json({ error: "unauthorized", reason: access.reason, hint: access.hint }, { status: 401, headers: noStore });
     }
     const url = new URL(request.url);
     try {
