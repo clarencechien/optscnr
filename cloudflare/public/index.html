@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>optscnr dashboard</title>
+<style>
+  :root { color-scheme: light dark; font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif; }
+  body { margin: 0; padding: 16px; max-width: 960px; margin-inline: auto; }
+  h1 { font-size: 1.25rem; } h2 { font-size: 1.05rem; margin-top: 1.5rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  th, td { border-bottom: 1px solid #8884; padding: 6px 8px; text-align: left; white-space: nowrap; }
+  .wrap { overflow-x: auto; }
+  .ok { color: #1a7f37; } .late { color: #b35900; } .bad { color: #c62828; }
+  .muted { opacity: .65; font-size: .85rem; }
+  button { padding: 6px 12px; }
+</style>
+</head>
+<body>
+<h1>optscnr dashboard <span class="muted" id="ts"></span></h1>
+
+<h2>排程健康（各 workflow 近 36 小時觸發）</h2>
+<div class="wrap"><table id="health"><thead><tr><th>workflow</th><th>觸發</th><th>時間 (UTC)</th><th>狀態</th></tr></thead><tbody></tbody></table></div>
+<p><button id="alarm">立即檢查並補發 scanner</button> <span id="alarmMsg" class="muted"></span></p>
+
+<h2>今日候選 / 策略矩陣 / decisions</h2>
+<p class="muted">第 2、4、5 批上線後填入（讀 <code>data/dashboard/</code>、<code>data/strategy_matrix.json</code>、<code>data/decisions/</code>）。
+規格見 <code>docs/PLAN_2026-09_strategy_dashboard.md</code>。</p>
+
+<script>
+async function loadHealth() {
+  const r = await fetch('/api/health'); const j = await r.json();
+  document.getElementById('ts').textContent = '更新於 ' + j.generated_at;
+  const tb = document.querySelector('#health tbody'); tb.innerHTML = '';
+  for (const [wf, runs] of Object.entries(j.workflows)) {
+    if (!Array.isArray(runs) || runs.length === 0) {
+      tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td colspan="3" class="bad">近 36 小時無觸發</td></tr>`); continue;
+    }
+    for (const x of runs) {
+      const cls = x.conclusion === 'success' ? 'ok' : (x.status === 'completed' ? 'bad' : 'late');
+      tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td>${x.event}</td><td>${x.created_at}</td><td class="${cls}"><a href="${x.url}" target="_blank" rel="noopener">${x.conclusion || x.status}</a></td></tr>`);
+    }
+  }
+}
+document.getElementById('alarm').onclick = async () => {
+  const el = document.getElementById('alarmMsg'); el.textContent = '檢查中…';
+  const j = await (await fetch('/api/alarm/check')).json();
+  el.textContent = j.action === 'dispatched' ? '已補發 workflow_dispatch' : `不需補發（排定時刻後已有 ${j.runs} 次 run）`;
+  loadHealth();
+};
+loadHealth();
+</script>
+</body>
+</html>

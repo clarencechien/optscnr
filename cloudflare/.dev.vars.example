@@ -1,0 +1,3 @@
+# 複製成 .dev.vars 給本機 wrangler dev 用；正式環境的 secret 在 Cloudflare dashboard 設定
+GITHUB_TOKEN=github_pat_xxx
+# LLM_API_KEY=

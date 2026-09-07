@@ -120,25 +120,42 @@ EV 欄依序：死抱 / 2x 賣半 / 3x 賣半 / 4 口 2-4-8 / -50% 停+2x 半。
 | P1 | 對照組 | 每日對全 universe 記 spot；tracer 回填 T+5/10/20 spot | T6 |
 | P1 | 賣點欄位 | 每個候選依綁定策略預算出「賣點」：2x/3x 價、4 口階梯價、末點日（DTE 21 日期）→ `sell_points` 進候選 JSON | dashboard 顯示 |
 
-### 4.2 Cloudflare 側（免費額度足夠；Python 零改動）
+### 4.2 Cloudflare 側（免費額度足夠；Python 零改動；**獨立資料夾 `cloudflare/`，只靠 dashboard Git 連動部署**）
 
 ```
-┌ Worker (Cron Trigger 23:15 UTC 平日；第二鬧鐘) ─────────────────────┐
-│ 1. GitHub API：今日 scanner.yml 有沒有 run？沒有 → workflow_dispatch  │
-│ 2. 等 main 出現今日 data/dashboard/candidates_<市場日>.json            │
-│ 3. 組 prompt（第 5 節 v4 短版）→ 呼叫 LLM → 存 decisions log          │
-│ 4. 寫回：R2 (dashboard 讀) + GitHub API commit data/decisions/…json    │
-└──────────────────────────────────────────────────────────────────────┘
-┌ Pages (靜態 dashboard，讀 R2 / raw.githubusercontent JSON) ───────────┐
-│ 今日候選（結構候選 + 綁定策略 + 賣點 + LLM 三題答案 + 狀態碼）           │
-│ History：三策略 shadow 矩陣（1.2 的表，每格 n/EV/狀態，自動更新）        │
-│ 排程健康：各 workflow 今日觸發時間 vs 排定時間（延遲一眼可見）           │
-│ Decisions：逐日 LLM 回答 log（prompt 版本、模型、答案、事後結果回填）    │
-└──────────────────────────────────────────────────────────────────────┘
+cloudflare/                      ← Worker 專用資料夾，repo 其餘部分與它無關
+├── wrangler.toml                ← 全部設定：workers_dev=false、preview_urls=false、cron、assets、vars
+├── package.json                 ← 只有 wrangler devDependency（Workers Builds 用）
+├── src/index.js                 ← scheduled()=第二鬧鐘；fetch()=/api/* + 靜態 dashboard
+├── public/index.html            ← dashboard（Worker static assets 供檔，不另開 Pages 專案）
+├── .dev.vars.example / .gitignore
+└── README.md                    ← dashboard 一次性設定步驟
 ```
 
-- 資料主權仍在 git（append-only 審計）；R2 只是 dashboard 的讀取快取，可隨時從 git 重建。
-- Worker 需要：fine-grained PAT（`actions:write` + `contents:write`）、LLM API key，皆放 CF secrets。
+**部署**：Cloudflare dashboard → Workers & Pages → Create → **Import a repository** → 選本 repo →
+Root directory `cloudflare`、Build command 空、Deploy command `npx wrangler deploy`、只部署 `main`。
+之後 push `main` 即自動部署；secrets（`GITHUB_TOKEN`、之後的 `LLM_API_KEY`）在 dashboard 的
+Variables and Secrets 設定，不進 git。**`*.workers.dev` 與 Preview URLs 關閉**；dashboard 網頁走
+Custom domain（`wrangler.toml` 的 `[[routes]]` 解開填自己的網域）——沒網域時 cron 照跑、只是沒網頁。
+
+```
+┌ Worker scheduled()（第二鬧鐘：23:05 UTC 平日 + 00:35 UTC 跨日再查一次）──────┐
+│ 1. GitHub API：22:00 UTC 之後 scanner.yml 有無任何 run？沒有 → workflow_dispatch  │
+│ 2.（第 5 批）等 main 出現 data/dashboard/candidates_<市場日>.json                  │
+│ 3.（第 5 批）組 prompt（第 5 節 v4 短版）→ 呼叫 LLM → GitHub API commit          │
+│              data/decisions/<市場日>.json                                         │
+└──────────────────────────────────────────────────────────────────────────────────┘
+┌ Worker fetch()（同一個 Worker；靜態 dashboard 讀 raw.githubusercontent 的 JSON）──┐
+│ 排程健康：各 workflow 近 36 小時觸發 vs 排定（已實作：/api/health）＋「立即補發」鈕  │
+│ 今日候選：結構候選 + 綁定策略 + 賣點 + LLM 三題答案 + 狀態碼（第 4 批）             │
+│ History：三策略 shadow 矩陣（1.2 的表，每格 n/EV/狀態，自動更新）（第 4 批）        │
+│ Decisions：逐日 LLM 回答 log（prompt 版本、模型、答案、事後結果回填）（第 5 批）    │
+└──────────────────────────────────────────────────────────────────────────────────┘
+```
+
+- 資料主權在 git（append-only 審計）；dashboard 直接讀 raw.githubusercontent 的 JSON，**不需要 R2**
+  （之後若 raw CDN 快取延遲惱人，再加 R2 當讀取快取，可隨時從 git 重建）。
+- PAT：fine-grained、只授權本 repo，Actions read+write（補發）、Contents read（第 5 批寫 decisions 時改 write）。
 - LLM 回答 log 格式（`data/decisions/<市場日>.json`）：`{prompt_version, model, decided_at, candidates:[{signal_id, strategy, sell_points, q_event, q_gap, q_delta, status}], raw_answer}`；事後由 tracer 回填 `outcome`，**不回寫當時答案**。
 
 ### 4.3 Dashboard「History」區要長什麼樣
@@ -171,8 +188,8 @@ EV 欄依序：死抱 / 2x 賣半 / 3x 賣半 / 4 口 2-4-8 / -50% 停+2x 半。
 |---|---|---|
 | 1（本週） | P0-a schema v2、P0-b 路徑紀錄、P0-d 矩陣 JSON | 明日 SHADOWLOG 出現矩陣節；`path[]` 開始累積 |
 | 2（本週） | P0-c 結構候選＋`structural_pass`、P1 賣點欄位、候選 JSON 輸出 | README 出現 🎯 區塊；`data/dashboard/candidates_*.json` 每日產出 |
-| 3（下週） | CF Worker 第二鬧鐘（先不接 LLM） | 排程延遲 >45 分鐘時 Worker 補發，dashboard 顯示延遲 |
-| 4（下週） | Pages dashboard：今日候選 + History 矩陣 + 排程健康 | 手機能開、矩陣每格顯示 n/EV/狀態 |
+| 3（**已建骨架**） | `cloudflare/` 第二鬧鐘 + `/api/health` + 排程健康頁（不接 LLM）；擁有者在 CF dashboard 連 repo、設 `GITHUB_TOKEN`、（選）自訂網域 | 排程延遲 >65 分鐘時 Worker 補發；`/api/health` 看得到各 workflow 觸發時間 |
+| 4（下週） | 同一 Worker 的 dashboard 加：今日候選 + History 矩陣（讀 raw JSON） | 手機能開、矩陣每格顯示 n/EV/狀態 |
 | 5 | Worker 接 LLM + decisions log | `data/decisions/` 每交易日一檔；T8 開始累積 |
 | 6 | P0-e 語義修復、P1 對照組 | T6 開始累積 |
 
