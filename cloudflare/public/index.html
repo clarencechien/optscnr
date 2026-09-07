@@ -212,10 +212,10 @@
   <!-- ===================== 排程 ===================== -->
   <section id="tab-sched" hidden>
     <div class="card">
-      <div class="card-h"><h2>排程健康（各 workflow 近 36 小時）</h2><span class="meta" id="healthMeta"></span><span class="spacer"></span>
+      <div class="card-h"><h2>排程健康（各 workflow 近 3.5 天）</h2><span class="meta" id="healthMeta"></span><span class="spacer"></span>
         <button class="btn" id="alarm">立即檢查並補發 scanner</button><span class="note" id="alarmMsg"></span></div>
       <div class="tbl"><table id="health"><thead><tr><th>workflow</th><th>觸發</th><th>時間（台北）</th><th>狀態</th></tr></thead><tbody></tbody></table></div>
-      <div class="card-b note">主 scanner 排定 22:17 UTC（台北 06:17）；Worker 23:05 / 00:35 / 02:05 UTC 各查一次，沒發就 <code>workflow_dispatch</code>。補發是安全的：v3.13 市場基準日 + signal_id 去重。</div>
+      <div class="card-b note">主 scanner 排定 22:17 UTC（台北 06:17）；Worker 23:05 / 00:35 / 02:05 UTC 各查一次，沒發就 <code>workflow_dispatch</code>。補發是安全的：v3.13 市場基準日 + signal_id 去重。各 workflow 排程（台北）：scanner 06:17 週二–六、catalyst 前一晚、unknown_radar 07:xx、space_radar 06:26 週二–六、tw_scanner 21:52 週一–五、delta_radar 10:41 每日／11:47 週一四。週末沒跑是正常的。</div>
     </div>
   </section>
 </main>
@@ -398,7 +398,7 @@ function renderHealth(j) {
   chip($('#llmChip'), j.llm?.configured ? 'ok' : 'warn', j.llm?.configured ? `LLM ${j.llm.model}` : 'LLM 未設定');
   const tb = $('#health tbody'); tb.innerHTML = '';
   for (const [wf, runs] of Object.entries(j.workflows)) {
-    if (!Array.isArray(runs) || !runs.length) { tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td colspan="3"><span class="chip bad"><i></i>近 36 小時無觸發</span></td></tr>`); continue; }
+    if (!Array.isArray(runs) || !runs.length) { tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td colspan="3"><span class="chip bad"><i></i>近 ${j.window_hours || 36} 小時無觸發</span></td></tr>`); continue; }
     for (const x of runs) {
       const cls = x.conclusion === 'success' ? 'ok' : (x.status === 'completed' ? 'bad' : 'warn');
       tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td><span class="tag">${esc(x.event)}</span></td><td>${tpe(x.created_at)} <span class="muted">${ago(x.created_at)}</span></td><td><a href="${esc(x.url)}" target="_blank" rel="noopener"><span class="chip ${cls}"><i></i>${esc(x.conclusion || x.status)}</span></a></td></tr>`);

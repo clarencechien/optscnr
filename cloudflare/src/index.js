@@ -139,7 +139,8 @@ async function secondAlarm(env, now) {
 /** /api/health：各 workflow 最近一次觸發時間，dashboard「排程」區用 */
 async function health(env) {
   const now = new Date();
-  const since = new Date(now.getTime() - 36 * 3600 * 1000).toISOString();
+  // 84 小時：週一下午看得到週五的 run（36 小時會把週末正常沒跑的 workflow 標成紅的）
+  const since = new Date(now.getTime() - 84 * 3600 * 1000).toISOString();
   const workflows = ["scanner.yml", "catalyst_fetch.yml", "unknown_radar.yml", "space_radar.yml", "tw_scanner.yml", "delta_radar.yml"];
   const out = {};
   for (const wf of workflows) {
@@ -155,6 +156,7 @@ async function health(env) {
   }
   return {
     generated_at: now.toISOString(),
+    window_hours: 84,
     expected_scanner_fire: expectedFireTime(now, env).toISOString(),
     llm: { configured: Boolean(env.LLM_API_KEY), model: env.LLM_MODEL || null, web_search: env.LLM_WEB_SEARCH === "1" },
     access: { enforced: Boolean(env.ACCESS_TEAM_DOMAIN && env.ACCESS_AUD) },
