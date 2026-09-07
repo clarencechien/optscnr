@@ -210,6 +210,24 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 不放寬樂透 size 上限、不放寬絞肉區（DTE<21）閘門、不因單月命中率改規則、
 盤後開牌標的只標記不自動排除。
 
+## 審計 bug 修復 + P0-e 語義 + P1 對照組（2026-09-08，第二批）
+
+- **shadow_tracer 回填 bug**：`err:*` 失敗結果一存進去就被當「已填」永久略過（註解寫「明天再補」）。
+  改：終態只有有價 / expiry_gone / strike_gone / missed_window；err 隔日重試，逾 10 天仍失敗才標
+  missed_window。回填加 `observed_at`/`late_days`（逾期幾天才抓到，分析可過濾）；today 用市場基準日。
+- **get_target_dates 週五重複**：`(4-wd+7i)%7` 對 i=0、1 同值 → 下週非月選到期日一直漏掃。改 `(4-wd)%7 + 7i`。
+- **快照月檔損壞保護**：舊碼讀失敗 `existing=[]` 會從空歷史重建（append-only 失效）。改：隔離為
+  `.corrupt-<ts>`、明確 raise、不寫；寫入改原子（tmp + replace），tracer 同。
+- **P0-e**：快照加 `features/warnings/events`（`strategy_lab.split_tags`），🆕新倉暴量 的 key 是
+  `first_seen_in_feed`（真實語義：昨天篩選表沒它，不是新開倉）；指紋 cohort 改用 feature 集合判定，
+  顯示文字加財報/價格註記不再破壞 membership；enrichment OI Δ7d 缺歷史 → None + `OI_d7_status`
+  （八月 376 筆有 206 筆 oi_d7==oi 是舊語義灌出來的）；structural_pass 因此對缺歷史合約為 False（誠實）。
+- **P1 對照組（tracker T6）**：main 每日寫 `data/universe_spots/<市場日>.json`（掃描 universe 全部 spot），
+  `control_group_stats` 從後續日檔算 20 日漲>10% 比例：上榜組 vs universe；進 `strategy_matrix.json`
+  `control` 節與 SHADOWLOG。判準：差 <5 百分點（≥100 上榜標的-日）→ 選標的無 edge。
+- **REVIEW_2026-07 補記**：tw_scanner 7/30 警報已入 9/1 月度回測（n=8、20 日中位 +8.72% vs 基線 +2.17%）；
+  delta 背離旗標仍未做（10 月中前要）。
+
 ## 策略矩陣 shadow + 結構候選 + dashboard 資料層（2026-09-08，PLAN_2026-09_strategy_dashboard.md 第 1、2、4 批）
 
 - **strategy_lab.py（新）**：預先登記的分類邊界（$1.5/$3、DTE 20/45/120、IV 50）、三策略

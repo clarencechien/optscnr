@@ -411,8 +411,10 @@ def get_target_dates():
     dates = set()
     today = datetime.now()
 
+    # 最近兩個週五（GPT 審計 P2：舊式 `(4 - wd + 7*i) % 7` 對 i=0、1 算出同一個週五，
+    # 下週的非月選到期日一直被漏掃）
     for i in range(2):
-        target = today + timedelta(days=(4 - today.weekday() + 7 * i) % 7)
+        target = today + timedelta(days=(4 - today.weekday()) % 7 + 7 * i)
         dates.add(target.strftime('%Y-%m-%d'))
 
     for i in range(6):
@@ -922,6 +924,24 @@ def _tlt_daily_status_line():
 
 
 _QUOTE_AT = datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')  # 本次掃描報價時點（UTC）
+import strategy_lab as _SL  # 結構欄位 / 結構候選 / 賣點（純計算）
+
+# P1 對照組（tracker T6）：每日記全 universe 的 spot，T+N 從之後的日檔查，不用另抓
+_UNIVERSE_SPOTS = {}
+
+
+def write_universe_spots():
+    """data/universe_spots/<市場日>.json：{market_date, n, spots:{ticker: spot}}"""
+    if not _UNIVERSE_SPOTS:
+        return
+    out_dir = os.path.join(DATA_DIR, "universe_spots")
+    os.makedirs(out_dir, exist_ok=True)
+    mkt = market_today().strftime('%Y-%m-%d')
+    payload = {"market_date": mkt, "quote_at": _QUOTE_AT, "n": len(_UNIVERSE_SPOTS),
+               "spots": dict(sorted(_UNIVERSE_SPOTS.items()))}
+    with open(os.path.join(out_dir, f"{mkt}.json"), 'w', encoding='utf-8') as f:
+        json.dump(payload, f, ensure_ascii=False, indent=1)
+    print(f"  🧪 對照組：{len(_UNIVERSE_SPOTS)} 檔 universe spot → data/universe_spots/{mkt}.json")
 
 
 def add_structural_candidates(df):
@@ -1045,7 +1065,11 @@ def save_signal_snapshot(df):
             "entry_iv": float(r.get('IV', 0)),    # 信號當下的 IV
             "entry_spot": float(r.get('Spot', 0)),# 信號當下的現價
             "oi": int(r['OpenInterest']),
-            "oi_d7": int(r['OI_d7']) if 'OI_d7' in r and pd.notna(r['OI_d7']) else 0,
+            # P0-e：缺 7 日前歷史 → None（不再灌 0 或當前 OI），並記 oi_delta_status
+            "oi_d7": int(r['OI_d7']) if 'OI_d7' in r and pd.notna(r['OI_d7']) else None,
+            "oi_delta_status": ("confirmed" if 'OI_d7' in r and pd.notna(r['OI_d7']) else "no_history"),
+            # P0-e：tags 拆成穩定的結構欄位（統計用 features，顯示文字可隨時改）
+            **_SL.split_tags(r.get('Tags', '')),
             # volume：信號當日成交量（供未來「量大倉退」刷量 cohort 分析，Vol/OI 比）
             "volume": int(r['Volume']),
             # premium_tier：權利金分級貼標（只記錄，不影響掃描邏輯）
@@ -1082,21 +1106,29 @@ def save_signal_snapshot(df):
         })
 
     # 讀現有月檔（append-only：不覆蓋，只新增今天的）
+    # GPT 審計：舊碼讀取失敗時 existing=[] 會「從空歷史重建」，append-only 保護等於失效。
+    # 現在：損壞檔隔離改名、明確失敗、不寫入——寧可少一天快照也不能清掉整月。
     existing = []
     if os.path.exists(snapshot_path):
         try:
             with open(snapshot_path, encoding='utf-8') as f:
                 existing = json.load(f)
-        except Exception:
-            existing = []
+            if not isinstance(existing, list):
+                raise ValueError("月檔不是 list")
+        except Exception as e:
+            quarantine = f"{snapshot_path}.corrupt-{datetime.now().strftime('%Y%m%dT%H%M%S')}"
+            os.replace(snapshot_path, quarantine)
+            raise RuntimeError(f"信號月檔損壞，已隔離為 {quarantine}，本次不寫快照：{e}")
 
     # 防重複：同一個 signal_id 今天已寫過就不重複（手動重跑時的保護）
     existing_ids = {e['signal_id'] for e in existing}
     appended = [r for r in new_records if r['signal_id'] not in existing_ids]
     existing.extend(appended)
 
-    with open(snapshot_path, 'w', encoding='utf-8') as f:
+    tmp = snapshot_path + ".tmp"  # 原子寫入
+    with open(tmp, 'w', encoding='utf-8') as f:
         json.dump(existing, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, snapshot_path)
     print(f"  📸 信號快照：今日 {len(appended)} 筆新信號 → {snapshot_path}")
 
 
@@ -1251,6 +1283,8 @@ def main():
                     spot_price = float(hist['Close'].iloc[-1])
             except Exception:
                 spot_price = 0.0
+        if spot_price > 0:
+            _UNIVERSE_SPOTS[symbol] = round(spot_price, 4)  # P1 對照組：整個掃描 universe 都記
 
         valid_target_dates = [d for d in target_dates if d in available_dates]
         found_any = False
@@ -1318,6 +1352,11 @@ def main():
                 pass
 
         print("✅" if found_any else "💨")
+
+    try:
+        write_universe_spots()
+    except Exception as e:
+        print(f"  ⚠️ universe spot 寫入失敗（不影響掃描）：{e}")
 
     if results:
         final_df = pd.DataFrame(results).sort_values(by=['Score', 'Volume'], ascending=[False, False])

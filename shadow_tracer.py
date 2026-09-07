@@ -195,31 +195,53 @@ def make_verdict(entry_price, results):
         return f"➖持平(峰{peak:.1f}x/今{last:.1f}x)"
 
 
-def backfill(signals):
-    """回填到檢查點的信號。只填空欄位（append-only），已填的不動。
-    回傳：是否有更新。"""
-    today = datetime.now().date()
+TERMINAL_NOTES = ("expiry_gone", "strike_gone", "missed_window")
+RETRY_GRACE_DAYS = 10  # 檢查點過後 10 天內抓失敗都會重試；再久就標 missed_window 停止
+
+
+def _is_terminal(res):
+    """已填且不需重抓：有價、或到期/履約消失/逾時（永遠拿不到）。
+    err:* 這種抓取失敗**不是**終態——之前 `if sig.get(key) is not None: continue`
+    把它們當已填永久略過，「失敗明天再補」的註解與實作不符（GPT 審計 P1）。"""
+    if res is None:
+        return False
+    if res.get("opt_price") is not None:
+        return True
+    return str(res.get("note", "")) in TERMINAL_NOTES
+
+
+def backfill(signals, mkt_date=None):
+    """回填到檢查點的信號。只填空欄位／重試失敗欄位（append-only：有價的不動）。
+    回傳：是否有更新。
+    - today 用市場基準日（排程延遲跨日不會把檢查點算歪）
+    - 每筆回填記 observed_at 與 late_days（逾期幾天才抓到；分析時可過濾）"""
+    today = datetime.strptime(mkt_date, "%Y-%m-%d").date() if mkt_date else datetime.now().date()
     updated = False
-    to_fetch = []  # (signal_index, checkpoint_key)
+    to_fetch = []  # (signal_index, checkpoint_key, checkpoint_date)
 
     for i, sig in enumerate(signals):
         snap_date = datetime.strptime(sig["snapshot_date"], "%Y-%m-%d").date()
         for key, days in CHECKPOINTS.items():
-            if sig.get(key) is not None:
-                continue  # 已填過，不動（append-only）
+            if _is_terminal(sig.get(key)):
+                continue  # 有價或終態，不動（append-only）
             checkpoint_date = snap_date + timedelta(days=days)
             # 今天 >= 檢查點日 才回填（到期了才看）
             if today >= checkpoint_date:
-                to_fetch.append((i, key))
+                to_fetch.append((i, key, checkpoint_date))
 
     if not to_fetch:
         print("  📭 今天沒有到檢查點的信號需要回填。")
         return False
 
-    print(f"  🔍 需回填 {len(to_fetch)} 筆（T+N 到期的信號）...")
-    for idx, key in to_fetch:
+    print(f"  🔍 需回填 {len(to_fetch)} 筆（T+N 到期的信號，含失敗重試）...")
+    for idx, key, checkpoint_date in to_fetch:
         sig = signals[idx]
         res = fetch_option_price(sig["ticker"], sig["expiry"], sig["strike"])
+        late = (today - checkpoint_date).days
+        res["observed_at"] = today.isoformat()
+        res["late_days"] = late
+        if res.get("opt_price") is None and str(res.get("note", "")).startswith("err") and late > RETRY_GRACE_DAYS:
+            res["note"] = "missed_window"  # 逾時且抓不到 → 終態，不再重試（path[] 仍可補）
         sig[key] = res
         updated = True
         status = "✅" if res.get("opt_price") is not None else f"💨({res.get('note')})"
@@ -379,7 +401,7 @@ def generate_shadowlog_md(signals, month_str, matrix_md=""):
 
         blind1 = [s for s in judged if (_dte_of(s) or 0) > 45 and (_otm_of(s) or 0) > 0.25]
         b1_hit = [s for s in blind1 if s["verdict"].startswith("✅")]
-        blind2 = [s for s in judged if s.get("oi_d7", 0) <= 0]
+        blind2 = [s for s in judged if s.get("oi_d7") is not None and s["oi_d7"] <= 0]  # P0-e：缺歷史(None)不算倉退
         b2_hit = [s for s in blind2 if s["verdict"].startswith("✅")]
 
         md += "### 🕳️ 過濾盲點觀察\n\n"
@@ -396,10 +418,13 @@ def generate_shadowlog_md(signals, month_str, matrix_md=""):
         # 量 >1.2x OI 的掃貨、且非菸屁股/萬人塚的散戶墳場。
         # 6/26 批內 4 筆此型態包辦全部 3 個命中；但 6/29-7/1 同型態 0/13
         # → 假說：型態挑標的、日子給行情。詳見 CONTEXT.md 第七節。只統計，不改分。
-        FP = "🚨異常掃貨 🆕新倉暴量"
-        fp_j = [s for s in judged if s.get("tags") == FP]
+        # P0-e/P0-D：cohort 改以結構 feature keys 判定（顯示文字加財報/價格/流動性註記不再破壞 membership）
+        import strategy_lab as _SL
+        FP_KEYS = {"sweep", "first_seen_in_feed"}
+        _fp = lambda s: set(_SL.features_of(s)) == FP_KEYS
+        fp_j = [s for s in judged if _fp(s)]
         fp_hit = [s for s in fp_j if s["verdict"].startswith("✅")]
-        ot_j = [s for s in judged if s.get("tags") != FP]
+        ot_j = [s for s in judged if not _fp(s)]
         ot_hit = [s for s in ot_j if s["verdict"].startswith("✅")]
         md += "### 🧬 指紋 cohort：純「掃貨+新倉暴量」\n\n"
         md += "| 類型 | 已驗證 | 噴出 | 命中率 |\n|---|---|---|---|\n"
@@ -523,16 +548,18 @@ def main():
             continue
 
         print(f"\n📂 處理 {month_str}（{len(signals)} 筆信號）")
-        updated = backfill(signals)
+        updated = backfill(signals, mkt_date)
         # PLAN 4.1 P0-b：每日路徑紀錄（未到期信號）
         try:
             record_paths(signals, mkt_date)
         except Exception as e:
             print(f"  ⚠️ 路徑紀錄失敗（不影響回填）：{e}")
 
-        # 寫回 JSON（即使沒回填也重算 verdict）
-        with open(path, 'w', encoding='utf-8') as f:
+        # 寫回 JSON（原子寫入：先寫 tmp 再 replace，中途掛掉不會留下半個檔）
+        tmp = path + ".tmp"
+        with open(tmp, 'w', encoding='utf-8') as f:
             json.dump(signals, f, ensure_ascii=False, indent=2)
+        os.replace(tmp, path)
         loaded[month_str] = signals
 
     # PLAN 4.1 P0-d：策略矩陣——用全部月份（含已封存的）重算，寫 JSON + 附進各月 SHADOWLOG
@@ -543,7 +570,7 @@ def main():
         for f in sorted(glob(os.path.join(IV_LOG_DIR, "signals_*.json"))):
             with open(f, encoding='utf-8') as fh:
                 all_sigs.extend(json.load(fh))
-        mx = SL.compute_matrix(all_sigs)
+        mx = SL.compute_matrix(all_sigs, universe_dir=os.path.join(DATA_DIR, "universe_spots"))
         with open(os.path.join(DATA_DIR, "strategy_matrix.json"), 'w', encoding='utf-8') as f:
             json.dump(mx, f, ensure_ascii=False, indent=2)
         matrix_md = SL.render_matrix_md(mx)

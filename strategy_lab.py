@@ -65,6 +65,96 @@ def structural_pass(score, action, dte, iv, otm_pct, oi_d7):
         return False
 
 
+# ---------------------------------------------------------------- 標籤 → 結構欄位（P0-e）
+# 顯示文字可以隨時改，統計要基於穩定的 feature key。
+# 「🆕新倉暴量」的真實語義是「昨天的篩選表沒有這張」（first_seen_in_feed），不是合約剛上市、
+# 也不是確認新開多倉（篩選表只存 score>0 的列，不是完整合約宇宙）——顯示文字保留，key 說實話。
+FEATURE_KEYS = {
+    "🚨異常掃貨": "sweep",
+    "🚀點火": "ignition",
+    "🆕新倉暴量": "first_seen_in_feed",
+    "🚀突發暴量": "burst_no_history",
+    "🆕低基期": "low_base",
+    "🔭LEAPS": "leaps",
+    "🚬菸屁股": "cigar_butt",
+    "🔥萬人塚": "mass_grave",
+    "🎲末日結算": "gamble",
+}
+
+
+def split_tags(tags):
+    """把 tags 顯示字串拆成 {features:[key], warnings:[token], events:[token]}。
+    ⚠️ 開頭＝warning、📅 開頭＝event，其餘依 FEATURE_KEYS 前綴對應（未知 token → other:<token>）。"""
+    out = {"features": [], "warnings": [], "events": []}
+    for tok in str(tags or "").split():
+        if tok.startswith("⚠️"):
+            out["warnings"].append(tok)
+        elif tok.startswith("📅"):
+            out["events"].append(tok)
+        else:
+            key = next((v for k, v in FEATURE_KEYS.items() if tok.startswith(k)), None)
+            out["features"].append(key or f"other:{tok}")
+    return out
+
+
+def features_of(sig):
+    """信號的 feature keys：新快照有 features 欄就用，舊快照即時從 tags 拆。"""
+    if sig.get("features") is not None:
+        return list(sig["features"])
+    return split_tags(sig.get("tags", ""))["features"]
+
+
+# ---------------------------------------------------------------- 對照組（P1，tracker T6）
+def control_group_stats(universe_dir, all_signals, horizon_days=20, threshold_pct=10.0):
+    """「選標的有沒有 edge」：上榜標的 vs 全 universe 在 horizon 內漲 >threshold 的比例。
+    資料源：data/universe_spots/<市場日>.json（每日掃描時記全 universe 的 spot）——
+    T+N 的 spot 直接從之後的日檔查，不用另抓。只算「已有 ≥ horizon-2 天後檔案」的成熟日。"""
+    import glob as _glob
+    import json as _json
+    import os as _os
+    files = {}
+    for p in sorted(_glob.glob(_os.path.join(universe_dir, "*.json"))):
+        d = _os.path.basename(p)[:10]
+        try:
+            with open(p, encoding="utf-8") as f:
+                files[d] = _json.load(f).get("spots", {})
+        except Exception:
+            continue
+    if not files:
+        return {"n_days": 0, "n_ticker_days": 0, "note": "尚無 universe_spots 日檔"}
+    dates = sorted(files)
+    listed_by_day = {}
+    for s in all_signals:
+        listed_by_day.setdefault(s["snapshot_date"], set()).add(s["ticker"])
+    listed_moved = listed_n = uni_moved = uni_n = 0
+    n_days = 0
+    for d in dates:
+        d0 = datetime.strptime(d, "%Y-%m-%d")
+        later = [x for x in dates if d0 < datetime.strptime(x, "%Y-%m-%d") <= d0 + timedelta(days=horizon_days)]
+        if not later or (datetime.strptime(later[-1], "%Y-%m-%d") - d0).days < horizon_days - 2:
+            continue  # 未成熟
+        n_days += 1
+        base = files[d]
+        listed = listed_by_day.get(d, set())
+        for t, p0 in base.items():
+            if not p0 or p0 <= 0:
+                continue
+            mx = max((files[x].get(t) or 0) for x in later)
+            moved = (mx / p0 - 1) * 100 >= threshold_pct
+            uni_n += 1
+            uni_moved += moved
+            if t in listed:
+                listed_n += 1
+                listed_moved += moved
+    return {
+        "n_days": n_days, "n_ticker_days": uni_n, "horizon_days": horizon_days, "threshold_pct": threshold_pct,
+        "listed_n": listed_n, "listed_rate": round(listed_moved / listed_n, 3) if listed_n else None,
+        "universe_rate": round(uni_moved / uni_n, 3) if uni_n else None,
+        "edge_pp": round((listed_moved / listed_n - uni_moved / uni_n) * 100, 1) if listed_n and uni_n else None,
+        "verdict_rule": "上榜組 − universe < 5 個百分點（≥100 個上榜標的-日後判）→ 選標的無 edge",
+    }
+
+
 # ---------------------------------------------------------------- 綁定策略 + 賣點
 def bound_strategy(price, iv):
     """策略 C 的分類綁定。回傳 code 與可讀標籤。"""
@@ -211,8 +301,8 @@ def _summ(rows):
     return out
 
 
-def compute_matrix(all_signals):
-    """全部月份的信號 → 矩陣 JSON（可直接 dump）。"""
+def compute_matrix(all_signals, universe_dir=None):
+    """全部月份的信號 → 矩陣 JSON（可直接 dump）。universe_dir 給了就附對照組統計。"""
     mature = [(s, m) for s in all_signals if (m := multiples(s)) is not None]
     cells = []
     for ivb in ("IV<50", "IV≥50"):
@@ -251,6 +341,7 @@ def compute_matrix(all_signals):
         "monthly": monthly,
         "cells": cells,
         "policy_label": POLICY_LABEL,
+        "control": control_group_stats(universe_dir, all_signals) if universe_dir else {"n_days": 0},
     }
 
 
@@ -282,4 +373,11 @@ def render_matrix_md(mx):
                f"| {ev['stop_half']:.2f} | {POLICY_LABEL[c['best']]} | {c['status']} |\n")
     md += ("\n_「累積中」＝n<%d，數字只是佔位；「可用」也僅為樣本內描述。100 筆出樣本前不改任何綁定。_\n\n"
            % mx["min_n"])
+    c = mx.get("control") or {}
+    if c.get("n_days", 0) > 0 and c.get("listed_n"):
+        md += (f"**對照組（tracker T6）**：{c['n_days']} 個成熟日、上榜 {c['listed_n']} 標的-日——"
+               f"20 日內漲 >10%：上榜組 {c['listed_rate']:.0%} vs universe {c['universe_rate']:.0%}"
+               f"（差 {c['edge_pp']:+.1f} 百分點；<5 為無 edge，≥100 標的-日後判）\n\n")
+    else:
+        md += "**對照組（tracker T6）**：累積中（universe_spots 日檔尚未成熟）\n\n"
     return md
