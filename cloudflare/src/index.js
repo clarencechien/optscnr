@@ -22,6 +22,7 @@ const LATEST_PATH = "data/dashboard/latest.json";
 const DECISIONS_DIR = "data/decisions";
 const LEDGER_GENERAL = ["環境", "判決", "校準", "工具"];
 const LEDGER_PENDING = "待審（LLM 提案）";
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 // ------------------------------------------------------------------ GitHub
 function ghHeaders(env) {
@@ -39,9 +40,11 @@ function repoUrl(env, path) {
 
 /** 讀 main 上的檔（Contents API，不走 raw CDN：raw 有 5 分鐘快取，剛 push 的檔會讀到舊的）。
  *  不存在回 null；其餘錯誤丟出。 */
+const encPath = p => String(p).split("/").map(encodeURIComponent).join("/");
+
 async function ghGetFile(env, path) {
   const ref = env.DEFAULT_BRANCH || "main";
-  const r = await fetch(repoUrl(env, `contents/${path}?ref=${ref}`), { headers: ghHeaders(env) });
+  const r = await fetch(repoUrl(env, `contents/${encPath(path)}?ref=${encodeURIComponent(ref)}`), { headers: ghHeaders(env) });
   if (r.status === 404) return null;
   if (!r.ok) throw new Error(`get ${path}: ${r.status}`);
   const j = await r.json();
@@ -85,7 +88,7 @@ async function ghUpdateFile(env, path, text, message, sha) {
 }
 
 async function ghListDir(env, path) {
-  const r = await fetch(repoUrl(env, `contents/${path}?ref=${env.DEFAULT_BRANCH || "main"}`), { headers: ghHeaders(env) });
+  const r = await fetch(repoUrl(env, `contents/${encPath(path)}?ref=${encodeURIComponent(env.DEFAULT_BRANCH || "main")}`), { headers: ghHeaders(env) });
   if (r.status === 404) return [];
   if (!r.ok) throw new Error(`list ${path}: ${r.status}`);
   return (await r.json()).filter(x => x.type === "file" && x.name.endsWith(".json")).map(x => x.name);
@@ -215,10 +218,36 @@ function factsFor(ledger, tickers) {
   return { by_ticker, general, source: LEDGER_PATH };
 }
 
-/** 把 LLM 的 facts_proposed 附加到「待審（LLM 提案）」段（沒有 URL 的不收；段不存在就補在檔尾） */
+/** LLM 提案是不可信輸入（web 外掛抓到的網頁可以影響它）。每個欄位都壓成單行、白名單格式：
+ *  換行會讓「待審」段裡長出新的 ## 標的段，被 parseLedger 當成已審事實回餵 prompt——這是要擋的重點。 */
+const oneLine = (x, n) => String(x ?? "").replace(/[\r\n\u2028\u2029]+/g, " ").replace(/\s+/g, " ").trim().slice(0, n);
+function safeHttpUrl(u) {
+  try {
+    const s = oneLine(u, 500);
+    if (/\s/.test(s)) return null;
+    const url = new URL(s);
+    return (url.protocol === "http:" || url.protocol === "https:") ? url.toString() : null;
+  } catch { return null; }
+}
+function sanitizeProposals(list) {
+  return (Array.isArray(list) ? list.slice(0, 20) : [])
+    .filter(p => p && typeof p === "object")
+    .map(p => {
+      const ticker = oneLine(p.ticker, 12).toUpperCase();
+      const date = oneLine(p.date, 10);
+      return {
+        ticker: /^[A-Z][A-Z0-9.\-]{0,11}$/.test(ticker) ? ticker : "",
+        fact: oneLine(p.fact, 400),
+        date: DATE_RE.test(date) ? date : "",
+        source: safeHttpUrl(p.source),
+      };
+    });
+}
+
+/** 把 LLM 的 facts_proposed 附加到「待審（LLM 提案）」段（沒有 URL／代號不合格的不收；段不存在就補在檔尾） */
 async function appendProposals(env, proposals, mkt) {
-  const rows = (proposals || []).filter(p => p && p.ticker && p.fact && /^https?:\/\//.test(String(p.source || "")))
-    .map(p => `- ${String(p.ticker).toUpperCase().slice(0, 12)} ｜ ${String(p.fact).replace(/\s*\n\s*/g, " ").slice(0, 400)} ｜ ${p.date || "日期未知"} ｜ ${p.source} ｜ ${mkt} LLM 提案`);
+  const rows = sanitizeProposals(proposals).filter(p => p.ticker && p.fact && p.source)
+    .map(p => `- ${p.ticker} ｜ ${p.fact.replace(/｜/g, "|")} ｜ ${p.date || "日期未知"} ｜ ${p.source} ｜ ${mkt} LLM 提案`);
   if (!rows.length) return { appended: 0 };
   for (let attempt = 0; attempt < 3; attempt++) {
     const f = await ghGetFile(env, LEDGER_PATH);
@@ -342,10 +371,7 @@ async function runDecision(env, { source = "cron" } = {}) {
           : { ...base(c), q_event: null, q_gap: null, q_delta: null, note: null, status: "unanswered" };
       });
       if (!parsed) record.error = "LLM 回覆不是可解析的 JSON（raw_answer 保留）";
-      record.facts_proposed = (Array.isArray(parsed?.facts_proposed) ? parsed.facts_proposed.slice(0, 20) : [])
-        .filter(p => p && typeof p === "object")
-        .map(p => ({ ticker: String(p.ticker || "").toUpperCase().slice(0, 12), fact: String(p.fact || "").slice(0, 400),
-          date: String(p.date || "").slice(0, 10), source: /^https?:\/\//i.test(String(p.source || "")) ? String(p.source).slice(0, 500) : null }));
+      record.facts_proposed = sanitizeProposals(parsed?.facts_proposed);
       if (record.facts_proposed.length) {
         try { record.facts_appended = (await appendProposals(env, record.facts_proposed, mkt)).appended; }
         catch (e) { record.facts_error = `append: ${String(e).slice(0, 300)}`; }
@@ -439,7 +465,6 @@ function sameOrigin(request, url) {
   if (sfs && sfs !== "same-origin" && sfs !== "none") return false;
   return true;
 }
-const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 // ------------------------------------------------------------------ 電子報（公開、唯讀、不觸發任何動作）
 /** 這些路徑跳過 Worker 端的 Access 驗證。Cloudflare Access 本身仍會擋——要公開分享，

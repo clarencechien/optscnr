@@ -1008,27 +1008,35 @@ def render_decisions_section():
             dec = json.load(f)
     except Exception as e:
         return f"## 🤖 LLM 三題\n*decisions 檔讀取失敗：{e}*\n\n"
-    md = f"## 🤖 LLM 三題（市場日 {dec.get('market_date')}｜{dec.get('model_served') or dec.get('model') or '—'}｜prompt {dec.get('prompt_version', '—')}）\n"
+    # LLM 輸出是不可信文字：壓成單行、跳脫表格分隔符；來源只准 http(s) 且無空白與括號（防 markdown 注入）
+    def _t(x, n=80):
+        return str(x if x is not None else '').replace('\r', ' ').replace('\n', ' ').replace('|', '｜').strip()[:n]
+
+    def _url(u):
+        u = str(u or '')
+        return u if u.startswith(('http://', 'https://')) and not any(ch in u for ch in ' ()<>"\'\n\r') else None
+
+    md = f"## 🤖 LLM 三題（市場日 {_t(dec.get('market_date'), 10)}｜{_t(dec.get('model_served') or dec.get('model') or '—')}｜prompt {_t(dec.get('prompt_version', '—'), 12)}）\n"
     md += ("> 只答事實：(a) 到期前有無排定事件 (b) 近 5 日有無 >8% 跳空 (c) Δ7d 是否 confirmed。"
            "不做可玩判斷；事實庫 `docs/FACTS_ledger.md` 帶入、新事實回寫「待審」段。"
            "完整 log 與事後結果在 CF dashboard「Decisions」。\n\n")
     cands = dec.get("candidates") or []
     if not cands:
-        return md + f"*{dec.get('note') or '今日無結構候選'}*\n\n"
+        return md + f"*{_t(dec.get('note') or '今日無結構候選', 120)}*\n\n"
     if dec.get("error"):
-        md += f"*⚠️ {dec['error']}*\n\n"
+        md += f"*⚠️ {_t(dec['error'], 200)}*\n\n"
     md += "| 標的 | 事件 (a) | 跳空 (b) | Δ7d (c) | 備註 |\n|---|---|---|---|---|\n"
     for c in cands:
         e, g, dl = c.get("q_event") or {}, c.get("q_gap") or {}, c.get("q_delta") or {}
         if c.get("status") != "answered":
-            md += f"| {c['ticker']} {c['strike']:g}C {c['expiry']} | *未回答* | | | |\n"
+            md += f"| {_t(c.get('ticker'), 12)} {c['strike']:g}C {_t(c.get('expiry'), 10)} | *未回答* | | | |\n"
             continue
-        ev = f"{e.get('answer', '—')}" + (f" {e['date']}" if e.get('date') else "") + (f"・{e['what']}" if e.get('what') else "")
-        if e.get('source') and str(e['source']).startswith('http'):
-            ev += f" [來源]({e['source']})"
-        gap = f"{g.get('answer', '—')}" + ({'up': ' ▲', 'down': ' ▼'}.get(g.get('direction'), '')) + (f" {g['pct']}%" if g.get('pct') is not None else "")
+        ev = _t(e.get('answer', '—'), 8) + (f" {_t(e['date'], 10)}" if e.get('date') else "") + (f"・{_t(e['what'])}" if e.get('what') else "")
+        if _url(e.get('source')):
+            ev += f" [來源]({_url(e['source'])})"
+        gap = _t(g.get('answer', '—'), 8) + ({'up': ' ▲', 'down': ' ▼'}.get(g.get('direction'), '')) + (f" {_t(g['pct'], 8)}%" if g.get('pct') is not None else "")
         dlt = ("正" if dl.get('positive') else ("非正" if dl.get('positive') is not None else "—")) + ("・confirmed" if dl.get('confirmed') else "・無歷史")
-        md += f"| {c['ticker']} {c['strike']:g}C {c['expiry']} | {ev} | {gap} | {dlt} | {c.get('note') or ''} |\n"
+        md += f"| {_t(c.get('ticker'), 12)} {c['strike']:g}C {_t(c.get('expiry'), 10)} | {ev} | {gap} | {dlt} | {_t(c.get('note'), 120)} |\n"
     props = dec.get("facts_proposed") or []
     if props:
         md += f"\n*事實庫提案 {len(props)} 條（已附加 {dec.get('facts_appended', 0)} 條到 FACTS_ledger 待審段）*\n"
