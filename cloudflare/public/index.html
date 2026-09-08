@@ -230,6 +230,8 @@ const $ = s => document.querySelector(s);
 const f2 = x => (x == null || isNaN(x) ? '—' : Number(x).toFixed(2));
 const pct = x => (x == null ? '—' : (x * 100).toFixed(0) + '%');
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const safeHref = u => (/^https?:\/\//i.test(String(u || '')) ? esc(u) : null);
+
 const tpe = iso => { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(iso)); } catch { return iso; } };
 const ago = iso => { const m = Math.round((Date.now() - new Date(iso)) / 60000); return m < 60 ? `${m} 分前` : m < 1440 ? `${Math.round(m / 60)} 小時前` : `${Math.round(m / 1440)} 天前`; };
 const getJson = async (u, opts) => {
@@ -265,7 +267,7 @@ function qaHtml(c) {
   if (!c) return '<span class="muted">尚未產生</span>';
   if (c.status !== 'answered') return `<span class="muted">${esc(c.status === 'error' ? 'LLM 失敗' : '未回答')}</span>`;
   const e = c.q_event || {}, g = c.q_gap || {}, d = c.q_delta || {};
-  const src = e.source ? ` <a href="${esc(e.source)}" target="_blank" rel="noopener">來源</a>` : '';
+  const src = e.source ? (safeHref(e.source) ? ` <a href="${safeHref(e.source)}" target="_blank" rel="noopener">來源</a>` : ` <span class="muted">（${esc(e.source)}）</span>`) : '';
   return `<div class="qa"><b>事件</b> ${esc(e.answer ?? '—')}${e.date ? ' ' + esc(e.date) : ''}${e.what ? '・' + esc(e.what) : ''}${src}<br>`
     + `<b>跳空</b> ${esc(g.answer ?? '—')}${g.direction ? (g.direction === 'up' ? ' ▲' : ' ▼') : ''}${g.pct != null ? ' ' + esc(g.pct) + '%' : ''}${g.date ? ' ' + esc(g.date) : ''}<br>`
     + `<b>Δ7d</b> ${d.positive == null ? '—' : d.positive ? '正' : '非正'}${d.confirmed ? '・confirmed' : '・無歷史'}${c.note ? '<br><span class="muted">' + esc(c.note) + '</span>' : ''}</div>`;
@@ -389,7 +391,7 @@ function renderDecisions() {
     }
     if (n) rows += '</tbody></table></div>';
     const fp = d.facts_proposed || [];
-    if (fp.length) rows += `<div class="card-b note">📚 事實庫提案 ${fp.length} 條（附加 ${d.facts_appended ?? 0} 條到待審段）：${fp.map(p => `${esc(p.ticker)}・${esc(p.fact)}${p.date ? ' ' + esc(p.date) : ''}${p.source ? ` <a href="${esc(p.source)}" target="_blank" rel="noopener">來源</a>` : ''}`).join('；')}</div>`;
+    if (fp.length) rows += `<div class="card-b note">📚 事實庫提案 ${fp.length} 條（附加 ${d.facts_appended ?? 0} 條到待審段）：${fp.map(p => `${esc(p.ticker)}・${esc(p.fact)}${p.date ? ' ' + esc(p.date) : ''}${safeHref(p.source) ? ` <a href="${safeHref(p.source)}" target="_blank" rel="noopener">來源</a>` : ''}`).join('；')}</div>`;
     list.insertAdjacentHTML('beforeend', `<details ${d === days[0] ? 'open' : ''}><summary><span class="d">${esc(d.market_date)}</span><span class="chip ${status}"><i></i>${esc(label)}</span><span class="muted">${n} 筆候選</span>${d.prompt_version ? `<span class="tag">${esc(d.prompt_version)}</span>` : ''}${d.usage ? `<span class="muted">${d.usage.prompt_tokens ?? '?'}→${d.usage.completion_tokens ?? '?'} tok</span>` : ''}${d.error ? `<span class="muted">${esc(String(d.error).slice(0, 120))}</span>` : ''}</summary>${rows || `<div class="card-b note">${esc(d.note || '今日無結構候選')}</div>`}</details>`);
   }
 }
@@ -413,7 +415,7 @@ function renderHealth(j) {
     if (!Array.isArray(runs) || !runs.length) { tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td colspan="3"><span class="chip bad"><i></i>近 ${j.window_hours || 36} 小時無觸發</span></td></tr>`); continue; }
     for (const x of runs) {
       const cls = x.conclusion === 'success' ? 'ok' : (x.status === 'completed' ? 'bad' : 'warn');
-      tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td><span class="tag">${esc(x.event)}</span></td><td>${tpe(x.created_at)} <span class="muted">${ago(x.created_at)}</span></td><td><a href="${esc(x.url)}" target="_blank" rel="noopener"><span class="chip ${cls}"><i></i>${esc(x.conclusion || x.status)}</span></a></td></tr>`);
+      tb.insertAdjacentHTML('beforeend', `<tr><td>${wf}</td><td><span class="tag">${esc(x.event)}</span></td><td>${tpe(x.created_at)} <span class="muted">${ago(x.created_at)}</span></td><td><a href="${safeHref(x.url) || '#'}" target="_blank" rel="noopener"><span class="chip ${cls}"><i></i>${esc(x.conclusion || x.status)}</span></a></td></tr>`);
     }
   }
   // 頂欄排程狀態：排定時刻之後 scanner 有沒有 run
@@ -426,7 +428,7 @@ function renderHealth(j) {
 }
 $('#alarm').onclick = async () => {
   const el = $('#alarmMsg'); el.textContent = '檢查中…';
-  try { const j = await getJson('/api/alarm/check'); el.textContent = { dispatched: '已補發 workflow_dispatch', weekend_skip: '週末不補發', none: `不需補發（排定時刻後已有 ${j.runs} 次 run）` }[j.action] || JSON.stringify(j); }
+  try { const j = await getJson('/api/alarm/check', { method: 'POST' }); el.textContent = { dispatched: '已補發 workflow_dispatch', weekend_skip: '週末不補發', none: `不需補發（排定時刻後已有 ${j.runs} 次 run）` }[j.action] || JSON.stringify(j); }
   catch (e) { el.textContent = '失敗：' + e; }
   loadHealth();
 };

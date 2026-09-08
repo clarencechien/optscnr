@@ -342,7 +342,10 @@ async function runDecision(env, { source = "cron" } = {}) {
           : { ...base(c), q_event: null, q_gap: null, q_delta: null, note: null, status: "unanswered" };
       });
       if (!parsed) record.error = "LLM 回覆不是可解析的 JSON（raw_answer 保留）";
-      record.facts_proposed = Array.isArray(parsed?.facts_proposed) ? parsed.facts_proposed.slice(0, 20) : [];
+      record.facts_proposed = (Array.isArray(parsed?.facts_proposed) ? parsed.facts_proposed.slice(0, 20) : [])
+        .filter(p => p && typeof p === "object")
+        .map(p => ({ ticker: String(p.ticker || "").toUpperCase().slice(0, 12), fact: String(p.fact || "").slice(0, 400),
+          date: String(p.date || "").slice(0, 10), source: /^https?:\/\//i.test(String(p.source || "")) ? String(p.source).slice(0, 500) : null }));
       if (record.facts_proposed.length) {
         try { record.facts_appended = (await appendProposals(env, record.facts_proposed, mkt)).appended; }
         catch (e) { record.facts_error = `append: ${String(e).slice(0, 300)}`; }
@@ -427,6 +430,17 @@ async function verifyAccess(request, env) {
 // ------------------------------------------------------------------ entry points
 const noStore = { "Cache-Control": "no-store" };
 
+/** 會改狀態的端點只收同源請求：擋 CSRF（Access cookie 若被瀏覽器帶上，跨站表單也能打到這裡）。
+ *  curl／無 Origin 的呼叫放行（那已經過了 Access JWT）。 */
+function sameOrigin(request, url) {
+  const origin = request.headers.get("Origin");
+  const sfs = request.headers.get("Sec-Fetch-Site");
+  if (origin && origin !== url.origin) return false;
+  if (sfs && sfs !== "same-origin" && sfs !== "none") return false;
+  return true;
+}
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
 // ------------------------------------------------------------------ 電子報（公開、唯讀、不觸發任何動作）
 /** 這些路徑跳過 Worker 端的 Access 驗證。Cloudflare Access 本身仍會擋——要公開分享，
  *  在 Zero Trust 另建一個 path 為 /brief* 與 /api/brief 的應用程式、policy 用 Bypass（見 cloudflare/README.md）。 */
@@ -510,20 +524,24 @@ export default {
     }
     try {
       if (url.pathname === "/api/brief") {
-        // 公開唯讀；GitHub API 有配額，快取 5 分鐘
-        const key = new Request(url.toString(), { method: "GET" });
+        // 公開唯讀；GitHub API 有配額，快取 5 分鐘。d 只准 YYYY-MM-DD：它會拼進 GitHub Contents API 的路徑
+        const dParam = url.searchParams.get("d");
+        if (dParam && !DATE_RE.test(dParam)) return Response.json({ error: "d 必須是 YYYY-MM-DD" }, { status: 400, headers: noStore });
+        const key = new Request(`${url.origin}/api/brief${dParam ? `?d=${dParam}` : ""}`, { method: "GET" });
         const cache = caches.default;
         const hit = await cache.match(key);
         if (hit) return hit;
-        const res = Response.json(await brief(env, url.searchParams.get("d")), { headers: { "Cache-Control": "public, max-age=300" } });
+        const res = Response.json(await brief(env, dParam), { headers: { "Cache-Control": "public, max-age=300" } });
         if (ctx) ctx.waitUntil(cache.put(key, res.clone()));
         return res;
       }
       if (url.pathname === "/brief") return env.ASSETS.fetch(new Request(new URL("/brief.html", url).toString(), request));
       if (url.pathname === "/api/health") return Response.json(await health(env), { headers: noStore });
-      if (url.pathname === "/api/alarm/check") return Response.json(await secondAlarm(env, new Date()), { headers: noStore }); // 手動補發
-      if (url.pathname === "/api/decide") {
-        if (request.method !== "POST") return new Response("POST only", { status: 405 });
+      if (url.pathname === "/api/alarm/check" || url.pathname === "/api/decide") {
+        // 會動 repo／花錢的端點：POST + 同源
+        if (request.method !== "POST") return new Response("POST only", { status: 405, headers: noStore });
+        if (!sameOrigin(request, url)) return Response.json({ error: "cross-site request refused" }, { status: 403, headers: noStore });
+        if (url.pathname === "/api/alarm/check") return Response.json(await secondAlarm(env, new Date()), { headers: noStore }); // 手動補發
         return Response.json(await runDecision(env, { source: "manual" }), { headers: noStore });
       }
       if (url.pathname === "/api/decisions") {
