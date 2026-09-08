@@ -1,6 +1,6 @@
 # 🚀 SPCX 雷達站（space_radar + Option Sage）
 
-_README 由 build_readme.py 於 2026-09-05 00:11 UTC 重組；兩區塊各為該模組最近一次排程的輸出。_
+_README 由 build_readme.py 於 2026-09-08 00:30 UTC 重組；兩區塊各為該模組最近一次排程的輸出。_
 
 > 執行手冊：[PLAYBOOK.md](PLAYBOOK.md)｜8 月後任務計劃：[PLAN_2026-08.md](PLAN_2026-08.md)｜手動維護檔在 `config/`（dca_log / viewpoint / spcx_config）
 
