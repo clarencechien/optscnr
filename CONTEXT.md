@@ -37,7 +37,8 @@ GitHub Actions 每日掃描 → README.md 妖股報表 + shadow log 信號校準
 | data/strategy_matrix.json | 分類 × 出場政策矩陣（每天重算） |
 | docs/ | CONTEXT 之外的文件：`PLAN_2026-09_strategy_dashboard.md`（預先登記書＋建置）、`PROJECT_ESCAPE_DOOR.md`（GitHub 依賴評估）、`FACTS_ledger.md`（事實庫，人維護、Worker 只寫待審段）、`PROMPT_daily_report_reading.md`（人用 v3）／`_v4.md`（機器用）、`CASEBOOK_2026-07.md`、`exit_playbook.md`、`log.md` |
 
-**雙軌呈現**：軌 A ＝ GitHub README（Python 渲染，CF 掛了也在）；軌 B ＝ CF dashboard（同一批 JSON，多 History／Decisions／事實庫／排程健康）。資料主權永遠在 git。
+**雙軌呈現**：軌 A ＝ GitHub README（Python 渲染，CF 掛了也在）；軌 B ＝ CF dashboard（同一批 JSON，多 History／Decisions／事實庫／排程健康）；
+軌 B 另有 `/brief` 電子報（公開唯讀、一頁 TL;DR、不觸發任何動作，可分享連結）。資料主權永遠在 git。
 
 **架構原則：平鋪但有序（每雷達一檔+對應 yml）。不做大目錄重構**——
 10 個 workflows 正在跑，重構美觀收益遠低於弄斷每日掃描的風險。

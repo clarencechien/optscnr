@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<title>optscnr 電子報</title>
+<style>
+  :root { color-scheme: light; --page:#f9f9f7; --surface:#fcfcfb; --surface-2:#f3f2ee; --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+    --hair:#e1e0d9; --accent:#2a78d6; --accent-soft:#cde2fb; --good:#0ca30c; --good-text:#006300; --warn:#fab219; --crit:#d03b3b; --deemph:#c3c2b7; }
+  @media (prefers-color-scheme: dark) { :root { color-scheme: dark; --page:#0d0d0d; --surface:#1a1a19; --surface-2:#222220; --ink:#fff; --ink-2:#c3c2b7;
+    --hair:#2c2c2a; --accent:#3987e5; --accent-soft:#1c3a5e; --good-text:#0ca30c; --deemph:#383835; } }
+  * { box-sizing: border-box; }
+  html, body { margin:0; background:var(--page); color:var(--ink); font:15px/1.65 system-ui,-apple-system,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif; }
+  a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+  .paper { max-width: 720px; margin: 0 auto; padding: 28px 20px 64px; }
+  .masthead { border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 20px; display:flex; align-items:flex-end; gap:12px; flex-wrap:wrap; }
+  .masthead h1 { margin:0; font-size: 22px; letter-spacing:.02em; }
+  .masthead .date { font-size: 13px; color: var(--ink-2); }
+  .nav { margin-left:auto; font-size:13px; display:flex; gap:12px; }
+  h2 { font-size: 15px; margin: 26px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--hair); color: var(--ink); }
+  h2 .n { display:inline-block; width:22px; height:22px; border-radius:50%; background:var(--ink); color:var(--page); font-size:12px; text-align:center; line-height:22px; margin-right:8px; }
+  .tldr { background: var(--surface); border:1px solid var(--hair); border-left: 4px solid var(--accent); border-radius: 10px; padding: 14px 16px; }
+  .tldr ul { margin: 0; padding-left: 18px; } .tldr li { margin: 4px 0; }
+  .lights { display:flex; gap:8px; flex-wrap:wrap; margin: 10px 0 0; }
+  .light { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; padding:3px 10px; border-radius:999px; background:var(--surface-2); border:1px solid var(--hair); color:var(--ink-2); }
+  .light i { width:8px; height:8px; border-radius:50%; display:inline-block; background:var(--muted); }
+  .light.ok i{background:var(--good)} .light.warn i{background:var(--warn)} .light.bad i{background:var(--crit)} .light.info i{background:var(--accent)}
+  .box { background: var(--surface); border:1px solid var(--hair); border-radius: 10px; padding: 12px 16px; margin: 10px 0; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .card { background: var(--surface); border:1px solid var(--hair); border-radius: 12px; padding: 14px 16px; margin: 10px 0; }
+  .card .head { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+  .card .tk { font-size: 18px; font-weight: 700; } .card .tk small { font-size: 13px; font-weight: 500; color: var(--muted); margin-left: 6px; }
+  .tag { display:inline-block; padding:1px 8px; border-radius:6px; font-size:11px; font-weight:600; background:var(--surface-2); color:var(--ink-2); border:1px solid var(--hair); }
+  .tag.acc { background:var(--accent-soft); color:var(--ink); border-color:transparent; }
+  .kv { display:grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 6px 12px; margin: 8px 0; font-size: 13px; }
+  .kv b { display:block; color:var(--muted); font-weight:500; font-size:11px; } .kv span { font-variant-numeric: tabular-nums; }
+  .qa { font-size: 13px; border-top: 1px dashed var(--hair); padding-top: 8px; margin-top: 8px; } .qa b { color: var(--ink-2); font-weight: 600; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; } th, td { padding: 6px 8px; border-bottom: 1px solid var(--hair); text-align: left; }
+  th { color: var(--ink-2); font-size: 12px; font-weight: 600; } td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; } .best { font-weight: 700; }
+  .bars { display:grid; grid-template-columns: 90px 1fr 52px; gap: 6px 10px; align-items:center; font-size: 13px; margin: 8px 0; }
+  .bars .bar { height: 14px; border-radius: 4px; background: var(--deemph); } .bars .bar.best { background: var(--accent); }
+  .bars .v { text-align:right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .checks { list-style:none; padding:0; margin:0; } .checks li { display:flex; gap:10px; align-items:flex-start; padding: 6px 0; border-bottom:1px solid var(--hair); font-size: 14px; }
+  .checks li:last-child { border-bottom: 0; } .checks i { width:10px; height:10px; border-radius:50%; margin-top:7px; flex:none; background:var(--muted); }
+  .checks .ok i{background:var(--good)} .checks .warn i{background:var(--warn)} .checks .bad i{background:var(--crit)} .checks .info i{background:var(--accent)}
+  .foot { margin-top: 30px; padding-top: 12px; border-top: 1px solid var(--hair); font-size: 12px; color: var(--muted); line-height: 1.7; }
+  .empty { padding: 18px; text-align:center; color: var(--ink-2); background: var(--surface); border:1px dashed var(--hair); border-radius: 10px; }
+  @media print { .nav { display:none; } body { background:#fff; } }
+</style>
+</head>
+<body>
+<main class="paper">
+  <div class="masthead">
+    <div><h1>🚬 optscnr 電子報</h1><div class="date" id="date">載入中…</div></div>
+    <div class="nav" id="nav"></div>
+  </div>
+
+  <div class="tldr"><ul id="tldr"><li>讀取中…</li></ul><div class="lights" id="lights"></div></div>
+
+  <h2><span class="n">1</span>今日結構候選</h2>
+  <div id="cands"></div>
+  <div class="box muted" id="ruleB">
+    <b style="color:var(--ink)">規則 B 是什麼</b>：從 Score ≥ 8 的信號裡，再留下五個結構條件都成立的合約——不是末日（DTE ≥ 5）、<b>DTE 21–120</b>、<b>IV &lt; 50%</b>、<b>OTM &lt; 25%</b>、<b>Δ7d &gt; 0 且 7 天前有歷史可比</b>。
+    它不預測誰會動，只留下「動了之後最能換到倍數」的合約形狀。三個月成熟資料給的理由：IV 是第一道閘門（IV ≥ 50 幾乎沒有一格期望值 &gt; 1.1）、21–45 天是最好的桶、履約要在射程內、Δ7d 為正才是真建倉。
+    綁定策略＝策略 C：樂透（&lt; $1.5）且 IV &lt; 50 → 死抱；實彈（&gt; $3）→ 4 口階梯 2/4/8x；其餘 → −50% 停損 + 2x 賣半。賣點依 DTE 21 出場手冊換算。<b>空手是正確執行，不補名額。</b>
+  </div>
+
+  <h2><span class="n">2</span>LLM 三題（只答事實，不做可玩判斷）</h2>
+  <div id="decision"></div>
+
+  <h2><span class="n">3</span>History：出場政策 shadow 回測</h2>
+  <div id="history"></div>
+
+  <h2><span class="n">4</span>資料正確與否</h2>
+  <div class="card"><ul class="checks" id="checks"></ul></div>
+
+  <div class="foot" id="foot">
+    唯讀頁，不會觸發 LLM 或補發。資料主權在 git：候選 <code>data/dashboard/</code>、答案 <code>data/decisions/</code>、矩陣 <code>data/strategy_matrix.json</code>。
+    完整互動版（History 矩陣、Decisions 逐日、事實庫、排程）在 <a href="/">dashboard</a>（需登入）。<br>
+    雷達掃到 ≠ 進場訊號。這裡沒有任何一行是買賣建議；預先登記 2026-09-08，100 筆出樣本前不改規則。
+  </div>
+</main>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const f2 = x => (x == null || isNaN(x) ? '—' : Number(x).toFixed(2));
+const pct = x => (x == null ? '—' : (x * 100).toFixed(0) + '%');
+const tpe = iso => { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(iso)); } catch { return iso; } };
+const sellText = sp => { sp = sp || {}; return (sp.take_profit && sp.take_profit.length ? 'TP ' + sp.take_profit.map(x => '$' + x).join(' / ') : '不賣半') + (sp.stop ? `｜停 $${sp.stop}` : '') + (sp.exit_by ? `｜末點 ${sp.exit_by}` : ''); };
+
+function qaHtml(c) {
+  if (!c) return '<div class="qa muted">LLM 尚未回答（Worker 07:05／08:35／10:05 台北寫入）</div>';
+  if (c.status !== 'answered') return `<div class="qa muted">${c.status === 'error' ? 'LLM 呼叫失敗' : 'LLM 未回答這張'}</div>`;
+  const e = c.q_event || {}, g = c.q_gap || {}, d = c.q_delta || {};
+  const src = e.source ? (String(e.source).startsWith('http') ? ` <a href="${esc(e.source)}" target="_blank" rel="noopener">來源</a>` : ` <span class="muted">（${esc(e.source)}）</span>`) : '';
+  return `<div class="qa"><b>排定事件</b> ${esc(e.answer ?? '—')}${e.date ? ' ' + esc(e.date) : ''}${e.what ? '・' + esc(e.what) : ''}${src}<br>`
+    + `<b>近 5 日跳空</b> ${esc(g.answer ?? '—')}${g.direction ? (g.direction === 'up' ? ' ▲' : ' ▼') : ''}${g.pct != null ? ' ' + esc(g.pct) + '%' : ''}${g.date ? ' ' + esc(g.date) : ''}<br>`
+    + `<b>Δ7d</b> ${d.positive == null ? '—' : d.positive ? '正' : '非正'}${d.confirmed ? '・confirmed' : '・無歷史'}${c.note ? `<br><span class="muted">${esc(c.note)}</span>` : ''}</div>`;
+}
+
+function render(b) {
+  const d = b.market_date;
+  $('#date').textContent = `市場日 ${d || '—'}｜產出 ${tpe(b.generated_at)}（台北）`;
+  const nav = [];
+  if (b.prev_date) nav.push(`<a href="?d=${b.prev_date}">← ${b.prev_date}</a>`);
+  if (b.requested_date) nav.push(`<a href="/brief">最新</a>`);
+  if (b.next_date) nav.push(`<a href="?d=${b.next_date}">${b.next_date} →</a>`);
+  $('#nav').innerHTML = nav.join('');
+
+  const c = b.candidates, dec = b.decision, m = b.matrix;
+  const byId = new Map((dec?.candidates || []).map(x => [x.signal_id, x]));
+
+  // ---- TL;DR ----
+  const t = [];
+  if (!c) t.push('候選 JSON 還沒產生：等下一次 scanner。');
+  else if (!c.n_candidates) t.push(`<b>今日無結構候選</b>（掃描 ${c.n_report_rows} 張合約，沒有一張過規則 B）。空手是正確執行。`);
+  else t.push(`<b>今日 ${c.n_candidates} 張結構候選</b>（掃描 ${c.n_report_rows} 張）：${c.candidates.map(x => `${x.ticker} ${x.strike}C ${x.expiry.slice(5)}`).join('、')}。`);
+  if (dec) {
+    if (!dec.llm_called) t.push(dec.error ? `LLM 呼叫失敗：${esc(String(dec.error).slice(0, 80))}` : 'LLM 三題：零候選，未呼叫。');
+    else {
+      const ans = dec.candidates.filter(x => x.status === 'answered');
+      const ev = ans.filter(x => (x.q_event || {}).answer === '有').length;
+      t.push(`LLM 三題已答 ${ans.length}/${dec.candidates.length}（${esc(dec.model_served || dec.model)}）：到期前有排定事件 ${ev} 張，事實庫提案 ${(dec.facts_proposed || []).length} 條。`);
+    }
+  } else if (c && c.n_candidates) t.push('LLM 三題尚未產生。');
+  if (m && m.rule_b) t.push(`規則 B 歷史（n=${m.rule_b.n}）：命中 ${pct(m.rule_b.hit)}，策略 C ${f2(m.rule_b.ev.C_bound)}x／A 死抱 ${f2(m.rule_b.ev.A_hold)}x／B 2x 賣半 ${f2(m.rule_b.ev.B_half2x)}x。出樣本累積 n=${m.oos_rule_b ? m.oos_rule_b.n : 0}。`);
+  if (m && m.control && m.control.edge_pp != null) t.push(`對照組：上榜 ${pct(m.control.listed_rate)} vs universe ${pct(m.control.universe_rate)}，edge ${m.control.edge_pp > 0 ? '+' : ''}${m.control.edge_pp} pp。`);
+  const bad = b.checks.filter(x => x.level === 'bad').length, warn = b.checks.filter(x => x.level === 'warn').length;
+  t.push(bad ? `<b>資料有 ${bad} 項異常</b>，見第 4 節。` : warn ? `資料 ${warn} 項待補（通常是還沒到時間），見第 4 節。` : '資料檢查全部正常。');
+  $('#tldr').innerHTML = t.map(x => `<li>${x}</li>`).join('');
+  $('#lights').innerHTML = b.checks.map(x => `<span class="light ${x.level}" title="${esc(x.text)}"><i></i>${esc(x.label || x.text.slice(0, 12))}</span>`).join('');
+
+  // ---- 候選 ----
+  if (!c) $('#cands').innerHTML = '<div class="empty">尚無資料</div>';
+  else if (!c.n_candidates) $('#cands').innerHTML = '<div class="empty"><b>今日無結構候選</b><br><span class="muted">空手是正確執行，不補名額。</span></div>';
+  else $('#cands').innerHTML = c.candidates.map(x => `<div class="card">
+      <div class="head"><span class="tk">${esc(x.ticker)}<small>${esc(x.strike)}C ${esc(x.expiry)}</small></span>
+        <span class="tag acc">${esc((x.strategy_label || '').split('（')[0])}</span><span class="tag">${esc(x.tier)}</span><span class="tag">分 ${x.score}</span></div>
+      <div class="kv">
+        <div><b>權利金 (bid/ask)</b><span>$${f2(x.last)} <span class="muted">${f2(x.bid)}/${f2(x.ask)}</span></span></div>
+        <div><b>現價 / OTM</b><span>${f2(x.spot)} / ${x.otm_pct ?? '—'}%</span></div>
+        <div><b>DTE</b><span>${x.dte}</span></div>
+        <div><b>IV</b><span>${x.iv}%</span></div>
+        <div><b>Δ7d</b><span>${x.oi_d7 == null ? '無歷史' : (x.oi_d7 > 0 ? '+' : '') + x.oi_d7}</span></div>
+        <div><b>賣點</b><span>${esc(sellText(x.sell_points))}</span></div>
+      </div>${qaHtml(byId.get(x.signal_id))}</div>`).join('');
+
+  // ---- decisions ----
+  if (!dec) $('#decision').innerHTML = `<div class="empty muted">市場日 ${esc(d || '—')} 的 decisions 尚未產生。</div>`;
+  else {
+    const fp = dec.facts_proposed || [];
+    $('#decision').innerHTML = `<div class="box"><div><span class="tag">${esc(dec.prompt_version || '—')}</span> <span class="tag">${esc(dec.llm_called ? (dec.model_served || dec.model) : '未呼叫 LLM')}</span>
+      <span class="muted">寫入 ${tpe(dec.decided_at)}（台北）${dec.usage ? `・${dec.usage.prompt_tokens ?? '?'}→${dec.usage.completion_tokens ?? '?'} tok` : ''}</span></div>
+      ${dec.note ? `<div class="muted" style="margin-top:6px">${esc(dec.note)}</div>` : ''}${dec.error ? `<div style="color:var(--crit);margin-top:6px">${esc(dec.error)}</div>` : ''}
+      ${fp.length ? `<div style="margin-top:8px;font-size:13px">📚 事實庫提案 ${fp.length} 條（附加 ${dec.facts_appended ?? 0} 條到待審段）：${fp.map(p => `${esc(p.ticker)}・${esc(p.fact)}${p.date ? ' ' + esc(p.date) : ''}${p.source ? ` <a href="${esc(p.source)}" target="_blank" rel="noopener">來源</a>` : ''}`).join('；')}</div>` : ''}
+      ${dec.candidates && dec.candidates.length ? `<div class="muted" style="margin-top:8px">每張的答案在上面候選卡片裡；事後結果（T+5/10/20）由 tracer 回填，看 dashboard「Decisions」。</div>` : ''}</div>`;
+  }
+
+  // ---- history ----
+  if (!m) $('#history').innerHTML = '<div class="empty">策略矩陣尚未產生</div>';
+  else {
+    const rb = m.rule_b, pol = ['A_hold', 'B_half2x', 'C_bound', 'half3x', 'rungs248', 'stop_half'];
+    const maxV = rb ? Math.max(1.2, ...pol.map(p => rb.ev[p] || 0)) : 1;
+    const bars = rb ? `<div class="muted">規則 B 候選（n=${rb.n}／事件 ${rb.events}，命中 ${pct(rb.hit)}）各出場政策的等權期望值，未扣價差：</div><div class="bars">${pol.map(p => `<div>${esc(m.policy_label[p])}</div><div class="bar ${p === rb.best ? 'best' : ''}" style="width:${(rb.ev[p] / maxV * 100).toFixed(1)}%"></div><div class="v">${f2(rb.ev[p])}x</div>`).join('')}</div>` : '<div class="muted">規則 B 尚無成熟樣本。</div>';
+    const rows = [['全部成熟', m.overall], ['規則 B', m.rule_b], ['出樣本（≥' + m.prereg_date + '）', m.oos_all], ['出樣本 規則 B', m.oos_rule_b]]
+      .map(([n, x]) => x ? `<tr><td>${n}</td><td class="num">${x.n} / ${x.events}</td><td class="num">${pct(x.hit)}</td>${['A_hold', 'B_half2x', 'C_bound'].map(p => `<td class="num ${p === x.best ? 'best' : ''}">${f2(x.ev[p])}</td>`).join('')}</tr>` : `<tr><td>${n}</td><td class="num muted">0</td><td class="muted" colspan="4">累積中</td></tr>`).join('');
+    const mo = Object.entries(m.monthly || {}).map(([k, v]) => `<tr><td>${k}</td><td class="num">${v.n}</td><td class="num">${f2(v.A_hold)}</td><td class="num">${f2(v.B_half2x)}</td><td class="num">${f2(v.C_bound)}</td></tr>`).join('');
+    const ctl = m.control || {};
+    $('#history').innerHTML = `<div class="card">${bars}
+      <table style="margin-top:10px"><thead><tr><th>樣本群</th><th class="num">n / 事件</th><th class="num">命中</th><th class="num">A 死抱</th><th class="num">B 2x賣半</th><th class="num">C 綁定</th></tr></thead><tbody>${rows}</tbody></table>
+      <table style="margin-top:10px"><thead><tr><th>逐月（事件等權）</th><th class="num">n</th><th class="num">A</th><th class="num">B</th><th class="num">C</th></tr></thead><tbody>${mo}</tbody></table>
+      <div class="muted" style="margin-top:8px">${ctl.edge_pp != null ? `對照組：上榜 ${pct(ctl.listed_rate)} vs 全 universe ${pct(ctl.universe_rate)}（${ctl.n_days} 日），edge ${ctl.edge_pp > 0 ? '+' : ''}${ctl.edge_pp} pp。` : '對照組累積中（需 20 個交易日的 universe 收盤）。'} 更新 ${esc(m.generated_at)}；成熟 ${m.n_mature}/${m.n_signals}。單月反轉很常見，不用單月改規則。</div></div>`;
+  }
+
+  // ---- checks ----
+  $('#checks').innerHTML = b.checks.map(x => `<li class="${x.level}"><i></i><span>${esc(x.text)}</span></li>`).join('')
+    + (b.schedule.run ? `<li class="info"><i></i><span class="muted">最近一次 scanner：${esc(b.schedule.run.event)}・${tpe(b.schedule.run.created_at)}（台北）・${esc(b.schedule.run.conclusion || b.schedule.run.status)}${b.schedule.run.url ? ` <a href="${esc(b.schedule.run.url)}" target="_blank" rel="noopener">log</a>` : ''}</span></li>` : '');
+}
+
+(async () => {
+  const d = new URLSearchParams(location.search).get('d');
+  try {
+    const r = await fetch('/api/brief' + (d ? `?d=${encodeURIComponent(d)}` : ''), { cache: 'no-store' });
+    if (!r.ok) throw new Error(`/api/brief ${r.status}`);
+    render(await r.json());
+  } catch (e) {
+    $('#date').textContent = '讀取失敗';
+    $('#tldr').innerHTML = `<li>電子報資料讀不到：${esc(String(e.message || e))}。若你有登入 dashboard，直接開 <a href="/">dashboard</a>。</li>`;
+  }
+})();
+</script>
+</body>
+</html>

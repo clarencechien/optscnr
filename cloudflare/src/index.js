@@ -427,6 +427,69 @@ async function verifyAccess(request, env) {
 // ------------------------------------------------------------------ entry points
 const noStore = { "Cache-Control": "no-store" };
 
+// ------------------------------------------------------------------ 電子報（公開、唯讀、不觸發任何動作）
+/** 這些路徑跳過 Worker 端的 Access 驗證。Cloudflare Access 本身仍會擋——要公開分享，
+ *  在 Zero Trust 另建一個 path 為 /brief* 與 /api/brief 的應用程式、policy 用 Bypass（見 cloudflare/README.md）。 */
+const PUBLIC_PATHS = new Set(["/brief", "/brief.html", "/api/brief"]);
+
+/** /api/brief?d=YYYY-MM-DD：把候選、decisions、矩陣摘要、排程狀態、資料檢查彙整成一份；只讀 GitHub。 */
+async function brief(env, dateParam) {
+  const now = new Date();
+  const latest = await ghGetJson(env, LATEST_PATH);
+  const d = dateParam || latest?.market_date || null;
+  const cands = (d && latest && d !== latest.market_date) ? await ghGetJson(env, `data/dashboard/candidates_${d}.json`) : latest;
+  const decision = d ? await ghGetJson(env, `${DECISIONS_DIR}/${d}.json`) : null;
+  const matrix = await ghGetJson(env, "data/strategy_matrix.json");
+  let spotsExists = false;
+  try { spotsExists = Boolean(d && await ghGetFile(env, `data/universe_spots/${d}.json`)); } catch {}
+  let dates = [];
+  try { dates = (await ghListDir(env, DECISIONS_DIR)).map(n => n.replace(".json", "")).sort(); } catch {}
+
+  // 排程：22:00 UTC 之後 scanner 有沒有 run、結果如何
+  const expected = expectedFireTime(now, env);
+  let runs = [];
+  try { runs = await listRunsSince(env, env.SCANNER_WORKFLOW, new Date(expected.getTime() - 10 * 60 * 1000).toISOString()); } catch {}
+  const run = runs[0] || null;
+  const weekend = now.getUTCDay() === 0 || now.getUTCDay() === 6;
+  const latestFresh = latest && new Date(latest.generated_at) >= new Date(expected.getTime() - 10 * 60 * 1000);
+  const matrixFresh = matrix && /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}/.test(matrix.generated_at || "")
+    && new Date(matrix.generated_at.replace(" UTC", "Z").replace(" ", "T")) >= new Date(expected.getTime() - 10 * 60 * 1000);
+
+  const checks = [];
+  const push = (level, text, label) => checks.push({ level, text, label: label || text.split(/[（：。]/)[0].slice(0, 12) });
+  if (weekend) push("info", "週末休市：本週最後一個交易日的資料。", "週末休市");
+  if (!run) push(Date.now() - expected.getTime() > 65 * 60000 && !weekend ? "bad" : "warn",
+    weekend ? "週末沒有 scanner 排程，正常。" : "排定時刻之後 scanner 還沒跑（Worker 07:05 台北會補發）。", weekend ? "scanner 週末不跑" : "scanner 未跑");
+  else if (run.conclusion === "success") push("ok", `scanner 已跑（${run.event === "workflow_dispatch" ? "Worker 補發或手動" : "GitHub 排程"}）。`, "scanner 已跑");
+  else if (run.status === "completed") push("bad", `scanner 跑失敗（${run.conclusion}），看 Actions log。`, "scanner 失敗");
+  else push("warn", "scanner 正在跑。", "scanner 跑中");
+  if (latest) push(latestFresh ? "ok" : (run && run.conclusion === "success" ? "info" : "warn"),
+    latestFresh ? `候選 JSON 是本次產出（市場日 ${latest.market_date}）。`
+      : `候選 JSON 停在市場日 ${latest.market_date}${run && run.conclusion === "success" ? "——scanner 判休市（無新收盤），沿用上一個交易日。" : "。"}`,
+    latestFresh ? "候選是今日的" : "候選沿用上一交易日");
+  else push("bad", "找不到候選 JSON（data/dashboard/latest.json）。", "候選 JSON 缺");
+  if (matrix) push(matrixFresh ? "ok" : "info", `策略矩陣更新於 ${matrix.generated_at}（成熟 ${matrix.n_mature}/${matrix.n_signals}）。`, matrixFresh ? "矩陣已更新" : "矩陣未重算");
+  else push("bad", "找不到策略矩陣。", "矩陣缺");
+  if (d) push(decision ? "ok" : (latestFresh ? "warn" : "info"),
+    decision ? `LLM 三題已記錄（${decision.llm_called ? decision.model_served || decision.model : "零候選未呼叫"}）。`
+      : `市場日 ${d} 的 decisions 還沒產生（Worker 07:05／08:35／10:05 台北會寫）。`, decision ? "LLM 三題已記" : "LLM 三題未產生");
+  if (d) push(spotsExists ? "ok" : "info", spotsExists ? "對照組 universe 收盤已記。" : "對照組當日檔尚未出現。", spotsExists ? "對照組已記" : "對照組未記");
+
+  const cohort = k => (matrix && matrix[k] && matrix[k].n ? matrix[k] : null);
+  return {
+    generated_at: now.toISOString(), market_date: d, requested_date: dateParam || null,
+    available_dates: dates, prev_date: dates.filter(x => x < d).pop() || null, next_date: dates.find(x => x > d) || null,
+    candidates: cands ? { market_date: cands.market_date, generated_at: cands.generated_at, n_candidates: cands.n_candidates,
+      n_report_rows: cands.n_report_rows, candidates: cands.candidates || [] } : null,
+    decision: decision ? { ...decision, raw_answer: undefined } : null,
+    matrix: matrix ? { generated_at: matrix.generated_at, n_mature: matrix.n_mature, n_signals: matrix.n_signals, prereg_date: matrix.prereg_date,
+      policy_label: matrix.policy_label, overall: cohort("overall"), rule_b: cohort("rule_b"), oos_all: cohort("oos_all"), oos_rule_b: cohort("oos_rule_b"),
+      monthly: matrix.monthly, control: matrix.control } : null,
+    schedule: { expected_fire: expected.toISOString(), weekend, run: run ? { event: run.event, status: run.status, conclusion: run.conclusion, created_at: run.created_at, url: run.html_url } : null },
+    checks,
+  };
+}
+
 export default {
   async scheduled(event, env, ctx) {
     const now = new Date();
@@ -437,13 +500,26 @@ export default {
     })());
   },
 
-  async fetch(request, env) {
-    const access = await verifyAccess(request, env);
-    if (!access.ok) {
-      return Response.json({ error: "unauthorized", reason: access.reason, hint: access.hint }, { status: 401, headers: noStore });
-    }
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
+    if (!PUBLIC_PATHS.has(url.pathname)) {
+      const access = await verifyAccess(request, env);
+      if (!access.ok) {
+        return Response.json({ error: "unauthorized", reason: access.reason, hint: access.hint }, { status: 401, headers: noStore });
+      }
+    }
     try {
+      if (url.pathname === "/api/brief") {
+        // 公開唯讀；GitHub API 有配額，快取 5 分鐘
+        const key = new Request(url.toString(), { method: "GET" });
+        const cache = caches.default;
+        const hit = await cache.match(key);
+        if (hit) return hit;
+        const res = Response.json(await brief(env, url.searchParams.get("d")), { headers: { "Cache-Control": "public, max-age=300" } });
+        if (ctx) ctx.waitUntil(cache.put(key, res.clone()));
+        return res;
+      }
+      if (url.pathname === "/brief") return env.ASSETS.fetch(new Request(new URL("/brief.html", url).toString(), request));
       if (url.pathname === "/api/health") return Response.json(await health(env), { headers: noStore });
       if (url.pathname === "/api/alarm/check") return Response.json(await secondAlarm(env, new Date()), { headers: noStore }); // 手動補發
       if (url.pathname === "/api/decide") {
