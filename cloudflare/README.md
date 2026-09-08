@@ -52,6 +52,22 @@ WAF Challenge 只擋機器人，擋不了人；用 **Zero Trust Access**（免�
 兩層的用意：Access 設錯（例如 policy 打開了）時 Worker 端還是 401，`/api/decide` 不會被路人按。
 Cron 不走 HTTP，不受 Access 影響。原本的 WAF Challenge 可以拿掉（Access 登入頁本身就會擋機器人）。
 
+### 電子報 `/brief`（公開分享用、唯讀）
+
+`/brief` 是一頁「一眼看懂」的版本：TL;DR、今日候選＋LLM 三題、History 摘要、資料正確與否。
+它只讀 `/api/brief`（Worker 從 GitHub 彙整，快取 5 分鐘），**不會觸發 LLM、不會補發、沒有任何按鈕**；
+`?d=2026-09-04` 可看某一天。Worker 端對 `/brief`、`/brief.html`、`/api/brief` 不驗 Access JWT。
+
+要讓沒登入的人也能開，Cloudflare Access 那層還要放行這三個路徑（Access 在 Worker 之前就擋了）：
+
+1. Zero Trust → Access → Applications → **Add an application → Self-hosted**（第二個 app，跟主 app 並存）
+2. Application domain 加兩條：`optscnr.ai-apps.work/brief` 與 `optscnr.ai-apps.work/api/brief`
+   （Access 的 path 是前綴比對，`/brief` 會涵蓋 `/brief.html`；不會涵蓋 `/api/decide`）
+3. Policy：Action **Bypass**、Include → **Everyone**
+4. 存檔即可，不用改 Worker。之後把 `https://optscnr.ai-apps.work/brief` 這個連結給誰都行。
+
+不做這步也沒關係：你自己登入後 `/brief` 一樣能開，只是別人開會被 Access 擋。
+
 ## 它做什麼
 
 | 時間 (UTC) | 動作 |
@@ -59,7 +75,7 @@ Cron 不走 HTTP，不受 Access 影響。原本的 WAF Challenge 可以拿掉�
 | 23:05 平日 | ① 第二鬧鐘：22:00 之後 scanner.yml 有沒有任何 run；沒有 → `workflow_dispatch` ② decisions（見下） |
 | 00:35 週二~六 | 同上（GitHub 延遲 3-8 小時的事故形狀，跨日再檢查一次） |
 | 02:05 週二~六 | 同上（decisions 最後一次補：補發的 scanner 到這時也該跑完了） |
-| 任何時間 | `/api/health` 排程健康；`/api/alarm/check` 手動補發；`POST /api/decide` 手動產生 decisions；`/api/decisions` 最近 N 天；`/api/facts` 解析後的事實庫 |
+| 任何時間 | `/api/health` 排程健康；`/api/alarm/check` 手動補發；`POST /api/decide` 手動產生 decisions；`/api/decisions` 最近 N 天；`/api/facts` 解析後的事實庫；**`/brief` + `/api/brief` 公開唯讀電子報** |
 
 **decisions 流程（冪等，同一市場日只寫一次）**：讀 main 的 `data/dashboard/latest.json` → `data/decisions/<市場日>.json` 已存在就跳過
 → 候選 0 筆：不呼叫 LLM、直接記檔 → 否則讀 `docs/PROMPT_daily_report_reading_v4.md` 的 ```` ```prompt ```` 區塊（**改 prompt 不用重新部署**）

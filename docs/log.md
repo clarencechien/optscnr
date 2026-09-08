@@ -262,6 +262,11 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
   頁面頂端顯示紅色說明條；`ACCESS_TEAM_DOMAIN` 自動去掉 `https://`。
 - **本 session 無法做的**：從沙盒打不到 dashboard（Cloudflare Challenge/Access）、也無 `workflow_dispatch` 權限，
   實跑與按鈕都由擁有者操作，我從 git 核對產物。
+- **電子報 `/brief`（擁有者晚間要求「一眼看懂、可分享、不觸發 LLM」）**：`public/brief.html` 一頁式（TL;DR、規則 B 說明、
+  候選卡片＋三題答案、History 摘要條、資料正確性檢查清單、前後日導覽）；`/api/brief?d=` 由 Worker 彙整候選／decisions／矩陣／
+  排程狀態，`caches.default` 快取 5 分鐘，回傳去掉 `raw_answer`。Worker 對 `/brief`、`/brief.html`、`/api/brief` 不驗 JWT；
+  Cloudflare Access 那層要另建 Bypass 應用程式放行這兩個 path（步驟在 cloudflare/README.md）。dashboard 分頁列加「電子報 ↗」。
+  tracer 路徑紀錄改成到期日當天不抓鏈（yfinance 對已到期 expiry 必 ValueError）。
 
 ## 審計 bug 修復 + P0-e 語義 + P1 對照組（2026-09-08，第二批）
 
