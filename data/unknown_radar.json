@@ -1,41 +1,65 @@
 {
-  "updated_at": "2026-09-07T23:45:33.660457",
-  "count": 3,
+  "updated_at": "2026-09-08T23:39:59.521164",
+  "count": 5,
   "blind_spots": [
     {
-      "name": "Miami",
-      "ticker": "MIAX",
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
       "mentions_today": 2,
-      "total_mentions": 5,
+      "total_mentions": 4,
       "consecutive_days": 2,
       "is_strong": true,
       "evidence": [
-        "Crashed Amazon cargo jet struck two vehicles, ended up 1,300 feet past runway, NTSB says",
-        "At least five killed in Amazon Prime Air cargo plane crash in Miami"
+        "Is Occidental Petroleum Stock Outperforming the Nasdaq?",
+        "Is Republic Services Stock Underperforming the Nasdaq?"
       ]
     },
     {
-      "name": "German",
-      "ticker": "GABC",
+      "name": "Novartis",
+      "ticker": "NVSEF",
       "mentions_today": 3,
-      "total_mentions": 5,
-      "consecutive_days": 2,
-      "is_strong": true,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "SpaceX rival launches rocket in historic first, says industry is 'desperate' for more",
-        "Far-right AfD landslide in German state piles pressure on federal government"
+        "Cholesterol drug setback casts doubt over multibillion-dollar race",
+        "Pharma major Novartis falls 10% after three drug trial setbacks"
       ]
     },
     {
-      "name": "Greenland",
-      "ticker": "GLNDW",
+      "name": "Canadian",
+      "ticker": "CNDIF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Greenland welcomes major funding boost from EU amid Trump’s annexation threats",
-        "Greenland welcomes major funding boost from EU amid Trump’s annexation threats"
+        "Canada's retaliatory tariffs worth CA$27.6 billion take effect as trade rift with U.S. deepens",
+        "Bombardier’s stock drops as the U.S.-Canada trade war intensifies. Here’s what Trump is targeting ne"
+      ]
+    },
+    {
+      "name": "AstraZeneca",
+      "ticker": "AZN",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "AstraZeneca's COPD drug scores two late-stage trial wins as full data boosts blockbuster hopes",
+        "AstraZeneca's COPD drug scores two late-stage trial wins as full data boosts blockbuster hopes"
+      ]
+    },
+    {
+      "name": "Evommune",
+      "ticker": "EVMN",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Why is Evommune stock plunging today?",
+        "Evommune stock tumbles after trial misses primary endpoint"
       ]
     }
   ]

@@ -43,9 +43,9 @@
   },
   "Nasdaq": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-03",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-09-08",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "NDAQ"
   },
   "German": {
@@ -103,5 +103,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "GLNDW"
+  },
+  "Canadian": {
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CNDIF"
+  },
+  "Novartis": {
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "NVSEF"
+  },
+  "AstraZeneca": {
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "AZN"
+  },
+  "Evommune": {
+    "first_seen": "2026-09-08",
+    "last_seen": "2026-09-08",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "EVMN"
   }
 }
