@@ -100,6 +100,8 @@
 <script>
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const safeHref = u => (/^https?:\/\//i.test(String(u || '')) ? esc(u) : null);
+
 const f2 = x => (x == null || isNaN(x) ? '—' : Number(x).toFixed(2));
 const pct = x => (x == null ? '—' : (x * 100).toFixed(0) + '%');
 const tpe = iso => { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date(iso)); } catch { return iso; } };
@@ -109,7 +111,7 @@ function qaHtml(c) {
   if (!c) return '<div class="qa muted">LLM 尚未回答（Worker 07:05／08:35／10:05 台北寫入）</div>';
   if (c.status !== 'answered') return `<div class="qa muted">${c.status === 'error' ? 'LLM 呼叫失敗' : 'LLM 未回答這張'}</div>`;
   const e = c.q_event || {}, g = c.q_gap || {}, d = c.q_delta || {};
-  const src = e.source ? (String(e.source).startsWith('http') ? ` <a href="${esc(e.source)}" target="_blank" rel="noopener">來源</a>` : ` <span class="muted">（${esc(e.source)}）</span>`) : '';
+  const src = e.source ? (safeHref(e.source) ? ` <a href="${safeHref(e.source)}" target="_blank" rel="noopener">來源</a>` : ` <span class="muted">（${esc(e.source)}）</span>`) : '';
   return `<div class="qa"><b>排定事件</b> ${esc(e.answer ?? '—')}${e.date ? ' ' + esc(e.date) : ''}${e.what ? '・' + esc(e.what) : ''}${src}<br>`
     + `<b>近 5 日跳空</b> ${esc(g.answer ?? '—')}${g.direction ? (g.direction === 'up' ? ' ▲' : ' ▼') : ''}${g.pct != null ? ' ' + esc(g.pct) + '%' : ''}${g.date ? ' ' + esc(g.date) : ''}<br>`
     + `<b>Δ7d</b> ${d.positive == null ? '—' : d.positive ? '正' : '非正'}${d.confirmed ? '・confirmed' : '・無歷史'}${c.note ? `<br><span class="muted">${esc(c.note)}</span>` : ''}</div>`;
@@ -169,7 +171,7 @@ function render(b) {
     $('#decision').innerHTML = `<div class="box"><div><span class="tag">${esc(dec.prompt_version || '—')}</span> <span class="tag">${esc(dec.llm_called ? (dec.model_served || dec.model) : '未呼叫 LLM')}</span>
       <span class="muted">寫入 ${tpe(dec.decided_at)}（台北）${dec.usage ? `・${dec.usage.prompt_tokens ?? '?'}→${dec.usage.completion_tokens ?? '?'} tok` : ''}</span></div>
       ${dec.note ? `<div class="muted" style="margin-top:6px">${esc(dec.note)}</div>` : ''}${dec.error ? `<div style="color:var(--crit);margin-top:6px">${esc(dec.error)}</div>` : ''}
-      ${fp.length ? `<div style="margin-top:8px;font-size:13px">📚 事實庫提案 ${fp.length} 條（附加 ${dec.facts_appended ?? 0} 條到待審段）：${fp.map(p => `${esc(p.ticker)}・${esc(p.fact)}${p.date ? ' ' + esc(p.date) : ''}${p.source ? ` <a href="${esc(p.source)}" target="_blank" rel="noopener">來源</a>` : ''}`).join('；')}</div>` : ''}
+      ${fp.length ? `<div style="margin-top:8px;font-size:13px">📚 事實庫提案 ${fp.length} 條（附加 ${dec.facts_appended ?? 0} 條到待審段）：${fp.map(p => `${esc(p.ticker)}・${esc(p.fact)}${p.date ? ' ' + esc(p.date) : ''}${safeHref(p.source) ? ` <a href="${safeHref(p.source)}" target="_blank" rel="noopener">來源</a>` : ''}`).join('；')}</div>` : ''}
       ${dec.candidates && dec.candidates.length ? `<div class="muted" style="margin-top:8px">每張的答案在上面候選卡片裡；事後結果（T+5/10/20）由 tracer 回填，看 dashboard「Decisions」。</div>` : ''}</div>`;
   }
 
@@ -190,7 +192,7 @@ function render(b) {
 
   // ---- checks ----
   $('#checks').innerHTML = b.checks.map(x => `<li class="${x.level}"><i></i><span>${esc(x.text)}</span></li>`).join('')
-    + (b.schedule.run ? `<li class="info"><i></i><span class="muted">最近一次 scanner：${esc(b.schedule.run.event)}・${tpe(b.schedule.run.created_at)}（台北）・${esc(b.schedule.run.conclusion || b.schedule.run.status)}${b.schedule.run.url ? ` <a href="${esc(b.schedule.run.url)}" target="_blank" rel="noopener">log</a>` : ''}</span></li>` : '');
+    + (b.schedule.run ? `<li class="info"><i></i><span class="muted">最近一次 scanner：${esc(b.schedule.run.event)}・${tpe(b.schedule.run.created_at)}（台北）・${esc(b.schedule.run.conclusion || b.schedule.run.status)}${safeHref(b.schedule.run.url) ? ` <a href="${safeHref(b.schedule.run.url)}" target="_blank" rel="noopener">log</a>` : ''}</span></li>` : '');
 }
 
 (async () => {
