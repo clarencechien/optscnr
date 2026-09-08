@@ -32,6 +32,11 @@
   .light.ok i{background:var(--good)} .light.warn i{background:var(--warn)} .light.bad i{background:var(--crit)} .light.info i{background:var(--accent)}
   .box { background: var(--surface); border:1px solid var(--hair); border-radius: 10px; padding: 12px 16px; margin: 10px 0; }
   .muted { color: var(--muted); font-size: 14px; }
+  .rb-title { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+  .rb-lead { margin: 0 0 10px; font-size: 15px; line-height: 1.6; }
+  .rb-chips { display:flex; flex-wrap:wrap; gap:6px; margin-bottom: 10px; }
+  .rb-chips span { padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--ink); font-weight: 600; font-size: 13px; font-variant-numeric: tabular-nums; }
+  .rb-table { width:auto; margin-bottom: 8px; } .rb-table td { padding: 4px 8px 4px 0; border: 0; font-size: 15px; } .rb-table td:nth-child(2) { color: var(--muted); }
   .card { background: var(--surface); border:1px solid var(--hair); border-radius: 12px; padding: 14px 16px; margin: 10px 0; }
   .card .head { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
   .card .tk { font-size: 20px; font-weight: 700; } .card .tk small { font-size: 14px; font-weight: 500; color: var(--muted); margin-left: 6px; }
@@ -64,10 +69,16 @@
 
   <h2><span class="n">1</span>今日結構候選</h2>
   <div id="cands"></div>
-  <div class="box muted" id="ruleB">
-    <b style="color:var(--ink)">規則 B 是什麼</b>：從 Score ≥ 8 的信號裡，再留下五個結構條件都成立的合約——不是末日（DTE ≥ 5）、<b>DTE 21–120</b>、<b>IV &lt; 50%</b>、<b>OTM &lt; 25%</b>、<b>Δ7d &gt; 0 且 7 天前有歷史可比</b>。
-    它不預測誰會動，只留下「動了之後最能換到倍數」的合約形狀。三個月成熟資料給的理由：IV 是第一道閘門（IV ≥ 50 幾乎沒有一格期望值 &gt; 1.1）、21–45 天是最好的桶、履約要在射程內、Δ7d 為正才是真建倉。
-    綁定策略＝策略 C：樂透（&lt; $1.5）且 IV &lt; 50 → 死抱；實彈（&gt; $3）→ 4 口階梯 2/4/8x；其餘 → −50% 停損 + 2x 賣半。賣點依 DTE 21 出場手冊換算。<b>空手是正確執行，不補名額。</b>
+  <div class="box" id="ruleB">
+    <div class="rb-title">規則 B 懶人包</div>
+    <p class="rb-lead">從 Score ≥ 8 的信號裡，留下五個結構條件都成立的合約。<br>它不預測誰會動，只留「動了之後最能換到倍數」的合約形狀。</p>
+    <div class="rb-chips"><span>非末日</span><span>DTE 21–120</span><span>IV &lt; 50%</span><span>OTM &lt; 25%</span><span>Δ7d &gt; 0 且有歷史</span></div>
+    <table class="rb-table"><tbody>
+      <tr><td>樂透 &lt; $1.5 且 IV &lt; 50</td><td>→</td><td><b>死抱</b></td></tr>
+      <tr><td>實彈 &gt; $3</td><td>→</td><td><b>4 口階梯 2 / 4 / 8x</b></td></tr>
+      <tr><td>其餘</td><td>→</td><td><b>−50% 停損 + 2x 賣半</b></td></tr>
+    </tbody></table>
+    <div class="muted">賣點依 DTE 21 出場手冊換算。空手是正確執行，不補名額。</div>
   </div>
 
   <h2><span class="n">2</span>LLM 三題（只答事實，不做可玩判斷）</h2>
@@ -167,15 +178,14 @@ function render(b) {
   else {
     const rb = m.rule_b, pol = ['A_hold', 'B_half2x', 'C_bound', 'half3x', 'rungs248', 'stop_half'];
     const maxV = rb ? Math.max(1.2, ...pol.map(p => rb.ev[p] || 0)) : 1;
-    const bars = rb ? `<div class="muted">規則 B 候選（n=${rb.n}／事件 ${rb.events}，命中 ${pct(rb.hit)}）各出場政策的等權期望值，未扣價差：</div><div class="bars">${pol.map(p => `<div>${esc(m.policy_label[p])}</div><div class="bar ${p === rb.best ? 'best' : ''}" style="width:${(rb.ev[p] / maxV * 100).toFixed(1)}%"></div><div class="v">${f2(rb.ev[p])}x</div>`).join('')}</div>` : '<div class="muted">規則 B 尚無成熟樣本。</div>';
-    const rows = [['全部成熟', m.overall], ['規則 B', m.rule_b], ['出樣本（≥' + m.prereg_date + '）', m.oos_all], ['出樣本 規則 B', m.oos_rule_b]]
-      .map(([n, x]) => x ? `<tr><td>${n}</td><td class="num">${x.n} / ${x.events}</td><td class="num">${pct(x.hit)}</td>${['A_hold', 'B_half2x', 'C_bound'].map(p => `<td class="num ${p === x.best ? 'best' : ''}">${f2(x.ev[p])}</td>`).join('')}</tr>` : `<tr><td>${n}</td><td class="num muted">0</td><td class="muted" colspan="4">累積中</td></tr>`).join('');
-    const mo = Object.entries(m.monthly || {}).map(([k, v]) => `<tr><td>${k}</td><td class="num">${v.n}</td><td class="num">${f2(v.A_hold)}</td><td class="num">${f2(v.B_half2x)}</td><td class="num">${f2(v.C_bound)}</td></tr>`).join('');
+    const bars = rb ? `<div class="muted">規則 B 候選 n=${rb.n}、命中 ${pct(rb.hit)}。同一批票用六種出場法各拿到幾倍（等權、未扣價差）：</div><div class="bars">${pol.map(p => `<div>${esc(m.policy_label[p])}</div><div class="bar ${p === rb.best ? 'best' : ''}" style="width:${(rb.ev[p] / maxV * 100).toFixed(1)}%"></div><div class="v">${f2(rb.ev[p])}x</div>`).join('')}</div>` : '<div class="muted">規則 B 尚無成熟樣本。</div>';
+    const rows = [['全部成熟', m.overall], ['規則 B', m.rule_b], ['出樣本（' + m.prereg_date + ' 起）', m.oos_all], ['出樣本 規則 B', m.oos_rule_b]]
+      .map(([n, x]) => x ? `<tr><td>${n}</td><td class="num">${x.n}</td><td class="num">${pct(x.hit)}</td><td class="num best">${f2(x.ev[x.best])}x</td><td>${esc(m.policy_label[x.best])}</td></tr>` : `<tr><td>${n}</td><td class="num muted">0</td><td class="muted" colspan="3">累積中</td></tr>`).join('');
+    const mo = Object.entries(m.monthly || {}).map(([k, v]) => `${k.slice(5)} 月 ${f2(v.C_bound)}x（n=${v.n}）`).join('・');
     const ctl = m.control || {};
     $('#history').innerHTML = `<div class="card">${bars}
-      <table style="margin-top:10px"><thead><tr><th>樣本群</th><th class="num">n / 事件</th><th class="num">命中</th><th class="num">A 死抱</th><th class="num">B 2x賣半</th><th class="num">C 綁定</th></tr></thead><tbody>${rows}</tbody></table>
-      <table style="margin-top:10px"><thead><tr><th>逐月（事件等權）</th><th class="num">n</th><th class="num">A</th><th class="num">B</th><th class="num">C</th></tr></thead><tbody>${mo}</tbody></table>
-      <div class="muted" style="margin-top:8px">${ctl.edge_pp != null ? `對照組：上榜 ${pct(ctl.listed_rate)} vs 全 universe ${pct(ctl.universe_rate)}（${ctl.n_days} 日），edge ${ctl.edge_pp > 0 ? '+' : ''}${ctl.edge_pp} pp。` : '對照組累積中（需 20 個交易日的 universe 收盤）。'} 更新 ${esc(m.generated_at)}；成熟 ${m.n_mature}/${m.n_signals}。單月反轉很常見，不用單月改規則。</div></div>`;
+      <table style="margin-top:12px"><thead><tr><th>樣本群</th><th class="num">n</th><th class="num">命中 ≥2x</th><th class="num">最佳 EV</th><th>最佳出場法</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="muted" style="margin-top:10px">策略 C 逐月：${mo || '—'}。${ctl.edge_pp != null ? `對照組 edge ${ctl.edge_pp > 0 ? '+' : ''}${ctl.edge_pp} pp（上榜 ${pct(ctl.listed_rate)} vs universe ${pct(ctl.universe_rate)}）。` : '對照組累積中。'} 完整矩陣在 <a href="/#history">dashboard</a>。</div></div>`;
   }
 
   // ---- checks ----
