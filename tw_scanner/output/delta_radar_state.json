@@ -7241,8 +7241,8 @@
       "t5_excess_pct": 0.54,
       "t10_ret_pct": -5.26,
       "t10_excess_pct": -5.07,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 0.0,
+      "t20_excess_pct": -4.83
     }
   },
   {
@@ -7274,8 +7274,8 @@
       "t5_excess_pct": 0.54,
       "t10_ret_pct": -5.26,
       "t10_excess_pct": -5.07,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 0.0,
+      "t20_excess_pct": -4.83
     }
   },
   {
@@ -8980,8 +8980,8 @@
       "entry_close": 1710.0,
       "t5_ret_pct": 9.06,
       "t5_excess_pct": 5.18,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 5.56,
+      "t10_excess_pct": 0.53,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -9680,8 +9680,8 @@
       "entry_date": "2026-09-01",
       "benchmark": "0050",
       "entry_close": 1865.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -3.22,
+      "t5_excess_pct": -4.33,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -10280,6 +10280,87 @@
       "entry_date": "2026-09-07",
       "benchmark": "0050",
       "entry_close": 1850.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-09-08T07:25:37.143557+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:3e / vr300_delay:17e(21m) / debt_financed_capex:12e(13m) / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 3,
+            "vr300_delay": 17,
+            "debt_financed_capex": 12,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 3,
+            "vr300_delay": 21,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -1.22,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 17,
+              "mentions": 21,
+              "gate": "zscore",
+              "z": 0.39,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 12,
+              "mentions": 13,
+              "gate": "zscore",
+              "z": -0.21,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[debt_financed_capex] AI Boom Triggers Tech Debt Binge - StartupHub.ai",
+          "[debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance",
+          "[debt_financed_capex] Goldman Sounds the Alarm as the AI Debt Bubble Starts to Pop - The Dark Side Of The Boom"
+        ],
+        "error": null
+      }
+    ],
+    "outcomes": {
+      "entry_date": "2026-09-08",
+      "benchmark": "0050",
+      "entry_close": 1805.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
