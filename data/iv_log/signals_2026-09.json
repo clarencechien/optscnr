@@ -8826,5 +8826,55 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-09-08_TSLA_2026-09-18_370.0",
+    "snapshot_date": "2026-09-08",
+    "ticker": "TSLA",
+    "expiry": "2026-09-18",
+    "strike": 370.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-21)",
+    "entry_price": 9.7,
+    "entry_iv": 43.89094195556641,
+    "entry_spot": 368.16,
+    "oi": 10604,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-21)"
+    ],
+    "volume": 19315,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 9.6,
+    "entry_ask": 9.8,
+    "last_trade_at": "2026-09-08 19:59:50",
+    "quote_at": "2026-09-09T00:20:20Z",
+    "underlying_at": "2026-09-09T00:20:20Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-09-08",
+        "spot": 368.1600036621094,
+        "last": 9.7,
+        "bid": 9.6,
+        "ask": 9.8,
+        "iv": 43.89094195556641
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
