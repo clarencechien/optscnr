@@ -1,308 +1,68 @@
 {
-  "updated_at": "2026-09-08T22:55:17.212860",
+  "updated_at": "2026-09-09T22:41:56.332141",
   "stats": {
     "total_items": 107,
-    "items_with_company": 28,
-    "items_with_catalyst": 16,
-    "items_both": 5
+    "items_with_company": 14,
+    "items_with_catalyst": 15,
+    "items_both": 0
   },
-  "count": 20,
+  "count": 15,
   "tickers": [
-    "QCOM",
-    "AMZN",
-    "INTC",
-    "TSM",
+    "GOOGL",
     "MU",
-    "AMD",
-    "VRT",
-    "NVDA",
-    "BA",
-    "ORCL",
-    "XYZ",
-    "F",
-    "UPST",
-    "META",
-    "AAPL",
-    "ASML",
-    "WMT",
+    "AMZN",
     "TGT",
-    "COST",
-    "MSFT"
+    "HOOD",
+    "GS",
+    "CRWV",
+    "DIS",
+    "BAC",
+    "AAPL",
+    "DKNG",
+    "AMAT",
+    "F",
+    "AMD",
+    "META"
   ],
   "details": [
     {
-      "symbol": "QCOM",
-      "score": 6.5,
+      "symbol": "GOOGL",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "AI infrastructure stocks rally on deal announcements from Qualcomm, Corning",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Qualcomm issues warrants to Amazon to acquire $4 billion worth of chipmaker's stock as part of AI infrastructure deal",
+          "title": "Amazon adds cybersecurity veteran Kevin Mandia to board 2 years after he left Google",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Qualcomm’s stock climbs as Amazon chip deal offers investors much-needed good news",
-          "catalysts": [
-            "rally",
-            "climbs"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 5.0,
-      "evidence": [
-        {
-          "title": "Qualcomm issues warrants to Amazon to acquire $4 billion worth of chipmaker's stock as part of AI infrastructure deal",
+          "title": "Google to invest record $15 billion in AI infrastructure in the 'Texas of Europe'",
           "catalysts": [],
           "has_catalyst": false
-        },
-        {
-          "title": "Qualcomm’s stock climbs as Amazon chip deal offers investors much-needed good news",
-          "catalysts": [
-            "rally",
-            "climbs"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Bernie Sanders Wants to Ban Superintelligence. What It Means for Microsoft and Amazon",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "AI infrastructure stocks rally on deal announcements from Qualcomm, Corning",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Intel’s stock is rising as the company looks primed to boost prices even more",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Prediction: Intel Stock Is Up Big in 2026. But the Best May Still Be Ahead",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "TSMC, Samsung commit to ASML’s newest chipmaking tools as AI drives demand",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Taiwan Semiconductor Manufacturing Company (TSM) Raises Guidance as Demand for Advanced Chips Soars",
-          "catalysts": [
-            "soars",
-            "raises guidance"
-          ],
-          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "MU",
-      "score": 3.5,
-      "evidence": [
-        {
-          "title": "This data center stock is up over 1000% in the last five years. Trader Mike Khouw sees more gains",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Memory chips have come to rule the AI boom. Why Micron’s reign could be here to stay.",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "AI infrastructure stocks rally on deal announcements from Qualcomm, Corning",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "AMD Is Behind The AI Chip Shift Nobody Is Talking About",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "VRT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "This data center stock is up over 1000% in the last five years. Trader Mike Khouw sees more gains",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Qualcomm issues warrants to Amazon to acquire $4 billion worth of chipmaker's stock as part of AI infrastructure deal",
+          "title": "Micron Technology (MU) Rose on Elevated Demand for High-Bandwidth Memory",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia’s (NVDA) Strong Results Reinforce Long Term Outlook",
+          "title": "Why Micron Stock Can Benefit from Fresh Memory-Chip Price Data",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Lilly perseveres in a bad day for drug stocks — plus, Boeing's mixed deliveries",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "President Trump Bought BA Stock the Same Day Boeing Won an $880M U.S. Navy Contract",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Oracle’s stock gets a boost as the OpenAI ecosystem comes back into favor",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "EU regulators send early warning to Oracle ahead of earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Why is Block stock climbing today?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Block applies for OCC charter to launch digital asset trust bank",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Trump administration expresses 'profound concern' over Ford's ties to China",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "UPST",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "LIV Golf files for Chapter 11 bankruptcy protection",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Meta pushes into personal AI agents as company faces public reckoning over privacy and safety",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Chinese giants Xiaomi, Huawei race to get ahead of Apple’s rumored foldable iPhone",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASML",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "TSMC, Samsung commit to ASML’s newest chipmaking tools as AI drives demand",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Walmart’s advertising empire is booming. Here’s what it could target next.",
+          "title": "Amazon adds cybersecurity veteran Kevin Mandia to board 2 years after he left Google",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -313,29 +73,128 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Walmart’s advertising empire is booming. Here’s what it could target next.",
+          "title": "Bond sell-off, stock boom: Why rebalancing is a good strategy right now",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
+      "symbol": "HOOD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Loss of Costco deal helps push beverage brand into Chapter 11",
+          "title": "Robinhood CEO says companies can't control how their stock is tokenized as AMC clash escalates",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "GS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bernie Sanders Wants to Ban Superintelligence. What It Means for Microsoft and Amazon",
+          "title": "Conversations from Goldman Sachs' Communacopia: AI blowback, broadband and Disney's free tier",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Conversations from Goldman Sachs' Communacopia: AI blowback, broadband and Disney's free tier",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Conversations from Goldman Sachs' Communacopia: AI blowback, broadband and Disney's free tier",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Citi Private Bank hires Radzinski from Bank of America",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "As Apple prepares to make a splash, a brief history of foldable phones",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DKNG",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Dear DraftKings Stock Fans, Mark Your Calendars for September 9",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMAT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Capex Rebound Powers Applied Materials’ (AMAT) Performance",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Ford Motor Stock Outperforming the S&P 500?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "AI-Optimized Processors Fuel Advanced Micro Devices (AMD) Stock Growth",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Beyond Social: Meta Is Buying the Future of Compute So I’m Buying It",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -343,6 +202,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1
+    "OpenAI (private)": 3,
+    "Anthropic (private)": 1
   }
 }
