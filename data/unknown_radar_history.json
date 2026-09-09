@@ -6,27 +6,6 @@
     "total_mentions": 8,
     "ticker": "BGHL"
   },
-  "Manhattan": {
-    "first_seen": "2026-09-01",
-    "last_seen": "2026-09-01",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "MANH"
-  },
-  "GoPro": {
-    "first_seen": "2026-09-01",
-    "last_seen": "2026-09-01",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GPRO"
-  },
-  "Dropbox": {
-    "first_seen": "2026-09-01",
-    "last_seen": "2026-09-01",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "DBX"
-  },
   "Piper Sandler": {
     "first_seen": "2026-09-03",
     "last_seen": "2026-09-03",
@@ -106,9 +85,9 @@
   },
   "Canadian": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-09-08",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-09-09",
+    "consecutive_days": 2,
+    "total_mentions": 5,
     "ticker": "CNDIF"
   },
   "Novartis": {
@@ -131,5 +110,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "EVMN"
+  },
+  "Enbridge": {
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-09-09",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "EBBGF"
+  },
+  "Hewlett Packard Enterprise": {
+    "first_seen": "2026-09-09",
+    "last_seen": "2026-09-09",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "HPE-PC"
   }
 }

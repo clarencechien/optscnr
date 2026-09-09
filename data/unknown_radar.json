@@ -1,65 +1,41 @@
 {
-  "updated_at": "2026-09-08T23:39:59.521164",
-  "count": 5,
+  "updated_at": "2026-09-09T23:30:44.044021",
+  "count": 3,
   "blind_spots": [
-    {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "Is Occidental Petroleum Stock Outperforming the Nasdaq?",
-        "Is Republic Services Stock Underperforming the Nasdaq?"
-      ]
-    },
-    {
-      "name": "Novartis",
-      "ticker": "NVSEF",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Cholesterol drug setback casts doubt over multibillion-dollar race",
-        "Pharma major Novartis falls 10% after three drug trial setbacks"
-      ]
-    },
     {
       "name": "Canadian",
       "ticker": "CNDIF",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "mentions_today": 3,
+      "total_mentions": 5,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "Canada's retaliatory tariffs worth CA$27.6 billion take effect as trade rift with U.S. deepens",
-        "Bombardier’s stock drops as the U.S.-Canada trade war intensifies. Here’s what Trump is targeting ne"
+        "U.S. reveals import ban on slew of Canadian goods as trade war escalates",
+        "Canadian whisky on the rocks? Crown Royal is set to avoid Trump’s new ban."
       ]
     },
     {
-      "name": "AstraZeneca",
-      "ticker": "AZN",
+      "name": "Enbridge",
+      "ticker": "EBBGF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "AstraZeneca's COPD drug scores two late-stage trial wins as full data boosts blockbuster hopes",
-        "AstraZeneca's COPD drug scores two late-stage trial wins as full data boosts blockbuster hopes"
+        "Canada’s Enbridge to buy Tallgrass crude oil business for $2.55 billion",
+        "Why is Enbridge stock sliding today?"
       ]
     },
     {
-      "name": "Evommune",
-      "ticker": "EVMN",
+      "name": "Hewlett Packard Enterprise",
+      "ticker": "HPE-PC",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Why is Evommune stock plunging today?",
-        "Evommune stock tumbles after trial misses primary endpoint"
+        "Hewlett Packard Enterprise Company (HPE) Jumps on Surging AI Infrastructure Demand",
+        "Super Micro Climbs 4%, Hewlett Packard Enterprise Advances 5%: Is the Margin Beat Already Guided Awa"
       ]
     }
   ]
