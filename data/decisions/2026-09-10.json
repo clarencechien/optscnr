@@ -1,0 +1,173 @@
+{
+  "market_date": "2026-09-10",
+  "decided_at": "2026-09-10T23:44:31.608Z",
+  "source": "manual",
+  "prompt_version": "v4.1",
+  "model": "anthropic/claude-opus-5",
+  "model_served": "anthropic/claude-opus-5",
+  "llm_called": true,
+  "web_search": true,
+  "candidates_generated_at": "2026-09-10T23:05:36Z",
+  "n_candidates": 3,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-09-10_IBIT_2026-10-16_48.0",
+      "ticker": "IBIT",
+      "expiry": "2026-10-16",
+      "strike": 48,
+      "entry_price": 0.75,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-09-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_event": {
+        "answer": "有",
+        "date": "2026-09-16",
+        "what": "FOMC 9/15-16 會後利率決議（含 SEP 點陣圖），為 BTC/IBIT 到期前主要排定宏觀事件",
+        "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+      },
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true
+      },
+      "note": "ETF 無財報；9/16 FOMC、10/06 會議紀錄落在到期前；起點區間 3.5-3.75%",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-09-10_IBIT_2026-10-16_47.0",
+      "ticker": "IBIT",
+      "expiry": "2026-10-16",
+      "strike": 47,
+      "entry_price": 0.95,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-09-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_event": {
+        "answer": "有",
+        "date": "2026-09-16",
+        "what": "FOMC 9/15-16 會後利率決議（含 SEP 點陣圖），為 BTC/IBIT 到期前主要排定宏觀事件",
+        "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+      },
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true
+      },
+      "note": "ETF 無財報；到期前排定事件為 9/16 FOMC 與 10/06 紀錄",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-09-10_IBIT_2026-10-16_54.0",
+      "ticker": "IBIT",
+      "expiry": "2026-10-16",
+      "strike": 54,
+      "entry_price": 0.18,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-09-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_event": {
+        "answer": "有",
+        "date": "2026-09-16",
+        "what": "FOMC 9/15-16 會後利率決議（含 SEP 點陣圖），為 BTC/IBIT 到期前主要排定宏觀事件",
+        "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+      },
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true
+      },
+      "note": "ETF 無財報；9/16 FOMC 在到期前；oi_d7 僅 +245、量 165",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "IBIT",
+      "fact": "FOMC 2026-09-15/16 開會，9/16 14:00 ET 公布利率決議並附 SEP 點陣圖；起點目標區間 3.5%-3.75%，7/28-29 以 9-3 票維持不變",
+      "date": "2026-09-16",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "FOMC 會議紀錄排定 2026-10-06 14:00 ET 公布，落在 10/16 到期前",
+      "date": "2026-10-06",
+      "source": "https://www.smartcalendars.ai/en/feeds/fed-fomc-meeting-calendar"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "2026-09-07 比特幣約 $76,612，前一日現貨 BTC ETF 淨流入 7.31 億美元；8/31 報導 BTC 因 Fed 偏鷹訊號停在 $80K 以下、流入 9.24 億美元",
+      "date": "2026-09-07",
+      "source": "https://www.cnbc.com/quotes/IBIT"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "IBIT 2026-09-10 收 44.29（前收 44.39），52 週區間 32.84-71.82，淨資產約 614 億美元，年初至今總報酬 -8.90%",
+      "date": "2026-09-10",
+      "source": "https://www.investing.com/etfs/ibit-nasdaq"
+    }
+  ],
+  "facts_appended": 4,
+  "raw_answer": "{\"market_date\":\"2026-09-10\",\"candidates\":[{\"signal_id\":\"2026-09-10_IBIT_2026-10-16_48.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-09-16\",\"what\":\"FOMC 9/15-16 會後利率決議（含 SEP 點陣圖），為 BTC/IBIT 到期前主要排定宏觀事件\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},\"q_gap\":{\"answer\":\"無\",\"direction\":null,\"pct\":null,\"date\":null},\"q_delta\":{\"positive\":true,\"confirmed\":true},\"note\":\"ETF 無財報；9/16 FOMC、10/06 會議紀錄落在到期前；起點區間 3.5-3.75%\"},{\"signal_id\":\"2026-09-10_IBIT_2026-10-16_47.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-09-16\",\"what\":\"FOMC 9/15-16 會後利率決議（含 SEP 點陣圖），為 BTC/IBIT 到期前主要排定宏觀事件\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},\"q_gap\":{\"answer\":\"無\",\"direction\":null,\"pct\":null,\"date\":null},\"q_delta\":{\"positive\":true,\"confirmed\":true},\"note\":\"ETF 無財報；到期前排定事件為 9/16 FOMC 與 10/06 紀錄\"},{\"signal_id\":\"2026-09-10_IBIT_2026-10-16_54.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-09-16\",\"what\":\"FOMC 9/15-16 會後利率決議（含 SEP 點陣圖），為 BTC/IBIT 到期前主要排定宏觀事件\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},\"q_gap\":{\"answer\":\"無\",\"direction\":null,\"pct\":null,\"date\":null},\"q_delta\":{\"positive\":true,\"confirmed\":true},\"note\":\"ETF 無財報；9/16 FOMC 在到期前；oi_d7 僅 +245、量 165\"}],\"facts_proposed\":[{\"ticker\":\"IBIT\",\"fact\":\"FOMC 2026-09-15/16 開會，9/16 14:00 ET 公布利率決議並附 SEP 點陣圖；起點目標區間 3.5%-3.75%，7/28-29 以 9-3 票維持不變\",\"date\":\"2026-09-16\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},{\"ticker\":\"IBIT\",\"fact\":\"FOMC 會議紀錄排定 2026-10-06 14:00 ET 公布，落在 10/16 到期前\",\"date\":\"2026-10-06\",\"source\":\"https://www.smartcalendars.ai/en/feeds/fed-fomc-meeting-calendar\"},{\"ticker\":\"IBIT\",\"fact\":\"2026-09-07 比特幣約 $76,612，前一日現貨 BTC ETF 淨流入 7.31 億美元；8/31 報導 BTC 因 Fed 偏鷹訊號停在 $80K 以下、流入 9.24 億美元\",\"date\":\"2026-09-07\",\"source\":\"https://www.cnbc.com/quotes/IBIT\"},{\"ticker\":\"IBIT\",\"fact\":\"IBIT 2026-09-10 收 44.29（前收 44.39），52 週區間 32.84-71.82，淨資產約 614 億美元，年初至今總報酬 -8.90%\",\"date\":\"2026-09-10\",\"source\":\"https://www.investing.com/etfs/ibit-nasdaq\"}]}",
+  "usage": {
+    "prompt_tokens": 31321,
+    "completion_tokens": 2022,
+    "total_tokens": 33343,
+    "cost": 0.227155,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.227155,
+      "upstream_inference_prompt_cost": 0.156605,
+      "upstream_inference_completions_cost": 0.05055
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 653,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
