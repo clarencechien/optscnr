@@ -1,134 +1,102 @@
 {
-  "updated_at": "2026-09-09T22:41:56.332141",
+  "updated_at": "2026-09-10T22:43:59.631691",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 14,
+    "total_items": 106,
+    "items_with_company": 24,
     "items_with_catalyst": 15,
-    "items_both": 0
+    "items_both": 2
   },
-  "count": 15,
+  "count": 17,
   "tickers": [
+    "ORCL",
     "GOOGL",
-    "MU",
-    "AMZN",
+    "GOOG",
     "TGT",
-    "HOOD",
-    "GS",
-    "CRWV",
-    "DIS",
-    "BAC",
     "AAPL",
-    "DKNG",
-    "AMAT",
+    "NVDA",
+    "AMZN",
+    "META",
+    "CRWV",
     "F",
-    "AMD",
-    "META"
+    "AVGO",
+    "GS",
+    "SBUX",
+    "SMCI",
+    "VRT",
+    "BRK-B",
+    "ARM"
   ],
   "details": [
     {
+      "symbol": "ORCL",
+      "score": 3.5,
+      "evidence": [
+        {
+          "title": "Oracle's stock edges up on earnings beat as cloud infrastructure revenue more than doubles",
+          "catalysts": [
+            "earnings beat"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Oracle options are doing something curious heading into earnings",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Oracle’s AI bet pays off as cloud momentum helps drive a rosier forecast",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
       "symbol": "GOOGL",
-      "score": 1.0,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Amazon adds cybersecurity veteran Kevin Mandia to board 2 years after he left Google",
+          "title": "Greg Abel Says Berkshire Is Bullish on Hyperscaler Stocks as It Doubles Down on Google",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Google to invest record $15 billion in AI infrastructure in the 'Texas of Europe'",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Alphabet (GOOG) Surges Over 20% Revenue Growth, Cloud Strength",
+          "catalysts": [
+            "surges"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "MU",
-      "score": 1.0,
+      "symbol": "GOOG",
+      "score": 2,
       "evidence": [
         {
-          "title": "Micron Technology (MU) Rose on Elevated Demand for High-Bandwidth Memory",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Why Micron Stock Can Benefit from Fresh Memory-Chip Price Data",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Amazon adds cybersecurity veteran Kevin Mandia to board 2 years after he left Google",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Alphabet (GOOG) Surges Over 20% Revenue Growth, Cloud Strength",
+          "catalysts": [
+            "surges"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "TGT",
-      "score": 0.5,
+      "score": 1.5,
       "evidence": [
         {
           "title": "Bond sell-off, stock boom: Why rebalancing is a good strategy right now",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HOOD",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Robinhood CEO says companies can't control how their stock is tokenized as AMC clash escalates",
+          "title": "SpaceX is inching closer to this lofty $100 billion milestone",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Conversations from Goldman Sachs' Communacopia: AI blowback, broadband and Disney's free tier",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Conversations from Goldman Sachs' Communacopia: AI blowback, broadband and Disney's free tier",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Conversations from Goldman Sachs' Communacopia: AI blowback, broadband and Disney's free tier",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BAC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Citi Private Bank hires Radzinski from Bank of America",
+          "title": "Oracle Stock: Wall Street Sees Massive Upside. Here’s My Price Target",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -136,32 +104,84 @@
     },
     {
       "symbol": "AAPL",
-      "score": 0.5,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "As Apple prepares to make a splash, a brief history of foldable phones",
+          "title": "Apple makes biggest change to iPhone release cadence in 7 years in Ternus' first showcase as CEO",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Want Apple’s $1,999 foldable iPhone Duo? Here’s what T-Mobile, AT&T and Verizon are doing to lower the cost.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple is walking a ‘tightrope’ when it comes to the prices of its new iPhones",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DKNG",
-      "score": 0.5,
+      "symbol": "NVDA",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Dear DraftKings Stock Fans, Mark Your Calendars for September 9",
+          "title": "Humans need to 'surf the wave' of AI rather than get swallowed by it, Chesky says at Communacopia",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "CoreWeave struggling to keep up with demand for Nvidia chips, CEO says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMAT",
-      "score": 0.5,
+      "symbol": "AMZN",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Capex Rebound Powers Applied Materials’ (AMAT) Performance",
+          "title": "Amazon gives OpenAI's ad business a boost, letting its advertisers into ChatGPT",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Analyzing Amazon’s (AMZN) Reinvestment Flywheel in the AI Era",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Portuguese group D3 sues Meta, TikTok and YouTube over addictive design",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Adult film studio says a Meta exec torrented nearly 20K files on his home internet — wants it folded into a $446M case",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "CoreWeave struggling to keep up with demand for Nvidia chips, CEO says",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "CoreWeave CEO: America's data center backlash won't stop the AI build-out",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -172,29 +192,84 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Ford Motor Stock Outperforming the S&P 500?",
+          "title": "Ford announces $1 billion investment at Kentucky plant following DOT criticism on China",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "AVGO",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AI-Optimized Processors Fuel Advanced Micro Devices (AMD) Stock Growth",
+          "title": "Jim Cramer's least-favorite tech stock gets a new analyst endorsement — our take",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "GS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Beyond Social: Meta Is Buying the Future of Compute So I’m Buying It",
+          "title": "Humans need to 'surf the wave' of AI rather than get swallowed by it, Chesky says at Communacopia",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SBUX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Starbucks CEO Brian Niccol says next stage of turnaround focuses on cafe makeovers, customer experience",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SMCI",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Super Micro Stock Underperforming the Nasdaq?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "VRT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Vertiv Stock Outperforming the Nasdaq?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Greg Abel Says Berkshire Is Bullish on Hyperscaler Stocks as It Doubles Down on Google",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "ARM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "What is an adjustable-rate mortgage (ARM), and what are the risks?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -202,7 +277,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 3,
-    "Anthropic (private)": 1
+    "OpenAI (private)": 4,
+    "Anthropic (private)": 2
   }
 }
