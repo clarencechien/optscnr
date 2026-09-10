@@ -1,41 +1,29 @@
 {
-  "updated_at": "2026-09-09T23:30:44.044021",
-  "count": 3,
+  "updated_at": "2026-09-10T23:23:52.682190",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Canadian",
-      "ticker": "CNDIF",
-      "mentions_today": 3,
-      "total_mentions": 5,
-      "consecutive_days": 2,
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 6,
+      "consecutive_days": 3,
       "is_strong": true,
       "evidence": [
-        "U.S. reveals import ban on slew of Canadian goods as trade war escalates",
-        "Canadian whisky on the rocks? Crown Royal is set to avoid Trump’s new ban."
+        "Nasdaq invests $100 million in Kraken parent, eyeing 2027 launch of 'tokenized' stock trading",
+        "Nasdaq invests $100 million in Kraken parent, eyeing 2027 launch of 'tokenized' stock trading"
       ]
     },
     {
-      "name": "Enbridge",
-      "ticker": "EBBGF",
+      "name": "Kentucky",
+      "ticker": "KFFB",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Canada’s Enbridge to buy Tallgrass crude oil business for $2.55 billion",
-        "Why is Enbridge stock sliding today?"
-      ]
-    },
-    {
-      "name": "Hewlett Packard Enterprise",
-      "ticker": "HPE-PC",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Hewlett Packard Enterprise Company (HPE) Jumps on Surging AI Infrastructure Demand",
-        "Super Micro Climbs 4%, Hewlett Packard Enterprise Advances 5%: Is the Margin Beat Already Guided Awa"
+        "Ford announces $1 billion investment at Kentucky plant following DOT criticism on China",
+        "Ford announces $1 billion investment at Kentucky plant following DOT criticism on China"
       ]
     }
   ]

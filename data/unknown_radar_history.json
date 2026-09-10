@@ -22,9 +22,9 @@
   },
   "Nasdaq": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-08",
-    "consecutive_days": 2,
-    "total_mentions": 4,
+    "last_seen": "2026-09-10",
+    "consecutive_days": 3,
+    "total_mentions": 6,
     "ticker": "NDAQ"
   },
   "German": {
@@ -124,5 +124,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "HPE-PC"
+  },
+  "Kentucky": {
+    "first_seen": "2026-09-10",
+    "last_seen": "2026-09-10",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "KFFB"
   }
 }
