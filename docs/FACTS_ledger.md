@@ -239,3 +239,7 @@
 
 ## 待審（LLM 提案）
 <!-- Worker 自動附加；審過請搬到該標的段落 -->
+- IBIT ｜ FOMC 2026-09-15/16 開會，9/16 14:00 ET 公布利率決議並附 SEP 點陣圖；起點目標區間 3.5%-3.75%，7/28-29 以 9-3 票維持不變 ｜ 2026-09-16 ｜ https://fedratecalc.com/fomc-meeting-schedule/ ｜ 2026-09-10 LLM 提案
+- IBIT ｜ FOMC 會議紀錄排定 2026-10-06 14:00 ET 公布，落在 10/16 到期前 ｜ 2026-10-06 ｜ https://www.smartcalendars.ai/en/feeds/fed-fomc-meeting-calendar ｜ 2026-09-10 LLM 提案
+- IBIT ｜ 2026-09-07 比特幣約 $76,612，前一日現貨 BTC ETF 淨流入 7.31 億美元；8/31 報導 BTC 因 Fed 偏鷹訊號停在 $80K 以下、流入 9.24 億美元 ｜ 2026-09-07 ｜ https://www.cnbc.com/quotes/IBIT ｜ 2026-09-10 LLM 提案
+- IBIT ｜ IBIT 2026-09-10 收 44.29（前收 44.39），52 週區間 32.84-71.82，淨資產約 614 億美元，年初至今總報酬 -8.90% ｜ 2026-09-10 ｜ https://www.investing.com/etfs/ibit-nasdaq ｜ 2026-09-10 LLM 提案
