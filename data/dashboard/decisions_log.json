@@ -1,8 +1,118 @@
 {
- "generated_at": "2026-09-10T23:14:43Z",
- "n_days": 3,
+ "generated_at": "2026-09-11T00:21:08Z",
+ "n_days": 4,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-10",
+   "decided_at": "2026-09-10T23:44:31.608Z",
+   "model": "anthropic/claude-opus-5",
+   "prompt_version": "v4.1",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 3,
+   "candidates": [
+    {
+     "signal_id": "2026-09-10_IBIT_2026-10-16_48.0",
+     "ticker": "IBIT",
+     "expiry": "2026-10-16",
+     "strike": 48,
+     "entry_price": 0.75,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-09-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-09-16",
+      "what": "FOMC 9/15-16 會後利率決議（含 SEP 點陣圖），為 BTC/IBIT 到期前主要排定宏觀事件",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true
+     },
+     "note": "ETF 無財報；9/16 FOMC、10/06 會議紀錄落在到期前；起點區間 3.5-3.75%",
+     "status": "answered",
+     "outcome": null
+    },
+    {
+     "signal_id": "2026-09-10_IBIT_2026-10-16_47.0",
+     "ticker": "IBIT",
+     "expiry": "2026-10-16",
+     "strike": 47,
+     "entry_price": 0.95,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-09-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-09-16",
+      "what": "FOMC 9/15-16 會後利率決議（含 SEP 點陣圖），為 BTC/IBIT 到期前主要排定宏觀事件",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true
+     },
+     "note": "ETF 無財報；到期前排定事件為 9/16 FOMC 與 10/06 紀錄",
+     "status": "answered",
+     "outcome": null
+    },
+    {
+     "signal_id": "2026-09-10_IBIT_2026-10-16_54.0",
+     "ticker": "IBIT",
+     "expiry": "2026-10-16",
+     "strike": 54,
+     "entry_price": 0.18,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-09-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-09-16",
+      "what": "FOMC 9/15-16 會後利率決議（含 SEP 點陣圖），為 BTC/IBIT 到期前主要排定宏觀事件",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true
+     },
+     "note": "ETF 無財報；9/16 FOMC 在到期前；oi_d7 僅 +245、量 165",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-09-09",
    "decided_at": "2026-09-10T00:35:55.180Z",
