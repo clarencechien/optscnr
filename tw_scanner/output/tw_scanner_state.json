@@ -748,5 +748,17 @@
       "retail_mtx": 27.4,
       "margin_chg": 75.8
     }
+  },
+  {
+    "date": "2026-09-11",
+    "regime": "RISK_ON",
+    "score": -0.026,
+    "alerts": [],
+    "pcts": {
+      "f_spot_20d": 73.8,
+      "tx_delta": 35.7,
+      "retail_mtx": 28.2,
+      "margin_chg": 13.5
+    }
   }
 ]
