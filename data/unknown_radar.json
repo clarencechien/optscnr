@@ -1,30 +1,5 @@
 {
-  "updated_at": "2026-09-10T23:23:52.682190",
-  "count": 2,
-  "blind_spots": [
-    {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 6,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "Nasdaq invests $100 million in Kraken parent, eyeing 2027 launch of 'tokenized' stock trading",
-        "Nasdaq invests $100 million in Kraken parent, eyeing 2027 launch of 'tokenized' stock trading"
-      ]
-    },
-    {
-      "name": "Kentucky",
-      "ticker": "KFFB",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Ford announces $1 billion investment at Kentucky plant following DOT criticism on China",
-        "Ford announces $1 billion investment at Kentucky plant following DOT criticism on China"
-      ]
-    }
-  ]
+  "updated_at": "2026-09-11T23:31:28.922187",
+  "count": 0,
+  "blind_spots": []
 }
