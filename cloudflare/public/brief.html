@@ -105,9 +105,11 @@
   <div id="tw-weather"></div>
   <h2><span class="n">3</span>2308 論點監控</h2>
   <div id="tw-delta"></div>
-  <h2><span class="n">4</span>下週日曆</h2>
+  <h2><span class="n">4</span>賭場 sector（AI 個股，只收資料）</h2>
+  <div id="tw-casino"></div>
+  <h2><span class="n">5</span>下週日曆</h2>
   <div class="card" id="tw-calendar"></div>
-  <h2><span class="n">5</span>資料健康</h2>
+  <h2><span class="n">6</span>資料健康</h2>
   <div class="card"><ul class="checks" id="tw-checks"></ul></div>
   </section>
 
@@ -278,6 +280,17 @@ function renderTW(b) {
       <div class="${dv.flag ? 'action' : 'muted'}" style="margin:8px 0">${esc(dv.text || '背離 NO_DATA')}</div>
       <table><tbody>${(dl.modules || []).map(m => `<tr><td>${LIGHT[m.status] || '⚪'} ${esc(m.module)}</td><td class="muted">${esc(m.headline)}</td></tr>`).join('')}</tbody></table>
       <div class="muted" style="margin-top:8px">回填樣本 ${dl.scored_n} 筆（T+20 超額 vs 0050）；退役判準表在 delta_radar_report.md。</div>
+    </div>`;
+  }
+  const cs = b.casino || {};
+  if (cs.status !== 'OK') $('#tw-casino').innerHTML = '<div class="empty">NO_DATA（首次排程跑完才有）</div>';
+  else {
+    const sd = cs.shadow_dca || {}, t = cs.tercile_t20 || {};
+    $('#tw-casino').innerHTML = `<div class="card">
+      <table><thead><tr><th>代號</th><th>名稱</th><th>桶</th><th class="num">20 日 vs 0050</th><th class="num">月營收 YoY</th><th class="num">3 月均</th><th class="num">斜率</th></tr></thead>
+      <tbody>${(cs.rows || []).map(r => `<tr><td>${esc(r.ticker)}</td><td>${esc(r.name)}${r.in_0050 ? ' <span class="muted">0050</span>' : ''}</td><td>${esc(r.bucket)}</td><td class="num">${pm(r.excess20_pct)}</td><td class="num">${pm(r.yoy_pct)}</td><td class="num">${pm(r.yoy_avg_pct)}</td><td class="num">${pm(r.yoy_slope_pp, '')}</td></tr>`).join('')}</tbody></table>
+      ${sd.status === 'OK' ? `<div style="margin-top:10px">影子 DCA（每月等權買整籃 vs 同筆錢買 0050）：${sd.n_months} 個月，籃子 ${pm(sd.basket_return_pct)} vs 0050 ${pm(sd.bench_return_pct)}，差 <b>${pm(sd.basket_minus_bench_pp, ' pp')}</b>；${esc((cs.verdict || {}).basket || '')}</div>` : ''}
+      <div class="muted" style="margin-top:6px">月營收加速三分位 vs T+20 超額：${esc(t.status || '累積中')}（回填 ${cs.scored_n ?? 0} 筆）。${esc(cs.note || '')}</div>
     </div>`;
   }
   $('#tw-calendar').innerHTML = (b.calendar || []).length ? b.calendar.map(c => `<div>${esc(c.date)}（${c.days} 天後）${esc(c.what)}</div>`).join('') : '<span class="muted">無規則式事件</span>';

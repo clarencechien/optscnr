@@ -1,8 +1,12 @@
-# 🇹🇼 台股雷達站（tw_scanner + delta_radar）
+# 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + DCA 影子帳本）
 
-_README 由 build_readme.py 於 2026-09-11 17:19 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-09-12 05:20 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
-> 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
+> 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
+
+---
+
+_（週報尚無輸出：tw_brief.py 在天氣台／delta 跑完後組裝）_
 
 ---
 

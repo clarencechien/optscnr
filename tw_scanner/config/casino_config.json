@@ -1,0 +1,47 @@
+{
+  "_comment": "賭場 sector（casino_tracker）— 台股 AI 供應鏈個股的影子追蹤器。定位：拉斯維加斯小部位，先收資料、不做規則、不宣稱期望值。名單是人挑的（不是訊號），零股可買。基準 0050。",
+  "benchmark": "0050",
+  "history_start": "2024-01-01",
+  "universe": [
+    {"ticker": "2330", "name": "台積電", "bucket": "製造", "in_0050": true},
+    {"ticker": "2308", "name": "台達電", "bucket": "電力", "in_0050": true},
+    {"ticker": "2317", "name": "鴻海", "bucket": "機櫃", "in_0050": true},
+    {"ticker": "2382", "name": "廣達", "bucket": "機櫃", "in_0050": true},
+    {"ticker": "3231", "name": "緯創", "bucket": "機櫃", "in_0050": true},
+    {"ticker": "6669", "name": "緯穎", "bucket": "機櫃", "in_0050": true},
+    {"ticker": "2454", "name": "聯發科", "bucket": "IC設計", "in_0050": true},
+    {"ticker": "3661", "name": "世芯-KY", "bucket": "ASIC", "in_0050": false},
+    {"ticker": "3443", "name": "創意", "bucket": "ASIC", "in_0050": false},
+    {"ticker": "3017", "name": "奇鋐", "bucket": "散熱", "in_0050": true},
+    {"ticker": "3324", "name": "雙鴻", "bucket": "散熱", "in_0050": false},
+    {"ticker": "2301", "name": "光寶科", "bucket": "電源", "in_0050": true},
+    {"ticker": "3711", "name": "日月光投控", "bucket": "封測", "in_0050": true},
+    {"ticker": "2383", "name": "台光電", "bucket": "CCL", "in_0050": true},
+    {"ticker": "3037", "name": "欣興", "bucket": "載板", "in_0050": true},
+    {"ticker": "2345", "name": "智邦", "bucket": "網通", "in_0050": true}
+  ],
+  "_universe_note": "in_0050 是人工標記、需要對照 0050 成分季調；名單本身不是訊號。加減名單＝新實驗（舊 state 保留）。",
+  "features": {
+    "return_window_sessions": 20,
+    "revenue_avg_months": 3,
+    "_note": "只記：20 交易日報酬、對 0050 超額、最新月營收 YoY、3 月均 YoY、YoY 斜率（pp/月）。台灣月營收強制公告是唯一結構性資訊優勢（delta_radar M6 同源）。"
+  },
+  "outcomes": {
+    "horizons": [5, 10, 20],
+    "_note": "每檔每掃描日一筆，回填 T+N 個股報酬與對 0050 超額；append-only。"
+  },
+  "shadow_dca": {
+    "amount_twd_month": 5000,
+    "buy_day_of_month": 6,
+    "fee_rate": 0.001425,
+    "fee_discount": 0.6,
+    "_note": "賭場預算：每月固定金額等權買整籃（零股），同一筆錢對照買 0050。只記錄。"
+  },
+  "verdict_rule": {
+    "min_months_basket": 12,
+    "min_n_per_tercile": 30,
+    "_note": "先寫死：籃子 DCA 對 0050 DCA 至少 12 個月；「月營收加速前三分之一 vs 後三分之一」的 T+20 超額各 n≥30 才准下結論。之前一律「累積中」。"
+  },
+  "prices": {"dataset": "TaiwanStockPrice", "cache": "casino_prices.json", "refetch_tail_days": 7},
+  "revenue": {"dataset": "TaiwanStockMonthRevenue", "cache": "casino_revenue.json", "refetch_months": 3}
+}
