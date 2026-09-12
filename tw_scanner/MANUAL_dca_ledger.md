@@ -65,3 +65,22 @@ python tw_scanner/tw_brief.py --selftest
    警報可能晚一天出現。
 3. `tw_scanner_history.json` 是推導物（cache CSV + config 重算），不是 append-only 狀態；config 改了序列會變，
    帳本跟著變——這是刻意的（改參數＝新實驗），舊結果在 git 歷史。
+
+## 賭場 sector（casino_tracker.py，2026-09-12）
+
+**定位：拉斯維加斯小部位。先收資料、不做規則、不宣稱期望值。** 名單（config `casino_config.json`
+`universe`）是人挑的台股 AI 供應鏈，零股可買，`in_0050` 是人工標記。它做三件事，全部只記錄：
+
+1. 每交易日每檔記特徵：收盤、20 日報酬、對 0050 超額、月營收 YoY／3 月均／斜率（台灣月營收強制公告
+   是唯一結構性資訊優勢，同 delta_radar M6）。
+2. 回填 T+5/10/20 個股報酬與對 0050 超額（`casino_state.json` append-only）。
+3. 影子 DCA：每月固定金額等權買整籃，同一筆錢對照買 0050。
+
+判準（config `verdict_rule`，先寫死）：籃子 DCA 對 0050 至少 12 個月；「月營收加速前三分之一 vs 後三分之一」
+的 T+20 超額各 n≥30 才准下結論。之前報告一律「累積中」。**這不是 DCA 的一部分，是娛樂預算的記帳。**
+
+```bash
+python tw_scanner/casino_tracker.py --output-dir tw_scanner/output   # 抓價/營收 → 掃描 → 回填 → 報告
+python tw_scanner/casino_tracker.py --selftest
+```
+輸出：`casino_report.md`、`casino_brief.json`（週報第 4 節讀）、`casino_state.json`、`casino_prices.json`、`casino_revenue.json`。

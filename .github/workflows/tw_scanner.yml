@@ -63,6 +63,7 @@ jobs:
         run: |
           set -euo pipefail
           python tw_scanner/dca_ledger.py --output-dir tw_scanner/output
+          python tw_scanner/casino_tracker.py --output-dir tw_scanner/output
           python tw_scanner/tw_brief.py --output-dir tw_scanner/output
 
       - name: Commit results
@@ -78,6 +79,7 @@ jobs:
             REQUIRED="tw_scanner/output/tw_scanner_briefing.md tw_scanner/output/tw_scanner_state.json \
                       tw_scanner/output/tw_scanner_history.json \
                       tw_scanner/output/dca_ledger.md tw_scanner/output/dca_ledger.json \
+                      tw_scanner/output/casino_report.md tw_scanner/output/casino_brief.json tw_scanner/output/casino_state.json \
                       tw_scanner/output/tw_brief.json tw_scanner/output/tw_weekly.md"
           fi
           for f in $REQUIRED; do
@@ -91,10 +93,10 @@ jobs:
           if [ -d tw_scanner/cache ]; then
             git add tw_scanner/cache
           fi
-          # 0050 價格快取（dca_ledger 增量抓；首跑才有）
-          if [ -f tw_scanner/output/dca_prices.json ]; then
-            git add tw_scanner/output/dca_prices.json
-          fi
+          # 價格／營收快取（dca_ledger、casino_tracker 增量抓；首跑才有）
+          for f in tw_scanner/output/dca_prices.json tw_scanner/output/casino_prices.json tw_scanner/output/casino_revenue.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
           # 重組資料夾 README（tw_scanner + delta_radar 兩區塊，像主 scanner 一樣以 README 為報表）
           python tw_scanner/build_readme.py
           git add tw_scanner/README.md

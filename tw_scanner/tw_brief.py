@@ -126,6 +126,21 @@ def delta_section(state: list | None, today: dt.date) -> dict:
     }
 
 
+def casino_section(cb: dict | None, today: dt.date) -> dict:
+    """賭場 sector（casino_tracker）：只收資料的 AI 個股影子追蹤；小節只秀名單特徵與影子籃子對照。"""
+    if not cb:
+        return {"status": "NO_DATA"}
+    rows = [{"ticker": r["ticker"], "name": r["name"], "bucket": r["bucket"], "in_0050": r.get("in_0050"),
+             "close": r.get("close"), "ret20_pct": r.get("ret20_pct"), "excess20_pct": r.get("excess20_pct"),
+             "yoy_pct": r.get("yoy_pct"), "yoy_avg_pct": r.get("yoy_avg_pct"), "yoy_slope_pp": r.get("yoy_slope_pp")}
+            for r in cb.get("rows") or []]
+    return {"status": "OK", "as_of": cb.get("today"), "age_days": _age_days(cb.get("today"), today),
+            "rows": rows, "no_data_n": len(cb.get("no_data") or []),
+            "shadow_dca": cb.get("shadow_dca") or {}, "tercile_t20": cb.get("tercile_t20") or {},
+            "verdict": cb.get("verdict") or {}, "state_n": cb.get("state_n"), "scored_n": cb.get("scored_n"),
+            "note": cb.get("note")}
+
+
 def calendar_section(today: dt.date) -> list[dict]:
     """規則式日曆（不抓網路）：月營收公告截止（每月 10 日）、下個月 10 日；其餘由人補。"""
     out = []
@@ -176,11 +191,13 @@ def build_brief(out_dir: str, today: dt.date | None = None) -> dict:
     backtest = _load(os.path.join(out_dir, "tw_scanner_backtest.json"))
     led = _load(os.path.join(out_dir, "dca_ledger.json"))
     dstate = _load(os.path.join(out_dir, "delta_radar_state.json"))
+    casino_b = _load(os.path.join(out_dir, "casino_brief.json"))
     weather = weather_section(state, backtest, today)
     dca = dca_section(led, today)
     delta = delta_section(dstate, today)
+    casino = casino_section(casino_b, today)
     checks = []
-    for name, sec, stale in (("天氣台", weather, 4), ("DCA 帳本", dca, 4), ("delta_radar", delta, 8)):
+    for name, sec, stale in (("天氣台", weather, 4), ("DCA 帳本", dca, 4), ("delta_radar", delta, 8), ("賭場 sector", casino, 4)):
         if sec.get("status") != "OK":
             checks.append({"level": "bad", "label": f"{name} 無輸出", "text": f"{name}：NO_DATA（{sec.get('reason') or '缺輸出檔'}）"})
         elif sec.get("age_days") is not None and sec["age_days"] > stale:
@@ -191,7 +208,7 @@ def build_brief(out_dir: str, today: dt.date | None = None) -> dict:
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "today": today.isoformat(), "cadence": "weekly",
         "tldr": tldr(weather, dca, delta),
-        "weather": weather, "dca": dca, "delta": delta,
+        "weather": weather, "dca": dca, "delta": delta, "casino": casino,
         "calendar": calendar_section(today), "checks": checks,
         "note": "週報：規則影子帳本＋溫度計＋論點監控。沒有任何一行是買賣建議；曝險與部位由人管。",
     }
@@ -255,9 +272,24 @@ def render_md(b: dict) -> str:
         L.append(f"- 回填樣本 {dl['scored_n']} 筆（T+20 超額）；退役判準見 `delta_radar_report.md`")
     else:
         L.append("NO_DATA")
-    L += ["", "## 4. 下週日曆", ""]
+    cs = b.get("casino") or {}
+    L += ["", "## 4. 賭場 sector（AI 個股，只收資料）", ""]
+    if cs.get("status") == "OK":
+        L += ["| 代號 | 名稱 | 桶 | 20 日 vs 0050 | 月營收 YoY | 3 月均 | 斜率 |", "|---|---|---|---|---|---|---|"]
+        for r in cs["rows"]:
+            L.append(f"| {r['ticker']} | {r['name']} | {r['bucket']} | {_pm(r['excess20_pct'])} | {_pm(r['yoy_pct'])} | {_pm(r['yoy_avg_pct'])} | {_pm(r['yoy_slope_pp'], '')} |")
+        sd = cs["shadow_dca"]
+        if sd.get("status") == "OK":
+            L.append("")
+            L.append(f"影子 DCA（每月等權買整籃 vs 同筆錢買 0050）：{sd['n_months']} 個月，籃子 {_pm(sd['basket_return_pct'])} vs 0050 {_pm(sd['bench_return_pct'])}，差 {_pm(sd['basket_minus_bench_pp'], ' pp')}；判準 {cs['verdict'].get('basket')}")
+        t = cs.get("tercile_t20") or {}
+        L.append(f"月營收加速三分位 vs T+20 超額：{t.get('status', '累積中')}（回填 {cs.get('scored_n')} 筆）。明細 `casino_report.md`。")
+        L.append(f"*{cs.get('note')}*")
+    else:
+        L.append("NO_DATA（首次排程跑完才有）")
+    L += ["", "## 5. 下週日曆", ""]
     L += [f"- {c['date']}（{c['days']} 天後）{c['what']}" for c in b["calendar"]] or ["- 無規則式事件"]
-    L += ["", "## 5. 資料健康", ""]
+    L += ["", "## 6. 資料健康", ""]
     L += [f"- {'✅' if c['level']=='ok' else '⚠️' if c['level']=='warn' else '❌'} {c['text']}" for c in b["checks"]]
     L += ["", "---", f"*tw_brief — {b['note']} 產出 {b['generated_at']}*"]
     return "\n".join(L)
@@ -309,8 +341,15 @@ def selftest() -> bool:
                 "modules": [{"module": "M5 narrative_triggers", "status": "GREEN", "headline": "安靜"}],
                 "divergence": {"flag": "premise_ok_price_down", "text": "🔀 背離：前提健在（YELLOW）、價格 20 日 -12.0%"}}],
               open(os.path.join(out, "delta_radar_state.json"), "w"))
+    json.dump({"today": "2026-09-11", "rows": [{"ticker": "2330", "name": "台積電", "bucket": "製造", "in_0050": True, "close": 1500.0,
+                                              "ret20_pct": 3.0, "excess20_pct": 1.2, "yoy_pct": 30.0, "yoy_avg_pct": 28.0, "yoy_slope_pp": 1.5}],
+               "no_data": [], "state_n": 16, "scored_n": 0, "tercile_t20": {"n": 0, "status": "累積中"},
+               "shadow_dca": {"status": "OK", "n_months": 3, "basket_return_pct": 4.0, "bench_return_pct": 2.0, "basket_minus_bench_pp": 2.0},
+               "verdict": {"basket": "累積中（需 ≥12 個月，現 3）", "rule": "x"}, "note": "賭場 sector：只收資料。"},
+              open(os.path.join(out, "casino_brief.json"), "w"), ensure_ascii=False)
     b = build_brief(out, today)
     md = render_md(b)
+    check(b["casino"]["status"] == "OK" and b["casino"]["rows"][0]["ticker"] == "2330" and "賭場 sector" in md and "累積中" in md, "賭場 sector 小節")
     check(b["weather"]["regime"] == "CAPITULATION" and b["weather"]["week_transitions"][0]["to"] == "CAPITULATION", "鋒面與本週轉移")
     check(b["weather"]["week_alert_days"] == ["2026-09-09"], "本週警報日")
     check(b["dca"]["full"]["boost_n"] == 3 and abs(b["dca"]["full"]["boost_edge_mean_pct"] - 1.37) < 0.01, "加碼 edge 摘要")
