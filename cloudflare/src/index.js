@@ -469,7 +469,7 @@ function sameOrigin(request, url) {
 // ------------------------------------------------------------------ 電子報（公開、唯讀、不觸發任何動作）
 /** 這些路徑跳過 Worker 端的 Access 驗證。Cloudflare Access 本身仍會擋——要公開分享，
  *  在 Zero Trust 另建一個 path 為 /brief* 與 /api/brief 的應用程式、policy 用 Bypass（見 cloudflare/README.md）。 */
-const PUBLIC_PATHS = new Set(["/brief", "/brief.html", "/api/brief", "/tw", "/tw.html", "/api/tw"]);
+const PUBLIC_PATHS = new Set(["/brief", "/brief.html", "/api/brief", "/tw", "/api/tw"]);
 const TW_BRIEF_PATH = "tw_scanner/output/tw_brief.json";
 
 /** /api/brief?d=YYYY-MM-DD：把候選、decisions、矩陣摘要、排程狀態、資料檢查彙整成一份；只讀 GitHub。 */
@@ -549,6 +549,10 @@ export default {
       }
     }
     try {
+      if (url.pathname === "/api/brief" && (url.searchParams.get("m") || "").toLowerCase() === "tw") {
+        // 同一個端點帶 m=tw → 台股週報 JSON（與 /api/tw 同源）
+        return Response.redirect(`${url.origin}/api/tw`, 302);
+      }
       if (url.pathname === "/api/brief") {
         // 公開唯讀；GitHub API 有配額，快取 5 分鐘。d 只准 YYYY-MM-DD：它會拼進 GitHub Contents API 的路徑
         const dParam = url.searchParams.get("d");
@@ -574,7 +578,7 @@ export default {
         if (ctx) ctx.waitUntil(cache.put(key, res.clone()));
         return res;
       }
-      if (url.pathname === "/tw") return env.ASSETS.fetch(new Request(new URL("/tw.html", url).toString(), request));
+      if (url.pathname === "/tw") return Response.redirect(`${url.origin}/brief?m=tw`, 302);   // 舊路徑：同一頁切到台股
       if (url.pathname === "/api/health") return Response.json(await health(env), { headers: noStore });
       if (url.pathname === "/api/alarm/check" || url.pathname === "/api/decide") {
         // 會動 repo／花錢的端點：POST + 同源
