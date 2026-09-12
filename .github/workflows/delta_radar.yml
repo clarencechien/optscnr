@@ -111,35 +111,9 @@ jobs:
             echo "do_commit=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Commit results
+      - name: Commit results（共用 publish.sh：先主輸出、pull 後重產生衍生檔、push 重試）
         if: steps.gate.outputs.do_commit == 'true'
-        # NOTE: do NOT collapse this into `git add ... || true`.
-        # The silent-swallow pattern on conditionally-absent files is the exact
-        # bug class fixed across this repo's workflows - fail loudly instead.
         run: |
           set -euo pipefail
-          for f in tw_scanner/output/delta_radar_report.md \
-                   tw_scanner/output/delta_radar_state.json; do
-            if [ -f "$f" ]; then
-              git add "$f"
-            else
-              echo "::error::expected radar output missing: $f"
-              exit 1
-            fi
-          done
-          # 週報重組（零網路：讀既有輸出）+ 資料夾 README
-          python tw_scanner/tw_brief.py --output-dir tw_scanner/output
-          for f in tw_scanner/output/tw_brief.json tw_scanner/output/tw_weekly.md; do
-            if [ -f "$f" ]; then git add "$f"; else echo "::error::brief output missing: $f"; exit 1; fi
-          done
-          python tw_scanner/build_readme.py
-          git add tw_scanner/README.md
-          if git diff --cached --quiet; then
-            echo "No content changes to commit."
-            exit 0
-          fi
-          git config user.name "delta-radar-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git pull --rebase --autostash
-          git commit -m "delta_radar[${{ steps.track.outputs.track }}]: $(date -u +%F)"
-          git push
+          tw_scanner/publish.sh "delta-radar-bot" "delta_radar[${{ steps.track.outputs.track }}]: $(date -u +%F)" \
+            tw_scanner/output/delta_radar_report.md tw_scanner/output/delta_radar_state.json

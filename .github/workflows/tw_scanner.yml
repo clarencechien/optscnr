@@ -66,46 +66,21 @@ jobs:
           python tw_scanner/casino_tracker.py --output-dir tw_scanner/output
           python tw_scanner/tw_brief.py --output-dir tw_scanner/output
 
-      - name: Commit results
-        # Explicit existence checks - never `git add ... || true`.
-        # The cache CSVs are committed too: they make every backtest
-        # reproducible and spare FinMind quota on scheduled runs.
+      - name: Commit results（共用 publish.sh：先主輸出、pull 後重產生衍生檔、push 重試）
         run: |
           set -euo pipefail
           MODE="${{ steps.mode.outputs.mode }}"
           if [ "$MODE" = "backtest" ]; then
-            REQUIRED="tw_scanner/output/tw_scanner_backtest.md tw_scanner/output/tw_scanner_backtest.json"
+            PRIMARY="tw_scanner/output/tw_scanner_backtest.md tw_scanner/output/tw_scanner_backtest.json"
           else
-            REQUIRED="tw_scanner/output/tw_scanner_briefing.md tw_scanner/output/tw_scanner_state.json \
-                      tw_scanner/output/tw_scanner_history.json \
-                      tw_scanner/output/dca_ledger.md tw_scanner/output/dca_ledger.json \
-                      tw_scanner/output/casino_report.md tw_scanner/output/casino_brief.json tw_scanner/output/casino_state.json \
-                      tw_scanner/output/tw_brief.json tw_scanner/output/tw_weekly.md"
+            PRIMARY="tw_scanner/output/tw_scanner_briefing.md tw_scanner/output/tw_scanner_state.json \
+                     tw_scanner/output/tw_scanner_history.json \
+                     tw_scanner/output/dca_ledger.md tw_scanner/output/dca_ledger.json \
+                     tw_scanner/output/casino_report.md tw_scanner/output/casino_brief.json tw_scanner/output/casino_state.json"
+            # 價格／營收快取（首跑才有）與 cache CSV：存在才列
+            for f in tw_scanner/output/dca_prices.json tw_scanner/output/casino_prices.json tw_scanner/output/casino_revenue.json; do
+              if [ -f "$f" ]; then PRIMARY="$PRIMARY $f"; fi
+            done
+            if [ -d tw_scanner/cache ]; then git add tw_scanner/cache; fi
           fi
-          for f in $REQUIRED; do
-            if [ -f "$f" ]; then
-              git add "$f"
-            else
-              echo "::error::expected output missing: $f"
-              exit 1
-            fi
-          done
-          if [ -d tw_scanner/cache ]; then
-            git add tw_scanner/cache
-          fi
-          # 價格／營收快取（dca_ledger、casino_tracker 增量抓；首跑才有）
-          for f in tw_scanner/output/dca_prices.json tw_scanner/output/casino_prices.json tw_scanner/output/casino_revenue.json; do
-            if [ -f "$f" ]; then git add "$f"; fi
-          done
-          # 重組資料夾 README（tw_scanner + delta_radar 兩區塊，像主 scanner 一樣以 README 為報表）
-          python tw_scanner/build_readme.py
-          git add tw_scanner/README.md
-          if git diff --cached --quiet; then
-            echo "No changes to commit (weekend/holiday or unchanged)."
-            exit 0
-          fi
-          git config user.name "tw-scanner-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git pull --rebase --autostash
-          git commit -m "tw_scanner[${{ steps.mode.outputs.mode }}]: $(date -u +%F)"
-          git push
+          tw_scanner/publish.sh "tw-scanner-bot" "tw_scanner[$MODE]: $(date -u +%F)" $PRIMARY

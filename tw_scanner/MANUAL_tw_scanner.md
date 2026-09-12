@@ -73,6 +73,10 @@ tw_scanner.py ──► tw_scanner_state.json / tw_scanner_history.json（2019 �
       └─► tw_brief.py     週報 tw_brief.json / tw_weekly.md（Worker /brief?m=tw、README 頂部）
 delta_radar.py（config 決定 2308 或 2330）各自排程，跑完也重組 brief。
 ```
+
+三個 workflow 的 commit 步驟共用 `publish.sh`（主輸出先 commit → `pull --rebase` → 衍生檔 README／tw_brief／tw_weekly
+重產生併入 → push 重試 3 次）。主輸出與 main 衝突＝re-run 了舊 attempt，腳本會放棄本次 commit 並印 `::warning`；
+**要重跑用 Run workflow 新發，不要 re-run 舊 attempt。**
 改動紀錄在 `docs/log.md`「台股側第 6 批」與 `REVIEW_2026-07.md` 末段；**動新功能前先 `git log`**。
 
 
@@ -161,6 +165,6 @@ cache CSV 進版控：回測可重現＋省 FinMind 額度。
 ## 設計憲法（radar 家族共同紀律）
 
 閾值全外部化；schema 候選名單＋對帳釘死＋`_pinned` 記錄；模組失敗
-降級為缺值、永不無聲吞錯（含 workflow 的顯式 `git add` 存在性檢查）；
+降級為缺值、永不無聲吞錯（含 `publish.sh` 的主輸出逐檔存在性檢查）；
 測量與敘事分家、敘事僅由狀態轉移產生；警報必須通過回測審判，
 無法與基線分離者處決，屍體留 config 當紀念。

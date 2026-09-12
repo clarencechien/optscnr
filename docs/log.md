@@ -306,6 +306,7 @@ tw_scanner 唯一可行動的輸出是投降警報，一年響幾次；對 DCA 0
 | `edd5fcf` (#32) | **splits.py 分割還原**：首跑實測 0050 2025-06-18 四拆一、6669 2026-09-02 三拆一未還原，帳本全錯（純 DCA 七年 +0.75% → 修後 +230%）；config override/ignore；state 衍生欄位修復 |
 | `107f97e` (#33) | 2308 儀器修正：M8 樣本不足改 NO_DATA、退役判準加狀態翻轉數（`min_flips`）、M9 估值分位（觀察）；**tsmc_radar**（2330）：delta_radar.py instance 化（`name/display/modules_full/m3_mode`）、M3 ADR 溢價、M7 第二基準 SMH、config placeholder |
 | 本 commit (#34) | M4 HS 碼改 6 位（4 位對 HS6 回空）、M6 標題 ticker 化、文件全層更新（本節、CONTEXT §十、MANUAL_tw_scanner 家族結構、README 📚 行） |
+| 本 commit | **publish.sh**：三個 workflow 的 commit 步驟抽成共用腳本（tsmc-radar #1 attempt 2 實測 `pull --rebase --autostash` 對衍生檔衝突 exit 128） |
 
 ### 檔案地圖（tw_scanner/）
 ```
@@ -316,6 +317,7 @@ casino_tracker.py    賭場 sector 影子追蹤                                 
 splits.py            分割還原（共用）
 tw_brief.py          週報組裝（零網路）→ output/tw_brief.json、tw_weekly.md
 build_readme.py      README = 週報＋簡報＋delta＋tsmc＋帳本＋賭場＋回測
+publish.sh           三個 workflow 共用的 commit＋push（主輸出先 commit → pull --rebase → 重產生衍生檔 → push，重試 3 次）
 MANUAL_tw_scanner.md / MANUAL_delta_radar.md / MANUAL_dca_ledger.md（含賭場）/ REVIEW_2026-07.md（覆核紀錄一路補記）
 ```
 排程：`tw_scanner.yml`（平日 21:52 台北；簡報後接 ledger → casino → brief）、`delta_radar.yml`、`tsmc_radar.yml`（與台達錯開 30 分鐘；跑完重組 brief）。
@@ -331,6 +333,19 @@ Worker：`/brief?m=tw`、`/api/tw`（公開唯讀；Zero Trust Bypass 已加 `/t
 - delta 下次全模組 run（週一）背離旗標會第一次亮（前提 YELLOW、價格 20 日 −14%）。
 - 判準（都寫死了，別捨不得）：DCA 投降窗規則 ≥8 簇 edge>0 且勝率 ≥60%；鋒面調節不優於純 DCA → 處決；賭場籃子 ≥12 個月、
   三分位每側 n≥30；delta 10/31 覆核、tsmc 12/31 覆核；退役判準狀態翻轉 <3 次一律無法判定。
+
+### publish.sh：三個 workflow 共用的 commit 步驟（2026-09-12 第二次事故）
+病因：tsmc-radar run #1 attempt 2 是 **re-run 舊 attempt**（checkout 的是 501806e，main 已前進到含 attempt 1 輸出的版本）。
+舊步驟 `git pull --rebase --autostash` 把本地改動 stash 再套回 → README／tw_brief／tw_weekly／tsmc report+state 全衝突 → exit 128。
+根本原因不是 re-run 本身，是三個 workflow 都重寫同一批「衍生檔」（README.md、tw_brief.json、tw_weekly.md），
+只要 main 在跑的期間前進（tw-scanner 與 tsmc-radar 同一晚跑）就會撞。
+修法（`tw_scanner/publish.sh`，三個 workflow 的 Commit results 都只剩一行呼叫）：
+1. 只 `git add` 自己的**主輸出**（逐檔存在性檢查，缺就 `::error` 失敗，不吞）；衍生檔先還原成 main 的版本。
+2. 重產生衍生檔（零網路、state 的純函數）併入同一 commit；`pull --rebase`；
+   衍生檔衝突 → 當場重產生當作解法繼續 rebase；push 被搶先 → 重來，最多 3 次。
+3. **主輸出**衝突 = main 已有本次輸出（re-run 舊 attempt）→ `::warning` 後放棄本次 commit、exit 0（資料已在 main，不是雷達的錯）。
+本機 sandbox 模擬過五種情況（正常／並發衍生檔衝突／舊 attempt／無變化／主輸出缺檔）。
+規矩：**要重跑請用 Run workflow 新發，不要 re-run 舊 attempt。**
 
 ### 紅線對照
 - 紅線 2（不做 portfolio）：影子帳本＝等額假設規則帳，不記真實部位與個人損益；個人曝險一律不進本 repo（公開）。
