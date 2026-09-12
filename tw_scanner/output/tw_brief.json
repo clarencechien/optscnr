@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-09-12T06:32:17+00:00",
+ "generated_at": "2026-09-12T07:20:42+00:00",
  "today": "2026-09-12",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-09-11）：本週無警報、預算未動 → 等（2026-09-18 再看）。",
   "鋒面 ☀️ RISK_ON（本週未變）。",
-  "2308 前提 🟡 YELLOW；背離 NO_DATA",
+  "2308 前提 🟡 YELLOW；🔀 背離：前提健在（YELLOW）、價格 20 日 -14.1% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）",
   "2330 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +0.6%）；PER 27.9，3 年分位 71 → 72",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.71%。"
  ],
@@ -206,11 +206,11 @@
  "delta": {
   "status": "OK",
   "label": "2308",
-  "as_of": "2026-09-11",
-  "age_days": 1,
-  "last_overall": "PARTIAL(m1)",
+  "as_of": "2026-09-12",
+  "age_days": 0,
+  "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
-   "m1"
+   "m5"
   ],
   "full_overall": "YELLOW",
   "full_ts": "2026-09-10",
@@ -243,7 +243,7 @@
     "module": "M5 narrative_triggers",
     "status": "GREEN",
     "headline": "capex_cut:4e(5m) / vr300_delay:18e(21m) / debt_financed_capex:12e(13m) / lc_psu_competition:0e",
-    "ts": "2026-09-11T07:28:36.008388+00:00"
+    "ts": "2026-09-12T07:20:40.364393+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -258,7 +258,15 @@
     "ts": "2026-09-10T08:24:08.007549+00:00"
    }
   ],
-  "divergence": null,
+  "divergence": {
+   "flag": "premise_ok_price_down",
+   "text": "🔀 背離：前提健在（YELLOW）、價格 20 日 -14.1% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）",
+   "premise": "YELLOW",
+   "premise_ts": "2026-09-10T08:24:08.007549+00:00",
+   "ret_pct": -14.06,
+   "lookback_sessions": 20,
+   "as_of": "2026-09-11"
+  },
   "scored_n": 78
  },
  "tsmc": {
@@ -610,7 +618,7 @@
   {
    "level": "ok",
    "label": "delta_radar 正常",
-   "text": "delta_radar：最新 2026-09-11"
+   "text": "delta_radar：最新 2026-09-12"
   },
   {
    "level": "ok",
