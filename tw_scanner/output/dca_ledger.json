@@ -1,0 +1,381 @@
+{
+ "generated_at": "2026-09-12T05:24:13+00:00",
+ "status": "OK",
+ "instrument": "0050",
+ "amount_twd": 10000,
+ "period": "monthly",
+ "buy_day_of_month": 6,
+ "prices_from": "2019-01-02",
+ "prices_to": "2026-09-11",
+ "history_rows": 1869,
+ "history_from": "2019-01-02",
+ "history_to": "2026-09-11",
+ "current": {
+  "as_of": "2026-09-11",
+  "last_price": 107.7,
+  "regime": "RISK_ON",
+  "next_regular_buy": "2026-10-06",
+  "this_month_bought": true,
+  "plain_amount": 10000.0,
+  "boost_pending": false,
+  "boost_amount": 10000.0,
+  "recent_alert_days": [],
+  "regime_multiplier": 1.0,
+  "regime_amount": 10000.0,
+  "weekly_gate": {
+   "decision_date": "2026-09-11",
+   "month": "2026-09",
+   "month_spent": false,
+   "week_alert_days": [],
+   "last_week_of_month": false,
+   "action": "wait",
+   "amount": 0.0,
+   "text": "本週無警報、預算未動 → 等（2026-09-18 再看）"
+  }
+ },
+ "windows": {
+  "full": {
+   "start": "2019-01-02",
+   "end": "2026-09-11",
+   "n_periods": 93,
+   "rules": {
+    "plain": {
+     "n_buys": 93,
+     "invested": 930000.0,
+     "units": 8699.5419,
+     "avg_cost": 106.9,
+     "final_value": 936941.0,
+     "return_pct": 0.75,
+     "xirr_pct": 0.19,
+     "as_of": "2026-09-11",
+     "last_price": 107.7,
+     "label": "純定期定額",
+     "avg_cost_vs_plain_pct": 0.0,
+     "n_boosts": 0
+    },
+    "weekly_gate": {
+     "n_buys": 92,
+     "invested": 980000.0,
+     "units": 9131.2211,
+     "avg_cost": 107.32,
+     "final_value": 983433.0,
+     "return_pct": 0.35,
+     "xirr_pct": 0.09,
+     "as_of": "2026-09-11",
+     "last_price": 107.7,
+     "label": "週檢查・月預算・投降窗即刻投入",
+     "avg_cost_vs_plain_pct": 0.39,
+     "n_boosts": 6
+    },
+    "capitulation_boost": {
+     "n_buys": 101,
+     "invested": 1010000.0,
+     "units": 9410.8024,
+     "avg_cost": 107.32,
+     "final_value": 1013543.0,
+     "return_pct": 0.35,
+     "xirr_pct": 0.09,
+     "as_of": "2026-09-11",
+     "last_price": 107.7,
+     "label": "定期定額＋投降窗加碼",
+     "avg_cost_vs_plain_pct": 0.39,
+     "n_boosts": 8
+    },
+    "regime_scaled": {
+     "n_buys": 93,
+     "invested": 1015000.0,
+     "units": 9474.8413,
+     "avg_cost": 107.13,
+     "final_value": 1020440.0,
+     "return_pct": 0.54,
+     "xirr_pct": 0.14,
+     "as_of": "2026-09-11",
+     "last_price": 107.7,
+     "label": "定期定額＋鋒面調節",
+     "avg_cost_vs_plain_pct": 0.22,
+     "n_boosts": 0
+    },
+    "lump_sum": {
+     "n_buys": 1,
+     "invested": 930000.0,
+     "units": 12565.3124,
+     "avg_cost": 74.01,
+     "final_value": 1353284.0,
+     "return_pct": 45.51,
+     "xirr_pct": 5.0,
+     "as_of": "2026-09-11",
+     "last_price": 107.7,
+     "label": "對照：一次投入",
+     "avg_cost_vs_plain_pct": -30.77,
+     "n_boosts": 0
+    }
+   },
+   "boosts": [
+    {
+     "alert_date": "2020-03-09",
+     "exec_date": "2020-03-10",
+     "price": 86.3,
+     "amount": 10000.0,
+     "next_regular_date": "2020-04-06",
+     "next_regular_price": 77.05,
+     "edge_vs_next_regular_pct": -10.72,
+     "t60_pct": 2.38
+    },
+    {
+     "alert_date": "2020-03-19",
+     "exec_date": "2020-03-20",
+     "price": 74.0,
+     "amount": 10000.0,
+     "next_regular_date": "2020-04-06",
+     "next_regular_price": 77.05,
+     "edge_vs_next_regular_pct": 4.12,
+     "t60_pct": 20.27
+    },
+    {
+     "alert_date": "2022-03-08",
+     "exec_date": "2022-03-09",
+     "price": 132.5,
+     "amount": 10000.0,
+     "next_regular_date": "2022-04-06",
+     "next_regular_price": 136.25,
+     "edge_vs_next_regular_pct": 2.83,
+     "t60_pct": -3.85
+    },
+    {
+     "alert_date": "2024-04-22",
+     "exec_date": "2024-04-23",
+     "price": 151.9,
+     "amount": 10000.0,
+     "next_regular_date": "2024-05-06",
+     "next_regular_price": 159.2,
+     "edge_vs_next_regular_pct": 4.81,
+     "t60_pct": 25.48
+    },
+    {
+     "alert_date": "2024-07-19",
+     "exec_date": "2024-07-22",
+     "price": 180.7,
+     "amount": 10000.0,
+     "next_regular_date": "2024-08-06",
+     "next_regular_price": 167.5,
+     "edge_vs_next_regular_pct": -7.3,
+     "t60_pct": 9.19
+    },
+    {
+     "alert_date": "2024-08-05",
+     "exec_date": "2024-08-06",
+     "price": 167.5,
+     "amount": 10000.0,
+     "next_regular_date": "2024-09-06",
+     "next_regular_price": 174.75,
+     "edge_vs_next_regular_pct": 4.33,
+     "t60_pct": 15.61
+    },
+    {
+     "alert_date": "2026-07-20",
+     "exec_date": "2026-07-21",
+     "price": 102.5,
+     "amount": 10000.0,
+     "next_regular_date": "2026-08-06",
+     "next_regular_price": 103.3,
+     "edge_vs_next_regular_pct": 0.78,
+     "t60_pct": null
+    },
+    {
+     "alert_date": "2026-07-29",
+     "exec_date": "2026-07-30",
+     "price": 93.5,
+     "amount": 10000.0,
+     "next_regular_date": "2026-08-06",
+     "next_regular_price": 103.3,
+     "edge_vs_next_regular_pct": 10.48,
+     "t60_pct": null
+    }
+   ],
+   "gate_boosts": [
+    {
+     "alert_date": "2020-03-13",
+     "exec_date": "2020-03-16",
+     "price": 77.3,
+     "amount": 20000.0,
+     "next_regular_date": "2020-04-06",
+     "next_regular_price": 77.05,
+     "edge_vs_next_regular_pct": -0.32,
+     "t60_pct": 15.2
+    },
+    {
+     "alert_date": "2022-03-08",
+     "exec_date": "2022-03-14",
+     "price": 134.4,
+     "amount": 20000.0,
+     "next_regular_date": "2022-04-06",
+     "next_regular_price": 136.25,
+     "edge_vs_next_regular_pct": 1.38,
+     "t60_pct": -5.43
+    },
+    {
+     "alert_date": "2024-04-22",
+     "exec_date": "2024-04-29",
+     "price": 158.8,
+     "amount": 20000.0,
+     "next_regular_date": "2024-05-06",
+     "next_regular_price": 159.2,
+     "edge_vs_next_regular_pct": 0.25,
+     "t60_pct": 12.72
+    },
+    {
+     "alert_date": "2024-07-19",
+     "exec_date": "2024-07-22",
+     "price": 180.7,
+     "amount": 20000.0,
+     "next_regular_date": "2024-08-06",
+     "next_regular_price": 167.5,
+     "edge_vs_next_regular_pct": -7.3,
+     "t60_pct": 9.19
+    },
+    {
+     "alert_date": "2024-07-29",
+     "exec_date": "2024-08-05",
+     "price": 158.75,
+     "amount": 20000.0,
+     "next_regular_date": "2024-08-06",
+     "next_regular_price": 167.5,
+     "edge_vs_next_regular_pct": 5.51,
+     "t60_pct": 21.54
+    },
+    {
+     "alert_date": "2026-07-20",
+     "exec_date": "2026-07-27",
+     "price": 101.45,
+     "amount": 20000.0,
+     "next_regular_date": "2026-08-06",
+     "next_regular_price": 103.3,
+     "edge_vs_next_regular_pct": 1.82,
+     "t60_pct": null
+    }
+   ]
+  },
+  "last_12m": {
+   "start": "2025-09-11",
+   "end": "2026-09-11",
+   "n_periods": 12,
+   "rules": {
+    "plain": {
+     "n_buys": 12,
+     "invested": 120000.0,
+     "units": 1503.4786,
+     "avg_cost": 79.81,
+     "final_value": 161925.0,
+     "return_pct": 34.94,
+     "xirr_pct": 82.86,
+     "as_of": "2026-09-11",
+     "last_price": 107.7,
+     "label": "純定期定額",
+     "avg_cost_vs_plain_pct": 0.0,
+     "n_boosts": 0
+    },
+    "weekly_gate": {
+     "n_buys": 12,
+     "invested": 140000.0,
+     "units": 1814.4604,
+     "avg_cost": 77.16,
+     "final_value": 195417.0,
+     "return_pct": 39.58,
+     "xirr_pct": 87.03,
+     "as_of": "2026-09-11",
+     "last_price": 107.7,
+     "label": "週檢查・月預算・投降窗即刻投入",
+     "avg_cost_vs_plain_pct": -3.32,
+     "n_boosts": 2
+    },
+    "capitulation_boost": {
+     "n_buys": 14,
+     "invested": 140000.0,
+     "units": 1707.8165,
+     "avg_cost": 81.98,
+     "final_value": 183932.0,
+     "return_pct": 31.38,
+     "xirr_pct": 83.64,
+     "as_of": "2026-09-11",
+     "last_price": 107.7,
+     "label": "定期定額＋投降窗加碼",
+     "avg_cost_vs_plain_pct": 2.72,
+     "n_boosts": 2
+    },
+    "regime_scaled": {
+     "n_buys": 12,
+     "invested": 140000.0,
+     "units": 1724.7769,
+     "avg_cost": 81.17,
+     "final_value": 185758.0,
+     "return_pct": 32.68,
+     "xirr_pct": 82.33,
+     "as_of": "2026-09-11",
+     "last_price": 107.7,
+     "label": "定期定額＋鋒面調節",
+     "avg_cost_vs_plain_pct": 1.7,
+     "n_boosts": 0
+    },
+    "lump_sum": {
+     "n_buys": 1,
+     "invested": 120000.0,
+     "units": 1943.2318,
+     "avg_cost": 61.75,
+     "final_value": 209286.0,
+     "return_pct": 74.41,
+     "xirr_pct": 82.01,
+     "as_of": "2026-09-11",
+     "last_price": 107.7,
+     "label": "對照：一次投入",
+     "avg_cost_vs_plain_pct": -22.63,
+     "n_boosts": 0
+    }
+   },
+   "boosts": [
+    {
+     "alert_date": "2026-07-20",
+     "exec_date": "2026-07-21",
+     "price": 102.5,
+     "amount": 10000.0,
+     "next_regular_date": "2026-08-06",
+     "next_regular_price": 103.3,
+     "edge_vs_next_regular_pct": 0.78,
+     "t60_pct": null
+    },
+    {
+     "alert_date": "2026-07-29",
+     "exec_date": "2026-07-30",
+     "price": 93.5,
+     "amount": 10000.0,
+     "next_regular_date": "2026-08-06",
+     "next_regular_price": 103.3,
+     "edge_vs_next_regular_pct": 10.48,
+     "t60_pct": null
+    }
+   ],
+   "gate_boosts": [
+    {
+     "alert_date": "2024-08-06",
+     "exec_date": "2025-09-15",
+     "price": 56.0,
+     "amount": 20000.0,
+     "next_regular_date": "2025-10-07",
+     "next_regular_price": 61.7,
+     "edge_vs_next_regular_pct": 10.18,
+     "t60_pct": 13.3
+    },
+    {
+     "alert_date": "2026-07-20",
+     "exec_date": "2026-07-27",
+     "price": 101.45,
+     "amount": 20000.0,
+     "next_regular_date": "2026-08-06",
+     "next_regular_price": 103.3,
+     "edge_vs_next_regular_pct": 1.82,
+     "t60_pct": null
+    }
+   ]
+  }
+ },
+ "note": "規則影子帳本：等額假設、不記真實部位。lump_sum 是對照不是策略；regime_scaled 是待處決的假說。非投資建議。"
+}
