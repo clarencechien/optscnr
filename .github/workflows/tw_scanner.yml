@@ -56,6 +56,15 @@ jobs:
             --config tw_scanner/config/tw_scanner_config.json \
             --output-dir tw_scanner/output
 
+      - name: DCA 規則影子帳本 + 週報組裝（推導物；FinMind 抓不到就用價格快取）
+        if: steps.mode.outputs.mode != 'backtest'
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+        run: |
+          set -euo pipefail
+          python tw_scanner/dca_ledger.py --output-dir tw_scanner/output
+          python tw_scanner/tw_brief.py --output-dir tw_scanner/output
+
       - name: Commit results
         # Explicit existence checks - never `git add ... || true`.
         # The cache CSVs are committed too: they make every backtest
@@ -64,9 +73,12 @@ jobs:
           set -euo pipefail
           MODE="${{ steps.mode.outputs.mode }}"
           if [ "$MODE" = "backtest" ]; then
-            REQUIRED="tw_scanner/output/tw_scanner_backtest.md"
+            REQUIRED="tw_scanner/output/tw_scanner_backtest.md tw_scanner/output/tw_scanner_backtest.json"
           else
-            REQUIRED="tw_scanner/output/tw_scanner_briefing.md tw_scanner/output/tw_scanner_state.json"
+            REQUIRED="tw_scanner/output/tw_scanner_briefing.md tw_scanner/output/tw_scanner_state.json \
+                      tw_scanner/output/tw_scanner_history.json \
+                      tw_scanner/output/dca_ledger.md tw_scanner/output/dca_ledger.json \
+                      tw_scanner/output/tw_brief.json tw_scanner/output/tw_weekly.md"
           fi
           for f in $REQUIRED; do
             if [ -f "$f" ]; then
@@ -78,6 +90,10 @@ jobs:
           done
           if [ -d tw_scanner/cache ]; then
             git add tw_scanner/cache
+          fi
+          # 0050 價格快取（dca_ledger 增量抓；首跑才有）
+          if [ -f tw_scanner/output/dca_prices.json ]; then
+            git add tw_scanner/output/dca_prices.json
           fi
           # 重組資料夾 README（tw_scanner + delta_radar 兩區塊，像主 scanner 一樣以 README 為報表）
           python tw_scanner/build_readme.py

@@ -28,7 +28,7 @@ GitHub Actions 每日掃描 → README.md 妖股報表 + shadow log 信號校準
 | catalyst_fetch / fallen_saas / small_cap_momentum / unknown_radar / universe_update | 動態清單餵給主掃描 |
 | cloudflare/ | Cloudflare Worker（獨立資料夾、dashboard Git 連動部署）：第二鬧鐘（GitHub 排程沒發就 `workflow_dispatch`）、每交易日盤後 LLM 三題 → `data/decisions/`、dashboard 靜態頁。**Python 一行都不在這裡**，見 `cloudflare/README.md` |
 | spcx_radar/ | SPCX 主題雷達（space_radar + spcx_options/Option Sage；共用碼在 spcx_common.py；config/=手動維護、output/=產出、README.md=每日報表、PLAYBOOK.md=執行手冊、PLAN_2026-08.md=8月後任務） |
-| tw_scanner/ | 台股子專案（tw_scanner 天氣台 + delta_radar 2308 雷達合併於此；README.md=每日報表由 build_readme.py 重組、MANUAL_*.md=維護文件、REVIEW_2026-07.md=改進判準） |
+| tw_scanner/ | 台股子專案：tw_scanner 天氣台 + delta_radar 2308 雷達 + **dca_ledger.py（DCA 規則影子帳本，2026-09-12）** + **tw_brief.py（週報組裝 → tw_brief.json / tw_weekly.md）**；README.md 由 build_readme.py 重組（週報在最上面）、MANUAL_*.md=維護文件、REVIEW_2026-07.md=改進判準。tw_scanner.py 每次簡報另導出 `tw_scanner_history.json`（2019 起全序列 regime/alerts，帳本回測用）；delta_radar 有背離旗標與退役判準表（REVIEW 改進項 1、2） |
 | data/*.csv | 每日掃描結果（保留一年，靠檔名日期 prune；也是 OI Δ7d 的歷史來源） |
 | data/iv_log/signals_*.json | 信號快照（**永久保存、append-only**；schema v2 含 bid/ask、features、path[]） |
 | data/dashboard/ | `candidates_<市場日>.json` + `latest.json`（結構候選＋綁定策略＋賣點，dashboard 與 Worker 讀）、`decisions_log.json`（tracer 彙整） |
@@ -38,7 +38,7 @@ GitHub Actions 每日掃描 → README.md 妖股報表 + shadow log 信號校準
 | docs/ | CONTEXT 之外的文件：`PLAN_2026-09_strategy_dashboard.md`（預先登記書＋建置）、`PROJECT_ESCAPE_DOOR.md`（GitHub 依賴評估）、`FACTS_ledger.md`（事實庫，人維護、Worker 只寫待審段）、`PROMPT_daily_report_reading.md`（人用 v3）／`_v4.md`（機器用）、`CASEBOOK_2026-07.md`、`exit_playbook.md`、`log.md` |
 
 **雙軌呈現**：軌 A ＝ GitHub README（Python 渲染，CF 掛了也在）；軌 B ＝ CF dashboard（同一批 JSON，多 History／Decisions／事實庫／排程健康）；
-軌 B 另有 `/brief` 電子報（公開唯讀、一頁 TL;DR、不觸發任何動作，可分享連結）。資料主權永遠在 git。
+軌 B 另有 `/brief` 電子報（公開唯讀、一頁 TL;DR、不觸發任何動作，可分享連結）；同一頁帶 `?m=tw` 只呈現台股週報（唯讀，讀 `tw_scanner/output/tw_brief.json`；`/tw` 轉址過去）。資料主權永遠在 git。
 
 **架構原則：平鋪但有序（每雷達一檔+對應 yml）。不做大目錄重構**——
 10 個 workflows 正在跑，重構美觀收益遠低於弄斷每日掃描的風險。
@@ -191,7 +191,7 @@ free ride 與死抱在本樣本幾乎無差，因為只有 3 筆碰過 +100% 賣
 
 1. **不做盤中即時 alert / 推播 / 跟單功能**——擁有者的 edge 在「慢+查證+會說不」，
    即時化會製造 FOMO、跳過查證。快是別人的遊戲。
-2. **不做 portfolio / 損益追蹤**——見第四節 tracing≠portfolio。
+2. **不做 portfolio / 損益追蹤**——見第四節 tracing≠portfolio。（2026-09-12 界線說明：`tw_scanner/dca_ledger.py` 是**規則影子帳本**——等額假設、不記真實部位、不記個人損益，跟 strategy_lab 的 EV 模擬同一性質；它回答「tw_scanner 的訊號對定期定額值多少」，不是「你賺賠多少」。個人曝險與部位一律不進本 repo，本 repo 公開。）
 3. **不在樣本不足時調門檻、不重寫計分公式**——見第五節與第七節。
 4. **不竄改交易日信號的既有欄位**——append-only。
 5. **不做大目錄重構**——10 個 workflows 會斷。

@@ -311,6 +311,37 @@ def backtest(f: pd.DataFrame, alerts: pd.DataFrame, taiex: pd.Series,
     return "\n".join(lines)
 
 
+def backtest_summary(f: pd.DataFrame, alerts: pd.DataFrame, taiex: pd.Series,
+                     cfg: dict) -> dict:
+    """backtest() 的機器可讀版：同樣的事件簇 / 中位數 / 基線 / 命中率。"""
+    horizons = cfg["backtest"]["horizons_days"]
+    px = taiex.reindex(f.index).ffill()
+    fwd = {h: px.shift(-h) / px - 1 for h in horizons}
+    out = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+           "alerts": {}}
+    for name in alerts.columns:
+        days = alerts.index[alerts[name]]
+        episodes = []
+        for d in days:
+            if not episodes or (f.index.get_loc(d) - f.index.get_loc(episodes[-1])) > 5:
+                episodes.append(d)
+        expect_sign = +1 if name == "capitulation" else -1
+        hz = {}
+        for h in horizons:
+            ev = fwd[h].reindex(episodes).dropna()
+            base = fwd[h].dropna()
+            if ev.empty:
+                continue
+            hz[f"{h}d"] = {"n": int(len(ev)), "median_pct": round(float(ev.median()) * 100, 2),
+                           "mean_pct": round(float(ev.mean()) * 100, 2),
+                           "baseline_median_pct": round(float(base.median()) * 100, 2),
+                           "hit_rate": round(float((np.sign(ev) == expect_sign).mean()), 2)}
+        out["alerts"][name] = {"trigger_days": int(len(days)), "episodes": len(episodes),
+                               "episode_dates": [d.strftime("%Y-%m-%d") for d in episodes],
+                               "horizons": hz}
+    return out
+
+
 # ----------------------------------------------------------------------------
 # Briefing renderer (the entire daily output: 溫度 / 鋒面 / 警報)
 # ----------------------------------------------------------------------------
@@ -405,6 +436,30 @@ def append_state(path: str, entry: dict) -> None:
     else:
         hist.append(entry)
     json.dump(hist, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+
+
+def write_history(path: str, f: pd.DataFrame, regime: pd.Series,
+                  score: pd.Series, alerts: pd.DataFrame) -> None:
+    """全序列（2019 起）每日 regime / score / alerts / 四分位 → JSON。
+
+    state.json 只從 2026-06-11 起一日一行；DCA 模擬帳本（dca_ledger.py）要回測
+    2019 起的投降窗與 regime 規則，需要整條序列。每次簡報重寫整檔（推導物，非
+    append-only 狀態；資料源是 cache CSV + config，可重現）。
+    """
+    rows = []
+    for d in f.index:
+        pcts = {c: (None if pd.isna(f.at[d, c + "_pct"]) else round(float(f.at[d, c + "_pct"]), 1))
+                for c in ("f_spot_20d", "tx_delta", "retail_mtx", "margin_chg")}
+        rows.append({
+            "date": str(d.date()),
+            "regime": regime.at[d],
+            "score": None if pd.isna(score.at[d]) else round(float(score.at[d]), 3),
+            "alerts": [c for c in alerts.columns if bool(alerts.at[d, c])],
+            "pcts": pcts,
+        })
+    json.dump({"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+               "n": len(rows), "rows": rows},
+              open(path, "w", encoding="utf-8"), ensure_ascii=False)
 
 
 def synthetic_series(seed: int = 7) -> dict:
@@ -509,6 +564,10 @@ def main() -> int:
     if args.backtest:
         report = backtest(f, alerts, raw["taiex"], cfg)
         path = os.path.join(out_dir, "tw_scanner_backtest.md")
+        # 機器可讀版（週報 tw_brief.py 讀；同一套數字，不另算）
+        json.dump(backtest_summary(f, alerts, raw["taiex"], cfg),
+                  open(os.path.join(out_dir, "tw_scanner_backtest.json"), "w",
+                       encoding="utf-8"), ensure_ascii=False, indent=2)
     else:
         report = render_briefing(f, regime, score, alerts, cfg)
         path = os.path.join(out_dir, "tw_scanner_briefing.md")
@@ -521,6 +580,9 @@ def main() -> int:
                          else round(float(f.iloc[-1][c + "_pct"]), 1))
                      for c in ("f_spot_20d", "tx_delta", "retail_mtx", "margin_chg")},
         })
+        # 全序列導出（DCA 模擬帳本回測 2019 起用；推導物，每次重寫）
+        write_history(os.path.join(out_dir, "tw_scanner_history.json"),
+                      f, regime, score, alerts)
 
     open(path, "w", encoding="utf-8").write(report)
     print(report)

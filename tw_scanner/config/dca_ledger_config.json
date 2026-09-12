@@ -1,0 +1,67 @@
+{
+  "_comment": "dca_ledger — DCA 規則影子帳本。等額假設、不記真實部位、不記損益焦慮；只回答「tw_scanner 的訊號對定期定額值多少」。全部參數外部化；改參數＝新實驗，舊 ledger.json 由 git 歷史保留。",
+  "instrument": "0050",
+  "history_start": "2019-01-01",
+  "period": "monthly",
+  "buy_day_of_month": 6,
+  "_buy_day_note": "每月 6 日（含）之後第一個交易日收盤買；6 日避開月初與月營收（10 日）前的資訊日",
+  "amount_twd": 10000,
+  "fees": {
+    "fee_rate": 0.001425,
+    "fee_discount": 0.6,
+    "min_fee_twd": 1,
+    "_note": "只算買進手續費（券商折扣後 0.0855%）；ETF 不賣、不算交易稅；零股允許小數單位（影子帳本）"
+  },
+  "rules": {
+    "plain": {
+      "enabled": true,
+      "label": "純定期定額"
+    },
+    "weekly_gate": {
+      "enabled": true,
+      "label": "週檢查・月預算・投降窗即刻投入",
+      "decision_weekday": 4,
+      "multiplier": 2.0,
+      "_note": "每週五（休市則前一交易日）收盤後看：本月預算未動 且 本週有投降警報 → 下一交易日投入 multiplier×amount，當月不再行動；到當月最後一個決策週仍未動 → 下一交易日投入 amount。同一筆月預算換時點；×2 的另一半是額外資金。2026-09-12 使用者提出（每月太長、改每週 update、當週行動當月不再行動）。"
+    },
+    "capitulation_boost": {
+      "enabled": true,
+      "label": "定期定額＋投降窗加碼",
+      "multiplier": 2.0,
+      "episode_gap_sessions": 5,
+      "_note": "投降警報是收盤後才知道 → 下一交易日收盤加買 (multiplier−1)×amount；同一事件簇（5 個交易日內）只加一次。加碼是額外資金，不挪用下一期。"
+    },
+    "regime_scaled": {
+      "enabled": true,
+      "label": "定期定額＋鋒面調節",
+      "multipliers": {
+        "CAPITULATION": 2.0,
+        "DE_RISK": 1.5,
+        "NEUTRAL": 1.0,
+        "RISK_ON": 1.0,
+        "OVERHEAT": 0.5,
+        "UNCALIBRATED": 1.0
+      },
+      "_note": "假說，預期無效（鋒面是溫度描述，不是擇時）。放進來是為了讓資料處決它，不是因為相信它。"
+    },
+    "lump_sum": {
+      "enabled": true,
+      "label": "對照：一次投入",
+      "_note": "plain 的總投入在第一個買日一次投入；顯示 DCA 的機會成本，不是可執行策略（沒人一開始就有全部的錢）"
+    }
+  },
+  "windows": {
+    "full": null,
+    "last_12m": 12,
+    "_note": "null = 自 history_start 起；整數 = 最近 N 個月"
+  },
+  "boost_eval": {
+    "forward_sessions": 60,
+    "_note": "每筆加碼另評：跟「同一筆錢等到下一個例行買日再買」比（edge），與 T+60 交易日報酬"
+  },
+  "prices": {
+    "dataset": "TaiwanStockPrice",
+    "cache": "dca_prices.json",
+    "refetch_tail_days": 7
+  }
+}

@@ -911,7 +911,8 @@ def aggregate(results: list[ModuleResult], cfg: dict) -> str:
 
 def render_report(results: list[ModuleResult], overall: str, cfg: dict,
                   partial_modules: Optional[list[str]] = None,
-                  m7: Optional[dict] = None) -> str:
+                  m7: Optional[dict] = None, divergence: Optional[dict] = None,
+                  retirement: Optional[dict] = None) -> str:
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     if partial_modules:
         # BUG-1: a partial run has no real overall verdict — show the module
@@ -925,6 +926,11 @@ def render_report(results: list[ModuleResult], overall: str, cfg: dict,
         "",
         verdict_line,
         "",
+    ]
+    if divergence is not None:
+        # 儀器的存在理由要說出口（REVIEW_2026-07 改進項 1）：前提 vs 價格
+        lines += [f"## {'🔀 ' if divergence.get('flag') else ''}前提 vs 價格：{divergence.get('text') or 'NO_DATA'}", ""]
+    lines += [
         "GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、",
         "敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。",
         "M7（後果回填，見報告末）為背景校準任務，不出色燈但每次 run 回填 2308 遠期報酬。",
@@ -963,6 +969,15 @@ def render_report(results: list[ModuleResult], overall: str, cfg: dict,
                      f"（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表")
     lines.append("")
 
+    if retirement and retirement.get("rows"):
+        lines.append(f"### 退役判準（自動計算，判決是人下的；覆核日 {retirement.get('review_date') or '—'}）")
+        lines.append(f"| 模組 | GREEN n / T+{retirement['horizon']} 超額 | YELLOW+RED n / 超額 | 判準 |")
+        lines.append("|---|---|---|---|")
+        for r in retirement["rows"]:
+            ga = "—" if r["green_avg"] is None else f"{r['green_avg']:+.2f}"
+            ba = "—" if r["bad_avg"] is None else f"{r['bad_avg']:+.2f}"
+            lines.append(f"| {r['module']} | {r['green_n']} / {ga} | {r['bad_n']} / {ba} | {r['verdict']} |")
+        lines.append("")
     lines.append("---")
     lines.append("*delta_radar — optscnr radar family. Shadow-mode instrument: "
                  "this is a measurement device, not a trade signal.*")
@@ -970,12 +985,13 @@ def render_report(results: list[ModuleResult], overall: str, cfg: dict,
 
 
 def append_state(results: list[ModuleResult], overall: str, path: str,
-                 modules_requested: list[str]) -> None:
+                 modules_requested: list[str], extra: Optional[dict] = None) -> None:
     entry = {
         "ts": dt.datetime.now(dt.timezone.utc).isoformat(),
         "overall": overall,
         "modules_requested": sorted(modules_requested),
         "modules": [asdict(r) for r in results],
+        **(extra or {}),
     }
     history = []
     if os.path.exists(path):
@@ -1094,6 +1110,98 @@ def _module_short(name: str) -> str:
     return name.split()[0] if name else name
 
 
+# ----------------------------------------------------------------------------
+# 背離旗標（REVIEW_2026-07 改進項 1）+ 退役判準自動化（改進項 2）
+# ----------------------------------------------------------------------------
+
+def latest_full_verdict(history: list) -> Optional[dict]:
+    """最近一次「全模組」run 的總判定（PARTIAL 不算——它沒有真的總判定）。"""
+    for e in reversed(history or []):
+        ov = str(e.get("overall", ""))
+        if ov in (GREEN, YELLOW, RED):
+            return {"overall": ov, "ts": e.get("ts")}
+    return None
+
+
+def compute_divergence(history: list, series: list[tuple], cfg: dict) -> dict:
+    """前提（最近全模組總判定）vs 價格（2308 近 N 交易日報酬）。
+
+    - 前提 GREEN/YELLOW 且價格跌破 price_drop_pct → premise_ok_price_down
+      「跌的是估值不是基本面（或市場知道儀器不知道的事）」——這是儀器存在的理由。
+    - 前提 RED 且價格未跌（> price_flat_pct）→ premise_broken_price_up。
+    - 其餘 None。只呈現不裁決；資料缺 → NO_DATA。
+    """
+    d = cfg.get("divergence", {})
+    lb = int(d.get("lookback_sessions", 20))
+    out = {"flag": None, "text": None, "premise": None, "premise_ts": None,
+           "ret_pct": None, "lookback_sessions": lb, "as_of": None}
+    v = latest_full_verdict(history)
+    if v:
+        out["premise"], out["premise_ts"] = v["overall"], v["ts"]
+    if not series or len(series) <= lb:
+        out["text"] = "NO_DATA（價格序列不足）"
+        return out
+    last_d, last_px = series[-1]
+    base_px = series[-1 - lb][1]
+    if not base_px:
+        out["text"] = "NO_DATA（基期價格為 0）"
+        return out
+    ret = round((last_px / base_px - 1) * 100, 2)
+    out["ret_pct"], out["as_of"] = ret, last_d
+    if not v:
+        out["text"] = "尚無全模組總判定（只有 PARTIAL run）"
+        return out
+    if v["overall"] in (GREEN, YELLOW) and ret <= float(d.get("price_drop_pct", -10.0)):
+        out["flag"] = "premise_ok_price_down"
+        out["text"] = (f"🔀 背離：前提健在（{v['overall']}）、價格 {lb} 日 {ret:+.1f}% —— "
+                       "跌的是估值不是基本面（或市場知道儀器不知道的事）")
+    elif v["overall"] == RED and ret > float(d.get("price_flat_pct", 0.0)):
+        out["flag"] = "premise_broken_price_up"
+        out["text"] = (f"🔀 反向背離：前提轉紅、價格 {lb} 日 {ret:+.1f}% 未跌 —— "
+                       "市場不買儀器的帳，或儀器誤判")
+    else:
+        out["text"] = f"無背離（前提 {v['overall']}、價格 {lb} 日 {ret:+.1f}%）"
+    return out
+
+
+def retirement_check(history: list, cfg: dict) -> dict:
+    """退役判準（REVIEW_2026-07 §二 改進項 2，寫死防捨不得）：
+
+    任一模組其 GREEN cohort n ≥ min_cohort_n 後，T+H 超額報酬仍劣於自己的
+    YELLOW/RED cohort → 該模組「處決候選」。整支雷達：review_date 覆核。
+    只算、只印，不自動改 config（判決是人下的）。
+    """
+    r = cfg.get("retirement", {})
+    min_n, h = int(r.get("min_cohort_n", 30)), int(r.get("horizon", 20))
+    key = f"t{h}_excess_pct"
+    cohorts: dict[str, dict[str, list]] = {}
+    for e in history or []:
+        o = e.get("outcomes") or {}
+        if o.get(key) is None:
+            continue
+        for m in e.get("modules", []):
+            cohorts.setdefault(_module_short(m["module"]), {}).setdefault(m["status"], []).append(o[key])
+    rows = []
+    for mod in sorted(cohorts):
+        c = cohorts[mod]
+        g = c.get(GREEN, [])
+        bad = c.get(YELLOW, []) + c.get(RED, [])
+        g_avg = sum(g) / len(g) if g else None
+        b_avg = sum(bad) / len(bad) if bad else None
+        if g_avg is None or b_avg is None:
+            verdict = "樣本不足（缺一側 cohort）"
+        elif len(g) < min_n:
+            verdict = f"累積中（GREEN n={len(g)} < {min_n}）" + ("；方向反" if g_avg < b_avg else "；方向對")
+        elif g_avg < b_avg:
+            verdict = "⚠️ 處決候選：GREEN 劣於 YELLOW/RED"
+        else:
+            verdict = "通過最低檢驗：GREEN 優於 YELLOW/RED"
+        rows.append({"module": mod, "green_n": len(g), "green_avg": None if g_avg is None else round(g_avg, 2),
+                     "bad_n": len(bad), "bad_avg": None if b_avg is None else round(b_avg, 2),
+                     "verdict": verdict})
+    return {"horizon": h, "min_cohort_n": min_n, "review_date": r.get("review_date"), "rows": rows}
+
+
 def print_hit_rate(cfg: dict, state_path: str) -> int:
     """Per-(module, status) EXCESS-return table (2308 − benchmark).
 
@@ -1156,6 +1264,14 @@ def print_hit_rate(cfg: dict, state_path: str) -> int:
     print(f"\n_超額報酬 = 2308 − {bench_id}（同 T+N 交易日視窗），已抽掉市場 beta。"
           "shadow-mode instrument：校準 gate 有效性，非交易訊號。"
           "n 小、單一行情時只讀方向不讀精度。_")
+    rt = retirement_check(history, cfg)
+    print(f"\n## 退役判準（GREEN n≥{rt['min_cohort_n']} 且劣於 YELLOW/RED → 處決候選；覆核 {rt.get('review_date') or '—'}）\n")
+    print(f"| 模組 | GREEN n / T+{rt['horizon']} 超額 | YELLOW+RED n / 超額 | 判準 |")
+    print("|---|---|---|---|")
+    for r in rt["rows"]:
+        ga = "—" if r["green_avg"] is None else f"{r['green_avg']:+.2f}"
+        ba = "—" if r["bad_avg"] is None else f"{r['bad_avg']:+.2f}"
+        print(f"| {r['module']} | {r['green_n']} / {ga} | {r['bad_n']} / {ba} | {r['verdict']} |")
     return 0
 
 
@@ -1182,14 +1298,16 @@ def _fixtures() -> dict:
                              "revenue": base * (r ** i), "date": f"{y}-{m+1:02d}-10"})
             return rows
         if dataset == "TaiwanStockPrice":
-            # deterministic daily series, weekdays only, from 2026-05-01.
+            # deterministic daily series, weekdays only, from 2026-05-01 to
+            # today+90d (an entry dated today needs T+20 forward closes; a fixed
+            # end date rotted the selftest once the calendar passed it).
             # 2308 +1%/day, benchmark(0050) +0.5%/day → non-trivial excess so the
             # M7 excess-return path is exercised: t5 excess ≈ 5.10 − 2.53 = +2.57%.
             per_day = 1.005 if str(data_id) != cfg.get("ticker_tw", "2308") else 1.01
             rows = []
             d = dt.date(2026, 5, 1)
             close = 300.0
-            while d <= dt.date(2026, 8, 31):
+            while d <= dt.date.today() + dt.timedelta(days=90):
                 if d.weekday() < 5:  # Mon-Fri
                     rows.append({"date": d.isoformat(), "close": round(close, 2)})
                     close *= per_day
@@ -1363,7 +1481,25 @@ def main() -> int:
     is_partial = set(ran_keys) != set(MODULE_ORDER)
     state_overall = (f"PARTIAL({','.join(ran_keys)})" if is_partial else overall)
     report_path = os.path.join(out_dir, "delta_radar_report.md")
-    append_state(results, state_overall, state_path, ran_keys)
+
+    # 背離旗標：前提（最近全模組總判定，含本次若為全模組）vs 2308 近 20 日價格。
+    # 價格抓不到 → NO_DATA 文字，不擋 run。
+    divergence: Optional[dict] = None
+    if cfg.get("divergence", {}).get("enabled", True):
+        hist_for_div = prior_history + ([{"overall": state_overall, "ts": dt.datetime.now(dt.timezone.utc).isoformat()}]
+                                        if not is_partial else [])
+        try:
+            fetch = fx["finmind"] if args.selftest else finmind_fetch
+            lb = int(cfg["divergence"].get("lookback_sessions", 20))
+            start = (dt.date.today() - dt.timedelta(days=lb * 2 + 20)).isoformat()
+            series = _price_close_series(fetch("TaiwanStockPrice", cfg["ticker_tw"], start, cfg))
+            divergence = compute_divergence(hist_for_div, series, cfg)
+        except Exception as e:
+            divergence = compute_divergence(hist_for_div, [], cfg)
+            divergence["text"] = f"NO_DATA（{type(e).__name__}: {e}）"
+        print(f"[divergence] {divergence.get('text')}", file=sys.stderr)
+    append_state(results, state_overall, state_path, ran_keys,
+                 extra={"divergence": divergence} if divergence else None)
 
     # M7: after each run, backfill T+5/10/20 outcomes onto past entries (runs
     # BEFORE render so the report can surface it). Never crashes the run.
@@ -1385,9 +1521,16 @@ def main() -> int:
             m7_summary = {"error": f"{type(e).__name__}: {e}"}
             print(f"[m7] backfill skipped: {type(e).__name__}: {e}", file=sys.stderr)
 
+    retirement: Optional[dict] = None
+    try:
+        with open(state_path, encoding="utf-8") as f:
+            retirement = retirement_check(json.load(f), cfg)
+    except Exception as e:
+        print(f"[retirement] skipped: {type(e).__name__}: {e}", file=sys.stderr)
+
     report = render_report(results, overall, cfg,
                            partial_modules=ran_keys if is_partial else None,
-                           m7=m7_summary)
+                           m7=m7_summary, divergence=divergence, retirement=retirement)
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report)
 
