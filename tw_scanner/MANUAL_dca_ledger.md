@@ -58,6 +58,18 @@ python tw_scanner/tw_brief.py --output-dir tw_scanner/output
 python tw_scanner/tw_brief.py --selftest
 ```
 
+## 分割還原（splits.py，2026-09-12 首跑實測後補）
+
+FinMind `TaiwanStockPrice` 是**未還原**收盤。首跑帳本顯示純 DCA 七年只賺 0.75%，追查是 0050 在
+2025-06-18 四拆一（188.65 → 47.57）沒還原，分割前買到的單位少算四倍；賭場名單裡緯穎 6669 也在
+2026-09-02 三拆一（20 日報酬曾顯示 −64%）。`splits.py` 共用：
+
+- `detect_splits`：相鄰有效收盤比率落在 2/3/4/5/8/10 倍（或倒數）±8% → 分割候選；自動還原並在報告印警告。
+- config `splits.override` 是人確認過的分割（0050、6669 已寫入）；`ignore` 宣告不是分割；`auto_detect` 可關。
+- 快取存原始價、計算用還原價；casino_tracker 另會用還原價重算 state 裡的衍生欄位（ret/excess，
+  標 `features_repaired`），這是資料還原不是竄改（CONTEXT §六同一原則）。
+- 零價（停牌／缺值）一律剔除。
+
 ## 已知限制
 
 1. 0050 除息：用還原前收盤，DCA 報酬少算配息（約 3–4%/年）；規則之間比較不受影響（同一序列）。
