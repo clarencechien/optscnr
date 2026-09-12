@@ -1,44 +1,24 @@
 {
-  "updated_at": "2026-09-05T04:30:25.947128",
+  "updated_at": "2026-09-12T04:35:27.574126",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 3,
+  "count": 1,
   "tickers": [
-    "CHPT",
-    "DDD",
-    "BRZE"
+    "CHPT"
   ],
   "details": [
     {
       "symbol": "CHPT",
-      "price": 9.89,
-      "gain_30d_pct": 82.8,
-      "market_cap_m": 267.0,
-      "avg_volume_m": 3.26,
-      "short_pct_float": 22.6,
-      "score": 30.87
-    },
-    {
-      "symbol": "DDD",
-      "price": 3.46,
-      "gain_30d_pct": 31.6,
-      "market_cap_m": 575.0,
-      "avg_volume_m": 2.17,
-      "short_pct_float": 27.2,
-      "score": 30.35
-    },
-    {
-      "symbol": "BRZE",
-      "price": 31.96,
-      "gain_30d_pct": 35.9,
-      "market_cap_m": 3600.0,
-      "avg_volume_m": 2.52,
-      "short_pct_float": 13.7,
-      "score": 17.31
+      "price": 9.06,
+      "gain_30d_pct": 65.9,
+      "market_cap_m": 243.0,
+      "avg_volume_m": 3.76,
+      "short_pct_float": 19.8,
+      "score": 26.38
     }
   ]
 }
