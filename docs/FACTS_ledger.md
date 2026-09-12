@@ -243,3 +243,5 @@
 - IBIT ｜ FOMC 會議紀錄排定 2026-10-06 14:00 ET 公布，落在 10/16 到期前 ｜ 2026-10-06 ｜ https://www.smartcalendars.ai/en/feeds/fed-fomc-meeting-calendar ｜ 2026-09-10 LLM 提案
 - IBIT ｜ 2026-09-07 比特幣約 $76,612，前一日現貨 BTC ETF 淨流入 7.31 億美元；8/31 報導 BTC 因 Fed 偏鷹訊號停在 $80K 以下、流入 9.24 億美元 ｜ 2026-09-07 ｜ https://www.cnbc.com/quotes/IBIT ｜ 2026-09-10 LLM 提案
 - IBIT ｜ IBIT 2026-09-10 收 44.29（前收 44.39），52 週區間 32.84-71.82，淨資產約 614 億美元，年初至今總報酬 -8.90% ｜ 2026-09-10 ｜ https://www.investing.com/etfs/ibit-nasdaq ｜ 2026-09-10 LLM 提案
+- IBIT ｜ 2026-10-27/28 為年內下一場 FOMC，落在 10/16 到期之後 ｜ 2026-10-28 ｜ https://blog.mexc.com/finance/federal-reserve-meeting-dates-full-2026-fomc-calendar-and-policy-schedule/ ｜ 2026-09-11 LLM 提案
+- IBIT ｜ 2026-09-11 IBIT 收 43.75，日內區間 43.05-45.22，成交 4,750 萬股；52 週區間 32.84-71.82 ｜ 2026-09-11 ｜ https://robinhood.com/us/en/stocks/IBIT/ ｜ 2026-09-11 LLM 提案
