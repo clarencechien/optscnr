@@ -250,5 +250,18 @@
     "overall_red_min_reds": 2,
     "overall_yellow_min_yellows": 2,
     "fail_ci_on_red": false
+  },
+  "divergence": {
+    "_basis": "REVIEW_2026-07 改進項 1：前提健在＋價格重挫 = 跌的是估值不是基本面；反向亦標。只呈現不裁決。",
+    "enabled": true,
+    "lookback_sessions": 20,
+    "price_drop_pct": -10.0,
+    "price_flat_pct": 0.0
+  },
+  "retirement": {
+    "_basis": "REVIEW_2026-07 改進項 2（寫死防捨不得）：模組 GREEN cohort n≥30 後 T+20 超額仍劣於自己 YELLOW/RED → 處決候選；整支雷達 2026-10 底覆核。程式只算只印，不改 config。",
+    "min_cohort_n": 30,
+    "horizon": 20,
+    "review_date": "2026-10-31"
   }
 }

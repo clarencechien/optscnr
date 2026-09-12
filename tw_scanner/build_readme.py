@@ -18,8 +18,10 @@ OUT_DIR = os.path.join(HERE, "output")
 README_PATH = os.path.join(HERE, "README.md")
 
 SECTIONS = [
+    ("tw_weekly.md", "（週報尚無輸出：tw_brief.py 在天氣台／delta 跑完後組裝）"),
     ("tw_scanner_briefing.md", "（天氣台今日簡報尚無輸出）"),
     ("delta_radar_report.md", "（delta radar 報告尚無輸出）"),
+    ("dca_ledger.md", None),           # DCA 規則影子帳本（每晚重算；缺了不佔位）
     ("tw_scanner_backtest.md", None),  # 回測是月更，缺了不用佔位
 ]
 
@@ -45,11 +47,12 @@ def mtime_str(name):
 
 
 def main():
-    md = "# 🇹🇼 台股雷達站（tw_scanner + delta_radar）\n\n"
+    md = "# 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + DCA 影子帳本）\n\n"
     md += f"_README 由 build_readme.py 於 {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')} 重組；"
     md += "兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_\n\n"
     md += "> 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜"
     md += "[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜"
+    md += "[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)｜"
     md += "改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)\n\n"
     md += "---\n\n"
 

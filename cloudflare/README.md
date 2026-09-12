@@ -68,6 +68,14 @@ Cron 不走 HTTP，不受 Access 影響。原本的 WAF Challenge 可以拿掉�
 
 不做這步也沒關係：你自己登入後 `/brief` 一樣能開，只是別人開會被 Access 擋。
 
+### 台股週報 `/tw`（公開分享用、唯讀）
+
+`/tw` 是給「定期定額買 0050 的人」一週看一次的一頁：週檢查・月預算的機械指示、DCA 規則影子帳本、
+籌碼溫度計、2308 論點監控與背離旗標、下週日曆、資料健康。它只讀 `/api/tw`（Worker 從 GitHub 讀
+`tw_scanner/output/tw_brief.json`，快取 5 分鐘），**不觸發任何動作**。JSON 由 Actions 的
+`tw_scanner/tw_brief.py` 在天氣台／delta_radar 跑完後組裝；Worker 只轉發。
+要公開分享，Zero Trust 的 Bypass 應用程式再加兩條 path：`/tw` 與 `/api/tw`（同 `/brief` 的做法）。
+
 ## 它做什麼
 
 | 時間 (UTC) | 動作 |
@@ -75,7 +83,7 @@ Cron 不走 HTTP，不受 Access 影響。原本的 WAF Challenge 可以拿掉�
 | 23:05 平日 | ① 第二鬧鐘：22:00 之後 scanner.yml 有沒有任何 run；沒有 → `workflow_dispatch` ② decisions（見下） |
 | 00:35 週二~六 | 同上（GitHub 延遲 3-8 小時的事故形狀，跨日再檢查一次） |
 | 02:05 週二~六 | 同上（decisions 最後一次補：補發的 scanner 到這時也該跑完了） |
-| 任何時間 | `/api/health` 排程健康；`/api/alarm/check` 手動補發；`POST /api/decide` 手動產生 decisions；`/api/decisions` 最近 N 天；`/api/facts` 解析後的事實庫；**`/brief` + `/api/brief` 公開唯讀電子報** |
+| 任何時間 | `/api/health` 排程健康；`/api/alarm/check` 手動補發；`POST /api/decide` 手動產生 decisions；`/api/decisions` 最近 N 天；`/api/facts` 解析後的事實庫；**`/brief` + `/api/brief` 公開唯讀電子報**；**`/tw` + `/api/tw` 公開唯讀台股週報** |
 
 **decisions 流程（冪等，同一市場日只寫一次）**：讀 main 的 `data/dashboard/latest.json` → `data/decisions/<市場日>.json` 已存在就跳過
 → 候選 0 筆：不呼叫 LLM、直接記檔 → 否則讀 `docs/PROMPT_daily_report_reading_v4.md` 的 ```` ```prompt ```` 區塊（**改 prompt 不用重新部署**）
