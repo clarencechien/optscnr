@@ -1,0 +1,92 @@
+{
+  "market_date": "2026-09-11",
+  "decided_at": "2026-09-12T04:39:37.837Z",
+  "source": "manual",
+  "prompt_version": "v4.1",
+  "model": "anthropic/claude-opus-5",
+  "model_served": "anthropic/claude-opus-5",
+  "llm_called": true,
+  "web_search": true,
+  "candidates_generated_at": "2026-09-12T00:22:08Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-09-11_IBIT_2026-10-16_47.0",
+      "ticker": "IBIT",
+      "expiry": "2026-10-16",
+      "strike": 47,
+      "entry_price": 0.93,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-09-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_event": null,
+      "q_gap": null,
+      "q_delta": null,
+      "note": "ETF無財報；FOMC 9/16 決議前基準利率 3.50-3.75%，7/29 以 9:3 維持不變",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "IBIT",
+      "fact": "FOMC 下次會議 2026-09-15/16，9/16 14:00 ET 公布決議並附經濟預測點陣圖；起點利率區間 3.50%-3.75%，7/28-29 會議以 9:3 維持不變",
+      "date": "2026-09-16",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "2026-10-27/28 為年內下一場 FOMC，落在 10/16 到期之後",
+      "date": "2026-10-28",
+      "source": "https://blog.mexc.com/finance/federal-reserve-meeting-dates-full-2026-fomc-calendar-and-policy-schedule/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "2026-09-11 IBIT 收 43.75，日內區間 43.05-45.22，成交 4,750 萬股；52 週區間 32.84-71.82",
+      "date": "2026-09-11",
+      "source": "https://robinhood.com/us/en/stocks/IBIT/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "2026-09-07 比特幣約 76,612 美元，現貨 BTC ETF 單日淨流入 7.31 億美元；2026-08-31 報導 Fed 偏鷹訊號下 BTC 卡在 8 萬美元以下、流入 9.24 億美元",
+      "date": "2026-09-07",
+      "source": "https://www.cnbc.com/quotes/IBIT"
+    }
+  ],
+  "facts_appended": 2,
+  "raw_answer": "{\"market_date\":\"2026-09-11\",\"candidates\":[{\"signal_id\":\"2026-09-11_IBIT_2026-10-16_47.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-09-16\",\"what\":\"FOMC 9/15-16 會議利率決議（含點陣圖），為聯準會事件非本基金自身事件；10/27-28 另一場在到期後\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},\"q_gap\":{\"answer\":\"無\",\"direction\":null,\"pct\":null,\"date\":null},\"q_delta\":{\"positive\":true,\"confirmed\":true}},{\"note\":\"ETF無財報；FOMC 9/16 決議前基準利率 3.50-3.75%，7/29 以 9:3 維持不變\",\"signal_id\":\"2026-09-11_IBIT_2026-10-16_47.0\"}],\"facts_proposed\":[{\"ticker\":\"IBIT\",\"fact\":\"FOMC 下次會議 2026-09-15/16，9/16 14:00 ET 公布決議並附經濟預測點陣圖；起點利率區間 3.50%-3.75%，7/28-29 會議以 9:3 維持不變\",\"date\":\"2026-09-16\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},{\"ticker\":\"IBIT\",\"fact\":\"2026-10-27/28 為年內下一場 FOMC，落在 10/16 到期之後\",\"date\":\"2026-10-28\",\"source\":\"https://blog.mexc.com/finance/federal-reserve-meeting-dates-full-2026-fomc-calendar-and-policy-schedule/\"},{\"ticker\":\"IBIT\",\"fact\":\"2026-09-11 IBIT 收 43.75，日內區間 43.05-45.22，成交 4,750 萬股；52 週區間 32.84-71.82\",\"date\":\"2026-09-11\",\"source\":\"https://robinhood.com/us/en/stocks/IBIT/\"},{\"ticker\":\"IBIT\",\"fact\":\"2026-09-07 比特幣約 76,612 美元，現貨 BTC ETF 單日淨流入 7.31 億美元；2026-08-31 報導 Fed 偏鷹訊號下 BTC 卡在 8 萬美元以下、流入 9.24 億美元\",\"date\":\"2026-09-07\",\"source\":\"https://www.cnbc.com/quotes/IBIT\"}]}",
+  "usage": {
+    "prompt_tokens": 29363,
+    "completion_tokens": 1530,
+    "total_tokens": 30893,
+    "cost": 0.205065,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.205065,
+      "upstream_inference_prompt_cost": 0.146815,
+      "upstream_inference_completions_cost": 0.03825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 588,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
