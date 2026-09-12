@@ -3,7 +3,16 @@
   "name": "tsmc_radar",
   "display": "TSMC Radar (2330.TW)",
   "ticker_tw": "2330",
-  "modules_full": ["m1", "m2", "m3", "m4", "m5", "m6", "m8", "m9"],
+  "modules_full": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5",
+    "m6",
+    "m8",
+    "m9"
+  ],
   "m3_mode": "adr_premium",
   "output_dir": "output",
   "endpoints": {
@@ -30,11 +39,29 @@
     "fcf_ni_red": 0.2,
     "inventory_runaway_pct": 15.0,
     "account_patterns": {
-      "contract_liabilities": ["^CurrentContractLiabilities$", "contract.*liab"],
-      "inventory": ["^Inventories$", "^inventor"],
-      "operating_cash_flow": ["^CashFlowsFromOperatingActivities$", "operating.*activit"],
-      "capex": ["^PropertyAndPlantAndEquipment$", "^AcquisitionOfPropertyPlantAndEquipment$", "propert.*plant.*equip"],
-      "net_income": ["^IncomeAfterTaxes$", "^NetIncome$", "^ProfitLossAttributableToOwnersOfParent$", "^ProfitLoss$"]
+      "contract_liabilities": [
+        "^CurrentContractLiabilities$",
+        "contract.*liab"
+      ],
+      "inventory": [
+        "^Inventories$",
+        "^inventor"
+      ],
+      "operating_cash_flow": [
+        "^CashFlowsFromOperatingActivities$",
+        "operating.*activit"
+      ],
+      "capex": [
+        "^PropertyAndPlantAndEquipment$",
+        "^AcquisitionOfPropertyPlantAndEquipment$",
+        "propert.*plant.*equip"
+      ],
+      "net_income": [
+        "^IncomeAfterTaxes$",
+        "^NetIncome$",
+        "^ProfitLossAttributableToOwnersOfParent$",
+        "^ProfitLoss$"
+      ]
     }
   },
   "m3_adr_premium": {
@@ -45,10 +72,12 @@
     "lookback_days": 365
   },
   "m4_customs_flow": {
-    "_basis": "美國自台灣進口 HS 8542（積體電路）滾動 3 月 YoY。弱代理：台積多數晶圓運往亞洲封測，不直運美國；只當背景。",
+    "_basis": "美國自台灣進口 HS 854231（處理器與控制器，GPU/ASIC 歸此）滾動 3 月 YoY。首跑用 4 位 8542 對 COMM_LVL=HS6 回空字串 → 改 6 位。弱代理：台積多數晶圓運往亞洲封測，不直運美國；只當背景。",
     "_calibrate": "首跑看水位；若序列太小或噪音太大，考慮改為觀察模組。",
-    "hs_code": "8542",
-    "country_codes": {"taiwan": "5830"},
+    "hs_code": "854231",
+    "country_codes": {
+      "taiwan": "5830"
+    },
     "months_back": 30,
     "rolling_window_months": 3,
     "green_yoy_pct": 15.0,
@@ -64,41 +93,110 @@
     "buckets": {
       "export_controls_tariffs": {
         "query": "TSMC (export controls OR tariff OR \"Section 232\" OR sanctions)",
-        "keywords": ["export control", "tariff", "section 232", "sanction", "restriction", "ban"],
+        "keywords": [
+          "export control",
+          "tariff",
+          "section 232",
+          "sanction",
+          "restriction",
+          "ban"
+        ],
         "yellow_hits": 6,
         "red_hits": 15,
-        "must_include": ["tsmc", "taiwan semiconductor", "chip"],
-        "denial_keywords": ["exempt", "exemption", "waiver", "spared", "not affected"]
+        "must_include": [
+          "tsmc",
+          "taiwan semiconductor",
+          "chip"
+        ],
+        "denial_keywords": [
+          "exempt",
+          "exemption",
+          "waiver",
+          "spared",
+          "not affected"
+        ]
       },
       "n2_arizona_ramp": {
         "query": "TSMC (N2 OR 2nm OR Arizona) (delay OR yield OR postpone OR slip)",
-        "keywords": ["delay", "yield", "postpone", "slip", "pushed"],
+        "keywords": [
+          "delay",
+          "yield",
+          "postpone",
+          "slip",
+          "pushed"
+        ],
         "yellow_hits": 3,
         "red_hits": 8,
-        "must_include": ["n2", "2nm", "arizona", "2-nanometer"],
-        "denial_keywords": ["on track", "ahead of schedule", "on schedule", "denies", "rumor"]
+        "must_include": [
+          "n2",
+          "2nm",
+          "arizona",
+          "2-nanometer"
+        ],
+        "denial_keywords": [
+          "on track",
+          "ahead of schedule",
+          "on schedule",
+          "denies",
+          "rumor"
+        ]
       },
       "cowos_capacity": {
         "query": "TSMC CoWoS (shortage OR constraint OR cut OR order)",
-        "keywords": ["shortage", "constraint", "cut", "reduce", "cancel"],
+        "keywords": [
+          "shortage",
+          "constraint",
+          "cut",
+          "reduce",
+          "cancel"
+        ],
         "yellow_hits": 4,
         "red_hits": 10,
-        "must_include": ["cowos", "advanced packaging"],
-        "denial_keywords": ["expansion", "doubling", "on track"]
+        "must_include": [
+          "cowos",
+          "advanced packaging"
+        ],
+        "denial_keywords": [
+          "expansion",
+          "doubling",
+          "on track"
+        ]
       },
       "geopolitics": {
         "query": "Taiwan (PLA OR blockade OR military drills) semiconductor",
-        "keywords": ["blockade", "drills", "invasion", "military", "quarantine"],
+        "keywords": [
+          "blockade",
+          "drills",
+          "invasion",
+          "military",
+          "quarantine"
+        ],
         "yellow_hits": 8,
         "red_hits": 20,
-        "must_include": ["taiwan"]
+        "must_include": [
+          "taiwan"
+        ]
       },
       "hyperscaler_capex": {
         "query": "hyperscaler capex (cut OR reduce OR pause OR slowdown)",
-        "keywords": ["capex cut", "spending cut", "pause", "slowdown", "reduce capital expenditure", "scale back"],
+        "keywords": [
+          "capex cut",
+          "spending cut",
+          "pause",
+          "slowdown",
+          "reduce capital expenditure",
+          "scale back"
+        ],
         "yellow_hits": 4,
         "red_hits": 10,
-        "must_include": ["capex", "capital expenditure", "data center", "datacenter", "ai infrastructure", "hyperscaler"]
+        "must_include": [
+          "capex",
+          "capital expenditure",
+          "data center",
+          "datacenter",
+          "ai infrastructure",
+          "hyperscaler"
+        ]
       }
     },
     "_calibration_note": "門檻是 placeholder；跑 5 次後 z-score 基準自動接手（與 delta 同）。"
@@ -110,24 +208,72 @@
     "divergence_red_pp": 30.0,
     "red_requires_consec_months": 2,
     "cohort": {
-      "foundry_contrast": {"members": ["2330", "2303"], "direction": "cohort_confirm", "_note": "聯電：成熟製程對照"},
-      "backend": {"members": ["2330", "3711", "3037", "2383"], "direction": "cohort_confirm", "_note": "封測／載板／CCL：下游確認"},
-      "asic_lead": {"members": ["2330", "3661", "3443"], "direction": "cohort_confirm", "_note": "ASIC 設計服務：需求前緣"}
+      "foundry_contrast": {
+        "members": [
+          "2330",
+          "2303"
+        ],
+        "direction": "cohort_confirm",
+        "_note": "聯電：成熟製程對照"
+      },
+      "backend": {
+        "members": [
+          "2330",
+          "3711",
+          "3037",
+          "2383"
+        ],
+        "direction": "cohort_confirm",
+        "_note": "封測／載板／CCL：下游確認"
+      },
+      "asic_lead": {
+        "members": [
+          "2330",
+          "3661",
+          "3443"
+        ],
+        "direction": "cohort_confirm",
+        "_note": "ASIC 設計服務：需求前緣"
+      }
     }
   },
   "m7_outcome_backfill": {
     "_basis": "T+5/10/20 遠期報酬；主基準 0050（家族一致），第二基準 SMH（全球半導體，yfinance）——台積佔 0050 約六成，對 0050 的超額幾乎退化，SMH 才看得出台積對全球半導體的相對強弱。",
     "enabled": true,
-    "horizons": [5, 10, 20],
+    "horizons": [
+      5,
+      10,
+      20
+    ],
     "benchmark": "0050",
-    "benchmark_extra": ["SMH"]
+    "benchmark_extra": [
+      "SMH"
+    ]
   },
   "m8_revision_velocity": {
     "_basis": "目標價修正方向比（RSS 中文）；連 2 次 run 偏空才升級；樣本 <3 → NO_DATA。",
     "query": "台積電 (目標價 OR 評等) (上修 OR 下修 OR 調升 OR 調降)",
     "max_items": 40,
-    "up_keywords": ["上修", "調升", "調高", "buy", "overweight", "raise", "upgrade", "outperform"],
-    "down_keywords": ["下修", "調降", "調低", "sell", "underweight", "cut", "downgrade", "reduce"],
+    "up_keywords": [
+      "上修",
+      "調升",
+      "調高",
+      "buy",
+      "overweight",
+      "raise",
+      "upgrade",
+      "outperform"
+    ],
+    "down_keywords": [
+      "下修",
+      "調降",
+      "調低",
+      "sell",
+      "underweight",
+      "cut",
+      "downgrade",
+      "reduce"
+    ],
     "min_total": 3,
     "yellow_down_ratio": 0.6,
     "require_consec": true

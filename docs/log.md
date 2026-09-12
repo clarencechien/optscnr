@@ -286,6 +286,57 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 - **REVIEW_2026-07 補記**：tw_scanner 7/30 警報已入 9/1 月度回測（n=8、20 日中位 +8.72% vs 基線 +2.17%）；
   delta 背離旗標仍未做（10 月中前要）。
 
+## 台股側第 6 批：週報／DCA 影子帳本／賭場 sector／tsmc_radar／電子報改版（2026-09-11～12）
+
+> **給接手 session：動新功能前先 `git log --oneline -40`，再看本節與 CONTEXT §十。** 這批由 ai_radar 那邊的
+> session 跨 repo 做的，PR #30–#34 合併；台股側從「兩支雷達的日報」變成「週報＋影子帳本＋論點監控×2＋賭場記帳」。
+
+### 為什麼
+tw_scanner 唯一可行動的輸出是投降警報，一年響幾次；對 DCA 0050 的人，日報 250 天都是「無」。delta_radar 作為訊號零價值
+（103 筆回填超額為負），REVIEW_2026-07 的背離旗標拖了兩個月沒做。改成「週報＋規則影子帳本」，用使用者的錢當單位回答
+「訊號值多少」；並補齊儀器。
+
+### 改了什麼（依 commit）
+| commit | 內容 |
+|---|---|
+| `6d12c1c` (#30) | **dca_ledger.py**（DCA 規則影子帳本：純 DCA／週檢查月預算／投降窗加碼／鋒面調節／一次投入對照；平均成本、XIRR、每筆加碼 edge）、**tw_brief.py**（週報 `tw_brief.json`＋`tw_weekly.md`）、tw_scanner.py 導出 `tw_scanner_history.json`（2019 起全序列）與 `tw_scanner_backtest.json`、delta_radar **背離旗標**＋**退役判準表**、workflows 接線、Worker `/api/tw` |
+| `4be2780` (#31) | 電子報同一頁切換：`/brief?m=tw` 只呈現台股；`/tw` 轉址；dashboard 導覽 |
+| `134ca0c` (#31) | **casino_tracker.py**（賭場 sector：16 檔台股 AI 個股影子追蹤，只收資料；T+N 對 0050 超額；影子等權 DCA 對 0050；判準寫死） |
+| `f71b117` (#32) | 電子報 RWD：上半一分鐘白話版、下半 `<details>` 可收合、表格 `.scroll`、≤640px 調整 |
+| `edd5fcf` (#32) | **splits.py 分割還原**：首跑實測 0050 2025-06-18 四拆一、6669 2026-09-02 三拆一未還原，帳本全錯（純 DCA 七年 +0.75% → 修後 +230%）；config override/ignore；state 衍生欄位修復 |
+| `107f97e` (#33) | 2308 儀器修正：M8 樣本不足改 NO_DATA、退役判準加狀態翻轉數（`min_flips`）、M9 估值分位（觀察）；**tsmc_radar**（2330）：delta_radar.py instance 化（`name/display/modules_full/m3_mode`）、M3 ADR 溢價、M7 第二基準 SMH、config placeholder |
+| 本 commit (#34) | M4 HS 碼改 6 位（4 位對 HS6 回空）、M6 標題 ticker 化、文件全層更新（本節、CONTEXT §十、MANUAL_tw_scanner 家族結構、README 📚 行） |
+
+### 檔案地圖（tw_scanner/）
+```
+tw_scanner.py        天氣台（＋history.json／backtest.json 導出）        config/tw_scanner_config.json
+delta_radar.py       論點監控引擎（2308 與 2330 共用）                   config/delta_radar_config.json、config/tsmc_radar_config.json
+dca_ledger.py        DCA 規則影子帳本                                     config/dca_ledger_config.json
+casino_tracker.py    賭場 sector 影子追蹤                                 config/casino_config.json
+splits.py            分割還原（共用）
+tw_brief.py          週報組裝（零網路）→ output/tw_brief.json、tw_weekly.md
+build_readme.py      README = 週報＋簡報＋delta＋tsmc＋帳本＋賭場＋回測
+MANUAL_tw_scanner.md / MANUAL_delta_radar.md / MANUAL_dca_ledger.md（含賭場）/ REVIEW_2026-07.md（覆核紀錄一路補記）
+```
+排程：`tw_scanner.yml`（平日 21:52 台北；簡報後接 ledger → casino → brief）、`delta_radar.yml`、`tsmc_radar.yml`（與台達錯開 30 分鐘；跑完重組 brief）。
+Worker：`/brief?m=tw`、`/api/tw`（公開唯讀；Zero Trust Bypass 已加 `/tw`、`/api/tw`）。
+
+### 首跑實測（2026-09-12）與待辦
+- tw-scanner #76：帳本數字太平 → 追出分割未還原（見 edd5fcf）。**教訓入 CONTEXT §六第四例：新資料源首跑先看序列斷層。**
+- tsmc-radar #1：總判定 YELLOW。M1 +53% GREEN、M2 GREEN（合約負債科目未匹配 → n/a）、M3 ADR 溢價 +13.7%（1 年第 19 分位）、
+  M4 NO_DATA（HS 碼，本批修）、**M5 RED（placeholder 門檻：export_controls 16 則 > red 15）**、M6 GREEN、M8 NO_DATA、M9 PER 27.9（3 年第 72 分位）。
+- **待校準（人做）**：tsmc config 各段 `_calibrate`——M1/M2/M4/M5 門檻對照真資料；M2 跑 `--dump-accounts --config config/tsmc_radar_config.json` 找台積合約負債科目名；
+  M5 跑 5 次後 z-score 基準接手、RED 會自己退。校準前只看方向不看燈色。
+- casino `in_0050` 是人工標記，季調要對。
+- delta 下次全模組 run（週一）背離旗標會第一次亮（前提 YELLOW、價格 20 日 −14%）。
+- 判準（都寫死了，別捨不得）：DCA 投降窗規則 ≥8 簇 edge>0 且勝率 ≥60%；鋒面調節不優於純 DCA → 處決；賭場籃子 ≥12 個月、
+  三分位每側 n≥30；delta 10/31 覆核、tsmc 12/31 覆核；退役判準狀態翻轉 <3 次一律無法判定。
+
+### 紅線對照
+- 紅線 2（不做 portfolio）：影子帳本＝等額假設規則帳，不記真實部位與個人損益；個人曝險一律不進本 repo（公開）。
+- 紅線 3（不調門檻）：本批零閾值變動；新 config 的 placeholder 是「尚未校準」不是「調過」。
+- 紅線 5（不重構）：一切平鋪在 tw_scanner/，10 個 workflows 未動路徑。
+
 ## 策略矩陣 shadow + 結構候選 + dashboard 資料層（2026-09-08，PLAN_2026-09_strategy_dashboard.md 第 1、2、4 批）
 
 - **strategy_lab.py（新）**：預先登記的分類邊界（$1.5/$3、DTE 20/45/120、IV 50）、三策略

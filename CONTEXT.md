@@ -205,6 +205,8 @@ free ride 與死抱在本樣本幾乎無差，因為只有 3 筆碰過 +100% 賣
 
 ## 十、給接手 session 的最短路徑
 
+0. **先 `git log --oneline -40`**：看最近誰動了什麼（多個 session 可能同時在改），再讀 docs/log.md 最上面的專節。
+   台股側最近一批見 log「台股側第 6 批（2026-09-11～12）」。
 1. 讀本文件（你正在做）
 2. 看 SHADOWLOG_當月.md 了解校準現況；看 CF dashboard 的 History／Decisions（或 `data/strategy_matrix.json`、`data/dashboard/decisions_log.json`）
 3. 看 docs/PLAN_2026-09_strategy_dashboard.md 第 0、2、3、8 節（預先登記與 tracker 現況）、docs/log.md、docs/exit_playbook.md
