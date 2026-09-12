@@ -28,6 +28,7 @@ from typing import Optional
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+from splits import resolve as resolve_splits  # noqa: E402
 
 
 # ----------------------------------------------------------------------------
@@ -155,6 +156,48 @@ def revenue_features(rev: dict, k: int) -> dict:
     return {"latest_month": ms[-1], "yoy_pct": round(vals[-1], 1),
             "yoy_avg_pct": round(sum(vals) / len(vals), 1),
             "yoy_slope_pp": None if slope is None else round(slope, 2)}
+
+
+def adjust_all(cfg: dict, prices: dict) -> tuple[dict, list[dict], list[str]]:
+    """每檔（含基準）分割還原；回 (還原後 prices, 採用的分割清單, 警告)。零價一律剔除。"""
+    out, used, warns = {}, [], []
+    for t, ser in (prices or {}).items():
+        adj, sp, w = resolve_splits(ser, cfg.get("splits"), t)
+        out[t] = adj
+        used += [{"ticker": t, **s} for s in sp]
+        warns += w
+    return out, used, warns
+
+
+def repair_features(cfg: dict, state_path: str, prices: dict) -> int:
+    """用還原後價格重算 state 裡的衍生欄位（ret/excess）。
+
+    這些欄位是價格的推導物，不是預測；分割未還原造成的錯值屬機械性錯誤，
+    同 CONTEXT §六「資料還原不是竄改」。只改有差的欄位，回傳筆數。
+    """
+    hist = _load(state_path) or []
+    if not hist:
+        return 0
+    w = int(cfg["features"]["return_window_sessions"])
+    bench = sorted((prices.get(cfg["benchmark"]) or {}).items())
+    changed = 0
+    for e in hist:
+        ser = sorted((prices.get(e["ticker"]) or {}).items())
+        i = next((j for j in range(len(ser) - 1, -1, -1) if ser[j][0] <= e["date"]), None)
+        if i is None:
+            continue
+        r = _ret(ser, i, w)
+        bi = next((j for j in range(len(bench) - 1, -1, -1) if bench[j][0] <= e["date"]), None)
+        b = _ret(bench, bi, w) if bi is not None else None
+        new = {f"ret{w}_pct": r, f"excess{w}_pct": None if r is None or b is None else round(r - b, 2),
+               "close": ser[i][1]}
+        if any(e.get(k) != v for k, v in new.items()):
+            e.update(new)
+            e["features_repaired"] = True
+            changed += 1
+    if changed:
+        _save(state_path, hist)
+    return changed
 
 
 def scan(cfg: dict, prices: dict, revenue: dict, today: str) -> list[dict]:
@@ -317,6 +360,7 @@ def build_summary(cfg: dict, rows: list[dict], hist: list[dict], dca: dict, warn
     return {
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "today": today, "benchmark": cfg["benchmark"], "n_universe": len(cfg["universe"]),
+        "splits": cfg.get("_splits_used") or [],
         "rows": ok_rows, "no_data": [r for r in rows if r.get("status") != "OK"],
         "state_n": len(hist), "scored_n": sum(1 for e in hist if (e.get("outcomes") or {}).get("t20_excess_pct") is not None),
         "tercile_t20": tercile_table(hist, 20, vr["min_n_per_tercile"]),
@@ -356,8 +400,10 @@ def render_md(s: dict) -> str:
               f"- 狀態：{t['status']}（state {s['state_n']} 筆、已回填 T+20 {s['scored_n']} 筆）"]
     else:
         L.append(f"- 累積中（state {s['state_n']} 筆、已回填 T+20 {s['scored_n']} 筆）")
+    if s.get("splits"):
+        L += ["", "分割還原：" + "、".join(f"{x['ticker']} {x['date']} ×{x['ratio']:g}（{x['source']}）" for x in s["splits"])]
     if s["warnings"]:
-        L += ["", "抓取降級：" + "；".join(s["warnings"])]
+        L += ["", "警告／降級：", ""] + [f"- ⚠️ {w}" for w in s["warnings"]]
     L += ["", "---", "*casino_tracker — 只收資料。名單不是訊號、籃子不是建議；期望值未證明前，這筆錢是娛樂預算。*"]
     return "\n".join(L)
 
@@ -380,6 +426,10 @@ def _fixtures(cfg: dict):
             if d.weekday() < 5:
                 px *= math.exp(rnd.gauss(drift, 0.015))
                 ser[d.isoformat()] = round(px, 2)
+                if t == cfg["benchmark"] and d.isoformat() >= "2025-06-18":
+                    ser[d.isoformat()] = round(px / 4, 2)     # 合成 0050 四拆一（未還原資料的樣子）
+                if t == "2330" and d.isoformat() >= "2026-08-05":
+                    ser[d.isoformat()] = round(px / 4, 2)     # 合成個股四拆一，落在 20 日窗內（測 state 修復）
             d += dt.timedelta(days=1)
         prices[t] = ser
         if t != cfg["benchmark"]:
@@ -400,6 +450,9 @@ def selftest(cfg: dict) -> bool:
         ok = ok and bool(c)
 
     today = "2026-08-15"
+    raw_prices = prices
+    prices, used, warns_sp = adjust_all(cfg, prices)
+    check(any(u["ticker"] == cfg["benchmark"] and u["ratio"] == 4.0 for u in used), "基準的合成四拆一被還原")
     rows = scan(cfg, prices, revenue, today)
     check(len(rows) == len(cfg["universe"]) and all(r["status"] == "OK" for r in rows), "每檔一筆特徵")
     check(all(r["yoy_pct"] is not None and r["yoy_slope_pp"] is not None for r in rows), "月營收 YoY / 斜率有值")
@@ -414,6 +467,13 @@ def selftest(cfg: dict) -> bool:
     check(backfill(sp, prices, cfg["benchmark"], cfg["outcomes"]["horizons"]) == 0, "回填冪等")
     d = shadow_dca(cfg, prices, today)
     check(d["status"] == "OK" and d["n_months"] >= 30 and d["basket_minus_bench_pp"] is not None, f"影子 DCA {d.get('n_months')} 個月、有對照差")
+    d_raw = shadow_dca(cfg, raw_prices, today)
+    check(d_raw["bench_return_pct"] < d["bench_return_pct"] - 30, f"未還原 vs 還原：基準報酬差距明顯（{d_raw['bench_return_pct']} vs {d['bench_return_pct']}）")
+    # repair：用原始價寫進 state 的衍生欄位，還原後重算應被修正
+    sp2 = os.path.join(out, "casino_state_raw.json")
+    append_scan(sp2, scan(cfg, raw_prices, revenue, today))
+    n_rep = repair_features(cfg, sp2, prices)
+    check(n_rep > 0 and all(e.get("features_repaired") for e in _load(sp2) if e["ticker"] == "2330"), f"state 衍生欄位修復 {n_rep} 筆")
     s = build_summary(cfg, rows, hist, d, [], today)
     check(s["tercile_t20"]["status"].startswith("累積中"), "三分位表未達門檻 → 累積中")
     md = render_md(s)
@@ -439,9 +499,15 @@ def main() -> int:
         return 0 if ok else 2
     os.makedirs(args.output_dir, exist_ok=True)
     prices, revenue, warns = update_caches(cfg, args.output_dir, fetch=not args.no_fetch)
+    prices, splits_used, split_warns = adjust_all(cfg, prices)   # 分割還原（快取存原始價，計算用還原價）
+    cfg["_splits_used"] = splits_used
+    warns = split_warns + warns
     today = dt.date.today().isoformat()
-    rows = scan(cfg, prices, revenue, today)
     sp = os.path.join(args.output_dir, "casino_state.json")
+    repaired = repair_features(cfg, sp, prices)
+    if repaired:
+        print(f"[casino] 用還原後價格重算 {repaired} 筆 state 衍生欄位", file=sys.stderr)
+    rows = scan(cfg, prices, revenue, today)
     added = append_scan(sp, rows)
     filled = backfill(sp, prices, cfg["benchmark"], cfg["outcomes"]["horizons"])
     hist = _load(sp) or []

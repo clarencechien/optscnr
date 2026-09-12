@@ -38,6 +38,7 @@ from typing import Optional
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+from splits import resolve as resolve_splits  # noqa: E402
 
 
 # ----------------------------------------------------------------------------
@@ -396,6 +397,8 @@ def weekly_gate_status(cfg: dict, dates: list[str], history_rows: list[dict],
 
 
 def build_ledger(cfg: dict, closes: dict, history: dict) -> dict:
+    # 分割還原（FinMind 未還原；0050 2025-06-18 四拆一，不還原整本帳全錯）
+    closes, splits_used, split_warns = resolve_splits(closes, cfg.get("splits"), cfg["instrument"])
     dates = sorted(d for d in closes if d >= cfg["history_start"])
     rows = sorted((history.get("rows") or []), key=lambda r: r["date"])
     if not dates:
@@ -450,6 +453,7 @@ def build_ledger(cfg: dict, closes: dict, history: dict) -> dict:
         "history_from": rows[0]["date"], "history_to": rows[-1]["date"],
         "current": current,
         "windows": windows,
+        "splits": splits_used, "warnings": split_warns,
         "note": "規則影子帳本：等額假設、不記真實部位。lump_sum 是對照不是策略；regime_scaled 是待處決的假說。非投資建議。",
     }
 
@@ -509,6 +513,12 @@ def render_md(led: dict, cfg: dict) -> str:
             L.append("")
         else:
             L += ["此視窗內無投降警報，加碼規則 = 純定期定額。", ""]
+    if led.get("splits"):
+        L.append("分割還原：" + "、".join(f"{s['date']} ×{s['ratio']:g}（{s['source']}）" for s in led["splits"]) + "。")
+    for w in led.get("warnings") or []:
+        L.append(f"⚠️ {w}")
+    if led.get("splits") or led.get("warnings"):
+        L.append("")
     L += ["---", "*dca_ledger — 規則影子帳本，等額假設。lump_sum 是對照不是策略（沒人一開始就有全部的錢）；"
           "regime_scaled 是待資料處決的假說。非投資建議。*"]
     return "\n".join(L)
@@ -529,6 +539,8 @@ def _synthetic(seed: int = 3) -> tuple[dict, dict]:
             px *= math.exp(rnd.gauss(0.0004, 0.012))
             ds = d.isoformat()
             closes[ds] = round(px, 2)
+            if ds >= "2025-06-18":            # 合成四拆一：2025-06-18 起價格 ÷4（未還原資料的樣子）
+                closes[ds] = round(px / 4, 2)
             alerts = ["capitulation"] if i in (300, 301, 302, 900, 1500) else []
             reg = "CAPITULATION" if 295 <= i <= 310 else ("DE_RISK" if i % 40 < 10 else "NEUTRAL")
             rows.append({"date": ds, "regime": reg, "score": 0.0, "alerts": alerts, "pcts": {}})
@@ -578,6 +590,9 @@ def selftest(cfg: dict, out_dir: str) -> bool:
     # NO_DATA 路徑
     nd = build_ledger(cfg, {}, hist)
     check(nd["status"] == "NO_DATA" and "NO_DATA" in render_md(nd, cfg), "無價格 → NO_DATA 不崩潰")
+    check(any(s["date"] == "2025-06-18" and s["ratio"] == 4.0 for s in led["splits"]), "合成四拆一被還原")
+    # 還原後 lump_sum 的單位 = 用還原價算；未還原時分割前的單位會少四倍 → 報酬會離譜
+    check(-50 < r["plain"]["return_pct"] < 400, f"還原後報酬合理（{r['plain']['return_pct']}%）")
     return ok
 
 

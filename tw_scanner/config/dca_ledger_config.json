@@ -63,5 +63,18 @@
     "dataset": "TaiwanStockPrice",
     "cache": "dca_prices.json",
     "refetch_tail_days": 7
+  },
+  "splits": {
+    "auto_detect": true,
+    "override": {
+      "0050": [
+        {
+          "date": "2025-06-18",
+          "ratio": 4
+        }
+      ]
+    },
+    "ignore": {},
+    "_note": "FinMind 價格未還原。override 是人確認過的分割；auto_detect 抓到新的會在報告印警告，確認後搬進 override 或 ignore。2026-09-12 首跑實測：不還原 0050 四拆一，純 DCA 七年報酬顯示 +0.75%（實際 +230%）。"
   }
 }
