@@ -125,7 +125,7 @@
   <div class="full-title">完整資料（點段落展開）</div>
   <details class="sec"><summary><span class="n">1</span>本期機械指示（DCA 規則影子帳本）</summary><div class="body"><div id="tw-dca"></div></div></details>
   <details class="sec"><summary><span class="n">2</span>天氣（籌碼溫度計）</summary><div class="body"><div id="tw-weather"></div></div></details>
-  <details class="sec"><summary><span class="n">3</span>2308 論點監控</summary><div class="body"><div id="tw-delta"></div></div></details>
+  <details class="sec"><summary><span class="n">3</span>論點監控（2308 台達／2330 台積）</summary><div class="body"><div id="tw-delta"></div></div></details>
   <details class="sec"><summary><span class="n">4</span>賭場 sector（AI 個股，只收資料）</summary><div class="body"><div id="tw-casino"></div></div></details>
   <details class="sec"><summary><span class="n">5</span>下週日曆</summary><div class="body"><div class="card" id="tw-calendar"></div></div></details>
   <details class="sec"><summary><span class="n">6</span>資料健康</summary><div class="body"><div class="card"><ul class="checks" id="tw-checks"></ul></div></div></details>
@@ -253,9 +253,10 @@ function simpleTW(b) {
     : `本週：投降窗開了，下一個交易日投入 ${n0(wg.amount)} 元，之後這個月不再動。`;
   const items = [];
   if (w.status === 'OK') items.push(`天氣：${REGIME_PLAIN[w.regime] || w.regime}${(w.week_transitions || []).length ? '，這週剛換天氣' : '，跟上週一樣'}。`);
-  if (dl.status === 'OK') {
-    const dv = dl.divergence || {};
-    const prem = dl.full_overall === 'RED' ? '台達的基本面前提出問題了' : dl.full_overall ? '台達的基本面前提還在' : '台達還沒有完整判定';
+  for (const [r, who] of [[dl, '台達'], [b.tsmc || {}, '台積']]) {
+    if (r.status !== 'OK') continue;
+    const dv = r.divergence || {};
+    const prem = r.full_overall === 'RED' ? `${who}的基本面前提出問題了` : r.full_overall ? `${who}的基本面前提還在` : `${who}還沒有完整判定`;
     items.push(`${prem}${dv.flag === 'premise_ok_price_down' ? '，但股價跌很多：跌的是估值不是基本面' : dv.flag === 'premise_broken_price_up' ? '，但股價沒跌：市場不買儀器的帳' : ''}。`);
   }
   if (cs.status === 'OK' && (cs.shadow_dca || {}).status === 'OK') {
@@ -331,17 +332,17 @@ function renderTW(b) {
     </div>`;
   }
 
-  const dl = b.delta || {};
-  if (dl.status !== 'OK') $('#tw-delta').innerHTML = '<div class="empty">NO_DATA</div>';
-  else {
+  const radarCard = (dl, name, file) => {
+    if (!dl || dl.status !== 'OK') return `<div class="empty">${esc(name)}：NO_DATA${name.includes('2330') ? '（首次排程跑完才有）' : ''}</div>`;
     const dv = dl.divergence || {};
-    $('#tw-delta').innerHTML = `<div class="card">
-      <div class="big">${LIGHT[dl.full_overall] || '⚪'} ${esc(dl.full_overall || '尚無全模組判定')} <span class="muted">最近全模組 ${esc(dl.full_ts || '—')}</span></div>
+    return `<div class="card">
+      <div class="big">${esc(name)} ${LIGHT[dl.full_overall] || '⚪'} ${esc(dl.full_overall || '尚無全模組判定')} <span class="muted">最近全模組 ${esc(dl.full_ts || '—')}</span></div>
       <div class="${dv.flag ? 'action' : 'muted'}" style="margin:8px 0">${esc(dv.text || '背離 NO_DATA')}</div>
       <div class="scroll"><table><tbody>${(dl.modules || []).map(m => `<tr><td>${LIGHT[m.status] || '⚪'} ${esc(m.module)}</td><td class="muted wrap">${esc(m.headline)}</td></tr>`).join('')}</tbody></table></div>
-      <div class="muted" style="margin-top:8px">回填樣本 ${dl.scored_n} 筆（T+20 超額 vs 0050）；退役判準表在 delta_radar_report.md。</div>
+      <div class="muted" style="margin-top:8px">回填樣本 ${dl.scored_n} 筆（T+20 超額 vs 0050）；退役判準表在 ${file}。</div>
     </div>`;
-  }
+  };
+  $('#tw-delta').innerHTML = radarCard(b.delta, '2308 台達電', 'delta_radar_report.md') + radarCard(b.tsmc, '2330 台積電', 'tsmc_radar_report.md');
   const cs = b.casino || {};
   if (cs.status !== 'OK') $('#tw-casino').innerHTML = '<div class="empty">NO_DATA（首次排程跑完才有）</div>';
   else {

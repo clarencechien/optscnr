@@ -60,6 +60,20 @@ EMOJI = {GREEN: "🟢", YELLOW: "🟡", RED: "🔴", NO_DATA: "⚪"}
 # narrower is recorded as PARTIAL(...). Extend here when adding modules.
 # (m7 is the outcome-backfill background task, not a status-emitting module.)
 MODULE_ORDER = ("m1", "m2", "m3", "m4", "m5", "m6", "m8")
+# 2026-09-12：同一支程式跑多個標的（delta_radar / tsmc_radar）。config `name` 決定輸出檔名，
+# `modules_full` 決定「全模組 run」的集合（沒寫就用 MODULE_ORDER，舊 config 相容）。
+
+
+def instance_name(cfg: dict) -> str:
+    return cfg.get("name") or "delta_radar"
+
+
+def instance_display(cfg: dict) -> str:
+    return cfg.get("display") or f"Delta Radar ({cfg.get('ticker_tw', '2308')}.TW)"
+
+
+def modules_full(cfg: dict) -> tuple:
+    return tuple(cfg.get("modules_full") or MODULE_ORDER)
 
 UA = "delta-radar/1.0 (+github.com/clarencechien/optscnr)"
 
@@ -103,6 +117,7 @@ class ModuleResult:
     metrics: dict = field(default_factory=dict)
     notes: list = field(default_factory=list)
     error: Optional[str] = None
+    observe_only: bool = False   # 觀察模組：印出、記進 state，但不進總判定與退役判準
 
 
 # ----------------------------------------------------------------------------
@@ -434,6 +449,99 @@ def run_m3(cfg: dict, quarterlies: Callable) -> ModuleResult:
         res.notes.append(f"泰子公司毛利率 {gm:.1f}% 跌破 {p['gm_floor_pct']}% 地板")
     res.headline = (f"DELTA.BK {latest} 營收 YoY {fmt_pct(yoy_v)}, "
                     f"GM {res.metrics['gross_margin_pct']}%")
+    return res
+
+
+# ----------------------------------------------------------------------------
+# M3 (variant) — ADR premium（tsmc_radar 用：TSM ADR 換算台幣 vs 2330，外資情緒的免費指標）
+# ----------------------------------------------------------------------------
+
+def yfinance_adr_series(cfg: dict) -> dict:
+    """→ {"adr": {date: close_usd}, "fx": {date: usdtwd}, "local": {date: close_twd}}"""
+    import yfinance as yf
+    p = cfg["m3_adr_premium"]
+    days = int(p.get("lookback_days", 365)) + 30
+    out = {}
+    for key, sym in (("adr", p["adr"]), ("fx", p["fx"]), ("local", f"{cfg['ticker_tw']}.TW")):
+        h = yf.Ticker(sym).history(period=f"{days}d")["Close"]
+        out[key] = {str(k.date()): float(v) for k, v in h.items() if v == v}
+    return out
+
+
+def run_m3_adr(cfg: dict, series_fn: Callable) -> ModuleResult:
+    """ADR 溢價 = ADR(USD)×USDTWD ÷ (本地價×每 ADR 股數) − 1；看自身 1 年分位。觀察模組。"""
+    res = ModuleResult("M3 adr_premium", observe_only=True)
+    p = cfg["m3_adr_premium"]
+    try:
+        d = series_fn(cfg)
+    except Exception as e:
+        res.error = f"adr series failed: {str(e)[:100]}"
+        return res
+    adr, fx, loc = d.get("adr") or {}, d.get("fx") or {}, d.get("local") or {}
+    prem = {}
+    for day in sorted(loc):
+        a = adr.get(day) or adr.get(max((k for k in adr if k <= day), default=""), None)
+        f = fx.get(day) or fx.get(max((k for k in fx if k <= day), default=""), None)
+        if a and f and loc[day]:
+            prem[day] = (a * f) / (loc[day] * float(p.get("shares_per_adr", 5))) - 1
+    if len(prem) < 30:
+        res.error = "insufficient overlapping ADR/FX/local data"
+        return res
+    days = sorted(prem)
+    cur = prem[days[-1]]
+    hist = [prem[k] for k in days[:-1]]
+    pct = 100.0 * sum(1 for x in hist if x < cur) / len(hist)
+    res.metrics = {"as_of": days[-1], "premium_pct": round(cur * 100, 2), "percentile_1y": round(pct, 1),
+                   "n": len(prem)}
+    res.status = GREEN
+    res.headline = f"ADR 溢價 {cur*100:+.1f}%（1 年第 {pct:.0f} 百分位；觀察）"
+    return res
+
+
+# ----------------------------------------------------------------------------
+# M9 — valuation percentile（觀察模組；FinMind TaiwanStockPER：本益比／淨值比／殖利率）
+# ----------------------------------------------------------------------------
+
+def run_m9(cfg: dict, fetch: Callable) -> ModuleResult:
+    """讓「跌的是估值」變成量測：PER 在自身 N 年歷史的分位、與 20 個交易日前的分位。"""
+    res = ModuleResult("M9 valuation", observe_only=True)
+    p = cfg.get("m9_valuation", {})
+    years = int(p.get("history_years", 3))
+    start = (dt.date.today() - dt.timedelta(days=365 * years + 10)).isoformat()
+    try:
+        rows = fetch("TaiwanStockPER", cfg["ticker_tw"], start, cfg)
+    except Exception as e:
+        res.error = f"PER fetch failed: {str(e)[:100]}"
+        return res
+    per, pbr, dy = {}, {}, {}
+    for r in rows or []:
+        d = str(r.get("date", ""))[:10]
+        try:
+            if r.get("PER") not in (None, "", 0):
+                per[d] = float(r["PER"])
+            if r.get("PBR") not in (None, "", 0):
+                pbr[d] = float(r["PBR"])
+            if r.get("dividend_yield") not in (None, ""):
+                dy[d] = float(r["dividend_yield"])
+        except (TypeError, ValueError):
+            continue
+    if len(per) < 60:
+        res.error = f"PER history too short ({len(per)})"
+        return res
+    days = sorted(per)
+
+    def pct_at(i):
+        hist = [per[k] for k in days[:i]]
+        return 100.0 * sum(1 for x in hist if x < per[days[i]]) / len(hist) if hist else None
+    lb = int(p.get("lookback_sessions", 20))
+    now_i, then_i = len(days) - 1, max(0, len(days) - 1 - lb)
+    res.metrics = {"as_of": days[-1], "per": per[days[-1]], "per_pct": round(pct_at(now_i), 1),
+                   "per_then": per[days[then_i]], "per_pct_then": round(pct_at(then_i), 1),
+                   "pbr": pbr.get(days[-1]), "dividend_yield": dy.get(days[-1]),
+                   "history_years": years, "n": len(per)}
+    res.status = GREEN
+    res.headline = (f"PER {per[days[-1]]:.1f}（{years} 年第 {res.metrics['per_pct']:.0f} 百分位；"
+                    f"{lb} 日前第 {res.metrics['per_pct_then']:.0f}）；觀察")
     return res
 
 
@@ -868,8 +976,10 @@ def run_m8(cfg: dict, fetch: Callable, history: Optional[list] = None) -> Module
                    "down_ratio": None if down_ratio is None else round(down_ratio, 2)}
 
     if total < p.get("min_total", 3):
-        res.status = GREEN
-        res.headline = f"下修 {down}/上修 {up}（樣本不足 <{p.get('min_total', 3)}，暫不評級）"
+        # 2026-09-12 修：樣本不足是「沒資料」不是「沒風險」。原本回 GREEN，
+        # 24 次 run 全 0/0 卻算綠燈，灌水總判定與 M8=GREEN cohort。
+        res.status = NO_DATA
+        res.headline = f"下修 {down}/上修 {up}（樣本不足 <{p.get('min_total', 3)}，NO_DATA）"
         return res
 
     yellow_ratio = p.get("yellow_down_ratio", 0.6)
@@ -896,7 +1006,7 @@ def run_m8(cfg: dict, fetch: Callable, history: Optional[list] = None) -> Module
 # ----------------------------------------------------------------------------
 
 def aggregate(results: list[ModuleResult], cfg: dict) -> str:
-    live = [r for r in results if r.status != NO_DATA]
+    live = [r for r in results if r.status != NO_DATA and not r.observe_only]
     if not live:
         return NO_DATA
     reds = sum(1 for r in live if r.status == RED)
@@ -921,8 +1031,9 @@ def render_report(results: list[ModuleResult], overall: str, cfg: dict,
                         f"｜模組色僅供參考 {EMOJI.get(overall, '')} {overall}")
     else:
         verdict_line = f"## 總判定：{EMOJI[overall]} {overall}"
+    t = cfg.get("ticker_tw", "2308")
     lines = [
-        f"# Delta Radar (2308.TW) — {now}",
+        f"# {instance_display(cfg)} — {now}",
         "",
         verdict_line,
         "",
@@ -933,14 +1044,14 @@ def render_report(results: list[ModuleResult], overall: str, cfg: dict,
     lines += [
         "GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、",
         "敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。",
-        "M7（後果回填，見報告末）為背景校準任務，不出色燈但每次 run 回填 2308 遠期報酬。",
+        f"M7（後果回填，見報告末）為背景校準任務，不出色燈但每次 run 回填 {t} 遠期報酬。觀察模組（M3 ADR／M9 估值）不進總判定。",
         "",
         "| 模組 | 狀態 | 摘要 |",
         "|---|---|---|",
     ]
     for r in results:
         head = r.headline or (r.error or "")
-        lines.append(f"| {r.module} | {EMOJI[r.status]} {r.status} | {head} |")
+        lines.append(f"| {r.module}{'（觀察）' if r.observe_only else ''} | {EMOJI[r.status]} {r.status} | {head} |")
     lines.append("")
     for r in results:
         lines.append(f"### {r.module} — {EMOJI[r.status]} {r.status}")
@@ -966,17 +1077,20 @@ def render_report(results: list[ModuleResult], overall: str, cfg: dict,
         lines.append(f"- 本次回填 **{m7.get('changed', 0)}** 筆；"
                      f"state 已有 outcomes 的 entry：**{m7.get('scored', 0)}/{m7.get('total', 0)}**")
         lines.append(f"- 遠期報酬視窗：T+{'/'.join(str(h) for h in m7.get('horizons', []))}"
-                     f"（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表")
+                     f"（{t} 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表")
     lines.append("")
 
     if retirement and retirement.get("rows"):
         lines.append(f"### 退役判準（自動計算，判決是人下的；覆核日 {retirement.get('review_date') or '—'}）")
-        lines.append(f"| 模組 | GREEN n / T+{retirement['horizon']} 超額 | YELLOW+RED n / 超額 | 判準 |")
-        lines.append("|---|---|---|---|")
+        lines.append(f"| 模組 | GREEN n / T+{retirement['horizon']} 超額 | YELLOW+RED n / 超額 | 狀態翻轉 | 判準 |")
+        lines.append("|---|---|---|---|---|")
         for r in retirement["rows"]:
             ga = "—" if r["green_avg"] is None else f"{r['green_avg']:+.2f}"
             ba = "—" if r["bad_avg"] is None else f"{r['bad_avg']:+.2f}"
-            lines.append(f"| {r['module']} | {r['green_n']} / {ga} | {r['bad_n']} / {ba} | {r['verdict']} |")
+            lines.append(f"| {r['module']} | {r['green_n']} / {ga} | {r['bad_n']} / {ba} | {r['flips']} | {r['verdict']} |")
+        lines.append("")
+        lines.append("_n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組，cohort 比較等於比兩段日曆時間。"
+                     f"翻轉 < {retirement.get('min_flips', 3)} 次一律「無法判定」。_")
         lines.append("")
     lines.append("---")
     lines.append("*delta_radar — optscnr radar family. Shadow-mode instrument: "
@@ -1039,7 +1153,14 @@ def _forward_return_pct(series: list[tuple], entry_date: str, n: int) -> Optiona
     return round((fut - base) / base * 100.0, 2)
 
 
-def backfill_outcomes(cfg: dict, state_path: str, fetch: Callable) -> int:
+def yfinance_close_rows(sym: str, start: str) -> list[dict]:
+    import yfinance as yf
+    h = yf.Ticker(sym).history(start=start)["Close"]
+    return [{"date": str(k.date()), "close": float(v)} for k, v in h.items() if v == v]
+
+
+def backfill_outcomes(cfg: dict, state_path: str, fetch: Callable,
+                      extra_fetch: Callable = yfinance_close_rows) -> int:
     """Backfill T+N forward returns onto every state entry. Idempotent.
 
     delta_radar's whole point is to become falsifiable: without knowing what
@@ -1074,6 +1195,13 @@ def backfill_outcomes(cfg: dict, state_path: str, fetch: Callable) -> int:
         bench_series = _price_close_series(fetch("TaiwanStockPrice", bench_id, start, cfg))
     except Exception:
         bench_series = []
+    # 第二基準（如 SMH 全球半導體；yfinance）：0050 六成是台積，對 2330 的超額幾乎退化
+    extra: dict[str, list[tuple]] = {}
+    for sym in (m7.get("benchmark_extra") or []):
+        try:
+            extra[sym] = _price_close_series(extra_fetch(sym, start))
+        except Exception:
+            extra[sym] = []
 
     changed = 0
     for e in history:
@@ -1093,6 +1221,10 @@ def backfill_outcomes(cfg: dict, state_path: str, fetch: Callable) -> int:
             outcomes[f"t{n}_excess_pct"] = (
                 None if stock_ret is None or bench_ret is None
                 else round(stock_ret - bench_ret, 2))
+            for sym, ser in extra.items():
+                x = _forward_return_pct(ser, ed, n) if ser else None
+                outcomes[f"t{n}_excess_{sym.lower()}_pct"] = (
+                    None if stock_ret is None or x is None else round(stock_ret - x, 2))
         # only count as changed if any value actually differs (idempotent)
         if {k: prev.get(k) for k in outcomes} != outcomes:
             e["outcomes"] = outcomes
@@ -1123,7 +1255,8 @@ def latest_full_verdict(history: list) -> Optional[dict]:
     return None
 
 
-def compute_divergence(history: list, series: list[tuple], cfg: dict) -> dict:
+def compute_divergence(history: list, series: list[tuple], cfg: dict,
+                       valuation: Optional[dict] = None) -> dict:
     """前提（最近全模組總判定）vs 價格（2308 近 N 交易日報酬）。
 
     - 前提 GREEN/YELLOW 且價格跌破 price_drop_pct → premise_ok_price_down
@@ -1161,6 +1294,11 @@ def compute_divergence(history: list, series: list[tuple], cfg: dict) -> dict:
                        "市場不買儀器的帳，或儀器誤判")
     else:
         out["text"] = f"無背離（前提 {v['overall']}、價格 {lb} 日 {ret:+.1f}%）"
+    # M9 估值脈絡：讓「跌的是估值」變成量測而不是排除法推論
+    if valuation and valuation.get("per_pct") is not None:
+        out["valuation"] = {k: valuation.get(k) for k in ("per", "per_pct", "per_then", "per_pct_then", "history_years")}
+        out["text"] += (f"；PER {valuation['per']:.1f}，{valuation.get('history_years', 3)} 年分位 "
+                        f"{valuation.get('per_pct_then', 0):.0f} → {valuation['per_pct']:.0f}")
     return out
 
 
@@ -1173,14 +1311,24 @@ def retirement_check(history: list, cfg: dict) -> dict:
     """
     r = cfg.get("retirement", {})
     min_n, h = int(r.get("min_cohort_n", 30)), int(r.get("horizon", 20))
+    min_flips = int(r.get("min_flips", 3))
     key = f"t{h}_excess_pct"
     cohorts: dict[str, dict[str, list]] = {}
-    for e in history or []:
+    flips: dict[str, int] = {}
+    last_status: dict[str, str] = {}
+    for e in sorted(history or [], key=lambda x: str(x.get("ts", ""))):
         o = e.get("outcomes") or {}
-        if o.get(key) is None:
-            continue
         for m in e.get("modules", []):
-            cohorts.setdefault(_module_short(m["module"]), {}).setdefault(m["status"], []).append(o[key])
+            if m.get("observe_only"):
+                continue
+            mod = _module_short(m["module"])
+            st_ = m["status"]
+            if st_ != NO_DATA:
+                if mod in last_status and last_status[mod] != st_:
+                    flips[mod] = flips.get(mod, 0) + 1
+                last_status[mod] = st_
+            if o.get(key) is not None:
+                cohorts.setdefault(mod, {}).setdefault(st_, []).append(o[key])
     rows = []
     for mod in sorted(cohorts):
         c = cohorts[mod]
@@ -1188,8 +1336,11 @@ def retirement_check(history: list, cfg: dict) -> dict:
         bad = c.get(YELLOW, []) + c.get(RED, [])
         g_avg = sum(g) / len(g) if g else None
         b_avg = sum(bad) / len(bad) if bad else None
+        nf = flips.get(mod, 0)
         if g_avg is None or b_avg is None:
             verdict = "樣本不足（缺一側 cohort）"
+        elif nf < min_flips:
+            verdict = f"無法判定（狀態翻轉 {nf} 次 < {min_flips}；cohort 等於兩段日曆時間）" + ("；方向反" if g_avg < b_avg else "；方向對")
         elif len(g) < min_n:
             verdict = f"累積中（GREEN n={len(g)} < {min_n}）" + ("；方向反" if g_avg < b_avg else "；方向對")
         elif g_avg < b_avg:
@@ -1198,8 +1349,9 @@ def retirement_check(history: list, cfg: dict) -> dict:
             verdict = "通過最低檢驗：GREEN 優於 YELLOW/RED"
         rows.append({"module": mod, "green_n": len(g), "green_avg": None if g_avg is None else round(g_avg, 2),
                      "bad_n": len(bad), "bad_avg": None if b_avg is None else round(b_avg, 2),
-                     "verdict": verdict})
-    return {"horizon": h, "min_cohort_n": min_n, "review_date": r.get("review_date"), "rows": rows}
+                     "flips": nf, "verdict": verdict})
+    return {"horizon": h, "min_cohort_n": min_n, "min_flips": min_flips,
+            "review_date": r.get("review_date"), "rows": rows}
 
 
 def print_hit_rate(cfg: dict, state_path: str) -> int:
@@ -1266,12 +1418,12 @@ def print_hit_rate(cfg: dict, state_path: str) -> int:
           "n 小、單一行情時只讀方向不讀精度。_")
     rt = retirement_check(history, cfg)
     print(f"\n## 退役判準（GREEN n≥{rt['min_cohort_n']} 且劣於 YELLOW/RED → 處決候選；覆核 {rt.get('review_date') or '—'}）\n")
-    print(f"| 模組 | GREEN n / T+{rt['horizon']} 超額 | YELLOW+RED n / 超額 | 判準 |")
-    print("|---|---|---|---|")
+    print(f"| 模組 | GREEN n / T+{rt['horizon']} 超額 | YELLOW+RED n / 超額 | 狀態翻轉 | 判準 |")
+    print("|---|---|---|---|---|")
     for r in rt["rows"]:
         ga = "—" if r["green_avg"] is None else f"{r['green_avg']:+.2f}"
         ba = "—" if r["bad_avg"] is None else f"{r['bad_avg']:+.2f}"
-        print(f"| {r['module']} | {r['green_n']} / {ga} | {r['bad_n']} / {ba} | {r['verdict']} |")
+        print(f"| {r['module']} | {r['green_n']} / {ga} | {r['bad_n']} / {ba} | {r['flips']} | {r['verdict']} |")
     return 0
 
 
@@ -1329,6 +1481,16 @@ def _fixtures() -> dict:
             ]
         if dataset == "TaiwanStockFinancialStatements":
             return [{"date": "2026-03-31", "type": "IncomeAfterTaxes", "value": 20.55e9}]
+        if dataset == "TaiwanStockPER":
+            # 3 年、每交易日一筆；PER 從 20 一路升到 40，最後 20 日回落 → 分位 100 → 約 90
+            rows, d, i = [], dt.date.today() - dt.timedelta(days=365 * 3), 0
+            while d <= dt.date.today():
+                if d.weekday() < 5:
+                    per = 20 + 20 * (i / 780) if i < 760 else 40 - 0.3 * (i - 760)
+                    rows.append({"date": d.isoformat(), "PER": round(per, 2), "PBR": 5.0, "dividend_yield": 1.2})
+                    i += 1
+                d += dt.timedelta(days=1)
+            return rows
         return []
 
     def quarterlies_fake(ticker):
@@ -1372,8 +1534,29 @@ def _fixtures() -> dict:
         return [{"title": "Hyperscaler reaffirms record capex for AI buildout",
                  "summary": "capital expenditure guidance raised", "date": ""}]
 
+    def adr_fake(cfg):
+        # 本地價 250、ADR 40 USD、匯率 32 → 溢價 = 40×32/(250×5) − 1 = +2.4%；最後三天 ADR 44 → +12.6%
+        loc, adr, fx = {}, {}, {}
+        d = dt.date.today() - dt.timedelta(days=400)
+        while d <= dt.date.today():
+            if d.weekday() < 5:
+                k = d.isoformat()
+                loc[k], fx[k] = 250.0, 32.0
+                adr[k] = 40.0 if d < dt.date.today() - dt.timedelta(days=3) else 44.0
+            d += dt.timedelta(days=1)
+        return {"adr": adr, "fx": fx, "local": loc}
+
+    def extra_close_fake(sym, start):
+        rows, d, close = [], dt.date(2026, 5, 1), 100.0
+        while d <= dt.date.today() + dt.timedelta(days=90):
+            if d.weekday() < 5:
+                rows.append({"date": d.isoformat(), "close": round(close, 2)})
+                close *= 1.002
+            d += dt.timedelta(days=1)
+        return rows
+
     return {"finmind": finmind_fake, "quarterlies": quarterlies_fake,
-            "census": census_fake, "rss": rss_fake}
+            "census": census_fake, "rss": rss_fake, "adr": adr_fake, "extra_close": extra_close_fake}
 
 
 # ----------------------------------------------------------------------------
@@ -1381,12 +1564,12 @@ def _fixtures() -> dict:
 # ----------------------------------------------------------------------------
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Delta Electronics (2308.TW) mosaic radar")
+    ap = argparse.ArgumentParser(description="Mosaic verification radar（delta_radar / tsmc_radar 共用；由 --config 決定標的）")
     ap.add_argument("--config", default=os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "config", "delta_radar_config.json"))
     ap.add_argument("--output-dir", default=None)
-    ap.add_argument("--modules", default="m1,m2,m3,m4,m5,m6,m8",
-                    help="comma list, e.g. m1,m4")
+    ap.add_argument("--modules", default=None,
+                    help="comma list, e.g. m1,m4（預設 = config modules_full）")
     ap.add_argument("--selftest", action="store_true",
                     help="run full pipeline on bundled fixtures (no network)")
     ap.add_argument("--dump-accounts", action="store_true",
@@ -1410,8 +1593,13 @@ def main() -> int:
 
     fx = _fixtures() if args.selftest else {
         "finmind": finmind_fetch, "quarterlies": yfinance_quarterlies,
-        "census": census_fetch, "rss": rss_fetch,
+        "census": census_fetch, "rss": rss_fetch, "adr": yfinance_adr_series,
+        "extra_close": yfinance_close_rows,
     }
+    name = instance_name(cfg)
+    full_set = modules_full(cfg)
+    if args.modules is None:
+        args.modules = ",".join(full_set)
 
     if args.dump_accounts:
         start = (dt.date.today() - dt.timedelta(days=400)).isoformat()
@@ -1428,7 +1616,7 @@ def main() -> int:
         return 0
 
     real_state = os.path.join(
-        args.output_dir or cfg.get("output_dir", "output"), "delta_radar_state.json")
+        args.output_dir or cfg.get("output_dir", "output"), f"{name}_state.json")
 
     if args.hit_rate:
         return print_hit_rate(cfg, real_state)
@@ -1441,7 +1629,7 @@ def main() -> int:
     # M5 z-score and M8 consec gate read prior runs from the SAME state file we
     # append to (out_dir). In --selftest out_dir is a fresh temp dir → cold start,
     # keeping the selftest hermetic (never reads the real backtest history).
-    state_path = os.path.join(out_dir, "delta_radar_state.json")
+    state_path = os.path.join(out_dir, f"{name}_state.json")
     prior_history: list = []
     if os.path.exists(state_path):
         try:
@@ -1451,10 +1639,12 @@ def main() -> int:
             prior_history = []
 
     wanted = {m.strip().lower() for m in args.modules.split(",")}
+    m3_mode = cfg.get("m3_mode", "thai_shadow")
     runners = {
         "m1": lambda: run_m1(cfg, fx["finmind"]),
         "m2": lambda: run_m2(cfg, fx["finmind"]),
-        "m3": lambda: run_m3(cfg, fx["quarterlies"]),
+        "m3": (lambda: run_m3_adr(cfg, fx["adr"])) if m3_mode == "adr_premium" else (lambda: run_m3(cfg, fx["quarterlies"])),
+        "m9": lambda: run_m9(cfg, fx["finmind"]),
         "m4": lambda: run_m4(cfg, fx["census"]),
         "m5": lambda: run_m5(cfg, fx["rss"], prior_history),
         "m6": lambda: run_m6(cfg, fx["finmind"]),
@@ -1462,7 +1652,7 @@ def main() -> int:
     }
     ran_keys: list[str] = []
     results: list[ModuleResult] = []
-    for key in MODULE_ORDER:
+    for key in full_set:
         if key not in wanted:
             continue
         ran_keys.append(key)
@@ -1478,9 +1668,9 @@ def main() -> int:
     overall = aggregate(results, cfg)
     # BUG-1: only a run covering every module yields a real overall verdict.
     # Anything narrower is tagged PARTIAL(...) so backtests can filter it out.
-    is_partial = set(ran_keys) != set(MODULE_ORDER)
+    is_partial = set(ran_keys) != set(full_set)
     state_overall = (f"PARTIAL({','.join(ran_keys)})" if is_partial else overall)
-    report_path = os.path.join(out_dir, "delta_radar_report.md")
+    report_path = os.path.join(out_dir, f"{name}_report.md")
 
     # 背離旗標：前提（最近全模組總判定，含本次若為全模組）vs 2308 近 20 日價格。
     # 價格抓不到 → NO_DATA 文字，不擋 run。
@@ -1493,7 +1683,9 @@ def main() -> int:
             lb = int(cfg["divergence"].get("lookback_sessions", 20))
             start = (dt.date.today() - dt.timedelta(days=lb * 2 + 20)).isoformat()
             series = _price_close_series(fetch("TaiwanStockPrice", cfg["ticker_tw"], start, cfg))
-            divergence = compute_divergence(hist_for_div, series, cfg)
+            m9_now = next((r.metrics for r in results if _module_short(r.module) == "M9" and r.metrics), None)
+            divergence = compute_divergence(hist_for_div, series, cfg,
+                                            valuation=m9_now or _last_module_metric(prior_history, "M9"))
         except Exception as e:
             divergence = compute_divergence(hist_for_div, [], cfg)
             divergence["text"] = f"NO_DATA（{type(e).__name__}: {e}）"
@@ -1509,7 +1701,7 @@ def main() -> int:
     if m7_cfg.get("enabled", True):
         fetch = fx["finmind"] if args.selftest else finmind_fetch
         try:
-            changed = backfill_outcomes(cfg, state_path, fetch)
+            changed = backfill_outcomes(cfg, state_path, fetch, fx["extra_close"])
             with open(state_path, encoding="utf-8") as f:
                 hist = json.load(f)
             scored = sum(1 for e in hist if e.get("outcomes"))
@@ -1551,6 +1743,31 @@ def _selftest_assertions(results: list[ModuleResult], state_path: str,
     """Fixture-level checks so `--selftest` fails loudly on regressions."""
     checks: list[tuple] = []
     by_mod = {_module_short(r.module): r for r in results}
+
+    if instance_name(cfg) != "delta_radar":
+        # 非台達 instance（如 tsmc_radar）：fixtures 是台達形狀，只驗管線與 instance 專屬模組
+        for key in modules_full(cfg):
+            checks.append((f"{key.upper()} ran", key.upper() in by_mod))
+        m3 = by_mod.get("M3")
+        if cfg.get("m3_mode") == "adr_premium":
+            checks.append(("M3 adr_premium mode", bool(m3) and "adr" in m3.module and m3.observe_only))
+        m9 = by_mod.get("M9")
+        checks.append(("M9 present", bool(m9) and m9.observe_only))
+        try:
+            with open(state_path, encoding="utf-8") as f:
+                last = json.load(f)[-1]
+            oc = last.get("outcomes", {})
+            checks.append(("M7 outcomes written", bool(oc)))
+            for sym in (cfg.get("m7_outcome_backfill", {}).get("benchmark_extra") or []):
+                checks.append((f"M7 extra benchmark {sym} recorded", oc.get(f"t5_excess_{sym.lower()}_pct") is not None))
+            checks.append(("state carries instance-specific ticker", last.get("modules") is not None))
+        except Exception as e:
+            checks.append((f"state readable ({e})", False))
+        ok = True
+        for name, passed in checks:
+            print(f"[selftest]   {'✓' if passed else '✗'} {name}", file=sys.stderr)
+            ok = ok and passed
+        return ok
 
     # M6: Lite-On(2301) leads 2308 by ~16pp in the power group → YELLOW, flagged.
     m6 = by_mod.get("M6")
@@ -1607,6 +1824,28 @@ def _selftest_assertions(results: list[ModuleResult], state_path: str,
     prior = [{"modules": [{"module": "M8 revision_velocity", "metrics": {"down_ratio": 0.8}}]}]
     m8c = run_m8(cfg, fx["rss"], prior)
     checks.append(("M8 escalates on 2nd consecutive down-heavy run", m8c.status == YELLOW))
+    # M8 insufficient sample → NO_DATA（2026-09-12 修：原本回 GREEN）
+    m8n = run_m8(cfg, lambda url: [], [])
+    checks.append(("M8 insufficient sample is NO_DATA not GREEN", m8n.status == NO_DATA))
+
+    # M9 valuation（觀察模組）：分位 20 日前 ~100 → 現在回落；不進總判定
+    m9 = run_m9(cfg, fx["finmind"])
+    checks.append(("M9 present & observe_only", m9.observe_only and m9.metrics.get("per_pct") is not None))
+    checks.append(("M9 percentile fell over last 20 sessions",
+                   m9.metrics.get("per_pct_then", 0) > m9.metrics.get("per_pct", 100)))
+    agg_with = aggregate([ModuleResult("M1 x", status=GREEN), ModuleResult("M9 v", status=RED, observe_only=True)], cfg)
+    checks.append(("observe_only excluded from aggregate", agg_with == GREEN))
+
+    # M3 ADR-premium variant（tsmc_radar 用）
+    m3a = run_m3_adr({**cfg, "m3_adr_premium": {"adr": "TSM", "fx": "TWD=X", "shares_per_adr": 5, "lookback_days": 365}}, fx["adr"])
+    checks.append(("M3 ADR premium computed (+12.6% today)", m3a.metrics.get("premium_pct") is not None and abs(m3a.metrics["premium_pct"] - 12.64) < 0.2))
+    checks.append(("M3 ADR premium percentile ~100", (m3a.metrics.get("percentile_1y") or 0) > 95))
+
+    # retirement: flips counted; a never-flipping module is 無法判定
+    fake_hist = [{"ts": f"2026-07-{i+1:02d}T00:00:00", "modules": [{"module": "M2 x", "status": GREEN if i < 20 else YELLOW}],
+                  "outcomes": {"t20_excess_pct": -5.0 if i < 20 else 1.0}} for i in range(40)]
+    rt = retirement_check(fake_hist, {"retirement": {"min_cohort_n": 5, "horizon": 20, "min_flips": 3}})
+    checks.append(("retirement: 1 flip → 無法判定", rt["rows"][0]["flips"] == 1 and "無法判定" in rt["rows"][0]["verdict"]))
 
     ok = True
     for name, passed in checks:

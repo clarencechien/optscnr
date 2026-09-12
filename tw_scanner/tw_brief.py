@@ -100,9 +100,10 @@ def dca_section(led: dict | None, today: dt.date) -> dict:
     }
 
 
-def delta_section(state: list | None, today: dt.date) -> dict:
+def delta_section(state: list | None, today: dt.date, label: str = "2308") -> dict:
+    """論點監控雷達（delta_radar / tsmc_radar 同結構）：最近全模組總判定、各模組最新狀態、背離。"""
     if not state:
-        return {"status": "NO_DATA"}
+        return {"status": "NO_DATA", "label": label}
     last = state[-1]
     full = next((e for e in reversed(state) if str(e.get("overall")) in ("GREEN", "YELLOW", "RED")), None)
     # 各模組最新狀態：從最近的 run 往回找，每個模組取最後一次出現
@@ -116,7 +117,7 @@ def delta_section(state: list | None, today: dt.date) -> dict:
                                    "ts": e.get("ts")}
     scored = [e for e in state if (e.get("outcomes") or {}).get("t20_excess_pct") is not None]
     return {
-        "status": "OK", "as_of": str(last.get("ts", ""))[:10], "age_days": _age_days(last.get("ts"), today),
+        "status": "OK", "label": label, "as_of": str(last.get("ts", ""))[:10], "age_days": _age_days(last.get("ts"), today),
         "last_overall": last.get("overall"), "last_modules_requested": last.get("modules_requested"),
         "full_overall": full.get("overall") if full else None,
         "full_ts": str(full.get("ts", ""))[:10] if full else None,
@@ -156,7 +157,8 @@ def calendar_section(today: dt.date) -> list[dict]:
     return out[:2]
 
 
-def tldr(weather: dict, dca: dict, delta: dict) -> list[str]:
+def tldr(weather: dict, dca: dict, delta: dict, tsmc: dict | None = None) -> list[str]:
+    tsmc = tsmc or {}
     L = []
     if dca.get("status") == "OK":
         c = dca["current"]
@@ -172,10 +174,11 @@ def tldr(weather: dict, dca: dict, delta: dict) -> list[str]:
         tr = w["week_transitions"]
         L.append(f"鋒面 {w['emoji']} {w['regime']}"
                  + (f"（本週由 {tr[-1]['from']} 轉入）" if tr else "（本週未變）") + "。")
-    if delta.get("status") == "OK":
-        dv = delta.get("divergence") or {}
-        L.append(f"2308 前提 {LIGHT.get(delta.get('full_overall') or 'NO_DATA')} "
-                 f"{delta.get('full_overall') or '尚無全模組判定'}；{dv.get('text') or '背離 NO_DATA'}")
+    for r in (delta, tsmc):
+        if r.get("status") == "OK":
+            dv = r.get("divergence") or {}
+            L.append(f"{r.get('label')} 前提 {LIGHT.get(r.get('full_overall') or 'NO_DATA')} "
+                     f"{r.get('full_overall') or '尚無全模組判定'}；{dv.get('text') or '背離 NO_DATA'}")
     if dca.get("status") == "OK":
         f = dca["full"]
         b = f["rules"].get("capitulation_boost") or {}
@@ -191,15 +194,19 @@ def build_brief(out_dir: str, today: dt.date | None = None) -> dict:
     backtest = _load(os.path.join(out_dir, "tw_scanner_backtest.json"))
     led = _load(os.path.join(out_dir, "dca_ledger.json"))
     dstate = _load(os.path.join(out_dir, "delta_radar_state.json"))
+    tstate = _load(os.path.join(out_dir, "tsmc_radar_state.json"))
     casino_b = _load(os.path.join(out_dir, "casino_brief.json"))
     weather = weather_section(state, backtest, today)
     dca = dca_section(led, today)
-    delta = delta_section(dstate, today)
+    delta = delta_section(dstate, today, "2308")
+    tsmc = delta_section(tstate, today, "2330")
     casino = casino_section(casino_b, today)
     checks = []
-    for name, sec, stale in (("天氣台", weather, 4), ("DCA 帳本", dca, 4), ("delta_radar", delta, 8), ("賭場 sector", casino, 4)):
+    for name, sec, stale in (("天氣台", weather, 4), ("DCA 帳本", dca, 4), ("delta_radar", delta, 8), ("tsmc_radar", tsmc, 8), ("賭場 sector", casino, 4)):
         if sec.get("status") != "OK":
-            checks.append({"level": "bad", "label": f"{name} 無輸出", "text": f"{name}：NO_DATA（{sec.get('reason') or '缺輸出檔'}）"})
+            # tsmc_radar 首跑前缺檔是預期（info 不是 bad）
+            lvl = "info" if name == "tsmc_radar" else "bad"
+            checks.append({"level": lvl, "label": f"{name} 無輸出", "text": f"{name}：NO_DATA（{sec.get('reason') or '缺輸出檔'}）"})
         elif sec.get("age_days") is not None and sec["age_days"] > stale:
             checks.append({"level": "warn", "label": f"{name} 過期", "text": f"{name}：最新資料 {sec['as_of']}，已 {sec['age_days']} 天"})
         else:
@@ -207,8 +214,8 @@ def build_brief(out_dir: str, today: dt.date | None = None) -> dict:
     return {
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "today": today.isoformat(), "cadence": "weekly",
-        "tldr": tldr(weather, dca, delta),
-        "weather": weather, "dca": dca, "delta": delta, "casino": casino,
+        "tldr": tldr(weather, dca, delta, tsmc),
+        "weather": weather, "dca": dca, "delta": delta, "tsmc": tsmc, "casino": casino,
         "calendar": calendar_section(today), "checks": checks,
         "note": "週報：規則影子帳本＋溫度計＋論點監控。沒有任何一行是買賣建議；曝險與部位由人管。",
     }
@@ -262,16 +269,19 @@ def render_md(b: dict) -> str:
             L.append(f"- 警報戰績（月更回測）：{cap['episodes']} 簇，20 日中位 {_pm(h20.get('median_pct'))} vs 基線 {_pm(h20.get('baseline_median_pct'))}、命中 {round((h20.get('hit_rate') or 0)*100)}%")
     else:
         L.append("NO_DATA")
-    L += ["", "## 3. 2308 論點監控（delta_radar）", ""]
-    if dl.get("status") == "OK":
-        dv = dl.get("divergence") or {}
-        L.append(f"- 前提（最近全模組 {dl.get('full_ts') or '—'}）：{LIGHT.get(dl.get('full_overall') or 'NO_DATA')} {dl.get('full_overall') or '尚無'}")
-        L.append(f"- {dv.get('text') or '背離 NO_DATA'}")
-        for m in dl["modules"]:
-            L.append(f"  - {LIGHT.get(m['status'], '⚪')} {m['module']}：{m['headline']}")
-        L.append(f"- 回填樣本 {dl['scored_n']} 筆（T+20 超額）；退役判準見 `delta_radar_report.md`")
-    else:
-        L.append("NO_DATA")
+    L += ["", "## 3. 論點監控（2308 delta_radar／2330 tsmc_radar）", ""]
+    for r, fname in ((dl, "delta_radar_report.md"), (b.get("tsmc") or {}, "tsmc_radar_report.md")):
+        L.append(f"### {r.get('label', '—')}")
+        if r.get("status") == "OK":
+            dv = r.get("divergence") or {}
+            L.append(f"- 前提（最近全模組 {r.get('full_ts') or '—'}）：{LIGHT.get(r.get('full_overall') or 'NO_DATA')} {r.get('full_overall') or '尚無'}")
+            L.append(f"- {dv.get('text') or '背離 NO_DATA'}")
+            for m in r["modules"]:
+                L.append(f"  - {LIGHT.get(m['status'], '⚪')} {m['module']}：{m['headline']}")
+            L.append(f"- 回填樣本 {r['scored_n']} 筆（T+20 超額）；退役判準見 `{fname}`")
+        else:
+            L.append("NO_DATA（首次排程跑完才有）" if r.get("label") == "2330" else "NO_DATA")
+        L.append("")
     cs = b.get("casino") or {}
     L += ["", "## 4. 賭場 sector（AI 個股，只收資料）", ""]
     if cs.get("status") == "OK":
@@ -311,7 +321,7 @@ def selftest() -> bool:
 
     # 全缺 → 不炸、全 NO_DATA
     b = build_brief(out, today)
-    check(all(c["level"] == "bad" for c in b["checks"]) and "NO_DATA" in render_md(b), "三份都缺 → NO_DATA 不崩潰")
+    check(all(c["level"] == ("info" if "tsmc" in c["label"] else "bad") for c in b["checks"]) and "NO_DATA" in render_md(b), "全部缺 → NO_DATA 不崩潰（tsmc 首跑前是 info）")
     # 造假資料
     json.dump([{"date": "2026-09-08", "regime": "DE_RISK", "score": -0.3, "alerts": [], "pcts": {"f_spot_20d": 10}},
                {"date": "2026-09-09", "regime": "DE_RISK", "score": -0.4, "alerts": ["capitulation"], "pcts": {"f_spot_20d": 4}},
@@ -347,15 +357,21 @@ def selftest() -> bool:
                "shadow_dca": {"status": "OK", "n_months": 3, "basket_return_pct": 4.0, "bench_return_pct": 2.0, "basket_minus_bench_pp": 2.0},
                "verdict": {"basket": "累積中（需 ≥12 個月，現 3）", "rule": "x"}, "note": "賭場 sector：只收資料。"},
               open(os.path.join(out, "casino_brief.json"), "w"), ensure_ascii=False)
+    json.dump([{"ts": "2026-09-14T04:20:00+00:00", "overall": "GREEN", "modules_requested": ["m1", "m9"],
+                "modules": [{"module": "M1 revenue_acceleration", "status": "GREEN", "headline": "YoY +38%"},
+                            {"module": "M9 valuation", "status": "GREEN", "headline": "PER 25（3 年第 60 百分位）", "observe_only": True}],
+                "divergence": {"flag": None, "text": "無背離（前提 GREEN、價格 20 日 +2.0%）；PER 25.0，3 年分位 70 → 60"}}],
+              open(os.path.join(out, "tsmc_radar_state.json"), "w"), ensure_ascii=False)
     b = build_brief(out, today)
     md = render_md(b)
+    check(b["tsmc"]["status"] == "OK" and b["tsmc"]["label"] == "2330" and any(x.startswith("2330 前提") for x in b["tldr"]) and "### 2330" in md, "2330 論點監控小節")
     check(b["casino"]["status"] == "OK" and b["casino"]["rows"][0]["ticker"] == "2330" and "賭場 sector" in md and "累積中" in md, "賭場 sector 小節")
     check(b["weather"]["regime"] == "CAPITULATION" and b["weather"]["week_transitions"][0]["to"] == "CAPITULATION", "鋒面與本週轉移")
     check(b["weather"]["week_alert_days"] == ["2026-09-09"], "本週警報日")
     check(b["dca"]["full"]["boost_n"] == 3 and abs(b["dca"]["full"]["boost_edge_mean_pct"] - 1.37) < 0.01, "加碼 edge 摘要")
     check(b["delta"]["full_overall"] == "YELLOW" and b["delta"]["divergence"]["flag"] == "premise_ok_price_down", "2308 前提取最近全模組、背離取最新")
     check(b["tldr"][0].startswith("週檢查") and "當月不再行動" in b["tldr"][0], "TL;DR 首句是週檢查指示")
-    check(all(c["level"] == "ok" for c in b["checks"]), "資料健康全綠")
+    check(all(c["level"] in ("ok", "info") for c in b["checks"]), "資料健康全綠")
     check("台股週報" in md and "本期機械指示" in md and "🔀" in md and "月營收" in md, "md 五段齊全")
     json.dump(b, open(os.path.join(out, "tw_brief.json"), "w"), ensure_ascii=False)
     open(os.path.join(out, "tw_weekly.md"), "w", encoding="utf-8").write(md)
