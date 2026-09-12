@@ -846,7 +846,7 @@ def run_m6(cfg: dict, fetch: Callable) -> ModuleResult:
         # month endpoints where 2308 has a full 3m window
         months = sorted(d_yoy)
         if len(months) < 3:
-            group_out[gname] = {"status": NO_DATA, "note": "2308 history <3 months"}
+            group_out[gname] = {"status": NO_DATA, "note": f"{delta_id} history <3 months"}
             continue
         delta_3m = _avg3_at(d_yoy, months, len(months) - 1)
         peer_3m: dict[str, Optional[float]] = {}
@@ -856,7 +856,7 @@ def run_m6(cfg: dict, fetch: Callable) -> ModuleResult:
             peer_3m[pid] = _avg3_at(yoy_by_id.get(pid, {}), pm, len(pm) - 1) if len(pm) >= 3 else None
         live_peers = {k: v for k, v in peer_3m.items() if v is not None}
         if delta_3m is None or not live_peers:
-            group_out[gname] = {"status": NO_DATA, "note": "insufficient peer/2308 3m data",
+            group_out[gname] = {"status": NO_DATA, "note": f"insufficient peer/{delta_id} 3m data",
                                 "delta_3m_yoy": None if delta_3m is None else round(delta_3m, 1)}
             continue
         best_pid = max(live_peers, key=live_peers.get)
@@ -918,11 +918,11 @@ def run_m6(cfg: dict, fetch: Callable) -> ModuleResult:
                  for gn, gd in group_out.items()
                  if gd.get("status") in (YELLOW, RED) and gd.get("direction") == "peer_lead_risk"]
     res.headline = ("；".join(escalated) if escalated
-                    else "cohort 內 2308 未被對手顯著反超（離散在容忍帶內）")
+                    else f"cohort 內 {delta_id} 未被對手顯著反超（離散在容忍帶內）")
     for gn, gd in group_out.items():
         if gd.get("status") in (YELLOW, RED):
             res.notes.append(f"[{gn}] {gd['best_peer']} 3m YoY {gd['best_peer_3m_yoy']}% "
-                             f"vs 2308 {gd['delta_3m_yoy']}%（領先 {gd['peer_lead_pp']:+.0f}pp）")
+                             f"vs {delta_id} {gd['delta_3m_yoy']}%（領先 {gd['peer_lead_pp']:+.0f}pp）")
     return res
 
 

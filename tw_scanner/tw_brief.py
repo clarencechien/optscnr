@@ -217,7 +217,7 @@ def build_brief(out_dir: str, today: dt.date | None = None) -> dict:
         "tldr": tldr(weather, dca, delta, tsmc),
         "weather": weather, "dca": dca, "delta": delta, "tsmc": tsmc, "casino": casino,
         "calendar": calendar_section(today), "checks": checks,
-        "note": "週報：規則影子帳本＋溫度計＋論點監控。沒有任何一行是買賣建議；曝險與部位由人管。",
+        "note": "週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。",
     }
 
 
@@ -232,7 +232,7 @@ def _pm(x, unit="%"):
 def render_md(b: dict) -> str:
     w, d, dl = b["weather"], b["dca"], b["delta"]
     L = [f"# 📬 台股週報 — {b['today']}", "",
-         "> 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308 論點監控。"
+         "> 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。"
          "**沒有任何一行是買賣建議；曝險與部位由人管。**", "",
          "## TL;DR", ""]
     L += [f"- {x}" for x in b["tldr"]]

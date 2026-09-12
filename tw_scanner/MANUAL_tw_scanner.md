@@ -61,6 +61,21 @@
 
 # 下篇：給維護者（需要 context 才看得懂）
 
+## 2026-09-12 起的家族結構（先看這段再動手）
+
+天氣台只是這個資料夾的一支。現在的產線（都在 `.github/workflows/tw_scanner.yml` 簡報後接著跑）：
+
+```
+tw_scanner.py ──► tw_scanner_state.json / tw_scanner_history.json（2019 起全序列）
+      │
+      ├─► dca_ledger.py   DCA 規則影子帳本（MANUAL_dca_ledger.md）
+      ├─► casino_tracker.py 賭場 sector（同上檔案末段）
+      └─► tw_brief.py     週報 tw_brief.json / tw_weekly.md（Worker /brief?m=tw、README 頂部）
+delta_radar.py（config 決定 2308 或 2330）各自排程，跑完也重組 brief。
+```
+改動紀錄在 `docs/log.md`「台股側第 6 批」與 `REVIEW_2026-07.md` 末段；**動新功能前先 `git log`**。
+
+
 ## 規格淵源
 
 2026-06-11 規格會議結論：放棄 D+1（盤後揭露＋訊號自相關以週計＝
