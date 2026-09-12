@@ -1,11 +1,12 @@
 {
- "generated_at": "2026-09-12T05:24:41+00:00",
+ "generated_at": "2026-09-12T06:08:34+00:00",
  "today": "2026-09-12",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-09-11）：本週無警報、預算未動 → 等（2026-09-18 再看）。",
   "鋒面 ☀️ RISK_ON（本週未變）。",
   "2308 前提 🟡 YELLOW；背離 NO_DATA",
+  "2330 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +0.6%）；PER 27.9，3 年分位 71 → 72",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.39%。"
  ],
  "weather": {
@@ -204,6 +205,7 @@
  },
  "delta": {
   "status": "OK",
+  "label": "2308",
   "as_of": "2026-09-11",
   "age_days": 1,
   "last_overall": "PARTIAL(m1)",
@@ -258,6 +260,92 @@
   ],
   "divergence": null,
   "scored_n": 78
+ },
+ "tsmc": {
+  "status": "OK",
+  "label": "2330",
+  "as_of": "2026-09-12",
+  "age_days": 0,
+  "last_overall": "YELLOW",
+  "last_modules_requested": [
+   "m1",
+   "m2",
+   "m3",
+   "m4",
+   "m5",
+   "m6",
+   "m8",
+   "m9"
+  ],
+  "full_overall": "YELLOW",
+  "full_ts": "2026-09-12",
+  "modules": [
+   {
+    "module": "M1 revenue_acceleration",
+    "status": "GREEN",
+    "headline": "2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月",
+    "ts": "2026-09-12T06:08:33.131273+00:00"
+   },
+   {
+    "module": "M2 bullwhip_health",
+    "status": "GREEN",
+    "headline": "合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9",
+    "ts": "2026-09-12T06:08:33.131273+00:00"
+   },
+   {
+    "module": "M3 adr_premium",
+    "status": "GREEN",
+    "headline": "ADR 溢價 +13.7%（1 年第 19 百分位；觀察）",
+    "ts": "2026-09-12T06:08:33.131273+00:00"
+   },
+   {
+    "module": "M4 customs_flow",
+    "status": "NO_DATA",
+    "headline": "Census fetch failed after 2 tries",
+    "ts": "2026-09-12T06:08:33.131273+00:00"
+   },
+   {
+    "module": "M5 narrative_triggers",
+    "status": "RED",
+    "headline": "export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:4e(5m)",
+    "ts": "2026-09-12T06:08:33.131273+00:00"
+   },
+   {
+    "module": "M6 peer_divergence",
+    "status": "GREEN",
+    "headline": "cohort 內 2308 未被對手顯著反超（離散在容忍帶內）",
+    "ts": "2026-09-12T06:08:33.131273+00:00"
+   },
+   {
+    "module": "M8 revision_velocity",
+    "status": "NO_DATA",
+    "headline": "下修 0/上修 0（樣本不足 <3，NO_DATA）",
+    "ts": "2026-09-12T06:08:33.131273+00:00"
+   },
+   {
+    "module": "M9 valuation",
+    "status": "GREEN",
+    "headline": "PER 27.9（3 年第 72 百分位；20 日前第 71）；觀察",
+    "ts": "2026-09-12T06:08:33.131273+00:00"
+   }
+  ],
+  "divergence": {
+   "flag": null,
+   "text": "無背離（前提 YELLOW、價格 20 日 +0.6%）；PER 27.9，3 年分位 71 → 72",
+   "premise": "YELLOW",
+   "premise_ts": "2026-09-12T06:08:32.689196+00:00",
+   "ret_pct": 0.63,
+   "lookback_sessions": 20,
+   "as_of": "2026-09-11",
+   "valuation": {
+    "per": 27.94,
+    "per_pct": 71.8,
+    "per_then": 27.76,
+    "per_pct_then": 70.7,
+    "history_years": 3
+   }
+  },
+  "scored_n": 0
  },
  "casino": {
   "status": "OK",
@@ -523,6 +611,11 @@
    "level": "ok",
    "label": "delta_radar 正常",
    "text": "delta_radar：最新 2026-09-11"
+  },
+  {
+   "level": "ok",
+   "label": "tsmc_radar 正常",
+   "text": "tsmc_radar：最新 2026-09-12"
   },
   {
    "level": "ok",

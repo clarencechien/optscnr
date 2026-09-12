@@ -7,6 +7,7 @@
 - 週檢查（2026-09-11）：本週無警報、預算未動 → 等（2026-09-18 再看）。
 - 鋒面 ☀️ RISK_ON（本週未變）。
 - 2308 前提 🟡 YELLOW；背離 NO_DATA
+- 2330 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +0.6%）；PER 27.9，3 年分位 71 → 72
 - 投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.39%。
 
 ## 1. 本期機械指示（DCA 規則影子帳本）
@@ -34,8 +35,9 @@
 - 分位數：外資現貨 73.8、大台Δ 35.7、散戶小台 28.2、融資Δ 13.5
 - 本週投降警報：無
 
-## 3. 2308 論點監控（delta_radar）
+## 3. 論點監控（2308 delta_radar／2330 tsmc_radar）
 
+### 2308
 - 前提（最近全模組 2026-09-10）：🟡 YELLOW
 - 背離 NO_DATA
   - 🟡 M1 revenue_acceleration：2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月
@@ -46,6 +48,20 @@
   - 🔴 M6 peer_divergence：cooling:3324領先+36pp
   - 🟢 M8 revision_velocity：下修 0/上修 0（樣本不足 <3，暫不評級）
 - 回填樣本 78 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
+
+### 2330
+- 前提（最近全模組 2026-09-12）：🟡 YELLOW
+- 無背離（前提 YELLOW、價格 20 日 +0.6%）；PER 27.9，3 年分位 71 → 72
+  - 🟢 M1 revenue_acceleration：2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月
+  - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9
+  - 🟢 M3 adr_premium：ADR 溢價 +13.7%（1 年第 19 百分位；觀察）
+  - ⚪ M4 customs_flow：Census fetch failed after 2 tries
+  - 🔴 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:4e(5m)
+  - 🟢 M6 peer_divergence：cohort 內 2308 未被對手顯著反超（離散在容忍帶內）
+  - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
+  - 🟢 M9 valuation：PER 27.9（3 年第 72 百分位；20 日前第 71）；觀察
+- 回填樣本 0 筆（T+20 超額）；退役判準見 `tsmc_radar_report.md`
+
 
 ## 4. 賭場 sector（AI 個股，只收資料）
 
@@ -81,7 +97,8 @@
 - ✅ 天氣台：最新 2026-09-11
 - ✅ DCA 帳本：最新 2026-09-11
 - ✅ delta_radar：最新 2026-09-11
+- ✅ tsmc_radar：最新 2026-09-12
 - ✅ 賭場 sector：最新 2026-09-12
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋論點監控。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-12T05:24:41+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋論點監控。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-12T06:08:34+00:00*
