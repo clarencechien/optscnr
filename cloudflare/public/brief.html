@@ -60,7 +60,33 @@
   .big { font-size: 20px; font-weight: 700; }
   .action { border-left: 4px solid var(--accent); padding-left: 12px; margin: 8px 0; }
   .path { display:flex; gap:6px; flex-wrap:wrap; } .path span { padding:3px 10px; border-radius:999px; background:var(--surface-2); border:1px solid var(--hair); font-size:13px; }
-  @media print { .nav, .switch { display:none; } body { background:#fff; } }
+  /* 上半：一分鐘白話版（手機優先） */
+  .simple { background: var(--surface); border:1px solid var(--hair); border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 16px; margin: 0 0 8px; }
+  .simple .do { font-size: 20px; font-weight: 700; line-height: 1.45; margin: 0 0 8px; }
+  .simple ul { margin: 0; padding-left: 18px; } .simple li { margin: 6px 0; font-size: 16px; }
+  .simple .hint { font-size: 13px; color: var(--muted); margin-top: 8px; }
+  /* 下半：可收合的完整資料 */
+  .full-title { margin: 26px 0 4px; font-size: 13px; color: var(--muted); letter-spacing: .04em; }
+  details.sec { border-top: 1px solid var(--hair); }
+  details.sec > summary { list-style: none; cursor: pointer; display:flex; align-items:center; gap:8px; padding: 12px 0; font-size: 16px; font-weight: 600; }
+  details.sec > summary::-webkit-details-marker { display:none; }
+  details.sec > summary::after { content: "＋"; margin-left:auto; color: var(--muted); font-weight: 500; }
+  details.sec[open] > summary::after { content: "－"; }
+  details.sec > .body { padding: 0 0 14px; }
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+  .scroll table { min-width: 520px; }
+  td, th { white-space: nowrap; } td.wrap, th.wrap { white-space: normal; }
+  @media (max-width: 640px) {
+    .paper { padding: 16px 14px 48px; } html, body { font-size: 15px; }
+    .masthead h1 { font-size: 22px; } .masthead { gap: 8px; }
+    .switch { order: 3; width: 100%; justify-content: center; }
+    .nav { margin-left: 0; width: 100%; }
+    .card, .box, .tldr, .simple { padding: 12px 12px; }
+    .kv { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .big { font-size: 18px; } .card .tk { font-size: 18px; }
+    .bars { grid-template-columns: 84px 1fr 48px; }
+  }
+  @media print { .nav, .switch { display:none; } body { background:#fff; } details.sec { display:block; } }
 </style>
 </head>
 <body>
@@ -71,46 +97,38 @@
     <div class="switch" id="switch"><a href="/brief?m=us" data-m="us">US 美股</a><a href="/brief?m=tw" data-m="tw">TW 台股</a></div>
   </div>
 
-  <div class="tldr"><ul id="tldr"><li>讀取中…</li></ul><div class="lights" id="lights"></div></div>
+  <div class="simple" id="simple"><div class="do" id="simple-do">讀取中…</div><ul id="simple-list"></ul><div class="lights" id="lights"></div><div class="hint">上面是白話版；完整資料在下方，點各段展開。</div></div>
+  <div class="tldr" id="tldr-box" hidden><ul id="tldr"></ul></div>
 
   <section id="us">
-  <h2><span class="n">1</span>今日結構候選</h2>
+  <div class="full-title">完整資料（點段落展開）</div>
+  <details class="sec"><summary><span class="n">1</span>今日結構候選</summary><div class="body">
   <div id="cands"></div>
   <div class="box" id="ruleB">
     <div class="rb-title">規則 B 懶人包</div>
     <p class="rb-lead">從 Score ≥ 8 的信號裡，留下五個結構條件都成立的合約。<br>它不預測誰會動，只留「動了之後最能換到倍數」的合約形狀。</p>
     <div class="rb-chips"><span>非末日</span><span>DTE 21–120</span><span>IV &lt; 50%</span><span>OTM &lt; 25%</span><span>Δ7d &gt; 0 且有歷史</span></div>
     <table class="rb-table"><tbody>
-      <tr><td>樂透 &lt; $1.5 且 IV &lt; 50</td><td>→</td><td><b>死抱</b></td></tr>
-      <tr><td>實彈 &gt; $3</td><td>→</td><td><b>4 口階梯 2 / 4 / 8x</b></td></tr>
-      <tr><td>其餘</td><td>→</td><td><b>−50% 停損 + 2x 賣半</b></td></tr>
+      <tr><td class="wrap">樂透 &lt; $1.5 且 IV &lt; 50</td><td>→</td><td><b>死抱</b></td></tr>
+      <tr><td class="wrap">實彈 &gt; $3</td><td>→</td><td><b>4 口階梯 2 / 4 / 8x</b></td></tr>
+      <tr><td class="wrap">其餘</td><td>→</td><td><b>−50% 停損 + 2x 賣半</b></td></tr>
     </tbody></table>
     <div class="muted">賣點依 DTE 21 出場手冊換算。空手是正確執行，不補名額。</div>
   </div>
-
-  <h2><span class="n">2</span>LLM 三題（只答事實，不做可玩判斷）</h2>
-  <div id="decision"></div>
-
-  <h2><span class="n">3</span>History：出場政策 shadow 回測</h2>
-  <div id="history"></div>
-
-  <h2><span class="n">4</span>資料正確與否</h2>
-  <div class="card"><ul class="checks" id="checks"></ul></div>
+  </div></details>
+  <details class="sec"><summary><span class="n">2</span>LLM 三題（只答事實，不做可玩判斷）</summary><div class="body"><div id="decision"></div></div></details>
+  <details class="sec"><summary><span class="n">3</span>History：出場政策 shadow 回測</summary><div class="body"><div id="history"></div></div></details>
+  <details class="sec"><summary><span class="n">4</span>資料正確與否</summary><div class="body"><div class="card"><ul class="checks" id="checks"></ul></div></div></details>
   </section>
 
   <section id="tw" hidden>
-  <h2><span class="n">1</span>本期機械指示（DCA 規則影子帳本）</h2>
-  <div id="tw-dca"></div>
-  <h2><span class="n">2</span>天氣（籌碼溫度計）</h2>
-  <div id="tw-weather"></div>
-  <h2><span class="n">3</span>2308 論點監控</h2>
-  <div id="tw-delta"></div>
-  <h2><span class="n">4</span>賭場 sector（AI 個股，只收資料）</h2>
-  <div id="tw-casino"></div>
-  <h2><span class="n">5</span>下週日曆</h2>
-  <div class="card" id="tw-calendar"></div>
-  <h2><span class="n">6</span>資料健康</h2>
-  <div class="card"><ul class="checks" id="tw-checks"></ul></div>
+  <div class="full-title">完整資料（點段落展開）</div>
+  <details class="sec"><summary><span class="n">1</span>本期機械指示（DCA 規則影子帳本）</summary><div class="body"><div id="tw-dca"></div></div></details>
+  <details class="sec"><summary><span class="n">2</span>天氣（籌碼溫度計）</summary><div class="body"><div id="tw-weather"></div></div></details>
+  <details class="sec"><summary><span class="n">3</span>2308 論點監控</summary><div class="body"><div id="tw-delta"></div></div></details>
+  <details class="sec"><summary><span class="n">4</span>賭場 sector（AI 個股，只收資料）</summary><div class="body"><div id="tw-casino"></div></div></details>
+  <details class="sec"><summary><span class="n">5</span>下週日曆</summary><div class="body"><div class="card" id="tw-calendar"></div></div></details>
+  <details class="sec"><summary><span class="n">6</span>資料健康</summary><div class="body"><div class="card"><ul class="checks" id="tw-checks"></ul></div></div></details>
   </section>
 
   <div class="foot" id="foot-us">
@@ -175,7 +193,7 @@ function renderUS(b) {
   const bad = b.checks.filter(x => x.level === 'bad').length, warn = b.checks.filter(x => x.level === 'warn').length;
   t.push(bad ? `<b>資料有 ${bad} 項異常</b>，見第 4 節。` : warn ? `資料 ${warn} 項待補（通常是還沒到時間），見第 4 節。` : '資料檢查全部正常。');
   $('#tldr').innerHTML = t.map(x => `<li>${x}</li>`).join('');
-  $('#lights').innerHTML = b.checks.map(x => `<span class="light ${x.level}" title="${esc(x.text)}"><i></i>${esc(x.label || x.text.slice(0, 12))}</span>`).join('');
+  renderSimple(simpleUS(b), b.checks);
 
   // ---- 候選 ----
   if (!c) $('#cands').innerHTML = '<div class="empty">尚無資料</div>';
@@ -214,13 +232,55 @@ function renderUS(b) {
     const mo = Object.entries(m.monthly || {}).map(([k, v]) => `${k.slice(5)} 月 ${f2(v.C_bound)}x（n=${v.n}）`).join('・');
     const ctl = m.control || {};
     $('#history').innerHTML = `<div class="card">${bars}
-      <table style="margin-top:12px"><thead><tr><th>樣本群</th><th class="num">n</th><th class="num">命中 ≥2x</th><th class="num">最佳 EV</th><th>最佳出場法</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="scroll"><table style="margin-top:12px"><thead><tr><th>樣本群</th><th class="num">n</th><th class="num">命中 ≥2x</th><th class="num">最佳 EV</th><th>最佳出場法</th></tr></thead><tbody>${rows}</tbody></table></div>
       <div class="muted" style="margin-top:10px">策略 C 逐月：${mo || '—'}。${ctl.edge_pp != null ? `對照組 edge ${ctl.edge_pp > 0 ? '+' : ''}${ctl.edge_pp} pp（上榜 ${pct(ctl.listed_rate)} vs universe ${pct(ctl.universe_rate)}）。` : '對照組累積中。'} 完整矩陣在 <a href="/#history">dashboard</a>。</div></div>`;
   }
 
   // ---- checks ----
   $('#checks').innerHTML = b.checks.map(x => `<li class="${x.level}"><i></i><span>${esc(x.text)}</span></li>`).join('')
     + (b.schedule.run ? `<li class="info"><i></i><span class="muted">最近一次 scanner：${esc(b.schedule.run.event)}・${tpe(b.schedule.run.created_at)}（台北）・${esc(b.schedule.run.conclusion || b.schedule.run.status)}${safeHref(b.schedule.run.url) ? ` <a href="${safeHref(b.schedule.run.url)}" target="_blank" rel="noopener">log</a>` : ''}</span></li>` : '');
+}
+
+// ---------------------------------------------------------------- 上半：一分鐘白話版
+const REGIME_PLAIN = { CAPITULATION: '🥶 市場在投降（歷史上加碼比平常划算的日子）', DE_RISK: '🌧️ 轉冷', NEUTRAL: '⛅ 普通', RISK_ON: '☀️ 偏熱', OVERHEAT: '🔥 過熱（只是溫度描述，不代表要賣）', UNCALIBRATED: '❔ 資料不足' };
+function simpleTW(b) {
+  const d = b.dca || {}, w = b.weather || {}, dl = b.delta || {}, cs = b.casino || {};
+  const wg = (d.current || {}).weekly_gate;
+  let doLine = '本週：資料還沒到，先不動。';
+  if (wg) doLine = wg.action === 'none' ? '本週：不動（本月預算已經用掉）。'
+    : wg.action === 'wait' ? '本週：不動，等下週再看。'
+    : wg.action === 'buy_plain' ? `本週：照常投入 ${n0(wg.amount)} 元（本月最後一週）。`
+    : `本週：投降窗開了，下一個交易日投入 ${n0(wg.amount)} 元，之後這個月不再動。`;
+  const items = [];
+  if (w.status === 'OK') items.push(`天氣：${REGIME_PLAIN[w.regime] || w.regime}${(w.week_transitions || []).length ? '，這週剛換天氣' : '，跟上週一樣'}。`);
+  if (dl.status === 'OK') {
+    const dv = dl.divergence || {};
+    const prem = dl.full_overall === 'RED' ? '台達的基本面前提出問題了' : dl.full_overall ? '台達的基本面前提還在' : '台達還沒有完整判定';
+    items.push(`${prem}${dv.flag === 'premise_ok_price_down' ? '，但股價跌很多：跌的是估值不是基本面' : dv.flag === 'premise_broken_price_up' ? '，但股價沒跌：市場不買儀器的帳' : ''}。`);
+  }
+  if (cs.status === 'OK' && (cs.shadow_dca || {}).status === 'OK') {
+    const sd = cs.shadow_dca;
+    items.push(`賭場籃子（AI 個股，每月小額等權）：${sd.n_months} 個月，${sd.basket_minus_bench_pp > 0 ? '贏' : '輸'} 0050 ${Math.abs(sd.basket_minus_bench_pp).toFixed(1)} 個百分點；樣本還少，只是記帳。`);
+  }
+  const bad = (b.checks || []).filter(x => x.level === 'bad').length;
+  items.push(bad ? `有 ${bad} 份資料還沒到，數字可能不完整。` : '資料都正常。');
+  return { doLine, items };
+}
+function simpleUS(b) {
+  const c = b.candidates, dec = b.decision, m = b.matrix;
+  let doLine = '今天：資料還沒到。';
+  if (c) doLine = c.n_candidates ? `今天：${c.n_candidates} 張合約長得對（${c.candidates.map(x => x.ticker).join('、')}），要不要買由你查證後決定。` : '今天：空手。沒有合約通過規則，什麼都不用做。';
+  const items = [];
+  if (dec) items.push(dec.llm_called ? 'LLM 已幫這幾張查了事件、跳空、資金流三個事實，答案在下面第 2 段。' : 'LLM 今天沒有東西要查。');
+  if (m && m.rule_b) items.push(`過去這套規則（n=${m.rule_b.n}）：每三張大約中一張，平均拿回 ${f2(m.rule_b.ev[m.rule_b.best])} 倍本金；六成的票會賠錢，靠少數大贏家。`);
+  const bad = (b.checks || []).filter(x => x.level === 'bad').length;
+  items.push(bad ? `有 ${bad} 項資料異常，數字可能不完整。` : '資料都正常。');
+  return { doLine, items };
+}
+function renderSimple(sv, checks) {
+  $('#simple-do').textContent = sv.doLine;
+  $('#simple-list').innerHTML = sv.items.map(x => `<li>${esc(x)}</li>`).join('');
+  $('#lights').innerHTML = (checks || []).map(x => `<span class="light ${x.level}" title="${esc(x.text)}"><i></i>${esc(x.label || x.text.slice(0, 12))}</span>`).join('');
 }
 
 // ---------------------------------------------------------------- TW 台股週報
@@ -232,7 +292,7 @@ function renderTW(b) {
   $('#date').textContent = `週報 ${b.today}｜產出 ${tpe(b.generated_at)}（台北）`;
   $('#nav').innerHTML = '';
   $('#tldr').innerHTML = (b.tldr || []).map(x => `<li>${esc(x)}</li>`).join('');
-  $('#lights').innerHTML = (b.checks || []).map(c => `<span class="light ${c.level}" title="${esc(c.text)}"><i></i>${esc(c.label)}</span>`).join('');
+  renderSimple(simpleTW(b), b.checks);
 
   const d = b.dca || {};
   if (d.status !== 'OK') $('#tw-dca').innerHTML = `<div class="empty">NO_DATA：${esc(d.reason || '缺 dca_ledger.json（首次排程跑完才有）')}</div>`;
@@ -245,11 +305,11 @@ function renderTW(b) {
         <div><b>例行（對照）</b><span>${esc(c.next_regular_buy)} 買 ${n0(c.plain_amount)} 元${c.this_month_bought ? '（本月已買）' : ''}</span></div>
         <div><b>投降窗加碼</b><span>${c.boost_pending ? '待執行 ' + n0(c.boost_amount) + ' 元' : '無'}</span></div>
         <div><b>鋒面調節（假說）</b><span>${esc(c.regime)} ×${c.regime_multiplier} = ${n0(c.regime_amount)} 元</span></div>
-        <div><b>${esc(d.instrument)} 收盤</b><span>${c.last_price} (${esc(c.as_of)})</span></div>
+        <div><b>${esc(d.instrument)} 收盤</b><span>${c.last_price ?? "—"} (${esc(c.as_of)})</span></div>
       </div>
       <div class="muted">自 ${esc(f.start)} 起 ${f.n_periods} 期，等額假設：</div>
-      <table><thead><tr><th>規則</th><th class="num">買次</th><th class="num">平均成本</th><th class="num">vs 純 DCA</th><th class="num">報酬</th><th class="num">XIRR</th></tr></thead>
-      <tbody>${rules.map(r => `<tr><td>${esc(r.label)}</td><td class="num">${r.n_buys}</td><td class="num">${r.avg_cost ?? '—'}</td><td class="num">${pm(r.avg_cost_vs_plain_pct)}</td><td class="num">${pm(r.return_pct)}</td><td class="num">${pm(r.xirr_pct)}</td></tr>`).join('')}</tbody></table>
+      <div class="scroll"><table><thead><tr><th>規則</th><th class="num">買次</th><th class="num">平均成本</th><th class="num">vs 純 DCA</th><th class="num">報酬</th><th class="num">XIRR</th></tr></thead>
+      <tbody>${rules.map(r => `<tr><td>${esc(r.label)}</td><td class="num">${r.n_buys}</td><td class="num">${r.avg_cost ?? '—'}</td><td class="num">${pm(r.avg_cost_vs_plain_pct)}</td><td class="num">${pm(r.return_pct)}</td><td class="num">${pm(r.xirr_pct)}</td></tr>`).join('')}</tbody></table></div>
       <div class="muted" style="margin-top:8px">投降窗加碼 ${f.boost_n ?? 0} 次${f.boost_n ? `：比等到例行日買平均便宜 ${pm(f.boost_edge_mean_pct)}、勝率 ${f.boost_edge_win_pct}%` : ''}。lump_sum 是對照不是策略；regime_scaled 是待處決的假說。</div>
     </div>`;
   }
@@ -278,7 +338,7 @@ function renderTW(b) {
     $('#tw-delta').innerHTML = `<div class="card">
       <div class="big">${LIGHT[dl.full_overall] || '⚪'} ${esc(dl.full_overall || '尚無全模組判定')} <span class="muted">最近全模組 ${esc(dl.full_ts || '—')}</span></div>
       <div class="${dv.flag ? 'action' : 'muted'}" style="margin:8px 0">${esc(dv.text || '背離 NO_DATA')}</div>
-      <table><tbody>${(dl.modules || []).map(m => `<tr><td>${LIGHT[m.status] || '⚪'} ${esc(m.module)}</td><td class="muted">${esc(m.headline)}</td></tr>`).join('')}</tbody></table>
+      <div class="scroll"><table><tbody>${(dl.modules || []).map(m => `<tr><td>${LIGHT[m.status] || '⚪'} ${esc(m.module)}</td><td class="muted wrap">${esc(m.headline)}</td></tr>`).join('')}</tbody></table></div>
       <div class="muted" style="margin-top:8px">回填樣本 ${dl.scored_n} 筆（T+20 超額 vs 0050）；退役判準表在 delta_radar_report.md。</div>
     </div>`;
   }
@@ -287,8 +347,8 @@ function renderTW(b) {
   else {
     const sd = cs.shadow_dca || {}, t = cs.tercile_t20 || {};
     $('#tw-casino').innerHTML = `<div class="card">
-      <table><thead><tr><th>代號</th><th>名稱</th><th>桶</th><th class="num">20 日 vs 0050</th><th class="num">月營收 YoY</th><th class="num">3 月均</th><th class="num">斜率</th></tr></thead>
-      <tbody>${(cs.rows || []).map(r => `<tr><td>${esc(r.ticker)}</td><td>${esc(r.name)}${r.in_0050 ? ' <span class="muted">0050</span>' : ''}</td><td>${esc(r.bucket)}</td><td class="num">${pm(r.excess20_pct)}</td><td class="num">${pm(r.yoy_pct)}</td><td class="num">${pm(r.yoy_avg_pct)}</td><td class="num">${pm(r.yoy_slope_pp, '')}</td></tr>`).join('')}</tbody></table>
+      <div class="scroll"><table><thead><tr><th>代號</th><th>名稱</th><th>桶</th><th class="num">20 日 vs 0050</th><th class="num">月營收 YoY</th><th class="num">3 月均</th><th class="num">斜率</th></tr></thead>
+      <tbody>${(cs.rows || []).map(r => `<tr><td>${esc(r.ticker)}</td><td>${esc(r.name)}${r.in_0050 ? ' <span class="muted">0050</span>' : ''}</td><td>${esc(r.bucket)}</td><td class="num">${pm(r.excess20_pct)}</td><td class="num">${pm(r.yoy_pct)}</td><td class="num">${pm(r.yoy_avg_pct)}</td><td class="num">${pm(r.yoy_slope_pp, '')}</td></tr>`).join('')}</tbody></table></div>
       ${sd.status === 'OK' ? `<div style="margin-top:10px">影子 DCA（每月等權買整籃 vs 同筆錢買 0050）：${sd.n_months} 個月，籃子 ${pm(sd.basket_return_pct)} vs 0050 ${pm(sd.bench_return_pct)}，差 <b>${pm(sd.basket_minus_bench_pp, ' pp')}</b>；${esc((cs.verdict || {}).basket || '')}</div>` : ''}
       <div class="muted" style="margin-top:6px">月營收加速三分位 vs T+20 超額：${esc(t.status || '累積中')}（回填 ${cs.scored_n ?? 0} 筆）。${esc(cs.note || '')}</div>
     </div>`;
@@ -307,6 +367,8 @@ function renderTW(b) {
   $('#us').hidden = tw; $('#tw').hidden = !tw;
   $('#foot-us').hidden = tw; $('#foot-tw').hidden = !tw;
   document.querySelectorAll('#switch a').forEach(a => a.classList.toggle('on', (a.dataset.m === 'tw') === tw));
+  // 桌機預設展開完整資料；手機預設收合（上半白話版就夠看）
+  if (matchMedia('(min-width: 900px)').matches) document.querySelectorAll('details.sec').forEach(d => d.open = true);
   try {
     const url = tw ? '/api/tw' : '/api/brief' + (d ? `?d=${encodeURIComponent(d)}` : '');
     const r = await fetch(url, { cache: 'no-store' });
@@ -314,7 +376,8 @@ function renderTW(b) {
     (tw ? renderTW : renderUS)(await r.json());
   } catch (e) {
     $('#date').textContent = '讀取失敗';
-    $('#tldr').innerHTML = tw
+    $('#simple-do').textContent = '讀取失敗';
+    $('#simple-list').innerHTML = tw
       ? `<li>台股週報資料讀不到：${esc(String(e.message || e))}。首次排程跑完才有 tw_brief.json；人讀版在 <a href="https://github.com/clarencechien/optscnr/blob/main/tw_scanner/README.md">tw_scanner/README.md</a>。</li>`
       : `<li>電子報資料讀不到：${esc(String(e.message || e))}。若你有登入 dashboard，直接開 <a href="/">dashboard</a>。</li>`;
   }
