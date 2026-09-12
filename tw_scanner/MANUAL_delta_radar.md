@@ -106,3 +106,16 @@ python delta_radar.py --dump-accounts | grep -i contract
   M7 回填的 `outcomes`（T+5/10/20 raw + 超額報酬 vs benchmark），留給回測 gate 有效性
 
 > `--selftest` 一律寫到臨時目錄，永不碰真實 state.json（避免 fixture 判定污染回測樣本）。
+
+## 2026-09-12 改版：多 instance、M8 修正、M9 估值、退役判準翻轉數
+
+- **同一支程式跑多個標的**：config `name`（輸出檔名前綴）、`display`、`modules_full`（全模組集合）、`m3_mode`
+  （`thai_shadow` 台達／`adr_premium` 台積：TSM ADR×USDTWD ÷ 2330×5 − 1 的 1 年分位）。
+  `tsmc_radar_config.json` + `.github/workflows/tsmc_radar.yml` 是第二個 instance；排程與台達錯開 30 分鐘。
+- **M8 樣本不足 → NO_DATA**（原本回 GREEN，24 次 run 全 0/0 卻算綠燈）。
+- **M9 估值分位**（觀察模組，不進總判定）：FinMind `TaiwanStockPER` 每日本益比，自身 3 年分位與 20 日前分位；
+  背離旗標文字帶入「PER x，分位 a → b」，讓「跌的是估值」變成量測。
+- **M7 第二基準** `benchmark_extra`（如 `["SMH"]`，yfinance）：outcomes 多記 `t{n}_excess_smh_pct`。
+- **退役判準加 `min_flips`**：n 是天數不是獨立樣本，狀態翻轉 <3 次的模組一律「無法判定」。
+  2026-09-12 現況：只有 M5 翻轉 32 次可讀（方向對）；M2、M3 各翻 1–2 次，之前的「方向反」不能當證據。
+- ⚠️ tsmc 的 M1/M2/M4/M5 閾值是 placeholder（config 各段 `_calibrate`），首跑後對照真資料校準；校準前只看方向。

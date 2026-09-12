@@ -1,0 +1,159 @@
+{
+  "_comment": "tsmc_radar — 2330 台積電論點監控（與 delta_radar 共用 delta_radar.py，config 驅動）。2026-09-12 建立。shadow-mode instrument：只監控前提、記後果，不是交易訊號。⚠️ 多數閾值是 placeholder，等首跑 --dump-accounts 與真資料校準（見各段 _calibrate）。",
+  "name": "tsmc_radar",
+  "display": "TSMC Radar (2330.TW)",
+  "ticker_tw": "2330",
+  "modules_full": ["m1", "m2", "m3", "m4", "m5", "m6", "m8", "m9"],
+  "m3_mode": "adr_premium",
+  "output_dir": "output",
+  "endpoints": {
+    "finmind": "https://api.finmindtrade.com/api/v4/data",
+    "census": "https://api.census.gov/data/timeseries/intltrade/imports/hs",
+    "gnews_rss": "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+  },
+  "m1_revenue_acceleration": {
+    "_basis": "台積月營收 YoY 二階導數；台積成長率量級低於台達，地板依 2026 年 30–40% 的 AI 帶動成長設。",
+    "_calibrate": "首跑後對照近 12 個月 YoY 水位調整 yellow/red 地板。",
+    "slope_window": 3,
+    "yellow_yoy_floor_pct": 15.0,
+    "red_yoy_floor_pct": 5.0,
+    "yellow_consec_decel": 2,
+    "red_consec_decel": 3,
+    "red_slope_floor_pp": -5.0
+  },
+  "m2_bullwhip_health": {
+    "_basis": "台積：合約負債（客戶預付產能）、存貨、FCF/淨利。台積 FCF/淨利常年 0.5–0.9（資本支出重），閾值不能照台達。",
+    "_calibrate": "跑 --dump-accounts 確認科目名；FCF/淨利 green/red 依近 8 季分布設。",
+    "contract_qoq_green_pct": 5.0,
+    "contract_qoq_red_pct": -10.0,
+    "fcf_ni_green": 0.5,
+    "fcf_ni_red": 0.2,
+    "inventory_runaway_pct": 15.0,
+    "account_patterns": {
+      "contract_liabilities": ["^CurrentContractLiabilities$", "contract.*liab"],
+      "inventory": ["^Inventories$", "^inventor"],
+      "operating_cash_flow": ["^CashFlowsFromOperatingActivities$", "operating.*activit"],
+      "capex": ["^PropertyAndPlantAndEquipment$", "^AcquisitionOfPropertyPlantAndEquipment$", "propert.*plant.*equip"],
+      "net_income": ["^IncomeAfterTaxes$", "^NetIncome$", "^ProfitLossAttributableToOwnersOfParent$", "^ProfitLoss$"]
+    }
+  },
+  "m3_adr_premium": {
+    "_basis": "TSM ADR（USD）×USDTWD ÷（2330 收盤 × 5）− 1 = ADR 溢價；外資情緒的免費指標。看自身 1 年分位。觀察模組，不進總判定。",
+    "adr": "TSM",
+    "fx": "TWD=X",
+    "shares_per_adr": 5,
+    "lookback_days": 365
+  },
+  "m4_customs_flow": {
+    "_basis": "美國自台灣進口 HS 8542（積體電路）滾動 3 月 YoY。弱代理：台積多數晶圓運往亞洲封測，不直運美國；只當背景。",
+    "_calibrate": "首跑看水位；若序列太小或噪音太大，考慮改為觀察模組。",
+    "hs_code": "8542",
+    "country_codes": {"taiwan": "5830"},
+    "months_back": 30,
+    "rolling_window_months": 3,
+    "green_yoy_pct": 15.0,
+    "yellow_yoy_pct": 0.0,
+    "retries": 1,
+    "retry_backoff_s": 30
+  },
+  "m5_narrative_triggers": {
+    "max_items_per_feed": 40,
+    "z_yellow": 1.5,
+    "z_red": 2.5,
+    "z_min_samples": 5,
+    "buckets": {
+      "export_controls_tariffs": {
+        "query": "TSMC (export controls OR tariff OR \"Section 232\" OR sanctions)",
+        "keywords": ["export control", "tariff", "section 232", "sanction", "restriction", "ban"],
+        "yellow_hits": 6,
+        "red_hits": 15,
+        "must_include": ["tsmc", "taiwan semiconductor", "chip"],
+        "denial_keywords": ["exempt", "exemption", "waiver", "spared", "not affected"]
+      },
+      "n2_arizona_ramp": {
+        "query": "TSMC (N2 OR 2nm OR Arizona) (delay OR yield OR postpone OR slip)",
+        "keywords": ["delay", "yield", "postpone", "slip", "pushed"],
+        "yellow_hits": 3,
+        "red_hits": 8,
+        "must_include": ["n2", "2nm", "arizona", "2-nanometer"],
+        "denial_keywords": ["on track", "ahead of schedule", "on schedule", "denies", "rumor"]
+      },
+      "cowos_capacity": {
+        "query": "TSMC CoWoS (shortage OR constraint OR cut OR order)",
+        "keywords": ["shortage", "constraint", "cut", "reduce", "cancel"],
+        "yellow_hits": 4,
+        "red_hits": 10,
+        "must_include": ["cowos", "advanced packaging"],
+        "denial_keywords": ["expansion", "doubling", "on track"]
+      },
+      "geopolitics": {
+        "query": "Taiwan (PLA OR blockade OR military drills) semiconductor",
+        "keywords": ["blockade", "drills", "invasion", "military", "quarantine"],
+        "yellow_hits": 8,
+        "red_hits": 20,
+        "must_include": ["taiwan"]
+      },
+      "hyperscaler_capex": {
+        "query": "hyperscaler capex (cut OR reduce OR pause OR slowdown)",
+        "keywords": ["capex cut", "spending cut", "pause", "slowdown", "reduce capital expenditure", "scale back"],
+        "yellow_hits": 4,
+        "red_hits": 10,
+        "must_include": ["capex", "capital expenditure", "data center", "datacenter", "ai infrastructure", "hyperscaler"]
+      }
+    },
+    "_calibration_note": "門檻是 placeholder；跑 5 次後 z-score 基準自動接手（與 delta 同）。"
+  },
+  "m6_peer_divergence": {
+    "_basis": "cohort 相對動能（台灣月營收強制公告）。foundry_contrast：聯電 2303 反超 = 成熟製程回溫，不算台積風險；backend：日月光 3711／欣興 3037／台光電 2383 同向 = 下游確認；asic_lead：世芯 3661／創意 3443 領先 = ASIC 需求前緣。全部 cohort_confirm（只記錄不升級）。",
+    "metric": "yoy_3m_avg",
+    "divergence_yellow_pp": 15.0,
+    "divergence_red_pp": 30.0,
+    "red_requires_consec_months": 2,
+    "cohort": {
+      "foundry_contrast": {"members": ["2330", "2303"], "direction": "cohort_confirm", "_note": "聯電：成熟製程對照"},
+      "backend": {"members": ["2330", "3711", "3037", "2383"], "direction": "cohort_confirm", "_note": "封測／載板／CCL：下游確認"},
+      "asic_lead": {"members": ["2330", "3661", "3443"], "direction": "cohort_confirm", "_note": "ASIC 設計服務：需求前緣"}
+    }
+  },
+  "m7_outcome_backfill": {
+    "_basis": "T+5/10/20 遠期報酬；主基準 0050（家族一致），第二基準 SMH（全球半導體，yfinance）——台積佔 0050 約六成，對 0050 的超額幾乎退化，SMH 才看得出台積對全球半導體的相對強弱。",
+    "enabled": true,
+    "horizons": [5, 10, 20],
+    "benchmark": "0050",
+    "benchmark_extra": ["SMH"]
+  },
+  "m8_revision_velocity": {
+    "_basis": "目標價修正方向比（RSS 中文）；連 2 次 run 偏空才升級；樣本 <3 → NO_DATA。",
+    "query": "台積電 (目標價 OR 評等) (上修 OR 下修 OR 調升 OR 調降)",
+    "max_items": 40,
+    "up_keywords": ["上修", "調升", "調高", "buy", "overweight", "raise", "upgrade", "outperform"],
+    "down_keywords": ["下修", "調降", "調低", "sell", "underweight", "cut", "downgrade", "reduce"],
+    "min_total": 3,
+    "yellow_down_ratio": 0.6,
+    "require_consec": true
+  },
+  "m9_valuation": {
+    "_basis": "FinMind TaiwanStockPER 每日本益比；自身 3 年分位與 20 日前分位。觀察模組，不進總判定；背離旗標帶入。",
+    "history_years": 3,
+    "lookback_sessions": 20
+  },
+  "divergence": {
+    "_basis": "前提健在＋價格重挫 = 跌的是估值不是基本面；反向亦標。只呈現不裁決。",
+    "enabled": true,
+    "lookback_sessions": 20,
+    "price_drop_pct": -10.0,
+    "price_flat_pct": 0.0
+  },
+  "retirement": {
+    "_basis": "與 delta 同：GREEN n≥30 且劣於 YELLOW/RED → 處決候選；狀態翻轉 <3 次一律無法判定。整支 2026-12 底覆核（比台達晚一季，先收資料）。",
+    "min_cohort_n": 30,
+    "min_flips": 3,
+    "horizon": 20,
+    "review_date": "2026-12-31"
+  },
+  "aggregation": {
+    "overall_red_min_reds": 2,
+    "overall_yellow_min_yellows": 2,
+    "fail_ci_on_red": false
+  }
+}

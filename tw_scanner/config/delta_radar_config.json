@@ -1,7 +1,19 @@
 {
   "_comment": "delta_radar config — all thresholds externalized, house style per space_radar",
+  "name": "delta_radar",
+  "display": "Delta Radar (2308.TW)",
   "ticker_tw": "2308",
   "ticker_th": "DELTA.BK",
+  "modules_full": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5",
+    "m6",
+    "m8",
+    "m9"
+  ],
   "output_dir": "output",
   "endpoints": {
     "finmind": "https://api.finmindtrade.com/api/v4/data",
@@ -259,9 +271,15 @@
     "price_flat_pct": 0.0
   },
   "retirement": {
-    "_basis": "REVIEW_2026-07 改進項 2（寫死防捨不得）：模組 GREEN cohort n≥30 後 T+20 超額仍劣於自己 YELLOW/RED → 處決候選；整支雷達 2026-10 底覆核。程式只算只印，不改 config。",
+    "_basis": "REVIEW_2026-07 改進項 2（寫死防捨不得）：模組 GREEN cohort n≥30 後 T+20 超額仍劣於自己 YELLOW/RED → 處決候選；整支雷達 2026-10 底覆核。程式只算只印，不改 config。 2026-09-12 加 min_flips：n 是天數不是獨立樣本，狀態翻轉 <3 次一律「無法判定」。",
     "min_cohort_n": 30,
     "horizon": 20,
-    "review_date": "2026-10-31"
+    "review_date": "2026-10-31",
+    "min_flips": 3
+  },
+  "m9_valuation": {
+    "_basis": "2026-09-12：讓「跌的是估值」變成量測。FinMind TaiwanStockPER 每日本益比；看自身 3 年分位與 20 日前分位。觀察模組，不進總判定。",
+    "history_years": 3,
+    "lookback_sessions": 20
   }
 }

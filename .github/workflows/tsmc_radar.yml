@@ -1,10 +1,10 @@
-name: delta-radar
+name: tsmc-radar
 
 on:
   schedule:
-    - cron: "41 2 * * *"     # daily   02:30 UTC = 10:30 Taipei - M5 narrative only
-    - cron: "47 3 * * 1,4"   # Mon/Thu 03:30 UTC = 11:30 Taipei - full scan (offset from daily)
-    - cron: "53 4 10-12 * *" # 10th-12th 04:30 UTC = 12:30 Taipei - M1 revenue-judgment window
+    - cron: "11 3 * * *"     # daily   03:11 UTC = 11:11 Taipei - M5 narrative only
+    - cron: "17 4 * * 1,4"   # Mon/Thu 04:17 UTC = 12:17 Taipei - full scan (offset from daily)
+    - cron: "23 5 10-12 * *" # 10th-12th 05:23 UTC = 13:23 Taipei - M1 revenue-judgment window
   workflow_dispatch:
     inputs:
       modules:
@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: delta-radar
+  group: tsmc-radar
   cancel-in-progress: false
 
 jobs:
@@ -30,6 +30,7 @@ jobs:
 
       - name: Resolve track
         id: track
+        # tsmc_radar：與 delta_radar 同一支程式、不同 config；排程錯開 30 分鐘。
         # Route by which cron fired. Manual dispatch takes the input as-is.
         #   daily        -> m5 only, commit only on status change
         #   mon/thu      -> all modules, always commit
@@ -42,15 +43,15 @@ jobs:
             echo "modules=${{ github.event.inputs.modules }}" >> "$GITHUB_OUTPUT"
             echo "commit_mode=always" >> "$GITHUB_OUTPUT"
             echo "track=manual" >> "$GITHUB_OUTPUT"
-          elif [ "$SCHED" = "41 2 * * *" ]; then
+          elif [ "$SCHED" = "11 3 * * *" ]; then
             echo "modules=m5" >> "$GITHUB_OUTPUT"
             echo "commit_mode=on_change" >> "$GITHUB_OUTPUT"
             echo "track=narrative-daily" >> "$GITHUB_OUTPUT"
-          elif [ "$SCHED" = "47 3 * * 1,4" ]; then
+          elif [ "$SCHED" = "17 4 * * 1,4" ]; then
             echo "modules=m1,m2,m3,m4,m5,m6,m8,m9" >> "$GITHUB_OUTPUT"
             echo "commit_mode=always" >> "$GITHUB_OUTPUT"
             echo "track=full-scan" >> "$GITHUB_OUTPUT"
-          elif [ "$SCHED" = "53 4 10-12 * *" ]; then
+          elif [ "$SCHED" = "23 5 10-12 * *" ]; then
             echo "modules=m1" >> "$GITHUB_OUTPUT"
             echo "commit_mode=on_change" >> "$GITHUB_OUTPUT"
             echo "track=revenue-day" >> "$GITHUB_OUTPUT"
@@ -70,7 +71,7 @@ jobs:
           set -euo pipefail
           python - <<'EOF' > prev_status.txt || echo "NONE" > prev_status.txt
           import json
-          h = json.load(open("tw_scanner/output/delta_radar_state.json"))
+          h = json.load(open("tw_scanner/output/tsmc_radar_state.json"))
           print("|".join(f"{m['module']}={m['status']}" for m in h[-1]["modules"]))
           EOF
           echo "statuses=$(cat prev_status.txt)" >> "$GITHUB_OUTPUT"
@@ -81,7 +82,7 @@ jobs:
           CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
         run: |
           python tw_scanner/delta_radar.py \
-            --config tw_scanner/config/delta_radar_config.json \
+            --config tw_scanner/config/tsmc_radar_config.json \
             --output-dir tw_scanner/output \
             --modules "${{ steps.track.outputs.modules }}"
 
@@ -95,7 +96,7 @@ jobs:
           fi
           CUR=$(python - <<'EOF'
           import json
-          h = json.load(open("tw_scanner/output/delta_radar_state.json"))
+          h = json.load(open("tw_scanner/output/tsmc_radar_state.json"))
           print("|".join(f"{m['module']}={m['status']}" for m in h[-1]["modules"]))
           EOF
           )
@@ -104,7 +105,7 @@ jobs:
             echo "Status unchanged ($CUR) - skipping commit."
             # Revert the working tree so the redundant state entry is discarded
             # and state.json stays an information-bearing series, not a heartbeat log.
-            git checkout -- tw_scanner/output/delta_radar_report.md tw_scanner/output/delta_radar_state.json
+            git checkout -- tw_scanner/output/tsmc_radar_report.md tw_scanner/output/tsmc_radar_state.json
             echo "do_commit=false" >> "$GITHUB_OUTPUT"
           else
             echo "Status changed: '$PREV' -> '$CUR'"
@@ -118,8 +119,8 @@ jobs:
         # bug class fixed across this repo's workflows - fail loudly instead.
         run: |
           set -euo pipefail
-          for f in tw_scanner/output/delta_radar_report.md \
-                   tw_scanner/output/delta_radar_state.json; do
+          for f in tw_scanner/output/tsmc_radar_report.md \
+                   tw_scanner/output/tsmc_radar_state.json; do
             if [ -f "$f" ]; then
               git add "$f"
             else
@@ -138,8 +139,8 @@ jobs:
             echo "No content changes to commit."
             exit 0
           fi
-          git config user.name "delta-radar-bot"
+          git config user.name "tsmc-radar-bot"
           git config user.email "actions@users.noreply.github.com"
           git pull --rebase --autostash
-          git commit -m "delta_radar[${{ steps.track.outputs.track }}]: $(date -u +%F)"
+          git commit -m "tsmc_radar[${{ steps.track.outputs.track }}]: $(date -u +%F)"
           git push

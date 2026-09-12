@@ -28,7 +28,7 @@ GitHub Actions 每日掃描 → README.md 妖股報表 + shadow log 信號校準
 | catalyst_fetch / fallen_saas / small_cap_momentum / unknown_radar / universe_update | 動態清單餵給主掃描 |
 | cloudflare/ | Cloudflare Worker（獨立資料夾、dashboard Git 連動部署）：第二鬧鐘（GitHub 排程沒發就 `workflow_dispatch`）、每交易日盤後 LLM 三題 → `data/decisions/`、dashboard 靜態頁。**Python 一行都不在這裡**，見 `cloudflare/README.md` |
 | spcx_radar/ | SPCX 主題雷達（space_radar + spcx_options/Option Sage；共用碼在 spcx_common.py；config/=手動維護、output/=產出、README.md=每日報表、PLAYBOOK.md=執行手冊、PLAN_2026-08.md=8月後任務） |
-| tw_scanner/ | 台股子專案：tw_scanner 天氣台 + delta_radar 2308 雷達 + **dca_ledger.py（DCA 規則影子帳本，2026-09-12）** + **casino_tracker.py（賭場 sector：AI 個股影子追蹤，只收資料，名單是人挑的）** + **tw_brief.py（週報組裝 → tw_brief.json / tw_weekly.md）**；README.md 由 build_readme.py 重組（週報在最上面）、MANUAL_*.md=維護文件、REVIEW_2026-07.md=改進判準。tw_scanner.py 每次簡報另導出 `tw_scanner_history.json`（2019 起全序列 regime/alerts，帳本回測用）；delta_radar 有背離旗標與退役判準表（REVIEW 改進項 1、2） |
+| tw_scanner/ | 台股子專案：tw_scanner 天氣台 + delta_radar 2308 雷達 + **dca_ledger.py（DCA 規則影子帳本，2026-09-12）** + **casino_tracker.py（賭場 sector：AI 個股影子追蹤，只收資料，名單是人挑的）** + **tw_brief.py（週報組裝 → tw_brief.json / tw_weekly.md）**；README.md 由 build_readme.py 重組（週報在最上面）、MANUAL_*.md=維護文件、REVIEW_2026-07.md=改進判準。tw_scanner.py 每次簡報另導出 `tw_scanner_history.json`（2019 起全序列 regime/alerts，帳本回測用）；delta_radar 有背離旗標、退役判準表（含狀態翻轉數）、M9 估值分位；**同一支 delta_radar.py 以 config 跑 tsmc_radar（2330，M3 換 ADR 溢價、M7 加 SMH 基準）** |
 | data/*.csv | 每日掃描結果（保留一年，靠檔名日期 prune；也是 OI Δ7d 的歷史來源） |
 | data/iv_log/signals_*.json | 信號快照（**永久保存、append-only**；schema v2 含 bid/ask、features、path[]） |
 | data/dashboard/ | `candidates_<市場日>.json` + `latest.json`（結構候選＋綁定策略＋賣點，dashboard 與 Worker 讀）、`decisions_log.json`（tracer 彙整） |
