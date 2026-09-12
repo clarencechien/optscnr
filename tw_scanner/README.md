@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-09-12 07:20 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-09-12 08:53 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -109,7 +109,7 @@ _README 由 build_readme.py 於 2026-09-12 07:20 UTC 重組；兩區塊各為該
 - ✅ 賭場 sector：最新 2026-09-12
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-12T07:20:42+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-12T08:53:48+00:00*
 
 ---
 
@@ -130,9 +130,9 @@ _README 由 build_readme.py 於 2026-09-12 07:20 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-09-12 07:20 UTC
+# Delta Radar (2308.TW) — 2026-09-12 08:53 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m1）｜模組色僅供參考 🟢 GREEN
 
 ## 🔀 前提 vs 價格：🔀 背離：前提健在（YELLOW）、價格 20 日 -14.1% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）
 
@@ -142,67 +142,20 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟢 GREEN | capex_cut:4e(5m) / vr300_delay:18e(21m) / debt_financed_capex:12e(13m) / lc_psu_competition:0e |
+| M1 revenue_acceleration | 🟡 YELLOW | 2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月 |
 
-### M5 narrative_triggers — 🟢 GREEN
+### M1 revenue_acceleration — 🟡 YELLOW
 ```json
 {
-  "events": {
-    "capex_cut": 4,
-    "vr300_delay": 18,
-    "debt_financed_capex": 12,
-    "lc_psu_competition": 0
-  },
-  "mentions": {
-    "capex_cut": 5,
-    "vr300_delay": 21,
-    "debt_financed_capex": 13,
-    "lc_psu_competition": 0
-  },
-  "scoring": {
-    "capex_cut": {
-      "events": 4,
-      "mentions": 5,
-      "gate": "zscore",
-      "z": 0.84,
-      "denial": false
-    },
-    "vr300_delay": {
-      "events": 18,
-      "mentions": 21,
-      "gate": "zscore",
-      "z": 0.46,
-      "denial": true
-    },
-    "debt_financed_capex": {
-      "events": 12,
-      "mentions": 13,
-      "gate": "zscore",
-      "z": -0.1,
-      "denial": false
-    },
-    "lc_psu_competition": {
-      "events": 0,
-      "mentions": 0,
-      "gate": "absolute",
-      "z": null,
-      "denial": false
-    }
-  }
+  "latest_month": "2026-08",
+  "latest_yoy_pct": 34.9,
+  "yoy_slope_pp_per_month": -2.9,
+  "consecutive_decel_months": 2
 }
 ```
-- [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
-- [capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
-- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
-- [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
-- [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
-- [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
-- [debt_financed_capex] Big Tech's AI Spending Spree Turns to Debt as Bond Sales Top 50% of Capex - finance.biggo.com
-- [debt_financed_capex] AI Companies' Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - 24/7 Wall St.
-- [debt_financed_capex] AI Boom Triggers Tech Debt Binge - StartupHub.ai
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**104/104**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**105/105**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）
