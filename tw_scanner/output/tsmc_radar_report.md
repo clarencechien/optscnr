@@ -1,4 +1,4 @@
-# TSMC Radar (2330.TW) — 2026-09-12 06:08 UTC
+# TSMC Radar (2330.TW) — 2026-09-12 06:30 UTC
 
 ## 總判定：🟡 YELLOW
 
@@ -13,9 +13,9 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 | M1 revenue_acceleration | 🟢 GREEN | 2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月 |
 | M2 bullwhip_health | 🟢 GREEN | 合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9 |
 | M3 adr_premium（觀察） | 🟢 GREEN | ADR 溢價 +13.7%（1 年第 19 百分位；觀察） |
-| M4 customs_flow | ⚪ NO_DATA | Census fetch failed after 2 tries |
-| M5 narrative_triggers | 🔴 RED | export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:4e(5m) |
-| M6 peer_divergence | 🟢 GREEN | cohort 內 2308 未被對手顯著反超（離散在容忍帶內） |
+| M4 customs_flow | 🟢 GREEN | US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0% |
+| M5 narrative_triggers | 🔴 RED | export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:8e / geopolitics:4e / hyperscaler_capex:4e(5m) |
+| M6 peer_divergence | 🟢 GREEN | cohort 內 2330 未被對手顯著反超（離散在容忍帶內） |
 | M8 revision_velocity | ⚪ NO_DATA | 下修 0/上修 0（樣本不足 <3，NO_DATA） |
 | M9 valuation（觀察） | 🟢 GREEN | PER 27.9（3 年第 72 百分位；20 日前第 71）；觀察 |
 
@@ -56,9 +56,20 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 }
 ```
 
-### M4 customs_flow — ⚪ NO_DATA
-- raw/exception: Census non-JSON response: ''
-- ⚠️ degraded: Census fetch failed after 2 tries
+### M4 customs_flow — 🟢 GREEN
+```json
+{
+  "window": "2026-05..2026-07",
+  "rolling_value_usd_m": 3643.7,
+  "rolling_yoy_pct": 58.0,
+  "by_country": {
+    "TAIWAN": {
+      "rolling_value_usd_m": 3643.7,
+      "rolling_yoy_pct": 58.0
+    }
+  }
+}
+```
 
 ### M5 narrative_triggers — 🔴 RED
 ```json
@@ -66,14 +77,14 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
   "events": {
     "export_controls_tariffs": 16,
     "n2_arizona_ramp": 7,
-    "cowos_capacity": 9,
+    "cowos_capacity": 8,
     "geopolitics": 4,
     "hyperscaler_capex": 4
   },
   "mentions": {
     "export_controls_tariffs": 16,
     "n2_arizona_ramp": 8,
-    "cowos_capacity": 9,
+    "cowos_capacity": 8,
     "geopolitics": 4,
     "hyperscaler_capex": 5
   },
@@ -93,8 +104,8 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
       "denial": false
     },
     "cowos_capacity": {
-      "events": 9,
-      "mentions": 9,
+      "events": 8,
+      "mentions": 8,
       "gate": "absolute",
       "z": null,
       "denial": true
@@ -122,12 +133,12 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea
 - [n2_arizona_ramp] Intel and Samsung advance 2nm GAA, but yield gaps leave TSMC as the sole external supplier - digitimes
 - [n2_arizona_ramp] Tech News:Samsung 2nm Chip Yield Surpasses 60%, Closing in on TSMC - LinkedIn
-- [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech
+- [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - wccftech.com
 - [cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - Medium
 - [cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes
 - [geopolitics] China's president Xi Jinping calls Taiwan reunification "unstoppable" — military drills around the island escalate in ar
 - [geopolitics] China Rings Taiwan With Live-Fire Drills, Tensions Spike - Modern Diplomacy
-- [geopolitics] Ships Delay Sailing to Taiwan Port to Avoid China Military Drills - caixinglobal.com
+- [geopolitics] Ships Delay Sailing to Taiwan Port to Avoid China Military Drills - Caixin Global
 - [hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
 - [hyperscaler_capex] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
 - [hyperscaler_capex] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
@@ -202,7 +213,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 ```
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**1/1**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**2/2**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---

@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-09-12 06:10 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-09-12 06:30 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -8,7 +8,7 @@ _README 由 build_readme.py 於 2026-09-12 06:10 UTC 重組；兩區塊各為該
 
 # 📬 台股週報 — 2026-09-12
 
-> 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308 論點監控。**沒有任何一行是買賣建議；曝險與部位由人管。**
+> 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。**沒有任何一行是買賣建議；曝險與部位由人管。**
 
 ## TL;DR
 
@@ -63,9 +63,9 @@ _README 由 build_readme.py 於 2026-09-12 06:10 UTC 重組；兩區塊各為該
   - 🟢 M1 revenue_acceleration：2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9
   - 🟢 M3 adr_premium：ADR 溢價 +13.7%（1 年第 19 百分位；觀察）
-  - ⚪ M4 customs_flow：Census fetch failed after 2 tries
-  - 🔴 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:4e(5m)
-  - 🟢 M6 peer_divergence：cohort 內 2308 未被對手顯著反超（離散在容忍帶內）
+  - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0%
+  - 🔴 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:8e / geopolitics:4e / hyperscaler_capex:4e(5m)
+  - 🟢 M6 peer_divergence：cohort 內 2330 未被對手顯著反超（離散在容忍帶內）
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 27.9（3 年第 72 百分位；20 日前第 71）；觀察
 - 回填樣本 0 筆（T+20 超額）；退役判準見 `tsmc_radar_report.md`
@@ -109,7 +109,7 @@ _README 由 build_readme.py 於 2026-09-12 06:10 UTC 重組；兩區塊各為該
 - ✅ 賭場 sector：最新 2026-09-12
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋論點監控。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-12T06:10:58+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-12T06:30:55+00:00*
 
 ---
 
@@ -161,7 +161,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 ---
 
-# TSMC Radar (2330.TW) — 2026-09-12 06:08 UTC
+# TSMC Radar (2330.TW) — 2026-09-12 06:30 UTC
 
 ## 總判定：🟡 YELLOW
 
@@ -176,9 +176,9 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 | M1 revenue_acceleration | 🟢 GREEN | 2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月 |
 | M2 bullwhip_health | 🟢 GREEN | 合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9 |
 | M3 adr_premium（觀察） | 🟢 GREEN | ADR 溢價 +13.7%（1 年第 19 百分位；觀察） |
-| M4 customs_flow | ⚪ NO_DATA | Census fetch failed after 2 tries |
-| M5 narrative_triggers | 🔴 RED | export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:4e(5m) |
-| M6 peer_divergence | 🟢 GREEN | cohort 內 2308 未被對手顯著反超（離散在容忍帶內） |
+| M4 customs_flow | 🟢 GREEN | US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0% |
+| M5 narrative_triggers | 🔴 RED | export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:8e / geopolitics:4e / hyperscaler_capex:4e(5m) |
+| M6 peer_divergence | 🟢 GREEN | cohort 內 2330 未被對手顯著反超（離散在容忍帶內） |
 | M8 revision_velocity | ⚪ NO_DATA | 下修 0/上修 0（樣本不足 <3，NO_DATA） |
 | M9 valuation（觀察） | 🟢 GREEN | PER 27.9（3 年第 72 百分位；20 日前第 71）；觀察 |
 
@@ -219,9 +219,20 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 }
 ```
 
-### M4 customs_flow — ⚪ NO_DATA
-- raw/exception: Census non-JSON response: ''
-- ⚠️ degraded: Census fetch failed after 2 tries
+### M4 customs_flow — 🟢 GREEN
+```json
+{
+  "window": "2026-05..2026-07",
+  "rolling_value_usd_m": 3643.7,
+  "rolling_yoy_pct": 58.0,
+  "by_country": {
+    "TAIWAN": {
+      "rolling_value_usd_m": 3643.7,
+      "rolling_yoy_pct": 58.0
+    }
+  }
+}
+```
 
 ### M5 narrative_triggers — 🔴 RED
 ```json
@@ -229,14 +240,14 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
   "events": {
     "export_controls_tariffs": 16,
     "n2_arizona_ramp": 7,
-    "cowos_capacity": 9,
+    "cowos_capacity": 8,
     "geopolitics": 4,
     "hyperscaler_capex": 4
   },
   "mentions": {
     "export_controls_tariffs": 16,
     "n2_arizona_ramp": 8,
-    "cowos_capacity": 9,
+    "cowos_capacity": 8,
     "geopolitics": 4,
     "hyperscaler_capex": 5
   },
@@ -256,8 +267,8 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
       "denial": false
     },
     "cowos_capacity": {
-      "events": 9,
-      "mentions": 9,
+      "events": 8,
+      "mentions": 8,
       "gate": "absolute",
       "z": null,
       "denial": true
@@ -285,12 +296,12 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea
 - [n2_arizona_ramp] Intel and Samsung advance 2nm GAA, but yield gaps leave TSMC as the sole external supplier - digitimes
 - [n2_arizona_ramp] Tech News:Samsung 2nm Chip Yield Surpasses 60%, Closing in on TSMC - LinkedIn
-- [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech
+- [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - wccftech.com
 - [cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - Medium
 - [cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes
 - [geopolitics] China's president Xi Jinping calls Taiwan reunification "unstoppable" — military drills around the island escalate in ar
 - [geopolitics] China Rings Taiwan With Live-Fire Drills, Tensions Spike - Modern Diplomacy
-- [geopolitics] Ships Delay Sailing to Taiwan Port to Avoid China Military Drills - caixinglobal.com
+- [geopolitics] Ships Delay Sailing to Taiwan Port to Avoid China Military Drills - Caixin Global
 - [hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
 - [hyperscaler_capex] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
 - [hyperscaler_capex] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
@@ -365,7 +376,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 ```
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**1/1**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**2/2**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---

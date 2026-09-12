@@ -1,6 +1,6 @@
 # 📬 台股週報 — 2026-09-12
 
-> 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308 論點監控。**沒有任何一行是買賣建議；曝險與部位由人管。**
+> 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。**沒有任何一行是買賣建議；曝險與部位由人管。**
 
 ## TL;DR
 
@@ -55,9 +55,9 @@
   - 🟢 M1 revenue_acceleration：2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9
   - 🟢 M3 adr_premium：ADR 溢價 +13.7%（1 年第 19 百分位；觀察）
-  - ⚪ M4 customs_flow：Census fetch failed after 2 tries
-  - 🔴 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:4e(5m)
-  - 🟢 M6 peer_divergence：cohort 內 2308 未被對手顯著反超（離散在容忍帶內）
+  - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0%
+  - 🔴 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:8e / geopolitics:4e / hyperscaler_capex:4e(5m)
+  - 🟢 M6 peer_divergence：cohort 內 2330 未被對手顯著反超（離散在容忍帶內）
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 27.9（3 年第 72 百分位；20 日前第 71）；觀察
 - 回填樣本 0 筆（T+20 超額）；退役判準見 `tsmc_radar_report.md`
@@ -101,4 +101,4 @@
 - ✅ 賭場 sector：最新 2026-09-12
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋論點監控。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-12T06:10:58+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-12T06:30:55+00:00*

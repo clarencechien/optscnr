@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-12T06:10:58+00:00",
+ "generated_at": "2026-09-12T06:30:55+00:00",
  "today": "2026-09-12",
  "cadence": "weekly",
  "tldr": [
@@ -284,56 +284,56 @@
     "module": "M1 revenue_acceleration",
     "status": "GREEN",
     "headline": "2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月",
-    "ts": "2026-09-12T06:08:33.131273+00:00"
+    "ts": "2026-09-12T06:30:53.722110+00:00"
    },
    {
     "module": "M2 bullwhip_health",
     "status": "GREEN",
     "headline": "合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9",
-    "ts": "2026-09-12T06:08:33.131273+00:00"
+    "ts": "2026-09-12T06:30:53.722110+00:00"
    },
    {
     "module": "M3 adr_premium",
     "status": "GREEN",
     "headline": "ADR 溢價 +13.7%（1 年第 19 百分位；觀察）",
-    "ts": "2026-09-12T06:08:33.131273+00:00"
+    "ts": "2026-09-12T06:30:53.722110+00:00"
    },
    {
     "module": "M4 customs_flow",
-    "status": "NO_DATA",
-    "headline": "Census fetch failed after 2 tries",
-    "ts": "2026-09-12T06:08:33.131273+00:00"
+    "status": "GREEN",
+    "headline": "US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0%",
+    "ts": "2026-09-12T06:30:53.722110+00:00"
    },
    {
     "module": "M5 narrative_triggers",
     "status": "RED",
-    "headline": "export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:4e(5m)",
-    "ts": "2026-09-12T06:08:33.131273+00:00"
+    "headline": "export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:8e / geopolitics:4e / hyperscaler_capex:4e(5m)",
+    "ts": "2026-09-12T06:30:53.722110+00:00"
    },
    {
     "module": "M6 peer_divergence",
     "status": "GREEN",
-    "headline": "cohort 內 2308 未被對手顯著反超（離散在容忍帶內）",
-    "ts": "2026-09-12T06:08:33.131273+00:00"
+    "headline": "cohort 內 2330 未被對手顯著反超（離散在容忍帶內）",
+    "ts": "2026-09-12T06:30:53.722110+00:00"
    },
    {
     "module": "M8 revision_velocity",
     "status": "NO_DATA",
     "headline": "下修 0/上修 0（樣本不足 <3，NO_DATA）",
-    "ts": "2026-09-12T06:08:33.131273+00:00"
+    "ts": "2026-09-12T06:30:53.722110+00:00"
    },
    {
     "module": "M9 valuation",
     "status": "GREEN",
     "headline": "PER 27.9（3 年第 72 百分位；20 日前第 71）；觀察",
-    "ts": "2026-09-12T06:08:33.131273+00:00"
+    "ts": "2026-09-12T06:30:53.722110+00:00"
    }
   ],
   "divergence": {
    "flag": null,
    "text": "無背離（前提 YELLOW、價格 20 日 +0.6%）；PER 27.9，3 年分位 71 → 72",
    "premise": "YELLOW",
-   "premise_ts": "2026-09-12T06:08:32.689196+00:00",
+   "premise_ts": "2026-09-12T06:30:53.358519+00:00",
    "ret_pct": 0.63,
    "lookback_sessions": 20,
    "as_of": "2026-09-11",
@@ -623,5 +623,5 @@
    "text": "賭場 sector：最新 2026-09-12"
   }
  ],
- "note": "週報：規則影子帳本＋溫度計＋論點監控。沒有任何一行是買賣建議；曝險與部位由人管。"
+ "note": "週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。"
 }
