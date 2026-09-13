@@ -1,6 +1,6 @@
-# Delta Radar (2308.TW) — 2026-09-12 08:53 UTC
+# Delta Radar (2308.TW) — 2026-09-13 07:39 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m1）｜模組色僅供參考 🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
 ## 🔀 前提 vs 價格：🔀 背離：前提健在（YELLOW）、價格 20 日 -14.1% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）
 
@@ -10,20 +10,67 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M1 revenue_acceleration | 🟡 YELLOW | 2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月 |
+| M5 narrative_triggers | 🟡 YELLOW | capex_cut:4e / vr300_delay:19e(22m) / debt_financed_capex:11e(12m) / lc_psu_competition:0e |
 
-### M1 revenue_acceleration — 🟡 YELLOW
+### M5 narrative_triggers — 🟡 YELLOW
 ```json
 {
-  "latest_month": "2026-08",
-  "latest_yoy_pct": 34.9,
-  "yoy_slope_pp_per_month": -2.9,
-  "consecutive_decel_months": 2
+  "events": {
+    "capex_cut": 4,
+    "vr300_delay": 19,
+    "debt_financed_capex": 11,
+    "lc_psu_competition": 0
+  },
+  "mentions": {
+    "capex_cut": 4,
+    "vr300_delay": 22,
+    "debt_financed_capex": 12,
+    "lc_psu_competition": 0
+  },
+  "scoring": {
+    "capex_cut": {
+      "events": 4,
+      "mentions": 4,
+      "gate": "zscore",
+      "z": 0.94,
+      "denial": false
+    },
+    "vr300_delay": {
+      "events": 19,
+      "mentions": 22,
+      "gate": "zscore",
+      "z": 1.76,
+      "denial": true
+    },
+    "debt_financed_capex": {
+      "events": 11,
+      "mentions": 12,
+      "gate": "zscore",
+      "z": -0.85,
+      "denial": false
+    },
+    "lc_psu_competition": {
+      "events": 0,
+      "mentions": 0,
+      "gate": "absolute",
+      "z": null,
+      "denial": false
+    }
+  }
 }
 ```
+- [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 247wallst.com
+- [capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
+- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 247wallst.com
+- [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
+- [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
+- [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
+- [debt_financed_capex] AI Companies’ Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - Yahoo Finance
+- [debt_financed_capex] Big Tech's AI Spending Spree Turns to Debt as Bond Sales Top 50% of Capex - finance.biggo.com
+- [debt_financed_capex] AI Boom Triggers Tech Debt Binge - StartupHub.ai
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**105/105**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**106/106**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）
@@ -33,7 +80,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 | M2 | 11 / -10.22 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M3 | 27 / -10.89 | 6 / +0.06 | 1 | 無法判定（狀態翻轉 1 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M4 | 26 / -7.34 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M5 | 27 / -2.49 | 40 / -9.86 | 32 | 累積中（GREEN n=27 < 30）；方向對 |
+| M5 | 27 / -2.49 | 40 / -9.86 | 33 | 累積中（GREEN n=27 < 30）；方向對 |
 | M6 | 0 / — | 16 / -2.97 | 1 | 樣本不足（缺一側 cohort） |
 | M8 | 16 / -2.97 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 

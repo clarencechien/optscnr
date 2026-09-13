@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-09-12T08:53:48+00:00",
- "today": "2026-09-12",
+ "generated_at": "2026-09-13T07:39:22+00:00",
+ "today": "2026-09-13",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-09-11）：本週無警報、預算未動 → 等（2026-09-18 再看）。",
@@ -12,7 +12,7 @@
  "weather": {
   "status": "OK",
   "as_of": "2026-09-11",
-  "age_days": 1,
+  "age_days": 2,
   "regime": "RISK_ON",
   "emoji": "☀️",
   "score": -0.026,
@@ -61,7 +61,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-09-11",
-  "age_days": 1,
+  "age_days": 2,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -206,11 +206,11 @@
  "delta": {
   "status": "OK",
   "label": "2308",
-  "as_of": "2026-09-12",
+  "as_of": "2026-09-13",
   "age_days": 0,
-  "last_overall": "PARTIAL(m1)",
+  "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
-   "m1"
+   "m5"
   ],
   "full_overall": "YELLOW",
   "full_ts": "2026-09-10",
@@ -241,9 +241,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "GREEN",
-    "headline": "capex_cut:4e(5m) / vr300_delay:18e(21m) / debt_financed_capex:12e(13m) / lc_psu_competition:0e",
-    "ts": "2026-09-12T07:20:40.364393+00:00"
+    "status": "YELLOW",
+    "headline": "capex_cut:4e / vr300_delay:19e(22m) / debt_financed_capex:11e(12m) / lc_psu_competition:0e",
+    "ts": "2026-09-13T07:39:20.628521+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -273,7 +273,7 @@
   "status": "OK",
   "label": "2330",
   "as_of": "2026-09-12",
-  "age_days": 0,
+  "age_days": 1,
   "last_overall": "YELLOW",
   "last_modules_requested": [
    "m1",
@@ -358,7 +358,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-09-12",
-  "age_days": 0,
+  "age_days": 1,
   "rows": [
    {
     "ticker": "3661",
@@ -601,7 +601,7 @@
   {
    "date": "2026-10-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 28
+   "days": 27
   }
  ],
  "checks": [
@@ -618,7 +618,7 @@
   {
    "level": "ok",
    "label": "delta_radar 正常",
-   "text": "delta_radar：最新 2026-09-12"
+   "text": "delta_radar：最新 2026-09-13"
   },
   {
    "level": "ok",
