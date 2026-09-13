@@ -534,5 +534,121 @@
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
     }
+  },
+  {
+    "ts": "2026-09-13T08:15:10.443234+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "RED",
+        "headline": "export_controls_tariffs:16e / n2_arizona_ramp:7e(8m) / cowos_capacity:6e / geopolitics:4e / hyperscaler_capex:4e",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 16,
+            "n2_arizona_ramp": 7,
+            "cowos_capacity": 6,
+            "geopolitics": 4,
+            "hyperscaler_capex": 4
+          },
+          "mentions": {
+            "export_controls_tariffs": 16,
+            "n2_arizona_ramp": 8,
+            "cowos_capacity": 6,
+            "geopolitics": 4,
+            "hyperscaler_capex": 4
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 16,
+              "mentions": 16,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 7,
+              "mentions": 8,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            },
+            "cowos_capacity": {
+              "events": 6,
+              "mentions": 6,
+              "gate": "absolute",
+              "z": null,
+              "denial": true
+            },
+            "geopolitics": {
+              "events": 4,
+              "mentions": 4,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 4,
+              "mentions": 4,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] Huawei chairman thanks the US for export restrictions on chips, says it supercharged China’s semiconductor industry — Wa",
+          "[export_controls_tariffs] Key facts: TSMC to Invest Up to $265B in Arizona; Reviews Export Controls - TradingView",
+          "[export_controls_tariffs] Huawei's chip breakthrough makes the case that US export controls built the rival they were meant to stop - Startup Fort",
+          "[n2_arizona_ramp] Samsung's 2nm Yield Recovers to 55%... Qualcomm Return Hinges on Sept. 22 Summit - finance.biggo.com",
+          "[n2_arizona_ramp] Samsung and Qualcomm reopen 2nm talks as yield gap with TSMC narrows - CHOSUNBIZ - Chosunbiz",
+          "[n2_arizona_ramp] Intel and Samsung advance 2nm GAA, but yield gaps leave TSMC as the sole external supplier - digitimes",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - Medium",
+          "[cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes",
+          "[geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India",
+          "[geopolitics] China Rings Taiwan With Live-Fire Drills, Tensions Spike - Modern Diplomacy",
+          "[geopolitics] Ships Delay Sailing to Taiwan Port to Avoid China Military Drills - Caixin Global",
+          "[hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 247wallst.com",
+          "[hyperscaler_capex] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[hyperscaler_capex] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 247wallst.com"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 YELLOW、價格 20 日 +0.6%）；PER 27.9，3 年分位 71 → 72",
+      "premise": "YELLOW",
+      "premise_ts": "2026-09-12T06:30:53.722110+00:00",
+      "ret_pct": 0.63,
+      "lookback_sessions": 20,
+      "as_of": "2026-09-11",
+      "valuation": {
+        "per": 27.94,
+        "per_pct": 71.8,
+        "per_then": 27.76,
+        "per_pct_then": 70.7,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-09-13",
+      "benchmark": "0050",
+      "entry_close": null,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
   }
 ]
