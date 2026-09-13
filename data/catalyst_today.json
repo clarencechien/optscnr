@@ -1,225 +1,139 @@
 {
-  "updated_at": "2026-09-11T22:44:40.697377",
+  "updated_at": "2026-09-13T22:33:37.991833",
   "stats": {
     "total_items": 107,
-    "items_with_company": 23,
-    "items_with_catalyst": 15,
-    "items_both": 5
+    "items_with_company": 19,
+    "items_with_catalyst": 12,
+    "items_both": 3
   },
-  "count": 20,
+  "count": 16,
   "tickers": [
-    "META",
-    "DELL",
-    "MS",
-    "SMCI",
-    "ORCL",
-    "CRM",
-    "JPM",
-    "BA",
-    "AMD",
-    "CRWV",
-    "BE",
-    "COIN",
-    "MRVL",
-    "TSLA",
+    "INTC",
+    "DKNG",
     "HPE",
-    "HOOD",
+    "ORCL",
+    "GOOGL",
+    "AMZN",
+    "F",
+    "TSLA",
+    "NVDA",
+    "SBUX",
+    "MS",
+    "AMD",
     "TGT",
+    "MSFT",
     "AAPL",
-    "NET",
-    "ARM"
+    "BA"
   ],
   "details": [
     {
-      "symbol": "META",
-      "score": 4,
+      "symbol": "INTC",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Meta Stock Scores Wall Street Upgrade After Muse AI App Launch",
+          "title": "Intel (INTC) Is Winning From the CPU Shortage, but Its Foundry Valuation Needs More Proof",
           "catalysts": [
-            "upgrade"
+            "foundry"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Morgan Stanley Sees 25% Meta Gain on AI Upside",
-          "catalysts": [
-            "gain"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "DELL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Dell stock jumps on RBC initiation, now up nearly 350% in 2026",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
+          "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "Why Dell and HPE were the S&P 500’s top-performing stocks today",
+          "title": "Forget Intel. Buy This Tech Stock in September Instead.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MS",
-      "score": 2.5,
+      "symbol": "DKNG",
+      "score": 2,
       "evidence": [
         {
-          "title": "Tesla could transform the trucking business — and capitalize on high diesel prices",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Morgan Stanley Sees 25% Meta Gain on AI Upside",
+          "title": "DraftKings and Flutter Jump After Court Rules Prediction Markets Are Gambling, Not Federally Regulated Trading",
           "catalysts": [
-            "gain"
+            "jump"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "SMCI",
-      "score": 2.5,
+      "symbol": "HPE",
+      "score": 2,
       "evidence": [
         {
-          "title": "Dear Super Micro Stock Fans, Here's What August's Rally Means for SMCI",
+          "title": "Hewlett Packard Enterprise Raises 2027 Outlook as AI Networking Demand Surges",
           "catalysts": [
-            "rally"
+            "surges"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "2 Reasons to Buy Super Micro Stock — And 1 Reason to Be Cautious",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "ORCL",
-      "score": 2.0,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Oracle shook off fears about AI spending, but its stock still loses ground",
+          "title": "Larry Ellison nixes plan to offload up to $7.5 billion worth of Oracle stock ",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Why Dell and HPE were the S&P 500’s top-performing stocks today",
+          "title": "Oracle's Larry Ellison adopts trading plan to sell up to $7.5 billion worth of stock",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Oracle reveals $700M in additional restructuring costs tied to layoffs",
+          "title": "Larry Ellison cancels $7.5 billion sale of Oracle stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Salesforce’s stock has been riding a wave of AI optimism. Here’s what Wall Street wants to see next.",
-          "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
+      "symbol": "GOOGL",
       "score": 1.0,
       "evidence": [
         {
-          "title": "JPMorgan cuts off lending to Aschenbrenner’s AI fund after historic losses - FT",
+          "title": "Anthropic's Amodei says China presents 'toughest dilemma' for his proposed AI slowdown",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "JPMorgan cut off Situational Awareness lending after AI losses, FT reports",
+          "title": "Amazon, Alphabet, and Microsoft: Which 2 to Buy and Which 1 to Avoid",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "AMZN",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Boeing wins $13.4 billion contract modification from US military",
+          "title": "Amazon, Alphabet, and Microsoft: Which 2 to Buy and Which 1 to Avoid",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "How Far Could Boeing Stock Fall If The Market Turns?",
+          "title": "Jeff Bezos Built Amazon Into a $1.8 Trillion Company. Here's How Andy Jassy Is Making It Worth Even More.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "F",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Leopold Aschenbrenner's Situational Awareness is active in options market, sources say",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Leopold Aschenbrenner's Situational Awareness is active in options market, sources say",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Leopold Aschenbrenner's Situational Awareness is active in options market, sources say",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Hassett kept up to $5 million Coinbase stake as Trump reshaped crypto policy",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MRVL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Marvell is sitting on an incredibly ‘sticky’ business that could help it unlock a $30 billion opportunity",
+          "title": "GM plans U.S. battery development as Trump's DOT attacks Ford for China ties",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -230,29 +144,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Tesla could transform the trucking business — and capitalize on high diesel prices",
+          "title": "Tesla regains majority of U.S. EV market as rivals retreat: WSJ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HPE",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Dell and HPE were the S&P 500’s top-performing stocks today",
+          "title": "Nvidia (NVDA) Looks Cheap on Piper’s Forecasts, but the Earnings Assumptions Are the Real Test",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HOOD",
+      "symbol": "SBUX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "'We intend to be disruptive': Robinhood CEO details big investment bank ambitions after Oura IPO win",
+          "title": "Starbucks’ $1 Billion Bet on Cozy Stores Faces a Margin Test",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Morgan Stanley delivers blunt message to America’s pet owners",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -263,7 +199,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "PE firms buy 3PL Navajo Expedited, target other acquisitions",
+          "title": "Ulta Beauty Sees Resilient Demand, Eyes Fragrance, Wellness Growth After Target Exit",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Amazon, Alphabet, and Microsoft: Which 2 to Buy and Which 1 to Avoid",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -274,29 +221,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple's iPhone leasing program: How it works, what to consider as prices increase",
+          "title": "Apple Bought Back More Than $880 Billion of Its Own Stock During Tim Cook's 15 Years as CEO. Here's How That Reshaped Shareholder Returns.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NET",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Barchart Data Says You Shouldn’t Chase Cloudflare Stock Here Despite Strong Technical Momentum",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ARM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "What is an adjustable-rate mortgage (ARM), and what are the risks?",
+          "title": "Boeing Delivered 51 Jets in August. Here's Why the Stock is Finally Back Above $200.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -304,7 +240,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 5,
-    "OpenAI (private)": 3
+    "Anthropic (private)": 4,
+    "OpenAI (private)": 2
   }
 }
