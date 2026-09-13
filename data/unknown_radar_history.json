@@ -20,27 +20,6 @@
     "total_mentions": 5,
     "ticker": "GABC"
   },
-  "Illumina": {
-    "first_seen": "2026-09-04",
-    "last_seen": "2026-09-04",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ILMN"
-  },
-  "Everpure": {
-    "first_seen": "2026-09-04",
-    "last_seen": "2026-09-04",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "P"
-  },
-  "Huntington Ingalls": {
-    "first_seen": "2026-09-04",
-    "last_seen": "2026-09-04",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "HII"
-  },
   "DoorDash": {
     "first_seen": "2026-09-06",
     "last_seen": "2026-09-06",
@@ -71,9 +50,9 @@
   },
   "Canadian": {
     "first_seen": "2026-09-08",
-    "last_seen": "2026-09-09",
-    "consecutive_days": 2,
-    "total_mentions": 5,
+    "last_seen": "2026-09-13",
+    "consecutive_days": 3,
+    "total_mentions": 7,
     "ticker": "CNDIF"
   },
   "Novartis": {
@@ -117,5 +96,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "KFFB"
+  },
+  "Outlook": {
+    "first_seen": "2026-09-13",
+    "last_seen": "2026-09-13",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "OTLK"
   }
 }

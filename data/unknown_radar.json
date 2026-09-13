@@ -1,5 +1,30 @@
 {
-  "updated_at": "2026-09-11T23:31:28.922187",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-09-13T23:30:49.308054",
+  "count": 2,
+  "blind_spots": [
+    {
+      "name": "Canadian",
+      "ticker": "CNDIF",
+      "mentions_today": 2,
+      "total_mentions": 7,
+      "consecutive_days": 3,
+      "is_strong": true,
+      "evidence": [
+        "S&P Dow Jones Indices loosens Canadian index inclusion criteria",
+        "Canadian boycott of US products pushes grocers to adapt, explore new supply sources"
+      ]
+    },
+    {
+      "name": "Outlook",
+      "ticker": "OTLK",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "DocuSign's 2026 Outlook: Artificial Intelligence Drives Future Revenue Growth",
+        "Hewlett Packard Enterprise Raises 2027 Outlook as AI Networking Demand Surges"
+      ]
+    }
+  ]
 }
