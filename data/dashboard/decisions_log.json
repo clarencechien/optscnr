@@ -1,8 +1,39 @@
 {
- "generated_at": "2026-09-12T00:31:28Z",
- "n_days": 4,
+ "generated_at": "2026-09-14T00:36:07Z",
+ "n_days": 5,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-11",
+   "decided_at": "2026-09-12T04:39:37.837Z",
+   "model": "anthropic/claude-opus-5",
+   "prompt_version": "v4.1",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-09-11_IBIT_2026-10-16_47.0",
+     "ticker": "IBIT",
+     "expiry": "2026-10-16",
+     "strike": 47,
+     "entry_price": 0.93,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-09-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": null,
+     "q_gap": null,
+     "q_delta": null,
+     "note": "ETF無財報；FOMC 9/16 決議前基準利率 3.50-3.75%，7/29 以 9:3 維持不變",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-09-10",
    "decided_at": "2026-09-10T23:44:31.608Z",
