@@ -1,11 +1,4 @@
 {
-  "Billion": {
-    "first_seen": "2026-08-23",
-    "last_seen": "2026-09-06",
-    "consecutive_days": 4,
-    "total_mentions": 8,
-    "ticker": "BGHL"
-  },
   "Nasdaq": {
     "first_seen": "2026-09-03",
     "last_seen": "2026-09-10",
@@ -20,26 +13,12 @@
     "total_mentions": 5,
     "ticker": "GABC"
   },
-  "DoorDash": {
-    "first_seen": "2026-09-06",
-    "last_seen": "2026-09-06",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "DASH"
-  },
   "Miami": {
     "first_seen": "2026-09-06",
     "last_seen": "2026-09-07",
     "consecutive_days": 2,
     "total_mentions": 5,
     "ticker": "MIAX"
-  },
-  "Sigma Lithium": {
-    "first_seen": "2026-09-06",
-    "last_seen": "2026-09-06",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SGML"
   },
   "Greenland": {
     "first_seen": "2026-09-07",
@@ -103,5 +82,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "OTLK"
+  },
+  "Northrop Grumman": {
+    "first_seen": "2026-09-14",
+    "last_seen": "2026-09-14",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "NOC"
   }
 }

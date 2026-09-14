@@ -1,29 +1,17 @@
 {
-  "updated_at": "2026-09-13T23:30:49.308054",
-  "count": 2,
+  "updated_at": "2026-09-14T23:59:13.837615",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Canadian",
-      "ticker": "CNDIF",
-      "mentions_today": 2,
-      "total_mentions": 7,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "S&P Dow Jones Indices loosens Canadian index inclusion criteria",
-        "Canadian boycott of US products pushes grocers to adapt, explore new supply sources"
-      ]
-    },
-    {
-      "name": "Outlook",
-      "ticker": "OTLK",
+      "name": "Northrop Grumman",
+      "ticker": "NOC",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "DocuSign's 2026 Outlook: Artificial Intelligence Drives Future Revenue Growth",
-        "Hewlett Packard Enterprise Raises 2027 Outlook as AI Networking Demand Surges"
+        "Northrop Grumman gets $34 million Navy contract modification",
+        "Northrop Grumman advances Sentinel nuclear missile toward flight test"
       ]
     }
   ]
