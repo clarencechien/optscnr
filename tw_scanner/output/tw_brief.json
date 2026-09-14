@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-09-13T08:15:12+00:00",
- "today": "2026-09-13",
+ "generated_at": "2026-09-14T08:06:41+00:00",
+ "today": "2026-09-14",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-09-11）：本週無警報、預算未動 → 等（2026-09-18 再看）。",
@@ -12,7 +12,7 @@
  "weather": {
   "status": "OK",
   "as_of": "2026-09-11",
-  "age_days": 2,
+  "age_days": 3,
   "regime": "RISK_ON",
   "emoji": "☀️",
   "score": -0.026,
@@ -61,7 +61,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-09-11",
-  "age_days": 2,
+  "age_days": 3,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -206,7 +206,7 @@
  "delta": {
   "status": "OK",
   "label": "2308",
-  "as_of": "2026-09-13",
+  "as_of": "2026-09-14",
   "age_days": 0,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
@@ -241,9 +241,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "YELLOW",
-    "headline": "capex_cut:4e / vr300_delay:19e(22m) / debt_financed_capex:11e(12m) / lc_psu_competition:0e",
-    "ts": "2026-09-13T07:39:20.628521+00:00"
+    "status": "GREEN",
+    "headline": "capex_cut:4e / vr300_delay:19e(21m) / debt_financed_capex:10e(11m) / lc_psu_competition:0e",
+    "ts": "2026-09-14T08:06:39.193998+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -265,15 +265,15 @@
    "premise_ts": "2026-09-10T08:24:08.007549+00:00",
    "ret_pct": -14.06,
    "lookback_sessions": 20,
-   "as_of": "2026-09-11"
+   "as_of": "2026-09-14"
   },
-  "scored_n": 78
+  "scored_n": 82
  },
  "tsmc": {
   "status": "OK",
   "label": "2330",
   "as_of": "2026-09-13",
-  "age_days": 0,
+  "age_days": 1,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -351,7 +351,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-09-12",
-  "age_days": 1,
+  "age_days": 2,
   "rows": [
    {
     "ticker": "3661",
@@ -594,7 +594,7 @@
   {
    "date": "2026-10-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 27
+   "days": 26
   }
  ],
  "checks": [
@@ -611,7 +611,7 @@
   {
    "level": "ok",
    "label": "delta_radar 正常",
-   "text": "delta_radar：最新 2026-09-13"
+   "text": "delta_radar：最新 2026-09-14"
   },
   {
    "level": "ok",

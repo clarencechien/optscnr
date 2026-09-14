@@ -1,12 +1,12 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-09-13 08:15 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-09-14 08:06 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
 ---
 
-# 📬 台股週報 — 2026-09-13
+# 📬 台股週報 — 2026-09-14
 
 > 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。**沒有任何一行是買賣建議；曝險與部位由人管。**
 
@@ -52,10 +52,10 @@ _README 由 build_readme.py 於 2026-09-13 08:15 UTC 重組；兩區塊各為該
   - 🟢 M2 bullwhip_health：合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32
   - 🟡 M3 thai_shadow：DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8%
   - 🟢 M4 customs_flow：US 進口 HS850440 (TH+TW) 近3月 $1399.9M, YoY +30.6%
-  - 🟡 M5 narrative_triggers：capex_cut:4e / vr300_delay:19e(22m) / debt_financed_capex:11e(12m) / lc_psu_competition:0e
+  - 🟢 M5 narrative_triggers：capex_cut:4e / vr300_delay:19e(21m) / debt_financed_capex:10e(11m) / lc_psu_competition:0e
   - 🔴 M6 peer_divergence：cooling:3324領先+36pp
   - 🟢 M8 revision_velocity：下修 0/上修 0（樣本不足 <3，暫不評級）
-- 回填樣本 78 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
+- 回填樣本 82 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
 
 ### 2330
 - 前提（最近全模組 2026-09-12）：🟡 YELLOW
@@ -98,18 +98,18 @@ _README 由 build_readme.py 於 2026-09-13 08:15 UTC 重組；兩區塊各為該
 
 ## 5. 下週日曆
 
-- 2026-10-10（27 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
+- 2026-10-10（26 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
 
 ## 6. 資料健康
 
 - ✅ 天氣台：最新 2026-09-11
 - ✅ DCA 帳本：最新 2026-09-11
-- ✅ delta_radar：最新 2026-09-13
+- ✅ delta_radar：最新 2026-09-14
 - ✅ tsmc_radar：最新 2026-09-13
 - ✅ 賭場 sector：最新 2026-09-12
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-13T08:15:12+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-14T08:06:41+00:00*
 
 ---
 
@@ -130,7 +130,7 @@ _README 由 build_readme.py 於 2026-09-13 08:15 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-09-13 07:39 UTC
+# Delta Radar (2308.TW) — 2026-09-14 08:06 UTC
 
 ## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
@@ -142,21 +142,21 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟡 YELLOW | capex_cut:4e / vr300_delay:19e(22m) / debt_financed_capex:11e(12m) / lc_psu_competition:0e |
+| M5 narrative_triggers | 🟢 GREEN | capex_cut:4e / vr300_delay:19e(21m) / debt_financed_capex:10e(11m) / lc_psu_competition:0e |
 
-### M5 narrative_triggers — 🟡 YELLOW
+### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
   "events": {
     "capex_cut": 4,
     "vr300_delay": 19,
-    "debt_financed_capex": 11,
+    "debt_financed_capex": 10,
     "lc_psu_competition": 0
   },
   "mentions": {
     "capex_cut": 4,
-    "vr300_delay": 22,
-    "debt_financed_capex": 12,
+    "vr300_delay": 21,
+    "debt_financed_capex": 11,
     "lc_psu_competition": 0
   },
   "scoring": {
@@ -164,21 +164,21 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
       "events": 4,
       "mentions": 4,
       "gate": "zscore",
-      "z": 0.94,
+      "z": 0.72,
       "denial": false
     },
     "vr300_delay": {
       "events": 19,
-      "mentions": 22,
+      "mentions": 21,
       "gate": "zscore",
-      "z": 1.76,
+      "z": 1.32,
       "denial": true
     },
     "debt_financed_capex": {
-      "events": 11,
-      "mentions": 12,
+      "events": 10,
+      "mentions": 11,
       "gate": "zscore",
-      "z": -0.85,
+      "z": -1.77,
       "denial": false
     },
     "lc_psu_competition": {
@@ -191,9 +191,9 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
   }
 }
 ```
-- [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 247wallst.com
+- [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
 - [capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
-- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 247wallst.com
+- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
 - [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
 - [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
 - [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
@@ -202,19 +202,19 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [debt_financed_capex] AI Boom Triggers Tech Debt Binge - StartupHub.ai
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**106/106**
+- 本次回填 **12** 筆；state 已有 outcomes 的 entry：**107/107**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）
 | 模組 | GREEN n / T+20 超額 | YELLOW+RED n / 超額 | 狀態翻轉 | 判準 |
 |---|---|---|---|---|
-| M1 | 40 / -8.29 | 0 / — | 1 | 樣本不足（缺一側 cohort） |
-| M2 | 11 / -10.22 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
-| M3 | 27 / -10.89 | 6 / +0.06 | 1 | 無法判定（狀態翻轉 1 次 < 3；cohort 等於兩段日曆時間）；方向反 |
-| M4 | 26 / -7.34 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M5 | 27 / -2.49 | 40 / -9.86 | 33 | 累積中（GREEN n=27 < 30）；方向對 |
-| M6 | 0 / — | 16 / -2.97 | 1 | 樣本不足（缺一側 cohort） |
-| M8 | 16 / -2.97 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
+| M1 | 41 / -8.44 | 0 / — | 1 | 樣本不足（缺一側 cohort） |
+| M2 | 12 / -10.57 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
+| M3 | 27 / -10.89 | 7 / -2.02 | 1 | 無法判定（狀態翻轉 1 次 < 3；cohort 等於兩段日曆時間）；方向反 |
+| M4 | 27 / -7.60 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
+| M5 | 28 / -2.92 | 43 / -10.18 | 34 | 累積中（GREEN n=28 < 30）；方向對 |
+| M6 | 0 / — | 17 / -3.65 | 1 | 樣本不足（缺一側 cohort） |
+| M8 | 17 / -3.65 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 
 _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組，cohort 比較等於比兩段日曆時間。翻轉 < 3 次一律「無法判定」。_
 
