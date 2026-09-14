@@ -1,216 +1,60 @@
 {
-  "updated_at": "2026-09-13T22:33:37.991833",
+  "updated_at": "2026-09-14T23:20:59.110061",
   "stats": {
     "total_items": 107,
-    "items_with_company": 19,
-    "items_with_catalyst": 12,
-    "items_both": 3
+    "items_with_company": 14,
+    "items_with_catalyst": 9,
+    "items_both": 0
   },
-  "count": 16,
+  "count": 13,
   "tickers": [
-    "INTC",
-    "DKNG",
-    "HPE",
-    "ORCL",
-    "GOOGL",
-    "AMZN",
-    "F",
-    "TSLA",
     "NVDA",
-    "SBUX",
-    "MS",
-    "AMD",
-    "TGT",
-    "MSFT",
+    "CRWD",
     "AAPL",
-    "BA"
+    "AVGO",
+    "BAC",
+    "MSFT",
+    "PANW",
+    "MU",
+    "AMZN",
+    "CRWV",
+    "SNOW",
+    "INTC",
+    "SNDK"
   ],
   "details": [
     {
-      "symbol": "INTC",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Intel (INTC) Is Winning From the CPU Shortage, but Its Foundry Valuation Needs More Proof",
-          "catalysts": [
-            "foundry"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Forget Intel. Buy This Tech Stock in September Instead.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DKNG",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "DraftKings and Flutter Jump After Court Rules Prediction Markets Are Gambling, Not Federally Regulated Trading",
-          "catalysts": [
-            "jump"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "HPE",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Hewlett Packard Enterprise Raises 2027 Outlook as AI Networking Demand Surges",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Larry Ellison nixes plan to offload up to $7.5 billion worth of Oracle stock ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Oracle's Larry Ellison adopts trading plan to sell up to $7.5 billion worth of stock",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Larry Ellison cancels $7.5 billion sale of Oracle stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Anthropic's Amodei says China presents 'toughest dilemma' for his proposed AI slowdown",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Amazon, Alphabet, and Microsoft: Which 2 to Buy and Which 1 to Avoid",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Amazon, Alphabet, and Microsoft: Which 2 to Buy and Which 1 to Avoid",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Jeff Bezos Built Amazon Into a $1.8 Trillion Company. Here's How Andy Jassy Is Making It Worth Even More.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "GM plans U.S. battery development as Trump's DOT attacks Ford for China ties",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Tesla regains majority of U.S. EV market as rivals retreat: WSJ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "NVDA",
-      "score": 0.5,
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Nvidia (NVDA) Looks Cheap on Piper’s Forecasts, but the Earnings Assumptions Are the Real Test",
+          "title": "Trump phones Nvidia’s Huang at All-In Summit, calls data center opposition a ‘hoax’",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here’s what to know.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia Is Focused on Redefining AI Infrastructure as an Income-Generating Asset",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SBUX",
-      "score": 0.5,
+      "symbol": "CRWD",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Starbucks’ $1 Billion Bet on Cozy Stores Faces a Margin Test",
+          "title": "CrowdStrike and Palo Alto Networks lead software stocks to a never-before-seen feat",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Morgan Stanley delivers blunt message to America’s pet owners",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ulta Beauty Sees Resilient Demand, Eyes Fragrance, Wellness Growth After Target Exit",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Amazon, Alphabet, and Microsoft: Which 2 to Buy and Which 1 to Avoid",
+          "title": "CrowdStrike Expands AI Capabilities With Autonomous Product Launch. What This Means for CRWD Stock.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -221,18 +65,117 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple Bought Back More Than $880 Billion of Its Own Stock During Tim Cook's 15 Years as CEO. Here's How That Reshaped Shareholder Returns.",
+          "title": "Apple releases test of redesigned Siri AI before iPhone 18 hits stores this week",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "AVGO",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Boeing Delivered 51 Jets in August. Here's Why the Stock is Finally Back Above $200.",
+          "title": "Broadcom CEO addresses Anthropic's slowdown push, says AI revenue targets haven't changed",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Bank of America expects third-quarter investment banking fees to fall more than 10%; shares slide",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft sets limits for future AI models as industry throttles frontier development",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PANW",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "CrowdStrike and Palo Alto Networks lead software stocks to a never-before-seen feat",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here’s what to know.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "NVIDIA’s Older GPUs Still Earn Rent. What That Does and Doesn’t Prove for CoreWeave",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNOW",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Snowflake’s Blowout Quarter Adds to a Software Sector Already Rallying on AI",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Predicting Intel's Value by 2030 Could Make It Worth a Look Right Now",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "GF Securities Says NAND Prices May Stabilize Later This Year. What This Means for Sandisk Stock.",
           "catalysts": [],
           "has_catalyst": false
         }
