@@ -6,27 +6,6 @@
     "total_mentions": 6,
     "ticker": "NDAQ"
   },
-  "German": {
-    "first_seen": "2026-09-04",
-    "last_seen": "2026-09-07",
-    "consecutive_days": 2,
-    "total_mentions": 5,
-    "ticker": "GABC"
-  },
-  "Miami": {
-    "first_seen": "2026-09-06",
-    "last_seen": "2026-09-07",
-    "consecutive_days": 2,
-    "total_mentions": 5,
-    "ticker": "MIAX"
-  },
-  "Greenland": {
-    "first_seen": "2026-09-07",
-    "last_seen": "2026-09-07",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GLNDW"
-  },
   "Canadian": {
     "first_seen": "2026-09-08",
     "last_seen": "2026-09-13",
@@ -57,9 +36,9 @@
   },
   "Enbridge": {
     "first_seen": "2026-09-09",
-    "last_seen": "2026-09-09",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-09-15",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "EBBGF"
   },
   "Hewlett Packard Enterprise": {

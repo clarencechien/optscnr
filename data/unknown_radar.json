@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-09-14T23:59:13.837615",
+  "updated_at": "2026-09-15T23:42:42.289400",
   "count": 1,
   "blind_spots": [
     {
-      "name": "Northrop Grumman",
-      "ticker": "NOC",
+      "name": "Enbridge",
+      "ticker": "EBBGF",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "Northrop Grumman gets $34 million Navy contract modification",
-        "Northrop Grumman advances Sentinel nuclear missile toward flight test"
+        "Enbridge reopens Line 5 after August spill; launches open season for proposed Texas pipeline",
+        "Enbridge (ENB) Expands its U.S. Oil Footprint with Tallgrass Acquisition"
       ]
     }
   ]
