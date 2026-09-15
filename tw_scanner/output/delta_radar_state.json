@@ -8313,8 +8313,8 @@
       "t5_excess_pct": -5.56,
       "t10_ret_pct": 2.47,
       "t10_excess_pct": -0.91,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -8.24,
+      "t20_excess_pct": -9.53
     }
   },
   {
@@ -9682,8 +9682,8 @@
       "entry_close": 1865.0,
       "t5_ret_pct": -3.22,
       "t5_excess_pct": -4.33,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -10.46,
+      "t10_excess_pct": -8.43,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -10361,8 +10361,8 @@
       "entry_date": "2026-09-08",
       "benchmark": "0050",
       "entry_close": 1805.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -7.48,
+      "t5_excess_pct": -4.38,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -11305,6 +11305,104 @@
       "entry_date": "2026-09-14",
       "benchmark": "0050",
       "entry_close": 1620.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-09-15T08:01:21.224553+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:4e / vr300_delay:18e(20m) / debt_financed_capex:11e(12m) / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 4,
+            "vr300_delay": 18,
+            "debt_financed_capex": 11,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 4,
+            "vr300_delay": 20,
+            "debt_financed_capex": 12,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 4,
+              "mentions": 4,
+              "gate": "zscore",
+              "z": 0.54,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 18,
+              "mentions": 20,
+              "gate": "zscore",
+              "z": -0.28,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 11,
+              "mentions": 12,
+              "gate": "zscore",
+              "z": 0.0,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] Jensen Huang Takes Stage at Morgan Stanley Roadshow: Quarterly Revenue Nears $100 Billion, Nvidia Denies Rubin Ultra Del",
+          "[debt_financed_capex] AI Companies’ Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - Yahoo Finance",
+          "[debt_financed_capex] Big Tech's AI Spending Spree Turns to Debt as Bond Sales Top 50% of Capex - finance.biggo.com",
+          "[debt_financed_capex] AI Boom Triggers Tech Debt Binge - startuphub.ai"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 YELLOW、價格 20 日 -8.2%）；PER 51.6，3 年分位 83 → 74",
+      "premise": "YELLOW",
+      "premise_ts": "2026-09-14T09:15:56.497737+00:00",
+      "ret_pct": -8.24,
+      "lookback_sessions": 20,
+      "as_of": "2026-09-15",
+      "valuation": {
+        "per": 51.56,
+        "per_pct": 73.7,
+        "per_then": 59.99,
+        "per_pct_then": 83.1,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-09-15",
+      "benchmark": "0050",
+      "entry_close": 1670.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
