@@ -44,7 +44,16 @@
         "confirmed": true
       },
       "note": "ETF 無財報；9/16 FOMC、10/06 會議紀錄落在到期前；起點區間 3.5-3.75%",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.71,
+        "t10": null,
+        "t20": null,
+        "peak": 0.71,
+        "mature": false,
+        "verdict": "➖持平(峰0.7x/今0.7x)",
+        "filled_at": "2026-09-15"
+      }
     },
     {
       "signal_id": "2026-09-10_IBIT_2026-10-16_47.0",
@@ -78,7 +87,16 @@
         "confirmed": true
       },
       "note": "ETF 無財報；到期前排定事件為 9/16 FOMC 與 10/06 紀錄",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.75,
+        "t10": null,
+        "t20": null,
+        "peak": 0.75,
+        "mature": false,
+        "verdict": "➖持平(峰0.7x/今0.7x)",
+        "filled_at": "2026-09-15"
+      }
     },
     {
       "signal_id": "2026-09-10_IBIT_2026-10-16_54.0",
@@ -112,7 +130,16 @@
         "confirmed": true
       },
       "note": "ETF 無財報；9/16 FOMC 在到期前；oi_d7 僅 +245、量 165",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.67,
+        "t10": null,
+        "t20": null,
+        "peak": 0.67,
+        "mature": false,
+        "verdict": "➖持平(峰0.7x/今0.7x)",
+        "filled_at": "2026-09-15"
+      }
     }
   ],
   "facts_proposed": [
