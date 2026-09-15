@@ -1,126 +1,97 @@
 {
-  "updated_at": "2026-09-14T23:20:59.110061",
+  "updated_at": "2026-09-15T23:06:05.145892",
   "stats": {
-    "total_items": 107,
+    "total_items": 96,
     "items_with_company": 14,
-    "items_with_catalyst": 9,
-    "items_both": 0
+    "items_with_catalyst": 13,
+    "items_both": 2
   },
-  "count": 13,
+  "count": 12,
   "tickers": [
+    "WMT",
+    "GOOGL",
     "NVDA",
-    "CRWD",
-    "AAPL",
-    "AVGO",
-    "BAC",
-    "MSFT",
-    "PANW",
-    "MU",
+    "COST",
+    "XYZ",
     "AMZN",
-    "CRWV",
-    "SNOW",
-    "INTC",
-    "SNDK"
+    "F",
+    "NKE",
+    "RIVN",
+    "MS",
+    "AAPL",
+    "DELL"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 2.0,
+      "symbol": "WMT",
+      "score": 4,
       "evidence": [
         {
-          "title": "Trump phones Nvidia’s Huang at All-In Summit, calls data center opposition a ‘hoax’",
+          "title": "Walmart (WMT) Delivery Push Gains Momentum with Papa John’s Partnership",
+          "catalysts": [
+            "gains",
+            "partnership"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "OpenAI, Google, Anthropic discussing collaboration on AI safety issues",
+          "catalysts": [
+            "collaboration"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Nvidia's Huang diverges with CEOs of Anthropic, OpenAI on AI safety at Dreamforce",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here’s what to know.",
+          "title": "Nvidia CEO Huang attending Trump's state dinner for China's Xi: Source",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia Is Focused on Redefining AI Infrastructure as an Income-Generating Asset",
+          "title": "Nvidia CEO to attend Trump dinner for Xi, source says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWD",
+      "symbol": "COST",
       "score": 1.0,
       "evidence": [
         {
-          "title": "CrowdStrike and Palo Alto Networks lead software stocks to a never-before-seen feat",
+          "title": "Costco rations Kirkland motor oil, raises price to $57.99",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "CrowdStrike Expands AI Capabilities With Autonomous Product Launch. What This Means for CRWD Stock.",
+          "title": "How a Costco partner's bankruptcy could benefit its biggest rival",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple releases test of redesigned Siri AI before iPhone 18 hits stores this week",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Broadcom CEO addresses Anthropic's slowdown push, says AI revenue targets haven't changed",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BAC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Bank of America expects third-quarter investment banking fees to fall more than 10%; shares slide",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Microsoft sets limits for future AI models as industry throttles frontier development",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PANW",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "CrowdStrike and Palo Alto Networks lead software stocks to a never-before-seen feat",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here’s what to know.",
+          "title": "Senate cloture vote on Clarity Act fails, dealing regulatory blow to crypto industry",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -131,51 +102,73 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Alibaba and Amazon Face the Same AI Spending Question: How Quickly Does Capacity Become Cash?",
+          "title": "AWS says it can't restore service to Bahrain, UAE facilities 6 months after Iran strikes",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWV",
+      "symbol": "F",
       "score": 0.5,
       "evidence": [
         {
-          "title": "NVIDIA’s Older GPUs Still Earn Rent. What That Does and Doesn’t Prove for CoreWeave",
+          "title": "Ford increases V-8 engine availability, lowers performance prices for 2027 F-150 trucks",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SNOW",
+      "symbol": "NKE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Snowflake’s Blowout Quarter Adds to a Software Sector Already Rallying on AI",
+          "title": "Nike co-founder Phil Knight to donate $1.1 billion to Oregon medical center",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "RIVN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Predicting Intel's Value by 2030 Could Make It Worth a Look Right Now",
+          "title": "The EV Bubble Has Burst. How to Play Rivian Stock Now.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SNDK",
+      "symbol": "MS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "GF Securities Says NAND Prices May Stabilize Later This Year. What This Means for Sandisk Stock.",
+          "title": "Morgan Stanley Doubles Down on Apple Stock as New Offerings Become ‘More Exciting’",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Morgan Stanley Doubles Down on Apple Stock as New Offerings Become ‘More Exciting’",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Dell Stock Has Tripled in 2026. Here’s Why I Wouldn’t Lock in Profits Yet.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -183,7 +176,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 4,
-    "OpenAI (private)": 2
+    "OpenAI (private)": 4,
+    "Anthropic (private)": 4
   }
 }
