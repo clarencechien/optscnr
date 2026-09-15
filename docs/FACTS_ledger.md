@@ -245,3 +245,7 @@
 - IBIT ｜ IBIT 2026-09-10 收 44.29（前收 44.39），52 週區間 32.84-71.82，淨資產約 614 億美元，年初至今總報酬 -8.90% ｜ 2026-09-10 ｜ https://www.investing.com/etfs/ibit-nasdaq ｜ 2026-09-10 LLM 提案
 - IBIT ｜ 2026-10-27/28 為年內下一場 FOMC，落在 10/16 到期之後 ｜ 2026-10-28 ｜ https://blog.mexc.com/finance/federal-reserve-meeting-dates-full-2026-fomc-calendar-and-policy-schedule/ ｜ 2026-09-11 LLM 提案
 - IBIT ｜ 2026-09-11 IBIT 收 43.75，日內區間 43.05-45.22，成交 4,750 萬股；52 週區間 32.84-71.82 ｜ 2026-09-11 ｜ https://robinhood.com/us/en/stocks/IBIT/ ｜ 2026-09-11 LLM 提案
+- NVDA ｜ Q3 FY2027 財報日 2026-11-17 盤後（Wall Street Horizon 標 CONFIRMED、MarketChameleon 同列 11-17 AMC；TipRanks／Investing.com 另列 2026-11-25，來源分歧待覆核） ｜ 2026-11-17 ｜ https://www.wallstreethorizon.com/nvidia-earnings-calendar ｜ 2026-09-14 LLM 提案
+- NVDA ｜ Q2 FY2027（2026-08-26 公布）營收 $96.2B（+106% YoY），資料中心 $89.0B（+117% YoY），GAAP/non-GAAP 毛利率均 75.0%，EPS $2.46／$2.22；Q3 指引營收 $108B±2%、毛利率 74.0%，且未計入中國資料中心運算營收 ｜ 2026-08-26 ｜ https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027 ｜ 2026-09-14 LLM 提案
+- NVDA ｜ 財報後次日（2026-08-27）股價 +8.7% 收 $227.98；自財報起 15 日回落 −4.2%，區間 $215.10–$234.76 ｜ 2026-08-27 ｜ https://marketchameleon.com/Overview/NVDA/Earnings/Earnings-Dates/ ｜ 2026-09-14 LLM 提案
+- NVDA ｜ 每股 $0.25 季度現金股利於 2026-10-01 發放，除息登記日 2026-09-10 ｜ 2026-10-01 ｜ https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027 ｜ 2026-09-14 LLM 提案
