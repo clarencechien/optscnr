@@ -1,0 +1,109 @@
+{
+  "market_date": "2026-09-14",
+  "decided_at": "2026-09-15T00:17:50.738Z",
+  "source": "manual",
+  "prompt_version": "v4.1",
+  "model": "anthropic/claude-opus-5",
+  "model_served": "anthropic/claude-opus-5",
+  "llm_called": true,
+  "web_search": true,
+  "candidates_generated_at": "2026-09-15T00:02:45Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-09-14_NVDA_2026-11-20_230.0",
+      "ticker": "NVDA",
+      "expiry": "2026-11-20",
+      "strike": 230,
+      "entry_price": 7.1,
+      "strategy": "C_LADDER4",
+      "strategy_label": "4口階梯 2/4/8x + 1口 runner（實彈）",
+      "sell_points": {
+        "take_profit": [
+          14.2,
+          28.4,
+          56.8
+        ],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "4 口：三口掛 2/4/8x 限價，最後一口 DTE 21 出"
+      },
+      "facts_used": 9,
+      "q_event": {
+        "answer": "有",
+        "date": "2026-11-17",
+        "what": "NVDA Q3 FY2027 財報（盤後），落在 2026-11-20 到期前",
+        "source": "https://www.wallstreethorizon.com/nvidia-earnings-calendar"
+      },
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true
+      },
+      "note": "WSH／MarketChameleon 皆列 11-17 盤後；TipRanks／Investing 列 11-25，日期尚有分歧。近5日最大單日 −3.4%（09-14）。",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "NVDA",
+      "fact": "Q3 FY2027 財報日 2026-11-17 盤後（Wall Street Horizon 標 CONFIRMED、MarketChameleon 同列 11-17 AMC；TipRanks／Investing.com 另列 2026-11-25，來源分歧待覆核）",
+      "date": "2026-11-17",
+      "source": "https://www.wallstreethorizon.com/nvidia-earnings-calendar"
+    },
+    {
+      "ticker": "NVDA",
+      "fact": "Q2 FY2027（2026-08-26 公布）營收 $96.2B（+106% YoY），資料中心 $89.0B（+117% YoY），GAAP/non-GAAP 毛利率均 75.0%，EPS $2.46／$2.22；Q3 指引營收 $108B±2%、毛利率 74.0%，且未計入中國資料中心運算營收",
+      "date": "2026-08-26",
+      "source": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+    },
+    {
+      "ticker": "NVDA",
+      "fact": "財報後次日（2026-08-27）股價 +8.7% 收 $227.98；自財報起 15 日回落 −4.2%，區間 $215.10–$234.76",
+      "date": "2026-08-27",
+      "source": "https://marketchameleon.com/Overview/NVDA/Earnings/Earnings-Dates/"
+    },
+    {
+      "ticker": "NVDA",
+      "fact": "每股 $0.25 季度現金股利於 2026-10-01 發放，除息登記日 2026-09-10",
+      "date": "2026-10-01",
+      "source": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+    }
+  ],
+  "facts_appended": 4,
+  "raw_answer": "{\"market_date\":\"2026-09-14\",\"candidates\":[{\"signal_id\":\"2026-09-14_NVDA_2026-11-20_230.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-11-17\",\"what\":\"NVDA Q3 FY2027 財報（盤後），落在 2026-11-20 到期前\",\"source\":\"https://www.wallstreethorizon.com/nvidia-earnings-calendar\"},\"q_gap\":{\"answer\":\"無\",\"direction\":null,\"pct\":null,\"date\":null},\"q_delta\":{\"positive\":true,\"confirmed\":true},\"note\":\"WSH／MarketChameleon 皆列 11-17 盤後；TipRanks／Investing 列 11-25，日期尚有分歧。近5日最大單日 −3.4%（09-14）。\"}],\"facts_proposed\":[{\"ticker\":\"NVDA\",\"fact\":\"Q3 FY2027 財報日 2026-11-17 盤後（Wall Street Horizon 標 CONFIRMED、MarketChameleon 同列 11-17 AMC；TipRanks／Investing.com 另列 2026-11-25，來源分歧待覆核）\",\"date\":\"2026-11-17\",\"source\":\"https://www.wallstreethorizon.com/nvidia-earnings-calendar\"},{\"ticker\":\"NVDA\",\"fact\":\"Q2 FY2027（2026-08-26 公布）營收 $96.2B（+106% YoY），資料中心 $89.0B（+117% YoY），GAAP/non-GAAP 毛利率均 75.0%，EPS $2.46／$2.22；Q3 指引營收 $108B±2%、毛利率 74.0%，且未計入中國資料中心運算營收\",\"date\":\"2026-08-26\",\"source\":\"https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027\"},{\"ticker\":\"NVDA\",\"fact\":\"財報後次日（2026-08-27）股價 +8.7% 收 $227.98；自財報起 15 日回落 −4.2%，區間 $215.10–$234.76\",\"date\":\"2026-08-27\",\"source\":\"https://marketchameleon.com/Overview/NVDA/Earnings/Earnings-Dates/\"},{\"ticker\":\"NVDA\",\"fact\":\"每股 $0.25 季度現金股利於 2026-10-01 發放，除息登記日 2026-09-10\",\"date\":\"2026-10-01\",\"source\":\"https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027\"}]}",
+  "usage": {
+    "prompt_tokens": 28601,
+    "completion_tokens": 1648,
+    "total_tokens": 30249,
+    "cost": 0.204205,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.204205,
+      "upstream_inference_prompt_cost": 0.143005,
+      "upstream_inference_completions_cost": 0.0412
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 637,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
