@@ -25852,5 +25852,160 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-09-14_BAC_2026-09-25_62.0",
+    "snapshot_date": "2026-09-14",
+    "ticker": "BAC",
+    "expiry": "2026-09-25",
+    "strike": 62.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次10-14)",
+    "entry_price": 0.2,
+    "entry_iv": 23.5359208984375,
+    "entry_spot": 59.47,
+    "oi": 1058,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-14)"
+    ],
+    "volume": 3476,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.17,
+    "entry_ask": 0.2,
+    "last_trade_at": "2026-09-14 19:59:36",
+    "quote_at": "2026-09-15T00:42:15Z",
+    "underlying_at": "2026-09-15T00:42:15Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-09-14",
+        "spot": 59.470001220703125,
+        "last": 0.2,
+        "bid": 0.17,
+        "ask": 0.2,
+        "iv": 23.5359208984375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-09-14_BAC_2026-09-25_63.0",
+    "snapshot_date": "2026-09-14",
+    "ticker": "BAC",
+    "expiry": "2026-09-25",
+    "strike": 63.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次10-14)",
+    "entry_price": 0.06,
+    "entry_iv": 24.219507812499998,
+    "entry_spot": 59.47,
+    "oi": 1252,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-14)"
+    ],
+    "volume": 2285,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.06,
+    "entry_ask": 0.1,
+    "last_trade_at": "2026-09-14 19:59:01",
+    "quote_at": "2026-09-15T00:42:15Z",
+    "underlying_at": "2026-09-15T00:42:15Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-09-14",
+        "spot": 59.470001220703125,
+        "last": 0.06,
+        "bid": 0.06,
+        "ask": 0.1,
+        "iv": 24.219507812499998
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-09-14_CRWD_2026-09-25_300.0",
+    "snapshot_date": "2026-09-14",
+    "ticker": "CRWD",
+    "expiry": "2026-09-25",
+    "strike": 300.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次12-01) ⚠️流動性稀薄(9條/OI17,671)",
+    "entry_price": 0.25,
+    "entry_iv": 73.5354208984375,
+    "entry_spot": 235.38,
+    "oi": 1013,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [
+      "⚠️流動性稀薄(9條/OI17,671)"
+    ],
+    "events": [
+      "📅吃不到財報(下次12-01)"
+    ],
+    "volume": 1260,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.25,
+    "entry_ask": 0.5,
+    "last_trade_at": "2026-09-14 19:14:19",
+    "quote_at": "2026-09-15T00:42:15Z",
+    "underlying_at": "2026-09-15T00:42:15Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-09-14",
+        "spot": 235.3800048828125,
+        "last": 0.25,
+        "bid": 0.25,
+        "ask": 0.5,
+        "iv": 73.5354208984375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]

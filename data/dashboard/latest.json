@@ -1,9 +1,9 @@
 {
   "market_date": "2026-09-14",
-  "generated_at": "2026-09-15T00:02:45Z",
+  "generated_at": "2026-09-15T00:42:15Z",
   "prereg_date": "2026-09-08",
   "n_candidates": 1,
-  "n_report_rows": 2181,
+  "n_report_rows": 2015,
   "candidates": [
     {
       "signal_id": "2026-09-14_NVDA_2026-11-20_230.0",

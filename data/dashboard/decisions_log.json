@@ -1,8 +1,56 @@
 {
- "generated_at": "2026-09-15T00:15:57Z",
- "n_days": 5,
+ "generated_at": "2026-09-15T00:48:21Z",
+ "n_days": 6,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-14",
+   "decided_at": "2026-09-15T00:17:50.738Z",
+   "model": "anthropic/claude-opus-5",
+   "prompt_version": "v4.1",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-09-14_NVDA_2026-11-20_230.0",
+     "ticker": "NVDA",
+     "expiry": "2026-11-20",
+     "strike": 230,
+     "entry_price": 7.1,
+     "strategy": "C_LADDER4",
+     "sell_points": {
+      "take_profit": [
+       14.2,
+       28.4,
+       56.8
+      ],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "4 口：三口掛 2/4/8x 限價，最後一口 DTE 21 出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-11-17",
+      "what": "NVDA Q3 FY2027 財報（盤後），落在 2026-11-20 到期前",
+      "source": "https://www.wallstreethorizon.com/nvidia-earnings-calendar"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true
+     },
+     "note": "WSH／MarketChameleon 皆列 11-17 盤後；TipRanks／Investing 列 11-25，日期尚有分歧。近5日最大單日 −3.4%（09-14）。",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-09-11",
    "decided_at": "2026-09-12T04:39:37.837Z",
