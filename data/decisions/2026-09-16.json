@@ -1,0 +1,103 @@
+{
+  "market_date": "2026-09-16",
+  "decided_at": "2026-09-16T23:32:25.098Z",
+  "source": "manual",
+  "prompt_version": "v4.1",
+  "model": "anthropic/claude-opus-5",
+  "model_served": "anthropic/claude-opus-5",
+  "llm_called": true,
+  "web_search": true,
+  "candidates_generated_at": "2026-09-16T23:06:13Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-09-16_GOOGL_2026-10-16_370.0",
+      "ticker": "GOOGL",
+      "expiry": "2026-10-16",
+      "strike": 370,
+      "entry_price": 3.42,
+      "strategy": "C_LADDER4",
+      "strategy_label": "4口階梯 2/4/8x + 1口 runner（實彈）",
+      "sell_points": {
+        "take_profit": [
+          6.84,
+          13.68,
+          27.36
+        ],
+        "stop": null,
+        "exit_by": "2026-09-25",
+        "note": "4 口：三口掛 2/4/8x 限價，最後一口 DTE 21 出"
+      },
+      "facts_used": 2,
+      "q_event": {
+        "answer": "有",
+        "date": "2026-10-02",
+        "what": "廣告技術反壟斷案法院令雙方於裁定（2026-09-02）後 30 日內提交共同最終判決，落在到期日前",
+        "source": "https://ccianet.org/news/2026/09/ccias-response-to-court-ruling-on-google-ad-tech-remedies-in-doj-antitrust-case"
+      },
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true
+      },
+      "note": "財報 10-27/28 在到期後；最大單日 +3.7%（09-15）",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "GOOGL",
+      "fact": "廣告技術反壟斷救濟裁定：Brinkema 法官駁回 AdX 分拆與 DFP 相關結構性救濟，改採行為性救濟（內容未公開），並令雙方 30 日內提交共同最終判決；廣告技術年營收約 $300 億、佔 Alphabet 約 8%",
+      "date": "2026-09-02",
+      "source": "https://www.axios.com/2026/09/02/google-ad-tech-antitrust-remedies"
+    },
+    {
+      "ticker": "GOOGL",
+      "fact": "Q3 2026 財報排定 2026-10-27 盤後（TipRanks 標示 confirmed；Wall Street Horizon 預估 10-28 未確認），EPS 預期 $2.93-3.02",
+      "date": "2026-10-27",
+      "source": "https://www.tipranks.com/stocks/googl/earnings"
+    },
+    {
+      "ticker": "GOOGL",
+      "fact": "搜尋壟斷案 DOJ 交叉上訴要求重審 Chrome 分拆，D.C. 巡迴上訴法院預計於 2026 年底至 2027 年初開庭辯論（無確定日期）",
+      "date": "2026-09-02",
+      "source": "https://tech-insider.org/google-antitrust-appeal-doj-search-monopoly-2026/"
+    }
+  ],
+  "facts_appended": 3,
+  "raw_answer": "{\"market_date\":\"2026-09-16\",\"candidates\":[{\"signal_id\":\"2026-09-16_GOOGL_2026-10-16_370.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-10-02\",\"what\":\"廣告技術反壟斷案法院令雙方於裁定（2026-09-02）後 30 日內提交共同最終判決，落在到期日前\",\"source\":\"https://ccianet.org/news/2026/09/ccias-response-to-court-ruling-on-google-ad-tech-remedies-in-doj-antitrust-case\"},\"q_gap\":{\"answer\":\"無\",\"direction\":null,\"pct\":null,\"date\":null},\"q_delta\":{\"positive\":true,\"confirmed\":true},\"note\":\"財報 10-27/28 在到期後；最大單日 +3.7%（09-15）\"}],\"facts_proposed\":[{\"ticker\":\"GOOGL\",\"fact\":\"廣告技術反壟斷救濟裁定：Brinkema 法官駁回 AdX 分拆與 DFP 相關結構性救濟，改採行為性救濟（內容未公開），並令雙方 30 日內提交共同最終判決；廣告技術年營收約 $300 億、佔 Alphabet 約 8%\",\"date\":\"2026-09-02\",\"source\":\"https://www.axios.com/2026/09/02/google-ad-tech-antitrust-remedies\"},{\"ticker\":\"GOOGL\",\"fact\":\"Q3 2026 財報排定 2026-10-27 盤後（TipRanks 標示 confirmed；Wall Street Horizon 預估 10-28 未確認），EPS 預期 $2.93-3.02\",\"date\":\"2026-10-27\",\"source\":\"https://www.tipranks.com/stocks/googl/earnings\"},{\"ticker\":\"GOOGL\",\"fact\":\"搜尋壟斷案 DOJ 交叉上訴要求重審 Chrome 分拆，D.C. 巡迴上訴法院預計於 2026 年底至 2027 年初開庭辯論（無確定日期）\",\"date\":\"2026-09-02\",\"source\":\"https://tech-insider.org/google-antitrust-appeal-doj-search-monopoly-2026/\"}]}",
+  "usage": {
+    "prompt_tokens": 28730,
+    "completion_tokens": 1955,
+    "total_tokens": 30685,
+    "cost": 0.212525,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.212525,
+      "upstream_inference_prompt_cost": 0.14365,
+      "upstream_inference_completions_cost": 0.048875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1091,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
