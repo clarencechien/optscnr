@@ -1,17 +1,29 @@
 {
-  "updated_at": "2026-09-15T23:42:42.289400",
-  "count": 1,
+  "updated_at": "2026-09-16T23:50:41.911132",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Enbridge",
-      "ticker": "EBBGF",
-      "mentions_today": 2,
+      "name": "Generac",
+      "ticker": "GNRC",
+      "mentions_today": 4,
       "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "Enbridge reopens Line 5 after August spill; launches open season for proposed Texas pipeline",
-        "Enbridge (ENB) Expands its U.S. Oil Footprint with Tallgrass Acquisition"
+        "Amazon obtains right to buy stock in Generac, boosting power company's share price by over 40%",
+        "Amazon obtains right to buy stock in Generac, boosting power company's share price by over 40%"
+      ]
+    },
+    {
+      "name": "Credit",
+      "ticker": "CACC",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Hyperscaler debt signals warning sign, Apollo cautions",
+        "Credit card application denied? Here’s what to do next"
       ]
     }
   ]
