@@ -1,35 +1,37 @@
 {
-  "updated_at": "2026-09-15T23:06:05.145892",
+  "updated_at": "2026-09-16T23:11:56.045383",
   "stats": {
-    "total_items": 96,
-    "items_with_company": 14,
-    "items_with_catalyst": 13,
-    "items_both": 2
+    "total_items": 106,
+    "items_with_company": 18,
+    "items_with_catalyst": 17,
+    "items_both": 3
   },
-  "count": 12,
+  "count": 14,
   "tickers": [
-    "WMT",
+    "INTC",
+    "AMZN",
+    "META",
     "GOOGL",
     "NVDA",
-    "COST",
     "XYZ",
-    "AMZN",
-    "F",
-    "NKE",
-    "RIVN",
-    "MS",
-    "AAPL",
-    "DELL"
+    "BA",
+    "SBUX",
+    "GS",
+    "COST",
+    "WDC",
+    "STX",
+    "AMD",
+    "CRM"
   ],
   "details": [
     {
-      "symbol": "WMT",
+      "symbol": "INTC",
       "score": 4,
       "evidence": [
         {
-          "title": "Walmart (WMT) Delivery Push Gains Momentum with Papa John’s Partnership",
+          "title": "Intel’s stock rises as investors hope memory chips can mark the next step in its turnaround",
           "catalysts": [
-            "gains",
+            "rises",
             "partnership"
           ],
           "has_catalyst": true
@@ -37,50 +39,68 @@
       ]
     },
     {
-      "symbol": "GOOGL",
-      "score": 2,
+      "symbol": "AMZN",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "OpenAI, Google, Anthropic discussing collaboration on AI safety issues",
+          "title": "Amazon obtains right to buy stock in Generac, boosting power company's share price by over 40%",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Generac’s stock soars more than 30% after Amazon deal cements company’s status as an AI power player",
           "catalysts": [
-            "collaboration"
+            "soars"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "NVDA",
+      "symbol": "META",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Meta launches Meta One subscriptions as it seeks to better monetize AI spending",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
       "score": 1.5,
       "evidence": [
         {
-          "title": "Nvidia's Huang diverges with CEOs of Anthropic, OpenAI on AI safety at Dreamforce",
+          "title": "Google is playing a different AI game than everyone else, and Wall Street may be missing the point",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia CEO Huang attending Trump's state dinner for China's Xi: Source",
+          "title": "Google should relax ad tech rules, appoint antitrust monitor, US judge finds",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia CEO to attend Trump dinner for Xi, source says",
+          "title": "Banks provide $22 billion chip loan to Blackstone, Alphabet AI cloud venture, source says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
+      "symbol": "NVDA",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Costco rations Kirkland motor oil, raises price to $57.99",
+          "title": "The AI Stock I’m Buying on Repeat (And It Isn’t Nvidia)",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "How a Costco partner's bankruptcy could benefit its biggest rival",
+          "title": "Jensen Huang Says Nvidia Can Grow 70% Next Year. Here’s Why He May Be Right.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -91,84 +111,95 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Senate cloture vote on Clarity Act fails, dealing regulatory blow to crypto industry",
+          "title": "House votes to hold Leon Black in contempt of Congress over Epstein subpoenas defiance",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AWS says it can't restore service to Bahrain, UAE facilities 6 months after Iran strikes",
+          "title": "Boeing CEO: 737 Max production taking 'a little bit longer' to stabilize than expected",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "F",
+      "symbol": "SBUX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Ford increases V-8 engine availability, lowers performance prices for 2027 F-150 trucks",
+          "title": "Fed delivers its first hike in 3 years. Plus, what's moving Starbucks and GE Vernova",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NKE",
+      "symbol": "GS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nike co-founder Phil Knight to donate $1.1 billion to Oregon medical center",
+          "title": "Goldman Sachs sees slightly softer fixed income, currencies, commodities business, higher costs",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RIVN",
+      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "The EV Bubble Has Burst. How to Play Rivian Stock Now.",
+          "title": "How a Costco partner's bankruptcy could benefit its biggest rival",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MS",
+      "symbol": "WDC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Morgan Stanley Doubles Down on Apple Stock as New Offerings Become ‘More Exciting’",
+          "title": "Western Digital (WDC): The Fund’s Top Relative Contributor",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "STX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Morgan Stanley Doubles Down on Apple Stock as New Offerings Become ‘More Exciting’",
+          "title": "Seagate Technology (STX): The Primary Beneficiary of the AI Driven HDD Demand",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DELL",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dell Stock Has Tripled in 2026. Here’s Why I Wouldn’t Lock in Profits Yet.",
+          "title": "The Fund’s Largest Relative Detractor: Unowned Advanced Micro Devices (AMD)",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Here’s How Much Traders See Salesforce Stock Moving After ‘Dreamforce’ Event",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -177,6 +208,6 @@
   ],
   "watch_only": {
     "OpenAI (private)": 4,
-    "Anthropic (private)": 4
+    "Anthropic (private)": 1
   }
 }
