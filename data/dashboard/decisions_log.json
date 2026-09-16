@@ -1,8 +1,18 @@
 {
- "generated_at": "2026-09-16T00:34:20Z",
- "n_days": 6,
+ "generated_at": "2026-09-16T23:15:23Z",
+ "n_days": 7,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-15",
+   "decided_at": "2026-09-16T00:35:44.855Z",
+   "model": "anthropic/claude-opus-5",
+   "prompt_version": "v4.1",
+   "llm_called": false,
+   "error": null,
+   "n_candidates": 0,
+   "candidates": []
+  },
   {
    "market_date": "2026-09-14",
    "decided_at": "2026-09-15T00:17:50.738Z",
@@ -78,7 +88,15 @@
      "q_delta": null,
      "note": "ETF無財報；FOMC 9/16 決議前基準利率 3.50-3.75%，7/29 以 9:3 維持不變",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.67,
+      "t10": null,
+      "t20": null,
+      "peak": 0.67,
+      "mature": false,
+      "verdict": "➖持平(峰0.7x/今0.7x)",
+      "filled_at": "2026-09-16"
+     }
     }
    ]
   },
@@ -129,7 +147,7 @@
       "peak": 0.71,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-15"
+      "filled_at": "2026-09-16"
      }
     },
     {
@@ -170,7 +188,7 @@
       "peak": 0.75,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-15"
+      "filled_at": "2026-09-16"
      }
     },
     {
@@ -211,7 +229,7 @@
       "peak": 0.67,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-15"
+      "filled_at": "2026-09-16"
      }
     }
    ]
