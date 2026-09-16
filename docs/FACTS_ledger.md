@@ -249,3 +249,6 @@
 - NVDA ｜ Q2 FY2027（2026-08-26 公布）營收 $96.2B（+106% YoY），資料中心 $89.0B（+117% YoY），GAAP/non-GAAP 毛利率均 75.0%，EPS $2.46／$2.22；Q3 指引營收 $108B±2%、毛利率 74.0%，且未計入中國資料中心運算營收 ｜ 2026-08-26 ｜ https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027 ｜ 2026-09-14 LLM 提案
 - NVDA ｜ 財報後次日（2026-08-27）股價 +8.7% 收 $227.98；自財報起 15 日回落 −4.2%，區間 $215.10–$234.76 ｜ 2026-08-27 ｜ https://marketchameleon.com/Overview/NVDA/Earnings/Earnings-Dates/ ｜ 2026-09-14 LLM 提案
 - NVDA ｜ 每股 $0.25 季度現金股利於 2026-10-01 發放，除息登記日 2026-09-10 ｜ 2026-10-01 ｜ https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027 ｜ 2026-09-14 LLM 提案
+- GOOGL ｜ 廣告技術反壟斷救濟裁定：Brinkema 法官駁回 AdX 分拆與 DFP 相關結構性救濟，改採行為性救濟（內容未公開），並令雙方 30 日內提交共同最終判決；廣告技術年營收約 $300 億、佔 Alphabet 約 8% ｜ 2026-09-02 ｜ https://www.axios.com/2026/09/02/google-ad-tech-antitrust-remedies ｜ 2026-09-16 LLM 提案
+- GOOGL ｜ Q3 2026 財報排定 2026-10-27 盤後（TipRanks 標示 confirmed；Wall Street Horizon 預估 10-28 未確認），EPS 預期 $2.93-3.02 ｜ 2026-10-27 ｜ https://www.tipranks.com/stocks/googl/earnings ｜ 2026-09-16 LLM 提案
+- GOOGL ｜ 搜尋壟斷案 DOJ 交叉上訴要求重審 Chrome 分拆，D.C. 巡迴上訴法院預計於 2026 年底至 2027 年初開庭辯論（無確定日期） ｜ 2026-09-02 ｜ https://tech-insider.org/google-antitrust-appeal-doj-search-monopoly-2026/ ｜ 2026-09-16 LLM 提案
