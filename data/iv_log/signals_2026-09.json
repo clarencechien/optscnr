@@ -29751,5 +29751,107 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-09-15_NKE_2026-09-25_37.0",
+    "snapshot_date": "2026-09-15",
+    "ticker": "NKE",
+    "expiry": "2026-09-25",
+    "strike": 37.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次10-01)",
+    "entry_price": 0.48,
+    "entry_iv": 34.4733115234375,
+    "entry_spot": 36.22,
+    "oi": 1285,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-01)"
+    ],
+    "volume": 1868,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.46,
+    "entry_ask": 0.5,
+    "last_trade_at": "2026-09-15 19:59:47",
+    "quote_at": "2026-09-16T00:27:51Z",
+    "underlying_at": "2026-09-16T00:27:51Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-09-15",
+        "spot": 36.220001220703125,
+        "last": 0.48,
+        "bid": 0.46,
+        "ask": 0.5,
+        "iv": 34.4733115234375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-09-15_RIVN_2026-09-25_16.0",
+    "snapshot_date": "2026-09-15",
+    "ticker": "RIVN",
+    "expiry": "2026-09-25",
+    "strike": 16.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次11-03)",
+    "entry_price": 0.45,
+    "entry_iv": 58.39885351562499,
+    "entry_spot": 15.54,
+    "oi": 1133,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-03)"
+    ],
+    "volume": 1615,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.38,
+    "entry_ask": 0.43,
+    "last_trade_at": "2026-09-15 19:17:05",
+    "quote_at": "2026-09-16T00:27:51Z",
+    "underlying_at": "2026-09-16T00:27:51Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-09-15",
+        "spot": 15.539999961853027,
+        "last": 0.45,
+        "bid": 0.38,
+        "ask": 0.43,
+        "iv": 58.39885351562499
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
