@@ -1,8 +1,67 @@
 {
   "market_date": "2026-09-16",
-  "generated_at": "2026-09-17T00:37:41Z",
+  "generated_at": "2026-09-16T23:06:13Z",
   "prereg_date": "2026-09-08",
-  "n_candidates": 0,
-  "n_report_rows": 2218,
-  "candidates": []
+  "n_candidates": 1,
+  "n_report_rows": 2344,
+  "candidates": [
+    {
+      "signal_id": "2026-09-16_GOOGL_2026-10-16_370.0",
+      "ticker": "GOOGL",
+      "expiry": "2026-10-16",
+      "strike": 370.0,
+      "dte": 29,
+      "spot": 342.8699951171875,
+      "otm_pct": 7.9,
+      "last": 3.42,
+      "bid": 3.4,
+      "ask": 3.5,
+      "iv": 30.7,
+      "oi": 11883,
+      "oi_d7": 1284,
+      "oi_delta_status": "confirmed",
+      "volume": 27379,
+      "score": 8,
+      "tags": "🚨異常掃貨 🚀點火(7.9x) 📅吃不到財報(下次10-28)",
+      "features": [
+        "sweep",
+        "ignition"
+      ],
+      "warnings": [],
+      "events": [
+        "📅吃不到財報(下次10-28)"
+      ],
+      "recent_spots": [
+        {
+          "date": "2026-09-09",
+          "spot": 330.65
+        },
+        {
+          "date": "2026-09-10",
+          "spot": 332.6
+        },
+        {
+          "date": "2026-09-15",
+          "spot": 344.98
+        },
+        {
+          "date": "2026-09-16",
+          "spot": 342.87
+        }
+      ],
+      "tier": "heavy",
+      "strategy": "C_LADDER4",
+      "strategy_label": "4口階梯 2/4/8x + 1口 runner（實彈）",
+      "sell_points": {
+        "take_profit": [
+          6.84,
+          13.68,
+          27.36
+        ],
+        "stop": null,
+        "exit_by": "2026-09-25",
+        "note": "4 口：三口掛 2/4/8x 限價，最後一口 DTE 21 出"
+      }
+    }
+  ]
 }
