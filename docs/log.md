@@ -420,6 +420,17 @@ decisions 也照它答；GitHub 遲到兩小時的排程 run 在 9/17 00:37Z 重
 candidates_2026-09-16.json 從第一次 run 的 commit 還原（1 筆）；signals 快照與 decisions 本來就沒壞（signal_id 去重、append-only）。
 教訓：v3.13 只把「標記」改成市場基準日，所有「往回算歷史」的地方也要跟著走；grep `datetime.now()` 時別只看標日期的那幾行。
 
+同一批清掉的第二個 wall-clock 殘留：**DTE**。原本 `(到期日午夜 − datetime.now()).days`，DTE 隨執行時刻少 1–2 天，
+重播還不一致（9/16 到期 10/16：22:17Z 得 29、9/17 00:37Z 重播得 28，正確 30）。
+改 `days_to_expiry(expiry, market_today())`，`python main.py --selftest` 固定。
+⚠️ **修正後 DTE 比舊值大 1–2 天**：規則 B 的 21–120 帶、`OTM_TAIL_DTE`、`SURGE_IV_DTE` 在日曆上等同各鬆一天。
+門檻數字一個都沒動（紅線 3），是「量錯了」被修正；shadow log 跨 2026-09-17 比較時要記得這是定義變更，不是行為漂移。
+9/16 之前的 csv／快照保留當時的 DTE（是當時掃到的事實，不回填）。
+
+**刻意留著的 wall-clock**（不是漏掉）：`get_target_dates()` 與 `enrichment.fetch_iv_term_structure()` 用當下時間決定
+「要去 yfinance 抓哪幾個到期日」——那是即時抓取的取樣範圍，不是落地的判斷；同一週內重播取到的日期集合相同。
+落地到 csv／候選／快照的每一個日期量（市場基準日、Δ7d 歷史檔、DTE）現在都只跟市場基準日走。
+
 ### 逃生門
 docs/PROJECT_ESCAPE_DOOR.md：Cloudflare 遷移評估（R2/觀看層/Python 三問直答）。
 結論：**現在不搬**——五項 GitHub 依賴只壞排程一項；Phase 1 備援=CF Worker 當

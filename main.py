@@ -82,7 +82,7 @@ import io
 import time
 import random
 import json
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone, date as _dt_date
 
 from enrichment import add_oi_delta, format_oi_delta, generate_deep_cards
 
@@ -1227,6 +1227,18 @@ def market_today():
     return _MARKET['date'] or _today_et()
 
 
+def days_to_expiry(expiry_str, base_date):
+    """到期天數＝到期日 − 市場基準日（日曆天）。
+
+    2026-09-17 修：原本是 `(expiry - datetime.now()).days`，拿「到期日午夜」減「跑的當下」，
+    結果 DTE 隨執行時刻少 1–2 天，同一市場日重播還會不一致
+    （9/16 到期 10/16：22:17Z 跑得 29、9/17 00:37Z 重播得 28，正確是 30）。
+    ⚠️ 修正後 DTE 比舊值大 1–2 天，等同規則 B 的 21–120 帶、OTM_TAIL_DTE、SURGE_IV_DTE
+    在日曆上各鬆一天——門檻數字沒動，是「量錯了」被修正；shadow log 跨 9/17 比較時要記得這條。
+    """
+    return (datetime.strptime(str(expiry_str)[:10], "%Y-%m-%d").date() - base_date).days
+
+
 def resolve_market_date():
     """v3.13：決定「市場基準日」與是否該跑。回傳 (market_date, should_run, mode)。
 
@@ -1405,7 +1417,7 @@ def main():
                     if (row['IV'] <= RULE_CONFIG['IV_SOFT_MIN']
                             and spot_price > 0 and row['Strike'] > spot_price):
                         continue
-                    dte = (datetime.strptime(d_str, "%Y-%m-%d") - datetime.now()).days
+                    dte = days_to_expiry(d_str, market_today())  # 市場基準日，不是牆上時鐘
                     # schema v2（PLAN 第 4.1 P0-a）：'Ask' 欄其實是 lastPrice（歷史相容，不改名），
                     # 另存真正的 bid / ask / 最後成交時間，讓價差與可成交價可審計
                     def _num(x):
@@ -1452,5 +1464,24 @@ def main():
         print("\n💀 今日全軍覆沒，沒戲。")
 
 
+def _selftest():
+    """零網路自測：DTE 只跟市場基準日走（2026-09-16 跨日重播事故的第二個 wall-clock 殘留）。"""
+    date = _dt_date
+    assert days_to_expiry("2026-10-16", date(2026, 9, 16)) == 30
+    # 同一市場日，不論 22:17Z 或跨日 00:37Z 重播，結果一樣
+    assert days_to_expiry("2026-10-16", date(2026, 9, 16)) == days_to_expiry("2026-10-16", date(2026, 9, 16))
+    # 市場日前進一天 → DTE 少一天（唯一該變的原因）
+    assert days_to_expiry("2026-10-16", date(2026, 9, 17)) == 29
+    assert days_to_expiry("2026-09-16", date(2026, 9, 16)) == 0          # 到期日當天
+    assert days_to_expiry("2026-09-16T00:00:00", date(2026, 9, 18)) == -2  # 已過期；容忍帶時間的字串
+    # market_today() 在 resolve 前 fallback 今日 ET，不會炸
+    assert isinstance(market_today(), _dt_date)
+    print("main --selftest OK（DTE＝到期日 − 市場基準日；重播一致）")
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    if "--selftest" in sys.argv:
+        _selftest()
+    else:
+        main()
