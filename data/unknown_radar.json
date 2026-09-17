@@ -1,29 +1,53 @@
 {
-  "updated_at": "2026-09-16T23:50:41.911132",
-  "count": 2,
+  "updated_at": "2026-09-17T23:41:04.416810",
+  "count": 4,
   "blind_spots": [
     {
       "name": "Generac",
       "ticker": "GNRC",
-      "mentions_today": 4,
-      "total_mentions": 4,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "mentions_today": 3,
+      "total_mentions": 7,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
         "Amazon obtains right to buy stock in Generac, boosting power company's share price by over 40%",
         "Amazon obtains right to buy stock in Generac, boosting power company's share price by over 40%"
       ]
     },
     {
-      "name": "Credit",
-      "ticker": "CACC",
+      "name": "Nucor",
+      "ticker": "NUE",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Why is Nucor stock sliding today?",
+        "Nucor stock falls on weaker than expected third quarter guidance"
+      ]
+    },
+    {
+      "name": "Steel Dynamics",
+      "ticker": "STLD",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Why is Steel Dynamics stock sliding today?",
+        "Steel Dynamics stock falls on weaker third quarter guidance"
+      ]
+    },
+    {
+      "name": "Securitize",
+      "ticker": "SECZ",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Hyperscaler debt signals warning sign, Apollo cautions",
-        "Credit card application denied? Here’s what to do next"
+        "Securitize jumps after regulators greenlight some tokenized U.S. stock trading",
+        "Securitize jumps after regulators greenlight some tokenized U.S. stock trading"
       ]
     }
   ]
