@@ -1,8 +1,56 @@
 {
- "generated_at": "2026-09-16T23:15:23Z",
- "n_days": 7,
+ "generated_at": "2026-09-17T00:44:22Z",
+ "n_days": 8,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-16",
+   "decided_at": "2026-09-16T23:32:25.098Z",
+   "model": "anthropic/claude-opus-5",
+   "prompt_version": "v4.1",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-09-16_GOOGL_2026-10-16_370.0",
+     "ticker": "GOOGL",
+     "expiry": "2026-10-16",
+     "strike": 370,
+     "entry_price": 3.42,
+     "strategy": "C_LADDER4",
+     "sell_points": {
+      "take_profit": [
+       6.84,
+       13.68,
+       27.36
+      ],
+      "stop": null,
+      "exit_by": "2026-09-25",
+      "note": "4 口：三口掛 2/4/8x 限價，最後一口 DTE 21 出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-10-02",
+      "what": "廣告技術反壟斷案法院令雙方於裁定（2026-09-02）後 30 日內提交共同最終判決，落在到期日前",
+      "source": "https://ccianet.org/news/2026/09/ccias-response-to-court-ruling-on-google-ad-tech-remedies-in-doj-antitrust-case"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true
+     },
+     "note": "財報 10-27/28 在到期後；最大單日 +3.7%（09-15）",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-09-15",
    "decided_at": "2026-09-16T00:35:44.855Z",
