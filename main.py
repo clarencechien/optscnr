@@ -604,8 +604,9 @@ def apply_rules(row, prev_data=None):
 # ==========================================
 def generate_report(df):
     print("\n🔬 開始計算 enrichment...")
-    df, hist_date = add_oi_delta(df)
-    print(f"  ✅ OI Δ7d 已計算 (vs {hist_date})")
+    # 歷史檔基準＝市場基準日（不是牆上時鐘）：遲到跨日的重播才會拿同一個檔（2026-09-16 GOOGL 候選被覆寫事故）
+    df, hist_date = add_oi_delta(df, base_date=market_today())
+    print(f"  ✅ OI Δ7d 已計算 (vs {hist_date}，基準日 {market_today()})")
 
     # ============================================================
     # === v3.8 過濾二：當沖刷量（Vol 大但 Δ7d≈0）===
@@ -829,7 +830,7 @@ def generate_report(df):
     # === Top 5 深度卡片 ===
     print("\n🔬 開始生成深度卡片...")
     try:
-        deep_section = generate_deep_cards(df, top_n=5)
+        deep_section = generate_deep_cards(df, top_n=5, base_date=market_today())
         md += deep_section
     except Exception as e:
         print(f"  ⚠️ 深度卡片生成失敗：{e}")

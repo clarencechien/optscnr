@@ -26,12 +26,23 @@ DATA_DIR = "data"
 # ==========================================
 # Part 1: OI Δ7d 欄位（讀本地 CSV）
 # ==========================================
-def load_historical_csv(days_back):
+def load_historical_csv(days_back, base_date=None):
     """
     載入 N 天前的 CSV（如果該日剛好無數據，往前推一天再試）
     回傳 DataFrame 或 None
+
+    base_date：往回算的基準（date 或 'YYYY-MM-DD'）。**必須傳市場基準日**，不要用牆上時鐘：
+    2026-09-16 事故——Worker 23:05Z 補發的 run 以 9/16 往回拿 9/9 的檔（GOOGL 370C Δ7d +1284 confirmed，
+    規則 B 過關）；GitHub 遲到兩小時的排程 run 在 9/17 00:37Z 跑，以 9/17 往回拿 9/10 的檔（該合約當天沒入榜）
+    → no_history → 候選被覆寫成 0 筆，dashboard 變成「無候選」配「LLM 答了一個候選」。
+    同一市場日的重播必須拿同一個歷史檔，重播才真的無害。None → 今日（僅供本機手跑）。
     """
-    today = datetime.now()
+    if base_date is None:
+        today = datetime.now()
+    elif isinstance(base_date, str):
+        today = datetime.strptime(base_date[:10], '%Y-%m-%d')
+    else:
+        today = datetime(base_date.year, base_date.month, base_date.day)
     for offset in range(days_back, days_back + 3):  # 容忍 +0/+1/+2 天的偏移（週末沒交易）
         target_date = (today - timedelta(days=offset)).strftime('%Y-%m-%d')
         path = os.path.join(DATA_DIR, f"{target_date}.csv")
@@ -44,14 +55,15 @@ def load_historical_csv(days_back):
     return None, None
 
 
-def add_oi_delta(df):
+def add_oi_delta(df, base_date=None):
     """
     為 df 加上 'OI_d7' 欄位：當前 OI - 7 天前同合約的 OI
     
     比對 key：(Stock, Expiry, Strike)
-    若找不到歷史紀錄，OI_d7 顯示為 OI 本身（代表「新增倉位」）
+    找不到歷史紀錄 → None + status='no_history'（見下）
+    base_date：市場基準日（main.py 傳 market_today()）；見 load_historical_csv 的說明。
     """
-    hist_df, hist_date = load_historical_csv(days_back=7)
+    hist_df, hist_date = load_historical_csv(days_back=7, base_date=base_date)
 
     if hist_df is None:
         print("⚠️ 找不到 7 天前的 CSV，OI Δ7d 標示為「N/A」")
@@ -220,7 +232,7 @@ def fetch_iv_term_structure(symbol):
         return None, None
 
 
-def calc_oi_accumulation(symbol, today_df):
+def calc_oi_accumulation(symbol, today_df, base_date=None):
     """
     計算該標的 Top 合約的 OI 累積變化（過去 7/14/30 天）
     
@@ -248,7 +260,7 @@ def calc_oi_accumulation(symbol, today_df):
         contract_keys.add(key)
     
     for label, days in [('d7', 7), ('d14', 14), ('d30', 30)]:
-        hist_df, _ = load_historical_csv(days_back=days)
+        hist_df, _ = load_historical_csv(days_back=days, base_date=base_date)
         if hist_df is None:
             result[label] = None
             continue
@@ -319,7 +331,7 @@ def detect_iv_skew_signal(term_structure):
     return ""
 
 
-def generate_deep_card(symbol, df, hist_date=None):
+def generate_deep_card(symbol, df, hist_date=None, base_date=None):
     """為單一標的生成深度分析卡片"""
     md = f"### 🎯 {symbol}\n\n"
     
@@ -330,7 +342,7 @@ def generate_deep_card(symbol, df, hist_date=None):
     total_oi = symbol_contracts['OpenInterest'].sum()
     
     # === OI 累積變化（用合約級比對）===
-    oi_changes = calc_oi_accumulation(symbol, df)
+    oi_changes = calc_oi_accumulation(symbol, df, base_date=base_date)
     
     md += "**📊 OI 累積建倉**\n\n"
     if any(v is not None for v in oi_changes.values()):
@@ -375,7 +387,7 @@ def generate_deep_card(symbol, df, hist_date=None):
     return md
 
 
-def generate_deep_cards(df, top_n=5):
+def generate_deep_cards(df, top_n=5, base_date=None):
     """為 Top N 標的生成深度分析區塊"""
     top_tickers = get_top_tickers(df, top_n=top_n)
     if not top_tickers:
@@ -387,9 +399,58 @@ def generate_deep_cards(df, top_n=5):
     for symbol in top_tickers:
         print(f"  🔬 生成 {symbol} 深度卡片...", flush=True)
         try:
-            card = generate_deep_card(symbol, df)
+            card = generate_deep_card(symbol, df, base_date=base_date)
             md += card
         except Exception as e:
             md += f"### {symbol}\n*（生成失敗：{e}）*\n\n"
     
     return md
+
+
+# ==========================================
+# --selftest：零網路，驗「歷史檔基準跟市場基準日走、不跟牆上時鐘走」
+# ==========================================
+def _selftest():
+    import tempfile
+    global DATA_DIR
+    saved = DATA_DIR
+    tmp = tempfile.mkdtemp(prefix="enrich_selftest_")
+    DATA_DIR = tmp
+    try:
+        # 9/9 的檔有 GOOGL 370C（OI 10599）；9/10 的檔沒有它（當天沒入榜）
+        pd.DataFrame([{"Stock": "GOOGL", "Expiry": "2026-10-16", "Strike": 370.0, "OpenInterest": 10599}]) \
+            .to_csv(os.path.join(tmp, "2026-09-09.csv"), index=False)
+        pd.DataFrame([{"Stock": "GOOGL", "Expiry": "2026-10-16", "Strike": 375.0, "OpenInterest": 65895}]) \
+            .to_csv(os.path.join(tmp, "2026-09-10.csv"), index=False)
+        today = pd.DataFrame([{"Stock": "GOOGL", "Expiry": "2026-10-16", "Strike": 370.0, "OpenInterest": 11883}])
+
+        # 市場基準日 9/16 → 拿 9/9 → confirmed +1284
+        out, hist = add_oi_delta(today.copy(), base_date="2026-09-16")
+        assert hist == "2026-09-09", hist
+        assert int(out.loc[0, "OI_d7"]) == 1284 and out.loc[0, "OI_d7_status"] == "confirmed", out.to_dict("records")
+        # date 物件也可
+        from datetime import date
+        out2, hist2 = add_oi_delta(today.copy(), base_date=date(2026, 9, 16))
+        assert hist2 == "2026-09-09" and int(out2.loc[0, "OI_d7"]) == 1284
+        # 牆上時鐘跨日成 9/17 → 拿 9/10 → no_history（這就是 2026-09-16 事故；市場基準日固定後不會再發生）
+        out3, hist3 = add_oi_delta(today.copy(), base_date="2026-09-17")
+        assert hist3 == "2026-09-10" and pd.isna(out3.loc[0, "OI_d7"]) and out3.loc[0, "OI_d7_status"] == "no_history"
+        # 週末容忍：基準 9/18 往回 7 天是 9/11（缺檔）→ 往前推到 9/10
+        out4, hist4 = add_oi_delta(today.copy(), base_date="2026-09-18")
+        assert hist4 == "2026-09-10", hist4
+        # 完全沒歷史 → None
+        out5, hist5 = add_oi_delta(today.copy(), base_date="2026-09-05")
+        assert hist5 is None and out5.loc[0, "OI_d7_status"] == "no_history"
+        print("enrichment --selftest OK（歷史檔基準＝市場基準日；同市場日重播結果一致）")
+    finally:
+        DATA_DIR = saved
+        import shutil
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+if __name__ == "__main__":
+    import sys
+    if "--selftest" in sys.argv:
+        _selftest()
+    else:
+        print("用法：python enrichment.py --selftest")
