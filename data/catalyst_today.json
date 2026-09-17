@@ -1,43 +1,33 @@
 {
-  "updated_at": "2026-09-16T23:11:56.045383",
+  "updated_at": "2026-09-17T23:00:07.771208",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 18,
-    "items_with_catalyst": 17,
+    "total_items": 97,
+    "items_with_company": 21,
+    "items_with_catalyst": 15,
     "items_both": 3
   },
-  "count": 14,
+  "count": 18,
   "tickers": [
-    "INTC",
     "AMZN",
-    "META",
-    "GOOGL",
+    "BA",
+    "BE",
     "NVDA",
     "XYZ",
-    "BA",
+    "PLTR",
+    "F",
+    "NFLX",
     "SBUX",
-    "GS",
-    "COST",
-    "WDC",
-    "STX",
-    "AMD",
-    "CRM"
+    "DIS",
+    "MSFT",
+    "ASML",
+    "TSLA",
+    "SNDK",
+    "ANET",
+    "HPE",
+    "AAPL",
+    "LUNR"
   ],
   "details": [
-    {
-      "symbol": "INTC",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Intel’s stock rises as investors hope memory chips can mark the next step in its turnaround",
-          "catalysts": [
-            "rises",
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
     {
       "symbol": "AMZN",
       "score": 2.5,
@@ -48,59 +38,56 @@
           "has_catalyst": false
         },
         {
-          "title": "Generac’s stock soars more than 30% after Amazon deal cements company’s status as an AI power player",
+          "title": "Generac surges to top of S&P leaderboard as big Amazon deal seals status as data center player",
           "catalysts": [
-            "soars"
+            "surges"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "BA",
       "score": 2,
       "evidence": [
         {
-          "title": "Meta launches Meta One subscriptions as it seeks to better monetize AI spending",
+          "title": "Boeing wins $112.4M Saudi F-15 training upgrade contract",
           "catalysts": [
-            "launches"
+            "upgrade"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "GOOGL",
-      "score": 1.5,
+      "symbol": "BE",
+      "score": 2,
       "evidence": [
         {
-          "title": "Google is playing a different AI game than everyone else, and Wall Street may be missing the point",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Google should relax ad tech rules, appoint antitrust monitor, US judge finds",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Banks provide $22 billion chip loan to Blackstone, Alphabet AI cloud venture, source says",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "If You Missed the Nancy Pelosi Rally, Here’s the Case for Buying Bloom Energy Stock Now",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "NVDA",
-      "score": 1.0,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "The AI Stock I’m Buying on Repeat (And It Isn’t Nvidia)",
+          "title": "Jensen Huang says Nvidia will sell twice as many chips next year ",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Jensen Huang Says Nvidia Can Grow 70% Next Year. Here’s Why He May Be Right.",
+          "title": "The 5 Largest Companies by Market Cap in 2026: Why I Think Nvidia Will Stay No. 1 by 2028",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "OpenAI’s CFO Just Explained Why Nvidia Is No Longer the Only Option",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -108,21 +95,48 @@
     },
     {
       "symbol": "XYZ",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "House votes to hold Leon Black in contempt of Congress over Epstein subpoenas defiance",
+          "title": "SEC clears path for tokenized stocks, bringing the market closer to 24/7 trading",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Trump threats against reporters should prompt court to block FCC action, Disney says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "PLTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Boeing CEO: 737 Max production taking 'a little bit longer' to stabilize than expected",
+          "title": "AI needs to have 'reasonable guidelines,' Palantir's Karp tells CNBC",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "GM touts new V-8 engines in revived ‘truck wars’ with Ford, Ram amid lackluster EV sales",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Netflix content chief Bela Bajaria defines event strategy as streamer eyes more live sports",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -133,73 +147,106 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Fed delivers its first hike in 3 years. Plus, what's moving Starbucks and GE Vernova",
+          "title": "Starbucks settles Florida lawsuit claiming diversity policies were illegal",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Goldman Sachs sees slightly softer fixed income, currencies, commodities business, higher costs",
+          "title": "Trump threats against reporters should prompt court to block FCC action, Disney says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "How a Costco partner's bankruptcy could benefit its biggest rival",
+          "title": "OpenAI, Microsoft executives’ quotes on AI training threaten copyright defense, news outlets argue",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WDC",
+      "symbol": "ASML",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Western Digital (WDC): The Fund’s Top Relative Contributor",
+          "title": "Weakness Is an Opportunity for Long-Term ASML Stock Investors",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "STX",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Seagate Technology (STX): The Primary Beneficiary of the AI Driven HDD Demand",
+          "title": "Dear Tesla Stock Fans, Mark Your Calendars for October 1",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "SNDK",
       "score": 0.5,
       "evidence": [
         {
-          "title": "The Fund’s Largest Relative Detractor: Unowned Advanced Micro Devices (AMD)",
+          "title": "SandiskCorp. (SNDK): AI Boom Fuels Attractive Storage Market Opportunity",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
+      "symbol": "ANET",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Here’s How Much Traders See Salesforce Stock Moving After ‘Dreamforce’ Event",
+          "title": "Arista Stock Holds Up Well Amid Weakness. Here's How To Capitalize.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HPE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "How Is Hewlett Packard Enterprise's Stock Performance Compared to Technology Stocks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Apple Watch Rival Garmin Traverses Rocky Road Toward Buy Range",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LUNR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Advance Auto Parts vs. Intuitive Machines: Which Stock Is a Better Buy in 2026?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -208,6 +255,7 @@
   ],
   "watch_only": {
     "OpenAI (private)": 4,
-    "Anthropic (private)": 1
+    "Anthropic (private)": 2,
+    "xAI (private)": 1
   }
 }
