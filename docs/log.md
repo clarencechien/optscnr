@@ -142,7 +142,8 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 - 排程延遲的自我防護：主 scanner 用「市場基準日」補跑（v3.13）、
   spcx 用 market_freshness()（v8.8）——延遲跨日不再標錯天或誤殺。
 - **2026-09 觀察**：GitHub 的 22:17 排程實際上每天在 00:09–00:20 UTC 才發（穩定晚 2 小時）；
-  Worker 23:05 那發會先補發，之後遲到的排程 run 再跑一次是無害的重播（市場基準日＋signal_id 去重）。
+  Worker 23:05 那發會先補發，之後遲到的排程 run 再跑一次**應該**是無害的重播（市場基準日＋signal_id 去重）——
+  但 2026-09-16 證明有例外：OI Δ7d 的歷史檔以牆上時鐘往回算，跨日重播拿到不同的檔，候選被覆寫成 0（見 3.13 第三批補充）。
   delta_radar 每日 02:41 那發也常晚 4–5 小時，未納入第二鬧鐘（只更新敘事，不急）。
 - 週末雷達刻意錯開，避免同時搶 RSS / API。
 
@@ -408,6 +409,16 @@ Worker：`/brief?m=tw`、`/api/tw`（公開唯讀；Zero Trust Bypass 已加 `/t
 修：8 支沒有 `git pull --rebase` 的 workflow（scanner/catalyst/unknown/space/tlt/
 small_cap/fallen/universe）push 前一律 `pull --rebase --autostash` ＋ 3 次重試，
 三次皆失敗才大聲失敗（delta/tw 原本就有）。各 workflow 寫的檔案互不重疊，rebase 不衝突。
+
+### 補充修正（2026-09-17：Δ7d 歷史檔基準跟市場基準日走）
+事故：9/16 市場日，Worker 23:05Z 補發的 run 標出 GOOGL 370C 2026-10-16 為規則 B 候選（vs 9/9 的檔 Δ7d +1284 confirmed），
+decisions 也照它答；GitHub 遲到兩小時的排程 run 在 9/17 00:37Z 重播，`enrichment.load_historical_csv` 用 `datetime.now()`
+往回 7 天拿到 9/10 的檔（該合約當天沒入榜）→ no_history → 規則 B 不過 → latest.json／candidates_2026-09-16.json／README
+被覆寫成「今日無結構候選」，dashboard 變成「無候選」配「LLM 答了一個候選」。使用者以為是按「立即產生 decisions」弄掉的，不是。
+修：`load_historical_csv / add_oi_delta / calc_oi_accumulation / generate_deep_cards` 加 `base_date`，main.py 傳 `market_today()`；
+同一市場日不論幾點跑都拿同一個歷史檔。`python enrichment.py --selftest` 固定這條（9/16 → 9/9 confirmed；9/17 → 9/10 no_history 就是事故形狀）。
+candidates_2026-09-16.json 從第一次 run 的 commit 還原（1 筆）；signals 快照與 decisions 本來就沒壞（signal_id 去重、append-only）。
+教訓：v3.13 只把「標記」改成市場基準日，所有「往回算歷史」的地方也要跟著走；grep `datetime.now()` 時別只看標日期的那幾行。
 
 ### 逃生門
 docs/PROJECT_ESCAPE_DOOR.md：Cloudflare 遷移評估（R2/觀看層/Python 三問直答）。
