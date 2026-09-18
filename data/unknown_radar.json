@@ -1,53 +1,29 @@
 {
-  "updated_at": "2026-09-17T23:41:04.416810",
-  "count": 4,
+  "updated_at": "2026-09-18T23:34:35.146928",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Generac",
-      "ticker": "GNRC",
-      "mentions_today": 3,
-      "total_mentions": 7,
-      "consecutive_days": 2,
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 8,
+      "consecutive_days": 4,
       "is_strong": true,
       "evidence": [
-        "Amazon obtains right to buy stock in Generac, boosting power company's share price by over 40%",
-        "Amazon obtains right to buy stock in Generac, boosting power company's share price by over 40%"
+        "Webuy gets Nasdaq deficiency notice",
+        "InMed receives Nasdaq notice over equity requirement"
       ]
     },
     {
-      "name": "Nucor",
-      "ticker": "NUE",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Why is Nucor stock sliding today?",
-        "Nucor stock falls on weaker than expected third quarter guidance"
-      ]
-    },
-    {
-      "name": "Steel Dynamics",
-      "ticker": "STLD",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Why is Steel Dynamics stock sliding today?",
-        "Steel Dynamics stock falls on weaker third quarter guidance"
-      ]
-    },
-    {
-      "name": "Securitize",
-      "ticker": "SECZ",
+      "name": "Accenture",
+      "ticker": "ACN",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Securitize jumps after regulators greenlight some tokenized U.S. stock trading",
-        "Securitize jumps after regulators greenlight some tokenized U.S. stock trading"
+        "Anthropic selects Accenture as first embedded evaluator to help implement Amodei's slowdown proposal",
+        "Anthropic, Accenture to invest $2 billion in AI model evaluation as safety concerns rise"
       ]
     }
   ]

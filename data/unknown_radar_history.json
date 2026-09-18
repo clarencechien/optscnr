@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-10",
-    "consecutive_days": 3,
-    "total_mentions": 6,
+    "last_seen": "2026-09-18",
+    "consecutive_days": 4,
+    "total_mentions": 8,
     "ticker": "NDAQ"
   },
   "Canadian": {
@@ -19,13 +19,6 @@
     "consecutive_days": 2,
     "total_mentions": 4,
     "ticker": "EBBGF"
-  },
-  "Kentucky": {
-    "first_seen": "2026-09-10",
-    "last_seen": "2026-09-10",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "KFFB"
   },
   "Outlook": {
     "first_seen": "2026-09-13",
@@ -75,5 +68,12 @@
     "consecutive_days": 1,
     "total_mentions": 3,
     "ticker": "STLD"
+  },
+  "Accenture": {
+    "first_seen": "2026-09-18",
+    "last_seen": "2026-09-18",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ACN"
   }
 }
