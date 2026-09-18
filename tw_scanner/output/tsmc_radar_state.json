@@ -1310,5 +1310,121 @@
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
     }
+  },
+  {
+    "ts": "2026-09-18T08:11:36.786955+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "export_controls_tariffs:15e / n2_arizona_ramp:10e / cowos_capacity:8e / geopolitics:3e / hyperscaler_capex:4e",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 15,
+            "n2_arizona_ramp": 10,
+            "cowos_capacity": 8,
+            "geopolitics": 3,
+            "hyperscaler_capex": 4
+          },
+          "mentions": {
+            "export_controls_tariffs": 15,
+            "n2_arizona_ramp": 10,
+            "cowos_capacity": 8,
+            "geopolitics": 3,
+            "hyperscaler_capex": 4
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 15,
+              "mentions": 15,
+              "gate": "zscore",
+              "z": -0.49,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 10,
+              "mentions": 10,
+              "gate": "zscore",
+              "z": 1.58,
+              "denial": false
+            },
+            "cowos_capacity": {
+              "events": 8,
+              "mentions": 8,
+              "gate": "zscore",
+              "z": 0.79,
+              "denial": true
+            },
+            "geopolitics": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -2.86,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 4,
+              "mentions": 4,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - finance",
+          "[export_controls_tariffs] Huawei chairman thanks the US for export restrictions on chips, says it supercharged China’s semiconductor industry — Wa",
+          "[export_controls_tariffs] Key facts: TSMC to Invest Up to $265B in Arizona; Reviews Export Controls - TradingView",
+          "[n2_arizona_ramp] Samsung's 2nm Yield Tops 50%, Restarts Qualcomm Talks; Snapdragon Summit May Decide Foundry Assignment - finance.biggo.c",
+          "[n2_arizona_ramp] Samsung and Qualcomm reopen 2nm talks as yield gap with TSMC narrows - CHOSUNBIZ - Chosunbiz",
+          "[n2_arizona_ramp] Intel and Samsung advance 2nm GAA, but yield gaps leave TSMC as the sole external supplier - digitimes",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - beth-kindig.medium.com",
+          "[cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes",
+          "[geopolitics] China's president Xi Jinping calls Taiwan reunification \"unstoppable\" — military drills around the island escalate in ar",
+          "[geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India",
+          "[geopolitics] China Rings Taiwan With Live-Fire Drills, Tensions Spike - Modern Diplomacy",
+          "[hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[hyperscaler_capex] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[hyperscaler_capex] Can Sovereign AI Buffer Nvidia Against a Potential Hyperscaler Slowdown? - Trefis"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 YELLOW、價格 20 日 +2.1%）；PER 28.1，3 年分位 69 → 74",
+      "premise": "YELLOW",
+      "premise_ts": "2026-09-17T09:30:29.182846+00:00",
+      "ret_pct": 2.07,
+      "lookback_sessions": 20,
+      "as_of": "2026-09-18",
+      "valuation": {
+        "per": 28.11,
+        "per_pct": 73.7,
+        "per_then": 27.53,
+        "per_pct_then": 69.0,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-09-18",
+      "benchmark": "0050",
+      "entry_close": 2460.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
   }
 ]
