@@ -1,72 +1,68 @@
 {
-  "updated_at": "2026-09-17T23:00:07.771208",
+  "updated_at": "2026-09-18T22:46:38.977216",
   "stats": {
-    "total_items": 97,
+    "total_items": 105,
     "items_with_company": 21,
-    "items_with_catalyst": 15,
+    "items_with_catalyst": 12,
     "items_both": 3
   },
-  "count": 18,
+  "count": 19,
   "tickers": [
-    "AMZN",
-    "BA",
-    "BE",
+    "GOOGL",
+    "META",
+    "MU",
     "NVDA",
-    "XYZ",
-    "PLTR",
-    "F",
-    "NFLX",
-    "SBUX",
-    "DIS",
+    "NKE",
     "MSFT",
-    "ASML",
-    "TSLA",
-    "SNDK",
-    "ANET",
-    "HPE",
-    "AAPL",
-    "LUNR"
+    "JPM",
+    "CRM",
+    "BRK-B",
+    "DIS",
+    "PLTR",
+    "AMZN",
+    "ORCL",
+    "MS",
+    "BA",
+    "CLSK",
+    "CRWV",
+    "AVGO",
+    "SBUX"
   ],
   "details": [
     {
-      "symbol": "AMZN",
-      "score": 2.5,
+      "symbol": "GOOGL",
+      "score": 2,
       "evidence": [
         {
-          "title": "Amazon obtains right to buy stock in Generac, boosting power company's share price by over 40%",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Generac surges to top of S&P leaderboard as big Amazon deal seals status as data center player",
+          "title": "Gemini hacked three companies in first known breakout by Google’s AI, WSJ reports",
           "catalysts": [
-            "surges"
+            "breakout"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "META",
       "score": 2,
       "evidence": [
         {
-          "title": "Boeing wins $112.4M Saudi F-15 training upgrade contract",
+          "title": "Meta Stock Climbs On Muse AI Excitement. Here's The Next Potential Catalyst.",
           "catalysts": [
-            "upgrade"
+            "climbs"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "BE",
+      "symbol": "MU",
       "score": 2,
       "evidence": [
         {
-          "title": "If You Missed the Nancy Pelosi Rally, Here’s the Case for Buying Bloom Energy Stock Now",
+          "title": "Worker Tensions in Taiwan Are Rising at Micron. What This Means for MU Stock.",
           "catalysts": [
-            "rally"
+            "rising"
           ],
           "has_catalyst": true
         }
@@ -77,88 +73,38 @@
       "score": 1.5,
       "evidence": [
         {
-          "title": "Jensen Huang says Nvidia will sell twice as many chips next year ",
+          "title": "Elon Musk talks up AI safety while fighting regulation in wild week of strange alliances",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "The 5 Largest Companies by Market Cap in 2026: Why I Think Nvidia Will Stay No. 1 by 2028",
+          "title": "JPMorgan, Citigroup CEOs attending Trump's state dinner for China's Xi: Sources",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "OpenAI’s CFO Just Explained Why Nvidia Is No Longer the Only Option",
+          "title": "Nvidia’s Huang Expects to Sell Twice as Many Chips Next Year",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
-      "score": 1.0,
+      "symbol": "NKE",
+      "score": 1.5,
       "evidence": [
         {
-          "title": "SEC clears path for tokenized stocks, bringing the market closer to 24/7 trading",
+          "title": "Nike parts ways with Kylian Mbappé; soccer superstar signs with On",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Trump threats against reporters should prompt court to block FCC action, Disney says",
+          "title": "Mbappe leaves Nike, signs with On as Swiss sportswear maker forays into soccer",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "AI needs to have 'reasonable guidelines,' Palantir's Karp tells CNBC",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "GM touts new V-8 engines in revived ‘truck wars’ with Ford, Ram amid lackluster EV sales",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Netflix content chief Bela Bajaria defines event strategy as streamer eyes more live sports",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SBUX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Starbucks settles Florida lawsuit claiming diversity policies were illegal",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump threats against reporters should prompt court to block FCC action, Disney says",
+          "title": "Nike (NKE) Is Down 40% YTD: Will the Turnaround Strategy Work?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -169,84 +115,150 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "OpenAI, Microsoft executives’ quotes on AI training threaten copyright defense, news outlets argue",
+          "title": "OpenAI's latest AI revelation is a 'serious situation,' Microsoft's Suleyman tells CNBC",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ASML",
+      "symbol": "JPM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Weakness Is an Opportunity for Long-Term ASML Stock Investors",
+          "title": "JPMorgan, Citigroup CEOs attending Trump's state dinner for China's Xi: Sources",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "CRM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Dear Tesla Stock Fans, Mark Your Calendars for October 1",
+          "title": "AI safety debate meets reality at Dreamforce as business leaders say last year's models are enough",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SNDK",
+      "symbol": "BRK-B",
       "score": 0.5,
       "evidence": [
         {
-          "title": "SandiskCorp. (SNDK): AI Boom Fuels Attractive Storage Market Opportunity",
+          "title": "Warren Buffett steps down as chairman of Berkshire Hathaway: 'Father Time always wins'",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ANET",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Arista Stock Holds Up Well Amid Weakness. Here's How To Capitalize.",
+          "title": "Disney names CTO for the first time as media giant expands tech push",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HPE",
+      "symbol": "PLTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "How Is Hewlett Packard Enterprise's Stock Performance Compared to Technology Stocks",
+          "title": "Amazon, Palantir and 12 more top tech stock picks from UBS analysts",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple Watch Rival Garmin Traverses Rocky Road Toward Buy Range",
+          "title": "Amazon, Palantir and 12 more top tech stock picks from UBS analysts",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "LUNR",
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Advance Auto Parts vs. Intuitive Machines: Which Stock Is a Better Buy in 2026?",
+          "title": "Oracle’s $18 billion data center debt under pressure, FT reports",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Morgan Stanley private credit fund redemptions remain elevated in third quarter",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "NASA in talks for Boeing's Starliner for 10 or more new missions - WSJ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CLSK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "CleanSpark prices $2.276B senior secured notes due 2031",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why CoreWeave Stock Is Slumping on a Good Day for AI Plays",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Broadcom CEO Hock Tan Says He Isn’t Worried – ‘No, Not in the Least’ – About AVGO as AI Extinction Fears Rattle Stocks",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SBUX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Starbucks (SBUX) Wins Big in Court, but One Finding Still Sticks",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -254,8 +266,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 4,
-    "Anthropic (private)": 2,
-    "xAI (private)": 1
+    "OpenAI (private)": 6,
+    "Anthropic (private)": 4
   }
 }
