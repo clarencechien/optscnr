@@ -1,8 +1,18 @@
 {
- "generated_at": "2026-09-18T00:33:17Z",
- "n_days": 8,
+ "generated_at": "2026-09-19T00:33:41Z",
+ "n_days": 9,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-17",
+   "decided_at": "2026-09-18T00:35:16.784Z",
+   "model": "anthropic/claude-opus-5",
+   "prompt_version": "v4.1",
+   "llm_called": false,
+   "error": null,
+   "n_candidates": 0,
+   "candidates": []
+  },
   {
    "market_date": "2026-09-16",
    "decided_at": "2026-09-16T23:32:25.098Z",
@@ -143,7 +153,7 @@
       "peak": 0.67,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-17"
+      "filled_at": "2026-09-18"
      }
     }
    ]
@@ -195,7 +205,7 @@
       "peak": 0.71,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-17"
+      "filled_at": "2026-09-18"
      }
     },
     {
@@ -236,7 +246,7 @@
       "peak": 0.75,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-17"
+      "filled_at": "2026-09-18"
      }
     },
     {
@@ -277,7 +287,7 @@
       "peak": 0.67,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-17"
+      "filled_at": "2026-09-18"
      }
     }
    ]
