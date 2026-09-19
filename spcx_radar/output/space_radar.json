@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-09-18T00:28:17.844776",
+  "updated_at": "2026-09-19T00:25:50.942157",
   "version": "v8.7",
   "stage": 3,
-  "price": 150.8800048828125,
-  "market_cap_t": 1.986,
+  "price": 154.80999755859375,
+  "market_cap_t": 2.037,
   "total_shares_b": 13.16,
   "hard_cap_t": 2.2,
-  "atm_iv": 0.5077767321777344,
-  "iv_percentile": 7.7,
-  "pc_ratio": 0.7099236641221374,
+  "atm_iv": 0.49679051391601564,
+  "iv_percentile": 4.5,
+  "pc_ratio": 1.0476403990584016,
   "c_pool_frozen": false,
   "iv_stable": true,
   "gtc_levels_a": [
@@ -65,14 +65,14 @@
     }
   ],
   "dca_metrics": {
-    "ma50": 134.21,
+    "ma50": 134.26,
     "ma200": null,
-    "current_price": 150.88,
+    "current_price": 154.81,
     "avg_cost": 156.89,
     "total_shares": 570,
     "total_invested": 89425,
-    "current_value": 86001.6,
-    "unrealized_pnl_pct": -3.8,
+    "current_value": 88241.7,
+    "unrealized_pnl_pct": -1.3,
     "pool_a_target": 120000.0,
     "pool_a_filled_pct": 74.5
   },
@@ -82,49 +82,49 @@
       "desc": "Rocket Lab\uff08\u5c0f\u578b\u767c\u5c04\uff0c\u4e92\u88dc\u578b\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -6.0
+      "recent_trend_pct": -2.8
     },
     {
       "ticker": "ASTS",
       "desc": "AST SpaceMobile\uff08\u885b\u661f\u76f4\u9023\uff0c\u7af6\u722d\u578b\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -4.7
+      "recent_trend_pct": -2.9
     },
     {
       "ticker": "RDW",
       "desc": "Redwire\uff08\u592a\u7a7a\u88fd\u9020\uff0c\u90e8\u5206\u7af6\u722d\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -4.8
+      "recent_trend_pct": -1.5
     },
     {
       "ticker": "PL",
       "desc": "Planet Labs\uff08\u885b\u661f\u5f71\u50cf\uff0c\u5229\u57fa\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -19.9
+      "recent_trend_pct": -17.6
     },
     {
       "ticker": "LUNR",
       "desc": "Intuitive Machines\uff08\u767b\u6708\uff0c\u90e8\u5206\u7af6\u722d\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -13.4
+      "recent_trend_pct": -11.1
     },
     {
       "ticker": "SPIR",
       "desc": "Spire Global\uff08\u885b\u661f\u6578\u64da\uff0c\u5229\u57fa\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -11.3
+      "recent_trend_pct": -8.9
     },
     {
       "ticker": "BKSY",
       "desc": "BlackSky\uff08\u885b\u661f\u5f71\u50cf\uff0c\u5229\u57fa\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -12.0
+      "recent_trend_pct": -7.9
     }
   ]
 }
