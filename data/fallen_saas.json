@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T05:54:01.559265",
+  "updated_at": "2026-09-19T05:58:57.478322",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -9,7 +9,21 @@
     "MIN_VOL_RATIO": 1.2,
     "MIN_AVG_VOLUME": 500000
   },
-  "count": 0,
-  "tickers": [],
-  "details": []
+  "count": 1,
+  "tickers": [
+    "SEDG"
+  ],
+  "details": [
+    {
+      "symbol": "SEDG",
+      "price": 34.68,
+      "high_52w": 81.25,
+      "low_52w": 28.21,
+      "drawdown_pct": 57.3,
+      "rebound_pct": 22.9,
+      "vol_ratio": 1.24,
+      "market_cap_b": 2.1,
+      "score": 22.96
+    }
+  ]
 }
