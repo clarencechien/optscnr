@@ -1,59 +1,68 @@
 {
-  "updated_at": "2026-09-13T00:59:27.138094",
+  "updated_at": "2026-09-20T01:04:37.453975",
   "criteria": {
     "MIN_MARKET_CAP": 15000000000.0,
     "MAX_PCT_FROM_52W_LOW": 1.8,
     "MIN_AVG_VOLUME": 5000000.0,
     "MIN_VOL_RATIO_20D": 1.2
   },
-  "count": 5,
+  "count": 6,
   "tickers": [
     "PCG",
     "TJX",
-    "WMT",
+    "NKE",
     "KHC",
-    "RDDT"
+    "KVUE",
+    "WMB"
   ],
   "details": [
     {
       "symbol": "PCG",
-      "price": 13.8,
-      "pct_from_52w_low": 1.1,
-      "vol_ratio_20d": 2.02,
-      "market_cap_b": 30.4,
-      "score": 19.16
+      "price": 13.2,
+      "pct_from_52w_low": 1.05,
+      "vol_ratio_20d": 2.07,
+      "market_cap_b": 39.6,
+      "score": 19.85
     },
     {
       "symbol": "TJX",
-      "price": 126.02,
-      "pct_from_52w_low": 1.01,
-      "vol_ratio_20d": 1.42,
-      "market_cap_b": 138.6,
-      "score": 17.02
+      "price": 127.24,
+      "pct_from_52w_low": 1.04,
+      "vol_ratio_20d": 1.49,
+      "market_cap_b": 140.0,
+      "score": 17.08
     },
     {
-      "symbol": "WMT",
-      "price": 107.15,
-      "pct_from_52w_low": 1.08,
-      "vol_ratio_20d": 1.25,
-      "market_cap_b": 852.7,
-      "score": 15.39
+      "symbol": "NKE",
+      "price": 35.51,
+      "pct_from_52w_low": 1.0,
+      "vol_ratio_20d": 1.21,
+      "market_cap_b": 52.7,
+      "score": 16.04
     },
     {
       "symbol": "KHC",
-      "price": 24.6,
-      "pct_from_52w_low": 1.17,
-      "vol_ratio_20d": 1.38,
-      "market_cap_b": 29.2,
-      "score": 15.18
+      "price": 24.43,
+      "pct_from_52w_low": 1.16,
+      "vol_ratio_20d": 1.51,
+      "market_cap_b": 29.0,
+      "score": 15.93
     },
     {
-      "symbol": "RDDT",
-      "price": 157.77,
-      "pct_from_52w_low": 1.32,
-      "vol_ratio_20d": 1.35,
-      "market_cap_b": 30.4,
-      "score": 13.51
+      "symbol": "KVUE",
+      "price": 17.81,
+      "pct_from_52w_low": 1.27,
+      "vol_ratio_20d": 1.26,
+      "market_cap_b": 34.2,
+      "score": 13.59
+    },
+    {
+      "symbol": "WMB",
+      "price": 72.05,
+      "pct_from_52w_low": 1.28,
+      "vol_ratio_20d": 1.22,
+      "market_cap_b": 88.1,
+      "score": 13.28
     }
   ]
 }
