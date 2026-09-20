@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-09-18T23:34:35.146928",
+  "updated_at": "2026-09-20T23:31:13.954972",
   "count": 2,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 8,
-      "consecutive_days": 4,
-      "is_strong": true,
-      "evidence": [
-        "Webuy gets Nasdaq deficiency notice",
-        "InMed receives Nasdaq notice over equity requirement"
-      ]
-    },
-    {
-      "name": "Accenture",
-      "ticker": "ACN",
+      "name": "Sonoma",
+      "ticker": "SNOA",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Anthropic selects Accenture as first embedded evaluator to help implement Amodei's slowdown proposal",
-        "Anthropic, Accenture to invest $2 billion in AI model evaluation as safety concerns rise"
+        "Williams-Sonoma's stock has soared in a sluggish housing market. Here's how it won over Wall Street",
+        "Williams-Sonoma's stock has soared in a sluggish housing market. Here's how it won over Wall Street"
+      ]
+    },
+    {
+      "name": "Greenland",
+      "ticker": "GLNDW",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Trump says U.S. to build a 'large Military presence' in Greenland as part of a security deal with it",
+        "Greenland-linked stocks soar after Trump announces U.S. security agreement"
       ]
     }
   ]
