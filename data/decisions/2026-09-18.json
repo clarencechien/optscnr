@@ -1,0 +1,161 @@
+{
+  "market_date": "2026-09-18",
+  "decided_at": "2026-09-20T23:05:54.214Z",
+  "source": "cron 5 23 * * 1-5",
+  "prompt_version": "v4.1",
+  "model": "anthropic/claude-opus-5",
+  "model_served": "anthropic/claude-opus-5",
+  "llm_called": true,
+  "web_search": true,
+  "candidates_generated_at": "2026-09-19T00:25:30Z",
+  "n_candidates": 3,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-09-18_IBIT_2026-10-16_52.0",
+      "ticker": "IBIT",
+      "expiry": "2026-10-16",
+      "strike": 52,
+      "entry_price": 0.38,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-09-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_event": {
+        "answer": "無",
+        "date": null,
+        "what": "IBIT 為現貨比特幣 ETF 無財報；下次 FOMC 2026-10-27/28 落在 10-16 到期之後",
+        "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+      },
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true
+      },
+      "note": "最大單日 +6.28%（09-18，43.30→46.02），未達 8%",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-09-18_IBIT_2026-10-16_54.0",
+      "ticker": "IBIT",
+      "expiry": "2026-10-16",
+      "strike": 54,
+      "entry_price": 0.23,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-09-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_event": {
+        "answer": "無",
+        "date": null,
+        "what": "ETF 無公司事件；9/15-16 FOMC 已過，10/27-28 FOMC 在到期後",
+        "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+      },
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true
+      },
+      "note": "OI 39544 為三張最高，Δ7d +1414；無 >8% 跳空",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-09-18_IBIT_2026-10-16_50.0",
+      "ticker": "IBIT",
+      "expiry": "2026-10-16",
+      "strike": 50,
+      "entry_price": 0.67,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-09-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_event": {
+        "answer": "無",
+        "date": null,
+        "what": "ETF 無排定財報；到期前無 FOMC（下次 2026-10-28 決議）",
+        "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+      },
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true
+      },
+      "note": "近5日僅 09-18 上行 +6.28%，未達跳空門檻",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "IBIT",
+      "fact": "2026 年 FOMC 剩餘會議為 10-27/28 與 12-08/09，9-15/16 場次已過；IBIT 2026-10-16 到期前無 FOMC 決議",
+      "date": "2026-10-28",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "2026-09-18 IBIT 自前收 43.30 上行至 46.02（+6.28%），成交量 8389 萬股 vs 均量 4815 萬股；52 週區間 32.84–71.82、YTD −7.31%、淨資產 614.4 億美元",
+      "date": "2026-09-18",
+      "source": "https://finance.yahoo.com/quote/IBIT/"
+    }
+  ],
+  "facts_appended": 1,
+  "raw_answer": "{\"market_date\":\"2026-09-18\",\"candidates\":[{\"signal_id\":\"2026-09-18_IBIT_2026-10-16_52.0\",\"q_event\":{\"answer\":\"無\",\"date\":null,\"what\":\"IBIT 為現貨比特幣 ETF 無財報；下次 FOMC 2026-10-27/28 落在 10-16 到期之後\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},\"q_gap\":{\"answer\":\"無\",\"direction\":null,\"pct\":null,\"date\":null},\"q_delta\":{\"positive\":true,\"confirmed\":true},\"note\":\"最大單日 +6.28%（09-18，43.30→46.02），未達 8%\"},{\"signal_id\":\"2026-09-18_IBIT_2026-10-16_54.0\",\"q_event\":{\"answer\":\"無\",\"date\":null,\"what\":\"ETF 無公司事件；9/15-16 FOMC 已過，10/27-28 FOMC 在到期後\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},\"q_gap\":{\"answer\":\"無\",\"direction\":null,\"pct\":null,\"date\":null},\"q_delta\":{\"positive\":true,\"confirmed\":true},\"note\":\"OI 39544 為三張最高，Δ7d +1414；無 >8% 跳空\"},{\"signal_id\":\"2026-09-18_IBIT_2026-10-16_50.0\",\"q_event\":{\"answer\":\"無\",\"date\":null,\"what\":\"ETF 無排定財報；到期前無 FOMC（下次 2026-10-28 決議）\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},\"q_gap\":{\"answer\":\"無\",\"direction\":null,\"pct\":null,\"date\":null},\"q_delta\":{\"positive\":true,\"confirmed\":true},\"note\":\"近5日僅 09-18 上行 +6.28%，未達跳空門檻\"}],\"facts_proposed\":[{\"ticker\":\"IBIT\",\"fact\":\"2026 年 FOMC 剩餘會議為 10-27/28 與 12-08/09，9-15/16 場次已過；IBIT 2026-10-16 到期前無 FOMC 決議\",\"date\":\"2026-10-28\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},{\"ticker\":\"IBIT\",\"fact\":\"2026-09-18 IBIT 自前收 43.30 上行至 46.02（+6.28%），成交量 8389 萬股 vs 均量 4815 萬股；52 週區間 32.84–71.82、YTD −7.31%、淨資產 614.4 億美元\",\"date\":\"2026-09-18\",\"source\":\"https://finance.yahoo.com/quote/IBIT/\"}]}",
+  "usage": {
+    "prompt_tokens": 30920,
+    "completion_tokens": 2710,
+    "total_tokens": 33630,
+    "cost": 0.24235,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.24235,
+      "upstream_inference_prompt_cost": 0.1546,
+      "upstream_inference_completions_cost": 0.06775
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1664,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
