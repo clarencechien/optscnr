@@ -1,136 +1,129 @@
 {
-  "updated_at": "2026-09-20T22:38:46.836048",
+  "updated_at": "2026-09-21T23:29:55.417649",
   "stats": {
-    "total_items": 107,
-    "items_with_company": 19,
-    "items_with_catalyst": 13,
-    "items_both": 3
+    "total_items": 106,
+    "items_with_company": 22,
+    "items_with_catalyst": 24,
+    "items_both": 4
   },
-  "count": 20,
+  "count": 18,
   "tickers": [
-    "CRWD",
-    "MRNA",
-    "AMD",
-    "HOOD",
-    "SNDK",
-    "PANW",
-    "NVDA",
+    "META",
+    "INTC",
+    "MS",
+    "BE",
+    "AAPL",
+    "NKE",
     "AMZN",
-    "SBUX",
-    "CRM",
-    "BRK-B",
-    "MSFT",
-    "JPM",
+    "SHOP",
+    "AMD",
     "GOOGL",
-    "TSM",
-    "ASML",
-    "TGT",
-    "BA",
-    "IONQ",
-    "PFE"
+    "BAC",
+    "BRK-B",
+    "NEE",
+    "NBIS",
+    "TSLA",
+    "NVDA",
+    "TEAM",
+    "LEU"
   ],
   "details": [
     {
-      "symbol": "CRWD",
+      "symbol": "META",
+      "score": 5.5,
+      "evidence": [
+        {
+          "title": "Investors discover their new favorite consumer AI play in Meta. Options volume is surging",
+          "catalysts": [
+            "surged",
+            "options volume"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Meta's Muse AI agent downloads are surging. Here's how it compares to ChatGPT, Grok and Claude",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta’s stock is enjoying its best month in 13 years thanks to the company’s hot new AI assistant",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
       "score": 4,
       "evidence": [
         {
-          "title": "The AI Slowdown Trade Has Some Winners: CrowdStrike and Palo Alto Rally While Chips Fall",
+          "title": "Intel surges 12% as CPU stocks rally. Here's what's driving the move",
+          "catalysts": [
+            "surges",
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Morgan Stanley Sees Shell (SHEL) Hitting New Highs",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Morgan Stanley Sees More Fuel for Valero’s (VLO) Rally",
           "catalysts": [
             "rally"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Why CrowdStrike, Palo Alto Networks, SentinelOne, and Other Cybersecurity Stocks Surged This Week",
-          "catalysts": [
-            "surged"
-          ],
-          "has_catalyst": true
+          "title": "Morgan Stanley Sees Marathon Petroleum (MPC) Breaking into New Highs",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRNA",
+      "symbol": "BE",
       "score": 2,
       "evidence": [
         {
-          "title": "Dow Jones Futures Rise; Can The Market Take Flight? Robinhood, Sandisk, AMD, Moderna Surge Into Buy Areas",
+          "title": "Bloom Energy (BE) Unveils a New Power Play for the AI Boom",
           "catalysts": [
-            "surge"
+            "unveils"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMD",
-      "score": 2,
+      "symbol": "AAPL",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Dow Jones Futures Rise; Can The Market Take Flight? Robinhood, Sandisk, AMD, Moderna Surge Into Buy Areas",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "HOOD",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures Rise; Can The Market Take Flight? Robinhood, Sandisk, AMD, Moderna Surge Into Buy Areas",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Dow Jones Futures Rise; Can The Market Take Flight? Robinhood, Sandisk, AMD, Moderna Surge Into Buy Areas",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "PANW",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Why CrowdStrike, Palo Alto Networks, SentinelOne, and Other Cybersecurity Stocks Surged This Week",
-          "catalysts": [
-            "surged"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Nvidia CEO Jensen Huang emerges as Trump's top ally in AI safety debate",
+          "title": "Jim Cramer sends strong signal to Apple stock investors",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Elon Musk talks up AI safety while fighting regulation in wild week of strange alliances",
+          "title": "How to Play AAPL Stock Amid Reports Apple Is Building Its Own AI Server",
           "catalysts": [],
           "has_catalyst": false
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 0.5,
+      "evidence": [
         {
-          "title": "JPMorgan, Citigroup CEOs attending Trump's state dinner for China's Xi: Sources",
+          "title": "Soccer superstar Kylian Mbappé on ending 20-year journey with Nike: 'It was time to change'",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -138,80 +131,32 @@
     },
     {
       "symbol": "AMZN",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Amazon (AMZN)’s Debut Sterling Bond Sale Prices Bigger, But Demand Cools from Alphabet’s",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Amazon (AMZN) Taps the UK Bond Market for the First Time to Help Fund its AI Buildout",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Amazon (AMZN) Sued Again, This Time over How it Treats Pregnant Warehouse Workers",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SBUX",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Snoopy cups at Starbucks and McDonald’s SpongeBob toys are commanding huge markups on eBay",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Two Years In, Starbucks (SBUX)’s CEO Niccol has Won Back Customers. Now Wall Street Wants Margins",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AI safety debate meets reality at Dreamforce as business leaders say last year's models are enough",
+          "title": "Amazon and Shopify make starkly different moves in the brewing battle over AI shopping",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
+      "symbol": "SHOP",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Buffett takes next step in plan to keep Berkshire from straying",
+          "title": "Amazon and Shopify make starkly different moves in the brewing battle over AI shopping",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "OpenAI's latest AI revelation is a 'serious situation,' Microsoft's Suleyman tells CNBC",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "JPMorgan, Citigroup CEOs attending Trump's state dinner for China's Xi: Sources",
+          "title": "AMD hits a major milestone as AI stocks blaze higher",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -222,73 +167,95 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon (AMZN)’s Debut Sterling Bond Sale Prices Bigger, But Demand Cools from Alphabet’s",
+          "title": "Southern's Georgia Power signs deal with Google to add nuclear capacity",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSM",
+      "symbol": "BAC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "ASML (ASML) and Chip Giants like TSMC Plot a Bigger Canvas for Building AI Chips",
+          "title": "Bank of America says buy tumbling shares of aviation giant",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ASML",
+      "symbol": "BRK-B",
       "score": 0.5,
       "evidence": [
         {
-          "title": "ASML (ASML) and Chip Giants like TSMC Plot a Bigger Canvas for Building AI Chips",
+          "title": "‘Even Though It’s Bad for Berkshire’ Billionaire Charlie Munger Said to Skip Insurance Because ‘You’re Paying for the Other Fellow’s Frauds’",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "NEE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "KeyBanc Raises AppFolio (APPF) Price Target: What Investors Need to Know",
+          "title": "NextEra (NEE) and Dominion (D) Unveil a Bigger Pitch for Virginia",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "NBIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Boeing (BA) Completes 13-Satellite O3b mPOWER Constellation — Here’s What It Means for Defense Growth",
+          "title": "Nebius’s Price Hike Suggests Michael Burry Made a Mistake and Is Shorting the Best Neocloud Stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IONQ",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "3 Things You Need to Know Before Buying IonQ Stock",
+          "title": "Dear Tesla Stock Fans, Mark Your Calendars for September 30",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PFE",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Pfizer Says Its Biggest Headwinds Are Finally Easing. Does That Change the Story for This Ultra-High-Yield Dividend Stock?",
+          "title": "Musk Says NVIDIA (NVDA) AI Chips Are Headed to Space With SpaceX (SPCX) Next Year",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TEAM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Is Atlassian Stock Still a Buy After a 132% Three-Month Run? Here’s What Analysts Are Saying.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LEU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Centrus Energy (LEU) Lands New HALEU Deal with Antares",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -296,7 +263,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 5,
-    "Anthropic (private)": 3
+    "Anthropic (private)": 1,
+    "OpenAI (private)": 1
   }
 }
