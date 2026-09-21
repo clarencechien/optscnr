@@ -1,8 +1,118 @@
 {
- "generated_at": "2026-09-19T00:33:41Z",
- "n_days": 9,
+ "generated_at": "2026-09-21T00:36:30Z",
+ "n_days": 10,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-18",
+   "decided_at": "2026-09-20T23:05:54.214Z",
+   "model": "anthropic/claude-opus-5",
+   "prompt_version": "v4.1",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 3,
+   "candidates": [
+    {
+     "signal_id": "2026-09-18_IBIT_2026-10-16_52.0",
+     "ticker": "IBIT",
+     "expiry": "2026-10-16",
+     "strike": 52,
+     "entry_price": 0.38,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-09-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "無",
+      "date": null,
+      "what": "IBIT 為現貨比特幣 ETF 無財報；下次 FOMC 2026-10-27/28 落在 10-16 到期之後",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true
+     },
+     "note": "最大單日 +6.28%（09-18，43.30→46.02），未達 8%",
+     "status": "answered",
+     "outcome": null
+    },
+    {
+     "signal_id": "2026-09-18_IBIT_2026-10-16_54.0",
+     "ticker": "IBIT",
+     "expiry": "2026-10-16",
+     "strike": 54,
+     "entry_price": 0.23,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-09-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "無",
+      "date": null,
+      "what": "ETF 無公司事件；9/15-16 FOMC 已過，10/27-28 FOMC 在到期後",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true
+     },
+     "note": "OI 39544 為三張最高，Δ7d +1414；無 >8% 跳空",
+     "status": "answered",
+     "outcome": null
+    },
+    {
+     "signal_id": "2026-09-18_IBIT_2026-10-16_50.0",
+     "ticker": "IBIT",
+     "expiry": "2026-10-16",
+     "strike": 50,
+     "entry_price": 0.67,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-09-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "無",
+      "date": null,
+      "what": "ETF 無排定財報；到期前無 FOMC（下次 2026-10-28 決議）",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true
+     },
+     "note": "近5日僅 09-18 上行 +6.28%，未達跳空門檻",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-09-17",
    "decided_at": "2026-09-18T00:35:16.784Z",
