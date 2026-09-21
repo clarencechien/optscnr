@@ -48,7 +48,16 @@
         "confirmed": true
       },
       "note": "財報 10-27/28 在到期後；最大單日 +3.7%（09-15）",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 1.78,
+        "t10": null,
+        "t20": null,
+        "peak": 1.78,
+        "mature": false,
+        "verdict": "➖持平(峰1.8x/今1.8x)",
+        "filled_at": "2026-09-21"
+      }
     }
   ],
   "facts_proposed": [

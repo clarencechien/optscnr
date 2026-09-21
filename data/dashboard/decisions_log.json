@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-21T00:36:30Z",
+ "generated_at": "2026-09-21T23:19:11Z",
  "n_days": 10,
  "t8_by_event_answer": {},
  "days": [
@@ -167,7 +167,15 @@
      },
      "note": "財報 10-27/28 在到期後；最大單日 +3.7%（09-15）",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 1.78,
+      "t10": null,
+      "t20": null,
+      "peak": 1.78,
+      "mature": false,
+      "verdict": "➖持平(峰1.8x/今1.8x)",
+      "filled_at": "2026-09-21"
+     }
     }
    ]
   },
@@ -225,7 +233,15 @@
      },
      "note": "WSH／MarketChameleon 皆列 11-17 盤後；TipRanks／Investing 列 11-25，日期尚有分歧。近5日最大單日 −3.4%（09-14）。",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 1.81,
+      "t10": null,
+      "t20": null,
+      "peak": 1.81,
+      "mature": false,
+      "verdict": "➖持平(峰1.8x/今1.8x)",
+      "filled_at": "2026-09-21"
+     }
     }
    ]
   },
@@ -258,12 +274,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.67,
-      "t10": null,
+      "t10": 3.55,
       "t20": null,
-      "peak": 0.67,
+      "peak": 3.55,
       "mature": false,
-      "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-18"
+      "verdict": "✅噴了(峰3.5x)",
+      "filled_at": "2026-09-21"
      }
     }
    ]
@@ -310,12 +326,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.71,
-      "t10": null,
+      "t10": 3.68,
       "t20": null,
-      "peak": 0.71,
+      "peak": 3.68,
       "mature": false,
-      "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-18"
+      "verdict": "✅噴了(峰3.7x)",
+      "filled_at": "2026-09-21"
      }
     },
     {
@@ -351,12 +367,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.75,
-      "t10": null,
+      "t10": 3.47,
       "t20": null,
-      "peak": 0.75,
+      "peak": 3.47,
       "mature": false,
-      "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-18"
+      "verdict": "✅噴了(峰3.5x)",
+      "filled_at": "2026-09-21"
      }
     },
     {
@@ -392,12 +408,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.67,
-      "t10": null,
+      "t10": 3.67,
       "t20": null,
-      "peak": 0.67,
+      "peak": 3.67,
       "mature": false,
-      "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-09-18"
+      "verdict": "✅噴了(峰3.7x)",
+      "filled_at": "2026-09-21"
      }
     }
    ]

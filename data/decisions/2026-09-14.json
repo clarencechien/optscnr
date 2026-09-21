@@ -48,7 +48,16 @@
         "confirmed": true
       },
       "note": "WSH／MarketChameleon 皆列 11-17 盤後；TipRanks／Investing 列 11-25，日期尚有分歧。近5日最大單日 −3.4%（09-14）。",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 1.81,
+        "t10": null,
+        "t20": null,
+        "peak": 1.81,
+        "mature": false,
+        "verdict": "➖持平(峰1.8x/今1.8x)",
+        "filled_at": "2026-09-21"
+      }
     }
   ],
   "facts_proposed": [

@@ -34,12 +34,12 @@
       "status": "answered",
       "outcome": {
         "t5": 0.67,
-        "t10": null,
+        "t10": 3.55,
         "t20": null,
-        "peak": 0.67,
+        "peak": 3.55,
         "mature": false,
-        "verdict": "➖持平(峰0.7x/今0.7x)",
-        "filled_at": "2026-09-18"
+        "verdict": "✅噴了(峰3.5x)",
+        "filled_at": "2026-09-21"
       }
     }
   ],
