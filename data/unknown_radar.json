@@ -1,17 +1,101 @@
 {
-  "updated_at": "2026-09-22T00:16:56.532554",
-  "count": 1,
+  "updated_at": "2026-09-22T23:48:56.028209",
+  "count": 8,
   "blind_spots": [
+    {
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 3,
+      "total_mentions": 11,
+      "consecutive_days": 5,
+      "is_strong": true,
+      "evidence": [
+        "The Nasdaq’s rapid rise to a record is sending a message to investors: Don’t wait for a pullback to ",
+        "Live Oak Acquisition Corp. VI prices $200M IPO on Nasdaq"
+      ]
+    },
     {
       "name": "Greenland",
       "ticker": "GLNDW",
       "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
+      "total_mentions": 6,
+      "consecutive_days": 3,
       "is_strong": true,
       "evidence": [
-        "U.S.-listed Greenland stocks surge after Trump announces security deal with Denmark",
-        "U.S.-listed Greenland stocks surge after Trump announces security deal with Denmark"
+        "U.S. strikes Greenland deal at UN to expand military presence at Arctic outposts",
+        "U.S. strikes Greenland deal at UN to expand military presence at Arctic outposts"
+      ]
+    },
+    {
+      "name": "Cisco",
+      "ticker": "CSCO",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns",
+        "Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns"
+      ]
+    },
+    {
+      "name": "Piper Sandler",
+      "ticker": "PIPR",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns",
+        "Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns"
+      ]
+    },
+    {
+      "name": "Peloton",
+      "ticker": "PTON",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Peloton is revamping its treadmills with new features in the next phase of its turnaround",
+        "Peloton is revamping its treadmills with new features in the next phase of its turnaround"
+      ]
+    },
+    {
+      "name": "Aurora",
+      "ticker": "AUROW",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Autonomous trucking company Aurora looks to accelerate toward profitability",
+        "Autonomous trucking company Aurora looks to accelerate toward profitability"
+      ]
+    },
+    {
+      "name": "Lennar",
+      "ticker": "LEN-B",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Lennar shares pop as Berkshire builds almost a 10% stake in beleaguered homebuilder",
+        "Lennar shares pop as Berkshire builds almost a 10% stake in beleaguered homebuilder"
+      ]
+    },
+    {
+      "name": "Circle",
+      "ticker": "CRCL",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Circle lands $100 million from Binance to ramp up global USDC expansion",
+        "Circle lands $100 million from Binance to ramp up global USDC expansion"
       ]
     }
   ]

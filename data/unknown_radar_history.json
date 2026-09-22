@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-18",
-    "consecutive_days": 4,
-    "total_mentions": 8,
+    "last_seen": "2026-09-22",
+    "consecutive_days": 5,
+    "total_mentions": 11,
     "ticker": "NDAQ"
   },
   "Enbridge": {
@@ -65,8 +65,50 @@
   "Greenland": {
     "first_seen": "2026-09-20",
     "last_seen": "2026-09-22",
-    "consecutive_days": 2,
-    "total_mentions": 4,
+    "consecutive_days": 3,
+    "total_mentions": 6,
     "ticker": "GLNDW"
+  },
+  "Cisco": {
+    "first_seen": "2026-09-22",
+    "last_seen": "2026-09-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CSCO"
+  },
+  "Piper Sandler": {
+    "first_seen": "2026-09-22",
+    "last_seen": "2026-09-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "PIPR"
+  },
+  "Peloton": {
+    "first_seen": "2026-09-22",
+    "last_seen": "2026-09-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "PTON"
+  },
+  "Aurora": {
+    "first_seen": "2026-09-22",
+    "last_seen": "2026-09-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "AUROW"
+  },
+  "Lennar": {
+    "first_seen": "2026-09-22",
+    "last_seen": "2026-09-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LEN-B"
+  },
+  "Circle": {
+    "first_seen": "2026-09-22",
+    "last_seen": "2026-09-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CRCL"
   }
 }
