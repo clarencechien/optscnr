@@ -8982,8 +8982,8 @@
       "t5_excess_pct": 5.18,
       "t10_ret_pct": 5.56,
       "t10_excess_pct": 0.53,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 11.11,
+      "t20_excess_pct": 3.97
     }
   },
   {
@@ -10363,8 +10363,8 @@
       "entry_close": 1805.0,
       "t5_ret_pct": -7.48,
       "t5_excess_pct": -4.38,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 5.26,
+      "t10_excess_pct": 3.25,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -11403,8 +11403,8 @@
       "entry_date": "2026-09-15",
       "benchmark": "0050",
       "entry_close": 1670.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 13.77,
+      "t5_excess_pct": 8.5,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -12319,6 +12319,104 @@
       "entry_date": "2026-09-21",
       "benchmark": "0050",
       "entry_close": 1875.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-09-22T07:56:47.000992+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "capex_cut:5e(6m) / vr300_delay:17e(21m) / debt_financed_capex:15e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 5,
+            "vr300_delay": 17,
+            "debt_financed_capex": 15,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 6,
+            "vr300_delay": 21,
+            "debt_financed_capex": 15,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 5,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": 1.9,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 17,
+              "mentions": 21,
+              "gate": "zscore",
+              "z": -0.77,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 15,
+              "mentions": 15,
+              "gate": "zscore",
+              "z": 1.24,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review",
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[debt_financed_capex] The \"debt black hole\" behind the AI boom: $1.2 trillion external financing may be needed in the next five years - Bitget",
+          "[debt_financed_capex] Apollo Just Flashed Yellow on Hyperscaler Debt - Money Morning",
+          "[debt_financed_capex] AI Companies’ Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - Yahoo Finance"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": "premise_broken_price_up",
+      "text": "🔀 反向背離：前提轉紅、價格 20 日 +11.1% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 55.2，3 年分位 79 → 78",
+      "premise": "RED",
+      "premise_ts": "2026-09-21T09:17:55.467786+00:00",
+      "ret_pct": 11.11,
+      "lookback_sessions": 20,
+      "as_of": "2026-09-22",
+      "valuation": {
+        "per": 55.22,
+        "per_pct": 78.2,
+        "per_then": 55.7,
+        "per_pct_then": 79.4,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-09-22",
+      "benchmark": "0050",
+      "entry_close": 1900.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,

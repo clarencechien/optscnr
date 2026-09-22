@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-09-21T18:55:41+00:00",
- "today": "2026-09-21",
+ "generated_at": "2026-09-22T07:56:48+00:00",
+ "today": "2026-09-22",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-09-25）：本月預算已於 2026-09-21 動用（月末例行），本月不再行動。",
   "鋒面 ☀️ RISK_ON（本週未變）。",
-  "2308 前提 🔴 RED；🔀 反向背離：前提轉紅、價格 20 日 +8.1% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 55.2，3 年分位 79 → 78",
+  "2308 前提 🔴 RED；🔀 反向背離：前提轉紅、價格 20 日 +11.1% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 55.2，3 年分位 79 → 78",
   "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +4.4%）；PER 28.8，3 年分位 69 → 78",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.71%。"
  ],
  "weather": {
   "status": "OK",
   "as_of": "2026-09-21",
-  "age_days": 0,
+  "age_days": 1,
   "regime": "RISK_ON",
   "emoji": "☀️",
   "score": 0.629,
@@ -61,7 +61,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-09-21",
-  "age_days": 0,
+  "age_days": 1,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -206,18 +206,11 @@
  "delta": {
   "status": "OK",
   "label": "2308",
-  "as_of": "2026-09-21",
+  "as_of": "2026-09-22",
   "age_days": 0,
-  "last_overall": "RED",
+  "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
-   "m1",
-   "m2",
-   "m3",
-   "m4",
-   "m5",
-   "m6",
-   "m8",
-   "m9"
+   "m5"
   ],
   "full_overall": "RED",
   "full_ts": "2026-09-21",
@@ -248,9 +241,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "RED",
-    "headline": "capex_cut:5e(6m) / vr300_delay:18e(21m) / debt_financed_capex:15e / lc_psu_competition:0e",
-    "ts": "2026-09-21T09:17:55.467786+00:00"
+    "status": "YELLOW",
+    "headline": "capex_cut:5e(6m) / vr300_delay:17e(21m) / debt_financed_capex:15e / lc_psu_competition:0e",
+    "ts": "2026-09-22T07:56:47.000992+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -273,12 +266,12 @@
   ],
   "divergence": {
    "flag": "premise_broken_price_up",
-   "text": "🔀 反向背離：前提轉紅、價格 20 日 +8.1% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 55.2，3 年分位 79 → 78",
+   "text": "🔀 反向背離：前提轉紅、價格 20 日 +11.1% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 55.2，3 年分位 79 → 78",
    "premise": "RED",
-   "premise_ts": "2026-09-21T09:17:54.966443+00:00",
-   "ret_pct": 8.07,
+   "premise_ts": "2026-09-21T09:17:55.467786+00:00",
+   "ret_pct": 11.11,
    "lookback_sessions": 20,
-   "as_of": "2026-09-21",
+   "as_of": "2026-09-22",
    "valuation": {
     "per": 55.22,
     "per_pct": 78.2,
@@ -287,13 +280,13 @@
     "history_years": 3
    }
   },
-  "scored_n": 87
+  "scored_n": 88
  },
  "tsmc": {
   "status": "OK",
   "label": "2330",
   "as_of": "2026-09-21",
-  "age_days": 0,
+  "age_days": 1,
   "last_overall": "GREEN",
   "last_modules_requested": [
    "m1",
@@ -378,7 +371,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-09-21",
-  "age_days": 0,
+  "age_days": 1,
   "rows": [
    {
     "ticker": "3661",
@@ -621,7 +614,7 @@
   {
    "date": "2026-10-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 19
+   "days": 18
   }
  ],
  "checks": [
@@ -638,7 +631,7 @@
   {
    "level": "ok",
    "label": "delta_radar 正常",
-   "text": "delta_radar：最新 2026-09-21"
+   "text": "delta_radar：最新 2026-09-22"
   },
   {
    "level": "ok",
