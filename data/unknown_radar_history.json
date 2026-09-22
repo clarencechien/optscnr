@@ -6,33 +6,12 @@
     "total_mentions": 8,
     "ticker": "NDAQ"
   },
-  "Canadian": {
-    "first_seen": "2026-09-08",
-    "last_seen": "2026-09-13",
-    "consecutive_days": 3,
-    "total_mentions": 7,
-    "ticker": "CNDIF"
-  },
   "Enbridge": {
     "first_seen": "2026-09-09",
     "last_seen": "2026-09-15",
     "consecutive_days": 2,
     "total_mentions": 4,
     "ticker": "EBBGF"
-  },
-  "Outlook": {
-    "first_seen": "2026-09-13",
-    "last_seen": "2026-09-13",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "OTLK"
-  },
-  "Northrop Grumman": {
-    "first_seen": "2026-09-14",
-    "last_seen": "2026-09-14",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "NOC"
   },
   "Generac": {
     "first_seen": "2026-09-16",
@@ -85,9 +64,9 @@
   },
   "Greenland": {
     "first_seen": "2026-09-20",
-    "last_seen": "2026-09-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-09-22",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "GLNDW"
   }
 }
