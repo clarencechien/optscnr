@@ -1,104 +1,105 @@
 {
-  "updated_at": "2026-09-21T23:29:55.417649",
+  "updated_at": "2026-09-22T23:11:54.012863",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 22,
-    "items_with_catalyst": 24,
-    "items_both": 4
+    "total_items": 107,
+    "items_with_company": 20,
+    "items_with_catalyst": 17,
+    "items_both": 3
   },
-  "count": 18,
+  "count": 17,
   "tickers": [
-    "META",
-    "INTC",
-    "MS",
-    "BE",
-    "AAPL",
-    "NKE",
-    "AMZN",
-    "SHOP",
-    "AMD",
-    "GOOGL",
-    "BAC",
-    "BRK-B",
-    "NEE",
-    "NBIS",
-    "TSLA",
+    "TGT",
     "NVDA",
-    "TEAM",
-    "LEU"
+    "SNDK",
+    "VKTX",
+    "MSFT",
+    "AAPL",
+    "CRWV",
+    "AMZN",
+    "JPM",
+    "BRK-B",
+    "AVGO",
+    "META",
+    "GOOGL",
+    "BA",
+    "RTX",
+    "BAC",
+    "RIOT"
   ],
   "details": [
     {
-      "symbol": "META",
-      "score": 5.5,
-      "evidence": [
-        {
-          "title": "Investors discover their new favorite consumer AI play in Meta. Options volume is surging",
-          "catalysts": [
-            "surged",
-            "options volume"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Meta's Muse AI agent downloads are surging. Here's how it compares to ChatGPT, Grok and Claude",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta’s stock is enjoying its best month in 13 years thanks to the company’s hot new AI assistant",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Intel surges 12% as CPU stocks rally. Here's what's driving the move",
-          "catalysts": [
-            "surges",
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Morgan Stanley Sees Shell (SHEL) Hitting New Highs",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Morgan Stanley Sees More Fuel for Valero’s (VLO) Rally",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Morgan Stanley Sees Marathon Petroleum (MPC) Breaking into New Highs",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BE",
+      "symbol": "TGT",
       "score": 2,
       "evidence": [
         {
-          "title": "Bloom Energy (BE) Unveils a New Power Play for the AI Boom",
+          "title": "Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns",
           "catalysts": [
-            "unveils"
+            "sinks"
           ],
           "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 2.0,
+      "evidence": [
+        {
+          "title": "Nvidia options are doing something unusual ahead of two catalysts. Here's how one trader is playing it",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "A top chip stock analyst sees big things for Nvidia, Broadcom. How his case aligns with ours",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Why Apple could soon join Nvidia in the exclusive $5 trillion club",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Sandisk’s stock is rising: Why one analyst says AI could help it reach new heights",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "VKTX",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "This GLP-1 drug helped people maintain their weight loss in a clinical trial — even for those taking it once a month",
+          "catalysts": [
+            "soared"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Trump discloses more than 1,100 July trades, including up to $25 million each in sales of Microsoft, Amazon",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Exclusive-Microsoft to keep shareholder proposal rights through 2027, even as SEC reduces oversight",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
@@ -107,23 +108,28 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Jim Cramer sends strong signal to Apple stock investors",
+          "title": "Why Apple could soon join Nvidia in the exclusive $5 trillion club",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "How to Play AAPL Stock Amid Reports Apple Is Building Its Own AI Server",
+          "title": "Tim Cook warned of a ‘hundred-year flood’ striking tech giants — and now Apple is raising prices. What it means for you",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NKE",
-      "score": 0.5,
+      "symbol": "CRWV",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Soccer superstar Kylian Mbappé on ending 20-year journey with Nike: 'It was time to change'",
+          "title": "The Fed Just Raised Rates for the First Time Since 2023. CoreWeave’s CEO Sees an ‘Inflection Point,’ But Its $51 Billion Debt Problem Just G",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Can CoreWeave Stock Handle The Cost Of Its Own Growth?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -134,29 +140,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon and Shopify make starkly different moves in the brewing battle over AI shopping",
+          "title": "Trump discloses more than 1,100 July trades, including up to $25 million each in sales of Microsoft, Amazon",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SHOP",
+      "symbol": "JPM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon and Shopify make starkly different moves in the brewing battle over AI shopping",
+          "title": "Sullivan: Wall Street admits it doesn't know where oil is headed. There's one stock they do agree on",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "BRK-B",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AMD hits a major milestone as AI stocks blaze higher",
+          "title": "Lennar shares pop as Berkshire builds almost a 10% stake in beleaguered homebuilder",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "A top chip stock analyst sees big things for Nvidia, Broadcom. How his case aligns with ours",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Could Meta’s viral Muse app be the company’s ChatGPT moment?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -167,7 +195,29 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Southern's Georgia Power signs deal with Google to add nuclear capacity",
+          "title": "Ex-Google safety chief warns AI could harm children more than social media did",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Boeing wins $33.4 million Air Force avionics contract",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RTX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Raytheon wins $105.6 million contract for missile parts",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -185,77 +235,11 @@
       ]
     },
     {
-      "symbol": "BRK-B",
+      "symbol": "RIOT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "‘Even Though It’s Bad for Berkshire’ Billionaire Charlie Munger Said to Skip Insurance Because ‘You’re Paying for the Other Fellow’s Frauds’",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NEE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "NextEra (NEE) and Dominion (D) Unveil a Bigger Pitch for Virginia",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NBIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nebius’s Price Hike Suggests Michael Burry Made a Mistake and Is Shorting the Best Neocloud Stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Dear Tesla Stock Fans, Mark Your Calendars for September 30",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Musk Says NVIDIA (NVDA) AI Chips Are Headed to Space With SpaceX (SPCX) Next Year",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TEAM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is Atlassian Stock Still a Buy After a 132% Three-Month Run? Here’s What Analysts Are Saying.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "LEU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Centrus Energy (LEU) Lands New HALEU Deal with Antares",
+          "title": "Riot Platforms Is Building a Data Center Business Inside a Bitcoin Miner. Is RIOT Stock a Buy?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -263,7 +247,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1,
+    "Anthropic (private)": 2,
     "OpenAI (private)": 1
   }
 }
