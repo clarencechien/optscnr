@@ -161,7 +161,7 @@ async function health(env) {
     generated_at: now.toISOString(),
     window_hours: 84,
     expected_scanner_fire: expectedFireTime(now, env).toISOString(),
-    llm: { configured: Boolean(env.LLM_API_KEY), model: env.LLM_MODEL || null, web_search: env.LLM_WEB_SEARCH === "1" },
+    llm: { configured: Boolean(env.LLM_API_KEY), model: env.LLM_MODEL || null, web_search: env.LLM_WEB_SEARCH === "1", reasoning_effort: env.LLM_REASONING_EFFORT || null },
     access: { enforced: Boolean(env.ACCESS_TEAM_DOMAIN && env.ACCESS_AUD) },
     workflows: out,
   };
@@ -288,7 +288,7 @@ function extractJson(text) {
 async function callLLM(env, systemPrompt, userPayload) {
   const base = (env.LLM_BASE_URL || "https://openrouter.ai/api/v1").replace(/\/$/, "");
   const body = {
-    model: env.LLM_MODEL || "anthropic/claude-opus-5",
+    model: env.LLM_MODEL || "anthropic/claude-opus-5.5",
     messages: [
       { role: "system", content: systemPrompt },
       { role: "user", content: JSON.stringify(userPayload) },
@@ -298,6 +298,9 @@ async function callLLM(env, systemPrompt, userPayload) {
   };
   // OpenRouter web 外掛：第 (a) 題「排定事件＋來源 URL」要靠它；不要就把 LLM_WEB_SEARCH 設成 0
   if (env.LLM_WEB_SEARCH === "1") body.plugins = [{ id: "web", max_results: parseInt(env.LLM_WEB_MAX_RESULTS || "5", 10) }];
+  // Reasoning effort：OpenRouter 把 reasoning.effort 翻成 Claude 原生 effort（不是 token 預算）。
+  // Opus 5.5 省略時 Anthropic 預設 medium（Opus 5 是 high）→ 顯式帶，換模型不偷偷降級。空字串＝不帶、用供應商預設。
+  if (env.LLM_REASONING_EFFORT) body.reasoning = { effort: env.LLM_REASONING_EFFORT };
   const r = await fetch(`${base}/chat/completions`, {
     method: "POST",
     headers: {
@@ -345,8 +348,8 @@ async function runDecision(env, { source = "cron" } = {}) {
   });
   const record = {
     market_date: mkt, decided_at: startedAt, source, prompt_version: prompt.version,
-    model: env.LLM_MODEL || "anthropic/claude-opus-5", model_served: null,
-    llm_called: false, web_search: env.LLM_WEB_SEARCH === "1",
+    model: env.LLM_MODEL || "anthropic/claude-opus-5.5", model_served: null,
+    llm_called: false, web_search: env.LLM_WEB_SEARCH === "1", reasoning_effort: env.LLM_REASONING_EFFORT || null,
     candidates_generated_at: latest.generated_at, n_candidates: cands.length,
     facts_general_n: Object.values(facts.general).reduce((a, b) => a + b.length, 0), facts_error: facts.error,
     candidates: [], facts_proposed: [], facts_appended: 0, raw_answer: null, usage: null, error: null,
