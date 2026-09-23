@@ -77,8 +77,9 @@ jobs:
                      tw_scanner/output/tw_scanner_history.json \
                      tw_scanner/output/dca_ledger.md tw_scanner/output/dca_ledger.json \
                      tw_scanner/output/casino_report.md tw_scanner/output/casino_brief.json tw_scanner/output/casino_state.json"
-            # 價格／營收快取（首跑才有）與 cache CSV：存在才列
-            for f in tw_scanner/output/dca_prices.json tw_scanner/output/casino_prices.json tw_scanner/output/casino_revenue.json; do
+            # 價格／營收／借券快取（首跑才有）與 cache CSV：存在才列
+            for f in tw_scanner/output/dca_prices.json tw_scanner/output/casino_prices.json tw_scanner/output/casino_revenue.json \
+                     tw_scanner/output/casino_sbl.json; do
               if [ -f "$f" ]; then PRIMARY="$PRIMARY $f"; fi
             done
             if [ -d tw_scanner/cache ]; then git add tw_scanner/cache; fi

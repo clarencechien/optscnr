@@ -300,6 +300,22 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 - ⚠️ **換模型＝換量測儀器**：T8 的樣本被切成前後兩段，各自要累積到判準才准下結論。
   舊 decisions 全留著，`model_served` 分得開；驗收看 `data/decisions/<市場日>.json` 的 `model_served` 是否為 5.5。
 
+## 賭場名單加借券欄位（2026-09-23，只收資料）
+
+- 起因：使用者問 TWSE 借券 dashboard 對台股有沒有用。結論是天氣台／DCA 0050／論點監控都不需要
+  （台灣大型股借券多為避險／套利；外資空方部位已由期貨淨空單看；論點模組看的是基本面前提），
+  唯一說得過去的是賭場名單記個股欄位、只收資料。TWSE 網站擋雲端 IP，改用 FinMind 同一份資料。
+- `casino_tracker.py`：`fetch_sbl`／`update_sbl_cache`（`casino_sbl.json`，增量、單檔失敗只警告）、`sbl_features`（純函數）。
+  欄位：`sbl_lots`、`sbl_chg20_pct`、`sbl_pctile_1y`、`sbl_days_to_cover`、`sbl_fee_median_pct`／`sbl_fee_n`、`margin_short_lots`、`sbl_date`。
+  報告另起一張「借券（只收資料，不是訊號）」小表，主表不動。不進 `verdict_rule`、不做規則。
+- **資料陷阱（已實測、已處理）**：FinMind 價格與成交量是原始股數，分割日跳 ×ratio；借券賣出餘額卻不是——
+  緯穎 2026-09-02 三拆一當天「前日餘額」等於前一天、調整項 0、額度也沒跳，整段已是同一單位。
+  0050 2025-06-18 則是分割前借券全數了結（餘額 0）再重來。所以借券餘額逐次比對分割前後比值決定要不要換算
+  （`_series_jumps_at`），成交量一律換算。修正前緯穎 20 日變化算成 −51%，修正後 +46%、一年第 98 分位。
+- 上線當下的讀數（2026-09-22，只記不解讀）：緯穎借券費率中位 15.4%（202 筆）遠高於其他檔（多在 0.25–3%），
+  餘額在一年第 98 分位；創意 20 日 +108%、第 93 分位；緯創回補天數 3.5 天為名單最高。
+- FinMind 呼叫：賭場每次多 48 次（16 檔 × 餘額／成交量／借券明細），增量抓尾巴。selftest 新增 13 項。
+
 ## LLM decisions prompt v4.2：(b)(c) 改 Worker 自己算（2026-09-23）
 
 - (b) 近 5 日跳空、(c) Δ7d 是輸入欄位的算數與照抄，交給 LLM 只多一個算錯的機會 → `computeGap`／`computeDelta` 在 Worker 算，
