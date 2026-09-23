@@ -287,6 +287,19 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 - **REVIEW_2026-07 補記**：tw_scanner 7/30 警報已入 9/1 月度回測（n=8、20 日中位 +8.72% vs 基線 +2.17%）；
   delta 背離旗標仍未做（10 月中前要）。
 
+## LLM decisions 換模型：Opus 5 → Opus 5.5（2026-09-23）
+
+`cloudflare/wrangler.toml` 的 `LLM_MODEL` 從 `anthropic/claude-opus-5` 改成 `anthropic/claude-opus-5.5`
+（OpenRouter slug 已實查確認存在，1M context，$4/$20 per 1M tok，比 Opus 5 的 $5/$25 便宜兩成）。
+模型本來就是參數（`env.LLM_MODEL`，wrangler.toml 明文變數不是 secret），改了 push 到 main、CF Git 連動部署即生效。
+
+- 呼叫形狀沒動：OpenRouter OpenAI 相容 `chat/completions`、web 外掛、`max_tokens` 6000、prompt v4.1 全不變。
+- Opus 5.5 相對 Opus 5 的破壞性變更（不能關 thinking、不能強制 `tool_choice`）本 Worker 都沒用到，不受影響。
+- 差異一項：Opus 5.5 的 reasoning effort **預設 `medium`**（Opus 5 是 `high`），Worker 沒帶 effort → 等於降一級。
+  三題是事實查證，先照預設；來源品質變差再帶 OpenRouter 的 `reasoning` 參數。
+- ⚠️ **換模型＝換量測儀器**：T8 的樣本被切成前後兩段，各自要累積到判準才准下結論。
+  舊 decisions 全留著，`model_served` 分得開；驗收看 `data/decisions/<市場日>.json` 的 `model_served` 是否為 5.5。
+
 ## 台股側第 6 批：週報／DCA 影子帳本／賭場 sector／tsmc_radar／電子報改版（2026-09-11～12）
 
 > **給接手 session：動新功能前先 `git log --oneline -40`，再看本節與 CONTEXT §十。** 這批由 ai_radar 那邊的
