@@ -312,7 +312,10 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 - **順手修的既有 bug**：9/11 IBIT 那次 LLM 把同一張候選拆成兩個物件（事件答案在第一個、note 在第二個），
   舊合併 `new Map(...)` 讓後者蓋掉前者，事件答案整個遺失（raw_answer 裡有「有 2026-09-16 FOMC」）。
   改成依序合併、先出現的非空欄位優先；prompt 也明講「每張剛好一筆、不得拆成兩筆」。
-  9/11 的 decisions 檔**沒回頭改**（append-only）；要補請人決定，答案在該檔 `raw_answer`。
+  9/11 的 decisions 檔**已依使用者指示補回**（2026-09-23）：從同檔 `raw_answer` 以 v4.2 合併規則還原 `q_event`（有 2026-09-16 FOMC）、
+  `q_gap`（無）、`q_delta`（正・confirmed），答案內容一字未改、`outcome` 未動，候選上加 `repaired` 欄位記來源與原因。
+  全部 decisions 掃過，只有這一筆受影響。這筆 outcome 已是「✅噴了(峰3.5x)」，補回前 T8 會把它算進「未答」、補回後進「有」。
+  append-only 的例外只此一次，理由是「還原當時就有的答案」，不是改答案。
 - Worker README 成本表改成實測：每次呼叫 US$0.20–0.24（Opus 5），輸入大宗是 web 外掛搜尋結果；舊估計 $0.05–0.15 偏低。
 
 ## 台股側第 6 批：週報／DCA 影子帳本／賭場 sector／tsmc_radar／電子報改版（2026-09-11～12）

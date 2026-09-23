@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-23T00:47:13Z",
+ "generated_at": "2026-09-23T00:49:52Z",
  "n_days": 12,
  "t8_by_event_answer": {},
  "days": [
@@ -329,9 +329,22 @@
       "exit_by": "2026-09-25",
       "note": "不設停損、不賣半；DTE 21 全出"
      },
-     "q_event": null,
-     "q_gap": null,
-     "q_delta": null,
+     "q_event": {
+      "answer": "有",
+      "date": "2026-09-16",
+      "what": "FOMC 9/15-16 會議利率決議（含點陣圖），為聯準會事件非本基金自身事件；10/27-28 另一場在到期後",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true
+     },
      "note": "ETF無財報；FOMC 9/16 決議前基準利率 3.50-3.75%，7/29 以 9:3 維持不變",
      "status": "answered",
      "outcome": {
