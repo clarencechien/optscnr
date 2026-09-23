@@ -27,13 +27,18 @@ Python 與資料全部留在 GitHub Actions / git；這個資料夾只放 Worker
 
 | 模型（OpenRouter slug） | 價格 / 1M tok（in / out） | 每交易日約 | 適合 |
 |---|---|---|---|
-| `anthropic/claude-opus-5`（**預設**） | $5 / $25 | ≈ US$0.05–0.15 | 三題要附來源、要判「事實庫 vs 新查證」衝突；一天一次，貴不到哪去 |
+| `anthropic/claude-opus-5.5`（**預設**，2026-09-23 起） | $4 / $20 | ≈ US$0.04–0.12 | 同 Opus 5 的能力層、便宜兩成；1M context |
+| `anthropic/claude-opus-5` | $5 / $25 | ≈ US$0.05–0.15 | 2026-09-23 前的預設；要回頭比對答對率時用 |
 | `anthropic/claude-sonnet-5` | $2 / $10 | ≈ US$0.02–0.06 | 想省；三題答對率若與 Opus 無差（T8 累積 60 個交易日後可比） |
 | `anthropic/claude-fable-5.1` | $10 / $50 | ≈ US$0.10–0.30 | 沒必要——三題不是推理難題 |
 
 - 每次呼叫 ≈ prompt 2.5K + 候選與事實 1–4K tok 進、1–2K tok 出；web 外掛另計（OpenRouter 每千次結果 $4，每日 5 筆 ≈ $0.02）。
 - **候選 0 筆的日子不呼叫 LLM**（直接記「今日無結構候選」），所以多數日子花費是零。
 - 模型名記在 decisions JSON 的 `model_served`，之後 T8 可以分模型比答對率。
+- ⚠️ **換模型＝換量測儀器**：T8（「LLM 說有排定事件的候選命中率較高嗎」）的樣本會被切成換模型前後兩段，
+  每段各自要累積到判準才准下結論。換之前的 decisions 都留著，`model_served` 分得開。
+- ⚠️ Opus 5.5 的 reasoning effort 預設是 `medium`（Opus 5 是 `high`），本 Worker 沒帶 effort 參數 → 等於降一級。
+  三題是事實查證不是推理難題，先照預設跑；若發現來源品質變差，再考慮在 body 帶 OpenRouter 的 `reasoning` 參數。
 
 ### （建議）Cloudflare Access：只讓自己看
 
