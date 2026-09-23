@@ -25,14 +25,18 @@ Python 與資料全部留在 GitHub Actions / git；這個資料夾只放 Worker
 
 ### 模型怎麼選（`wrangler.toml` 的 `LLM_MODEL`，改了 push 即生效）
 
-| 模型（OpenRouter slug） | 價格 / 1M tok（in / out） | 每交易日約 | 適合 |
+| 模型（OpenRouter slug） | 價格 / 1M tok（in / out） | 每次呼叫約 | 適合 |
 |---|---|---|---|
-| `anthropic/claude-opus-5.5`（**預設**，2026-09-23 起） | $4 / $20 | ≈ US$0.04–0.12 | 同 Opus 5 的能力層、便宜兩成；1M context |
-| `anthropic/claude-opus-5` | $5 / $25 | ≈ US$0.05–0.15 | 2026-09-23 前的預設；要回頭比對答對率時用 |
-| `anthropic/claude-sonnet-5` | $2 / $10 | ≈ US$0.02–0.06 | 想省；三題答對率若與 Opus 無差（T8 累積 60 個交易日後可比） |
-| `anthropic/claude-fable-5.1` | $10 / $50 | ≈ US$0.10–0.30 | 沒必要——三題不是推理難題 |
+| `anthropic/claude-opus-5.5`（**預設**，2026-09-23 起） | $4 / $20 | ≈ US$0.17–0.20（估） | 同 Opus 5 的能力層、便宜兩成；1M context |
+| `anthropic/claude-opus-5` | $5 / $25 | US$0.20–0.24（實測） | 2026-09-23 前的預設；要回頭比對答對率時用 |
+| `anthropic/claude-sonnet-5` | $2 / $10 | ≈ US$0.09–0.11（估） | 想省；(a) 答對率若與 Opus 無差（T8 累積 60 個交易日後可比） |
+| `anthropic/claude-fable-5.1` | $10 / $50 | ≈ US$0.38–0.47（估） | 沒必要——只剩一題事實查證，不是推理難題 |
 
-- 每次呼叫 ≈ prompt 2.5K + 候選與事實 1–4K tok 進、1–2K tok 出；web 外掛另計（OpenRouter 每千次結果 $4，每日 5 筆 ≈ $0.02）。
+- **實測**（2026-09-10～18，Opus 5、effort high，5 次呼叫）：輸入 2.9–3.1 萬 tok、輸出 1.5–2.7K tok（其中推理 0.6–1.7K）、
+  每次 US$0.20–0.24。**輸入大宗是 web 外掛塞進來的搜尋結果**，prompt＋候選＋事實庫只佔一小部分；
+  web 外掛另收約 $0.02／次（OpenRouter 每千筆結果 $4 × 5 筆）。「估」欄＝同一組 token 量換各模型單價。
+- **成本主要槓桿是 `LLM_WEB_MAX_RESULTS`**（每筆結果約數千 tok 輸入），不是 effort：high 對 medium 每次只差約 1–2 美分。
+- 呼叫頻率：9/04～9/21 共 11 個交易日、有候選而呼叫 5 次（約四成五）→ 每月約 10 次，Opus 5.5 約 **US$2／月**。
 - **候選 0 筆的日子不呼叫 LLM**（直接記「今日無結構候選」），所以多數日子花費是零。
 - 模型名記在 decisions JSON 的 `model_served`，之後 T8 可以分模型比答對率。
 - ⚠️ **換模型＝換量測儀器**：T8（「LLM 說有排定事件的候選命中率較高嗎」）的樣本會被切成換模型前後兩段，

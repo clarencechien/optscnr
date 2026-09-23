@@ -300,6 +300,21 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 - ⚠️ **換模型＝換量測儀器**：T8 的樣本被切成前後兩段，各自要累積到判準才准下結論。
   舊 decisions 全留著，`model_served` 分得開；驗收看 `data/decisions/<市場日>.json` 的 `model_served` 是否為 5.5。
 
+## LLM decisions prompt v4.2：(b)(c) 改 Worker 自己算（2026-09-23）
+
+- (b) 近 5 日跳空、(c) Δ7d 是輸入欄位的算數與照抄，交給 LLM 只多一個算錯的機會 → `computeGap`／`computeDelta` 在 Worker 算，
+  LLM 只答 (a) 排定事件＋事實庫提案。輸出形狀與 v4.1 相同（多 `method: "worker"`、`observed_days`、`missing_days`、`max_move`），
+  README／dashboard／brief／tracer 都不用改；LLM 失敗或漏答時 (b)(c) 照樣有值。
+- (b) 的「單日」用 `data/universe_spots` 檔名當交易日曆判斷：`recent_spots` 會缺該標的不在 universe 的日子，
+  跨缺日的區間變動不算單日。跨缺日區間 >8% → 未確認（可能藏著單日跳空）；剛好 8% 不算（處理了 108/100−1 的浮點）。
+- 歷史回放：9/10～9/18 共 8 張可比的候選，(b)(c) Worker 答案與 LLM 全一致。
+  但 9/16 GOOGL 的 LLM note 寫「最大單日 +3.7%（09-15）」其實是 9/10→9/15 跨兩個缺日的區間變動，不是單日——Worker 會標 `missing_days: 2`。
+- **順手修的既有 bug**：9/11 IBIT 那次 LLM 把同一張候選拆成兩個物件（事件答案在第一個、note 在第二個），
+  舊合併 `new Map(...)` 讓後者蓋掉前者，事件答案整個遺失（raw_answer 裡有「有 2026-09-16 FOMC」）。
+  改成依序合併、先出現的非空欄位優先；prompt 也明講「每張剛好一筆、不得拆成兩筆」。
+  9/11 的 decisions 檔**沒回頭改**（append-only）；要補請人決定，答案在該檔 `raw_answer`。
+- Worker README 成本表改成實測：每次呼叫 US$0.20–0.24（Opus 5），輸入大宗是 web 外掛搜尋結果；舊估計 $0.05–0.15 偏低。
+
 ## 台股側第 6 批：週報／DCA 影子帳本／賭場 sector／tsmc_radar／電子報改版（2026-09-11～12）
 
 > **給接手 session：動新功能前先 `git log --oneline -40`，再看本節與 CONTEXT §十。** 這批由 ai_radar 那邊的
