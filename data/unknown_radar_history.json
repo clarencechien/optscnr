@@ -6,13 +6,6 @@
     "total_mentions": 11,
     "ticker": "NDAQ"
   },
-  "Enbridge": {
-    "first_seen": "2026-09-09",
-    "last_seen": "2026-09-15",
-    "consecutive_days": 2,
-    "total_mentions": 4,
-    "ticker": "EBBGF"
-  },
   "Generac": {
     "first_seen": "2026-09-16",
     "last_seen": "2026-09-17",
@@ -110,5 +103,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "CRCL"
+  },
+  "Gabelli": {
+    "first_seen": "2026-09-23",
+    "last_seen": "2026-09-23",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GDV-PK"
   }
 }
