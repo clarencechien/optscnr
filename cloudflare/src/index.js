@@ -266,9 +266,54 @@ async function appendProposals(env, proposals, mkt) {
 }
 
 /** 送給 LLM 的候選欄位（去掉 dashboard 用的顯示欄，保留三題需要的） */
+// ------------------------------------------------------------------ (b)(c) 確定性計算（prompt v4.2 起）
+// 兩題都是輸入欄位的算數／照抄，交給 LLM 只會多一個算錯的機會；Worker 自己算，輸出形狀與 v4.1 相同，
+// 下游（README、dashboard、brief、tracer）不用改。每筆多帶 method: "worker" 與覆蓋資訊供事後審計。
+const GAP_PCT = 8;
+const round1 = x => Math.round(x * 10) / 10;
+const overGap = p => Math.abs(p) - GAP_PCT > 1e-9;  // 「>8%」；避開 108/100−1＝8.000000000000007 這種浮點
+
+/** (b) 近 5 交易日有無單日 >8% 跳空。
+ *  recentSpots：候選的 recent_spots（舊→新，取自最近 6 個 data/universe_spots 日檔）；該標的某天不在 universe 就會缺那天。
+ *  tradingDays：data/universe_spots 的檔名（＝交易日曆，休市日沒檔），用來判斷相鄰兩筆是否真的只隔一個交易日。
+ *  規則：<2 筆 → 未確認；有單日 |變動|>8% → 有（取最大）；只有跨日區間 >8%（可能藏著單日跳空、看不到）→ 未確認；否則 → 無。 */
+function computeGap(recentSpots, tradingDays) {
+  const s = (recentSpots || []).filter(x => x && x.date && Number(x.spot) > 0)
+    .map(x => ({ date: String(x.date).slice(0, 10), spot: Number(x.spot) }));
+  const out = { answer: "未確認", direction: null, pct: null, date: null,
+    method: "worker", observed_days: s.length, missing_days: 0, max_move: null };
+  if (s.length < 2) return out;
+  const idx = tradingDays && tradingDays.length ? new Map(tradingDays.map((d, i) => [d, i])) : null;
+  let best = null, maxMove = null, spanBig = false;
+  for (let i = 1; i < s.length; i++) {
+    const pct = (s[i].spot / s[i - 1].spot - 1) * 100;
+    const a = idx ? idx.get(s[i - 1].date) : undefined, b = idx ? idx.get(s[i].date) : undefined;
+    const span = (a !== undefined && b !== undefined) ? b - a : 1;  // 日曆拿不到 → 當相鄰（v4.1 語意）
+    if (span === 1) {
+      if (!maxMove || Math.abs(pct) > Math.abs(maxMove.pct)) maxMove = { pct, date: s[i].date };
+      if (overGap(pct) && (!best || Math.abs(pct) > Math.abs(best.pct))) best = { pct, date: s[i].date };
+    } else {
+      out.missing_days += Math.max(0, span - 1);
+      if (overGap(pct)) spanBig = true;
+    }
+  }
+  if (maxMove) out.max_move = { pct: round1(maxMove.pct), date: maxMove.date };
+  if (best) return { ...out, answer: "有", direction: best.pct > 0 ? "up" : "down", pct: round1(best.pct), date: best.date };
+  if (spanBig) return out;
+  return { ...out, answer: "無" };
+}
+
+/** (c) oi_d7 是否為正、oi_delta_status 是否 confirmed——照輸入欄位，不推測。 */
+function computeDelta(c) {
+  const v = c.oi_d7;
+  return { positive: (v === null || v === undefined || v === "") ? null : Number(v) > 0,
+    confirmed: c.oi_delta_status === "confirmed", method: "worker" };
+}
+
 function trimCandidate(c) {
-  const keep = ["signal_id", "ticker", "expiry", "strike", "dte", "spot", "otm_pct", "last", "iv", "oi", "oi_d7",
-    "oi_delta_status", "volume", "score", "features", "warnings", "events", "recent_spots", "strategy_label"];
+  // v4.2：(b) 跳空、(c) Δ7d 改 Worker 自己算（computeGap／computeDelta），LLM 不再收 recent_spots／oi_d7／oi_delta_status
+  const keep = ["signal_id", "ticker", "expiry", "strike", "dte", "spot", "otm_pct", "last", "iv", "oi",
+    "volume", "score", "features", "warnings", "events", "strategy_label"];
   const o = {};
   for (const k of keep) if (c[k] !== undefined) o[k] = c[k];
   return o;
@@ -341,10 +386,18 @@ async function runDecision(env, { source = "cron" } = {}) {
     try { facts = { ...factsFor(parseLedger((await ghGetFile(env, LEDGER_PATH))?.text || ""), [...new Set(cands.map(c => c.ticker))]), error: null }; }
     catch (e) { facts.error = String(e); }
   }
+  // (b) 用的交易日曆：universe_spots 日檔名（休市日沒檔）。拿不到就退回「相鄰即單日」並記錯誤。
+  let tradingDays = [], calendarError = null;
+  if (cands.length) {
+    try { tradingDays = (await ghListDir(env, "data/universe_spots")).map(n => n.replace(/\.json$/, "")).filter(d => d <= mkt).sort(); }
+    catch (e) { calendarError = String(e).slice(0, 300); }
+  }
+  // q_gap／q_delta 不依賴 LLM：LLM 失敗或漏答時照樣有值
   const base = c => ({
     signal_id: c.signal_id, ticker: c.ticker, expiry: c.expiry, strike: c.strike, entry_price: c.last,
     strategy: c.strategy, strategy_label: c.strategy_label, sell_points: c.sell_points,
     facts_used: (facts.by_ticker[c.ticker] || []).length,
+    q_gap: computeGap(c.recent_spots, tradingDays), q_delta: computeDelta(c),
   });
   const record = {
     market_date: mkt, decided_at: startedAt, source, prompt_version: prompt.version,
@@ -352,6 +405,7 @@ async function runDecision(env, { source = "cron" } = {}) {
     llm_called: false, web_search: env.LLM_WEB_SEARCH === "1", reasoning_effort: env.LLM_REASONING_EFFORT || null,
     candidates_generated_at: latest.generated_at, n_candidates: cands.length,
     facts_general_n: Object.values(facts.general).reduce((a, b) => a + b.length, 0), facts_error: facts.error,
+    computed_by_worker: ["q_gap", "q_delta"], trading_calendar_days: tradingDays.length, trading_calendar_error: calendarError,
     candidates: [], facts_proposed: [], facts_appended: 0, raw_answer: null, usage: null, error: null,
   };
 
@@ -366,12 +420,20 @@ async function runDecision(env, { source = "cron" } = {}) {
       record.usage = res.usage;
       record.raw_answer = res.content;
       const parsed = extractJson(res.content);
-      const byId = new Map(((parsed && parsed.candidates) || []).map(x => [x.signal_id, x]));
+      // 同一 signal_id 可能被 LLM 拆成多個物件（2026-09-11 IBIT：q_event 在第一個、note 在第二個，
+      // 舊寫法 new Map(...) 讓後者蓋掉前者，事件答案整個遺失）→ 依序合併，先出現的非空欄位優先
+      const byId = new Map();
+      for (const x of ((parsed && parsed.candidates) || [])) {
+        if (!x || !x.signal_id) continue;
+        const prev = byId.get(x.signal_id) || {};
+        for (const [k, v] of Object.entries(x)) if (prev[k] == null && v != null) prev[k] = v;
+        byId.set(x.signal_id, prev);
+      }
       record.candidates = cands.map(c => {
         const a = byId.get(c.signal_id);
         return a
-          ? { ...base(c), q_event: a.q_event ?? null, q_gap: a.q_gap ?? null, q_delta: a.q_delta ?? null, note: a.note ?? null, status: "answered" }
-          : { ...base(c), q_event: null, q_gap: null, q_delta: null, note: null, status: "unanswered" };
+          ? { ...base(c), q_event: a.q_event ?? null, note: a.note ?? null, status: "answered" }
+          : { ...base(c), q_event: null, note: null, status: "unanswered" };
       });
       if (!parsed) record.error = "LLM 回覆不是可解析的 JSON（raw_answer 保留）";
       record.facts_proposed = sanitizeProposals(parsed?.facts_proposed);
@@ -382,7 +444,7 @@ async function runDecision(env, { source = "cron" } = {}) {
     } catch (e) {
       // LLM 失敗也要留檔：T8 的分母是「有候選的交易日」，缺檔會讓後面的統計偏樂觀
       record.error = String(e).slice(0, 1000);
-      record.candidates = cands.map(c => ({ ...base(c), q_event: null, q_gap: null, q_delta: null, note: null, status: "error" }));
+      record.candidates = cands.map(c => ({ ...base(c), q_event: null, note: null, status: "error" }));
     }
   }
 

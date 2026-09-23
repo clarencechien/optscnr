@@ -40,9 +40,9 @@ DEFAULT_BRANCH = "main"
 
 # 第 5 批 LLM（OpenRouter，OpenAI 相容 chat/completions）
 LLM_BASE_URL = "https://openrouter.ai/api/v1"
-LLM_MODEL = "anthropic/claude-opus-5.5" # 三題事實題＋要附來源；每交易日一次，Opus 5.5 約 US$0.04-0.12/日（比 Opus 5 便宜兩成）
+LLM_MODEL = "anthropic/claude-opus-5.5" # (a) 排定事件＋附來源（(b)(c) 由 Worker 計算）；有候選才呼叫，每次約 US$0.17-0.20，每月約 US$2
 LLM_WEB_SEARCH = "1"                    # OpenRouter web 外掛（第 (a) 題要 URL 來源）；出問題設 "0"
-LLM_WEB_MAX_RESULTS = "5"
+LLM_WEB_MAX_RESULTS = "5"               # 成本主要槓桿：搜尋結果佔輸入大宗（實測輸入約 3 萬 tok／次）
 LLM_MAX_TOKENS = "6000"                 # 含 reasoning（effort high 時 9/16 實測共用 1,955，餘裕約三倍）
 LLM_REASONING_EFFORT = "high"           # low/medium/high/xhigh/max；Opus 5.5 省略時預設 medium，顯式帶回 high（與 Opus 5 時期一致）
 
