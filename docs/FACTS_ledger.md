@@ -254,3 +254,4 @@
 - GOOGL ｜ 搜尋壟斷案 DOJ 交叉上訴要求重審 Chrome 分拆，D.C. 巡迴上訴法院預計於 2026 年底至 2027 年初開庭辯論（無確定日期） ｜ 2026-09-02 ｜ https://tech-insider.org/google-antitrust-appeal-doj-search-monopoly-2026/ ｜ 2026-09-16 LLM 提案
 - GOOGL ｜ 搜尋反壟斷案終判 2025-12 落地，Google 於 2026-01 上訴並請求暫緩部分救濟，DOJ 與各州 2026-02 亦提上訴（10-K FY2025） ｜ 2026-02-28 ｜ https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm ｜ 2026-09-16 LLM 提案
 - IBIT ｜ 2026-09-18 IBIT 自前收 43.30 上行至 46.02（+6.28%），成交量 8389 萬股 vs 均量 4815 萬股；52 週區間 32.84–71.82、YTD −7.31%、淨資產 614.4 億美元 ｜ 2026-09-18 ｜ https://finance.yahoo.com/quote/IBIT/ ｜ 2026-09-18 LLM 提案
+- IBIT ｜ 依 10-Q，IBIT 截至 2026-06-30 持有 734,261 顆比特幣，公允價值 $43,395,920,710；2026-03-31 為 783,744 顆，一季減少 49,483 顆 ｜ 2026-06-30 ｜ https://www.sec.gov/Archives/edgar/data/0001980994/000143774926026004/bit20260630c_10q.htm ｜ 2026-09-22 LLM 提案
