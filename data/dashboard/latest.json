@@ -1,9 +1,9 @@
 {
   "market_date": "2026-09-22",
-  "generated_at": "2026-09-22T23:05:57Z",
+  "generated_at": "2026-09-23T00:40:19Z",
   "prereg_date": "2026-09-08",
   "n_candidates": 1,
-  "n_report_rows": 2123,
+  "n_report_rows": 2257,
   "candidates": [
     {
       "signal_id": "2026-09-22_IBIT_2026-11-20_57.0",
@@ -11,12 +11,12 @@
       "expiry": "2026-11-20",
       "strike": 57.0,
       "dte": 59,
-      "spot": 48.83000183105469,
+      "spot": 48.83,
       "otm_pct": 16.7,
       "last": 0.97,
       "bid": 0.93,
       "ask": 0.96,
-      "iv": 43.3,
+      "iv": 43.7,
       "oi": 38893,
       "oi_d7": 1596,
       "oi_delta_status": "confirmed",

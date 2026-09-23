@@ -1,8 +1,60 @@
 {
- "generated_at": "2026-09-22T23:15:18Z",
- "n_days": 11,
+ "generated_at": "2026-09-23T00:47:13Z",
+ "n_days": 12,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-22",
+   "decided_at": "2026-09-23T00:23:02.189Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-09-22_IBIT_2026-11-20_57.0",
+     "ticker": "IBIT",
+     "expiry": "2026-11-20",
+     "strike": 57,
+     "entry_price": 0.97,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "未確認",
+      "date": null,
+      "what": "IBIT 是 ETF，沒有財報；到期日 2026-11-20 前未查到 IBIT 本身或其發行商的已排定事件",
+      "source": null
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": 6.5,
+       "date": "2026-09-21"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "ETF 無財報；CLARITY 法案程序表決原排 2026-09-15，已過",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-09-21",
    "decided_at": "2026-09-22T00:35:23.361Z",
