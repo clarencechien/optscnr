@@ -1,0 +1,102 @@
+{
+  "market_date": "2026-09-22",
+  "decided_at": "2026-09-23T00:23:02.189Z",
+  "source": "manual",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-09-22T23:05:57Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 12,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-09-22_IBIT_2026-11-20_57.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 57,
+      "entry_price": 0.97,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": 6.5,
+          "date": "2026-09-21"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "IBIT 是 ETF，沒有財報；到期日 2026-11-20 前未查到 IBIT 本身或其發行商的已排定事件",
+        "source": null
+      },
+      "note": "ETF 無財報；CLARITY 法案程序表決原排 2026-09-15，已過",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "IBIT",
+      "fact": "依 10-Q，IBIT 截至 2026-06-30 持有 734,261 顆比特幣，公允價值 $43,395,920,710；2026-03-31 為 783,744 顆，一季減少 49,483 顆",
+      "date": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/0001980994/000143774926026004/bit20260630c_10q.htm"
+    }
+  ],
+  "facts_appended": 1,
+  "raw_answer": "{\"market_date\":\"2026-09-22\",\"candidates\":[{\"signal_id\":\"2026-09-22_IBIT_2026-11-20_57.0\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"IBIT 是 ETF，沒有財報；到期日 2026-11-20 前未查到 IBIT 本身或其發行商的已排定事件\",\"source\":null},\"note\":\"ETF 無財報；CLARITY 法案程序表決原排 2026-09-15，已過\"}],\"facts_proposed\":[{\"ticker\":\"IBIT\",\"fact\":\"依 10-Q，IBIT 截至 2026-06-30 持有 734,261 顆比特幣，公允價值 $43,395,920,710；2026-03-31 為 783,744 顆，一季減少 49,483 顆\",\"date\":\"2026-06-30\",\"source\":\"https://www.sec.gov/Archives/edgar/data/0001980994/000143774926026004/bit20260630c_10q.htm\"}]}",
+  "usage": {
+    "prompt_tokens": 43883,
+    "completion_tokens": 1421,
+    "total_tokens": 45304,
+    "cost": 0.223952,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.223952,
+      "upstream_inference_prompt_cost": 0.175532,
+      "upstream_inference_completions_cost": 0.02842
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 952,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
