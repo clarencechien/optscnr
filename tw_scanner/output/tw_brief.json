@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-09-23T07:57:36+00:00",
+ "generated_at": "2026-09-23T08:30:49+00:00",
  "today": "2026-09-23",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-09-25）：本月預算已於 2026-09-21 動用（月末例行），本月不再行動。",
   "鋒面 ☀️ RISK_ON（本週未變）。",
   "2308 前提 🔴 RED；🔀 反向背離：前提轉紅、價格 20 日 +8.6% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 55.2，3 年分位 79 → 78",
-  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +2.5%）；PER 28.8，3 年分位 69 → 78",
+  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +3.5%）；PER 28.8，3 年分位 69 → 78",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.71%。"
  ],
  "weather": {
@@ -285,8 +285,8 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-09-22",
-  "age_days": 1,
+  "as_of": "2026-09-23",
+  "age_days": 0,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -320,9 +320,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "YELLOW",
-    "headline": "export_controls_tariffs:15e / n2_arizona_ramp:6e(7m) / cowos_capacity:8e / geopolitics:4e / hyperscaler_capex:5e(6m)",
-    "ts": "2026-09-22T08:28:39.535719+00:00"
+    "status": "GREEN",
+    "headline": "export_controls_tariffs:16e / n2_arizona_ramp:10e(12m) / cowos_capacity:6e / geopolitics:3e / hyperscaler_capex:4e(5m)",
+    "ts": "2026-09-23T08:30:46.172191+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -345,12 +345,12 @@
   ],
   "divergence": {
    "flag": null,
-   "text": "無背離（前提 GREEN、價格 20 日 +2.5%）；PER 28.8，3 年分位 69 → 78",
+   "text": "無背離（前提 GREEN、價格 20 日 +3.5%）；PER 28.8，3 年分位 69 → 78",
    "premise": "GREEN",
    "premise_ts": "2026-09-21T10:01:20.402804+00:00",
-   "ret_pct": 2.5,
+   "ret_pct": 3.52,
    "lookback_sessions": 20,
-   "as_of": "2026-09-22",
+   "as_of": "2026-09-23",
    "valuation": {
     "per": 28.75,
     "per_pct": 78.2,
@@ -629,7 +629,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-09-22"
+   "text": "tsmc_radar：最新 2026-09-23"
   },
   {
    "level": "ok",
