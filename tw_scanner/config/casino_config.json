@@ -154,5 +154,17 @@
     },
     "ignore": {},
     "_note": "FinMind 價格未還原。2026-09-12 首跑實測：0050 2025-06-18 四拆一、緯穎 6669 2026-09-02 三拆一（20 日報酬曾顯示 −64%）。auto_detect 抓到新的會印警告，確認後搬進 override 或 ignore。"
+  },
+  "sbl": {
+    "balance_dataset": "TaiwanDailyShortSaleBalances",
+    "lending_dataset": "TaiwanStockSecuritiesLending",
+    "cache": "casino_sbl.json",
+    "history_start": "2025-06-01",
+    "refetch_tail_days": 7,
+    "pctile_window_sessions": 250,
+    "pctile_min_sessions": 60,
+    "fee_window_days": 30,
+    "fee_lookback_days": 45,
+    "_note": "2026-09-23 加，只收資料：借券賣出餘額（張）、20 日變化、一年分位、回補天數（餘額÷20 日均量）、借券費率中位（近 30 天成交）、融券餘額。股數依 splits 還原。台灣大型股借券多為避險／套利，不等於看空；不做規則、不進 verdict_rule。"
   }
 }

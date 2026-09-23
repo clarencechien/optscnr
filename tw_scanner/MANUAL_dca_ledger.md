@@ -87,6 +87,12 @@ FinMind `TaiwanStockPrice` 是**未還原**收盤。首跑帳本顯示純 DCA �
    是唯一結構性資訊優勢，同 delta_radar M6）。
 2. 回填 T+5/10/20 個股報酬與對 0050 超額（`casino_state.json` append-only）。
 3. 影子 DCA：每月固定金額等權買整籃，同一筆錢對照買 0050。
+4. 借券欄位（2026-09-23 加，config `sbl`）：借券賣出餘額（張）、20 日變化、一年分位、回補天數（餘額 ÷ 20 日均量）、
+   近 30 天借券費率中位數、融券餘額。資料源 FinMind `TaiwanDailyShortSaleBalances`／`TaiwanStockSecuritiesLending`。
+   **只收資料、不進判準。** 台灣大型股的借券賣出多為避險／套利（ETF 造市、權證、可轉債、ADR），不等於看空；
+   較有意義的組合是「餘額暴增＋費率跳升＋找不到避險理由」。首次進 state 的是上線後的掃描日，舊紀錄不回填。
+   分割：成交量一律依 `splits` 還原；**借券餘額逐次看資料有沒有在分割日跳**再決定——緯穎 2026-09-02 三拆一當天
+   借券餘額平順、無調整項（資料已是同一單位），照 config 再 ×3 會把 20 日變化算成 −51%（實為 +46%）。
 
 判準（config `verdict_rule`，先寫死）：籃子 DCA 對 0050 至少 12 個月；「月營收加速前三分之一 vs 後三分之一」
 的 T+20 超額各 n≥30 才准下結論。之前報告一律「累積中」。**這不是 DCA 的一部分，是娛樂預算的記帳。**
@@ -95,4 +101,4 @@ FinMind `TaiwanStockPrice` 是**未還原**收盤。首跑帳本顯示純 DCA �
 python tw_scanner/casino_tracker.py --output-dir tw_scanner/output   # 抓價/營收 → 掃描 → 回填 → 報告
 python tw_scanner/casino_tracker.py --selftest
 ```
-輸出：`casino_report.md`、`casino_brief.json`（週報第 4 節讀）、`casino_state.json`、`casino_prices.json`、`casino_revenue.json`。
+輸出：`casino_report.md`、`casino_brief.json`（週報第 4 節讀）、`casino_state.json`、`casino_prices.json`、`casino_revenue.json`、`casino_sbl.json`（借券快取）。

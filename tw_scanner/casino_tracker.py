@@ -8,9 +8,12 @@ casino_tracker.py — 賭場 sector：台股 AI 個股影子追蹤器（先收�
   1. 每個交易日對名單裡每檔記特徵：收盤、20 日報酬、對 0050 超額、月營收 YoY / 3 月均 / 斜率。
   2. 回填 T+5/10/20 個股報酬與對 0050 超額（append-only state，之後才能問「月營收加速有沒有用」）。
   3. 影子 DCA：每月固定金額等權買整籃（零股），同一筆錢對照買 0050。
+  4. 借券欄位（2026-09-23 加，只收資料）：借券賣出餘額、20 日變化、一年分位、回補天數、借券費率、融券餘額。
+     台灣大型股借券多為避險／套利，不等於看空；這裡只記，不做規則、不進判準。
 
 判準寫死在 config `verdict_rule`；未達門檻前報告一律印「累積中」。
-資料源 FinMind（TaiwanStockPrice / TaiwanStockMonthRevenue），快取進版控；抓不到用快取、快取沒有 → NO_DATA。
+資料源 FinMind（TaiwanStockPrice / TaiwanStockMonthRevenue / TaiwanDailyShortSaleBalances / TaiwanStockSecuritiesLending），
+快取進版控；抓不到用快取、快取沒有 → NO_DATA（借券缺值只讓借券欄位為空，不影響其他特徵）。
 Usage:
   python casino_tracker.py [--output-dir tw_scanner/output] [--no-fetch]
   python casino_tracker.py --selftest
@@ -124,6 +127,138 @@ def update_caches(cfg: dict, out_dir: str, fetch: bool, fetch_px=fetch_prices, f
 
 
 # ----------------------------------------------------------------------------
+# 借券（只收資料）：快取 casino_sbl.json = {ticker: {"bal": {date: {sbl, margin_short}}, "vol": {date: shares},
+#                                                   "fee": {date: [fee_rate...]}}}；股數皆為「股」（未分割還原）
+# ----------------------------------------------------------------------------
+
+def fetch_sbl(cfg: dict, ticker: str, start: str) -> dict:
+    """→ {"bal": {date: {"sbl": 借券賣出餘額股, "margin_short": 融券餘額股}}, "vol": {date: 成交股數}, "fee": {date: [費率%]}}。
+    三個來源各自失敗各自降級（空 dict），整檔全空才丟例外。"""
+    sc = cfg["sbl"]
+    out = {"bal": {}, "vol": {}, "fee": {}}
+    errs = []
+    try:
+        df = _finmind_df(sc["balance_dataset"], ticker, start)
+        for _, r in df.iterrows():
+            try:
+                out["bal"][str(r["date"])[:10]] = {"sbl": float(r["SBLShortSalesCurrentDayBalance"]),
+                                                    "margin_short": float(r["MarginShortSalesCurrentDayBalance"])}
+            except (TypeError, ValueError, KeyError):
+                pass
+    except Exception as e:
+        errs.append(f"balance {type(e).__name__}: {e}")
+    try:
+        df = _finmind_df(cfg["prices"]["dataset"], ticker, start)
+        vc = "Trading_Volume" if "Trading_Volume" in df.columns else None
+        if vc:
+            for d, v in zip(df["date"], df[vc]):
+                try:
+                    out["vol"][str(d)[:10]] = float(v)
+                except (TypeError, ValueError):
+                    pass
+    except Exception as e:
+        errs.append(f"volume {type(e).__name__}: {e}")
+    fee_start = max(start, (dt.date.today() - dt.timedelta(days=int(sc["fee_lookback_days"]))).isoformat())
+    try:
+        df = _finmind_df(sc["lending_dataset"], ticker, fee_start)
+        for _, r in df.iterrows():
+            try:
+                out["fee"].setdefault(str(r["date"])[:10], []).append(float(r["fee_rate"]))
+            except (TypeError, ValueError, KeyError):
+                pass
+    except Exception as e:
+        # 借券成交明細在某些日子／標的本來就是空的（沒人借）——不當錯誤，只記
+        if "empty" not in str(e):
+            errs.append(f"lending {type(e).__name__}: {e}")
+    if not out["bal"] and not out["vol"]:
+        raise RuntimeError("; ".join(errs) or "no data")
+    return out
+
+
+def update_sbl_cache(cfg: dict, out_dir: str, fetch: bool, fetch_fn=fetch_sbl) -> tuple[dict, list[str]]:
+    path = os.path.join(out_dir, cfg["sbl"]["cache"])
+    data = (_load(path) or {}).get("data") or {}
+    if not fetch:
+        return data, []
+    warns = []
+    for u in cfg["universe"]:
+        t = u["ticker"]
+        have = data.get(t) or {"bal": {}, "vol": {}, "fee": {}}
+        last = max(have["bal"]) if have.get("bal") else None
+        start = ((dt.date.fromisoformat(last) - dt.timedelta(days=int(cfg["sbl"]["refetch_tail_days"]))).isoformat()
+                 if last else cfg["sbl"]["history_start"])
+        try:
+            new = fetch_fn(cfg, t, start)
+            for k in ("bal", "vol", "fee"):
+                have.setdefault(k, {}).update(new.get(k) or {})
+            data[t] = have
+        except Exception as e:
+            warns.append(f"借券 {t}: {type(e).__name__}: {e}")
+    _save(path, {"updated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "data": data})
+    return data, warns
+
+
+def _share_factor(splits: list[dict], ticker: str, date: str) -> float:
+    """股數類序列的分割還原係數：分割日之前的股數 ×ratio（與價格 ÷ratio 對稱）。"""
+    f = 1.0
+    for sp in splits or []:
+        if sp.get("ticker") == ticker and date < sp["date"]:
+            f *= float(sp["ratio"])
+    return f
+
+
+def _series_jumps_at(series: list[tuple], split: dict) -> bool:
+    """股數序列在分割日有沒有真的跳 ×ratio（資料是原始股數）還是平順（資料已是同一單位）。
+
+    2026-09-23 實測：成交量（TaiwanStockPrice）是原始股數，分割日跳 ×ratio；但借券賣出餘額
+    （TaiwanDailyShortSaleBalances）在緯穎 2026-09-02 三拆一當天「前日餘額」=前一天餘額、調整 0、額度也沒跳，
+    整段序列已是同一單位——若照 config 再 ×3 會把 20 日變化算成 −51%（實為 +46%）。
+    0050 2025-06-18 則是分割前借券全數了結（餘額 0）後重來。所以逐次看資料：分割前後比值在對數上
+    較接近 ratio → 原始股數、要換算；較接近 1 或分割前為 0 → 不換算。"""
+    k = float(split["ratio"])
+    before = next((v for d, v in reversed(series) if d < split["date"]), None)
+    after = next((v for d, v in series if d >= split["date"]), None)
+    if not before or not after or before <= 0 or after <= 0:
+        return False
+    r = math.log(after / before)
+    return abs(r - math.log(k)) < abs(r)
+
+
+def sbl_features(entry: Optional[dict], today: str, splits: list[dict], ticker: str, cfg: dict) -> dict:
+    """借券欄位（純函數）。缺資料 → 各欄 None。股數先依分割還原再比較。"""
+    sc = cfg["sbl"]
+    empty = {"sbl_date": None, "sbl_lots": None, "sbl_chg20_pct": None, "sbl_pctile_1y": None,
+             "sbl_days_to_cover": None, "sbl_fee_median_pct": None, "sbl_fee_n": 0, "margin_short_lots": None}
+    if not entry or not entry.get("bal"):
+        return empty
+    bal = sorted((d, v) for d, v in entry["bal"].items() if d <= today)
+    if not bal:
+        return empty
+    # 借券餘額：只對「資料在分割日真的有跳」的那幾次分割換算（見 _series_jumps_at）；融券只報當日水位，不需換算
+    raw_sbl = [(d, v["sbl"]) for d, v in bal]
+    sbl_splits = [sp for sp in (splits or []) if sp.get("ticker") == ticker and _series_jumps_at(raw_sbl, sp)]
+    adj = [(d, v["sbl"] * _share_factor(sbl_splits, ticker, d), v["margin_short"]) for d, v in bal]
+    d0, sbl0, ms0 = adj[-1]
+    w = int(cfg["features"]["return_window_sessions"])
+    chg = None
+    if len(adj) > w and adj[-1 - w][1] > 0:
+        chg = round((sbl0 / adj[-1 - w][1] - 1) * 100, 1)
+    win = [x[1] for x in adj[-int(sc["pctile_window_sessions"]):]]
+    pct = round(sum(v <= sbl0 for v in win) / len(win) * 100) if len(win) >= int(sc["pctile_min_sessions"]) else None
+    vols = [v * _share_factor(splits, ticker, d) for d, v in sorted((entry.get("vol") or {}).items()) if d <= d0][-w:]
+    dtc = round(sbl0 / (sum(vols) / len(vols)), 2) if len(vols) >= min(w, 10) and sum(vols) > 0 else None
+    since = (dt.date.fromisoformat(d0) - dt.timedelta(days=int(sc["fee_window_days"]))).isoformat()
+    fees = sorted(f for d, fs in (entry.get("fee") or {}).items() if since < d <= d0 for f in fs)
+    med = None
+    if fees:
+        n = len(fees)
+        med = round(fees[n // 2] if n % 2 else (fees[n // 2 - 1] + fees[n // 2]) / 2, 3)
+    return {"sbl_date": d0, "sbl_lots": round(sbl0 / 1000, 1), "sbl_chg20_pct": chg, "sbl_pctile_1y": pct,
+            "sbl_days_to_cover": dtc, "sbl_fee_median_pct": med, "sbl_fee_n": len(fees),
+            "margin_short_lots": round(ms0 / 1000, 1)}
+
+
+# ----------------------------------------------------------------------------
 # 特徵（純函數）
 # ----------------------------------------------------------------------------
 
@@ -200,7 +335,7 @@ def repair_features(cfg: dict, state_path: str, prices: dict) -> int:
     return changed
 
 
-def scan(cfg: dict, prices: dict, revenue: dict, today: str) -> list[dict]:
+def scan(cfg: dict, prices: dict, revenue: dict, today: str, sbl: Optional[dict] = None) -> list[dict]:
     """每檔一筆（今天或之前最後一個交易日）。缺價格 → 該檔 NO_DATA 一筆。"""
     w = int(cfg["features"]["return_window_sessions"])
     k = int(cfg["features"]["revenue_avg_months"])
@@ -222,7 +357,8 @@ def scan(cfg: dict, prices: dict, revenue: dict, today: str) -> list[dict]:
                      "date": d, "status": "OK", "close": close,
                      f"ret{w}_pct": r20,
                      f"excess{w}_pct": None if r20 is None or b20 is None else round(r20 - b20, 2),
-                     **revenue_features(revenue.get(t) or {}, k)})
+                     **revenue_features(revenue.get(t) or {}, k),
+                     **sbl_features((sbl or {}).get(t), d, cfg.get("_splits_used") or [], t, cfg)})
     return rows
 
 
@@ -384,6 +520,20 @@ def render_md(s: dict) -> str:
     if s["no_data"]:
         L.append("")
         L.append("NO_DATA：" + "、".join(f"{r['ticker']}（{r.get('reason')}）" for r in s["no_data"]))
+    if any(r.get("sbl_lots") is not None for r in s["rows"]):
+        L += ["", "## 借券（只收資料，不是訊號）", "",
+              "> 台灣大型股的借券賣出多為避險／套利（ETF 造市、權證、可轉債、ADR 套利），不等於看空。"
+              "較有意義的組合是「餘額暴增＋費率跳升＋找不到避險理由」。這裡只記，不做規則。", "",
+              "| 代號 | 借券賣出餘額（張） | 20 日變化 | 一年分位 | 回補天數 | 費率中位 | 融券（張） |",
+              "|---|---|---|---|---|---|---|"]
+        for r in s["rows"]:
+            if r.get("sbl_lots") is None:
+                continue
+            fee = "—" if r.get("sbl_fee_median_pct") is None else f"{r['sbl_fee_median_pct']:.2f}%（{r['sbl_fee_n']} 筆）"
+            pct = "—" if r.get("sbl_pctile_1y") is None else str(r["sbl_pctile_1y"])
+            dtc = "—" if r.get("sbl_days_to_cover") is None else f"{r['sbl_days_to_cover']:.1f}"
+            ms = "—" if r.get("margin_short_lots") is None else f"{r['margin_short_lots']:,.0f}"
+            L.append(f"| {r['ticker']} | {r['sbl_lots']:,.0f} | {_f(r.get('sbl_chg20_pct'), '%')} | {pct} | {dtc} | {fee} | {ms} |")
     d = s["shadow_dca"]
     L += ["", "## 影子 DCA：每月等權買整籃 vs 同一筆錢買 0050", ""]
     if d.get("status") == "OK":
@@ -439,6 +589,28 @@ def _fixtures(cfg: dict):
     return prices, revenue
 
 
+def _sbl_fixtures(cfg: dict, prices: dict) -> dict:
+    """合成借券資料：股數未還原（2330 在 2026-08-05 四拆一後股數 ×4），費率只放在 2308 最近幾天。"""
+    import random
+    rnd = random.Random(11)
+    out = {}
+    for u in cfg["universe"]:
+        t = u["ticker"]
+        bal, vol, fee = {}, {}, {}
+        base = 5e6 + rnd.random() * 5e6
+        for d in sorted(prices.get(t) or {}):
+            if d < cfg["sbl"]["history_start"]:
+                continue
+            base *= math.exp(rnd.gauss(0, 0.01))
+            k = 4.0 if (t == "2330" and d >= "2026-08-05") else 1.0
+            bal[d] = {"sbl": round(base * k), "margin_short": round(base * 0.01 * k)}
+            vol[d] = round(base * 1.5 * k)
+        if t == "2308":
+            fee = {"2026-08-13": [0.2, 0.3], "2026-08-14": [0.5], "2026-01-02": [9.9]}
+        out[t] = {"bal": bal, "vol": vol, "fee": fee}
+    return out
+
+
 def selftest(cfg: dict) -> bool:
     out = tempfile.mkdtemp(prefix="casino_selftest_")
     prices, revenue = _fixtures(cfg)
@@ -478,6 +650,56 @@ def selftest(cfg: dict) -> bool:
     check(s["tercile_t20"]["status"].startswith("累積中"), "三分位表未達門檻 → 累積中")
     md = render_md(s)
     check("賭場 sector" in md and "影子 DCA" in md and "累積中" in md, "報告段落齊全")
+    # 借券欄位（只收資料）
+    sbl_fx = _sbl_fixtures(cfg, prices)
+    cfg_s = {**cfg, "_splits_used": used}
+    rows_s = scan(cfg_s, prices, revenue, today, sbl_fx)
+    r30 = next(r for r in rows_s if r["ticker"] == "2330")
+    r08 = next(r for r in rows_s if r["ticker"] == "2308")
+    check(r08["sbl_lots"] is not None and r08["sbl_pctile_1y"] is not None and r08["sbl_days_to_cover"] is not None
+          and r08["margin_short_lots"] is not None, f"借券欄位有值（2308 餘額 {r08['sbl_lots']} 張、分位 {r08['sbl_pctile_1y']}、回補 {r08['sbl_days_to_cover']} 天）")
+    check(r08["sbl_fee_median_pct"] == 0.3 and r08["sbl_fee_n"] == 3, f"費率取窗內中位數（{r08['sbl_fee_median_pct']}，{r08['sbl_fee_n']} 筆）")
+    check(r30["sbl_chg20_pct"] is not None and abs(r30["sbl_chg20_pct"]) < 30,
+          f"2330 股數依四拆一還原：20 日變化 {r30['sbl_chg20_pct']}%（未還原會是 +300% 上下）")
+    raw30 = sbl_features(sbl_fx["2330"], today, [], "2330", cfg)
+    check(raw30["sbl_chg20_pct"] is not None and raw30["sbl_chg20_pct"] > 200, f"對照：不還原時 20 日變化 {raw30['sbl_chg20_pct']}%")
+    # 資料已是同一單位（分割日沒跳）→ 不可再換算；原始股數（有跳）→ 要換算
+    days_ = [f"2026-08-{i:02d}" for i in range(3, 29) if dt.date(2026, 8, i).weekday() < 5]
+    flat = {"bal": {d: {"sbl": 1e7 * (1.01 ** i), "margin_short": 0} for i, d in enumerate(days_)},
+            "vol": {d: (1e6 if d < "2026-08-17" else 3e6) for d in days_}, "fee": {}}
+    jump = {"bal": {d: {"sbl": 1e7 * (1.01 ** i) * (3 if d >= "2026-08-17" else 1), "margin_short": 0} for i, d in enumerate(days_)},
+            "vol": flat["vol"], "fee": {}}
+    sp_ = [{"ticker": "X", "date": "2026-08-17", "ratio": 3.0, "source": "override"}]
+    cfg_w = {**cfg, "features": {**cfg["features"], "return_window_sessions": 15}}
+    f_flat = sbl_features(flat, "2026-08-28", sp_, "X", cfg_w)
+    f_jump = sbl_features(jump, "2026-08-28", sp_, "X", cfg_w)
+    check(f_flat["sbl_chg20_pct"] is not None and 10 < f_flat["sbl_chg20_pct"] < 20,
+          f"借券序列分割日沒跳 → 不換算（變化 {f_flat['sbl_chg20_pct']}%；誤乘會是 −60% 上下）")
+    check(f_jump["sbl_chg20_pct"] is not None and 10 < f_jump["sbl_chg20_pct"] < 20,
+          f"借券序列分割日跳 ×3 → 換算（變化 {f_jump['sbl_chg20_pct']}%）")
+    last_j = jump["bal"][days_[-1]]["sbl"]
+    check(f_jump["sbl_days_to_cover"] == round(last_j / 3e6, 2),
+          f"成交量一律依分割還原：分割前量 ×3 後均量 300 萬股（回補 {f_jump['sbl_days_to_cover']} 天；不還原會是 {round(last_j / ((5 * 1e6 + 10 * 3e6) / 15), 2)}）")
+    no_sbl = [r for r in scan(cfg_s, prices, revenue, today, {}) if r["ticker"] == "2308"][0]
+    check(no_sbl["sbl_lots"] is None and no_sbl["yoy_pct"] is not None and no_sbl["status"] == "OK",
+          "沒有借券資料 → 只有借券欄位為空，其他特徵照常")
+    calls = []
+    def fake_fetch(c, t, start):
+        calls.append((t, start))
+        if t == "3324":
+            raise RuntimeError("boom")
+        return {k: {d: v for d, v in sbl_fx.get(t, sbl_fx["2308"])[k].items() if d >= start} for k in ("bal", "vol", "fee")}
+    data1, w1 = update_sbl_cache(cfg, out, True, fake_fetch)
+    first_starts = {t: st for t, st in calls}
+    calls.clear()
+    data2, w2 = update_sbl_cache(cfg, out, True, fake_fetch)
+    check(any("3324" in w for w in w1) and "3324" not in data1 and len(data1) == len(cfg["universe"]) - 1,
+          "單檔抓失敗 → 警告、其餘照常")
+    check(all(st > first_starts[t] for t, st in calls if t != "3324"), "第二次只抓尾巴（增量）")
+    check(json.dumps(data1, sort_keys=True) == json.dumps(data2, sort_keys=True), "重抓冪等")
+    md_s = render_md(build_summary(cfg_s, rows_s, hist, d, [], today))
+    check("借券（只收資料" in md_s and "| 2308 |" in md_s.split("借券（只收資料")[1], "報告有借券表")
+    check("借券（只收資料" not in md, "沒有借券資料時報告不印空表")
     # NO_DATA 路徑
     rows_nd = scan(cfg, {}, {}, today)
     check(all(r["status"] == "NO_DATA" for r in rows_nd) and shadow_dca(cfg, {}, today)["status"] == "NO_DATA", "無價格 → NO_DATA 不崩潰")
@@ -507,7 +729,9 @@ def main() -> int:
     repaired = repair_features(cfg, sp, prices)
     if repaired:
         print(f"[casino] 用還原後價格重算 {repaired} 筆 state 衍生欄位", file=sys.stderr)
-    rows = scan(cfg, prices, revenue, today)
+    sbl, sbl_warns = update_sbl_cache(cfg, args.output_dir, fetch=not args.no_fetch)
+    warns += sbl_warns
+    rows = scan(cfg, prices, revenue, today, sbl)
     added = append_scan(sp, rows)
     filled = backfill(sp, prices, cfg["benchmark"], cfg["outcomes"]["horizons"])
     hist = _load(sp) or []
@@ -517,7 +741,7 @@ def main() -> int:
     open(os.path.join(args.output_dir, "casino_report.md"), "w", encoding="utf-8").write(md)
     _save(os.path.join(args.output_dir, "casino_brief.json"), s)
     print(md)
-    print(f"\n[casino] scan +{added}、回填 {filled}；written casino_report.md / casino_brief.json / casino_state.json", file=sys.stderr)
+    print(f"\n[casino] scan +{added}、回填 {filled}；written casino_report.md / casino_brief.json / casino_state.json / {cfg['sbl']['cache']}", file=sys.stderr)
     return 0
 
 
