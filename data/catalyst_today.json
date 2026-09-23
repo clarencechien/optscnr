@@ -1,157 +1,199 @@
 {
-  "updated_at": "2026-09-22T23:11:54.012863",
+  "updated_at": "2026-09-23T23:04:41.861320",
   "stats": {
-    "total_items": 107,
+    "total_items": 106,
     "items_with_company": 20,
-    "items_with_catalyst": 17,
+    "items_with_catalyst": 16,
     "items_both": 3
   },
-  "count": 17,
+  "count": 15,
   "tickers": [
-    "TGT",
-    "NVDA",
-    "SNDK",
-    "VKTX",
-    "MSFT",
-    "AAPL",
-    "CRWV",
-    "AMZN",
-    "JPM",
-    "BRK-B",
-    "AVGO",
     "META",
-    "GOOGL",
-    "BA",
-    "RTX",
-    "BAC",
-    "RIOT"
+    "MSFT",
+    "IONQ",
+    "INTC",
+    "AMZN",
+    "TSLA",
+    "SOFI",
+    "WMT",
+    "MU",
+    "PLTR",
+    "PYPL",
+    "NVDA",
+    "TGT",
+    "BRK-B",
+    "NFLX"
   ],
   "details": [
     {
-      "symbol": "TGT",
-      "score": 2,
+      "symbol": "META",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Cisco stock sinks 5% after Piper Sandler cuts price target on growth concerns",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Nvidia options are doing something unusual ahead of two catalysts. Here's how one trader is playing it",
+          "title": "Meta's standoff with Amazon over Muse could be a sign of things to come",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "A top chip stock analyst sees big things for Nvidia, Broadcom. How his case aligns with ours",
+          "title": "Meta's Muse reignites AI disruption fears. Traders are targeting this brokerage stock as next casualty",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Why Apple could soon join Nvidia in the exclusive $5 trillion club",
+          "title": "Why Muse just added billions to Meta's market cap",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Sandisk’s stock is rising: Why one analyst says AI could help it reach new heights",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "VKTX",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "This GLP-1 drug helped people maintain their weight loss in a clinical trial — even for those taking it once a month",
-          "catalysts": [
-            "soared"
-          ],
-          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "MSFT",
-      "score": 1.0,
+      "score": 2,
       "evidence": [
         {
-          "title": "Trump discloses more than 1,100 July trades, including up to $25 million each in sales of Microsoft, Amazon",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Exclusive-Microsoft to keep shareholder proposal rights through 2027, even as SEC reduces oversight",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "A rare Microsoft bear warms up to the stock. Here's what changed their mind",
+          "catalysts": [
+            "upgraded"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 1.0,
+      "symbol": "IONQ",
+      "score": 2,
       "evidence": [
         {
-          "title": "Why Apple could soon join Nvidia in the exclusive $5 trillion club",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Tim Cook warned of a ‘hundred-year flood’ striking tech giants — and now Apple is raising prices. What it means for you",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "IonQ shares rise after company says it made a major quantum computing breakthrough",
+          "catalysts": [
+            "breakthrough"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "CRWV",
-      "score": 1.0,
+      "symbol": "INTC",
+      "score": 2,
       "evidence": [
         {
-          "title": "The Fed Just Raised Rates for the First Time Since 2023. CoreWeave’s CEO Sees an ‘Inflection Point,’ But Its $51 Billion Debt Problem Just G",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Can CoreWeave Stock Handle The Cost Of Its Own Growth?",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Intel stock up 25% in last 5 days on CPU demand as AI agents gain traction",
+          "catalysts": [
+            "gain"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "AMZN",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Trump discloses more than 1,100 July trades, including up to $25 million each in sales of Microsoft, Amazon",
+          "title": "Meta's standoff with Amazon over Muse could be a sign of things to come",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Why McDonald's is following Walmart and Amazon into the advertising business",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "JPM",
+      "symbol": "TSLA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Tesla Roadster reveal is creating a unique options opportunity, says Mike Khouw",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Tesla’s supervised self-driving system often misreads speed limits, Belgian safety group finds",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SOFI",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "72% of Americans would slow financial progress to enjoy life now, SoFi survey finds",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "How SoFi Is Turning Its Consumer App Into A Stablecoin Proving Ground",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Sullivan: Wall Street admits it doesn't know where oil is headed. There's one stock they do agree on",
+          "title": "Why McDonald's is following Walmart and Amazon into the advertising business",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron’s stock has become a ‘battleground’ as the AI narrative shifts",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Palantir’s stock sees its highest close of the year, sealing a dramatic comeback",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PYPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Marram Exits PayPal Holdings (PYPL) Due to Thesis Breakdown",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Huawei Is Ramping Up to New Chips in 2027. What That Means for Nvidia Stock Now.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why Utility Profits Could Be the Next Target",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -162,84 +204,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Lennar shares pop as Berkshire builds almost a 10% stake in beleaguered homebuilder",
+          "title": "What Makes Berkshire Hathaway (BRK-B) a Strong Investment?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AVGO",
+      "symbol": "NFLX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "A top chip stock analyst sees big things for Nvidia, Broadcom. How his case aligns with ours",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Could Meta’s viral Muse app be the company’s ChatGPT moment?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Ex-Google safety chief warns AI could harm children more than social media did",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Boeing wins $33.4 million Air Force avionics contract",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RTX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Raytheon wins $105.6 million contract for missile parts",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BAC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Bank of America says buy tumbling shares of aviation giant",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RIOT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Riot Platforms Is Building a Data Center Business Inside a Bitcoin Miner. Is RIOT Stock a Buy?",
+          "title": "The Case for Buying Netflix Stock",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -247,7 +223,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2,
-    "OpenAI (private)": 1
+    "OpenAI (private)": 3,
+    "Anthropic (private)": 2
   }
 }
