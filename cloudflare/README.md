@@ -37,10 +37,8 @@ Python 與資料全部留在 GitHub Actions / git；這個資料夾只放 Worker
 - 模型名記在 decisions JSON 的 `model_served`，之後 T8 可以分模型比答對率。
 - ⚠️ **換模型＝換量測儀器**：T8（「LLM 說有排定事件的候選命中率較高嗎」）的樣本會被切成換模型前後兩段，
   每段各自要累積到判準才准下結論。換之前的 decisions 都留著，`model_served` 分得開。
-- **Reasoning effort**：`wrangler.toml` 的 `LLM_REASONING_EFFORT`（預設 `"high"`）→ request 帶 `reasoning: {effort}`，
-  OpenRouter 翻成 Claude 原生 effort。Opus 5.5 省略時 Anthropic 預設 `medium`（Opus 5 是 `high`），所以顯式帶 `high`，
-  讓換模型前後只差模型、不差 effort。值記在 decisions JSON 的 `reasoning_effort` 與 `/api/health`。
-  reasoning 吃 `LLM_MAX_TOKENS`（含輸出）；拉高 effort 前先看 decisions 的 `usage`，快頂到就一起加大。
+- ⚠️ Opus 5.5 的 reasoning effort 預設是 `medium`（Opus 5 是 `high`），本 Worker 沒帶 effort 參數 → 等於降一級。
+  三題是事實查證不是推理難題，先照預設跑；若發現來源品質變差，再考慮在 body 帶 OpenRouter 的 `reasoning` 參數。
 
 ### （建議）Cloudflare Access：只讓自己看
 

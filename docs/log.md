@@ -295,10 +295,8 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 
 - 呼叫形狀沒動：OpenRouter OpenAI 相容 `chat/completions`、web 外掛、`max_tokens` 6000、prompt v4.1 全不變。
 - Opus 5.5 相對 Opus 5 的破壞性變更（不能關 thinking、不能強制 `tool_choice`）本 Worker 都沒用到，不受影響。
-- Reasoning effort 顯式設 `high`（同日追加，使用者指示）：Opus 5.5 省略 effort 時 Anthropic 預設 `medium`（Opus 5 是 `high`），
-  不帶就等於換模型時偷偷降一級。新增 `LLM_REASONING_EFFORT="high"` → request 帶 OpenRouter `reasoning: {effort}`；
-  OpenRouter 文件確認 effort 會翻成 Claude 原生 effort（非 token 預算），模型清單標 `supported_efforts` 含 high、`mandatory: true`（不可送 none）。
-  值記進 decisions JSON `reasoning_effort` 與 `/api/health`。`LLM_MAX_TOKENS` 6000 不動：9/16 在 Opus 5 high 下共用 1,955（含 reasoning）。
+- 差異一項：Opus 5.5 的 reasoning effort **預設 `medium`**（Opus 5 是 `high`），Worker 沒帶 effort → 等於降一級。
+  三題是事實查證，先照預設；來源品質變差再帶 OpenRouter 的 `reasoning` 參數。
 - ⚠️ **換模型＝換量測儀器**：T8 的樣本被切成前後兩段，各自要累積到判準才准下結論。
   舊 decisions 全留著，`model_served` 分得開；驗收看 `data/decisions/<市場日>.json` 的 `model_served` 是否為 5.5。
 
