@@ -9201,8 +9201,8 @@
       "t5_excess_pct": -0.7,
       "t10_ret_pct": -5.37,
       "t10_excess_pct": -8.29,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 7.91,
+      "t20_excess_pct": 1.92
     }
   },
   {
@@ -10582,8 +10582,8 @@
       "entry_close": 1675.0,
       "t5_ret_pct": 0.6,
       "t5_excess_pct": 1.61,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 14.03,
+      "t10_excess_pct": 11.05,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -10615,8 +10615,8 @@
       "entry_close": 1675.0,
       "t5_ret_pct": 0.6,
       "t5_excess_pct": 1.61,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": 14.03,
+      "t10_excess_pct": 11.05,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -11501,8 +11501,8 @@
       "entry_date": "2026-09-17",
       "benchmark": "0050",
       "entry_close": 1685.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 13.35,
+      "t5_excess_pct": 9.32,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -11763,8 +11763,8 @@
       "entry_date": "2026-09-17",
       "benchmark": "0050",
       "entry_close": 1685.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 13.35,
+      "t5_excess_pct": 9.32,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -12515,6 +12515,104 @@
       "entry_date": "2026-09-23",
       "benchmark": "0050",
       "entry_close": 1900.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-09-24T07:48:44.483956+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "capex_cut:5e(6m) / vr300_delay:18e(22m) / debt_financed_capex:16e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 5,
+            "vr300_delay": 18,
+            "debt_financed_capex": 16,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 6,
+            "vr300_delay": 22,
+            "debt_financed_capex": 16,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 5,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": 1.56,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 18,
+              "mentions": 22,
+              "gate": "zscore",
+              "z": 0.49,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 16,
+              "mentions": 16,
+              "gate": "zscore",
+              "z": 1.4,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review",
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[debt_financed_capex] AI Companies’ Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - Yahoo Finance",
+          "[debt_financed_capex] Apollo Just Flashed Yellow on Hyperscaler Debt - Money Morning",
+          "[debt_financed_capex] The \"debt black hole\" behind the AI boom: $1.2 trillion external financing may be needed in the next five years - Bitget"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": "premise_broken_price_up",
+      "text": "🔀 反向背離：前提轉紅、價格 20 日 +7.9% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 55.2，3 年分位 79 → 78",
+      "premise": "RED",
+      "premise_ts": "2026-09-21T09:17:55.467786+00:00",
+      "ret_pct": 7.91,
+      "lookback_sessions": 20,
+      "as_of": "2026-09-24",
+      "valuation": {
+        "per": 55.22,
+        "per_pct": 78.2,
+        "per_then": 55.7,
+        "per_pct_then": 79.4,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-09-24",
+      "benchmark": "0050",
+      "entry_close": 1910.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
