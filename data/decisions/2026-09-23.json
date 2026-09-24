@@ -1,0 +1,28 @@
+{
+  "market_date": "2026-09-23",
+  "decided_at": "2026-09-24T00:35:43.030Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": null,
+  "llm_called": false,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-09-23T23:06:23Z",
+  "n_candidates": 0,
+  "facts_general_n": 0,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 0,
+  "trading_calendar_error": null,
+  "candidates": [],
+  "facts_proposed": [],
+  "facts_appended": 0,
+  "raw_answer": null,
+  "usage": null,
+  "error": null,
+  "note": "今日無結構候選（空手是正確執行，不補名額；未呼叫 LLM）"
+}
