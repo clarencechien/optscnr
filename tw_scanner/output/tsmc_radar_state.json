@@ -1030,7 +1030,7 @@
       "entry_close": 2385.0,
       "t5_ret_pct": 3.14,
       "t5_excess_pct": -2.13,
-      "t5_excess_smh_pct": null,
+      "t5_excess_smh_pct": -8.91,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -1300,8 +1300,8 @@
       "entry_date": "2026-09-17",
       "benchmark": "0050",
       "entry_close": 2425.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 2.06,
+      "t5_excess_pct": -1.97,
       "t5_excess_smh_pct": null,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
@@ -1920,6 +1920,122 @@
       "entry_date": "2026-09-23",
       "benchmark": "0050",
       "entry_close": 2500.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
+  },
+  {
+    "ts": "2026-09-24T08:23:12.449764+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "export_controls_tariffs:17e / n2_arizona_ramp:9e(11m) / cowos_capacity:6e / geopolitics:3e / hyperscaler_capex:5e(6m)",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 17,
+            "n2_arizona_ramp": 9,
+            "cowos_capacity": 6,
+            "geopolitics": 3,
+            "hyperscaler_capex": 5
+          },
+          "mentions": {
+            "export_controls_tariffs": 17,
+            "n2_arizona_ramp": 11,
+            "cowos_capacity": 6,
+            "geopolitics": 3,
+            "hyperscaler_capex": 6
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 17,
+              "mentions": 17,
+              "gate": "zscore",
+              "z": 1.39,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 9,
+              "mentions": 11,
+              "gate": "zscore",
+              "z": 0.59,
+              "denial": false
+            },
+            "cowos_capacity": {
+              "events": 6,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": -1.0,
+              "denial": true
+            },
+            "geopolitics": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -1.59,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 5,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": 1.9,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - finance",
+          "[export_controls_tariffs] Huawei chairman thanks the US for export restrictions on chips, says it supercharged China’s semiconductor industry — Wa",
+          "[export_controls_tariffs] Key facts: TSMC to Invest Up to $265B in Arizona; Reviews Export Controls - TradingView",
+          "[n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea",
+          "[n2_arizona_ramp] Intel and Samsung advance 2nm GAA, but yield gaps leave TSMC as the sole external supplier - digitimes",
+          "[n2_arizona_ramp] Samsung's 2nm Yield Recovers to 55%... Qualcomm Return Hinges on Sept. 22 Summit - finance.biggo.com",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes",
+          "[cowos_capacity] TSMC Accelerates CoPoS Packaging to Replace CoWoS, as Glass Core Substrates Cut Costs 30% and Boost Wafer Utilization Pa",
+          "[geopolitics] China's president Xi Jinping calls Taiwan reunification \"unstoppable\" — military drills around the island escalate in ar",
+          "[geopolitics] China Rings Taiwan With Live-Fire Drills, Tensions Spike - Modern Diplomacy",
+          "[geopolitics] China’s planned military exercises near Taiwan may have another target: Japan - The Japan Times",
+          "[hyperscaler_capex] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review",
+          "[hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[hyperscaler_capex] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 GREEN、價格 20 日 +2.7%）；PER 28.8，3 年分位 69 → 78",
+      "premise": "GREEN",
+      "premise_ts": "2026-09-21T10:01:20.402804+00:00",
+      "ret_pct": 2.7,
+      "lookback_sessions": 20,
+      "as_of": "2026-09-24",
+      "valuation": {
+        "per": 28.75,
+        "per_pct": 78.2,
+        "per_then": 27.53,
+        "per_pct_then": 68.8,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-09-24",
+      "benchmark": "0050",
+      "entry_close": 2475.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t5_excess_smh_pct": null,
