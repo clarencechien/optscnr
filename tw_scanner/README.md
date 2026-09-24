@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-09-24 08:23 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-09-24 08:45 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -14,7 +14,7 @@ _README 由 build_readme.py 於 2026-09-24 08:23 UTC 重組；兩區塊各為該
 
 - 週檢查（2026-09-25）：本月預算已於 2026-09-21 動用（月末例行），本月不再行動。
 - 鋒面 ☀️ RISK_ON（本週未變）。
-- 2308 前提 🔴 RED；🔀 反向背離：前提轉紅、價格 20 日 +7.9% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 55.2，3 年分位 79 → 78
+- 2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +7.9%）；PER 60.5，3 年分位 79 → 84
 - 2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +2.7%）；PER 28.8，3 年分位 69 → 78
 - 投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.71%。
 
@@ -46,16 +46,16 @@ _README 由 build_readme.py 於 2026-09-24 08:23 UTC 重組；兩區塊各為該
 ## 3. 論點監控（2308 delta_radar／2330 tsmc_radar）
 
 ### 2308
-- 前提（最近全模組 2026-09-21）：🔴 RED
-- 🔀 反向背離：前提轉紅、價格 20 日 +7.9% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 55.2，3 年分位 79 → 78
+- 前提（最近全模組 2026-09-24）：🟡 YELLOW
+- 無背離（前提 YELLOW、價格 20 日 +7.9%）；PER 60.5，3 年分位 79 → 84
   - 🟡 M1 revenue_acceleration：2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32
   - 🟡 M3 thai_shadow：DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8%
   - 🟢 M4 customs_flow：US 進口 HS850440 (TH+TW) 近3月 $1399.9M, YoY +30.6%
-  - 🟡 M5 narrative_triggers：capex_cut:5e(6m) / vr300_delay:18e(22m) / debt_financed_capex:16e / lc_psu_competition:0e
+  - 🟢 M5 narrative_triggers：capex_cut:5e(6m) / vr300_delay:17e(21m) / debt_financed_capex:16e / lc_psu_competition:0e
   - 🔴 M6 peer_divergence：cooling:3324領先+36pp
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
-  - 🟢 M9 valuation：PER 55.2（3 年第 78 百分位；20 日前第 79）；觀察
+  - 🟢 M9 valuation：PER 60.5（3 年第 84 百分位；20 日前第 79）；觀察
 - 回填樣本 89 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
 
 ### 2330
@@ -110,7 +110,7 @@ _README 由 build_readme.py 於 2026-09-24 08:23 UTC 重組；兩區塊各為該
 - ✅ 賭場 sector：最新 2026-09-23
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-24T08:23:14+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-24T08:45:20+00:00*
 
 ---
 
@@ -131,11 +131,11 @@ _README 由 build_readme.py 於 2026-09-24 08:23 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-09-24 07:48 UTC
+# Delta Radar (2308.TW) — 2026-09-24 08:45 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
+## 總判定：🟡 YELLOW
 
-## 🔀 前提 vs 價格：🔀 反向背離：前提轉紅、價格 20 日 +7.9% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 55.2，3 年分位 79 → 78
+## 前提 vs 價格：無背離（前提 YELLOW、價格 20 日 +7.9%）；PER 60.5，3 年分位 79 → 84
 
 GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、
 敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。
@@ -143,20 +143,83 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟡 YELLOW | capex_cut:5e(6m) / vr300_delay:18e(22m) / debt_financed_capex:16e / lc_psu_competition:0e |
+| M1 revenue_acceleration | 🟡 YELLOW | 2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月 |
+| M2 bullwhip_health | 🟢 GREEN | 合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32 |
+| M3 thai_shadow | 🟡 YELLOW | DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8% |
+| M4 customs_flow | 🟢 GREEN | US 進口 HS850440 (TH+TW) 近3月 $1399.9M, YoY +30.6% |
+| M5 narrative_triggers | 🟢 GREEN | capex_cut:5e(6m) / vr300_delay:17e(21m) / debt_financed_capex:16e / lc_psu_competition:0e |
+| M6 peer_divergence | 🔴 RED | cooling:3324領先+36pp |
+| M8 revision_velocity | ⚪ NO_DATA | 下修 0/上修 0（樣本不足 <3，NO_DATA） |
+| M9 valuation（觀察） | 🟢 GREEN | PER 60.5（3 年第 84 百分位；20 日前第 79）；觀察 |
 
-### M5 narrative_triggers — 🟡 YELLOW
+### M1 revenue_acceleration — 🟡 YELLOW
+```json
+{
+  "latest_month": "2026-08",
+  "latest_yoy_pct": 34.9,
+  "yoy_slope_pp_per_month": -2.9,
+  "consecutive_decel_months": 2
+}
+```
+
+### M2 bullwhip_health — 🟢 GREEN
+```json
+{
+  "as_of": "2026-06-30",
+  "contract_liab_qoq_pct": 17.3,
+  "inventory_qoq_pct": 17.0,
+  "fcf_to_net_income": 1.32,
+  "accounts_used": {
+    "contract": "CurrentContractLiabilities",
+    "inventory": "Inventories",
+    "ocf": "CashFlowsFromOperatingActivities",
+    "capex": "PropertyAndPlantAndEquipment",
+    "net_income": "IncomeAfterTaxes"
+  }
+}
+```
+
+### M3 thai_shadow — 🟡 YELLOW
+```json
+{
+  "latest_q": "2026-06-30",
+  "rev_yoy_pct": 52.5,
+  "gross_margin_pct": 26.8
+}
+```
+- 泰子公司毛利率 26.8% 跌破 27.0% 地板
+
+### M4 customs_flow — 🟢 GREEN
+```json
+{
+  "window": "2026-05..2026-07",
+  "rolling_value_usd_m": 1399.9,
+  "rolling_yoy_pct": 30.6,
+  "by_country": {
+    "THAILAND": {
+      "rolling_value_usd_m": 866.5,
+      "rolling_yoy_pct": 22.9
+    },
+    "TAIWAN": {
+      "rolling_value_usd_m": 533.4,
+      "rolling_yoy_pct": 45.3
+    }
+  }
+}
+```
+
+### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
   "events": {
     "capex_cut": 5,
-    "vr300_delay": 18,
+    "vr300_delay": 17,
     "debt_financed_capex": 16,
     "lc_psu_competition": 0
   },
   "mentions": {
     "capex_cut": 6,
-    "vr300_delay": 22,
+    "vr300_delay": 21,
     "debt_financed_capex": 16,
     "lc_psu_competition": 0
   },
@@ -165,21 +228,21 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
       "events": 5,
       "mentions": 6,
       "gate": "zscore",
-      "z": 1.56,
+      "z": 1.26,
       "denial": false
     },
     "vr300_delay": {
-      "events": 18,
-      "mentions": 22,
+      "events": 17,
+      "mentions": 21,
       "gate": "zscore",
-      "z": 0.49,
+      "z": -0.55,
       "denial": true
     },
     "debt_financed_capex": {
       "events": 16,
       "mentions": 16,
       "gate": "zscore",
-      "z": 1.4,
+      "z": 1.2,
       "denial": false
     },
     "lc_psu_competition": {
@@ -194,16 +257,87 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 ```
 - [capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review
 - [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
-- [capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
+- [capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - seekingalpha.com
 - [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
 - [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
-- [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
+- [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - wccftech.com
 - [debt_financed_capex] AI Companies’ Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - Yahoo Finance
 - [debt_financed_capex] Apollo Just Flashed Yellow on Hyperscaler Debt - Money Morning
 - [debt_financed_capex] The "debt black hole" behind the AI boom: $1.2 trillion external financing may be needed in the next five years - Bitget
 
+### M6 peer_divergence — 🔴 RED
+```json
+{
+  "groups": {
+    "power": {
+      "direction": "peer_lead_risk",
+      "delta_3m_yoy": 46.0,
+      "best_peer": "6282",
+      "best_peer_3m_yoy": 36.4,
+      "peer_lead_pp": -9.6,
+      "status": "GREEN",
+      "peers_3m_yoy": {
+        "2301": 33.3,
+        "6282": 36.4
+      }
+    },
+    "cooling": {
+      "direction": "peer_lead_risk",
+      "delta_3m_yoy": 46.0,
+      "best_peer": "3324",
+      "best_peer_3m_yoy": 82.0,
+      "peer_lead_pp": 36.0,
+      "status": "RED",
+      "peers_3m_yoy": {
+        "3324": 82.0,
+        "3017": 59.3
+      }
+    },
+    "rack": {
+      "direction": "cohort_confirm",
+      "delta_3m_yoy": 46.0,
+      "best_peer": "2382",
+      "best_peer_3m_yoy": 137.2,
+      "peer_lead_pp": 91.2,
+      "status": "GREEN",
+      "peers_3m_yoy": {
+        "2317": 52.8,
+        "2382": 137.2,
+        "6669": 39.8
+      }
+    }
+  }
+}
+```
+- [cooling] 3324 3m YoY 82.0% vs 2308 46.0%（領先 +36pp）
+
+### M8 revision_velocity — ⚪ NO_DATA
+```json
+{
+  "up_hits": 0,
+  "down_hits": 0,
+  "total": 0,
+  "down_ratio": null
+}
+```
+
+### M9 valuation — 🟢 GREEN
+```json
+{
+  "as_of": "2026-09-23",
+  "per": 60.47,
+  "per_pct": 84.2,
+  "per_then": 55.7,
+  "per_pct_then": 79.2,
+  "pbr": 16.8,
+  "dividend_yield": 0.61,
+  "history_years": 3,
+  "n": 734
+}
+```
+
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **6** 筆；state 已有 outcomes 的 entry：**118/118**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**119/119**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）
@@ -213,7 +347,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 | M2 | 15 / -8.78 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M3 | 27 / -10.89 | 10 / -1.89 | 1 | 無法判定（狀態翻轉 1 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M4 | 29 / -7.27 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M5 | 30 / -2.52 | 48 / -9.72 | 41 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
+| M5 | 30 / -2.52 | 48 / -9.72 | 42 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
 | M6 | 0 / — | 20 / -3.34 | 1 | 樣本不足（缺一側 cohort） |
 | M8 | 20 / -3.34 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 
