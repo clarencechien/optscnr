@@ -1,177 +1,170 @@
 {
-  "updated_at": "2026-09-23T23:04:41.861320",
+  "updated_at": "2026-09-24T23:20:23.850919",
   "stats": {
     "total_items": 106,
-    "items_with_company": 20,
-    "items_with_catalyst": 16,
-    "items_both": 3
+    "items_with_company": 27,
+    "items_with_catalyst": 21,
+    "items_both": 5
   },
-  "count": 15,
+  "count": 20,
   "tickers": [
+    "COST",
+    "ORCL",
+    "GOOGL",
     "META",
-    "MSFT",
-    "IONQ",
-    "INTC",
-    "AMZN",
-    "TSLA",
-    "SOFI",
-    "WMT",
-    "MU",
+    "ZS",
+    "PANW",
     "PLTR",
-    "PYPL",
+    "INTC",
     "NVDA",
+    "AMD",
+    "TSLA",
+    "BA",
     "TGT",
-    "BRK-B",
-    "NFLX"
+    "AMZN",
+    "GM",
+    "F",
+    "SBUX",
+    "MS",
+    "FSLR",
+    "MU"
   ],
   "details": [
     {
-      "symbol": "META",
+      "symbol": "COST",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Costco earnings beat expectations, thanks to tariff refunds",
+          "catalysts": [
+            "earnings beat"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Costco tops estimates as discount gas, bulk deals draw inflation-weary shoppers",
+          "catalysts": [
+            "tops estimates"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Oracle sends 'force majeure' notice about data center project — stock drops 3%",
+          "catalysts": [
+            "drops"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Oracle’s stock is falling as investors fear a data-center setback",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Analysis-Oracle, Blue Owl project delay sends ripples through AI financing, sources say",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Meta's standoff with Amazon over Muse could be a sign of things to come",
+          "title": "Meta gets to consumer AI device market before OpenAI, but Zuckerberg's strategy remains unproven",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Meta's Muse reignites AI disruption fears. Traders are targeting this brokerage stock as next casualty",
+          "title": "Lowe's is launching a drone delivery service in partnership with DoorDash, Alphabet",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 2.0,
+      "evidence": [
+        {
+          "title": "Meta gets to consumer AI device market before OpenAI, but Zuckerberg's strategy remains unproven",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Why Muse just added billions to Meta's market cap",
+          "title": "Mark Zuckerberg debuts $1,299 Meta VR Glasses and Muse Charm pendant as part of AI agent push",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "A rare Microsoft bear warms up to the stock. Here's what changed their mind",
-          "catalysts": [
-            "upgraded"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "IONQ",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "IonQ shares rise after company says it made a major quantum computing breakthrough",
-          "catalysts": [
-            "breakthrough"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Intel stock up 25% in last 5 days on CPU demand as AI agents gain traction",
-          "catalysts": [
-            "gain"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 1.0,
-      "evidence": [
+        },
         {
           "title": "Meta's standoff with Amazon over Muse could be a sign of things to come",
           "catalysts": [],
           "has_catalyst": false
-        },
-        {
-          "title": "Why McDonald's is following Walmart and Amazon into the advertising business",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
-      "score": 1.0,
+      "symbol": "ZS",
+      "score": 2,
       "evidence": [
         {
-          "title": "Tesla Roadster reveal is creating a unique options opportunity, says Mike Khouw",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Tesla’s supervised self-driving system often misreads speed limits, Belgian safety group finds",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Why Bernstein Still Sees 46% Upside in Zscaler (ZS) but Downgraded Palo Alto (PANW)",
+          "catalysts": [
+            "downgraded"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "SOFI",
-      "score": 1.0,
+      "symbol": "PANW",
+      "score": 2,
       "evidence": [
         {
-          "title": "72% of Americans would slow financial progress to enjoy life now, SoFi survey finds",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "How SoFi Is Turning Its Consumer App Into A Stablecoin Proving Ground",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Why McDonald's is following Walmart and Amazon into the advertising business",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Micron’s stock has become a ‘battleground’ as the AI narrative shifts",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Why Bernstein Still Sees 46% Upside in Zscaler (ZS) but Downgraded Palo Alto (PANW)",
+          "catalysts": [
+            "downgraded"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "PLTR",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Palantir’s stock sees its highest close of the year, sealing a dramatic comeback",
+          "title": "Anthropic seeks Palantir-style voting control for seven co-founders ahead of IPO, The Information reports",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Palantir Reveals Its AI Sovereignty Strategy And Wall Street Is Starting to Believe It",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PYPL",
-      "score": 0.5,
+      "symbol": "INTC",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Marram Exits PayPal Holdings (PYPL) Due to Thesis Breakdown",
+          "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Intel (INTC) Could Get a Fresh Valuation for Altera. AMD (AMD) Is the Rival to Watch",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -179,10 +172,53 @@
     },
     {
       "symbol": "NVDA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia doubles down on selling to both sides of the AI race",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Intel (INTC) Could Get a Fresh Valuation for Altera. AMD (AMD) Is the Rival to Watch",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Huawei Is Ramping Up to New Chips in 2027. What That Means for Nvidia Stock Now.",
+          "title": "Tesla poised to scale production of heavy-duty Semi trucks with opening of Nevada factory",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "What must happen for Boeing stock to get unstuck. The company needs, at least, to do its part",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -193,29 +229,84 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Utility Profits Could Be the Next Target",
+          "title": "Philadelphia Fed's Anna Paulson says 'modest' rate moves likely ahead to tame inflation",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "What Makes Berkshire Hathaway (BRK-B) a Strong Investment?",
+          "title": "Meta's standoff with Amazon over Muse could be a sign of things to come",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NFLX",
+      "symbol": "GM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "The Case for Buying Netflix Stock",
+          "title": "Hyundai expected to outsell Ford in third quarter as Detroit automakers lack hybrids",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "F",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Hyundai expected to outsell Ford in third quarter as Detroit automakers lack hybrids",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SBUX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Starbucks to shutter about 250 stores in latest round of cafe closures",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Here’s how to position your portfolio for the next AI wave, according to Morgan Stanley",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "FSLR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "First Solar leads big solar sector drop as high borrowing costs threaten project financing",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -223,7 +314,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 3,
-    "Anthropic (private)": 2
+    "OpenAI (private)": 2,
+    "Anthropic (private)": 1
   }
 }
