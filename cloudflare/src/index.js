@@ -144,7 +144,7 @@ async function health(env) {
   const now = new Date();
   // 84 小時：週一下午看得到週五的 run（36 小時會把週末正常沒跑的 workflow 標成紅的）
   const since = new Date(now.getTime() - 84 * 3600 * 1000).toISOString();
-  const workflows = ["scanner.yml", "catalyst_fetch.yml", "unknown_radar.yml", "space_radar.yml", "tw_scanner.yml", "delta_radar.yml"];
+  const workflows = ["scanner.yml", "catalyst_fetch.yml", "unknown_radar.yml", "space_radar.yml", "tw_scanner.yml", "delta_radar.yml", "tsmc_radar.yml"];
   const out = {};
   for (const wf of workflows) {
     try {
