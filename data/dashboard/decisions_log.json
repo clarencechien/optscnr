@@ -1,8 +1,18 @@
 {
- "generated_at": "2026-09-24T00:39:41Z",
- "n_days": 12,
+ "generated_at": "2026-09-24T23:16:53Z",
+ "n_days": 13,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-23",
+   "decided_at": "2026-09-24T00:35:43.030Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": false,
+   "error": null,
+   "n_candidates": 0,
+   "candidates": []
+  },
   {
    "market_date": "2026-09-22",
    "decided_at": "2026-09-23T00:23:02.189Z",
@@ -112,7 +122,7 @@
       "peak": 1.53,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-09-23"
+      "filled_at": "2026-09-24"
      }
     },
     {
@@ -153,7 +163,7 @@
       "peak": 1.39,
       "mature": false,
       "verdict": "➖持平(峰1.4x/今1.4x)",
-      "filled_at": "2026-09-23"
+      "filled_at": "2026-09-24"
      }
     },
     {
@@ -194,7 +204,7 @@
       "peak": 1.52,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-09-23"
+      "filled_at": "2026-09-24"
      }
     }
    ]
@@ -260,7 +270,7 @@
       "peak": 1.78,
       "mature": false,
       "verdict": "➖持平(峰1.8x/今1.8x)",
-      "filled_at": "2026-09-23"
+      "filled_at": "2026-09-24"
      }
     }
    ]
@@ -321,12 +331,12 @@
      "status": "answered",
      "outcome": {
       "t5": 1.81,
-      "t10": null,
+      "t10": 1.56,
       "t20": null,
       "peak": 1.81,
       "mature": false,
-      "verdict": "➖持平(峰1.8x/今1.8x)",
-      "filled_at": "2026-09-23"
+      "verdict": "➖持平(峰1.8x/今1.6x)",
+      "filled_at": "2026-09-24"
      }
     }
    ]
@@ -378,7 +388,7 @@
       "peak": 3.55,
       "mature": false,
       "verdict": "✅噴了(峰3.5x)",
-      "filled_at": "2026-09-23"
+      "filled_at": "2026-09-24"
      }
     }
    ]
@@ -430,7 +440,7 @@
       "peak": 3.68,
       "mature": false,
       "verdict": "✅噴了(峰3.7x)",
-      "filled_at": "2026-09-23"
+      "filled_at": "2026-09-24"
      }
     },
     {
@@ -471,7 +481,7 @@
       "peak": 3.47,
       "mature": false,
       "verdict": "✅噴了(峰3.5x)",
-      "filled_at": "2026-09-23"
+      "filled_at": "2026-09-24"
      }
     },
     {
@@ -512,7 +522,7 @@
       "peak": 3.67,
       "mature": false,
       "verdict": "✅噴了(峰3.7x)",
-      "filled_at": "2026-09-23"
+      "filled_at": "2026-09-24"
      }
     }
    ]
