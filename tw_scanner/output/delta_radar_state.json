@@ -12882,5 +12882,103 @@
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
+  },
+  {
+    "ts": "2026-09-25T08:10:31.112366+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:5e(6m) / vr300_delay:17e(21m) / debt_financed_capex:13e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 5,
+            "vr300_delay": 17,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 6,
+            "vr300_delay": 21,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 5,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": 1.04,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 17,
+              "mentions": 21,
+              "gate": "zscore",
+              "z": -0.42,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 13,
+              "mentions": 13,
+              "gate": "zscore",
+              "z": -0.71,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review",
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 247wallst.com",
+          "[capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[debt_financed_capex] AI Companies’ Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - Yahoo Finance",
+          "[debt_financed_capex] Apollo Just Flashed Yellow on Hyperscaler Debt - Money Morning",
+          "[debt_financed_capex] Big Tech's AI Spending Spree Turns to Debt as Bond Sales Top 50% of Capex - finance.biggo.com"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 YELLOW、價格 20 日 +7.9%）；PER 60.5，3 年分位 79 → 84",
+      "premise": "YELLOW",
+      "premise_ts": "2026-09-24T08:45:18.495279+00:00",
+      "ret_pct": 7.91,
+      "lookback_sessions": 20,
+      "as_of": "2026-09-24",
+      "valuation": {
+        "per": 60.47,
+        "per_pct": 84.2,
+        "per_then": 55.7,
+        "per_pct_then": 79.2,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-09-25",
+      "benchmark": "0050",
+      "entry_close": null,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
   }
 ]
