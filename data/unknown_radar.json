@@ -1,17 +1,41 @@
 {
-  "updated_at": "2026-09-23T23:57:45.830841",
-  "count": 1,
+  "updated_at": "2026-09-25T00:00:12.209188",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "Gabelli",
-      "ticker": "GDV-PK",
+      "name": "Nevada",
+      "ticker": "NKGFD",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Tesla poised to scale production of heavy-duty Semi trucks with opening of Nevada factory",
+        "Tesla poised to scale production of heavy-duty Semi trucks with opening of Nevada factory"
+      ]
+    },
+    {
+      "name": "MGM Resorts",
+      "ticker": "MGM",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Why Myers Industries (MYE) Was a Top Performer for Gabelli in Q2",
-        "Why Gorman-Rupp Co. (GRC) Was a Top Performer for Gabelli in Q2"
+        "MGM Resorts shares sink 11% after Barry Diller's People Inc. rescinds takeover offer",
+        "MGM Resorts shares sink 11% after Barry Diller's People Inc. rescinds takeover offer"
+      ]
+    },
+    {
+      "name": "DoorDash",
+      "ticker": "DASH",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Lowe's is launching a drone delivery service in partnership with DoorDash, Alphabet",
+        "Lowe's is launching a drone delivery service in partnership with DoorDash, Alphabet"
       ]
     }
   ]
