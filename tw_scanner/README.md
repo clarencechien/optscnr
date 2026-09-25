@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-09-25 08:45 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-09-25 18:07 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -107,10 +107,10 @@ _README 由 build_readme.py 於 2026-09-25 08:45 UTC 重組；兩區塊各為該
 - ✅ DCA 帳本：最新 2026-09-24
 - ✅ delta_radar：最新 2026-09-25
 - ✅ tsmc_radar：最新 2026-09-25
-- ✅ 賭場 sector：最新 2026-09-24
+- ✅ 賭場 sector：最新 2026-09-25
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-25T08:45:38+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-25T18:07:03+00:00*
 
 ---
 
@@ -381,7 +381,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 ---
 
-# 🎰 賭場 sector — AI 個股影子追蹤（2026-09-24）
+# 🎰 賭場 sector — AI 個股影子追蹤（2026-09-25）
 
 > 賭場 sector：小部位、預算固定、名單是人挑的、沒有訊號、期望值未證明。只收資料。 基準 0050。判準：先寫死：籃子 DCA 對 0050 DCA 至少 12 個月；「月營收加速前三分之一 vs 後三分之一」的 T+20 超額各 n≥30 才准下結論。之前一律「累積中」。
 
