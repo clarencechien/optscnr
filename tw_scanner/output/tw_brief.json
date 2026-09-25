@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-25T08:10:33+00:00",
+ "generated_at": "2026-09-25T08:45:38+00:00",
  "today": "2026-09-25",
  "cadence": "weekly",
  "tldr": [
@@ -291,18 +291,11 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-09-24",
-  "age_days": 1,
-  "last_overall": "GREEN",
+  "as_of": "2026-09-25",
+  "age_days": 0,
+  "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
-   "m1",
-   "m2",
-   "m3",
-   "m4",
-   "m5",
-   "m6",
-   "m8",
-   "m9"
+   "m5"
   ],
   "full_overall": "GREEN",
   "full_ts": "2026-09-24",
@@ -334,8 +327,8 @@
    {
     "module": "M5 narrative_triggers",
     "status": "YELLOW",
-    "headline": "export_controls_tariffs:17e / n2_arizona_ramp:9e(11m) / cowos_capacity:6e / geopolitics:3e / hyperscaler_capex:5e(6m)",
-    "ts": "2026-09-24T09:22:12.364299+00:00"
+    "headline": "export_controls_tariffs:16e / n2_arizona_ramp:8e(10m) / cowos_capacity:7e / geopolitics:5e / hyperscaler_capex:5e(6m)",
+    "ts": "2026-09-25T08:45:35.360607+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -360,7 +353,7 @@
    "flag": null,
    "text": "無背離（前提 GREEN、價格 20 日 +2.7%）；PER 29.0，3 年分位 73 → 79",
    "premise": "GREEN",
-   "premise_ts": "2026-09-24T09:22:12.017082+00:00",
+   "premise_ts": "2026-09-24T09:22:12.364299+00:00",
    "ret_pct": 2.7,
    "lookback_sessions": 20,
    "as_of": "2026-09-24",
@@ -642,7 +635,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-09-24"
+   "text": "tsmc_radar：最新 2026-09-25"
   },
   {
    "level": "ok",

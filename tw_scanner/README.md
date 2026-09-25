@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-09-25 08:10 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-09-25 08:45 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -65,7 +65,7 @@ _README 由 build_readme.py 於 2026-09-25 08:10 UTC 重組；兩區塊各為該
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9
   - 🟢 M3 adr_premium：ADR 溢價 +14.9%（1 年第 25 百分位；觀察）
   - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0%
-  - 🟡 M5 narrative_triggers：export_controls_tariffs:17e / n2_arizona_ramp:9e(11m) / cowos_capacity:6e / geopolitics:3e / hyperscaler_capex:5e(6m)
+  - 🟡 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:8e(10m) / cowos_capacity:7e / geopolitics:5e / hyperscaler_capex:5e(6m)
   - 🟢 M6 peer_divergence：cohort 內 2330 未被對手顯著反超（離散在容忍帶內）
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 29.0（3 年第 79 百分位；20 日前第 73）；觀察
@@ -106,11 +106,11 @@ _README 由 build_readme.py 於 2026-09-25 08:10 UTC 重組；兩區塊各為該
 - ✅ 天氣台：最新 2026-09-24
 - ✅ DCA 帳本：最新 2026-09-24
 - ✅ delta_radar：最新 2026-09-25
-- ✅ tsmc_radar：最新 2026-09-24
+- ✅ tsmc_radar：最新 2026-09-25
 - ✅ 賭場 sector：最新 2026-09-24
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-25T08:10:33+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-25T08:45:38+00:00*
 
 ---
 
@@ -224,9 +224,9 @@ _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組�
 
 ---
 
-# TSMC Radar (2330.TW) — 2026-09-24 09:22 UTC
+# TSMC Radar (2330.TW) — 2026-09-25 08:45 UTC
 
-## 總判定：🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
 ## 前提 vs 價格：無背離（前提 GREEN、價格 20 日 +2.7%）；PER 29.0，3 年分位 73 → 79
 
@@ -236,210 +236,82 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M1 revenue_acceleration | 🟢 GREEN | 2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月 |
-| M2 bullwhip_health | 🟢 GREEN | 合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9 |
-| M3 adr_premium（觀察） | 🟢 GREEN | ADR 溢價 +14.9%（1 年第 25 百分位；觀察） |
-| M4 customs_flow | 🟢 GREEN | US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0% |
-| M5 narrative_triggers | 🟡 YELLOW | export_controls_tariffs:17e / n2_arizona_ramp:9e(11m) / cowos_capacity:6e / geopolitics:3e / hyperscaler_capex:5e(6m) |
-| M6 peer_divergence | 🟢 GREEN | cohort 內 2330 未被對手顯著反超（離散在容忍帶內） |
-| M8 revision_velocity | ⚪ NO_DATA | 下修 0/上修 0（樣本不足 <3，NO_DATA） |
-| M9 valuation（觀察） | 🟢 GREEN | PER 29.0（3 年第 79 百分位；20 日前第 73）；觀察 |
-
-### M1 revenue_acceleration — 🟢 GREEN
-```json
-{
-  "latest_month": "2026-08",
-  "latest_yoy_pct": 53.3,
-  "yoy_slope_pp_per_month": 7.74,
-  "consecutive_decel_months": 0
-}
-```
-
-### M2 bullwhip_health — 🟢 GREEN
-```json
-{
-  "as_of": null,
-  "contract_liab_qoq_pct": null,
-  "inventory_qoq_pct": 23.8,
-  "fcf_to_net_income": 0.9,
-  "accounts_used": {
-    "contract": "",
-    "inventory": "Inventories",
-    "ocf": "CashFlowsFromOperatingActivities",
-    "capex": "PropertyAndPlantAndEquipment",
-    "net_income": "IncomeAfterTaxes"
-  }
-}
-```
-
-### M3 adr_premium — 🟢 GREEN
-```json
-{
-  "as_of": "2026-09-24",
-  "premium_pct": 14.91,
-  "percentile_1y": 25.3,
-  "n": 372
-}
-```
-
-### M4 customs_flow — 🟢 GREEN
-```json
-{
-  "window": "2026-05..2026-07",
-  "rolling_value_usd_m": 3643.7,
-  "rolling_yoy_pct": 58.0,
-  "by_country": {
-    "TAIWAN": {
-      "rolling_value_usd_m": 3643.7,
-      "rolling_yoy_pct": 58.0
-    }
-  }
-}
-```
+| M5 narrative_triggers | 🟡 YELLOW | export_controls_tariffs:16e / n2_arizona_ramp:8e(10m) / cowos_capacity:7e / geopolitics:5e / hyperscaler_capex:5e(6m) |
 
 ### M5 narrative_triggers — 🟡 YELLOW
 ```json
 {
   "events": {
-    "export_controls_tariffs": 17,
-    "n2_arizona_ramp": 9,
-    "cowos_capacity": 6,
-    "geopolitics": 3,
+    "export_controls_tariffs": 16,
+    "n2_arizona_ramp": 8,
+    "cowos_capacity": 7,
+    "geopolitics": 5,
     "hyperscaler_capex": 5
   },
   "mentions": {
-    "export_controls_tariffs": 17,
-    "n2_arizona_ramp": 11,
-    "cowos_capacity": 6,
-    "geopolitics": 3,
+    "export_controls_tariffs": 16,
+    "n2_arizona_ramp": 10,
+    "cowos_capacity": 7,
+    "geopolitics": 5,
     "hyperscaler_capex": 6
   },
   "scoring": {
     "export_controls_tariffs": {
-      "events": 17,
-      "mentions": 17,
+      "events": 16,
+      "mentions": 16,
       "gate": "zscore",
-      "z": 1.22,
+      "z": 0.23,
       "denial": false
     },
     "n2_arizona_ramp": {
-      "events": 9,
-      "mentions": 11,
+      "events": 8,
+      "mentions": 10,
       "gate": "zscore",
-      "z": 0.56,
+      "z": -0.25,
       "denial": false
     },
     "cowos_capacity": {
-      "events": 6,
-      "mentions": 6,
+      "events": 7,
+      "mentions": 7,
       "gate": "zscore",
-      "z": -0.91,
+      "z": 0.3,
       "denial": true
     },
     "geopolitics": {
-      "events": 3,
-      "mentions": 3,
+      "events": 5,
+      "mentions": 5,
       "gate": "zscore",
-      "z": -1.36,
+      "z": 1.97,
       "denial": false
     },
     "hyperscaler_capex": {
       "events": 5,
       "mentions": 6,
       "gate": "zscore",
-      "z": 1.56,
+      "z": 1.26,
       "denial": false
     }
   }
 }
 ```
+- [export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F
 - [export_controls_tariffs] Huawei chairman thanks the US for export restrictions on chips, says it supercharged China’s semiconductor industry — Wa
 - [export_controls_tariffs] Key facts: TSMC to Invest Up to $265B in Arizona; Reviews Export Controls - TradingView
-- [export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F
-- [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea
-- [n2_arizona_ramp] Intel and Samsung advance 2nm GAA, but yield gaps leave TSMC as the sole external supplier - digitimes
+- [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - businesskorea.co.kr
 - [n2_arizona_ramp] Samsung's 2nm Yield Recovers to 55%... Qualcomm Return Hinges on Sept. 22 Summit - finance.biggo.com
+- [n2_arizona_ramp] Samsung's Texas 2nm Fab Fully Booked; Yields Hit 80%, Closing In on TSMC - finance.biggo.com
 - [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech
 - [cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes
-- [cowos_capacity] TSMC Accelerates CoPoS Packaging to Replace CoWoS, as Glass Core Substrates Cut Costs 30% and Boost Wafer Utilization Pa
+- [cowos_capacity] TSMC's CoWoS Shortage Fuels Outsourcing Expansion, But Intel and Taiwan's OSATs Are Chasing Different Opportunities - Xe
 - [geopolitics] China's president Xi Jinping calls Taiwan reunification "unstoppable" — military drills around the island escalate in ar
+- [geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India
 - [geopolitics] China Rings Taiwan With Live-Fire Drills, Tensions Spike - Modern Diplomacy
-- [geopolitics] China’s planned military exercises near Taiwan may have another target: Japan - The Japan Times
 - [hyperscaler_capex] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review
 - [hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
 - [hyperscaler_capex] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
 
-### M6 peer_divergence — 🟢 GREEN
-```json
-{
-  "groups": {
-    "foundry_contrast": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 55.3,
-      "best_peer": "2303",
-      "best_peer_3m_yoy": 24.2,
-      "peer_lead_pp": -31.1,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "2303": 24.2
-      }
-    },
-    "backend": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 55.3,
-      "best_peer": "2383",
-      "best_peer_3m_yoy": 126.6,
-      "peer_lead_pp": 71.4,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "3711": 40.6,
-        "3037": 45.4,
-        "2383": 126.6
-      }
-    },
-    "asic_lead": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 55.3,
-      "best_peer": "3661",
-      "best_peer_3m_yoy": 156.9,
-      "peer_lead_pp": 101.6,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "3661": 156.9,
-        "3443": 124.4
-      }
-    }
-  }
-}
-```
-
-### M8 revision_velocity — ⚪ NO_DATA
-```json
-{
-  "up_hits": 0,
-  "down_hits": 0,
-  "total": 0,
-  "down_ratio": null
-}
-```
-
-### M9 valuation — 🟢 GREEN
-```json
-{
-  "as_of": "2026-09-23",
-  "per": 28.98,
-  "per_pct": 79.3,
-  "per_then": 27.99,
-  "per_pct_then": 72.8,
-  "pbr": 10.08,
-  "dividend_yield": 0.88,
-  "history_years": 3,
-  "n": 734
-}
-```
-
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**12/12**
+- 本次回填 **2** 筆；state 已有 outcomes 的 entry：**13/13**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---
