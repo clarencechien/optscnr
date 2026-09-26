@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T05:58:57.478322",
+  "updated_at": "2026-09-26T06:12:00.986194",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -9,21 +9,33 @@
     "MIN_VOL_RATIO": 1.2,
     "MIN_AVG_VOLUME": 500000
   },
-  "count": 1,
+  "count": 2,
   "tickers": [
-    "SEDG"
+    "PLNT",
+    "HUBS"
   ],
   "details": [
     {
-      "symbol": "SEDG",
-      "price": 34.68,
-      "high_52w": 81.25,
-      "low_52w": 28.21,
-      "drawdown_pct": 57.3,
-      "rebound_pct": 22.9,
+      "symbol": "PLNT",
+      "price": 42.68,
+      "high_52w": 114.26,
+      "low_52w": 37.03,
+      "drawdown_pct": 62.6,
+      "rebound_pct": 15.3,
+      "vol_ratio": 1.59,
+      "market_cap_b": 3.2,
+      "score": 29.62
+    },
+    {
+      "symbol": "HUBS",
+      "price": 213.74,
+      "high_52w": 524.63,
+      "low_52w": 169.63,
+      "drawdown_pct": 59.3,
+      "rebound_pct": 26.0,
       "vol_ratio": 1.24,
-      "market_cap_b": 2.1,
-      "score": 22.96
+      "market_cap_b": 10.7,
+      "score": 22.95
     }
   ]
 }
