@@ -255,3 +255,7 @@
 - GOOGL ｜ 搜尋反壟斷案終判 2025-12 落地，Google 於 2026-01 上訴並請求暫緩部分救濟，DOJ 與各州 2026-02 亦提上訴（10-K FY2025） ｜ 2026-02-28 ｜ https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm ｜ 2026-09-16 LLM 提案
 - IBIT ｜ 2026-09-18 IBIT 自前收 43.30 上行至 46.02（+6.28%），成交量 8389 萬股 vs 均量 4815 萬股；52 週區間 32.84–71.82、YTD −7.31%、淨資產 614.4 億美元 ｜ 2026-09-18 ｜ https://finance.yahoo.com/quote/IBIT/ ｜ 2026-09-18 LLM 提案
 - IBIT ｜ 依 10-Q，IBIT 截至 2026-06-30 持有 734,261 顆比特幣，公允價值 $43,395,920,710；2026-03-31 為 783,744 顆，一季減少 49,483 顆 ｜ 2026-06-30 ｜ https://www.sec.gov/Archives/edgar/data/0001980994/000143774926026004/bit20260630c_10q.htm ｜ 2026-09-22 LLM 提案
+- PCG ｜ PG&E 於 2026-09-24 公告，2026 年第三季財報電話會議定在 2026-10-22 美東時間 11:00，電話重播開放到 2026-10-29。 ｜ 2026-10-22 ｜ https://www.prnewswire.com/news-releases/pge-corporation-schedules-third-quarter-2026-earnings-release-and-conference-call-302889827.html ｜ 2026-09-25 LLM 提案
+- PCG ｜ 加州野火責任立法沒有達成協議。PCG 在 2026-08-31 盤前跌逾 16%，收盤跌 18.6% 到 $13.51；股價從 8 月約 $18 一路跌到 9/15 收 $13.15。 ｜ 2026-08-31 ｜ https://stockstotrade.com/news/pacific-gas-electric-co-pcg-news-2026_09_15/ ｜ 2026-09-25 LLM 提案
+- PCG ｜ 立法受挫之後，PG&E 將遞延約 $2B 的 2027 年計畫投資，並正式啟動策略檢討（2026-09-15 報導）。 ｜ 2026-09-15 ｜ https://stockstotrade.com/news/pacific-gas-electric-co-pcg-news-2026_09_15/ ｜ 2026-09-25 LLM 提案
+- PCG ｜ 據 Bloomberg 2026-09-23 報導，PG&E 在策略檢討中考慮分拆部分資產；PCG 當日收 $12.41，跌 3.65%，成交量約 4,533 萬股，52 週低點為 $12.59。 ｜ 2026-09-23 ｜ https://www.ad-hoc-news.de/boerse/news/corporate-news/pg-and-e-corporation-stock-falls-3-65-percent-ahead-of-the-open/70172495 ｜ 2026-09-25 LLM 提案
