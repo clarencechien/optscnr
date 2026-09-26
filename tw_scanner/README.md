@@ -1,12 +1,12 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-09-25 18:07 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-09-26 08:00 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
 ---
 
-# 📬 台股週報 — 2026-09-25
+# 📬 台股週報 — 2026-09-26
 
 > 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。**沒有任何一行是買賣建議；曝險與部位由人管。**
 
@@ -52,7 +52,7 @@ _README 由 build_readme.py 於 2026-09-25 18:07 UTC 重組；兩區塊各為該
   - 🟢 M2 bullwhip_health：合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32
   - 🟡 M3 thai_shadow：DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8%
   - 🟢 M4 customs_flow：US 進口 HS850440 (TH+TW) 近3月 $1399.9M, YoY +30.6%
-  - 🟢 M5 narrative_triggers：capex_cut:5e(6m) / vr300_delay:17e(21m) / debt_financed_capex:13e / lc_psu_competition:0e
+  - ⚪ M5 narrative_triggers：all RSS feeds failed
   - 🔴 M6 peer_divergence：cooling:3324領先+36pp
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 60.5（3 年第 84 百分位；20 日前第 79）；觀察
@@ -99,18 +99,18 @@ _README 由 build_readme.py 於 2026-09-25 18:07 UTC 重組；兩區塊各為該
 
 ## 5. 下週日曆
 
-- 2026-10-10（15 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
+- 2026-10-10（14 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
 
 ## 6. 資料健康
 
 - ✅ 天氣台：最新 2026-09-24
 - ✅ DCA 帳本：最新 2026-09-24
-- ✅ delta_radar：最新 2026-09-25
+- ✅ delta_radar：最新 2026-09-26
 - ✅ tsmc_radar：最新 2026-09-25
 - ✅ 賭場 sector：最新 2026-09-25
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-25T18:07:03+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-26T08:00:07+00:00*
 
 ---
 
@@ -131,9 +131,9 @@ _README 由 build_readme.py 於 2026-09-25 18:07 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-09-25 08:10 UTC
+# Delta Radar (2308.TW) — 2026-09-26 08:00 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 ⚪ NO_DATA
 
 ## 前提 vs 價格：無背離（前提 YELLOW、價格 20 日 +7.9%）；PER 60.5，3 年分位 79 → 84
 
@@ -143,67 +143,17 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟢 GREEN | capex_cut:5e(6m) / vr300_delay:17e(21m) / debt_financed_capex:13e / lc_psu_competition:0e |
+| M5 narrative_triggers | ⚪ NO_DATA | all RSS feeds failed |
 
-### M5 narrative_triggers — 🟢 GREEN
-```json
-{
-  "events": {
-    "capex_cut": 5,
-    "vr300_delay": 17,
-    "debt_financed_capex": 13,
-    "lc_psu_competition": 0
-  },
-  "mentions": {
-    "capex_cut": 6,
-    "vr300_delay": 21,
-    "debt_financed_capex": 13,
-    "lc_psu_competition": 0
-  },
-  "scoring": {
-    "capex_cut": {
-      "events": 5,
-      "mentions": 6,
-      "gate": "zscore",
-      "z": 1.04,
-      "denial": false
-    },
-    "vr300_delay": {
-      "events": 17,
-      "mentions": 21,
-      "gate": "zscore",
-      "z": -0.42,
-      "denial": true
-    },
-    "debt_financed_capex": {
-      "events": 13,
-      "mentions": 13,
-      "gate": "zscore",
-      "z": -0.71,
-      "denial": false
-    },
-    "lc_psu_competition": {
-      "events": 0,
-      "mentions": 0,
-      "gate": "absolute",
-      "z": null,
-      "denial": false
-    }
-  }
-}
-```
-- [capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review
-- [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 247wallst.com
-- [capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
-- [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
-- [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
-- [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
-- [debt_financed_capex] AI Companies’ Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - Yahoo Finance
-- [debt_financed_capex] Apollo Just Flashed Yellow on Hyperscaler Debt - Money Morning
-- [debt_financed_capex] Big Tech's AI Spending Spree Turns to Debt as Bond Sales Top 50% of Capex - finance.biggo.com
+### M5 narrative_triggers — ⚪ NO_DATA
+- feed capex_cut failed: HTTP Error 503: Service Unavailable
+- feed vr300_delay failed: HTTP Error 503: Service Unavailable
+- feed debt_financed_capex failed: HTTP Error 503: Service Unavailable
+- feed lc_psu_competition failed: HTTP Error 503: Service Unavailable
+- ⚠️ degraded: all RSS feeds failed
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**120/120**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**121/121**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）

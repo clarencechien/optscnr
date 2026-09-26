@@ -12980,5 +12980,55 @@
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
+  },
+  {
+    "ts": "2026-09-26T08:00:06.115722+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "NO_DATA",
+        "headline": "",
+        "metrics": {},
+        "notes": [
+          "feed capex_cut failed: HTTP Error 503: Service Unavailable",
+          "feed vr300_delay failed: HTTP Error 503: Service Unavailable",
+          "feed debt_financed_capex failed: HTTP Error 503: Service Unavailable",
+          "feed lc_psu_competition failed: HTTP Error 503: Service Unavailable"
+        ],
+        "error": "all RSS feeds failed",
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 YELLOW、價格 20 日 +7.9%）；PER 60.5，3 年分位 79 → 84",
+      "premise": "YELLOW",
+      "premise_ts": "2026-09-24T08:45:18.495279+00:00",
+      "ret_pct": 7.91,
+      "lookback_sessions": 20,
+      "as_of": "2026-09-24",
+      "valuation": {
+        "per": 60.47,
+        "per_pct": 84.2,
+        "per_then": 55.7,
+        "per_pct_then": 79.2,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-09-26",
+      "benchmark": "0050",
+      "entry_close": null,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
   }
 ]
