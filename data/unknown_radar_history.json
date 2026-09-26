@@ -1,17 +1,10 @@
 {
   "Nasdaq": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-22",
-    "consecutive_days": 5,
-    "total_mentions": 11,
+    "last_seen": "2026-09-26",
+    "consecutive_days": 6,
+    "total_mentions": 13,
     "ticker": "NDAQ"
-  },
-  "Accenture": {
-    "first_seen": "2026-09-18",
-    "last_seen": "2026-09-18",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ACN"
   },
   "Sonoma": {
     "first_seen": "2026-09-20",

@@ -1,41 +1,17 @@
 {
-  "updated_at": "2026-09-25T00:00:12.209188",
-  "count": 3,
+  "updated_at": "2026-09-26T00:09:07.750973",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Nevada",
-      "ticker": "NKGFD",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Tesla poised to scale production of heavy-duty Semi trucks with opening of Nevada factory",
-        "Tesla poised to scale production of heavy-duty Semi trucks with opening of Nevada factory"
-      ]
-    },
-    {
-      "name": "MGM Resorts",
-      "ticker": "MGM",
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 13,
+      "consecutive_days": 6,
+      "is_strong": true,
       "evidence": [
-        "MGM Resorts shares sink 11% after Barry Diller's People Inc. rescinds takeover offer",
-        "MGM Resorts shares sink 11% after Barry Diller's People Inc. rescinds takeover offer"
-      ]
-    },
-    {
-      "name": "DoorDash",
-      "ticker": "DASH",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Lowe's is launching a drone delivery service in partnership with DoorDash, Alphabet",
-        "Lowe's is launching a drone delivery service in partnership with DoorDash, Alphabet"
+        "Top 10 things to watch in the stock market Friday",
+        "Paramount Skydance to move stock listing to NYSE from Nasdaq"
       ]
     }
   ]
