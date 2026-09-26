@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-09-26 08:00 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-09-26 08:32 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -65,7 +65,7 @@ _README 由 build_readme.py 於 2026-09-26 08:00 UTC 重組；兩區塊各為該
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9
   - 🟢 M3 adr_premium：ADR 溢價 +14.9%（1 年第 25 百分位；觀察）
   - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0%
-  - 🟡 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:8e(10m) / cowos_capacity:7e / geopolitics:5e / hyperscaler_capex:5e(6m)
+  - 🟢 M5 narrative_triggers：export_controls_tariffs:17e / n2_arizona_ramp:10e(11m) / cowos_capacity:7e / geopolitics:4e / hyperscaler_capex:5e
   - 🟢 M6 peer_divergence：cohort 內 2330 未被對手顯著反超（離散在容忍帶內）
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 29.0（3 年第 79 百分位；20 日前第 73）；觀察
@@ -106,11 +106,11 @@ _README 由 build_readme.py 於 2026-09-26 08:00 UTC 重組；兩區塊各為該
 - ✅ 天氣台：最新 2026-09-24
 - ✅ DCA 帳本：最新 2026-09-24
 - ✅ delta_radar：最新 2026-09-26
-- ✅ tsmc_radar：最新 2026-09-25
+- ✅ tsmc_radar：最新 2026-09-26
 - ✅ 賭場 sector：最新 2026-09-25
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-26T08:00:07+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-09-26T08:32:16+00:00*
 
 ---
 
@@ -174,7 +174,7 @@ _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組�
 
 ---
 
-# TSMC Radar (2330.TW) — 2026-09-25 08:45 UTC
+# TSMC Radar (2330.TW) — 2026-09-26 08:32 UTC
 
 ## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
@@ -186,59 +186,59 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟡 YELLOW | export_controls_tariffs:16e / n2_arizona_ramp:8e(10m) / cowos_capacity:7e / geopolitics:5e / hyperscaler_capex:5e(6m) |
+| M5 narrative_triggers | 🟢 GREEN | export_controls_tariffs:17e / n2_arizona_ramp:10e(11m) / cowos_capacity:7e / geopolitics:4e / hyperscaler_capex:5e |
 
-### M5 narrative_triggers — 🟡 YELLOW
+### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
   "events": {
-    "export_controls_tariffs": 16,
-    "n2_arizona_ramp": 8,
+    "export_controls_tariffs": 17,
+    "n2_arizona_ramp": 10,
     "cowos_capacity": 7,
-    "geopolitics": 5,
+    "geopolitics": 4,
     "hyperscaler_capex": 5
   },
   "mentions": {
-    "export_controls_tariffs": 16,
-    "n2_arizona_ramp": 10,
+    "export_controls_tariffs": 17,
+    "n2_arizona_ramp": 11,
     "cowos_capacity": 7,
-    "geopolitics": 5,
-    "hyperscaler_capex": 6
+    "geopolitics": 4,
+    "hyperscaler_capex": 5
   },
   "scoring": {
     "export_controls_tariffs": {
-      "events": 16,
-      "mentions": 16,
+      "events": 17,
+      "mentions": 17,
       "gate": "zscore",
-      "z": 0.23,
+      "z": 1.07,
       "denial": false
     },
     "n2_arizona_ramp": {
-      "events": 8,
-      "mentions": 10,
+      "events": 10,
+      "mentions": 11,
       "gate": "zscore",
-      "z": -0.25,
+      "z": 1.13,
       "denial": false
     },
     "cowos_capacity": {
       "events": 7,
       "mentions": 7,
       "gate": "zscore",
-      "z": 0.3,
+      "z": 0.45,
       "denial": true
     },
     "geopolitics": {
-      "events": 5,
-      "mentions": 5,
+      "events": 4,
+      "mentions": 4,
       "gate": "zscore",
-      "z": 1.97,
+      "z": 0.24,
       "denial": false
     },
     "hyperscaler_capex": {
       "events": 5,
-      "mentions": 6,
+      "mentions": 5,
       "gate": "zscore",
-      "z": 1.26,
+      "z": 1.04,
       "denial": false
     }
   }
@@ -247,7 +247,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F
 - [export_controls_tariffs] Huawei chairman thanks the US for export restrictions on chips, says it supercharged China’s semiconductor industry — Wa
 - [export_controls_tariffs] Key facts: TSMC to Invest Up to $265B in Arizona; Reviews Export Controls - TradingView
-- [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - businesskorea.co.kr
+- [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea
 - [n2_arizona_ramp] Samsung's 2nm Yield Recovers to 55%... Qualcomm Return Hinges on Sept. 22 Summit - finance.biggo.com
 - [n2_arizona_ramp] Samsung's Texas 2nm Fab Fully Booked; Yields Hit 80%, Closing In on TSMC - finance.biggo.com
 - [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech
@@ -255,13 +255,13 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [cowos_capacity] TSMC's CoWoS Shortage Fuels Outsourcing Expansion, But Intel and Taiwan's OSATs Are Chasing Different Opportunities - Xe
 - [geopolitics] China's president Xi Jinping calls Taiwan reunification "unstoppable" — military drills around the island escalate in ar
 - [geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India
-- [geopolitics] China Rings Taiwan With Live-Fire Drills, Tensions Spike - Modern Diplomacy
+- [geopolitics] Ships Delay Sailing to Taiwan Port to Avoid China Military Drills - Caixin Global
 - [hyperscaler_capex] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review
 - [hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
 - [hyperscaler_capex] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **2** 筆；state 已有 outcomes 的 entry：**13/13**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**14/14**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---

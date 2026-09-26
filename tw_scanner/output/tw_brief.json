@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-26T08:00:07+00:00",
+ "generated_at": "2026-09-26T08:32:16+00:00",
  "today": "2026-09-26",
  "cadence": "weekly",
  "tldr": [
@@ -291,8 +291,8 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-09-25",
-  "age_days": 1,
+  "as_of": "2026-09-26",
+  "age_days": 0,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -326,9 +326,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "YELLOW",
-    "headline": "export_controls_tariffs:16e / n2_arizona_ramp:8e(10m) / cowos_capacity:7e / geopolitics:5e / hyperscaler_capex:5e(6m)",
-    "ts": "2026-09-25T08:45:35.360607+00:00"
+    "status": "GREEN",
+    "headline": "export_controls_tariffs:17e / n2_arizona_ramp:10e(11m) / cowos_capacity:7e / geopolitics:4e / hyperscaler_capex:5e",
+    "ts": "2026-09-26T08:32:11.782549+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -635,7 +635,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-09-25"
+   "text": "tsmc_radar：最新 2026-09-26"
   },
   {
    "level": "ok",
