@@ -89,5 +89,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "DASH"
+  },
+  "Alibaba": {
+    "first_seen": "2026-09-27",
+    "last_seen": "2026-09-27",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BBAAY"
   }
 }
