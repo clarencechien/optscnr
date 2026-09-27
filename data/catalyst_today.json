@@ -1,77 +1,49 @@
 {
-  "updated_at": "2026-09-25T23:27:07.600582",
+  "updated_at": "2026-09-27T23:19:11.911018",
   "stats": {
     "total_items": 106,
     "items_with_company": 20,
-    "items_with_catalyst": 16,
-    "items_both": 4
+    "items_with_catalyst": 14,
+    "items_both": 1
   },
   "count": 16,
   "tickers": [
-    "META",
-    "AAPL",
-    "TSLA",
+    "NVDA",
     "PANW",
     "ZS",
+    "META",
     "MU",
-    "MSFT",
-    "NVDA",
+    "XYZ",
     "INTC",
     "AMD",
-    "GOOGL",
+    "AAPL",
+    "BA",
+    "BRK-B",
+    "MSFT",
     "CRM",
     "NKE",
-    "XYZ",
     "BAC",
     "PLTR"
   ],
   "details": [
     {
-      "symbol": "META",
-      "score": 4.0,
+      "symbol": "NVDA",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "CEO who posted 'Lake America' sweatshirt photos is no longer with the company",
+          "title": "Micron could dethrone Nvidia and become the biggest driver of S&P 500 profit growth",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": " Meta's 'powerful breakout' sets up a unique trading strategy, says Mike Khouw",
-          "catalysts": [
-            "breakout"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Meta gets to consumer AI device market before OpenAI, but Zuckerberg's strategy remains unproven",
+          "title": "China weighs allowing ByteDance, Alibaba to buy new Nvidia chips, The Information reports",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 2,
-      "evidence": [
+        },
         {
-          "title": "Apple’s expensive new iPhones could be a double-edged sword for the company",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Tesla’s stock falls as launch of Semi truck fails to excite investors",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
+          "title": "China may permit Alibaba, ByteDance to buy new Nvidia chips – The Information",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
@@ -102,16 +74,37 @@
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "META",
       "score": 1.5,
       "evidence": [
         {
-          "title": "What we want to see next week from one of Jim Cramer's 6 stocks to buy",
+          "title": "Meta's Muse agent is attacking one of the economy's most profitable weak spots",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Micron investors should get ready for a seesaw ride, analyst says",
+          "title": "CEO who posted 'Lake America' sweatshirt photos is no longer with the company",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Bank of America backs Meta stock after Muse surprise",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Here are the 4 big things we're watching in the stock market in the week ahead",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Micron could dethrone Nvidia and become the biggest driver of S&P 500 profit growth",
           "catalysts": [],
           "has_catalyst": false
         },
@@ -123,42 +116,16 @@
       ]
     },
     {
-      "symbol": "MSFT",
-      "score": 1.5,
+      "symbol": "XYZ",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Microsoft packages business AI in single app as it tries to compete with Anthropic",
+          "title": "White House moves to block $810 million in funding through pocket rescission",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Microsoft’s stock has roared back to life, closing at its highest level of the year",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Micron investors should get ready for a seesaw ride, analyst says",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia doubles down on selling to both sides of the AI race",
+          "title": "Goldman Leads Bidding for $37 Billion Palmer Square, a CLO Powerhouse",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -197,11 +164,44 @@
       ]
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta gets to consumer AI device market before OpenAI, but Zuckerberg's strategy remains unproven",
+          "title": "Apple faces $5.7 billion patent infringement verdict over iPhone and Apple Watch haptics",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Boeing flags 737 Max software glitch affecting some automated approach functions",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Berkshire adds to nearly doubled stake in slumping homebuilder",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -224,17 +224,6 @@
       "evidence": [
         {
           "title": "Nike (NKE): Wall Street Tests Whether the Turnaround Can Outrun Weak Demand Ahead of Q1 Results",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Goldman Leads Bidding for $37 Billion Palmer Square, a CLO Powerhouse",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -264,7 +253,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2,
-    "OpenAI (private)": 2
+    "Anthropic (private)": 3,
+    "OpenAI (private)": 1
   }
 }
