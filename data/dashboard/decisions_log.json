@@ -1,8 +1,60 @@
 {
- "generated_at": "2026-09-26T00:48:54Z",
- "n_days": 14,
+ "generated_at": "2026-09-28T00:36:22Z",
+ "n_days": 15,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-25",
+   "decided_at": "2026-09-26T12:27:54.572Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-09-25_PCG_2026-12-18_15.0",
+     "ticker": "PCG",
+     "expiry": "2026-12-18",
+     "strike": 15,
+     "entry_price": 0.34,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-11-27",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-10-22",
+      "what": "PG&E 將於 2026-10-22 美東時間 11:00 召開 2026 年第三季財報電話會議，這一天在 12/18 到期日之前。",
+      "source": "https://www.prnewswire.com/news-releases/pge-corporation-schedules-third-quarter-2026-earnings-release-and-conference-call-302889827.html"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": -3.6,
+       "date": "2026-09-23"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "Q3財報會議10/22(9/24公告)；8/31立法破局單日−18.6%",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-09-24",
    "decided_at": "2026-09-25T00:35:36.053Z",
