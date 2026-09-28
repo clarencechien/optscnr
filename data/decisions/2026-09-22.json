@@ -59,7 +59,16 @@
         "source": null
       },
       "note": "ETF 無財報；CLARITY 法案程序表決原排 2026-09-15，已過",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.47,
+        "t10": null,
+        "t20": null,
+        "peak": 0.47,
+        "mature": false,
+        "verdict": "❌沒噴(峰0.5x)",
+        "filled_at": "2026-09-28"
+      }
     }
   ],
   "facts_proposed": [
