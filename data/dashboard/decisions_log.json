@@ -1,8 +1,18 @@
 {
- "generated_at": "2026-09-28T23:19:44Z",
- "n_days": 15,
+ "generated_at": "2026-09-29T02:10:33Z",
+ "n_days": 16,
  "t8_by_event_answer": {},
  "days": [
+  {
+   "market_date": "2026-09-28",
+   "decided_at": "2026-09-29T00:35:38.679Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": false,
+   "error": null,
+   "n_candidates": 0,
+   "candidates": []
+  },
   {
    "market_date": "2026-09-25",
    "decided_at": "2026-09-26T12:27:54.572Z",
