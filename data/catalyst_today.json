@@ -1,62 +1,95 @@
 {
-  "updated_at": "2026-09-27T23:19:11.911018",
+  "updated_at": "2026-09-29T00:29:25.991580",
   "stats": {
     "total_items": 106,
-    "items_with_company": 20,
-    "items_with_catalyst": 14,
-    "items_both": 1
+    "items_with_company": 26,
+    "items_with_catalyst": 11,
+    "items_both": 2
   },
-  "count": 16,
+  "count": 18,
   "tickers": [
-    "NVDA",
-    "PANW",
-    "ZS",
-    "META",
-    "MU",
-    "XYZ",
-    "INTC",
     "AMD",
-    "AAPL",
+    "NVDA",
+    "META",
+    "ZS",
+    "PANW",
+    "MDB",
+    "MU",
+    "INTC",
     "BA",
-    "BRK-B",
+    "DIS",
+    "GS",
+    "RTX",
     "MSFT",
     "CRM",
     "NKE",
+    "XYZ",
     "BAC",
     "PLTR"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 2.5,
+      "symbol": "AMD",
+      "score": 4.0,
       "evidence": [
         {
-          "title": "Micron could dethrone Nvidia and become the biggest driver of S&P 500 profit growth",
+          "title": "AMD briefly joined the $1 trillion club. Cramer says its monster run isn’t over",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "China weighs allowing ByteDance, Alibaba to buy new Nvidia chips, The Information reports",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "AMD makes a big bet on the next era of AI with World Labs acquisition",
+          "catalysts": [
+            "acquisition"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "China may permit Alibaba, ByteDance to buy new Nvidia chips – The Information",
+          "title": "AMD to buy Fei-Fei Li’s World Labs in $8.2 billion bet on ’physical AI’",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PANW",
-      "score": 2,
+      "symbol": "NVDA",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Why Bernstein Still Sees 46% Upside in Zscaler (ZS) but Downgraded Palo Alto (PANW)",
-          "catalysts": [
-            "downgraded"
-          ],
-          "has_catalyst": true
+          "title": "Samsung to inject $1 billion into Nvidia- and KKR-backed AI infrastructure firm ",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "OpenAI sparked Hugging Face bids with early investment offer ahead of Nvidia's $13 billion deal",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia share buyback plan gets $150 billion boost",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Meta's Muse agent is attacking one of the economy's most profitable weak spots",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta's splashy new business AI hire offers yet another reason to bank on Zuckerberg",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta hires MongoDB CEO CJ Desai to lead enterprise unit. MongoDB shares crater",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
@@ -74,21 +107,34 @@
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "PANW",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Why Bernstein Still Sees 46% Upside in Zscaler (ZS) but Downgraded Palo Alto (PANW)",
+          "catalysts": [
+            "downgraded"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MDB",
       "score": 1.5,
       "evidence": [
         {
-          "title": "Meta's Muse agent is attacking one of the economy's most profitable weak spots",
+          "title": "Meta's splashy new business AI hire offers yet another reason to bank on Zuckerberg",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "CEO who posted 'Lake America' sweatshirt photos is no longer with the company",
+          "title": "Meta hires MongoDB CEO CJ Desai to lead enterprise unit. MongoDB shares crater",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Bank of America backs Meta stock after Muse surprise",
+          "title": "MongoDB’s stock is down nearly 20% as CEO decamps to Meta",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -96,36 +142,15 @@
     },
     {
       "symbol": "MU",
-      "score": 1.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Here are the 4 big things we're watching in the stock market in the week ahead",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron could dethrone Nvidia and become the biggest driver of S&P 500 profit growth",
+          "title": "A key test looms for the AI trade this week. Here's how Mike Khouw is trading it",
           "catalysts": [],
           "has_catalyst": false
         },
         {
           "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "White House moves to block $810 million in funding through pocket rescission",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Goldman Leads Bidding for $37 Billion Palmer Square, a CLO Powerhouse",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -148,49 +173,44 @@
       ]
     },
     {
-      "symbol": "AMD",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Intel (INTC) Could Get a Fresh Valuation for Altera. AMD (AMD) Is the Rival to Watch",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Apple faces $5.7 billion patent infringement verdict over iPhone and Apple Watch haptics",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Boeing flags 737 Max software glitch affecting some automated approach functions",
+          "title": "Boeing 737 Max 10 certification delayed by software issue, FAA says",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Berkshire adds to nearly doubled stake in slumping homebuilder",
+          "title": "Ex-Disney CEO Bob Chapek says he raised concerns with the board 'weekly' during Iger power battle",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Goldman Sachs board discussed plan to name Waldron as next CEO- WSJ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RTX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "RTX's Collins Aerospace unit wins $249.7M U.S. Navy contract",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -230,6 +250,17 @@
       ]
     },
     {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Goldman Leads Bidding for $37 Billion Palmer Square, a CLO Powerhouse",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
       "symbol": "BAC",
       "score": 0.5,
       "evidence": [
@@ -253,7 +284,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 1
+    "Anthropic (private)": 7,
+    "OpenAI (private)": 3
   }
 }
