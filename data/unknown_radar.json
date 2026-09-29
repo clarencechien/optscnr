@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-09-27T23:58:23.262955",
+  "updated_at": "2026-09-29T01:16:05.292858",
   "count": 1,
   "blind_spots": [
     {
-      "name": "Alibaba",
-      "ticker": "BBAAY",
+      "name": "Helix",
+      "ticker": "HLX",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "China weighs allowing ByteDance, Alibaba to buy new Nvidia chips, The Information reports",
-        "China may permit Alibaba, ByteDance to buy new Nvidia chips – The Information"
+        "Samsung to inject $1 billion into Nvidia- and KKR-backed AI infrastructure firm",
+        "Samsung, affiliates to invest $1 billion in AI infrastructure firm Helix"
       ]
     }
   ]

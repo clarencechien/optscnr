@@ -6,13 +6,6 @@
     "total_mentions": 13,
     "ticker": "NDAQ"
   },
-  "Sonoma": {
-    "first_seen": "2026-09-20",
-    "last_seen": "2026-09-20",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SNOA"
-  },
   "Greenland": {
     "first_seen": "2026-09-20",
     "last_seen": "2026-09-22",
@@ -96,5 +89,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BBAAY"
+  },
+  "Helix": {
+    "first_seen": "2026-09-29",
+    "last_seen": "2026-09-29",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "HLX"
   }
 }
