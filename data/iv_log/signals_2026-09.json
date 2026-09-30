@@ -91828,5 +91828,156 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-09-29_F_2026-10-09_12.5",
+    "snapshot_date": "2026-09-29",
+    "ticker": "F",
+    "expiry": "2026-10-09",
+    "strike": 12.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次10-22)",
+    "entry_price": 0.18,
+    "entry_iv": 33.98503515625,
+    "entry_spot": 12.300000190734863,
+    "oi": 989,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-22)"
+    ],
+    "volume": 1217,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.17,
+    "entry_ask": 0.19,
+    "last_trade_at": "2026-09-29 19:58:17",
+    "quote_at": "2026-09-30T01:20:15Z",
+    "underlying_at": "2026-09-30T01:20:15Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-09-29",
+        "spot": 12.300000190734863,
+        "last": 0.18,
+        "bid": 0.17,
+        "ask": 0.19,
+        "iv": 33.98503515625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-09-29_AMZN_2026-10-09_247.5",
+    "snapshot_date": "2026-09-29",
+    "ticker": "AMZN",
+    "expiry": "2026-10-09",
+    "strike": 247.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-29)",
+    "entry_price": 4.57,
+    "entry_iv": 30.982135498046876,
+    "entry_spot": 246.6699981689453,
+    "oi": 1036,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-29)"
+    ],
+    "volume": 1719,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 4.5,
+    "entry_ask": 4.65,
+    "last_trade_at": "2026-09-29 19:59:17",
+    "quote_at": "2026-09-30T01:20:15Z",
+    "underlying_at": "2026-09-30T01:20:15Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-09-29",
+        "spot": 246.6699981689453,
+        "last": 4.57,
+        "bid": 4.5,
+        "ask": 4.65,
+        "iv": 30.982135498046876
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-09-29_AMZN_2026-10-09_252.5",
+    "snapshot_date": "2026-09-29",
+    "ticker": "AMZN",
+    "expiry": "2026-10-09",
+    "strike": 252.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-29)",
+    "entry_price": 2.63,
+    "entry_iv": 31.372756591796875,
+    "entry_spot": 246.6699981689453,
+    "oi": 753,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-29)"
+    ],
+    "volume": 906,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.47,
+    "entry_ask": 2.77,
+    "last_trade_at": "2026-09-29 19:58:39",
+    "quote_at": "2026-09-30T01:20:15Z",
+    "underlying_at": "2026-09-30T01:20:15Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-09-29",
+        "spot": 246.6699981689453,
+        "last": 2.63,
+        "bid": 2.47,
+        "ask": 2.77,
+        "iv": 31.372756591796875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
