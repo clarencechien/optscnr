@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-09-29T01:16:05.292858",
+  "updated_at": "2026-09-30T00:45:46.579918",
   "count": 1,
   "blind_spots": [
     {
-      "name": "Helix",
-      "ticker": "HLX",
+      "name": "Canadian",
+      "ticker": "CNDIF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Samsung to inject $1 billion into Nvidia- and KKR-backed AI infrastructure firm",
-        "Samsung, affiliates to invest $1 billion in AI infrastructure firm Helix"
+        "America's Canadian import restrictions come into force. Here are the products barred from entry",
+        "America's Canadian import restrictions come into force. Here are the products barred from entry"
       ]
     }
   ]
