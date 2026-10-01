@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-10-01T20:05:29+00:00",
+  "alerts": {
+    "capitulation": {
+      "trigger_days": 14,
+      "episodes": 8,
+      "episode_dates": [
+        "2020-03-09",
+        "2020-03-19",
+        "2022-03-08",
+        "2024-04-22",
+        "2024-07-19",
+        "2024-08-05",
+        "2026-07-20",
+        "2026-07-29"
+      ],
+      "horizons": {
+        "20d": {
+          "n": 8,
+          "median_pct": 8.72,
+          "mean_pct": 7.31,
+          "baseline_median_pct": 2.19,
+          "hit_rate": 0.75
+        },
+        "60d": {
+          "n": 6,
+          "median_pct": 9.8,
+          "mean_pct": 12.71,
+          "baseline_median_pct": 5.03,
+          "hit_rate": 0.83
+        }
+      }
+    }
+  }
+}
