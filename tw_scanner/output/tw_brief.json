@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-10-01T09:25:48+00:00",
+ "generated_at": "2026-10-01T10:27:31+00:00",
  "today": "2026-10-01",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-02）：本月預算已於 2026-09-29 動用（月末例行），本月不再行動。",
   "鋒面 ⛅ NEUTRAL（本週由 RISK_ON 轉入）。",
-  "2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +2.1%）；PER 60.8，3 年分位 80 → 85",
+  "2308 前提 🔴 RED；🔀 反向背離：前提轉紅、價格 20 日 +2.1% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 60.6，3 年分位 82 → 84",
   "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +3.1%）；PER 28.7，3 年分位 72 → 78",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.71%。"
  ],
@@ -214,75 +214,82 @@
   "label": "2308",
   "as_of": "2026-10-01",
   "age_days": 0,
-  "last_overall": "PARTIAL(m5)",
+  "last_overall": "RED",
   "last_modules_requested": [
-   "m5"
+   "m1",
+   "m2",
+   "m3",
+   "m4",
+   "m5",
+   "m6",
+   "m8",
+   "m9"
   ],
-  "full_overall": "YELLOW",
-  "full_ts": "2026-09-28",
+  "full_overall": "RED",
+  "full_ts": "2026-10-01",
   "modules": [
    {
     "module": "M1 revenue_acceleration",
     "status": "YELLOW",
     "headline": "2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月",
-    "ts": "2026-09-28T10:10:14.695383+00:00"
+    "ts": "2026-10-01T10:27:30.144368+00:00"
    },
    {
     "module": "M2 bullwhip_health",
     "status": "GREEN",
     "headline": "合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32",
-    "ts": "2026-09-28T10:10:14.695383+00:00"
+    "ts": "2026-10-01T10:27:30.144368+00:00"
    },
    {
     "module": "M3 thai_shadow",
     "status": "YELLOW",
     "headline": "DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8%",
-    "ts": "2026-09-28T10:10:14.695383+00:00"
+    "ts": "2026-10-01T10:27:30.144368+00:00"
    },
    {
     "module": "M4 customs_flow",
     "status": "GREEN",
     "headline": "US 進口 HS850440 (TH+TW) 近3月 $1399.9M, YoY +30.6%",
-    "ts": "2026-09-28T10:10:14.695383+00:00"
+    "ts": "2026-10-01T10:27:30.144368+00:00"
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "NO_DATA",
-    "headline": "all RSS feeds failed",
-    "ts": "2026-10-01T09:25:46.432711+00:00"
+    "status": "RED",
+    "headline": "capex_cut:6e / vr300_delay:16e(20m) / debt_financed_capex:12e(14m) / lc_psu_competition:0e",
+    "ts": "2026-10-01T10:27:30.144368+00:00"
    },
    {
     "module": "M6 peer_divergence",
     "status": "RED",
     "headline": "cooling:3324領先+36pp",
-    "ts": "2026-09-28T10:10:14.695383+00:00"
+    "ts": "2026-10-01T10:27:30.144368+00:00"
    },
    {
     "module": "M8 revision_velocity",
     "status": "NO_DATA",
     "headline": "下修 0/上修 0（樣本不足 <3，NO_DATA）",
-    "ts": "2026-09-28T10:10:14.695383+00:00"
+    "ts": "2026-10-01T10:27:30.144368+00:00"
    },
    {
     "module": "M9 valuation",
     "status": "GREEN",
-    "headline": "PER 60.8（3 年第 85 百分位；20 日前第 80）；觀察",
-    "ts": "2026-09-28T10:10:14.695383+00:00"
+    "headline": "PER 60.6（3 年第 84 百分位；20 日前第 82）；觀察",
+    "ts": "2026-10-01T10:27:30.144368+00:00"
    }
   ],
   "divergence": {
-   "flag": null,
-   "text": "無背離（前提 YELLOW、價格 20 日 +2.1%）；PER 60.8，3 年分位 80 → 85",
-   "premise": "YELLOW",
-   "premise_ts": "2026-09-28T10:10:14.695383+00:00",
+   "flag": "premise_broken_price_up",
+   "text": "🔀 反向背離：前提轉紅、價格 20 日 +2.1% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 60.6，3 年分位 82 → 84",
+   "premise": "RED",
+   "premise_ts": "2026-10-01T10:27:29.771009+00:00",
    "ret_pct": 2.14,
    "lookback_sessions": 20,
    "as_of": "2026-10-01",
    "valuation": {
-    "per": 60.79,
-    "per_pct": 84.7,
-    "per_then": 56.33,
-    "per_pct_then": 79.8,
+    "per": 60.63,
+    "per_pct": 84.3,
+    "per_then": 59.36,
+    "per_pct_then": 82.2,
     "history_years": 3
    }
   },

@@ -6,7 +6,7 @@
 
 - 週檢查（2026-10-02）：本月預算已於 2026-09-29 動用（月末例行），本月不再行動。
 - 鋒面 ⛅ NEUTRAL（本週由 RISK_ON 轉入）。
-- 2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +2.1%）；PER 60.8，3 年分位 80 → 85
+- 2308 前提 🔴 RED；🔀 反向背離：前提轉紅、價格 20 日 +2.1% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 60.6，3 年分位 82 → 84
 - 2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +3.1%）；PER 28.7，3 年分位 72 → 78
 - 投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.71%。
 
@@ -38,16 +38,16 @@
 ## 3. 論點監控（2308 delta_radar／2330 tsmc_radar）
 
 ### 2308
-- 前提（最近全模組 2026-09-28）：🟡 YELLOW
-- 無背離（前提 YELLOW、價格 20 日 +2.1%）；PER 60.8，3 年分位 80 → 85
+- 前提（最近全模組 2026-10-01）：🔴 RED
+- 🔀 反向背離：前提轉紅、價格 20 日 +2.1% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 60.6，3 年分位 82 → 84
   - 🟡 M1 revenue_acceleration：2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32
   - 🟡 M3 thai_shadow：DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8%
   - 🟢 M4 customs_flow：US 進口 HS850440 (TH+TW) 近3月 $1399.9M, YoY +30.6%
-  - ⚪ M5 narrative_triggers：all RSS feeds failed
+  - 🔴 M5 narrative_triggers：capex_cut:6e / vr300_delay:16e(20m) / debt_financed_capex:12e(14m) / lc_psu_competition:0e
   - 🔴 M6 peer_divergence：cooling:3324領先+36pp
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
-  - 🟢 M9 valuation：PER 60.8（3 年第 85 百分位；20 日前第 80）；觀察
+  - 🟢 M9 valuation：PER 60.6（3 年第 84 百分位；20 日前第 82）；觀察
 - 回填樣本 94 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
 
 ### 2330
@@ -103,4 +103,4 @@
 - ✅ 賭場 sector：最新 2026-09-30
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-01T09:25:48+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-01T10:27:31+00:00*
