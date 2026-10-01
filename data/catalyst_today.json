@@ -1,76 +1,46 @@
 {
-  "updated_at": "2026-09-29T23:55:08.450812",
+  "updated_at": "2026-10-01T00:06:31.866667",
   "stats": {
     "total_items": 106,
-    "items_with_company": 26,
-    "items_with_catalyst": 13,
-    "items_both": 3
+    "items_with_company": 18,
+    "items_with_catalyst": 14,
+    "items_both": 2
   },
-  "count": 20,
+  "count": 18,
   "tickers": [
-    "MSFT",
-    "AMD",
+    "MU",
     "ZS",
     "PANW",
-    "GS",
-    "BA",
-    "TGT",
-    "XYZ",
+    "GOOGL",
+    "META",
     "INTC",
+    "AMD",
     "NVDA",
-    "F",
-    "DIS",
-    "AAPL",
-    "JPM",
-    "COIN",
-    "HOOD",
+    "TGT",
+    "BA",
+    "TSLA",
     "AMZN",
-    "MU",
     "CRM",
-    "NKE"
+    "MSFT",
+    "NKE",
+    "XYZ",
+    "BAC",
+    "PLTR"
   ],
   "details": [
     {
-      "symbol": "MSFT",
-      "score": 3.0,
+      "symbol": "MU",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Microsoft shares might be rangebound. Here's how you can still make money",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft’s stock is on track to post its biggest quarterly gain in 28 years",
+          "title": "Micron beats on earnings and issues strong guidance as data center revenue jumps 11-fold",
           "catalysts": [
-            "gain"
+            "jumps"
           ],
           "has_catalyst": true
         },
         {
-          "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "The real prize in AMD’s $8 billion World Labs acquisition isn’t what you’d think",
-          "catalysts": [
-            "acquisition"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Intel (INTC) Could Get a Fresh Valuation for Altera. AMD (AMD) Is the Rival to Watch",
+          "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -103,64 +73,32 @@
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "GOOGL",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Goldman Sachs CEO succession planning faces one big problem",
+          "title": "Google rolls out Gemini 4 Argon, its most advanced AI model",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Polymarket taps Goldman Sachs veteran Lisa Mantil to attract Wall Street liquidity",
+          "title": "Google shows it’s not out of the AI race just yet",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "META",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Alaska Airlines CEO 'not overly concerned' about new Boeing Max 10 delay",
+          "title": "Meta stock enjoys best month since 2022 on AI momentum",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Boeing wins US Navy’s next-generation fighter contract, Pentagon says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Target’s price cuts are a sign of strength, some analysts say. Investors disagree.",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Amazon, GoodRx target US prescription subscribers as health insurance coverage slips",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "CNN, MS NOW, Politico ask judge to extend block on White House ban",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Goldman Leads Bidding for $37 Billion Palmer Square, a CLO Powerhouse",
+          "title": "Bank of America backs Meta stock after Muse surprise",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -172,6 +110,22 @@
       "evidence": [
         {
           "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Intel (INTC) Could Get a Fresh Valuation for Altera. AMD (AMD) Is the Rival to Watch",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
           "catalysts": [],
           "has_catalyst": false
         },
@@ -199,66 +153,33 @@
       ]
     },
     {
-      "symbol": "F",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Ford CEO says it's 'too late' for Europe to fend off Chinese automakers, but not for U.S.",
+          "title": "Inside Man: How Chinese spies used lies, love and betrayal to target the Federal Reserve",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DIS",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Disney laying off around 300 employees in latest cuts under new CEO Josh D'Amaro",
+          "title": "Why Jim Cramer isn't buying more Boeing despite its huge Navy contract win ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "John Ternus' vision for Apple is coming into view, and we like what we see",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Jamie Dimon has a plan to revive the West: A 'big, beautiful' deal with Europe",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Coinbase Ventures and CMCC Global close strategic funding round with trading firm Raven",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HOOD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Robinhood to allow 24-hour weekend trading of US stocks as industry shifts to wider access",
+          "title": "SEC clears Tesla-crafted auto-vote plan for wide use, worrying activists",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -269,18 +190,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon, GoodRx target US prescription subscribers as health insurance coverage slips",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
+          "title": "Synopsys, Amazon Web Services sign chip design licensing deal worth more than $1 billion",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -288,6 +198,17 @@
     },
     {
       "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
@@ -307,9 +228,43 @@
           "has_catalyst": false
         }
       ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Goldman Leads Bidding for $37 Billion Palmer Square, a CLO Powerhouse",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Bank of America backs Meta stock after Muse surprise",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Palantir Reveals Its AI Sovereignty Strategy And Wall Street Is Starting to Believe It",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1
+    "Anthropic (private)": 3,
+    "OpenAI (private)": 2
   }
 }
