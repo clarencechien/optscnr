@@ -6,13 +6,6 @@
     "total_mentions": 13,
     "ticker": "NDAQ"
   },
-  "Gabelli": {
-    "first_seen": "2026-09-23",
-    "last_seen": "2026-09-23",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GDV-PK"
-  },
   "Nevada": {
     "first_seen": "2026-09-25",
     "last_seen": "2026-09-25",
@@ -54,5 +47,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "CNDIF"
+  },
+  "Mattel": {
+    "first_seen": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "MAT"
+  },
+  "Gemini": {
+    "first_seen": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "GEMI"
+  },
+  "Foreign": {
+    "first_seen": "2026-10-01",
+    "last_seen": "2026-10-01",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BLX"
   }
 }

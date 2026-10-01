@@ -1,17 +1,41 @@
 {
-  "updated_at": "2026-09-30T00:45:46.579918",
-  "count": 1,
+  "updated_at": "2026-10-01T00:50:15.182387",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "Canadian",
-      "ticker": "CNDIF",
+      "name": "Mattel",
+      "ticker": "MAT",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "David Ellison names Ynon Kreiz co-CEO of Paramount and Warner Bros. Discovery",
+        "Paramount gets court green light on Warner Bros deal, names Mattel’s Kreiz co-CEO"
+      ]
+    },
+    {
+      "name": "Gemini",
+      "ticker": "GEMI",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Google rolls out Gemini 4 Argon, its most advanced AI model",
+        "Google rolls out Gemini 4 Argon, its most advanced AI model"
+      ]
+    },
+    {
+      "name": "Foreign",
+      "ticker": "BLX",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "America's Canadian import restrictions come into force. Here are the products barred from entry",
-        "America's Canadian import restrictions come into force. Here are the products barred from entry"
+        "Inside India newsletter: Foreign insurers get the red-carpet treatment — and policy uncertainty",
+        "Inside India newsletter: Foreign insurers get the red-carpet treatment — and policy uncertainty"
       ]
     }
   ]
