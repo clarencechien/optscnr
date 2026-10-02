@@ -1,0 +1,210 @@
+{
+  "market_date": "2026-10-01",
+  "decided_at": "2026-10-02T00:35:08.602Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-01T23:05:38Z",
+  "n_candidates": 3,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 19,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-01_PCG_2026-12-18_14.0",
+      "ticker": "PCG",
+      "expiry": "2026-12-18",
+      "strike": 14,
+      "entry_price": 0.46,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-11-27",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 1,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -3.2,
+          "date": "2026-09-28"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-10-22",
+        "what": "PG&E 2026 年第三季財報電話會議，美東時間 11:00 舉行",
+        "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+      },
+      "note": "野火責任上限立法未過；公司啟動策略檢討，2027 年資本支出削減 20 億美元",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-10-01_IBIT_2026-11-20_57.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 57,
+      "entry_price": 0.49,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": 1.3,
+          "date": "2026-10-01"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "ETF 沒有財報；查不到 2026-11-20 前基金本身的排定事件",
+        "source": null
+      },
+      "note": "截至 9/25 當週，IBIT 淨流入 12 億美元，領先同業",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-10-01_PCG_2027-01-15_14.0",
+      "ticker": "PCG",
+      "expiry": "2027-01-15",
+      "strike": 14,
+      "entry_price": 0.64,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-12-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 1,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -3.2,
+          "date": "2026-09-28"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-10-22",
+        "what": "PG&E 2026 年第三季財報電話會議，美東時間 11:00 舉行",
+        "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+      },
+      "note": "9/23 UBS 降評至 Hold、目標價 $14；Fitch 展望轉為負向",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "PCG",
+      "fact": "PG&E 於 2026-09-24 宣布，2026-10-22 美東時間 11:00 舉行第三季財報電話會議",
+      "date": "2026-09-24",
+      "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+    },
+    {
+      "ticker": "PCG",
+      "fact": "Fitch 因野火責任疑慮，將 PG&E 展望調為負向；PG&E 宣布策略檢討，並把 2027 年資本支出削減 20 億美元至 114 億美元；當日股價 $13.32",
+      "date": "2026-09-16",
+      "source": "https://www.ad-hoc-news.de/boerse/news/corporate-news/pg-and-e-corporation-stock-slips-as-fitch-turns-outlook-negative/70120837"
+    },
+    {
+      "ticker": "PCG",
+      "fact": "加州 SB 492 未改變 PG&E 的野火責任與融資框架；議會也擋下 Newsom 降低保險公司向電力公司追償的提案；BofA、Mizuho、BMO、Truist 降評，BofA 目標價降至 $13",
+      "date": "2026-09-15",
+      "source": "https://stockstotrade.com/news/pacific-gas-electric-co-pcg-news-2026_09_15/"
+    },
+    {
+      "ticker": "PCG",
+      "fact": "UBS 將 PG&E 降評至 Hold、目標價調至 $14；當日收盤 $12.41（−3.65%），彭博報導 PG&E 在策略檢討中考慮分拆部分資產",
+      "date": "2026-09-23",
+      "source": "https://www.ad-hoc-news.de/boerse/news/corporate-news/pg-and-e-corporation-stock-falls-3-65-percent-ahead-of-the-open/70172495"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "截至 2026-09-25 當週，美國現貨比特幣 ETF 淨流入 24 億美元，2026 年累計淨流量轉正；IBIT 當週淨流入 12 億美元",
+      "date": "2026-09-26",
+      "source": "https://www.theblock.co/news/markets/2026-09-26-bitcoin-etfs-turn-positive-for-2026-with-2-4-billion-weekly-inflow-their-largest-since-october-416944"
+    }
+  ],
+  "facts_appended": 3,
+  "raw_answer": "{\"market_date\":\"2026-10-01\",\"candidates\":[{\"signal_id\":\"2026-10-01_PCG_2026-12-18_14.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-10-22\",\"what\":\"PG&E 2026 年第三季財報電話會議，美東時間 11:00 舉行\",\"source\":\"https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx\"},\"note\":\"野火責任上限立法未過；公司啟動策略檢討，2027 年資本支出削減 20 億美元\"},{\"signal_id\":\"2026-10-01_IBIT_2026-11-20_57.0\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"ETF 沒有財報；查不到 2026-11-20 前基金本身的排定事件\",\"source\":null},\"note\":\"截至 9/25 當週，IBIT 淨流入 12 億美元，領先同業\"},{\"signal_id\":\"2026-10-01_PCG_2027-01-15_14.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-10-22\",\"what\":\"PG&E 2026 年第三季財報電話會議，美東時間 11:00 舉行\",\"source\":\"https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx\"},\"note\":\"9/23 UBS 降評至 Hold、目標價 $14；Fitch 展望轉為負向\"}],\"facts_proposed\":[{\"ticker\":\"PCG\",\"fact\":\"PG&E 於 2026-09-24 宣布，2026-10-22 美東時間 11:00 舉行第三季財報電話會議\",\"date\":\"2026-09-24\",\"source\":\"https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx\"},{\"ticker\":\"PCG\",\"fact\":\"Fitch 因野火責任疑慮，將 PG&E 展望調為負向；PG&E 宣布策略檢討，並把 2027 年資本支出削減 20 億美元至 114 億美元；當日股價 $13.32\",\"date\":\"2026-09-16\",\"source\":\"https://www.ad-hoc-news.de/boerse/news/corporate-news/pg-and-e-corporation-stock-slips-as-fitch-turns-outlook-negative/70120837\"},{\"ticker\":\"PCG\",\"fact\":\"加州 SB 492 未改變 PG&E 的野火責任與融資框架；議會也擋下 Newsom 降低保險公司向電力公司追償的提案；BofA、Mizuho、BMO、Truist 降評，BofA 目標價降至 $13\",\"date\":\"2026-09-15\",\"source\":\"https://stockstotrade.com/news/pacific-gas-electric-co-pcg-news-2026_09_15/\"},{\"ticker\":\"PCG\",\"fact\":\"UBS 將 PG&E 降評至 Hold、目標價調至 $14；當日收盤 $12.41（−3.65%），彭博報導 PG&E 在策略檢討中考慮分拆部分資產\",\"date\":\"2026-09-23\",\"source\":\"https://www.ad-hoc-news.de/boerse/news/corporate-news/pg-and-e-corporation-stock-falls-3-65-percent-ahead-of-the-open/70172495\"},{\"ticker\":\"IBIT\",\"fact\":\"截至 2026-09-25 當週，美國現貨比特幣 ETF 淨流入 24 億美元，2026 年累計淨流量轉正；IBIT 當週淨流入 12 億美元\",\"date\":\"2026-09-26\",\"source\":\"https://www.theblock.co/news/markets/2026-09-26-bitcoin-etfs-turn-positive-for-2026-with-2-4-billion-weekly-inflow-their-largest-since-october-416944\"}]}",
+  "usage": {
+    "prompt_tokens": 56900,
+    "completion_tokens": 2652,
+    "total_tokens": 59552,
+    "cost": 0.31064,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.31064,
+      "upstream_inference_prompt_cost": 0.2276,
+      "upstream_inference_completions_cost": 0.05304
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1059,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 3
+    }
+  },
+  "error": null
+}
