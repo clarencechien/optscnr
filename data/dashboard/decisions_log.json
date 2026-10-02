@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-01T23:17:29Z",
- "n_days": 18,
+ "generated_at": "2026-10-02T01:51:11Z",
+ "n_days": 19,
  "t8_by_event_answer": {
   "有": {
    "n": 4,
@@ -9,6 +9,140 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-10-01",
+   "decided_at": "2026-10-02T00:35:08.602Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 3,
+   "candidates": [
+    {
+     "signal_id": "2026-10-01_PCG_2026-12-18_14.0",
+     "ticker": "PCG",
+     "expiry": "2026-12-18",
+     "strike": 14,
+     "entry_price": 0.46,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-11-27",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-10-22",
+      "what": "PG&E 2026 年第三季財報電話會議，美東時間 11:00 舉行",
+      "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": -3.2,
+       "date": "2026-09-28"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "野火責任上限立法未過；公司啟動策略檢討，2027 年資本支出削減 20 億美元",
+     "status": "answered",
+     "outcome": null
+    },
+    {
+     "signal_id": "2026-10-01_IBIT_2026-11-20_57.0",
+     "ticker": "IBIT",
+     "expiry": "2026-11-20",
+     "strike": 57,
+     "entry_price": 0.49,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "未確認",
+      "date": null,
+      "what": "ETF 沒有財報；查不到 2026-11-20 前基金本身的排定事件",
+      "source": null
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": 1.3,
+       "date": "2026-10-01"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "截至 9/25 當週，IBIT 淨流入 12 億美元，領先同業",
+     "status": "answered",
+     "outcome": null
+    },
+    {
+     "signal_id": "2026-10-01_PCG_2027-01-15_14.0",
+     "ticker": "PCG",
+     "expiry": "2027-01-15",
+     "strike": 14,
+     "entry_price": 0.64,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-12-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-10-22",
+      "what": "PG&E 2026 年第三季財報電話會議，美東時間 11:00 舉行",
+      "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": -3.2,
+       "date": "2026-09-28"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "9/23 UBS 降評至 Hold、目標價 $14；Fitch 展望轉為負向",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-09-30",
    "decided_at": "2026-10-01T00:35:18.498Z",
