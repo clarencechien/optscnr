@@ -1,110 +1,63 @@
 {
-  "updated_at": "2026-10-02T00:04:36.486124",
+  "updated_at": "2026-10-02T23:58:10.787284",
   "stats": {
     "total_items": 106,
-    "items_with_company": 29,
-    "items_with_catalyst": 16,
-    "items_both": 5
+    "items_with_company": 23,
+    "items_with_catalyst": 14,
+    "items_both": 2
   },
   "count": 20,
   "tickers": [
-    "GOOGL",
-    "MU",
-    "TWLO",
-    "NKE",
+    "WDC",
+    "STX",
     "ZS",
     "PANW",
-    "AAPL",
     "BA",
-    "MSFT",
+    "NVDA",
+    "NKE",
+    "AAPL",
     "META",
     "INTC",
     "AMD",
-    "NVDA",
+    "F",
     "TGT",
-    "WMT",
-    "AMZN",
-    "AVGO",
+    "TSLA",
+    "ACHR",
+    "MU",
     "CRM",
+    "MSFT",
     "XYZ",
     "BAC"
   ],
   "details": [
     {
-      "symbol": "GOOGL",
-      "score": 6,
-      "evidence": [
-        {
-          "title": "Google unveils latest AI model, but Wall Street wants a breakout personal agent",
-          "catalysts": [
-            "breakout",
-            "unveils"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "SpaceX launches Google AI chips into orbit in push toward space-based data centers",
-          "catalysts": [
-            "launches"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
+      "symbol": "WDC",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Micron beats on earnings and issues strong guidance as data center revenue jumps 11-fold",
+          "title": "Why Western Digital and Seagate are seeing big stock drops today",
           "catalysts": [
-            "jumps"
+            "drops"
           ],
           "has_catalyst": true
         },
         {
-          "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
+          "title": "Western Digital retreats 10% amid storage selloff",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TWLO",
-      "score": 2.5,
+      "symbol": "STX",
+      "score": 2,
       "evidence": [
         {
-          "title": "Here’s who’s joining the S&P 500 in the index’s latest shakeup",
+          "title": "Why Western Digital and Seagate are seeing big stock drops today",
           "catalysts": [
-            "merger"
+            "drops"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "Twilio to join S&P 500 as S&P Dow Jones reshuffles indices",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Nike shares drop as retailer posts disappointing sales, announces layoffs as part of restructuring",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "This could be the worst year ever for Nike’s stock, with sales set to fall further",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nike plans more job cuts to boost sputtering turnaround, forecasts steep revenue drop",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
@@ -135,8 +88,66 @@
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "BA",
       "score": 1.5,
+      "evidence": [
+        {
+          "title": "FAA says Boeing 737 Max software glitch not a flight-safety issue",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "US FAA says Boeing 737 MAX software glitch poses no safety issue",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "WestJet first told Boeing about 737 MAX software glitch cleared by FAA, memo says",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Cerebras stock hits post-IPO low, tumbling 20% for the week on Nvidia pressure and lockup expiration",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia doubles down on selling to both sides of the AI race",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Nike shares tumble after weak revenue outlook and layoff plans underway ",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nike (NKE): Wall Street Tests Whether the Turnaround Can Outrun Weak Demand Ahead of Q1 Results",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 1.0,
       "evidence": [
         {
           "title": "New York City's 'click to cancel' subscription rule takes effect, joining states with similar laws",
@@ -144,44 +155,7 @@
           "has_catalyst": false
         },
         {
-          "title": "Jim Cramer sees a huge catalyst on the horizon for Apple. How to play the stock",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Trump’s AI lunch included every major tech company. Except Apple",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Boeing engineers and technical workers approve new contract, avoiding strike",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Boeing white-collar workers approve contract offer, averting strike fears",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Former LinkedIn chief Roslansky to leave Microsoft, following other exec departures",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
+          "title": "Apple says it will flag AI requests for Mac data after Meta’s Muse draws complaints",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -192,7 +166,7 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "New Mexico wants Meta to pay up to $40 billion in penalties after data privacy trial",
+          "title": "Apple says it will flag AI requests for Mac data after Meta’s Muse draws complaints",
           "catalysts": [],
           "has_catalyst": false
         },
@@ -236,16 +210,11 @@
       ]
     },
     {
-      "symbol": "NVDA",
-      "score": 1.0,
+      "symbol": "F",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia doubles down on selling to both sides of the AI race",
+          "title": "Ford fends off Hyundai to retain No. 3 U.S. sales position in third quarter",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -263,33 +232,33 @@
       ]
     },
     {
-      "symbol": "WMT",
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Walmart is using light-up digital shelf labels to help shoppers and employees find items",
+          "title": "Tesla sold a lot more EVs than Wall Street expected, and the stock is surging",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "ACHR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Pilots of crashed Amazon cargo plane were unaware of wind conditions",
+          "title": "US court trims Joby’s trade-secret case against Archer Aviation",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AVGO",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Exclusive-Broadcom to lend Anthropic up to $42 billion to lease its chips, filing says",
+          "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -297,6 +266,17 @@
     },
     {
       "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
@@ -330,7 +310,8 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1,
-    "Anthropic (private)": 1
+    "Anthropic (private)": 2,
+    "Cerebras (pre-IPO)": 1,
+    "xAI (private)": 1
   }
 }
