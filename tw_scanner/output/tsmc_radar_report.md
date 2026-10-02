@@ -1,8 +1,8 @@
-# TSMC Radar (2330.TW) — 2026-10-01 11:00 UTC
+# TSMC Radar (2330.TW) — 2026-10-02 09:40 UTC
 
-## 總判定：🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
-## 前提 vs 價格：無背離（前提 GREEN、價格 20 日 +2.9%）；PER 29.1，3 年分位 75 → 80
+## 前提 vs 價格：無背離（前提 GREEN、價格 20 日 +4.8%）；PER 29.1，3 年分位 75 → 80
 
 GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、
 敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。
@@ -10,104 +10,45 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M1 revenue_acceleration | 🟢 GREEN | 2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月 |
-| M2 bullwhip_health | 🟢 GREEN | 合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9 |
-| M3 adr_premium（觀察） | 🟢 GREEN | ADR 溢價 +16.0%（1 年第 30 百分位；觀察） |
-| M4 customs_flow | 🟢 GREEN | US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0% |
-| M5 narrative_triggers | 🟡 YELLOW | export_controls_tariffs:15e / n2_arizona_ramp:11e(13m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:6e |
-| M6 peer_divergence | 🟢 GREEN | cohort 內 2330 未被對手顯著反超（離散在容忍帶內） |
-| M8 revision_velocity | ⚪ NO_DATA | 下修 0/上修 0（樣本不足 <3，NO_DATA） |
-| M9 valuation（觀察） | 🟢 GREEN | PER 29.1（3 年第 80 百分位；20 日前第 75）；觀察 |
-
-### M1 revenue_acceleration — 🟢 GREEN
-```json
-{
-  "latest_month": "2026-08",
-  "latest_yoy_pct": 53.3,
-  "yoy_slope_pp_per_month": 7.74,
-  "consecutive_decel_months": 0
-}
-```
-
-### M2 bullwhip_health — 🟢 GREEN
-```json
-{
-  "as_of": null,
-  "contract_liab_qoq_pct": null,
-  "inventory_qoq_pct": 23.8,
-  "fcf_to_net_income": 0.9,
-  "accounts_used": {
-    "contract": "",
-    "inventory": "Inventories",
-    "ocf": "CashFlowsFromOperatingActivities",
-    "capex": "PropertyAndPlantAndEquipment",
-    "net_income": "IncomeAfterTaxes"
-  }
-}
-```
-
-### M3 adr_premium — 🟢 GREEN
-```json
-{
-  "as_of": "2026-10-01",
-  "premium_pct": 15.96,
-  "percentile_1y": 29.8,
-  "n": 370
-}
-```
-
-### M4 customs_flow — 🟢 GREEN
-```json
-{
-  "window": "2026-05..2026-07",
-  "rolling_value_usd_m": 3643.7,
-  "rolling_yoy_pct": 58.0,
-  "by_country": {
-    "TAIWAN": {
-      "rolling_value_usd_m": 3643.7,
-      "rolling_yoy_pct": 58.0
-    }
-  }
-}
-```
+| M5 narrative_triggers | 🟡 YELLOW | export_controls_tariffs:14e / n2_arizona_ramp:12e(14m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:5e(6m) |
 
 ### M5 narrative_triggers — 🟡 YELLOW
 ```json
 {
   "events": {
-    "export_controls_tariffs": 15,
-    "n2_arizona_ramp": 11,
+    "export_controls_tariffs": 14,
+    "n2_arizona_ramp": 12,
     "cowos_capacity": 9,
     "geopolitics": 4,
-    "hyperscaler_capex": 6
+    "hyperscaler_capex": 5
   },
   "mentions": {
-    "export_controls_tariffs": 15,
-    "n2_arizona_ramp": 13,
+    "export_controls_tariffs": 14,
+    "n2_arizona_ramp": 14,
     "cowos_capacity": 9,
     "geopolitics": 4,
     "hyperscaler_capex": 6
   },
   "scoring": {
     "export_controls_tariffs": {
-      "events": 15,
-      "mentions": 15,
+      "events": 14,
+      "mentions": 14,
       "gate": "zscore",
-      "z": -1.62,
+      "z": -2.89,
       "denial": false
     },
     "n2_arizona_ramp": {
-      "events": 11,
-      "mentions": 13,
+      "events": 12,
+      "mentions": 14,
       "gate": "zscore",
-      "z": 1.2,
+      "z": 2.5,
       "denial": false
     },
     "cowos_capacity": {
       "events": 9,
       "mentions": 9,
       "gate": "zscore",
-      "z": 1.59,
+      "z": 1.37,
       "denial": true
     },
     "geopolitics": {
@@ -118,10 +59,10 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
       "denial": false
     },
     "hyperscaler_capex": {
-      "events": 6,
+      "events": 5,
       "mentions": 6,
       "gate": "zscore",
-      "z": 2.25,
+      "z": 0.55,
       "denial": false
     }
   }
@@ -139,81 +80,12 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [geopolitics] China's president Xi Jinping calls Taiwan reunification "unstoppable" — military drills around the island escalate in ar
 - [geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India
 - [geopolitics] Ships Delay Sailing to Taiwan Port to Avoid China Military Drills - Caixin Global
-- [hyperscaler_capex] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review
 - [hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
 - [hyperscaler_capex] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
-
-### M6 peer_divergence — 🟢 GREEN
-```json
-{
-  "groups": {
-    "foundry_contrast": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 55.3,
-      "best_peer": "2303",
-      "best_peer_3m_yoy": 24.2,
-      "peer_lead_pp": -31.1,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "2303": 24.2
-      }
-    },
-    "backend": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 55.3,
-      "best_peer": "2383",
-      "best_peer_3m_yoy": 126.6,
-      "peer_lead_pp": 71.4,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "3711": 40.6,
-        "3037": 45.4,
-        "2383": 126.6
-      }
-    },
-    "asic_lead": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 55.3,
-      "best_peer": "3661",
-      "best_peer_3m_yoy": 156.9,
-      "peer_lead_pp": 101.6,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "3661": 156.9,
-        "3443": 124.4
-      }
-    }
-  }
-}
-```
-
-### M8 revision_velocity — ⚪ NO_DATA
-```json
-{
-  "up_hits": 0,
-  "down_hits": 0,
-  "total": 0,
-  "down_ratio": null
-}
-```
-
-### M9 valuation — 🟢 GREEN
-```json
-{
-  "as_of": "2026-10-01",
-  "per": 29.09,
-  "per_pct": 80.5,
-  "per_then": 28.28,
-  "per_pct_then": 75.0,
-  "pbr": 10.12,
-  "dividend_yield": 0.88,
-  "history_years": 3,
-  "n": 733
-}
-```
+- [hyperscaler_capex] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **3** 筆；state 已有 outcomes 的 entry：**20/20**
+- 本次回填 **2** 筆；state 已有 outcomes 的 entry：**21/21**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---

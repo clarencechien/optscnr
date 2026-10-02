@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-02T09:00:03+00:00",
+ "generated_at": "2026-10-02T09:40:56+00:00",
  "today": "2026-10-02",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-02）：本週無警報、預算未動 → 等（2026-10-09 再看）。",
   "鋒面 ⛅ NEUTRAL（本週由 RISK_ON 轉入）。",
   "2308 前提 🔴 RED；🔀 反向背離：前提轉紅、價格 20 日 +9.0% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 60.6，3 年分位 82 → 84",
-  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +2.9%）；PER 29.1，3 年分位 75 → 80",
+  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +4.8%）；PER 29.1，3 年分位 75 → 80",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.71%。"
  ],
  "weather": {
@@ -320,18 +320,11 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-10-01",
-  "age_days": 1,
-  "last_overall": "GREEN",
+  "as_of": "2026-10-02",
+  "age_days": 0,
+  "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
-   "m1",
-   "m2",
-   "m3",
-   "m4",
-   "m5",
-   "m6",
-   "m8",
-   "m9"
+   "m5"
   ],
   "full_overall": "GREEN",
   "full_ts": "2026-10-01",
@@ -363,8 +356,8 @@
    {
     "module": "M5 narrative_triggers",
     "status": "YELLOW",
-    "headline": "export_controls_tariffs:15e / n2_arizona_ramp:11e(13m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:6e",
-    "ts": "2026-10-01T11:00:44.517133+00:00"
+    "headline": "export_controls_tariffs:14e / n2_arizona_ramp:12e(14m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:5e(6m)",
+    "ts": "2026-10-02T09:40:53.846730+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -387,12 +380,12 @@
   ],
   "divergence": {
    "flag": null,
-   "text": "無背離（前提 GREEN、價格 20 日 +2.9%）；PER 29.1，3 年分位 75 → 80",
+   "text": "無背離（前提 GREEN、價格 20 日 +4.8%）；PER 29.1，3 年分位 75 → 80",
    "premise": "GREEN",
-   "premise_ts": "2026-10-01T11:00:44.184121+00:00",
-   "ret_pct": 2.87,
+   "premise_ts": "2026-10-01T11:00:44.517133+00:00",
+   "ret_pct": 4.82,
    "lookback_sessions": 20,
-   "as_of": "2026-10-01",
+   "as_of": "2026-10-02",
    "valuation": {
     "per": 29.09,
     "per_pct": 80.5,
@@ -676,7 +669,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-10-01"
+   "text": "tsmc_radar：最新 2026-10-02"
   },
   {
    "level": "ok",
