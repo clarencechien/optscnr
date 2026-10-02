@@ -1,33 +1,56 @@
 {
-  "updated_at": "2026-10-01T00:06:31.866667",
+  "updated_at": "2026-10-02T00:04:36.486124",
   "stats": {
     "total_items": 106,
-    "items_with_company": 18,
-    "items_with_catalyst": 14,
-    "items_both": 2
+    "items_with_company": 29,
+    "items_with_catalyst": 16,
+    "items_both": 5
   },
-  "count": 18,
+  "count": 20,
   "tickers": [
+    "GOOGL",
     "MU",
+    "TWLO",
+    "NKE",
     "ZS",
     "PANW",
-    "GOOGL",
+    "AAPL",
+    "BA",
+    "MSFT",
     "META",
     "INTC",
     "AMD",
     "NVDA",
     "TGT",
-    "BA",
-    "TSLA",
+    "WMT",
     "AMZN",
+    "AVGO",
     "CRM",
-    "MSFT",
-    "NKE",
     "XYZ",
-    "BAC",
-    "PLTR"
+    "BAC"
   ],
   "details": [
+    {
+      "symbol": "GOOGL",
+      "score": 6,
+      "evidence": [
+        {
+          "title": "Google unveils latest AI model, but Wall Street wants a breakout personal agent",
+          "catalysts": [
+            "breakout",
+            "unveils"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "SpaceX launches Google AI chips into orbit in push toward space-based data centers",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
     {
       "symbol": "MU",
       "score": 2.5,
@@ -41,6 +64,45 @@
         },
         {
           "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TWLO",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Here’s who’s joining the S&P 500 in the index’s latest shakeup",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Twilio to join S&P 500 as S&P Dow Jones reshuffles indices",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 2.0,
+      "evidence": [
+        {
+          "title": "Nike shares drop as retailer posts disappointing sales, announces layoffs as part of restructuring",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "This could be the worst year ever for Nike’s stock, with sales set to fall further",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nike plans more job cuts to boost sputtering turnaround, forecasts steep revenue drop",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -73,16 +135,53 @@
       ]
     },
     {
-      "symbol": "GOOGL",
-      "score": 1.0,
+      "symbol": "AAPL",
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Google rolls out Gemini 4 Argon, its most advanced AI model",
+          "title": "New York City's 'click to cancel' subscription rule takes effect, joining states with similar laws",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Google shows it’s not out of the AI race just yet",
+          "title": "Jim Cramer sees a huge catalyst on the horizon for Apple. How to play the stock",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Trump’s AI lunch included every major tech company. Except Apple",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Boeing engineers and technical workers approve new contract, avoiding strike",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Boeing white-collar workers approve contract offer, averting strike fears",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Former LinkedIn chief Roslansky to leave Microsoft, following other exec departures",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -93,7 +192,7 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Meta stock enjoys best month since 2022 on AI momentum",
+          "title": "New Mexico wants Meta to pay up to $40 billion in penalties after data privacy trial",
           "catalysts": [],
           "has_catalyst": false
         },
@@ -157,29 +256,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Inside Man: How Chinese spies used lies, love and betrayal to target the Federal Reserve",
+          "title": "Trump could target three Fed governors. Removing them may be harder than it looks",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why Jim Cramer isn't buying more Boeing despite its huge Navy contract win ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "SEC clears Tesla-crafted auto-vote plan for wide use, worrying activists",
+          "title": "Walmart is using light-up digital shelf labels to help shoppers and employees find items",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -190,7 +278,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Synopsys, Amazon Web Services sign chip design licensing deal worth more than $1 billion",
+          "title": "Pilots of crashed Amazon cargo plane were unaware of wind conditions",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Exclusive-Broadcom to lend Anthropic up to $42 billion to lease its chips, filing says",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -202,28 +301,6 @@
       "evidence": [
         {
           "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nike (NKE): Wall Street Tests Whether the Turnaround Can Outrun Weak Demand Ahead of Q1 Results",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -250,21 +327,10 @@
           "has_catalyst": false
         }
       ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Palantir Reveals Its AI Sovereignty Strategy And Wall Street Is Starting to Believe It",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 2
+    "OpenAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
