@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-09-26",
-    "consecutive_days": 6,
-    "total_mentions": 13,
+    "last_seen": "2026-10-02",
+    "consecutive_days": 7,
+    "total_mentions": 15,
     "ticker": "NDAQ"
   },
   "Nevada": {
@@ -50,9 +50,9 @@
   },
   "Mattel": {
     "first_seen": "2026-10-01",
-    "last_seen": "2026-10-01",
-    "consecutive_days": 1,
-    "total_mentions": 3,
+    "last_seen": "2026-10-02",
+    "consecutive_days": 2,
+    "total_mentions": 5,
     "ticker": "MAT"
   },
   "Gemini": {
@@ -68,5 +68,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BLX"
+  },
+  "Software": {
+    "first_seen": "2026-10-02",
+    "last_seen": "2026-10-02",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SFWJ"
+  },
+  "United Airlines": {
+    "first_seen": "2026-10-02",
+    "last_seen": "2026-10-02",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "UAL"
+  },
+  "Delta": {
+    "first_seen": "2026-10-02",
+    "last_seen": "2026-10-02",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DAL"
+  },
+  "Accenture": {
+    "first_seen": "2026-10-02",
+    "last_seen": "2026-10-02",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ACN"
   }
 }

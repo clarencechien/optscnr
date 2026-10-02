@@ -1,41 +1,77 @@
 {
-  "updated_at": "2026-10-01T00:50:15.182387",
-  "count": 3,
+  "updated_at": "2026-10-02T01:04:54.002351",
+  "count": 6,
   "blind_spots": [
+    {
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 15,
+      "consecutive_days": 7,
+      "is_strong": true,
+      "evidence": [
+        "Moderna to replace Warner Bros Discovery  on Nasdaq 100",
+        "Moderna to join Nasdaq-100 index on Oct. 9, replacing Warner Bros."
+      ]
+    },
     {
       "name": "Mattel",
       "ticker": "MAT",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "mentions_today": 2,
+      "total_mentions": 5,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "David Ellison names Ynon Kreiz co-CEO of Paramount and Warner Bros. Discovery",
-        "Paramount gets court green light on Warner Bros deal, names Mattel’s Kreiz co-CEO"
+        "Mattel shares rise after reports of takeover interest from Authentic Brands Group",
+        "Mattel shares rise after reports of takeover interest from Authentic Brands Group"
       ]
     },
     {
-      "name": "Gemini",
-      "ticker": "GEMI",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Google rolls out Gemini 4 Argon, its most advanced AI model",
-        "Google rolls out Gemini 4 Argon, its most advanced AI model"
-      ]
-    },
-    {
-      "name": "Foreign",
-      "ticker": "BLX",
+      "name": "Software",
+      "ticker": "SFWJ",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Inside India newsletter: Foreign insurers get the red-carpet treatment — and policy uncertainty",
-        "Inside India newsletter: Foreign insurers get the red-carpet treatment — and policy uncertainty"
+        "Software roared back last quarter. Cramer says these stocks can keep climbing",
+        "Software roared back last quarter. Cramer says these stocks can keep climbing"
+      ]
+    },
+    {
+      "name": "United Airlines",
+      "ticker": "UAL",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "United Airlines gets aggressive in battle for top Delta, American flyers",
+        "United Airlines gets aggressive in battle for top Delta, American flyers"
+      ]
+    },
+    {
+      "name": "Delta",
+      "ticker": "DAL",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "United Airlines gets aggressive in battle for top Delta, American flyers",
+        "United Airlines gets aggressive in battle for top Delta, American flyers"
+      ]
+    },
+    {
+      "name": "Accenture",
+      "ticker": "ACN",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Accenture stock rallies after earnings beat expectations",
+        "Accenture stock rallies after earnings beat expectations"
       ]
     }
   ]
