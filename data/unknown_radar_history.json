@@ -6,27 +6,6 @@
     "total_mentions": 15,
     "ticker": "NDAQ"
   },
-  "Nevada": {
-    "first_seen": "2026-09-25",
-    "last_seen": "2026-09-25",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "NKGFD"
-  },
-  "MGM Resorts": {
-    "first_seen": "2026-09-25",
-    "last_seen": "2026-09-25",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "MGM"
-  },
-  "DoorDash": {
-    "first_seen": "2026-09-25",
-    "last_seen": "2026-09-25",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "DASH"
-  },
   "Alibaba": {
     "first_seen": "2026-09-27",
     "last_seen": "2026-09-27",
@@ -78,16 +57,16 @@
   },
   "United Airlines": {
     "first_seen": "2026-10-02",
-    "last_seen": "2026-10-02",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-10-03",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "UAL"
   },
   "Delta": {
     "first_seen": "2026-10-02",
-    "last_seen": "2026-10-02",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-10-03",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "DAL"
   },
   "Accenture": {

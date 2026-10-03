@@ -1,50 +1,14 @@
 {
-  "updated_at": "2026-10-02T01:04:54.002351",
-  "count": 6,
+  "updated_at": "2026-10-03T00:44:05.322082",
+  "count": 2,
   "blind_spots": [
-    {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 15,
-      "consecutive_days": 7,
-      "is_strong": true,
-      "evidence": [
-        "Moderna to replace Warner Bros Discovery  on Nasdaq 100",
-        "Moderna to join Nasdaq-100 index on Oct. 9, replacing Warner Bros."
-      ]
-    },
-    {
-      "name": "Mattel",
-      "ticker": "MAT",
-      "mentions_today": 2,
-      "total_mentions": 5,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "Mattel shares rise after reports of takeover interest from Authentic Brands Group",
-        "Mattel shares rise after reports of takeover interest from Authentic Brands Group"
-      ]
-    },
-    {
-      "name": "Software",
-      "ticker": "SFWJ",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Software roared back last quarter. Cramer says these stocks can keep climbing",
-        "Software roared back last quarter. Cramer says these stocks can keep climbing"
-      ]
-    },
     {
       "name": "United Airlines",
       "ticker": "UAL",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
         "United Airlines gets aggressive in battle for top Delta, American flyers",
         "United Airlines gets aggressive in battle for top Delta, American flyers"
@@ -54,24 +18,12 @@
       "name": "Delta",
       "ticker": "DAL",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
         "United Airlines gets aggressive in battle for top Delta, American flyers",
         "United Airlines gets aggressive in battle for top Delta, American flyers"
-      ]
-    },
-    {
-      "name": "Accenture",
-      "ticker": "ACN",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Accenture stock rallies after earnings beat expectations",
-        "Accenture stock rallies after earnings beat expectations"
       ]
     }
   ]
