@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-02T18:44:31+00:00",
- "today": "2026-10-02",
+ "generated_at": "2026-10-03T09:05:01+00:00",
+ "today": "2026-10-03",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-02）：本週無警報、預算未動 → 等（2026-10-09 再看）。",
@@ -12,7 +12,7 @@
  "weather": {
   "status": "OK",
   "as_of": "2026-10-02",
-  "age_days": 0,
+  "age_days": 1,
   "regime": "NEUTRAL",
   "emoji": "⛅",
   "score": 0.202,
@@ -90,7 +90,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-10-02",
-  "age_days": 0,
+  "age_days": 1,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -236,7 +236,7 @@
   "status": "OK",
   "label": "2308",
   "as_of": "2026-10-02",
-  "age_days": 0,
+  "age_days": 1,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -314,7 +314,7 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-10-02",
+  "as_of": "2026-10-03",
   "age_days": 0,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
@@ -349,9 +349,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "YELLOW",
-    "headline": "export_controls_tariffs:14e / n2_arizona_ramp:12e(14m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:5e(6m)",
-    "ts": "2026-10-02T09:40:53.846730+00:00"
+    "status": "GREEN",
+    "headline": "export_controls_tariffs:16e / n2_arizona_ramp:11e(13m) / cowos_capacity:8e / geopolitics:4e / hyperscaler_capex:5e(6m)",
+    "ts": "2026-10-03T09:04:56.666423+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -393,7 +393,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-10-02",
-  "age_days": 0,
+  "age_days": 1,
   "rows": [
    {
     "ticker": "3661",
@@ -636,12 +636,12 @@
   {
    "date": "2026-10-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 8
+   "days": 7
   },
   {
    "date": "2026-11-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 39
+   "days": 38
   }
  ],
  "checks": [
@@ -663,7 +663,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-10-02"
+   "text": "tsmc_radar：最新 2026-10-03"
   },
   {
    "level": "ok",

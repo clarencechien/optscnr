@@ -1,12 +1,12 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-10-02 18:44 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-10-03 09:05 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
 ---
 
-# 📬 台股週報 — 2026-10-02
+# 📬 台股週報 — 2026-10-03
 
 > 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。**沒有任何一行是買賣建議；曝險與部位由人管。**
 
@@ -66,7 +66,7 @@ _README 由 build_readme.py 於 2026-10-02 18:44 UTC 重組；兩區塊各為該
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9
   - 🟢 M3 adr_premium：ADR 溢價 +16.0%（1 年第 30 百分位；觀察）
   - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0%
-  - 🟡 M5 narrative_triggers：export_controls_tariffs:14e / n2_arizona_ramp:12e(14m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:5e(6m)
+  - 🟢 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:11e(13m) / cowos_capacity:8e / geopolitics:4e / hyperscaler_capex:5e(6m)
   - 🟢 M6 peer_divergence：cohort 內 2330 未被對手顯著反超（離散在容忍帶內）
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 29.1（3 年第 80 百分位；20 日前第 75）；觀察
@@ -100,19 +100,19 @@ _README 由 build_readme.py 於 2026-10-02 18:44 UTC 重組；兩區塊各為該
 
 ## 5. 下週日曆
 
-- 2026-10-10（8 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
-- 2026-11-10（39 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
+- 2026-10-10（7 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
+- 2026-11-10（38 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
 
 ## 6. 資料健康
 
 - ✅ 天氣台：最新 2026-10-02
 - ✅ DCA 帳本：最新 2026-10-02
 - ✅ delta_radar：最新 2026-10-02
-- ✅ tsmc_radar：最新 2026-10-02
+- ✅ tsmc_radar：最新 2026-10-03
 - ✅ 賭場 sector：最新 2026-10-02
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-02T18:44:31+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-03T09:05:01+00:00*
 
 ---
 
@@ -226,7 +226,7 @@ _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組�
 
 ---
 
-# TSMC Radar (2330.TW) — 2026-10-02 09:40 UTC
+# TSMC Radar (2330.TW) — 2026-10-03 09:04 UTC
 
 ## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
@@ -238,67 +238,67 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟡 YELLOW | export_controls_tariffs:14e / n2_arizona_ramp:12e(14m) / cowos_capacity:9e / geopolitics:4e / hyperscaler_capex:5e(6m) |
+| M5 narrative_triggers | 🟢 GREEN | export_controls_tariffs:16e / n2_arizona_ramp:11e(13m) / cowos_capacity:8e / geopolitics:4e / hyperscaler_capex:5e(6m) |
 
-### M5 narrative_triggers — 🟡 YELLOW
+### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
   "events": {
-    "export_controls_tariffs": 14,
-    "n2_arizona_ramp": 12,
-    "cowos_capacity": 9,
+    "export_controls_tariffs": 16,
+    "n2_arizona_ramp": 11,
+    "cowos_capacity": 8,
     "geopolitics": 4,
     "hyperscaler_capex": 5
   },
   "mentions": {
-    "export_controls_tariffs": 14,
-    "n2_arizona_ramp": 14,
-    "cowos_capacity": 9,
+    "export_controls_tariffs": 16,
+    "n2_arizona_ramp": 13,
+    "cowos_capacity": 8,
     "geopolitics": 4,
     "hyperscaler_capex": 6
   },
   "scoring": {
     "export_controls_tariffs": {
-      "events": 14,
-      "mentions": 14,
+      "events": 16,
+      "mentions": 16,
       "gate": "zscore",
-      "z": -2.89,
+      "z": -0.09,
       "denial": false
     },
     "n2_arizona_ramp": {
-      "events": 12,
-      "mentions": 14,
+      "events": 11,
+      "mentions": 13,
       "gate": "zscore",
-      "z": 2.5,
+      "z": 0.91,
       "denial": false
     },
     "cowos_capacity": {
-      "events": 9,
-      "mentions": 9,
+      "events": 8,
+      "mentions": 8,
       "gate": "zscore",
-      "z": 1.37,
+      "z": 0.25,
       "denial": true
     },
     "geopolitics": {
       "events": 4,
       "mentions": 4,
       "gate": "zscore",
-      "z": 0.3,
+      "z": 0.17,
       "denial": false
     },
     "hyperscaler_capex": {
       "events": 5,
       "mentions": 6,
       "gate": "zscore",
-      "z": 0.55,
+      "z": 0.45,
       "denial": false
     }
   }
 }
 ```
-- [export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F
 - [export_controls_tariffs] Huawei chairman thanks the US for export restrictions on chips, says it supercharged China’s semiconductor industry — Wa
 - [export_controls_tariffs] Key facts: TSMC to Invest Up to $265B in Arizona; Reviews Export Controls - TradingView
+- [export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F
 - [n2_arizona_ramp] Samsung's 2nm Yield Approaches 60%, Leveraging Tesla Orders to Challenge TSMC - finance.biggo.com
 - [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea
 - [n2_arizona_ramp] Tech News:Samsung 2nm Chip Yield Surpasses 60%, Closing in on TSMC - LinkedIn
@@ -313,7 +313,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [hyperscaler_capex] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **2** 筆；state 已有 outcomes 的 entry：**21/21**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**22/22**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---
