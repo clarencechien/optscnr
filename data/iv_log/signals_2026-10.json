@@ -43,6 +43,14 @@
         "bid": 0.41,
         "ask": 0.42,
         "iv": 35.44986425781249
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.26,
+        "bid": 0.25,
+        "ask": 0.27,
+        "iv": 33.74089697265625
       }
     ],
     "t5": null,
@@ -94,6 +102,14 @@
         "bid": 0.1,
         "ask": 0.2,
         "iv": 38.867798828125
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 15.329999923706055,
+        "last": 0.12,
+        "bid": 0.1,
+        "ask": 0.15,
+        "iv": 32.617861328124995
       }
     ],
     "t5": null,
@@ -145,6 +161,14 @@
         "bid": 0.34,
         "ask": 0.37,
         "iv": 28.54075366210937
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 251.52000427246094,
+        "last": 0.38,
+        "bid": 0.35,
+        "ask": 0.39,
+        "iv": 27.588614746093743
       }
     ],
     "t5": null,
@@ -198,6 +222,14 @@
         "bid": 0.86,
         "ask": 1.0,
         "iv": 67.09017285156251
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 33.869998931884766,
+        "last": 0.07,
+        "bid": 0.05,
+        "ask": 0.11,
+        "iv": 42.188078125
       }
     ],
     "t5": null,
@@ -249,6 +281,14 @@
         "bid": 0.15,
         "ask": 0.25,
         "iv": 103.90673046875003
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 2.5399999618530273,
+        "last": 0.2,
+        "bid": 0.15,
+        "ask": 0.2,
+        "iv": 97.6562734375
       }
     ],
     "t5": null,
@@ -300,6 +340,14 @@
         "bid": 0.28,
         "ask": 0.32,
         "iv": 77.148666015625
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 1074.8900146484375,
+        "last": 0.21,
+        "bid": 0.19,
+        "ask": 0.23,
+        "iv": 78.0275634765625
       }
     ],
     "t5": null,
@@ -351,6 +399,14 @@
         "bid": 0.04,
         "ask": 0.05,
         "iv": 59.375406250000005
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 4.889999866485596,
+        "last": 0.02,
+        "bid": 0.02,
+        "ask": 0.03,
+        "iv": 68.7503125
       }
     ],
     "t5": null,
@@ -402,6 +458,14 @@
         "bid": 0.08,
         "ask": 0.1,
         "iv": 65.62534375000001
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 2.440000057220459,
+        "last": 0.11,
+        "bid": 0.06,
+        "ask": 0.12,
+        "iv": 60.937890625000016
       }
     ],
     "t5": null,
@@ -458,6 +522,14 @@
         "bid": 0.46,
         "ask": 0.48,
         "iv": 48.5356708984375
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 12.319999694824219,
+        "last": 0.5,
+        "bid": 0.47,
+        "ask": 0.51,
+        "iv": 48.34036035156251
       }
     ],
     "t5": null,
@@ -508,6 +580,14 @@
         "bid": 1.68,
         "ask": 1.73,
         "iv": 28.49192602539062
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 53.75,
+        "last": 1.7,
+        "bid": 1.67,
+        "ask": 1.71,
+        "iv": 28.711650390624992
       }
     ],
     "t5": null,
@@ -558,6 +638,14 @@
         "bid": 1.55,
         "ask": 1.75,
         "iv": 62.74451318359377
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 43.06999969482422,
+        "last": 1.7,
+        "bid": 1.6,
+        "ask": 1.75,
+        "iv": 63.13513427734375
       }
     ],
     "t5": null,
@@ -610,6 +698,14 @@
         "bid": 0.23,
         "ask": 0.25,
         "iv": 22.412885253906246
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 333.69000244140625,
+        "last": 0.2,
+        "bid": 0.19,
+        "ask": 0.21,
+        "iv": 20.996883789062498
       }
     ],
     "t5": null,
@@ -660,6 +756,14 @@
         "bid": 1.62,
         "ask": 1.85,
         "iv": 28.15013256835937
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 251.52000427246094,
+        "last": 2.12,
+        "bid": 2.07,
+        "ask": 2.2,
+        "iv": 26.306889282226564
       }
     ],
     "t5": null,
@@ -710,6 +814,14 @@
         "bid": 2.62,
         "ask": 2.94,
         "iv": 80.85956640625
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 43.689998626708984,
+        "last": 3.08,
+        "bid": 2.92,
+        "ask": 3.25,
+        "iv": 79.61446166992188
       }
     ],
     "t5": null,
@@ -760,6 +872,14 @@
         "bid": 3.3,
         "ask": 3.5,
         "iv": 27.735097656249998
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 251.52000427246094,
+        "last": 4.43,
+        "bid": 4.3,
+        "ask": 4.6,
+        "iv": 27.368890380859373
       }
     ],
     "t5": null,
@@ -810,6 +930,14 @@
         "bid": 3.25,
         "ask": 3.4,
         "iv": 28.98630584716796
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 343.5,
+        "last": 4.45,
+        "bid": 4.35,
+        "ask": 4.5,
+        "iv": 27.423821472167965
       }
     ],
     "t5": null,
@@ -860,6 +988,14 @@
         "bid": 4.4,
         "ask": 4.7,
         "iv": 27.857166748046875
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 251.52000427246094,
+        "last": 6.0,
+        "bid": 5.85,
+        "ask": 6.15,
+        "iv": 27.613028564453117
       }
     ],
     "t5": null,
@@ -910,6 +1046,14 @@
         "bid": 2.78,
         "ask": 2.99,
         "iv": 53.24753784179688
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 3.08,
+        "bid": 3.05,
+        "ask": 3.15,
+        "iv": 51.78270874023438
       }
     ],
     "t5": null,
@@ -960,6 +1104,14 @@
         "bid": 1.06,
         "ask": 1.16,
         "iv": 65.7229990234375
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 1.4,
+        "bid": 1.39,
+        "ask": 1.45,
+        "iv": 66.45541357421877
       }
     ],
     "t5": null,
@@ -1010,6 +1162,14 @@
         "bid": 1.9,
         "ask": 2.4,
         "iv": 84.39957006835937
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 2.44,
+        "bid": 2.5,
+        "ask": 2.89,
+        "iv": 88.5743330078125
       }
     ],
     "t5": null,
@@ -1060,6 +1220,14 @@
         "bid": 5.1,
         "ask": 5.3,
         "iv": 28.906960937499992
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 343.5,
+        "last": 7.15,
+        "bid": 7.0,
+        "ask": 7.3,
+        "iv": 28.443098388671867
       }
     ],
     "t5": null,
@@ -1110,6 +1278,14 @@
         "bid": 2.04,
         "ask": 2.4,
         "iv": 30.664755859375
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 343.5,
+        "last": 2.61,
+        "bid": 2.32,
+        "ask": 2.74,
+        "iv": 28.589581298828122
       }
     ],
     "t5": null,
@@ -1161,6 +1337,14 @@
         "bid": 0.48,
         "ask": 0.49,
         "iv": 83.007982421875
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 7.239999771118164,
+        "last": 0.47,
+        "bid": 0.49,
+        "ask": 0.52,
+        "iv": 82.61736132812499
       }
     ],
     "t5": null,
@@ -1211,6 +1395,14 @@
         "bid": 2.91,
         "ask": 3.15,
         "iv": 63.52575537109376
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 73.91999816894531,
+        "last": 5.0,
+        "bid": 4.8,
+        "ask": 5.2,
+        "iv": 64.9417568359375
       }
     ],
     "t5": null,
@@ -1261,6 +1453,14 @@
         "bid": 2.14,
         "ask": 2.56,
         "iv": 38.64807446289062
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 193.55999755859375,
+        "last": 1.94,
+        "bid": 1.85,
+        "ask": 2.14,
+        "iv": 35.08365698242187
       }
     ],
     "t5": null,
@@ -1311,6 +1511,14 @@
         "bid": 1.78,
         "ask": 1.94,
         "iv": 53.467262207031254
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 1.91,
+        "bid": 1.86,
+        "ask": 1.95,
+        "iv": 51.92919165039063
       }
     ],
     "t5": null,
@@ -1361,6 +1569,14 @@
         "bid": 3.85,
         "ask": 4.15,
         "iv": 70.117486328125
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 242.80999755859375,
+        "last": 6.0,
+        "bid": 5.95,
+        "ask": 6.1,
+        "iv": 67.43196630859377
       }
     ],
     "t5": null,
@@ -1411,6 +1627,14 @@
         "bid": 2.13,
         "ask": 2.2,
         "iv": 64.1605146484375
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 43.689998626708984,
+        "last": 3.2,
+        "bid": 3.15,
+        "ask": 3.25,
+        "iv": 63.37927246093751
       }
     ],
     "t5": null,
@@ -1461,6 +1685,14 @@
         "bid": 2.08,
         "ask": 2.2,
         "iv": 63.7698935546875
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 73.91999816894531,
+        "last": 3.76,
+        "bid": 3.5,
+        "ask": 4.15,
+        "iv": 68.50617431640626
       }
     ],
     "t5": null,
@@ -1511,6 +1743,14 @@
         "bid": 3.1,
         "ask": 3.3,
         "iv": 68.65265722656251
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 3.5,
+        "bid": 3.75,
+        "ask": 3.9,
+        "iv": 68.94562304687501
       }
     ],
     "t5": null,
@@ -1561,6 +1801,14 @@
         "bid": 1.93,
         "ask": 2.06,
         "iv": 65.33237792968751
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 2.5,
+        "bid": 2.48,
+        "ask": 2.59,
+        "iv": 66.11362011718751
       }
     ],
     "t5": null,
@@ -1611,6 +1859,14 @@
         "bid": 0.95,
         "ask": 1.07,
         "iv": 65.43003320312502
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 43.77000045776367,
+        "last": 0.75,
+        "bid": 0.63,
+        "ask": 0.77,
+        "iv": 63.281617187500004
       }
     ],
     "t5": null,
@@ -1662,6 +1918,14 @@
         "bid": 0.29,
         "ask": 0.31,
         "iv": 77.3439765625
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 4.889999866485596,
+        "last": 0.25,
+        "bid": 0.25,
+        "ask": 0.26,
+        "iv": 77.148666015625
       }
     ],
     "t5": null,
@@ -1714,6 +1978,14 @@
         "bid": 1.7,
         "ask": 1.78,
         "iv": 64.7464462890625
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 33.869998931884766,
+        "last": 0.35,
+        "bid": 0.33,
+        "ask": 0.36,
+        "iv": 35.547519531249996
       }
     ],
     "t5": null,
@@ -1765,6 +2037,14 @@
         "bid": 0.04,
         "ask": 0.11,
         "iv": 30.762411132812495
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 53.75,
+        "last": 0.05,
+        "bid": 0.01,
+        "ask": 0.09,
+        "iv": 30.07882421875
       }
     ],
     "t5": null,
@@ -1816,6 +2096,14 @@
         "bid": 0.06,
         "ask": 0.12,
         "iv": 50.97705273437501
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 12.319999694824219,
+        "last": 0.12,
+        "bid": 0.12,
+        "ask": 0.13,
+        "iv": 54.49264257812501
       }
     ],
     "t5": null,
@@ -1867,6 +2155,14 @@
         "bid": 0.11,
         "ask": 0.14,
         "iv": 90.62509374999999
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 4.889999866485596,
+        "last": 0.11,
+        "bid": 0.1,
+        "ask": 0.13,
+        "iv": 92.9688203125
       }
     ],
     "t5": null,
@@ -1923,6 +2219,14 @@
         "bid": 0.47,
         "ask": 0.49,
         "iv": 40.23497265625
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.41,
+        "bid": 0.41,
+        "ask": 0.43,
+        "iv": 40.332627929687504
       }
     ],
     "t5": null,
@@ -1974,6 +2278,14 @@
         "bid": 0.22,
         "ask": 0.26,
         "iv": 113.47699511718751
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 2.440000057220459,
+        "last": 0.25,
+        "bid": 0.22,
+        "ask": 0.29,
+        "iv": 114.45355273437498
       }
     ],
     "t5": null,
@@ -2030,6 +2342,14 @@
         "bid": 0.64,
         "ask": 0.67,
         "iv": 49.70753417968751
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 12.319999694824219,
+        "last": 0.65,
+        "bid": 0.63,
+        "ask": 0.7,
+        "iv": 49.219257812500004
       }
     ],
     "t5": null,
@@ -2081,6 +2401,14 @@
         "bid": 0.4,
         "ask": 0.6,
         "iv": 109.57076464843752
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 2.440000057220459,
+        "last": 0.43,
+        "bid": 0.41,
+        "ask": 0.48,
+        "iv": 103.12548437500001
       }
     ],
     "t5": null,
@@ -2132,6 +2460,14 @@
         "bid": 0.05,
         "ask": 0.09,
         "iv": 100.39112304687498
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 7.239999771118164,
+        "last": 0.08,
+        "bid": 0.05,
+        "ask": 0.08,
+        "iv": 98.437515625
       }
     ],
     "t5": null,
@@ -2183,6 +2519,14 @@
         "bid": 0.04,
         "ask": 0.06,
         "iv": 118.75040625
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 2.440000057220459,
+        "last": 0.07,
+        "bid": 0.06,
+        "ask": 0.07,
+        "iv": 124.21912890624998
       }
     ],
     "t5": null,
@@ -2234,6 +2578,14 @@
         "bid": 0.06,
         "ask": 0.07,
         "iv": 71.0940390625
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 15.770000457763672,
+        "last": 0.07,
+        "bid": 0.06,
+        "ask": 0.07,
+        "iv": 72.26590234375
       }
     ],
     "t5": null,
@@ -2285,6 +2637,14 @@
         "bid": 0.39,
         "ask": 0.42,
         "iv": 46.436082519531254
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.34,
+        "bid": 0.33,
+        "ask": 0.35,
+        "iv": 45.508357421875004
       }
     ],
     "t5": null,
@@ -2336,6 +2696,14 @@
         "bid": 0.06,
         "ask": 0.08,
         "iv": 55.859816406250005
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 12.319999694824219,
+        "last": 0.07,
+        "bid": 0.04,
+        "ask": 0.09,
+        "iv": 54.68795312500001
       }
     ],
     "t5": null,
@@ -2387,6 +2755,14 @@
         "bid": 0.4,
         "ask": 0.52,
         "iv": 24.219507812499998
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 104.26000213623047,
+        "last": 0.32,
+        "bid": 0.31,
+        "ask": 0.33,
+        "iv": 21.43633251953125
       }
     ],
     "t5": null,
@@ -2438,6 +2814,14 @@
         "bid": 0.62,
         "ask": 0.78,
         "iv": 39.20959228515625
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 355.1400146484375,
+        "last": 1.35,
+        "bid": 1.29,
+        "ask": 1.38,
+        "iv": 33.911793701171874
       }
     ],
     "t5": null,
@@ -2488,6 +2872,14 @@
         "bid": 1.05,
         "ask": 1.18,
         "iv": 24.61012890625
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 104.26000213623047,
+        "last": 0.89,
+        "bid": 0.83,
+        "ask": 0.92,
+        "iv": 21.72929833984375
       }
     ],
     "t5": null,
@@ -2540,6 +2932,5545 @@
         "bid": 0.75,
         "ask": 1.15,
         "iv": 55.469195312500005
+      },
+      {
+        "date": "2026-10-02",
+        "spot": 15.270000457763672,
+        "last": 1.11,
+        "bid": 1.0,
+        "ask": 1.25,
+        "iv": 51.123535644531245
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MARA_2026-10-09_12.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MARA",
+    "expiry": "2026-10-09",
+    "strike": 12.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(20.4x) 🚬菸屁股 📅吃不到財報(下次11-04)",
+    "entry_price": 0.1,
+    "entry_iv": 77.3439765625,
+    "entry_spot": 11.23,
+    "oi": 3731,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-04)"
+    ],
+    "volume": 55590,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.1,
+    "entry_ask": 0.11,
+    "last_trade_at": "2026-10-02 19:59:39",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 11.229999542236328,
+        "last": 0.1,
+        "bid": 0.1,
+        "ask": 0.11,
+        "iv": 77.3439765625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MARA_2026-10-09_12.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MARA",
+    "expiry": "2026-10-09",
+    "strike": 12.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(8.0x) 🚬菸屁股 📅吃不到財報(下次11-04)",
+    "entry_price": 0.19,
+    "entry_iv": 75.7814921875,
+    "entry_spot": 11.23,
+    "oi": 8566,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-04)"
+    ],
+    "volume": 53532,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.19,
+    "entry_ask": 0.2,
+    "last_trade_at": "2026-10-02 19:59:24",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 11.229999542236328,
+        "last": 0.19,
+        "bid": 0.19,
+        "ask": 0.2,
+        "iv": 75.7814921875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_F_2026-11-20_14.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "F",
+    "expiry": "2026-11-20",
+    "strike": 14.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅覆蓋財報(10-28)",
+    "entry_price": 0.17,
+    "entry_iv": 40.820904296875,
+    "entry_spot": 12.1,
+    "oi": 8171,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-28)"
+    ],
+    "volume": 52218,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.16,
+    "entry_ask": 0.17,
+    "last_trade_at": "2026-10-02 19:59:56",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 12.100000381469727,
+        "last": 0.17,
+        "bid": 0.16,
+        "ask": 0.17,
+        "iv": 40.820904296875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_TSLA_2026-10-09_400.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "TSLA",
+    "expiry": "2026-10-09",
+    "strike": 400.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(3.9x) 🚬菸屁股 📅吃不到財報(下次10-21)",
+    "entry_price": 0.71,
+    "entry_iv": 38.74572973632812,
+    "entry_spot": 370.59,
+    "oi": 7146,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-21)"
+    ],
+    "volume": 18967,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.7,
+    "entry_ask": 0.72,
+    "last_trade_at": "2026-10-02 19:59:57",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 370.5899963378906,
+        "last": 0.71,
+        "bid": 0.7,
+        "ask": 0.72,
+        "iv": 38.74572973632812
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SMCI_2026-10-09_45.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SMCI",
+    "expiry": "2026-10-09",
+    "strike": 45.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(18.2x) 🚬菸屁股 📅吃不到財報(下次11-03)",
+    "entry_price": 0.97,
+    "entry_iv": 63.1839619140625,
+    "entry_spot": 43.69,
+    "oi": 3007,
+    "oi_d7": 1258,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-03)"
+    ],
+    "volume": 17015,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.96,
+    "entry_ask": 1.0,
+    "last_trade_at": "2026-10-02 19:59:54",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 43.689998626708984,
+        "last": 0.97,
+        "bid": 0.96,
+        "ask": 1.0,
+        "iv": 63.1839619140625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NKE_2026-10-09_35.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NKE",
+    "expiry": "2026-10-09",
+    "strike": 35.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅財報已過(10-01)",
+    "entry_price": 0.26,
+    "entry_iv": 37.11000390625,
+    "entry_spot": 33.87,
+    "oi": 1869,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(10-01)"
+    ],
+    "volume": 16476,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.25,
+    "entry_ask": 0.28,
+    "last_trade_at": "2026-10-02 19:59:47",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 33.869998931884766,
+        "last": 0.26,
+        "bid": 0.25,
+        "ask": 0.28,
+        "iv": 37.11000390625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MARA_2026-10-09_11.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MARA",
+    "expiry": "2026-10-09",
+    "strike": 11.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次11-04)",
+    "entry_price": 0.35,
+    "entry_iv": 74.60962890625001,
+    "entry_spot": 11.23,
+    "oi": 5002,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-04)"
+    ],
+    "volume": 16298,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.34,
+    "entry_ask": 0.35,
+    "last_trade_at": "2026-10-02 19:59:36",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 11.229999542236328,
+        "last": 0.35,
+        "bid": 0.34,
+        "ask": 0.35,
+        "iv": 74.60962890625001
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SMCI_2026-10-09_46.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SMCI",
+    "expiry": "2026-10-09",
+    "strike": 46.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(42.8x) 🚬菸屁股 📅吃不到財報(下次11-03)",
+    "entry_price": 0.69,
+    "entry_iv": 63.7698935546875,
+    "entry_spot": 43.69,
+    "oi": 4615,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-03)"
+    ],
+    "volume": 13908,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.67,
+    "entry_ask": 0.7,
+    "last_trade_at": "2026-10-02 19:59:24",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 43.689998626708984,
+        "last": 0.69,
+        "bid": 0.67,
+        "ask": 0.7,
+        "iv": 63.7698935546875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HOOD_2026-10-09_120.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HOOD",
+    "expiry": "2026-10-09",
+    "strike": 120.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(2.7x) 🚬菸屁股 📅吃不到財報(下次10-27)",
+    "entry_price": 0.91,
+    "entry_iv": 53.27195166015625,
+    "entry_spot": 112.74,
+    "oi": 3863,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 13363,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.9,
+    "entry_ask": 1.0,
+    "last_trade_at": "2026-10-02 19:59:52",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 0.91,
+        "bid": 0.9,
+        "ask": 1.0,
+        "iv": 53.27195166015625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SMCI_2026-10-09_47.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SMCI",
+    "expiry": "2026-10-09",
+    "strike": 47.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(>50x) 🚬菸屁股 📅吃不到財報(下次11-03)",
+    "entry_price": 0.48,
+    "entry_iv": 64.648791015625,
+    "entry_spot": 43.69,
+    "oi": 1173,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-03)"
+    ],
+    "volume": 12475,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.46,
+    "entry_ask": 0.49,
+    "last_trade_at": "2026-10-02 19:59:30",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 43.689998626708984,
+        "last": 0.48,
+        "bid": 0.46,
+        "ask": 0.49,
+        "iv": 64.648791015625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MARA_2026-10-09_13.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MARA",
+    "expiry": "2026-10-09",
+    "strike": 13.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(14.5x) 🚬菸屁股 📅吃不到財報(下次11-04)",
+    "entry_price": 0.05,
+    "entry_iv": 78.9064609375,
+    "entry_spot": 11.23,
+    "oi": 4223,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-04)"
+    ],
+    "volume": 11785,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.05,
+    "entry_ask": 0.06,
+    "last_trade_at": "2026-10-02 19:54:38",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 11.229999542236328,
+        "last": 0.05,
+        "bid": 0.05,
+        "ask": 0.06,
+        "iv": 78.9064609375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IREN_2026-10-09_50.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IREN",
+    "expiry": "2026-10-09",
+    "strike": 50.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(12.6x) 🚬菸屁股 📅吃不到財報(下次11-05)",
+    "entry_price": 0.09,
+    "entry_iv": 75.7814921875,
+    "entry_spot": 41.76,
+    "oi": 2711,
+    "oi_d7": 1101,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 10086,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.08,
+    "entry_ask": 0.09,
+    "last_trade_at": "2026-10-02 19:59:40",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 0.09,
+        "bid": 0.08,
+        "ask": 0.09,
+        "iv": 75.7814921875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NKE_2026-10-16_35.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NKE",
+    "expiry": "2026-10-16",
+    "strike": 35.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(4.6x) 🚬菸屁股 📅財報已過(10-01)",
+    "entry_price": 0.48,
+    "entry_iv": 35.742830078124996,
+    "entry_spot": 33.87,
+    "oi": 5294,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(10-01)"
+    ],
+    "volume": 9856,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.46,
+    "entry_ask": 0.5,
+    "last_trade_at": "2026-10-02 19:58:18",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 33.869998931884766,
+        "last": 0.48,
+        "bid": 0.46,
+        "ask": 0.5,
+        "iv": 35.742830078124996
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SOFI_2026-10-09_16.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SOFI",
+    "expiry": "2026-10-09",
+    "strike": 16.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(2.9x) 🚬菸屁股 📅吃不到財報(下次10-27)",
+    "entry_price": 0.11,
+    "entry_iv": 42.383388671875,
+    "entry_spot": 15.77,
+    "oi": 4971,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 9551,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.11,
+    "entry_ask": 0.12,
+    "last_trade_at": "2026-10-02 19:59:52",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 15.770000457763672,
+        "last": 0.11,
+        "bid": 0.11,
+        "ask": 0.12,
+        "iv": 42.383388671875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_RKLB_2026-10-09_80.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "RKLB",
+    "expiry": "2026-10-09",
+    "strike": 80.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(4.1x) 🚬菸屁股 📅吃不到財報(下次11-09)",
+    "entry_price": 0.77,
+    "entry_iv": 66.60189648437502,
+    "entry_spot": 73.92,
+    "oi": 5435,
+    "oi_d7": 2432,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-09)"
+    ],
+    "volume": 7903,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.75,
+    "entry_ask": 0.79,
+    "last_trade_at": "2026-10-02 19:59:12",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 73.91999816894531,
+        "last": 0.77,
+        "bid": 0.75,
+        "ask": 0.79,
+        "iv": 66.60189648437502
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NKE_2026-10-09_33.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NKE",
+    "expiry": "2026-10-09",
+    "strike": 33.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅財報已過(10-01)",
+    "entry_price": 0.93,
+    "entry_iv": 37.5982802734375,
+    "entry_spot": 33.87,
+    "oi": 867,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(10-01)"
+    ],
+    "volume": 7880,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.87,
+    "entry_ask": 0.9,
+    "last_trade_at": "2026-10-02 19:59:32",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 33.869998931884766,
+        "last": 0.93,
+        "bid": 0.87,
+        "ask": 0.9,
+        "iv": 37.5982802734375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_F_2026-11-20_13.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "F",
+    "expiry": "2026-11-20",
+    "strike": 13.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅覆蓋財報(10-28)",
+    "entry_price": 0.35,
+    "entry_iv": 40.039662109375,
+    "entry_spot": 12.1,
+    "oi": 5399,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-28)"
+    ],
+    "volume": 7827,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.32,
+    "entry_ask": 0.37,
+    "last_trade_at": "2026-10-02 19:46:42",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 12.100000381469727,
+        "last": 0.35,
+        "bid": 0.32,
+        "ask": 0.37,
+        "iv": 40.039662109375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HOOD_2026-10-09_121.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HOOD",
+    "expiry": "2026-10-09",
+    "strike": 121.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(8.3x) 🚬菸屁股 📅吃不到財報(下次10-27)",
+    "entry_price": 0.78,
+    "entry_iv": 53.12546875,
+    "entry_spot": 112.74,
+    "oi": 3775,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 7786,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.75,
+    "entry_ask": 0.79,
+    "last_trade_at": "2026-10-02 19:59:43",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 0.78,
+        "bid": 0.75,
+        "ask": 0.79,
+        "iv": 53.12546875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HOOD_2026-10-09_125.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HOOD",
+    "expiry": "2026-10-09",
+    "strike": 125.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(2.8x) 🚬菸屁股 📅吃不到財報(下次10-27)",
+    "entry_price": 0.36,
+    "entry_iv": 54.78560839843751,
+    "entry_spot": 112.74,
+    "oi": 2992,
+    "oi_d7": 2051,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 7524,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.35,
+    "entry_ask": 0.37,
+    "last_trade_at": "2026-10-02 19:59:40",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 0.36,
+        "bid": 0.35,
+        "ask": 0.37,
+        "iv": 54.78560839843751
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NKE_2026-10-16_34.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NKE",
+    "expiry": "2026-10-16",
+    "strike": 34.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅財報已過(10-01)",
+    "entry_price": 0.84,
+    "entry_iv": 35.596347167968744,
+    "entry_spot": 33.87,
+    "oi": 932,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(10-01)"
+    ],
+    "volume": 7233,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.83,
+    "entry_ask": 0.88,
+    "last_trade_at": "2026-10-02 19:59:54",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 33.869998931884766,
+        "last": 0.84,
+        "bid": 0.83,
+        "ask": 0.88,
+        "iv": 35.596347167968744
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_PLTR_2026-10-09_202.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "PLTR",
+    "expiry": "2026-10-09",
+    "strike": 202.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次11-02)",
+    "entry_price": 0.5,
+    "entry_iv": 39.89317919921875,
+    "entry_spot": 188.75,
+    "oi": 5003,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-02)"
+    ],
+    "volume": 6412,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.5,
+    "entry_ask": 0.52,
+    "last_trade_at": "2026-10-02 19:59:08",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 188.75,
+        "last": 0.5,
+        "bid": 0.5,
+        "ask": 0.52,
+        "iv": 39.89317919921875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IREN_2026-10-09_45.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IREN",
+    "expiry": "2026-10-09",
+    "strike": 45.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(3.9x) 🚬菸屁股 📅吃不到財報(下次11-05)",
+    "entry_price": 0.48,
+    "entry_iv": 67.38313867187502,
+    "entry_spot": 41.76,
+    "oi": 2546,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 5971,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.47,
+    "entry_ask": 0.5,
+    "last_trade_at": "2026-10-02 19:59:19",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 0.48,
+        "bid": 0.47,
+        "ask": 0.5,
+        "iv": 67.38313867187502
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_ONDS_2026-10-09_7.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "ONDS",
+    "expiry": "2026-10-09",
+    "strike": 7.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(2.6x) 🚬菸屁股 📅吃不到財報(下次11-12)",
+    "entry_price": 0.12,
+    "entry_iv": 57.0316796875,
+    "entry_spot": 7.24,
+    "oi": 3979,
+    "oi_d7": 1439,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-12)"
+    ],
+    "volume": 5682,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.12,
+    "entry_ask": 0.13,
+    "last_trade_at": "2026-10-02 19:59:51",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 7.239999771118164,
+        "last": 0.12,
+        "bid": 0.12,
+        "ask": 0.13,
+        "iv": 57.0316796875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_BAC_2026-10-09_54.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "BAC",
+    "expiry": "2026-10-09",
+    "strike": 54.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次10-14)",
+    "entry_price": 0.64,
+    "entry_iv": 27.539787109375,
+    "entry_spot": 53.75,
+    "oi": 1600,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-14)"
+    ],
+    "volume": 4445,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.62,
+    "entry_ask": 0.7,
+    "last_trade_at": "2026-10-02 19:59:58",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 53.75,
+        "last": 0.64,
+        "bid": 0.62,
+        "ask": 0.7,
+        "iv": 27.539787109375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_F_2026-10-09_12.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "F",
+    "expiry": "2026-10-09",
+    "strike": 12.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次10-28)",
+    "entry_price": 0.07,
+    "entry_iv": 31.250687499999998,
+    "entry_spot": 12.1,
+    "oi": 3090,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-28)"
+    ],
+    "volume": 4409,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.06,
+    "entry_ask": 0.07,
+    "last_trade_at": "2026-10-02 19:57:19",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 12.100000381469727,
+        "last": 0.07,
+        "bid": 0.06,
+        "ask": 0.07,
+        "iv": 31.250687499999998
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_F_2026-10-09_12.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "F",
+    "expiry": "2026-10-09",
+    "strike": 12.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次10-28)",
+    "entry_price": 0.27,
+    "entry_iv": 32.422550781249996,
+    "entry_spot": 12.1,
+    "oi": 1084,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-28)"
+    ],
+    "volume": 4222,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.25,
+    "entry_ask": 0.27,
+    "last_trade_at": "2026-10-02 19:59:59",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 12.100000381469727,
+        "last": 0.27,
+        "bid": 0.25,
+        "ask": 0.27,
+        "iv": 32.422550781249996
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MARA_2026-10-09_11.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MARA",
+    "expiry": "2026-10-09",
+    "strike": 11.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(2.9x) 🚬菸屁股 📅吃不到財報(下次11-04)",
+    "entry_price": 0.57,
+    "entry_iv": 74.2190078125,
+    "entry_spot": 11.23,
+    "oi": 1936,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-04)"
+    ],
+    "volume": 4039,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.57,
+    "entry_ask": 0.59,
+    "last_trade_at": "2026-10-02 19:59:57",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 11.229999542236328,
+        "last": 0.57,
+        "bid": 0.57,
+        "ask": 0.59,
+        "iv": 74.2190078125
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HIMS_2026-10-09_29.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HIMS",
+    "expiry": "2026-10-09",
+    "strike": 29.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次11-09)",
+    "entry_price": 0.77,
+    "entry_iv": 63.47692773437501,
+    "entry_spot": 29.0,
+    "oi": 2438,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-09)"
+    ],
+    "volume": 3960,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.77,
+    "entry_ask": 0.82,
+    "last_trade_at": "2026-10-02 19:59:32",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 29.0,
+        "last": 0.77,
+        "bid": 0.77,
+        "ask": 0.82,
+        "iv": 63.47692773437501
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_DKNG_2026-10-09_20.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "DKNG",
+    "expiry": "2026-10-09",
+    "strike": 20.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(5.8x) 🚬菸屁股 📅吃不到財報(下次11-05)",
+    "entry_price": 0.13,
+    "entry_iv": 57.617611328124994,
+    "entry_spot": 18.59,
+    "oi": 1147,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 3874,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.13,
+    "entry_ask": 0.17,
+    "last_trade_at": "2026-10-02 19:57:13",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 18.59000015258789,
+        "last": 0.13,
+        "bid": 0.13,
+        "ask": 0.17,
+        "iv": 57.617611328124994
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NKE_2026-10-16_36.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NKE",
+    "expiry": "2026-10-16",
+    "strike": 36.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(2.6x) 🚬菸屁股 📅財報已過(10-01)",
+    "entry_price": 0.16,
+    "entry_iv": 37.695935546875,
+    "entry_spot": 33.87,
+    "oi": 2839,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(10-01)"
+    ],
+    "volume": 3776,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.16,
+    "entry_ask": 0.21,
+    "last_trade_at": "2026-10-02 19:46:20",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 33.869998931884766,
+        "last": 0.16,
+        "bid": 0.16,
+        "ask": 0.21,
+        "iv": 37.695935546875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SMCI_2026-10-09_50.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SMCI",
+    "expiry": "2026-10-09",
+    "strike": 50.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(5.5x) 🚬菸屁股 📅吃不到財報(下次11-03)",
+    "entry_price": 0.15,
+    "entry_iv": 68.555001953125,
+    "entry_spot": 43.69,
+    "oi": 2238,
+    "oi_d7": 1023,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-03)"
+    ],
+    "volume": 3287,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.15,
+    "entry_ask": 0.16,
+    "last_trade_at": "2026-10-02 19:59:22",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 43.689998626708984,
+        "last": 0.15,
+        "bid": 0.15,
+        "ask": 0.16,
+        "iv": 68.555001953125
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NKE_2026-10-09_35.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NKE",
+    "expiry": "2026-10-09",
+    "strike": 35.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅財報已過(10-01)",
+    "entry_price": 0.17,
+    "entry_iv": 37.500625,
+    "entry_spot": 33.87,
+    "oi": 1305,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(10-01)"
+    ],
+    "volume": 3140,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.15,
+    "entry_ask": 0.18,
+    "last_trade_at": "2026-10-02 19:59:34",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 33.869998931884766,
+        "last": 0.17,
+        "bid": 0.15,
+        "ask": 0.18,
+        "iv": 37.500625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IREN_2026-10-09_46.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IREN",
+    "expiry": "2026-10-09",
+    "strike": 46.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(5.3x) 🚬菸屁股 📅吃不到財報(下次11-05)",
+    "entry_price": 0.33,
+    "entry_iv": 68.26203613281253,
+    "entry_spot": 41.76,
+    "oi": 1771,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 3126,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.32,
+    "entry_ask": 0.34,
+    "last_trade_at": "2026-10-02 19:58:49",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 0.33,
+        "bid": 0.32,
+        "ask": 0.34,
+        "iv": 68.26203613281253
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IREN_2026-10-09_44.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IREN",
+    "expiry": "2026-10-09",
+    "strike": 44.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(5.5x) 🚬菸屁股 📅吃不到財報(下次11-05)",
+    "entry_price": 0.72,
+    "entry_iv": 66.8948623046875,
+    "entry_spot": 41.76,
+    "oi": 1364,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 3102,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.7,
+    "entry_ask": 0.72,
+    "last_trade_at": "2026-10-02 19:59:50",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 0.72,
+        "bid": 0.7,
+        "ask": 0.72,
+        "iv": 66.8948623046875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_BA_2026-10-09_202.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "BA",
+    "expiry": "2026-10-09",
+    "strike": 202.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次10-27)",
+    "entry_price": 0.82,
+    "entry_iv": 34.15593188476562,
+    "entry_spot": 193.56,
+    "oi": 778,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 2937,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.75,
+    "entry_ask": 0.85,
+    "last_trade_at": "2026-10-02 19:59:49",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 193.55999755859375,
+        "last": 0.82,
+        "bid": 0.75,
+        "ask": 0.85,
+        "iv": 34.15593188476562
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HIMS_2026-10-09_32.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HIMS",
+    "expiry": "2026-10-09",
+    "strike": 32.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(7.2x) 🚬菸屁股 📅吃不到財報(下次11-09)",
+    "entry_price": 0.22,
+    "entry_iv": 68.16438085937502,
+    "entry_spot": 29.0,
+    "oi": 1607,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-09)"
+    ],
+    "volume": 2877,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.18,
+    "entry_ask": 0.26,
+    "last_trade_at": "2026-10-02 19:53:56",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 29.0,
+        "last": 0.22,
+        "bid": 0.18,
+        "ask": 0.26,
+        "iv": 68.16438085937502
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HIMS_2026-10-09_31.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HIMS",
+    "expiry": "2026-10-09",
+    "strike": 31.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(8.4x) 🚬菸屁股 📅吃不到財報(下次11-09)",
+    "entry_price": 0.37,
+    "entry_iv": 66.60189648437502,
+    "entry_spot": 29.0,
+    "oi": 1047,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-09)"
+    ],
+    "volume": 2384,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.35,
+    "entry_ask": 0.41,
+    "last_trade_at": "2026-10-02 19:59:00",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 29.0,
+        "last": 0.37,
+        "bid": 0.35,
+        "ask": 0.41,
+        "iv": 66.60189648437502
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_BA_2026-10-09_205.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "BA",
+    "expiry": "2026-10-09",
+    "strike": 205.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(3.4x) 🚬菸屁股 📅吃不到財報(下次10-27)",
+    "entry_price": 0.5,
+    "entry_iv": 34.4733115234375,
+    "entry_spot": 193.56,
+    "oi": 894,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 2321,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.52,
+    "entry_ask": 0.53,
+    "last_trade_at": "2026-10-02 19:59:53",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 193.55999755859375,
+        "last": 0.5,
+        "bid": 0.52,
+        "ask": 0.53,
+        "iv": 34.4733115234375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SMR_2026-10-09_8.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SMR",
+    "expiry": "2026-10-09",
+    "strike": 8.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(11.5x) 🚬菸屁股 📅吃不到財報(下次11-05)",
+    "entry_price": 0.17,
+    "entry_iv": 63.67223828125,
+    "entry_spot": 7.75,
+    "oi": 1759,
+    "oi_d7": 880,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 2271,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.16,
+    "entry_ask": 0.18,
+    "last_trade_at": "2026-10-02 19:59:14",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 7.75,
+        "last": 0.17,
+        "bid": 0.16,
+        "ask": 0.18,
+        "iv": 63.67223828125
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_PATH_2026-10-09_14.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "PATH",
+    "expiry": "2026-10-09",
+    "strike": 14.5,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(22.5x) 🚬菸屁股 📅吃不到財報(下次12-02)",
+    "entry_price": 0.04,
+    "entry_iv": 54.68795312500001,
+    "entry_spot": 13.12,
+    "oi": 1358,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-02)"
+    ],
+    "volume": 2183,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.04,
+    "entry_ask": 0.05,
+    "last_trade_at": "2026-10-02 19:57:16",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 13.119999885559082,
+        "last": 0.04,
+        "bid": 0.04,
+        "ask": 0.05,
+        "iv": 54.68795312500001
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_DKNG_2026-10-09_21.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "DKNG",
+    "expiry": "2026-10-09",
+    "strike": 21.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(8.2x) 🚬菸屁股 📅吃不到財報(下次11-05)",
+    "entry_price": 0.04,
+    "entry_iv": 56.64105859375,
+    "entry_spot": 18.59,
+    "oi": 1155,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 2054,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.03,
+    "entry_ask": 0.05,
+    "last_trade_at": "2026-10-02 19:07:57",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 18.59000015258789,
+        "last": 0.04,
+        "bid": 0.03,
+        "ask": 0.05,
+        "iv": 56.64105859375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_DKNG_2026-10-09_19.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "DKNG",
+    "expiry": "2026-10-09",
+    "strike": 19.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次11-05)",
+    "entry_price": 0.4,
+    "entry_iv": 58.984785156250005,
+    "entry_spot": 18.59,
+    "oi": 927,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 1648,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.39,
+    "entry_ask": 0.47,
+    "last_trade_at": "2026-10-02 19:58:27",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 18.59000015258789,
+        "last": 0.4,
+        "bid": 0.39,
+        "ask": 0.47,
+        "iv": 58.984785156250005
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IREN_2026-10-16_46.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IREN",
+    "expiry": "2026-10-16",
+    "strike": 46.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🚀點火(2.8x) 🚬菸屁股 📅吃不到財報(下次11-05)",
+    "entry_price": 0.86,
+    "entry_iv": 70.41045214843751,
+    "entry_spot": 41.76,
+    "oi": 925,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 1258,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.82,
+    "entry_ask": 0.9,
+    "last_trade_at": "2026-10-02 19:52:29",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 0.86,
+        "bid": 0.82,
+        "ask": 0.9,
+        "iv": 70.41045214843751
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NVDA_2026-10-09_245.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NVDA",
+    "expiry": "2026-10-09",
+    "strike": 245.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(7.6x) 🚬菸屁股 🏛️機構場 📅吃不到財報(下次11-17)",
+    "entry_price": 0.41,
+    "entry_iv": 26.221440917968753,
+    "entry_spot": 233.95,
+    "oi": 11268,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt",
+      "other:🏛️機構場"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-17)"
+    ],
+    "volume": 61785,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.4,
+    "entry_ask": 0.42,
+    "last_trade_at": "2026-10-02 19:59:36",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 233.9499969482422,
+        "last": 0.41,
+        "bid": 0.4,
+        "ask": 0.42,
+        "iv": 26.221440917968753
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_PCG_2027-01-15_16.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "PCG",
+    "expiry": "2027-01-15",
+    "strike": 16.0,
+    "score": 8,
+    "tags": "🚀點火(>50x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(10-22)",
+    "entry_price": 0.37,
+    "entry_iv": 51.465329101562496,
+    "entry_spot": 12.32,
+    "oi": 91606,
+    "oi_d7": 36020,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-22)"
+    ],
+    "volume": 49357,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.34,
+    "entry_ask": 0.37,
+    "last_trade_at": "2026-10-02 19:58:02",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 12.319999694824219,
+        "last": 0.37,
+        "bid": 0.34,
+        "ask": 0.37,
+        "iv": 51.465329101562496
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NVDA_2026-10-09_250.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NVDA",
+    "expiry": "2026-10-09",
+    "strike": 250.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(3.4x) 🚬菸屁股 🏛️機構場 📅吃不到財報(下次11-17)",
+    "entry_price": 0.14,
+    "entry_iv": 27.4421318359375,
+    "entry_spot": 233.95,
+    "oi": 22477,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt",
+      "other:🏛️機構場"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-17)"
+    ],
+    "volume": 29196,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.14,
+    "entry_ask": 0.15,
+    "last_trade_at": "2026-10-02 19:59:45",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 233.9499969482422,
+        "last": 0.14,
+        "bid": 0.14,
+        "ask": 0.15,
+        "iv": 27.4421318359375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MSTR_2026-10-09_165.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MSTR",
+    "expiry": "2026-10-09",
+    "strike": 165.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(5.4x) 📅吃不到財報(下次10-29)",
+    "entry_price": 3.15,
+    "entry_iv": 58.45988806152342,
+    "entry_spot": 160.01,
+    "oi": 8085,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-29)"
+    ],
+    "volume": 28800,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.05,
+    "entry_ask": 3.2,
+    "last_trade_at": "2026-10-02 19:59:59",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 160.00999450683594,
+        "last": 3.15,
+        "bid": 3.05,
+        "ask": 3.2,
+        "iv": 58.45988806152342
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MSTR_2026-10-09_160.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MSTR",
+    "expiry": "2026-10-09",
+    "strike": 160.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(6.1x) 📅吃不到財報(下次10-29)",
+    "entry_price": 5.05,
+    "entry_iv": 57.08050732421876,
+    "entry_spot": 160.01,
+    "oi": 6334,
+    "oi_d7": 732,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-29)"
+    ],
+    "volume": 24380,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 5.0,
+    "entry_ask": 5.1,
+    "last_trade_at": "2026-10-02 19:59:54",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 160.00999450683594,
+        "last": 5.05,
+        "bid": 5.0,
+        "ask": 5.1,
+        "iv": 57.08050732421876
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IBIT_2026-10-09_49.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IBIT",
+    "expiry": "2026-10-09",
+    "strike": 49.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(4.9x) 🚬菸屁股 🏛️機構場 📅無財報(ETF)",
+    "entry_price": 0.32,
+    "entry_iv": 29.932341308593745,
+    "entry_spot": 47.73,
+    "oi": 15672,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt",
+      "other:🏛️機構場"
+    ],
+    "warnings": [],
+    "events": [
+      "📅無財報(ETF)"
+    ],
+    "volume": 23896,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.3,
+    "entry_ask": 0.32,
+    "last_trade_at": "2026-10-02 20:13:30",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.32,
+        "bid": 0.3,
+        "ask": 0.32,
+        "iv": 29.932341308593745
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IBIT_2026-10-09_50.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IBIT",
+    "expiry": "2026-10-09",
+    "strike": 50.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(5.8x) 🚬菸屁股 🏛️機構場 📅無財報(ETF)",
+    "entry_price": 0.14,
+    "entry_iv": 30.371790039062496,
+    "entry_spot": 47.73,
+    "oi": 16118,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition",
+      "cigar_butt",
+      "other:🏛️機構場"
+    ],
+    "warnings": [],
+    "events": [
+      "📅無財報(ETF)"
+    ],
+    "volume": 23315,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.13,
+    "entry_ask": 0.14,
+    "last_trade_at": "2026-10-02 20:05:16",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.14,
+        "bid": 0.13,
+        "ask": 0.14,
+        "iv": 30.371790039062496
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SMCI_2026-10-09_43.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SMCI",
+    "expiry": "2026-10-09",
+    "strike": 43.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-03)",
+    "entry_price": 1.6,
+    "entry_iv": 62.59803027343751,
+    "entry_spot": 43.69,
+    "oi": 2456,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-03)"
+    ],
+    "volume": 16254,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.59,
+    "entry_ask": 1.62,
+    "last_trade_at": "2026-10-02 19:57:11",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 43.689998626708984,
+        "last": 1.6,
+        "bid": 1.59,
+        "ask": 1.62,
+        "iv": 62.59803027343751
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SMCI_2026-10-09_44.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SMCI",
+    "expiry": "2026-10-09",
+    "strike": 44.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(27.1x) 📅吃不到財報(下次11-03)",
+    "entry_price": 1.38,
+    "entry_iv": 62.9886513671875,
+    "entry_spot": 43.69,
+    "oi": 1722,
+    "oi_d7": 808,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-03)"
+    ],
+    "volume": 14521,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.35,
+    "entry_ask": 1.4,
+    "last_trade_at": "2026-10-02 19:59:52",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 43.689998626708984,
+        "last": 1.38,
+        "bid": 1.35,
+        "ask": 1.4,
+        "iv": 62.9886513671875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_TSLA_2026-10-09_375.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "TSLA",
+    "expiry": "2026-10-09",
+    "strike": 375.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-21)",
+    "entry_price": 5.44,
+    "entry_iv": 36.170071899414054,
+    "entry_spot": 370.59,
+    "oi": 7781,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-21)"
+    ],
+    "volume": 12580,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 5.35,
+    "entry_ask": 5.45,
+    "last_trade_at": "2026-10-02 19:59:47",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 370.5899963378906,
+        "last": 5.44,
+        "bid": 5.35,
+        "ask": 5.45,
+        "iv": 36.170071899414054
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_PLTR_2026-10-09_195.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "PLTR",
+    "expiry": "2026-10-09",
+    "strike": 195.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-02)",
+    "entry_price": 1.7,
+    "entry_iv": 38.562626098632805,
+    "entry_spot": 188.75,
+    "oi": 6225,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-02)"
+    ],
+    "volume": 10719,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.68,
+    "entry_ask": 1.7,
+    "last_trade_at": "2026-10-02 19:59:49",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 188.75,
+        "last": 1.7,
+        "bid": 1.68,
+        "ask": 1.7,
+        "iv": 38.562626098632805
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NKE_2027-01-15_35.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NKE",
+    "expiry": "2027-01-15",
+    "strike": 35.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(5.7x) 📅覆蓋財報(12-17)",
+    "entry_price": 2.4,
+    "entry_iv": 40.5279384765625,
+    "entry_spot": 33.87,
+    "oi": 6144,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(12-17)"
+    ],
+    "volume": 10381,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.38,
+    "entry_ask": 2.45,
+    "last_trade_at": "2026-10-02 19:59:25",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 33.869998931884766,
+        "last": 2.4,
+        "bid": 2.38,
+        "ask": 2.45,
+        "iv": 40.5279384765625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_BA_2026-10-09_200.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "BA",
+    "expiry": "2026-10-09",
+    "strike": 200.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(3.9x) 📅吃不到財報(下次10-27)",
+    "entry_price": 1.33,
+    "entry_iv": 35.57193334960937,
+    "entry_spot": 193.56,
+    "oi": 2388,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 10158,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.26,
+    "entry_ask": 1.47,
+    "last_trade_at": "2026-10-02 19:59:49",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 193.55999755859375,
+        "last": 1.33,
+        "bid": 1.26,
+        "ask": 1.47,
+        "iv": 35.57193334960937
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_INTC_2026-10-09_125.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "INTC",
+    "expiry": "2026-10-09",
+    "strike": 125.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-22)",
+    "entry_price": 1.71,
+    "entry_iv": 58.00823242187501,
+    "entry_spot": 119.33,
+    "oi": 5412,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-22)"
+    ],
+    "volume": 10067,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.69,
+    "entry_ask": 1.74,
+    "last_trade_at": "2026-10-02 19:59:48",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 119.33000183105469,
+        "last": 1.71,
+        "bid": 1.69,
+        "ask": 1.74,
+        "iv": 58.00823242187501
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_PLTR_2026-10-09_197.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "PLTR",
+    "expiry": "2026-10-09",
+    "strike": 197.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-02)",
+    "entry_price": 1.17,
+    "entry_iv": 40.332627929687504,
+    "entry_spot": 188.75,
+    "oi": 6352,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-02)"
+    ],
+    "volume": 9931,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.13,
+    "entry_ask": 1.27,
+    "last_trade_at": "2026-10-02 19:59:22",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 188.75,
+        "last": 1.17,
+        "bid": 1.13,
+        "ask": 1.27,
+        "iv": 40.332627929687504
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_COIN_2026-10-09_195.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "COIN",
+    "expiry": "2026-10-09",
+    "strike": 195.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-29)",
+    "entry_price": 1.72,
+    "entry_iv": 55.762161132812516,
+    "entry_spot": 183.0,
+    "oi": 5625,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-29)"
+    ],
+    "volume": 9617,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.62,
+    "entry_ask": 1.75,
+    "last_trade_at": "2026-10-02 19:59:23",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 183.0,
+        "last": 1.72,
+        "bid": 1.62,
+        "ask": 1.75,
+        "iv": 55.762161132812516
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SOFI_2026-11-20_16.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SOFI",
+    "expiry": "2026-11-20",
+    "strike": 16.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(9.5x) 📅覆蓋財報(10-27)",
+    "entry_price": 1.15,
+    "entry_iv": 54.19967675781252,
+    "entry_spot": 15.77,
+    "oi": 4222,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-27)"
+    ],
+    "volume": 9032,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.14,
+    "entry_ask": 1.15,
+    "last_trade_at": "2026-10-02 19:59:21",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 15.770000457763672,
+        "last": 1.15,
+        "bid": 1.14,
+        "ask": 1.15,
+        "iv": 54.19967675781252
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_TSLA_2026-10-16_370.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "TSLA",
+    "expiry": "2026-10-16",
+    "strike": 370.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-21)",
+    "entry_price": 11.4,
+    "entry_iv": 38.55652264404296,
+    "entry_spot": 370.59,
+    "oi": 6135,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-21)"
+    ],
+    "volume": 8963,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 11.15,
+    "entry_ask": 11.45,
+    "last_trade_at": "2026-10-02 19:59:34",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 370.5899963378906,
+        "last": 11.4,
+        "bid": 11.15,
+        "ask": 11.45,
+        "iv": 38.55652264404296
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NVDA_2028-01-21_400.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NVDA",
+    "expiry": "2028-01-21",
+    "strike": 400.0,
+    "score": 8,
+    "tags": "🚀點火(>50x) 🔭LEAPS 🔥萬人塚 📅覆蓋財報(11-17)",
+    "entry_price": 8.1,
+    "entry_iv": 40.32957620239258,
+    "entry_spot": 233.95,
+    "oi": 53039,
+    "oi_d7": 871,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "leaps",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-17)"
+    ],
+    "volume": 8751,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 8.0,
+    "entry_ask": 8.35,
+    "last_trade_at": "2026-10-02 19:32:17",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 233.9499969482422,
+        "last": 8.1,
+        "bid": 8.0,
+        "ask": 8.35,
+        "iv": 40.32957620239258
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HOOD_2026-10-09_115.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HOOD",
+    "expiry": "2026-10-09",
+    "strike": 115.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(3.3x) 📅吃不到財報(下次10-27)",
+    "entry_price": 2.28,
+    "entry_iv": 53.4184345703125,
+    "entry_spot": 112.74,
+    "oi": 2172,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 8213,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.2,
+    "entry_ask": 2.5,
+    "last_trade_at": "2026-10-02 19:59:49",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 2.28,
+        "bid": 2.2,
+        "ask": 2.5,
+        "iv": 53.4184345703125
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HOOD_2026-10-09_116.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HOOD",
+    "expiry": "2026-10-09",
+    "strike": 116.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(3.6x) 📅吃不到財報(下次10-27)",
+    "entry_price": 1.91,
+    "entry_iv": 51.92919165039063,
+    "entry_spot": 112.74,
+    "oi": 2354,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 7188,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.86,
+    "entry_ask": 1.95,
+    "last_trade_at": "2026-10-02 19:59:54",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 1.91,
+        "bid": 1.86,
+        "ask": 1.95,
+        "iv": 51.92919165039063
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MU_2026-10-09_1200.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MU",
+    "expiry": "2026-10-09",
+    "strike": 1200.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅財報已過(09-30)",
+    "entry_price": 2.03,
+    "entry_iv": 50.90991473388673,
+    "entry_spot": 1074.89,
+    "oi": 4538,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(09-30)"
+    ],
+    "volume": 6962,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.02,
+    "entry_ask": 2.05,
+    "last_trade_at": "2026-10-02 19:59:53",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 1074.8900146484375,
+        "last": 2.03,
+        "bid": 2.02,
+        "ask": 2.05,
+        "iv": 50.90991473388673
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_DKNG_2026-11-20_20.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "DKNG",
+    "expiry": "2026-11-20",
+    "strike": 20.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(12.7x) 📅覆蓋財報(11-05)",
+    "entry_price": 1.42,
+    "entry_iv": 70.8010732421875,
+    "entry_spot": 18.59,
+    "oi": 2245,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-05)"
+    ],
+    "volume": 6856,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.31,
+    "entry_ask": 1.42,
+    "last_trade_at": "2026-10-02 19:30:58",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 18.59000015258789,
+        "last": 1.42,
+        "bid": 1.31,
+        "ask": 1.42,
+        "iv": 70.8010732421875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_ONDS_2027-01-15_15.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "ONDS",
+    "expiry": "2027-01-15",
+    "strike": 15.0,
+    "score": 8,
+    "tags": "🚀點火(24.7x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(11-12)",
+    "entry_price": 0.15,
+    "entry_iv": 92.57819921875,
+    "entry_spot": 7.24,
+    "oi": 55266,
+    "oi_d7": -492,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-12)"
+    ],
+    "volume": 6183,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.14,
+    "entry_ask": 0.18,
+    "last_trade_at": "2026-10-02 19:56:55",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 7.239999771118164,
+        "last": 0.15,
+        "bid": 0.14,
+        "ask": 0.18,
+        "iv": 92.57819921875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HOOD_2026-10-09_118.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HOOD",
+    "expiry": "2026-10-09",
+    "strike": 118.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(5.1x) 📅吃不到財報(下次10-27)",
+    "entry_price": 1.38,
+    "entry_iv": 52.539537109375004,
+    "entry_spot": 112.74,
+    "oi": 1958,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 6151,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.31,
+    "entry_ask": 1.4,
+    "last_trade_at": "2026-10-02 19:59:52",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 1.38,
+        "bid": 1.31,
+        "ask": 1.4,
+        "iv": 52.539537109375004
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_ACHR_2027-01-15_7.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "ACHR",
+    "expiry": "2027-01-15",
+    "strike": 7.0,
+    "score": 8,
+    "tags": "🚀點火(3.8x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(11-05)",
+    "entry_price": 0.25,
+    "entry_iv": 77.148666015625,
+    "entry_spot": 4.89,
+    "oi": 67457,
+    "oi_d7": -2605,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-05)"
+    ],
+    "volume": 5403,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.25,
+    "entry_ask": 0.26,
+    "last_trade_at": "2026-10-02 19:56:20",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 4.889999866485596,
+        "last": 0.25,
+        "bid": 0.25,
+        "ask": 0.26,
+        "iv": 77.148666015625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NVDA_2028-01-21_250.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NVDA",
+    "expiry": "2028-01-21",
+    "strike": 250.0,
+    "score": 8,
+    "tags": "🚀點火(22.8x) 🔭LEAPS 🔥萬人塚 📅覆蓋財報(11-17)",
+    "entry_price": 39.47,
+    "entry_iv": 43.39045867919922,
+    "entry_spot": 233.95,
+    "oi": 38191,
+    "oi_d7": 291,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "leaps",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-17)"
+    ],
+    "volume": 5276,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 39.25,
+    "entry_ask": 39.75,
+    "last_trade_at": "2026-10-02 19:58:48",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 233.9499969482422,
+        "last": 39.47,
+        "bid": 39.25,
+        "ask": 39.75,
+        "iv": 43.39045867919922
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MU_2026-10-09_1150.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MU",
+    "expiry": "2026-10-09",
+    "strike": 1150.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅財報已過(09-30)",
+    "entry_price": 5.67,
+    "entry_iv": 47.40042834472656,
+    "entry_spot": 1074.89,
+    "oi": 1158,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(09-30)"
+    ],
+    "volume": 5099,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 5.6,
+    "entry_ask": 5.75,
+    "last_trade_at": "2026-10-02 19:59:57",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 1074.8900146484375,
+        "last": 5.67,
+        "bid": 5.6,
+        "ask": 5.75,
+        "iv": 47.40042834472656
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_ASTS_2026-10-16_60.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "ASTS",
+    "expiry": "2026-10-16",
+    "strike": 60.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(4.0x) 📅吃不到財報(下次11-09)",
+    "entry_price": 2.5,
+    "entry_iv": 70.65459033203125,
+    "entry_spot": 58.45,
+    "oi": 3738,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-09)"
+    ],
+    "volume": 4555,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.5,
+    "entry_ask": 2.6,
+    "last_trade_at": "2026-10-02 19:59:25",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 58.45000076293945,
+        "last": 2.5,
+        "bid": 2.5,
+        "ask": 2.6,
+        "iv": 70.65459033203125
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IBIT_2026-11-20_57.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IBIT",
+    "expiry": "2026-11-20",
+    "strike": 57.0,
+    "score": 8,
+    "tags": "🚀點火(7.0x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 0.41,
+    "entry_iv": 40.332627929687504,
+    "entry_spot": 47.73,
+    "oi": 36140,
+    "oi_d7": 445,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅無財報(ETF)"
+    ],
+    "volume": 4012,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.41,
+    "entry_ask": 0.43,
+    "last_trade_at": "2026-10-02 20:05:22",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": true,
+    "strategy": "A_HOLD",
+    "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "不設停損、不賣半；DTE 21 全出"
+    },
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.41,
+        "bid": 0.41,
+        "ask": 0.43,
+        "iv": 40.332627929687504
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SOFI_2026-10-16_19.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SOFI",
+    "expiry": "2026-10-16",
+    "strike": 19.0,
+    "score": 8,
+    "tags": "🚀點火(2.6x) 🚬菸屁股 🔥萬人塚 📅吃不到財報(下次10-27)",
+    "entry_price": 0.02,
+    "entry_iv": 56.250437500000004,
+    "entry_spot": 15.77,
+    "oi": 36270,
+    "oi_d7": -584,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 3946,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.03,
+    "entry_ask": 0.04,
+    "last_trade_at": "2026-10-02 19:58:13",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 15.770000457763672,
+        "last": 0.02,
+        "bid": 0.03,
+        "ask": 0.04,
+        "iv": 56.250437500000004
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HOOD_2026-10-09_119.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HOOD",
+    "expiry": "2026-10-09",
+    "strike": 119.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-27)",
+    "entry_price": 1.13,
+    "entry_iv": 52.539537109375004,
+    "entry_spot": 112.74,
+    "oi": 1249,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 3251,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.08,
+    "entry_ask": 1.16,
+    "last_trade_at": "2026-10-02 19:59:20",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 1.13,
+        "bid": 1.08,
+        "ask": 1.16,
+        "iv": 52.539537109375004
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_ASTS_2026-10-09_60.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "ASTS",
+    "expiry": "2026-10-09",
+    "strike": 60.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-09)",
+    "entry_price": 1.54,
+    "entry_iv": 67.87141503906251,
+    "entry_spot": 58.45,
+    "oi": 985,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-09)"
+    ],
+    "volume": 3187,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.49,
+    "entry_ask": 1.57,
+    "last_trade_at": "2026-10-02 19:59:40",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 58.45000076293945,
+        "last": 1.54,
+        "bid": 1.49,
+        "ask": 1.57,
+        "iv": 67.87141503906251
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IREN_2026-10-09_43.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IREN",
+    "expiry": "2026-10-09",
+    "strike": 43.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(3.5x) 📅吃不到財報(下次11-05)",
+    "entry_price": 1.04,
+    "entry_iv": 65.820654296875,
+    "entry_spot": 41.76,
+    "oi": 1959,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 3047,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.97,
+    "entry_ask": 1.03,
+    "last_trade_at": "2026-10-02 19:59:55",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 1.04,
+        "bid": 0.97,
+        "ask": 1.03,
+        "iv": 65.820654296875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_CRWV_2026-10-09_92.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "CRWV",
+    "expiry": "2026-10-09",
+    "strike": 92.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-11)",
+    "entry_price": 2.14,
+    "entry_iv": 63.598996826171884,
+    "entry_spot": 89.62,
+    "oi": 1159,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-11)"
+    ],
+    "volume": 3030,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.1,
+    "entry_ask": 2.18,
+    "last_trade_at": "2026-10-02 19:59:41",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 89.62000274658203,
+        "last": 2.14,
+        "bid": 2.1,
+        "ask": 2.18,
+        "iv": 63.598996826171884
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NBIS_2026-10-09_270.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NBIS",
+    "expiry": "2026-10-09",
+    "strike": 270.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-10)",
+    "entry_price": 1.68,
+    "entry_iv": 69.82452050781251,
+    "entry_spot": 242.81,
+    "oi": 1319,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-10)"
+    ],
+    "volume": 2811,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.67,
+    "entry_ask": 1.74,
+    "last_trade_at": "2026-10-02 19:59:22",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 242.80999755859375,
+        "last": 1.68,
+        "bid": 1.67,
+        "ask": 1.74,
+        "iv": 69.82452050781251
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_META_2026-10-09_755.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "META",
+    "expiry": "2026-10-09",
+    "strike": 755.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-28)",
+    "entry_price": 4.25,
+    "entry_iv": 33.95451788330078,
+    "entry_spot": 728.08,
+    "oi": 921,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-28)"
+    ],
+    "volume": 2663,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 4.05,
+    "entry_ask": 4.4,
+    "last_trade_at": "2026-10-02 19:58:18",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 728.0800170898438,
+        "last": 4.25,
+        "bid": 4.05,
+        "ask": 4.4,
+        "iv": 33.95451788330078
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IBIT_2027-01-15_60.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IBIT",
+    "expiry": "2027-01-15",
+    "strike": 60.0,
+    "score": 8,
+    "tags": "🚀點火(5.7x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 0.96,
+    "entry_iv": 41.846284667968746,
+    "entry_spot": 47.73,
+    "oi": 57313,
+    "oi_d7": -1406,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅無財報(ETF)"
+    ],
+    "volume": 2487,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.94,
+    "entry_ask": 0.96,
+    "last_trade_at": "2026-10-02 20:06:49",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.96,
+        "bid": 0.94,
+        "ask": 0.96,
+        "iv": 41.846284667968746
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_DKNG_2027-03-19_22.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "DKNG",
+    "expiry": "2027-03-19",
+    "strike": 22.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(11-05)",
+    "entry_price": 2.01,
+    "entry_iv": 67.13900048828127,
+    "entry_spot": 18.59,
+    "oi": 914,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-05)"
+    ],
+    "volume": 2304,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.0,
+    "entry_ask": 2.12,
+    "last_trade_at": "2026-10-02 19:59:39",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 18.59000015258789,
+        "last": 2.01,
+        "bid": 2.0,
+        "ask": 2.12,
+        "iv": 67.13900048828127
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_WDC_2026-11-20_650.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "WDC",
+    "expiry": "2026-11-20",
+    "strike": 650.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(11-05) ⚠️流動性稀薄(6條/OI5,564)",
+    "entry_price": 3.5,
+    "entry_iv": 76.50169982910158,
+    "entry_spot": 415.29,
+    "oi": 788,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [
+      "⚠️流動性稀薄(6條/OI5,564)"
+    ],
+    "events": [
+      "📅覆蓋財報(11-05)"
+    ],
+    "volume": 2202,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.2,
+    "entry_ask": 3.55,
+    "last_trade_at": "2026-10-02 19:49:25",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 415.2900085449219,
+        "last": 3.5,
+        "bid": 3.2,
+        "ask": 3.55,
+        "iv": 76.50169982910158
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IREN_2026-10-09_41.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IREN",
+    "expiry": "2026-10-09",
+    "strike": 41.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-05)",
+    "entry_price": 1.65,
+    "entry_iv": 66.21127539062502,
+    "entry_spot": 41.76,
+    "oi": 956,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-05)"
+    ],
+    "volume": 2054,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.62,
+    "entry_ask": 1.69,
+    "last_trade_at": "2026-10-02 19:59:58",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 1.65,
+        "bid": 1.62,
+        "ask": 1.69,
+        "iv": 66.21127539062502
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HOOD_2026-10-09_114.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HOOD",
+    "expiry": "2026-10-09",
+    "strike": 114.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-27)",
+    "entry_price": 2.62,
+    "entry_iv": 51.831536376953125,
+    "entry_spot": 112.74,
+    "oi": 801,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 2034,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.61,
+    "entry_ask": 2.7,
+    "last_trade_at": "2026-10-02 19:59:18",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 2.62,
+        "bid": 2.61,
+        "ask": 2.7,
+        "iv": 51.831536376953125
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NBIS_2026-10-09_260.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NBIS",
+    "expiry": "2026-10-09",
+    "strike": 260.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-10)",
+    "entry_price": 3.2,
+    "entry_iv": 68.18879467773439,
+    "entry_spot": 242.81,
+    "oi": 807,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-10)"
+    ],
+    "volume": 1970,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.2,
+    "entry_ask": 3.3,
+    "last_trade_at": "2026-10-02 19:59:54",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 242.80999755859375,
+        "last": 3.2,
+        "bid": 3.2,
+        "ask": 3.3,
+        "iv": 68.18879467773439
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HOOD_2026-10-09_112.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HOOD",
+    "expiry": "2026-10-09",
+    "strike": 112.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-27)",
+    "entry_price": 3.66,
+    "entry_iv": 52.22215747070311,
+    "entry_spot": 112.74,
+    "oi": 1250,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 1962,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.55,
+    "entry_ask": 3.7,
+    "last_trade_at": "2026-10-02 19:59:47",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 3.66,
+        "bid": 3.55,
+        "ask": 3.7,
+        "iv": 52.22215747070311
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_BAC_2026-10-16_54.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "BAC",
+    "expiry": "2026-10-16",
+    "strike": 54.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(10-14)",
+    "entry_price": 1.24,
+    "entry_iv": 32.56903369140625,
+    "entry_spot": 53.75,
+    "oi": 1165,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-14)"
+    ],
+    "volume": 1884,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.2,
+    "entry_ask": 1.25,
+    "last_trade_at": "2026-10-02 19:59:24",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 53.75,
+        "last": 1.24,
+        "bid": 1.2,
+        "ask": 1.25,
+        "iv": 32.56903369140625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SMCI_2026-10-09_44.5",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SMCI",
+    "expiry": "2026-10-09",
+    "strike": 44.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-03)",
+    "entry_price": 1.17,
+    "entry_iv": 63.086306640625,
+    "entry_spot": 43.69,
+    "oi": 889,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-03)"
+    ],
+    "volume": 1859,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.15,
+    "entry_ask": 1.18,
+    "last_trade_at": "2026-10-02 19:59:00",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 43.689998626708984,
+        "last": 1.17,
+        "bid": 1.15,
+        "ask": 1.18,
+        "iv": 63.086306640625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_HOOD_2026-10-09_110.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "HOOD",
+    "expiry": "2026-10-09",
+    "strike": 110.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次10-27)",
+    "entry_price": 4.8,
+    "entry_iv": 51.92919165039063,
+    "entry_spot": 112.74,
+    "oi": 821,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次10-27)"
+    ],
+    "volume": 1856,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 4.65,
+    "entry_ask": 4.85,
+    "last_trade_at": "2026-10-02 19:59:43",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 112.73999786376953,
+        "last": 4.8,
+        "bid": 4.65,
+        "ask": 4.85,
+        "iv": 51.92919165039063
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_ASTS_2026-10-09_59.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "ASTS",
+    "expiry": "2026-10-09",
+    "strike": 59.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-09)",
+    "entry_price": 1.95,
+    "entry_iv": 67.48079394531253,
+    "entry_spot": 58.45,
+    "oi": 773,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-09)"
+    ],
+    "volume": 1616,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.87,
+    "entry_ask": 1.98,
+    "last_trade_at": "2026-10-02 19:59:32",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 58.45000076293945,
+        "last": 1.95,
+        "bid": 1.87,
+        "ask": 1.98,
+        "iv": 67.48079394531253
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_RKLB_2026-10-09_76.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "RKLB",
+    "expiry": "2026-10-09",
+    "strike": 76.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-09)",
+    "entry_price": 1.8,
+    "entry_iv": 63.42810009765626,
+    "entry_spot": 73.92,
+    "oi": 833,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-09)"
+    ],
+    "volume": 1497,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.6,
+    "entry_ask": 1.83,
+    "last_trade_at": "2026-10-02 19:59:43",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 73.91999816894531,
+        "last": 1.8,
+        "bid": 1.6,
+        "ask": 1.83,
+        "iv": 63.42810009765626
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_BA_2027-03-19_250.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "BA",
+    "expiry": "2027-03-19",
+    "strike": 250.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(10-27)",
+    "entry_price": 4.67,
+    "entry_iv": 38.7701435546875,
+    "entry_spot": 193.56,
+    "oi": 873,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-27)"
+    ],
+    "volume": 1422,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 4.2,
+    "entry_ask": 5.05,
+    "last_trade_at": "2026-10-02 19:55:42",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 193.55999755859375,
+        "last": 4.67,
+        "bid": 4.2,
+        "ask": 5.05,
+        "iv": 38.7701435546875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_RKLB_2026-10-09_77.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "RKLB",
+    "expiry": "2026-10-09",
+    "strike": 77.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次11-09)",
+    "entry_price": 1.46,
+    "entry_iv": 65.57651611328126,
+    "entry_spot": 73.92,
+    "oi": 936,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次11-09)"
+    ],
+    "volume": 1180,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.42,
+    "entry_ask": 1.51,
+    "last_trade_at": "2026-10-02 19:59:52",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 73.91999816894531,
+        "last": 1.46,
+        "bid": 1.42,
+        "ask": 1.51,
+        "iv": 65.57651611328126
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_SOFI_2028-01-21_15.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "SOFI",
+    "expiry": "2028-01-21",
+    "strike": 15.0,
+    "score": 8,
+    "tags": "🚀點火(3.5x) 🔭LEAPS 🔥萬人塚 📅覆蓋財報(10-27)",
+    "entry_price": 4.75,
+    "entry_iv": 62.7200993652344,
+    "entry_spot": 15.77,
+    "oi": 31865,
+    "oi_d7": 837,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "leaps",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-27)"
+    ],
+    "volume": 1070,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 4.65,
+    "entry_ask": 4.75,
+    "last_trade_at": "2026-10-02 19:54:47",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 15.770000457763672,
+        "last": 4.75,
+        "bid": 4.65,
+        "ask": 4.75,
+        "iv": 62.7200993652344
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_NVDA_2028-01-21_300.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "NVDA",
+    "expiry": "2028-01-21",
+    "strike": 300.0,
+    "score": 8,
+    "tags": "🚀點火(3.2x) 🔭LEAPS 🔥萬人塚 📅覆蓋財報(11-17)",
+    "entry_price": 23.29,
+    "entry_iv": 41.34885311889648,
+    "entry_spot": 233.95,
+    "oi": 100966,
+    "oi_d7": 514,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "leaps",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-17)"
+    ],
+    "volume": 1031,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 23.05,
+    "entry_ask": 23.4,
+    "last_trade_at": "2026-10-02 19:24:31",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 233.9499969482422,
+        "last": 23.29,
+        "bid": 23.05,
+        "ask": 23.4,
+        "iv": 41.34885311889648
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_ONDS_2027-01-15_20.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "ONDS",
+    "expiry": "2027-01-15",
+    "strike": 20.0,
+    "score": 8,
+    "tags": "🚀點火(3.4x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(11-12)",
+    "entry_price": 0.08,
+    "entry_iv": 98.437515625,
+    "entry_spot": 7.24,
+    "oi": 39819,
+    "oi_d7": 143,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-12)"
+    ],
+    "volume": 856,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.05,
+    "entry_ask": 0.08,
+    "last_trade_at": "2026-10-02 19:39:40",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 7.239999771118164,
+        "last": 0.08,
+        "bid": 0.05,
+        "ask": 0.08,
+        "iv": 98.437515625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MARA_2027-01-15_20.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MARA",
+    "expiry": "2027-01-15",
+    "strike": 20.0,
+    "score": 8,
+    "tags": "🚀點火(4.7x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(11-04)",
+    "entry_price": 0.37,
+    "entry_iv": 87.89074609375,
+    "entry_spot": 11.23,
+    "oi": 30738,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-04)"
+    ],
+    "volume": 843,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.36,
+    "entry_ask": 0.38,
+    "last_trade_at": "2026-10-02 19:47:18",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 11.229999542236328,
+        "last": 0.37,
+        "bid": 0.36,
+        "ask": 0.38,
+        "iv": 87.89074609375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IBIT_2026-12-18_70.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IBIT",
+    "expiry": "2026-12-18",
+    "strike": 70.0,
+    "score": 8,
+    "tags": "🚀點火(5.0x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 0.19,
+    "entry_iv": 47.461462890625,
+    "entry_spot": 47.73,
+    "oi": 38348,
+    "oi_d7": -2066,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅無財報(ETF)"
+    ],
+    "volume": 636,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.19,
+    "entry_ask": 0.2,
+    "last_trade_at": "2026-10-02 19:58:26",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.19,
+        "bid": 0.19,
+        "ask": 0.2,
+        "iv": 47.461462890625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_PCG_2026-12-18_15.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "PCG",
+    "expiry": "2026-12-18",
+    "strike": 15.0,
+    "score": 8,
+    "tags": "🚀點火(6.9x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(10-22)",
+    "entry_price": 0.33,
+    "entry_iv": 51.27001855468749,
+    "entry_spot": 12.32,
+    "oi": 55650,
+    "oi_d7": -46117,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-22)"
+    ],
+    "volume": 563,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.31,
+    "entry_ask": 0.36,
+    "last_trade_at": "2026-10-02 19:49:22",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 12.319999694824219,
+        "last": 0.33,
+        "bid": 0.31,
+        "ask": 0.36,
+        "iv": 51.27001855468749
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_PCG_2027-01-15_22.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "PCG",
+    "expiry": "2027-01-15",
+    "strike": 22.0,
+    "score": 8,
+    "tags": "🚀點火(11.4x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(10-22)",
+    "entry_price": 0.09,
+    "entry_iv": 69.336244140625,
+    "entry_spot": 12.32,
+    "oi": 70495,
+    "oi_d7": -44,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-22)"
+    ],
+    "volume": 523,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.0,
+    "entry_ask": 0.31,
+    "last_trade_at": "2026-10-02 18:49:53",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 12.319999694824219,
+        "last": 0.09,
+        "bid": 0.0,
+        "ask": 0.31,
+        "iv": 69.336244140625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IREN_2026-12-18_70.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IREN",
+    "expiry": "2026-12-18",
+    "strike": 70.0,
+    "score": 8,
+    "tags": "🚀點火(3.7x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(11-05)",
+    "entry_price": 0.98,
+    "entry_iv": 88.52550537109374,
+    "entry_spot": 41.76,
+    "oi": 32145,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-05)"
+    ],
+    "volume": 478,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.9,
+    "entry_ask": 1.2,
+    "last_trade_at": "2026-10-02 19:50:01",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 41.7599983215332,
+        "last": 0.98,
+        "bid": 0.9,
+        "ask": 1.2,
+        "iv": 88.52550537109374
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IBIT_2027-01-15_70.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IBIT",
+    "expiry": "2027-01-15",
+    "strike": 70.0,
+    "score": 8,
+    "tags": "🚀點火(3.7x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 0.34,
+    "entry_iv": 45.508357421875004,
+    "entry_spot": 47.73,
+    "oi": 34068,
+    "oi_d7": 13,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅無財報(ETF)"
+    ],
+    "volume": 417,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.33,
+    "entry_ask": 0.35,
+    "last_trade_at": "2026-10-02 19:59:31",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.34,
+        "bid": 0.33,
+        "ask": 0.35,
+        "iv": 45.508357421875004
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_PCG_2026-12-18_19.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "PCG",
+    "expiry": "2026-12-18",
+    "strike": 19.0,
+    "score": 8,
+    "tags": "🚀點火(3.1x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(10-22)",
+    "entry_price": 0.07,
+    "entry_iv": 54.68795312500001,
+    "entry_spot": 12.32,
+    "oi": 30251,
+    "oi_d7": -66,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-22)"
+    ],
+    "volume": 266,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.04,
+    "entry_ask": 0.09,
+    "last_trade_at": "2026-10-02 18:08:33",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 12.319999694824219,
+        "last": 0.07,
+        "bid": 0.04,
+        "ask": 0.09,
+        "iv": 54.68795312500001
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IBIT_2028-06-16_100.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IBIT",
+    "expiry": "2028-06-16",
+    "strike": 100.0,
+    "score": 8,
+    "tags": "🚀點火(4.2x) 🔭LEAPS 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 2.92,
+    "entry_iv": 50.6840869140625,
+    "entry_spot": 47.73,
+    "oi": 34269,
+    "oi_d7": 431,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "leaps",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅無財報(ETF)"
+    ],
+    "volume": 208,
+    "premium_tier": "mid",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.81,
+    "entry_ask": 3.05,
+    "last_trade_at": "2026-10-02 19:01:56",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 2.92,
+        "bid": 2.81,
+        "ask": 3.05,
+        "iv": 50.6840869140625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_INTC_2028-01-21_80.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "INTC",
+    "expiry": "2028-01-21",
+    "strike": 80.0,
+    "score": 8,
+    "tags": "🚀點火(3.7x) 🔭LEAPS 🔥萬人塚 📅覆蓋財報(10-22)",
+    "entry_price": 55.54,
+    "entry_iv": 73.60255889892578,
+    "entry_spot": 119.33,
+    "oi": 33656,
+    "oi_d7": -137,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "leaps",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-22)"
+    ],
+    "volume": 129,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 54.7,
+    "entry_ask": 56.25,
+    "last_trade_at": "2026-10-02 19:46:22",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 119.33000183105469,
+        "last": 55.54,
+        "bid": 54.7,
+        "ask": 56.25,
+        "iv": 73.60255889892578
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IBIT_2027-01-15_100.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IBIT",
+    "expiry": "2027-01-15",
+    "strike": 100.0,
+    "score": 8,
+    "tags": "🚀點火(2.9x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 0.07,
+    "entry_iv": 58.984785156250005,
+    "entry_spot": 47.73,
+    "oi": 44729,
+    "oi_d7": 189,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅無財報(ETF)"
+    ],
+    "volume": 99,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.06,
+    "entry_ask": 0.08,
+    "last_trade_at": "2026-10-02 13:42:00",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.07,
+        "bid": 0.06,
+        "ask": 0.08,
+        "iv": 58.984785156250005
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_IBIT_2028-01-21_140.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "IBIT",
+    "expiry": "2028-01-21",
+    "strike": 140.0,
+    "score": 8,
+    "tags": "🚀點火(2.6x) 🔭LEAPS 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 0.75,
+    "entry_iv": 53.662572753906254,
+    "entry_spot": 47.73,
+    "oi": 33974,
+    "oi_d7": 134,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "leaps",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅無財報(ETF)"
+    ],
+    "volume": 87,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.71,
+    "entry_ask": 0.83,
+    "last_trade_at": "2026-10-02 19:28:58",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 47.72999954223633,
+        "last": 0.75,
+        "bid": 0.71,
+        "ask": 0.83,
+        "iv": 53.662572753906254
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-02_MARA_2027-01-15_40.0",
+    "snapshot_date": "2026-10-02",
+    "ticker": "MARA",
+    "expiry": "2027-01-15",
+    "strike": 40.0,
+    "score": 8,
+    "tags": "🚀點火(2.9x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(11-04)",
+    "entry_price": 0.07,
+    "entry_iv": 108.203583984375,
+    "entry_spot": 11.23,
+    "oi": 33233,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-04)"
+    ],
+    "volume": 64,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.05,
+    "entry_ask": 0.07,
+    "last_trade_at": "2026-10-02 19:39:31",
+    "quote_at": "2026-10-03T01:14:08Z",
+    "underlying_at": "2026-10-03T01:14:08Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-02",
+        "spot": 11.229999542236328,
+        "last": 0.07,
+        "bid": 0.05,
+        "ask": 0.07,
+        "iv": 108.203583984375
       }
     ],
     "t5": null,

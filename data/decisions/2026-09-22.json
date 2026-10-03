@@ -62,12 +62,12 @@
       "status": "answered",
       "outcome": {
         "t5": 0.47,
-        "t10": null,
+        "t10": 0.42,
         "t20": null,
         "peak": 0.47,
         "mature": false,
         "verdict": "❌沒噴(峰0.5x)",
-        "filled_at": "2026-10-01"
+        "filled_at": "2026-10-02"
       }
     }
   ],

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-02T01:51:11Z",
+ "generated_at": "2026-10-03T01:23:14Z",
  "n_days": 19,
  "t8_by_event_answer": {
   "有": {
@@ -228,7 +228,7 @@
       "peak": 0.88,
       "mature": false,
       "verdict": "➖持平(峰0.9x/今0.9x)",
-      "filled_at": "2026-10-01"
+      "filled_at": "2026-10-02"
      }
     }
    ]
@@ -303,12 +303,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.47,
-      "t10": null,
+      "t10": 0.42,
       "t20": null,
       "peak": 0.47,
       "mature": false,
       "verdict": "❌沒噴(峰0.5x)",
-      "filled_at": "2026-10-01"
+      "filled_at": "2026-10-02"
      }
     }
    ]
@@ -370,7 +370,7 @@
       "peak": 1.53,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今0.7x)",
-      "filled_at": "2026-10-01"
+      "filled_at": "2026-10-02"
      }
     },
     {
@@ -411,7 +411,7 @@
       "peak": 1.39,
       "mature": false,
       "verdict": "➖持平(峰1.4x/今0.5x)",
-      "filled_at": "2026-10-01"
+      "filled_at": "2026-10-02"
      }
     },
     {
@@ -452,7 +452,7 @@
       "peak": 1.52,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今0.9x)",
-      "filled_at": "2026-10-01"
+      "filled_at": "2026-10-02"
      }
     }
    ]
@@ -518,7 +518,7 @@
       "peak": 1.78,
       "mature": false,
       "verdict": "➖持平(峰1.8x/今0.5x)",
-      "filled_at": "2026-10-01"
+      "filled_at": "2026-10-02"
      }
     }
    ]
@@ -584,7 +584,7 @@
       "peak": 1.81,
       "mature": false,
       "verdict": "➖持平(峰1.8x/今1.6x)",
-      "filled_at": "2026-10-01"
+      "filled_at": "2026-10-02"
      }
     }
    ]
