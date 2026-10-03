@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26T04:59:31.775128",
+  "updated_at": "2026-10-03T05:19:44.627552",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
@@ -8,27 +8,27 @@
   },
   "count": 2,
   "tickers": [
-    "MARA",
-    "CHPT"
+    "CHPT",
+    "SES"
   ],
   "details": [
     {
-      "symbol": "MARA",
-      "price": 12.55,
-      "gain_30d_pct": 36.4,
-      "market_cap_m": 4848.0,
-      "avg_volume_m": 46.08,
-      "short_pct_float": 31.0,
-      "score": 34.62
+      "symbol": "CHPT",
+      "price": 9.29,
+      "gain_30d_pct": 48.6,
+      "market_cap_m": 249.0,
+      "avg_volume_m": 2.3,
+      "short_pct_float": 21.3,
+      "score": 26.14
     },
     {
-      "symbol": "CHPT",
-      "price": 8.93,
-      "gain_30d_pct": 44.5,
-      "market_cap_m": 240.0,
-      "avg_volume_m": 4.34,
-      "short_pct_float": 21.3,
-      "score": 25.73
+      "symbol": "SES",
+      "price": 0.88,
+      "gain_30d_pct": 63.9,
+      "market_cap_m": 328.0,
+      "avg_volume_m": 26.42,
+      "short_pct_float": 16.0,
+      "score": 22.42
     }
   ]
 }
