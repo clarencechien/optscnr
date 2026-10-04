@@ -1,61 +1,72 @@
 {
-  "updated_at": "2026-10-02T23:58:10.787284",
+  "updated_at": "2026-10-04T23:30:32.289449",
   "stats": {
     "total_items": 106,
-    "items_with_company": 23,
-    "items_with_catalyst": 14,
+    "items_with_company": 14,
+    "items_with_catalyst": 16,
     "items_both": 2
   },
-  "count": 20,
+  "count": 18,
   "tickers": [
-    "WDC",
-    "STX",
+    "META",
+    "GOOGL",
+    "AAPL",
     "ZS",
     "PANW",
-    "BA",
-    "NVDA",
-    "NKE",
-    "AAPL",
-    "META",
     "INTC",
     "AMD",
-    "F",
-    "TGT",
+    "NVDA",
+    "BRK-B",
     "TSLA",
-    "ACHR",
+    "F",
     "MU",
     "CRM",
     "MSFT",
+    "NKE",
     "XYZ",
-    "BAC"
+    "BAC",
+    "PLTR"
   ],
   "details": [
     {
-      "symbol": "WDC",
+      "symbol": "META",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Why Western Digital and Seagate are seeing big stock drops today",
+          "title": "A 'weird' IPO pull, a tainted reputation and the stalled breakout moment for AI wearables",
           "catalysts": [
-            "drops"
+            "breakout"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Western Digital retreats 10% amid storage selloff",
+          "title": "Bank of America backs Meta stock after Muse surprise",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "STX",
+      "symbol": "GOOGL",
       "score": 2,
       "evidence": [
         {
-          "title": "Why Western Digital and Seagate are seeing big stock drops today",
+          "title": "A 'weird' IPO pull, a tainted reputation and the stalled breakout moment for AI wearables",
           "catalysts": [
-            "drops"
+            "breakout"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "A 'weird' IPO pull, a tainted reputation and the stalled breakout moment for AI wearables",
+          "catalysts": [
+            "breakout"
           ],
           "has_catalyst": true
         }
@@ -84,96 +95,6 @@
             "downgraded"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "FAA says Boeing 737 Max software glitch not a flight-safety issue",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "US FAA says Boeing 737 MAX software glitch poses no safety issue",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "WestJet first told Boeing about 737 MAX software glitch cleared by FAA, memo says",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Cerebras stock hits post-IPO low, tumbling 20% for the week on Nvidia pressure and lockup expiration",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia doubles down on selling to both sides of the AI race",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NKE",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Nike shares tumble after weak revenue outlook and layoff plans underway ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nike (NKE): Wall Street Tests Whether the Turnaround Can Outrun Weak Demand Ahead of Q1 Results",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "New York City's 'click to cancel' subscription rule takes effect, joining states with similar laws",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apple says it will flag AI requests for Mac data after Meta’s Muse draws complaints",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Apple says it will flag AI requests for Mac data after Meta’s Muse draws complaints",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Bank of America backs Meta stock after Muse surprise",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
@@ -210,22 +131,27 @@
       ]
     },
     {
-      "symbol": "F",
-      "score": 0.5,
+      "symbol": "NVDA",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Ford fends off Hyundai to retain No. 3 U.S. sales position in third quarter",
+          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia doubles down on selling to both sides of the AI race",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "BRK-B",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Trump could target three Fed governors. Removing them may be harder than it looks",
+          "title": "Berkshire buys more Lennar shares, but pace of purchases slows",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -236,18 +162,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Tesla sold a lot more EVs than Wall Street expected, and the stock is surging",
+          "title": "Tesla’s Cybercab had a rocky first month in Austin. Now comes the hard part: expanding",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ACHR",
+      "symbol": "F",
       "score": 0.5,
       "evidence": [
         {
-          "title": "US court trims Joby’s trade-secret case against Archer Aviation",
+          "title": "Ford fends off Hyundai to retain No. 3 U.S. sales position in third quarter",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -287,6 +213,17 @@
       ]
     },
     {
+      "symbol": "NKE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Nike (NKE): Wall Street Tests Whether the Turnaround Can Outrun Weak Demand Ahead of Q1 Results",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
       "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
@@ -307,11 +244,21 @@
           "has_catalyst": false
         }
       ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Palantir Reveals Its AI Sovereignty Strategy And Wall Street Is Starting to Believe It",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
     }
   ],
   "watch_only": {
     "Anthropic (private)": 2,
-    "Cerebras (pre-IPO)": 1,
-    "xAI (private)": 1
+    "OpenAI (private)": 1
   }
 }
