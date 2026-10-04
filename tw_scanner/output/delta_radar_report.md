@@ -1,6 +1,6 @@
-# Delta Radar (2308.TW) — 2026-10-02 09:00 UTC
+# Delta Radar (2308.TW) — 2026-10-04 08:46 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 ⚪ NO_DATA
 
 ## 🔀 前提 vs 價格：🔀 反向背離：前提轉紅、價格 20 日 +9.0% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 60.6，3 年分位 82 → 84
 
@@ -10,67 +10,17 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟢 GREEN | capex_cut:5e(6m) / vr300_delay:16e(21m) / debt_financed_capex:13e(15m) / lc_psu_competition:0e |
+| M5 narrative_triggers | ⚪ NO_DATA | all RSS feeds failed |
 
-### M5 narrative_triggers — 🟢 GREEN
-```json
-{
-  "events": {
-    "capex_cut": 5,
-    "vr300_delay": 16,
-    "debt_financed_capex": 13,
-    "lc_psu_competition": 0
-  },
-  "mentions": {
-    "capex_cut": 6,
-    "vr300_delay": 21,
-    "debt_financed_capex": 15,
-    "lc_psu_competition": 0
-  },
-  "scoring": {
-    "capex_cut": {
-      "events": 5,
-      "mentions": 6,
-      "gate": "zscore",
-      "z": 0.33,
-      "denial": false
-    },
-    "vr300_delay": {
-      "events": 16,
-      "mentions": 21,
-      "gate": "zscore",
-      "z": -1.48,
-      "denial": true
-    },
-    "debt_financed_capex": {
-      "events": 13,
-      "mentions": 15,
-      "gate": "zscore",
-      "z": -0.88,
-      "denial": false
-    },
-    "lc_psu_competition": {
-      "events": 0,
-      "mentions": 0,
-      "gate": "absolute",
-      "z": null,
-      "denial": false
-    }
-  }
-}
-```
-- [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
-- [capex_cut] Market Brief: AI Infrastructure Trade Is Due For A Pause - Seeking Alpha
-- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
-- [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
-- [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
-- [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
-- [debt_financed_capex] Oracle's Negative Free Cash Flow Exposes the Uncomfortable Truth About AI's Financing Game - 24/7 Wall St.
-- [debt_financed_capex] Goldman Sachs Warns on Big Tech AI Debt Flood - TradingView
-- [debt_financed_capex] AI Companies' Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - 24/7 Wall St.
+### M5 narrative_triggers — ⚪ NO_DATA
+- feed capex_cut failed: HTTP Error 503: Service Unavailable
+- feed vr300_delay failed: HTTP Error 503: Service Unavailable
+- feed debt_financed_capex failed: HTTP Error 503: Service Unavailable
+- feed lc_psu_competition failed: HTTP Error 503: Service Unavailable
+- ⚠️ degraded: all RSS feeds failed
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **2** 筆；state 已有 outcomes 的 entry：**127/127**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**128/128**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）

@@ -13898,5 +13898,55 @@
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
+  },
+  {
+    "ts": "2026-10-04T08:46:20.581649+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "NO_DATA",
+        "headline": "",
+        "metrics": {},
+        "notes": [
+          "feed capex_cut failed: HTTP Error 503: Service Unavailable",
+          "feed vr300_delay failed: HTTP Error 503: Service Unavailable",
+          "feed debt_financed_capex failed: HTTP Error 503: Service Unavailable",
+          "feed lc_psu_competition failed: HTTP Error 503: Service Unavailable"
+        ],
+        "error": "all RSS feeds failed",
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": "premise_broken_price_up",
+      "text": "🔀 反向背離：前提轉紅、價格 20 日 +9.0% 未跌 —— 市場不買儀器的帳，或儀器誤判；PER 60.6，3 年分位 82 → 84",
+      "premise": "RED",
+      "premise_ts": "2026-10-01T10:27:30.144368+00:00",
+      "ret_pct": 8.96,
+      "lookback_sessions": 20,
+      "as_of": "2026-10-02",
+      "valuation": {
+        "per": 60.63,
+        "per_pct": 84.3,
+        "per_then": 59.36,
+        "per_pct_then": 82.2,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-10-04",
+      "benchmark": "0050",
+      "entry_close": null,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
   }
 ]

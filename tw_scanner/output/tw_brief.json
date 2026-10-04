@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-03T09:05:01+00:00",
- "today": "2026-10-03",
+ "generated_at": "2026-10-04T08:46:22+00:00",
+ "today": "2026-10-04",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-02）：本週無警報、預算未動 → 等（2026-10-09 再看）。",
@@ -12,7 +12,7 @@
  "weather": {
   "status": "OK",
   "as_of": "2026-10-02",
-  "age_days": 1,
+  "age_days": 2,
   "regime": "NEUTRAL",
   "emoji": "⛅",
   "score": 0.202,
@@ -90,7 +90,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-10-02",
-  "age_days": 1,
+  "age_days": 2,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -235,8 +235,8 @@
  "delta": {
   "status": "OK",
   "label": "2308",
-  "as_of": "2026-10-02",
-  "age_days": 1,
+  "as_of": "2026-10-04",
+  "age_days": 0,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -270,9 +270,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "GREEN",
-    "headline": "capex_cut:5e(6m) / vr300_delay:16e(21m) / debt_financed_capex:13e(15m) / lc_psu_competition:0e",
-    "ts": "2026-10-02T09:00:01.005258+00:00"
+    "status": "NO_DATA",
+    "headline": "all RSS feeds failed",
+    "ts": "2026-10-04T08:46:20.581649+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -315,7 +315,7 @@
   "status": "OK",
   "label": "2330",
   "as_of": "2026-10-03",
-  "age_days": 0,
+  "age_days": 1,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -393,7 +393,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-10-02",
-  "age_days": 1,
+  "age_days": 2,
   "rows": [
    {
     "ticker": "3661",
@@ -636,12 +636,12 @@
   {
    "date": "2026-10-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 7
+   "days": 6
   },
   {
    "date": "2026-11-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 38
+   "days": 37
   }
  ],
  "checks": [
@@ -658,7 +658,7 @@
   {
    "level": "ok",
    "label": "delta_radar 正常",
-   "text": "delta_radar：最新 2026-10-02"
+   "text": "delta_radar：最新 2026-10-04"
   },
   {
    "level": "ok",
