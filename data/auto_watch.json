@@ -1,95 +1,122 @@
 {
-  "updated_at": "2026-09-27T01:26:38.165601",
+  "updated_at": "2026-10-04T02:36:27.764247",
   "criteria": {
     "MIN_MARKET_CAP": 15000000000.0,
     "MAX_PCT_FROM_52W_LOW": 1.8,
     "MIN_AVG_VOLUME": 5000000.0,
     "MIN_VOL_RATIO_20D": 1.2
   },
-  "count": 9,
+  "count": 12,
   "tickers": [
-    "PCG",
-    "TJX",
-    "O",
-    "KHC",
     "NKE",
+    "O",
+    "PCG",
+    "KHC",
+    "TJX",
     "HBAN",
-    "KVUE",
+    "BKNG",
+    "BA",
+    "MDT",
     "KEY",
+    "KVUE",
     "META"
   ],
   "details": [
     {
-      "symbol": "PCG",
-      "price": 12.34,
-      "pct_from_52w_low": 1.03,
-      "vol_ratio_20d": 2.24,
-      "market_cap_b": 37.0,
-      "score": 20.96
-    },
-    {
-      "symbol": "TJX",
-      "price": 130.06,
+      "symbol": "NKE",
+      "price": 33.87,
       "pct_from_52w_low": 1.06,
-      "vol_ratio_20d": 1.5,
-      "market_cap_b": 143.1,
-      "score": 16.88
+      "vol_ratio_20d": 1.63,
+      "market_cap_b": 50.2,
+      "score": 17.54
     },
     {
       "symbol": "O",
-      "price": 55.54,
-      "pct_from_52w_low": 1.01,
-      "vol_ratio_20d": 1.31,
-      "market_cap_b": 52.6,
-      "score": 16.46
+      "price": 54.13,
+      "pct_from_52w_low": 1.02,
+      "vol_ratio_20d": 1.46,
+      "market_cap_b": 51.2,
+      "score": 17.15
+    },
+    {
+      "symbol": "PCG",
+      "price": 12.32,
+      "pct_from_52w_low": 1.05,
+      "vol_ratio_20d": 1.47,
+      "market_cap_b": 37.0,
+      "score": 16.87
     },
     {
       "symbol": "KHC",
-      "price": 23.63,
-      "pct_from_52w_low": 1.12,
-      "vol_ratio_20d": 1.49,
-      "market_cap_b": 28.0,
-      "score": 16.22
+      "price": 22.19,
+      "pct_from_52w_low": 1.05,
+      "vol_ratio_20d": 1.4,
+      "market_cap_b": 26.3,
+      "score": 16.44
     },
     {
-      "symbol": "NKE",
-      "price": 35.75,
-      "pct_from_52w_low": 1.02,
-      "vol_ratio_20d": 1.24,
-      "market_cap_b": 53.0,
-      "score": 16.07
+      "symbol": "TJX",
+      "price": 132.68,
+      "pct_from_52w_low": 1.08,
+      "vol_ratio_20d": 1.44,
+      "market_cap_b": 145.9,
+      "score": 16.39
     },
     {
       "symbol": "HBAN",
-      "price": 15.64,
-      "pct_from_52w_low": 1.05,
-      "vol_ratio_20d": 1.25,
-      "market_cap_b": 31.6,
-      "score": 15.73
+      "price": 15.33,
+      "pct_from_52w_low": 1.03,
+      "vol_ratio_20d": 1.3,
+      "market_cap_b": 31.0,
+      "score": 16.18
     },
     {
-      "symbol": "KVUE",
-      "price": 17.8,
-      "pct_from_52w_low": 1.27,
-      "vol_ratio_20d": 1.26,
-      "market_cap_b": 34.2,
-      "score": 13.62
+      "symbol": "BKNG",
+      "price": 159.02,
+      "pct_from_52w_low": 1.06,
+      "vol_ratio_20d": 1.24,
+      "market_cap_b": 119.5,
+      "score": 15.62
+    },
+    {
+      "symbol": "BA",
+      "price": 193.56,
+      "pct_from_52w_low": 1.09,
+      "vol_ratio_20d": 1.31,
+      "market_cap_b": 153.0,
+      "score": 15.58
+    },
+    {
+      "symbol": "MDT",
+      "price": 86.38,
+      "pct_from_52w_low": 1.18,
+      "vol_ratio_20d": 1.4,
+      "market_cap_b": 110.5,
+      "score": 15.22
     },
     {
       "symbol": "KEY",
-      "price": 20.61,
-      "pct_from_52w_low": 1.25,
-      "vol_ratio_20d": 1.22,
-      "market_cap_b": 22.0,
-      "score": 13.57
+      "price": 20.08,
+      "pct_from_52w_low": 1.22,
+      "vol_ratio_20d": 1.31,
+      "market_cap_b": 21.4,
+      "score": 14.37
+    },
+    {
+      "symbol": "KVUE",
+      "price": 17.2,
+      "pct_from_52w_low": 1.23,
+      "vol_ratio_20d": 1.26,
+      "market_cap_b": 33.0,
+      "score": 14.01
     },
     {
       "symbol": "META",
-      "price": 751.66,
-      "pct_from_52w_low": 1.44,
-      "vol_ratio_20d": 1.23,
-      "market_cap_b": 1914.9,
-      "score": 11.7
+      "price": 728.08,
+      "pct_from_52w_low": 1.4,
+      "vol_ratio_20d": 1.29,
+      "market_cap_b": 1854.8,
+      "score": 12.47
     }
   ]
 }
