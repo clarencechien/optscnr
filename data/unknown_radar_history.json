@@ -6,13 +6,6 @@
     "total_mentions": 15,
     "ticker": "NDAQ"
   },
-  "Alibaba": {
-    "first_seen": "2026-09-27",
-    "last_seen": "2026-09-27",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BBAAY"
-  },
   "Helix": {
     "first_seen": "2026-09-29",
     "last_seen": "2026-09-29",
@@ -75,5 +68,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "ACN"
+  },
+  "Lennar": {
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LEN-B"
+  },
+  "Austin": {
+    "first_seen": "2026-10-05",
+    "last_seen": "2026-10-05",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "AUST"
   }
 }

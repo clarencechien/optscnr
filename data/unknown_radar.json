@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-10-03T00:44:05.322082",
+  "updated_at": "2026-10-05T00:09:50.113128",
   "count": 2,
   "blind_spots": [
     {
-      "name": "United Airlines",
-      "ticker": "UAL",
+      "name": "Lennar",
+      "ticker": "LEN-B",
       "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "United Airlines gets aggressive in battle for top Delta, American flyers",
-        "United Airlines gets aggressive in battle for top Delta, American flyers"
+        "Berkshire buys more Lennar shares, but pace of purchases slows",
+        "Berkshire buys more Lennar shares, but pace of purchases slows"
       ]
     },
     {
-      "name": "Delta",
-      "ticker": "DAL",
+      "name": "Austin",
+      "ticker": "AUST",
       "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "United Airlines gets aggressive in battle for top Delta, American flyers",
-        "United Airlines gets aggressive in battle for top Delta, American flyers"
+        "Tesla’s Cybercab had a rocky first month in Austin. Now comes the hard part: expanding",
+        "Tesla’s Cybercab had a rocky first month in Austin. Now comes the hard part: expanding"
       ]
     }
   ]
