@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-03T01:23:14Z",
- "n_days": 19,
+ "generated_at": "2026-10-05T00:36:32Z",
+ "n_days": 20,
  "t8_by_event_answer": {
   "有": {
    "n": 4,
@@ -9,6 +9,58 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-10-02",
+   "decided_at": "2026-10-04T23:05:58.759Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-10-02_IBIT_2026-11-20_57.0",
+     "ticker": "IBIT",
+     "expiry": "2026-11-20",
+     "strike": 57,
+     "entry_price": 0.41,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "未確認",
+      "date": null,
+      "what": "IBIT 是 ETF，沒有財報。查到的只有 SEC 對加密 ETF 選擇權通用規則 SR-ISE-2026-42 的程序期限，不是 IBIT 自己排定的事件，裁決日期也還沒定。",
+      "source": null
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": 1.3,
+       "date": "2026-10-01"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "ETF無財報；SR-ISE-2026-42延期則約2026-11-11裁決",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-10-01",
    "decided_at": "2026-10-02T00:35:08.602Z",
