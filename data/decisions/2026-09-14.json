@@ -52,11 +52,11 @@
       "outcome": {
         "t5": 1.81,
         "t10": 1.56,
-        "t20": null,
-        "peak": 1.81,
-        "mature": false,
-        "verdict": "➖持平(峰1.8x/今1.6x)",
-        "filled_at": "2026-10-02"
+        "t20": 2.46,
+        "peak": 2.46,
+        "mature": true,
+        "verdict": "✅噴了(峰2.5x)",
+        "filled_at": "2026-10-05"
       }
     }
   ],
