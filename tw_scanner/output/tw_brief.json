@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-05T10:50:55+00:00",
+ "generated_at": "2026-10-05T11:37:03+00:00",
  "today": "2026-10-05",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-02）：本週無警報、預算未動 → 等（2026-10-09 再看）。",
   "鋒面 ⛅ NEUTRAL（本週未變）。",
   "2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +13.9%）；PER 63.8，3 年分位 79 → 88",
-  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +7.7%）；PER 29.1，3 年分位 75 → 80",
+  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +7.7%）；PER 29.9，3 年分位 69 → 85",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.71%。"
  ],
  "weather": {
@@ -323,75 +323,82 @@
   "label": "2330",
   "as_of": "2026-10-05",
   "age_days": 0,
-  "last_overall": "PARTIAL(m5)",
+  "last_overall": "GREEN",
   "last_modules_requested": [
-   "m5"
+   "m1",
+   "m2",
+   "m3",
+   "m4",
+   "m5",
+   "m6",
+   "m8",
+   "m9"
   ],
   "full_overall": "GREEN",
-  "full_ts": "2026-10-01",
+  "full_ts": "2026-10-05",
   "modules": [
    {
     "module": "M1 revenue_acceleration",
     "status": "GREEN",
     "headline": "2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月",
-    "ts": "2026-10-01T11:00:44.517133+00:00"
+    "ts": "2026-10-05T11:37:01.171087+00:00"
    },
    {
     "module": "M2 bullwhip_health",
     "status": "GREEN",
     "headline": "合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9",
-    "ts": "2026-10-01T11:00:44.517133+00:00"
+    "ts": "2026-10-05T11:37:01.171087+00:00"
    },
    {
     "module": "M3 adr_premium",
     "status": "GREEN",
-    "headline": "ADR 溢價 +16.0%（1 年第 30 百分位；觀察）",
-    "ts": "2026-10-01T11:00:44.517133+00:00"
+    "headline": "ADR 溢價 +16.6%（1 年第 33 百分位；觀察）",
+    "ts": "2026-10-05T11:37:01.171087+00:00"
    },
    {
     "module": "M4 customs_flow",
     "status": "GREEN",
     "headline": "US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0%",
-    "ts": "2026-10-01T11:00:44.517133+00:00"
+    "ts": "2026-10-05T11:37:01.171087+00:00"
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "GREEN",
-    "headline": "export_controls_tariffs:14e / n2_arizona_ramp:9e(11m) / cowos_capacity:8e / geopolitics:3e / hyperscaler_capex:5e(6m)",
-    "ts": "2026-10-05T10:19:42.844761+00:00"
+    "status": "NO_DATA",
+    "headline": "all RSS feeds failed",
+    "ts": "2026-10-05T11:37:01.171087+00:00"
    },
    {
     "module": "M6 peer_divergence",
     "status": "GREEN",
     "headline": "cohort 內 2330 未被對手顯著反超（離散在容忍帶內）",
-    "ts": "2026-10-01T11:00:44.517133+00:00"
+    "ts": "2026-10-05T11:37:01.171087+00:00"
    },
    {
     "module": "M8 revision_velocity",
     "status": "NO_DATA",
-    "headline": "下修 0/上修 0（樣本不足 <3，NO_DATA）",
-    "ts": "2026-10-01T11:00:44.517133+00:00"
+    "headline": "revision feed failed: HTTP Error 503: Service Unavailable",
+    "ts": "2026-10-05T11:37:01.171087+00:00"
    },
    {
     "module": "M9 valuation",
     "status": "GREEN",
-    "headline": "PER 29.1（3 年第 80 百分位；20 日前第 75）；觀察",
-    "ts": "2026-10-01T11:00:44.517133+00:00"
+    "headline": "PER 29.9（3 年第 85 百分位；20 日前第 69）；觀察",
+    "ts": "2026-10-05T11:37:01.171087+00:00"
    }
   ],
   "divergence": {
    "flag": null,
-   "text": "無背離（前提 GREEN、價格 20 日 +7.7%）；PER 29.1，3 年分位 75 → 80",
+   "text": "無背離（前提 GREEN、價格 20 日 +7.7%）；PER 29.9，3 年分位 69 → 85",
    "premise": "GREEN",
-   "premise_ts": "2026-10-01T11:00:44.517133+00:00",
+   "premise_ts": "2026-10-05T11:37:00.580028+00:00",
    "ret_pct": 7.74,
    "lookback_sessions": 20,
    "as_of": "2026-10-05",
    "valuation": {
-    "per": 29.09,
-    "per_pct": 80.5,
-    "per_then": 28.28,
-    "per_pct_then": 75.0,
+    "per": 29.85,
+    "per_pct": 85.2,
+    "per_then": 27.7,
+    "per_pct_then": 69.0,
     "history_years": 3
    }
   },

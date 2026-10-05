@@ -4022,5 +4022,210 @@
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
     }
+  },
+  {
+    "ts": "2026-10-05T11:37:01.171087+00:00",
+    "overall": "GREEN",
+    "modules_requested": [
+      "m1",
+      "m2",
+      "m3",
+      "m4",
+      "m5",
+      "m6",
+      "m8",
+      "m9"
+    ],
+    "modules": [
+      {
+        "module": "M1 revenue_acceleration",
+        "status": "GREEN",
+        "headline": "2026-08 YoY +53.3%, slope +7.74pp/月, 連續減速 0 個月",
+        "metrics": {
+          "latest_month": "2026-08",
+          "latest_yoy_pct": 53.3,
+          "yoy_slope_pp_per_month": 7.74,
+          "consecutive_decel_months": 0
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      },
+      {
+        "module": "M2 bullwhip_health",
+        "status": "GREEN",
+        "headline": "合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9",
+        "metrics": {
+          "as_of": null,
+          "contract_liab_qoq_pct": null,
+          "inventory_qoq_pct": 23.8,
+          "fcf_to_net_income": 0.9,
+          "accounts_used": {
+            "contract": "",
+            "inventory": "Inventories",
+            "ocf": "CashFlowsFromOperatingActivities",
+            "capex": "PropertyAndPlantAndEquipment",
+            "net_income": "IncomeAfterTaxes"
+          }
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      },
+      {
+        "module": "M3 adr_premium",
+        "status": "GREEN",
+        "headline": "ADR 溢價 +16.6%（1 年第 33 百分位；觀察）",
+        "metrics": {
+          "as_of": "2026-10-05",
+          "premium_pct": 16.55,
+          "percentile_1y": 32.8,
+          "n": 370
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": true
+      },
+      {
+        "module": "M4 customs_flow",
+        "status": "GREEN",
+        "headline": "US 進口 HS854231 (TH+TW) 近3月 $3643.7M, YoY +58.0%",
+        "metrics": {
+          "window": "2026-05..2026-07",
+          "rolling_value_usd_m": 3643.7,
+          "rolling_yoy_pct": 58.0,
+          "by_country": {
+            "TAIWAN": {
+              "rolling_value_usd_m": 3643.7,
+              "rolling_yoy_pct": 58.0
+            }
+          }
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      },
+      {
+        "module": "M5 narrative_triggers",
+        "status": "NO_DATA",
+        "headline": "",
+        "metrics": {},
+        "notes": [
+          "feed export_controls_tariffs failed: HTTP Error 503: Service Unavailable",
+          "feed n2_arizona_ramp failed: HTTP Error 503: Service Unavailable",
+          "feed cowos_capacity failed: HTTP Error 503: Service Unavailable",
+          "feed geopolitics failed: HTTP Error 503: Service Unavailable",
+          "feed hyperscaler_capex failed: HTTP Error 503: Service Unavailable"
+        ],
+        "error": "all RSS feeds failed",
+        "observe_only": false
+      },
+      {
+        "module": "M6 peer_divergence",
+        "status": "GREEN",
+        "headline": "cohort 內 2330 未被對手顯著反超（離散在容忍帶內）",
+        "metrics": {
+          "groups": {
+            "foundry_contrast": {
+              "direction": "cohort_confirm",
+              "delta_3m_yoy": 55.3,
+              "best_peer": "2303",
+              "best_peer_3m_yoy": 24.2,
+              "peer_lead_pp": -31.1,
+              "status": "GREEN",
+              "peers_3m_yoy": {
+                "2303": 24.2
+              }
+            },
+            "backend": {
+              "direction": "cohort_confirm",
+              "delta_3m_yoy": 55.3,
+              "best_peer": "2383",
+              "best_peer_3m_yoy": 142.7,
+              "peer_lead_pp": 87.4,
+              "status": "GREEN",
+              "peers_3m_yoy": {
+                "3711": 40.6,
+                "3037": 45.4,
+                "2383": 142.7
+              }
+            },
+            "asic_lead": {
+              "direction": "cohort_confirm",
+              "delta_3m_yoy": 55.3,
+              "best_peer": "3661",
+              "best_peer_3m_yoy": 156.9,
+              "peer_lead_pp": 101.6,
+              "status": "GREEN",
+              "peers_3m_yoy": {
+                "3661": 156.9,
+                "3443": 122.4
+              }
+            }
+          }
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      },
+      {
+        "module": "M8 revision_velocity",
+        "status": "NO_DATA",
+        "headline": "",
+        "metrics": {},
+        "notes": [],
+        "error": "revision feed failed: HTTP Error 503: Service Unavailable",
+        "observe_only": false
+      },
+      {
+        "module": "M9 valuation",
+        "status": "GREEN",
+        "headline": "PER 29.9（3 年第 85 百分位；20 日前第 69）；觀察",
+        "metrics": {
+          "as_of": "2026-10-05",
+          "per": 29.85,
+          "per_pct": 85.2,
+          "per_then": 27.7,
+          "per_pct_then": 69.0,
+          "pbr": 10.38,
+          "dividend_yield": 0.85,
+          "history_years": 3,
+          "n": 733
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": true
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 GREEN、價格 20 日 +7.7%）；PER 29.9，3 年分位 69 → 85",
+      "premise": "GREEN",
+      "premise_ts": "2026-10-05T11:37:00.580028+00:00",
+      "ret_pct": 7.74,
+      "lookback_sessions": 20,
+      "as_of": "2026-10-05",
+      "valuation": {
+        "per": 29.85,
+        "per_pct": 85.2,
+        "per_then": 27.7,
+        "per_pct_then": 69.0,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-10-05",
+      "benchmark": "0050",
+      "entry_close": 2575.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
   }
 ]
