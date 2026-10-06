@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-10-05T21:20:52+00:00",
- "today": "2026-10-05",
+ "generated_at": "2026-10-06T09:24:39+00:00",
+ "today": "2026-10-06",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-09）：本月預算已於 2026-10-05 動用（月末例行），本月不再行動。",
   "鋒面 ⛅ NEUTRAL（本週未變）。",
-  "2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +13.9%）；PER 63.8，3 年分位 79 → 88",
+  "2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +12.3%）；PER 63.8，3 年分位 79 → 88",
   "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +7.7%）；PER 29.9，3 年分位 69 → 85",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.71%。"
  ],
  "weather": {
   "status": "OK",
   "as_of": "2026-10-05",
-  "age_days": 0,
+  "age_days": 1,
   "regime": "NEUTRAL",
   "emoji": "⛅",
   "score": 0.44,
@@ -90,7 +90,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-10-05",
-  "age_days": 0,
+  "age_days": 1,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -235,18 +235,11 @@
  "delta": {
   "status": "OK",
   "label": "2308",
-  "as_of": "2026-10-05",
+  "as_of": "2026-10-06",
   "age_days": 0,
-  "last_overall": "YELLOW",
+  "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
-   "m1",
-   "m2",
-   "m3",
-   "m4",
-   "m5",
-   "m6",
-   "m8",
-   "m9"
+   "m5"
   ],
   "full_overall": "YELLOW",
   "full_ts": "2026-10-05",
@@ -278,8 +271,8 @@
    {
     "module": "M5 narrative_triggers",
     "status": "GREEN",
-    "headline": "capex_cut:5e(6m) / vr300_delay:17e(21m) / debt_financed_capex:13e(15m) / lc_psu_competition:0e",
-    "ts": "2026-10-05T10:50:53.702092+00:00"
+    "headline": "capex_cut:5e / vr300_delay:17e(21m) / debt_financed_capex:14e(15m) / lc_psu_competition:0e",
+    "ts": "2026-10-06T09:24:37.953721+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -302,12 +295,12 @@
   ],
   "divergence": {
    "flag": null,
-   "text": "無背離（前提 YELLOW、價格 20 日 +13.9%）；PER 63.8，3 年分位 79 → 88",
+   "text": "無背離（前提 YELLOW、價格 20 日 +12.3%）；PER 63.8，3 年分位 79 → 88",
    "premise": "YELLOW",
-   "premise_ts": "2026-10-05T10:50:53.129083+00:00",
-   "ret_pct": 13.92,
+   "premise_ts": "2026-10-05T10:50:53.702092+00:00",
+   "ret_pct": 12.33,
    "lookback_sessions": 20,
-   "as_of": "2026-10-05",
+   "as_of": "2026-10-06",
    "valuation": {
     "per": 63.81,
     "per_pct": 87.6,
@@ -316,13 +309,13 @@
     "history_years": 3
    }
   },
-  "scored_n": 96
+  "scored_n": 97
  },
  "tsmc": {
   "status": "OK",
   "label": "2330",
   "as_of": "2026-10-05",
-  "age_days": 0,
+  "age_days": 1,
   "last_overall": "GREEN",
   "last_modules_requested": [
    "m1",
@@ -407,7 +400,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-10-05",
-  "age_days": 0,
+  "age_days": 1,
   "rows": [
    {
     "ticker": "3661",
@@ -650,12 +643,12 @@
   {
    "date": "2026-10-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 5
+   "days": 4
   },
   {
    "date": "2026-11-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 36
+   "days": 35
   }
  ],
  "checks": [
@@ -672,7 +665,7 @@
   {
    "level": "ok",
    "label": "delta_radar 正常",
-   "text": "delta_radar：最新 2026-10-05"
+   "text": "delta_radar：最新 2026-10-06"
   },
   {
    "level": "ok",
