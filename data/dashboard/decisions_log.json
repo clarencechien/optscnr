@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-10-06T02:28:05Z",
+ "generated_at": "2026-10-06T23:16:56Z",
  "n_days": 21,
  "t8_by_event_answer": {
   "有": {
-   "n": 5,
-   "hit_rate": 1.0,
-   "avg_peak": 3.37
+   "n": 6,
+   "hit_rate": 0.833,
+   "avg_peak": 3.1
   }
  },
  "days": [
@@ -161,7 +161,15 @@
      },
      "note": "野火責任上限立法未過；公司啟動策略檢討，2027 年資本支出削減 20 億美元",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 1.33,
+      "t10": null,
+      "t20": null,
+      "peak": 1.33,
+      "mature": false,
+      "verdict": "➖持平(峰1.3x/今1.3x)",
+      "filled_at": "2026-10-06"
+     }
     },
     {
      "signal_id": "2026-10-01_IBIT_2026-11-20_57.0",
@@ -202,7 +210,15 @@
      },
      "note": "截至 9/25 當週，IBIT 淨流入 12 億美元，領先同業",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.9,
+      "t10": null,
+      "t20": null,
+      "peak": 0.9,
+      "mature": false,
+      "verdict": "➖持平(峰0.9x/今0.9x)",
+      "filled_at": "2026-10-06"
+     }
     },
     {
      "signal_id": "2026-10-01_PCG_2027-01-15_14.0",
@@ -243,7 +259,15 @@
      },
      "note": "9/23 UBS 降評至 Hold、目標價 $14；Fitch 展望轉為負向",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 1.05,
+      "t10": null,
+      "t20": null,
+      "peak": 1.05,
+      "mature": false,
+      "verdict": "➖持平(峰1.0x/今1.0x)",
+      "filled_at": "2026-10-06"
+     }
     }
    ]
   },
@@ -332,7 +356,7 @@
       "peak": 0.94,
       "mature": false,
       "verdict": "➖持平(峰0.9x/今0.9x)",
-      "filled_at": "2026-10-05"
+      "filled_at": "2026-10-06"
      }
     }
    ]
@@ -412,7 +436,7 @@
       "peak": 0.47,
       "mature": false,
       "verdict": "❌沒噴(峰0.5x)",
-      "filled_at": "2026-10-05"
+      "filled_at": "2026-10-06"
      }
     }
    ]
@@ -474,7 +498,7 @@
       "peak": 1.53,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今0.7x)",
-      "filled_at": "2026-10-05"
+      "filled_at": "2026-10-06"
      }
     },
     {
@@ -515,7 +539,7 @@
       "peak": 1.39,
       "mature": false,
       "verdict": "➖持平(峰1.4x/今0.5x)",
-      "filled_at": "2026-10-05"
+      "filled_at": "2026-10-06"
      }
     },
     {
@@ -556,7 +580,7 @@
       "peak": 1.52,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今0.9x)",
-      "filled_at": "2026-10-05"
+      "filled_at": "2026-10-06"
      }
     }
    ]
@@ -618,11 +642,11 @@
      "outcome": {
       "t5": 1.78,
       "t10": 0.54,
-      "t20": null,
+      "t20": 0.33,
       "peak": 1.78,
-      "mature": false,
-      "verdict": "➖持平(峰1.8x/今0.5x)",
-      "filled_at": "2026-10-05"
+      "mature": true,
+      "verdict": "➖持平(峰1.8x/今0.3x)",
+      "filled_at": "2026-10-06"
      }
     }
    ]

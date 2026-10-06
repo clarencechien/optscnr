@@ -59,7 +59,16 @@
         "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
       },
       "note": "野火責任上限立法未過；公司啟動策略檢討，2027 年資本支出削減 20 億美元",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 1.33,
+        "t10": null,
+        "t20": null,
+        "peak": 1.33,
+        "mature": false,
+        "verdict": "➖持平(峰1.3x/今1.3x)",
+        "filled_at": "2026-10-06"
+      }
     },
     {
       "signal_id": "2026-10-01_IBIT_2026-11-20_57.0",
@@ -101,7 +110,16 @@
         "source": null
       },
       "note": "截至 9/25 當週，IBIT 淨流入 12 億美元，領先同業",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.9,
+        "t10": null,
+        "t20": null,
+        "peak": 0.9,
+        "mature": false,
+        "verdict": "➖持平(峰0.9x/今0.9x)",
+        "filled_at": "2026-10-06"
+      }
     },
     {
       "signal_id": "2026-10-01_PCG_2027-01-15_14.0",
@@ -143,7 +161,16 @@
         "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
       },
       "note": "9/23 UBS 降評至 Hold、目標價 $14；Fitch 展望轉為負向",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 1.05,
+        "t10": null,
+        "t20": null,
+        "peak": 1.05,
+        "mature": false,
+        "verdict": "➖持平(峰1.0x/今1.0x)",
+        "filled_at": "2026-10-06"
+      }
     }
   ],
   "facts_proposed": [
