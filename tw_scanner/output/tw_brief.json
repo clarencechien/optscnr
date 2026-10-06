@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-06T09:24:39+00:00",
+ "generated_at": "2026-10-06T10:11:07+00:00",
  "today": "2026-10-06",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-09）：本月預算已於 2026-10-05 動用（月末例行），本月不再行動。",
   "鋒面 ⛅ NEUTRAL（本週未變）。",
   "2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +12.3%）；PER 63.8，3 年分位 79 → 88",
-  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +7.7%）；PER 29.9，3 年分位 69 → 85",
+  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +7.3%）；PER 29.9，3 年分位 69 → 85",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.71%。"
  ],
  "weather": {
@@ -314,18 +314,11 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-10-05",
-  "age_days": 1,
-  "last_overall": "GREEN",
+  "as_of": "2026-10-06",
+  "age_days": 0,
+  "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
-   "m1",
-   "m2",
-   "m3",
-   "m4",
-   "m5",
-   "m6",
-   "m8",
-   "m9"
+   "m5"
   ],
   "full_overall": "GREEN",
   "full_ts": "2026-10-05",
@@ -356,9 +349,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "NO_DATA",
-    "headline": "all RSS feeds failed",
-    "ts": "2026-10-05T11:37:01.171087+00:00"
+    "status": "GREEN",
+    "headline": "export_controls_tariffs:14e / n2_arizona_ramp:9e(11m) / cowos_capacity:8e / geopolitics:3e / hyperscaler_capex:5e",
+    "ts": "2026-10-06T10:11:05.107077+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -381,12 +374,12 @@
   ],
   "divergence": {
    "flag": null,
-   "text": "無背離（前提 GREEN、價格 20 日 +7.7%）；PER 29.9，3 年分位 69 → 85",
+   "text": "無背離（前提 GREEN、價格 20 日 +7.3%）；PER 29.9，3 年分位 69 → 85",
    "premise": "GREEN",
-   "premise_ts": "2026-10-05T11:37:00.580028+00:00",
-   "ret_pct": 7.74,
+   "premise_ts": "2026-10-05T11:37:01.171087+00:00",
+   "ret_pct": 7.26,
    "lookback_sessions": 20,
-   "as_of": "2026-10-05",
+   "as_of": "2026-10-06",
    "valuation": {
     "per": 29.85,
     "per_pct": 85.2,
@@ -670,7 +663,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-10-05"
+   "text": "tsmc_radar：最新 2026-10-06"
   },
   {
    "level": "ok",
