@@ -1,27 +1,28 @@
 {
-  "updated_at": "2026-10-04T23:30:32.289449",
+  "updated_at": "2026-10-06T01:23:27.991551",
   "stats": {
     "total_items": 106,
-    "items_with_company": 14,
-    "items_with_catalyst": 16,
-    "items_both": 2
+    "items_with_company": 24,
+    "items_with_catalyst": 20,
+    "items_both": 3
   },
-  "count": 18,
+  "count": 19,
   "tickers": [
-    "META",
-    "GOOGL",
-    "AAPL",
+    "NVDA",
+    "INTC",
+    "MSFT",
+    "TSM",
     "ZS",
     "PANW",
-    "INTC",
+    "SBUX",
+    "META",
     "AMD",
-    "NVDA",
-    "BRK-B",
-    "TSLA",
-    "F",
+    "LCID",
+    "WDC",
+    "STX",
+    "VST",
     "MU",
     "CRM",
-    "MSFT",
     "NKE",
     "XYZ",
     "BAC",
@@ -29,44 +30,78 @@
   ],
   "details": [
     {
-      "symbol": "META",
-      "score": 2.5,
+      "symbol": "NVDA",
+      "score": 5.0,
       "evidence": [
         {
-          "title": "A 'weird' IPO pull, a tainted reputation and the stalled breakout moment for AI wearables",
-          "catalysts": [
-            "breakout"
-          ],
-          "has_catalyst": true
+          "title": "Stocks are hitting records despite surging yields. Cramer explains why",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "Bank of America backs Meta stock after Muse surprise",
+          "title": "Nvidia's $20 billion Groq deal faces lawsuit alleging startup's stockholders were shortchanged",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia's $6 trillion milestone looms. Here's when options traders see it happening",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
-      "score": 2,
+      "symbol": "INTC",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "A 'weird' IPO pull, a tainted reputation and the stalled breakout moment for AI wearables",
+          "title": "Intel’s stock drops after Musk hints at an additional partner for big chip venture",
           "catalysts": [
-            "breakout"
+            "drops"
           ],
           "has_catalyst": true
+        },
+        {
+          "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Intel (INTC) Could Get a Fresh Valuation for Altera. AMD (AMD) Is the Rival to Watch",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AAPL",
+      "symbol": "MSFT",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Satya Nadella reinvented Microsoft once. Can he do it again in the AI era?",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Stocks are hitting records despite surging yields. Cramer explains why",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Wall Street rewards Microsoft's AI pivot. A longtime skeptic says it's just the beginning",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
       "score": 2,
       "evidence": [
         {
-          "title": "A 'weird' IPO pull, a tainted reputation and the stalled breakout moment for AI wearables",
+          "title": "Intel’s stock drops after Musk hints at an additional partner for big chip venture",
           "catalysts": [
-            "breakout"
+            "drops"
           ],
           "has_catalyst": true
         }
@@ -99,16 +134,32 @@
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "SBUX",
       "score": 1.0,
       "evidence": [
         {
-          "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
+          "title": "CNBC's The China Connection newsletter: Starbucks enters Xinjiang in calculated geopolitical risk ",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Intel (INTC) Could Get a Fresh Valuation for Altera. AMD (AMD) Is the Rival to Watch",
+          "title": "Starbucks recovery plan is working. Here's how Mike Khouw says to trade the coffee giant",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Stocks are hitting records despite surging yields. Cramer explains why",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Bank of America backs Meta stock after Muse surprise",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -131,49 +182,44 @@
       ]
     },
     {
-      "symbol": "NVDA",
-      "score": 1.0,
+      "symbol": "LCID",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia doubles down on selling to both sides of the AI race",
+          "title": "Lucid's Q3 deliveries fall 6.7% as EV maker cuts production to align with demand",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
+      "symbol": "WDC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Berkshire buys more Lennar shares, but pace of purchases slows",
+          "title": "Western Digital and Seagate shares bounce back as analysts downplay the Toshiba threat",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "STX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Tesla’s Cybercab had a rocky first month in Austin. Now comes the hard part: expanding",
+          "title": "Western Digital and Seagate shares bounce back as analysts downplay the Toshiba threat",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "F",
+      "symbol": "VST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Ford fends off Hyundai to retain No. 3 U.S. sales position in third quarter",
+          "title": "DoE confirms up to $4.2B loan to Vistra to boost nuclear power output",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -192,17 +238,6 @@
     },
     {
       "symbol": "CRM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
@@ -258,7 +293,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2,
-    "OpenAI (private)": 1
+    "OpenAI (private)": 2,
+    "Cerebras (pre-IPO)": 1
   }
 }
