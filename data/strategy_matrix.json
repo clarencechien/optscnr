@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05 23:21 UTC",
+  "generated_at": "2026-10-06 02:28 UTC",
   "prereg_date": "2026-09-08",
   "cost_factor": 0.86,
   "min_n": 30,
@@ -676,8 +676,8 @@
     "threshold_pct": 10.0,
     "listed_n": 166,
     "listed_rate": 0.247,
-    "universe_rate": 0.29,
-    "edge_pp": -4.3,
+    "universe_rate": 0.292,
+    "edge_pp": -4.5,
     "verdict_rule": "上榜組 − universe < 5 個百分點（≥100 個上榜標的-日後判）→ 選標的無 edge"
   }
 }

@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-05T23:21:35Z",
- "n_days": 20,
+ "generated_at": "2026-10-06T02:28:05Z",
+ "n_days": 21,
  "t8_by_event_answer": {
   "有": {
    "n": 5,
@@ -9,6 +9,58 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-10-05",
+   "decided_at": "2026-10-06T00:35:32.819Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-10-05_PCG_2026-12-18_14.0",
+     "ticker": "PCG",
+     "expiry": "2026-12-18",
+     "strike": 14,
+     "entry_price": 0.5,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-11-27",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-10-22",
+      "what": "PG&E 2026 年第三季財報電話會議，2026-10-22 美東時間 11:00 舉行（公司於 2026-09-24 公告）",
+      "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": 1.9,
+       "date": "2026-09-29"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "公司公告確認Q3法說10/22；野火責任改革案已擱置，9/30遞出$16.6B地下化計畫",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-10-02",
    "decided_at": "2026-10-04T23:05:58.759Z",
