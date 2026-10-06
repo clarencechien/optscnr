@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-02",
-    "consecutive_days": 7,
-    "total_mentions": 15,
+    "last_seen": "2026-10-06",
+    "consecutive_days": 8,
+    "total_mentions": 17,
     "ticker": "NDAQ"
   },
   "Helix": {
@@ -82,5 +82,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "AUST"
+  },
+  "Beijing": {
+    "first_seen": "2026-10-06",
+    "last_seen": "2026-10-06",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "BGTCF"
   }
 }

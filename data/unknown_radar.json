@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-10-05T00:09:50.113128",
+  "updated_at": "2026-10-06T01:53:59.340964",
   "count": 2,
   "blind_spots": [
     {
-      "name": "Lennar",
-      "ticker": "LEN-B",
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 17,
+      "consecutive_days": 8,
+      "is_strong": true,
       "evidence": [
-        "Berkshire buys more Lennar shares, but pace of purchases slows",
-        "Berkshire buys more Lennar shares, but pace of purchases slows"
+        "This rare stock-market divide means an elevated chance of a big surge — or a deep plunge",
+        "U.S. stock futures steady after Nasdaq hits record on reduced Fed hike bets"
       ]
     },
     {
-      "name": "Austin",
-      "ticker": "AUST",
-      "mentions_today": 2,
-      "total_mentions": 2,
+      "name": "Beijing",
+      "ticker": "BGTCF",
+      "mentions_today": 3,
+      "total_mentions": 3,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Tesla’s Cybercab had a rocky first month in Austin. Now comes the hard part: expanding",
-        "Tesla’s Cybercab had a rocky first month in Austin. Now comes the hard part: expanding"
+        "CNBC's The China Connection newsletter: Starbucks enters Xinjiang in calculated geopolitical risk",
+        "China shuts hundreds of banks as Beijing moves to shore up its financial system"
       ]
     }
   ]
