@@ -263,3 +263,6 @@
 - PCG ｜ Fitch 因野火責任疑慮，將 PG&E 展望調為負向；PG&E 宣布策略檢討，並把 2027 年資本支出削減 20 億美元至 114 億美元；當日股價 $13.32 ｜ 2026-09-16 ｜ https://www.ad-hoc-news.de/boerse/news/corporate-news/pg-and-e-corporation-stock-slips-as-fitch-turns-outlook-negative/70120837 ｜ 2026-10-01 LLM 提案
 - IBIT ｜ 截至 2026-09-25 當週，美國現貨比特幣 ETF 淨流入 24 億美元，2026 年累計淨流量轉正；IBIT 當週淨流入 12 億美元 ｜ 2026-09-26 ｜ https://www.theblock.co/news/markets/2026-09-26-bitcoin-etfs-turn-positive-for-2026-with-2-4-billion-weekly-inflow-their-largest-since-october-416944 ｜ 2026-10-01 LLM 提案
 - IBIT ｜ Nasdaq ISE 在 2026-07-28 提交 SR-ISE-2026-42，要讓加密 ETF 選擇權改用標準化上市準則（每種數位商品的日均全球市值門檻為 7 億美元）。2026-09-27 是 SEC 的 45 天期限；如果 SEC 啟動正式程序，90 天期限大約落在 2026-11-11，而且還可能再延。這項規則不是只針對 IBIT。 ｜ 2026-11-11 ｜ https://cryptoticker.io/en/crypto-etf-options-sec-deadline-spread/ ｜ 2026-10-02 LLM 提案
+- PCG ｜ PG&E 於 2026-09-30 向加州公用事業監管機關遞出 10 年地下化計畫：將 5,000 英里配電線改為地下化（以高火險區為主），經通膨調整後成本為 $16.6B ｜ 2026-09-30 ｜ https://www.morningstar.com/stocks/xnys/pcg/quote ｜ 2026-10-05 LLM 提案
+- PCG ｜ 加州野火責任改革提案失敗並遭擱置，PCG 股價因此重挫；CNBC 2026-09-02 報導 CEO Patti Poppe 呼籲議會重新推動改革。8/25 入庫事實中「8/31 立法截止」一事的後續結果即此 ｜ 2026-09-02 ｜ https://www.cnbc.com/quotes/PCG ｜ 2026-10-05 LLM 提案
+- PCG ｜ PG&E 宣布 2026 年第三季普通股股利每股 $0.05，2026-09-30 為除息日暨登記日，2026-10-15 發放 ｜ 2026-10-15 ｜ https://finance.yahoo.com/markets/stocks/articles/pg-e-sets-dates-quarterly-104500128.html ｜ 2026-10-05 LLM 提案
