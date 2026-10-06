@@ -1,0 +1,120 @@
+{
+  "market_date": "2026-10-05",
+  "decided_at": "2026-10-06T00:35:32.819Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-05T23:06:40Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 21,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-05_PCG_2026-12-18_14.0",
+      "ticker": "PCG",
+      "expiry": "2026-12-18",
+      "strike": 14,
+      "entry_price": 0.5,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-11-27",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 1,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": 1.9,
+          "date": "2026-09-29"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-10-22",
+        "what": "PG&E 2026 年第三季財報電話會議，2026-10-22 美東時間 11:00 舉行（公司於 2026-09-24 公告）",
+        "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+      },
+      "note": "公司公告確認Q3法說10/22；野火責任改革案已擱置，9/30遞出$16.6B地下化計畫",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "PCG",
+      "fact": "PG&E 於 2026-09-24 公告，2026 年第三季財報電話會議定在 2026-10-22 美東時間 11:00，重播開放至 2026-10-29",
+      "date": "2026-10-22",
+      "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+    },
+    {
+      "ticker": "PCG",
+      "fact": "PG&E 於 2026-09-30 向加州公用事業監管機關遞出 10 年地下化計畫：將 5,000 英里配電線改為地下化（以高火險區為主），經通膨調整後成本為 $16.6B",
+      "date": "2026-09-30",
+      "source": "https://www.morningstar.com/stocks/xnys/pcg/quote"
+    },
+    {
+      "ticker": "PCG",
+      "fact": "加州野火責任改革提案失敗並遭擱置，PCG 股價因此重挫；CNBC 2026-09-02 報導 CEO Patti Poppe 呼籲議會重新推動改革。8/25 入庫事實中「8/31 立法截止」一事的後續結果即此",
+      "date": "2026-09-02",
+      "source": "https://www.cnbc.com/quotes/PCG"
+    },
+    {
+      "ticker": "PCG",
+      "fact": "PG&E 宣布 2026 年第三季普通股股利每股 $0.05，2026-09-30 為除息日暨登記日，2026-10-15 發放",
+      "date": "2026-10-15",
+      "source": "https://finance.yahoo.com/markets/stocks/articles/pg-e-sets-dates-quarterly-104500128.html"
+    }
+  ],
+  "facts_appended": 3,
+  "raw_answer": "{\"market_date\":\"2026-10-05\",\"candidates\":[{\"signal_id\":\"2026-10-05_PCG_2026-12-18_14.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-10-22\",\"what\":\"PG&E 2026 年第三季財報電話會議，2026-10-22 美東時間 11:00 舉行（公司於 2026-09-24 公告）\",\"source\":\"https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx\"},\"note\":\"公司公告確認Q3法說10/22；野火責任改革案已擱置，9/30遞出$16.6B地下化計畫\"}],\"facts_proposed\":[{\"ticker\":\"PCG\",\"fact\":\"PG&E 於 2026-09-24 公告，2026 年第三季財報電話會議定在 2026-10-22 美東時間 11:00，重播開放至 2026-10-29\",\"date\":\"2026-10-22\",\"source\":\"https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx\"},{\"ticker\":\"PCG\",\"fact\":\"PG&E 於 2026-09-30 向加州公用事業監管機關遞出 10 年地下化計畫：將 5,000 英里配電線改為地下化（以高火險區為主），經通膨調整後成本為 $16.6B\",\"date\":\"2026-09-30\",\"source\":\"https://www.morningstar.com/stocks/xnys/pcg/quote\"},{\"ticker\":\"PCG\",\"fact\":\"加州野火責任改革提案失敗並遭擱置，PCG 股價因此重挫；CNBC 2026-09-02 報導 CEO Patti Poppe 呼籲議會重新推動改革。8/25 入庫事實中「8/31 立法截止」一事的後續結果即此\",\"date\":\"2026-09-02\",\"source\":\"https://www.cnbc.com/quotes/PCG\"},{\"ticker\":\"PCG\",\"fact\":\"PG&E 宣布 2026 年第三季普通股股利每股 $0.05，2026-09-30 為除息日暨登記日，2026-10-15 發放\",\"date\":\"2026-10-15\",\"source\":\"https://finance.yahoo.com/markets/stocks/articles/pg-e-sets-dates-quarterly-104500128.html\"}]}",
+  "usage": {
+    "prompt_tokens": 27789,
+    "completion_tokens": 2318,
+    "total_tokens": 30107,
+    "cost": 0.177516,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.177516,
+      "upstream_inference_prompt_cost": 0.111156,
+      "upstream_inference_completions_cost": 0.04636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1339,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
