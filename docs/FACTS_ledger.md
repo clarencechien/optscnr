@@ -266,3 +266,4 @@
 - PCG ｜ PG&E 於 2026-09-30 向加州公用事業監管機關遞出 10 年地下化計畫：將 5,000 英里配電線改為地下化（以高火險區為主），經通膨調整後成本為 $16.6B ｜ 2026-09-30 ｜ https://www.morningstar.com/stocks/xnys/pcg/quote ｜ 2026-10-05 LLM 提案
 - PCG ｜ 加州野火責任改革提案失敗並遭擱置，PCG 股價因此重挫；CNBC 2026-09-02 報導 CEO Patti Poppe 呼籲議會重新推動改革。8/25 入庫事實中「8/31 立法截止」一事的後續結果即此 ｜ 2026-09-02 ｜ https://www.cnbc.com/quotes/PCG ｜ 2026-10-05 LLM 提案
 - PCG ｜ PG&E 宣布 2026 年第三季普通股股利每股 $0.05，2026-09-30 為除息日暨登記日，2026-10-15 發放 ｜ 2026-10-15 ｜ https://finance.yahoo.com/markets/stocks/articles/pg-e-sets-dates-quarterly-104500128.html ｜ 2026-10-05 LLM 提案
+- PCG ｜ PG&E 宣布 2026 年第三季普通股現金股利每股 $0.05，登記日 2026-09-30，2026-10-15 發放 ｜ 2026-09-18 ｜ http://www.prnewswire.com/news-releases/pge-sets-dates-for-quarterly-stock-dividends-302882677.html ｜ 2026-10-06 LLM 提案
