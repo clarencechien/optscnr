@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-06T23:16:56Z",
- "n_days": 21,
+ "generated_at": "2026-10-07T01:45:19Z",
+ "n_days": 22,
  "t8_by_event_answer": {
   "有": {
    "n": 6,
@@ -9,6 +9,58 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-10-06",
+   "decided_at": "2026-10-07T00:35:20.720Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-10-06_PCG_2027-01-15_14.0",
+     "ticker": "PCG",
+     "expiry": "2027-01-15",
+     "strike": 14,
+     "entry_price": 0.67,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-12-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-10-22",
+      "what": "PG&E 2026 年第三季財報法說會，美東時間 11:00 舉行（公司 2026-09-24 公告）",
+      "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": 1.2,
+       "date": "2026-10-02"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "10/22 法說已由官方公告確認；9/30 向加州監管機關送出 10 年地下化計畫，金額 $16.6B",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-10-05",
    "decided_at": "2026-10-06T00:35:32.819Z",
