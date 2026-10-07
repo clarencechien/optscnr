@@ -1,0 +1,114 @@
+{
+  "market_date": "2026-10-06",
+  "decided_at": "2026-10-07T00:35:20.720Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-06T23:05:55Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 22,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-06_PCG_2027-01-15_14.0",
+      "ticker": "PCG",
+      "expiry": "2027-01-15",
+      "strike": 14,
+      "entry_price": 0.67,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-12-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 1,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": 1.2,
+          "date": "2026-10-02"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-10-22",
+        "what": "PG&E 2026 年第三季財報法說會，美東時間 11:00 舉行（公司 2026-09-24 公告）",
+        "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+      },
+      "note": "10/22 法說已由官方公告確認；9/30 向加州監管機關送出 10 年地下化計畫，金額 $16.6B",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "PCG",
+      "fact": "PG&E 2026-09-24 公告：2026-10-22 美東時間 11:00 舉行第三季財報法說會，重播開放到 2026-10-29",
+      "date": "2026-09-24",
+      "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
+    },
+    {
+      "ticker": "PCG",
+      "fact": "PG&E 2026-09-30 向加州公用事業監管機關送出 10 年計畫：地下化 5,000 英里配電線路，經通膨調整後金額 $16.6B，主要在高火災風險區",
+      "date": "2026-09-30",
+      "source": "https://www.morningstar.com/stocks/xnys/pcg/quote"
+    },
+    {
+      "ticker": "PCG",
+      "fact": "PG&E 宣布 2026 年第三季普通股現金股利每股 $0.05，登記日 2026-09-30，2026-10-15 發放",
+      "date": "2026-09-18",
+      "source": "http://www.prnewswire.com/news-releases/pge-sets-dates-for-quarterly-stock-dividends-302882677.html"
+    }
+  ],
+  "facts_appended": 1,
+  "raw_answer": "{\"market_date\":\"2026-10-06\",\"candidates\":[{\"signal_id\":\"2026-10-06_PCG_2027-01-15_14.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-10-22\",\"what\":\"PG&E 2026 年第三季財報法說會，美東時間 11:00 舉行（公司 2026-09-24 公告）\",\"source\":\"https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx\"},\"note\":\"10/22 法說已由官方公告確認；9/30 向加州監管機關送出 10 年地下化計畫，金額 $16.6B\"}],\"facts_proposed\":[{\"ticker\":\"PCG\",\"fact\":\"PG&E 2026-09-24 公告：2026-10-22 美東時間 11:00 舉行第三季財報法說會，重播開放到 2026-10-29\",\"date\":\"2026-09-24\",\"source\":\"https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx\"},{\"ticker\":\"PCG\",\"fact\":\"PG&E 2026-09-30 向加州公用事業監管機關送出 10 年計畫：地下化 5,000 英里配電線路，經通膨調整後金額 $16.6B，主要在高火災風險區\",\"date\":\"2026-09-30\",\"source\":\"https://www.morningstar.com/stocks/xnys/pcg/quote\"},{\"ticker\":\"PCG\",\"fact\":\"PG&E 宣布 2026 年第三季普通股現金股利每股 $0.05，登記日 2026-09-30，2026-10-15 發放\",\"date\":\"2026-09-18\",\"source\":\"http://www.prnewswire.com/news-releases/pge-sets-dates-for-quarterly-stock-dividends-302882677.html\"}]}",
+  "usage": {
+    "prompt_tokens": 28565,
+    "completion_tokens": 1281,
+    "total_tokens": 29846,
+    "cost": 0.15988,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.15988,
+      "upstream_inference_prompt_cost": 0.11426,
+      "upstream_inference_completions_cost": 0.02562
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 476,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
