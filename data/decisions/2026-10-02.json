@@ -59,7 +59,16 @@
         "source": null
       },
       "note": "ETF無財報；SR-ISE-2026-42延期則約2026-11-11裁決",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.83,
+        "t10": null,
+        "t20": null,
+        "peak": 0.83,
+        "mature": false,
+        "verdict": "➖持平(峰0.8x/今0.8x)",
+        "filled_at": "2026-10-07"
+      }
     }
   ],
   "facts_proposed": [

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-07T01:45:19Z",
+ "generated_at": "2026-10-07T23:17:49Z",
  "n_days": 22,
  "t8_by_event_answer": {
   "有": {
@@ -161,7 +161,15 @@
      },
      "note": "ETF無財報；SR-ISE-2026-42延期則約2026-11-11裁決",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.83,
+      "t10": null,
+      "t20": null,
+      "peak": 0.83,
+      "mature": false,
+      "verdict": "➖持平(峰0.8x/今0.8x)",
+      "filled_at": "2026-10-07"
+     }
     }
    ]
   },
@@ -220,7 +228,7 @@
       "peak": 1.33,
       "mature": false,
       "verdict": "➖持平(峰1.3x/今1.3x)",
-      "filled_at": "2026-10-06"
+      "filled_at": "2026-10-07"
      }
     },
     {
@@ -269,7 +277,7 @@
       "peak": 0.9,
       "mature": false,
       "verdict": "➖持平(峰0.9x/今0.9x)",
-      "filled_at": "2026-10-06"
+      "filled_at": "2026-10-07"
      }
     },
     {
@@ -318,7 +326,7 @@
       "peak": 1.05,
       "mature": false,
       "verdict": "➖持平(峰1.0x/今1.0x)",
-      "filled_at": "2026-10-06"
+      "filled_at": "2026-10-07"
      }
     }
    ]
@@ -408,7 +416,7 @@
       "peak": 0.94,
       "mature": false,
       "verdict": "➖持平(峰0.9x/今0.9x)",
-      "filled_at": "2026-10-06"
+      "filled_at": "2026-10-07"
      }
     }
    ]
@@ -488,7 +496,7 @@
       "peak": 0.47,
       "mature": false,
       "verdict": "❌沒噴(峰0.5x)",
-      "filled_at": "2026-10-06"
+      "filled_at": "2026-10-07"
      }
     }
    ]
@@ -550,7 +558,7 @@
       "peak": 1.53,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今0.7x)",
-      "filled_at": "2026-10-06"
+      "filled_at": "2026-10-07"
      }
     },
     {
@@ -591,7 +599,7 @@
       "peak": 1.39,
       "mature": false,
       "verdict": "➖持平(峰1.4x/今0.5x)",
-      "filled_at": "2026-10-06"
+      "filled_at": "2026-10-07"
      }
     },
     {
@@ -632,7 +640,7 @@
       "peak": 1.52,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今0.9x)",
-      "filled_at": "2026-10-06"
+      "filled_at": "2026-10-07"
      }
     }
    ]
