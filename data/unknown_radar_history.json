@@ -6,13 +6,6 @@
     "total_mentions": 17,
     "ticker": "NDAQ"
   },
-  "Helix": {
-    "first_seen": "2026-09-29",
-    "last_seen": "2026-09-29",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "HLX"
-  },
   "Canadian": {
     "first_seen": "2026-09-30",
     "last_seen": "2026-09-30",
