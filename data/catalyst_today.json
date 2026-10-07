@@ -1,151 +1,38 @@
 {
-  "updated_at": "2026-10-06T01:23:27.991551",
+  "updated_at": "2026-10-07T00:00:07.254664",
   "stats": {
-    "total_items": 106,
-    "items_with_company": 24,
-    "items_with_catalyst": 20,
-    "items_both": 3
+    "total_items": 57,
+    "items_with_company": 9,
+    "items_with_catalyst": 10,
+    "items_both": 1
   },
-  "count": 19,
+  "count": 8,
   "tickers": [
-    "NVDA",
-    "INTC",
-    "MSFT",
-    "TSM",
-    "ZS",
-    "PANW",
-    "SBUX",
+    "GOOGL",
     "META",
-    "AMD",
-    "LCID",
-    "WDC",
-    "STX",
-    "VST",
-    "MU",
+    "NVDA",
     "CRM",
-    "NKE",
-    "XYZ",
-    "BAC",
-    "PLTR"
+    "INTC",
+    "AMD",
+    "MRVL",
+    "AMZN"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 5.0,
-      "evidence": [
-        {
-          "title": "Stocks are hitting records despite surging yields. Cramer explains why",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia's $20 billion Groq deal faces lawsuit alleging startup's stockholders were shortchanged",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia's $6 trillion milestone looms. Here's when options traders see it happening",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Intel’s stock drops after Musk hints at an additional partner for big chip venture",
-          "catalysts": [
-            "drops"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Intel (INTC) Could Get a Fresh Valuation for Altera. AMD (AMD) Is the Rival to Watch",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
+      "symbol": "GOOGL",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Satya Nadella reinvented Microsoft once. Can he do it again in the AI era?",
+          "title": "Google DeepMind's Lila Ibrahim, world's top AI 'readiness' officer, on preparing for what's to come",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Stocks are hitting records despite surging yields. Cramer explains why",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Wall Street rewards Microsoft's AI pivot. A longtime skeptic says it's just the beginning",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Intel’s stock drops after Musk hints at an additional partner for big chip venture",
+          "title": "Google makes a fresh bet on nuclear power as the AI energy crunch intensifies",
           "catalysts": [
-            "drops"
+            "rising"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ZS",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Why Bernstein Still Sees 46% Upside in Zscaler (ZS) but Downgraded Palo Alto (PANW)",
-          "catalysts": [
-            "downgraded"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "PANW",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Why Bernstein Still Sees 46% Upside in Zscaler (ZS) but Downgraded Palo Alto (PANW)",
-          "catalysts": [
-            "downgraded"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SBUX",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "CNBC's The China Connection newsletter: Starbucks enters Xinjiang in calculated geopolitical risk ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Starbucks recovery plan is working. Here's how Mike Khouw says to trade the coffee giant",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
@@ -154,83 +41,28 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Stocks are hitting records despite surging yields. Cramer explains why",
+          "title": "Meta joins with group of companies to tame ‘chaos’ of doing business with AI bots",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Bank of America backs Meta stock after Muse surprise",
+          "title": "Meta Muse popularity lifts AMD stock to fresh highs as AI agents juice CPU sales",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "NVDA",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Pat Gelsinger Just Backed a $100 Million Challenge to Nvidia’s AI Networking Moat. AMD Could Benefit",
+          "title": "SpaceX  seeks to raise $40 bln to buy Nvidia chips- FT",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Intel (INTC) Could Get a Fresh Valuation for Altera. AMD (AMD) Is the Rival to Watch",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "LCID",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Lucid's Q3 deliveries fall 6.7% as EV maker cuts production to align with demand",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WDC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Western Digital and Seagate shares bounce back as analysts downplay the Toshiba threat",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "STX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Western Digital and Seagate shares bounce back as analysts downplay the Toshiba threat",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "VST",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "DoE confirms up to $4.2B loan to Vistra to boost nuclear power output",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "SK Hynix Is Eyeing Intel’s (INTC) Ohio Site. Why Micron (MU) Should Pay Attention",
+          "title": "SpaceX seeks $40 billion to buy Nvidia chips, FT reports",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -241,51 +73,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "“The New Clippy”: Benioff Uses Salesforce’s Biggest Product Launch in Years to Challenge Microsoft",
+          "title": "Salesforce shares sit at the epicenter of AI confusion. Here's how to trade it",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NKE",
+      "symbol": "INTC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nike (NKE): Wall Street Tests Whether the Turnaround Can Outrun Weak Demand Ahead of Q1 Results",
+          "title": "Meta Muse popularity lifts AMD stock to fresh highs as AI agents juice CPU sales",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Goldman Leads Bidding for $37 Billion Palmer Square, a CLO Powerhouse",
+          "title": "Meta Muse popularity lifts AMD stock to fresh highs as AI agents juice CPU sales",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BAC",
+      "symbol": "MRVL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bank of America backs Meta stock after Muse surprise",
+          "title": "Marvell just impressed Wall Street with ‘good numbers plus a better story’",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Palantir Reveals Its AI Sovereignty Strategy And Wall Street Is Starting to Believe It",
+          "title": "Boston Dynamics names former Amazon executive Rohit Prasad as CEO",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -293,7 +125,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2,
-    "Cerebras (pre-IPO)": 1
+    "Anthropic (private)": 1,
+    "OpenAI (private)": 1
   }
 }
