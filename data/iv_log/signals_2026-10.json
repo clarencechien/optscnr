@@ -18020,5 +18020,56 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-10-07_IBIT_2026-10-16_48.0",
+    "snapshot_date": "2026-10-07",
+    "ticker": "IBIT",
+    "expiry": "2026-10-16",
+    "strike": 48.0,
+    "score": 8,
+    "tags": "🚀點火(6.6x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+    "entry_price": 0.73,
+    "entry_iv": 35.8404853515625,
+    "entry_spot": 47.209999084472656,
+    "oi": 54222,
+    "oi_d7": -1311,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅無財報(ETF)"
+    ],
+    "volume": 10834,
+    "premium_tier": "lottery",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.71,
+    "entry_ask": 0.72,
+    "last_trade_at": "2026-10-07 20:11:48",
+    "quote_at": "2026-10-08T02:02:44Z",
+    "underlying_at": "2026-10-08T02:02:44Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-07",
+        "spot": 47.209999084472656,
+        "last": 0.73,
+        "bid": 0.71,
+        "ask": 0.72,
+        "iv": 35.8404853515625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
