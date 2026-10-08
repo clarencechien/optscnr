@@ -1,112 +1,65 @@
 {
-  "updated_at": "2026-10-07T00:00:07.254664",
+  "updated_at": "2026-10-08T00:21:02.975477",
   "stats": {
     "total_items": 57,
     "items_with_company": 9,
-    "items_with_catalyst": 10,
-    "items_both": 1
+    "items_with_catalyst": 9,
+    "items_both": 0
   },
-  "count": 8,
+  "count": 7,
   "tickers": [
-    "GOOGL",
-    "META",
     "NVDA",
-    "CRM",
-    "INTC",
-    "AMD",
-    "MRVL",
-    "AMZN"
+    "MSFT",
+    "DELL",
+    "AMZN",
+    "DIS",
+    "RTX",
+    "QCOM"
   ],
   "details": [
     {
-      "symbol": "GOOGL",
+      "symbol": "NVDA",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Google DeepMind's Lila Ibrahim, world's top AI 'readiness' officer, on preparing for what's to come",
+          "title": "Microsoft to sell $2,599 Surface Laptop Ultra containing Nvidia AI chip",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Google makes a fresh bet on nuclear power as the AI energy crunch intensifies",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
+          "title": "SpaceX’s plans to buy more Nvidia GPUs is keeping Jim Cramer bullish on the chip stock ",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apollo, banks in talks to finance SpaceX's $40 billion Nvidia GPU purchase",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "MSFT",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Meta joins with group of companies to tame ‘chaos’ of doing business with AI bots",
+          "title": "Microsoft to sell $2,599 Surface Laptop Ultra containing Nvidia AI chip",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Meta Muse popularity lifts AMD stock to fresh highs as AI agents juice CPU sales",
+          "title": "Microsoft and Nvidia are teaming up on a supercharged AI laptop",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NVDA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "SpaceX  seeks to raise $40 bln to buy Nvidia chips- FT",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "SpaceX seeks $40 billion to buy Nvidia chips, FT reports",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
+      "symbol": "DELL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Salesforce shares sit at the epicenter of AI confusion. Here's how to trade it",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Meta Muse popularity lifts AMD stock to fresh highs as AI agents juice CPU sales",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Meta Muse popularity lifts AMD stock to fresh highs as AI agents juice CPU sales",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MRVL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Marvell just impressed Wall Street with ‘good numbers plus a better story’",
+          "title": "Trump awarding medals to Musk, Dell, Nadella and other tech execs at science summit",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -117,7 +70,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Boston Dynamics names former Amazon executive Rohit Prasad as CEO",
+          "title": "FCC to vote on auctioning 25MHz of 'prime spectrum' in move that could benefit Amazon, SpaceX",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Disney+ to stream upcoming Super Bowl ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RTX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft and Nvidia are teaming up on a supercharged AI laptop",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Qualcomm and Arm kick off trial, potential for huge damages in focus",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -125,7 +111,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1,
-    "OpenAI (private)": 1
+    "Anthropic (private)": 1
   }
 }
