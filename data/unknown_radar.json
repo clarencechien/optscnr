@@ -1,5 +1,54 @@
 {
-  "updated_at": "2026-10-07T01:01:12.011957",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-10-08T01:19:18.119268",
+  "count": 4,
+  "blind_spots": [
+    {
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 19,
+      "consecutive_days": 9,
+      "is_strong": true,
+      "evidence": [
+        "Anthropic will be 'most ridiculous IPO' of year, analyst says",
+        "Strange market anomaly is creating a buying opportunity in the Nasdaq 100"
+      ]
+    },
+    {
+      "name": "Levi Strauss",
+      "ticker": "LEVI",
+      "mentions_today": 4,
+      "total_mentions": 4,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Levi Strauss hikes profit guidance after tariff refunds, but its sales outlook is less optimistic",
+        "Levi Strauss hikes profit guidance after tariff refunds, but its sales outlook is less optimistic"
+      ]
+    },
+    {
+      "name": "Webull",
+      "ticker": "BULLW",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Trading platform Webull's China ties create national security risk, congressional panel finds; stock",
+        "Trading platform Webull's China ties create national security risk, congressional panel finds; stock"
+      ]
+    },
+    {
+      "name": "General Dynamics",
+      "ticker": "GD",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "General Dynamics taps insider Danny Deep as next CEO",
+        "General Dynamics names current president Deep as next CEO"
+      ]
+    }
+  ]
 }

@@ -1,17 +1,10 @@
 {
   "Nasdaq": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-06",
-    "consecutive_days": 8,
-    "total_mentions": 17,
+    "last_seen": "2026-10-08",
+    "consecutive_days": 9,
+    "total_mentions": 19,
     "ticker": "NDAQ"
-  },
-  "Canadian": {
-    "first_seen": "2026-09-30",
-    "last_seen": "2026-09-30",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "CNDIF"
   },
   "Mattel": {
     "first_seen": "2026-10-01",
@@ -82,5 +75,26 @@
     "consecutive_days": 1,
     "total_mentions": 3,
     "ticker": "BGTCF"
+  },
+  "Levi Strauss": {
+    "first_seen": "2026-10-08",
+    "last_seen": "2026-10-08",
+    "consecutive_days": 1,
+    "total_mentions": 4,
+    "ticker": "LEVI"
+  },
+  "Webull": {
+    "first_seen": "2026-10-08",
+    "last_seen": "2026-10-08",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BULLW"
+  },
+  "General Dynamics": {
+    "first_seen": "2026-10-08",
+    "last_seen": "2026-10-08",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GD"
   }
 }
