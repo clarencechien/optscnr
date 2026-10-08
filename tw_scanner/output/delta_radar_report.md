@@ -1,8 +1,8 @@
-# Delta Radar (2308.TW) — 2026-10-07 09:14 UTC
+# Delta Radar (2308.TW) — 2026-10-08 09:27 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟡 YELLOW
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
-## 前提 vs 價格：無背離（前提 YELLOW、價格 20 日 +7.6%）；PER 63.8，3 年分位 79 → 88
+## 前提 vs 價格：無背離（前提 YELLOW、價格 20 日 +8.9%）；PER 63.8，3 年分位 79 → 88
 
 GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、
 敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。
@@ -10,43 +10,43 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🔴 RED | capex_cut:5e / vr300_delay:16e(20m) / debt_financed_capex:16e(17m) / lc_psu_competition:0e |
+| M5 narrative_triggers | 🟡 YELLOW | capex_cut:6e / vr300_delay:17e(22m) / debt_financed_capex:13e(14m) / lc_psu_competition:0e |
 
-### M5 narrative_triggers — 🔴 RED
+### M5 narrative_triggers — 🟡 YELLOW
 ```json
 {
   "events": {
-    "capex_cut": 5,
-    "vr300_delay": 16,
-    "debt_financed_capex": 16,
+    "capex_cut": 6,
+    "vr300_delay": 17,
+    "debt_financed_capex": 13,
     "lc_psu_competition": 0
   },
   "mentions": {
-    "capex_cut": 5,
-    "vr300_delay": 20,
-    "debt_financed_capex": 17,
+    "capex_cut": 6,
+    "vr300_delay": 22,
+    "debt_financed_capex": 14,
     "lc_psu_competition": 0
   },
   "scoring": {
     "capex_cut": {
-      "events": 5,
-      "mentions": 5,
+      "events": 6,
+      "mentions": 6,
       "gate": "zscore",
-      "z": 0.2,
+      "z": 1.85,
       "denial": false
     },
     "vr300_delay": {
-      "events": 16,
-      "mentions": 20,
+      "events": 17,
+      "mentions": 22,
       "gate": "zscore",
-      "z": -1.21,
+      "z": 0.84,
       "denial": true
     },
     "debt_financed_capex": {
-      "events": 16,
-      "mentions": 17,
+      "events": 13,
+      "mentions": 14,
       "gate": "zscore",
-      "z": 3.89,
+      "z": -0.49,
       "denial": false
     },
     "lc_psu_competition": {
@@ -59,18 +59,18 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
   }
 }
 ```
+- [capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
 - [capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review
 - [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
-- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
 - [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
 - [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
 - [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
 - [debt_financed_capex] Tom Lee vs. AI Debt Trap: What Happens When 10-Year Bonds Fund 2-Year Microchips? - TradingView
-- [debt_financed_capex] Oracle’s Negative Free Cash Flow Exposes the Uncomfortable Truth About AI’s Financing Game - AOL.com
 - [debt_financed_capex] AI Companies’ Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - Yahoo Finance
+- [debt_financed_capex] Oracle’s Negative Free Cash Flow Exposes the Uncomfortable Truth About AI’s Financing Game - AOL.com
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **5** 筆；state 已有 outcomes 的 entry：**132/132**
+- 本次回填 **5** 筆；state 已有 outcomes 的 entry：**133/133**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）
@@ -80,7 +80,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 | M2 | 18 / -7.09 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向對 |
 | M3 | 27 / -10.89 | 13 / -1.15 | 1 | 無法判定（狀態翻轉 1 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M4 | 31 / -6.59 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M5 | 36 / -2.03 | 50 / -9.29 | 45 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
+| M5 | 37 / -1.87 | 50 / -9.29 | 46 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
 | M6 | 0 / — | 23 / -2.73 | 1 | 樣本不足（缺一側 cohort） |
 | M8 | 23 / -2.73 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 
