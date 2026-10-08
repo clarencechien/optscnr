@@ -48,11 +48,11 @@
       "outcome": {
         "t5": 1.53,
         "t10": 0.66,
-        "t20": null,
+        "t20": 0.08,
         "peak": 1.53,
-        "mature": false,
-        "verdict": "➖持平(峰1.5x/今0.7x)",
-        "filled_at": "2026-10-07"
+        "mature": true,
+        "verdict": "💀歸零(0.08x)",
+        "filled_at": "2026-10-08"
       }
     },
     {
@@ -91,11 +91,11 @@
       "outcome": {
         "t5": 1.39,
         "t10": 0.52,
-        "t20": null,
+        "t20": 0.09,
         "peak": 1.39,
-        "mature": false,
-        "verdict": "➖持平(峰1.4x/今0.5x)",
-        "filled_at": "2026-10-07"
+        "mature": true,
+        "verdict": "💀歸零(0.09x)",
+        "filled_at": "2026-10-08"
       }
     },
     {
@@ -134,11 +134,11 @@
       "outcome": {
         "t5": 1.52,
         "t10": 0.91,
-        "t20": null,
+        "t20": 0.16,
         "peak": 1.52,
-        "mature": false,
-        "verdict": "➖持平(峰1.5x/今0.9x)",
-        "filled_at": "2026-10-07"
+        "mature": true,
+        "verdict": "➖持平(峰1.5x/今0.2x)",
+        "filled_at": "2026-10-08"
       }
     }
   ],
