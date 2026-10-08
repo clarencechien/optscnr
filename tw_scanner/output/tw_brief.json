@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-10-08T09:27:09+00:00",
+ "generated_at": "2026-10-08T10:55:54+00:00",
  "today": "2026-10-08",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-09）：本月預算已於 2026-10-05 動用（月末例行），本月不再行動。",
   "鋒面 ☀️ RISK_ON（本週由 NEUTRAL 轉入）。",
-  "2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +8.9%）；PER 63.8，3 年分位 79 → 88",
+  "2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +8.9%）；PER 62.5，3 年分位 79 → 86",
   "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +7.3%）；PER 29.9，3 年分位 69 → 85",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.67%。"
  ],
@@ -243,75 +243,82 @@
   "label": "2308",
   "as_of": "2026-10-08",
   "age_days": 0,
-  "last_overall": "PARTIAL(m5)",
+  "last_overall": "YELLOW",
   "last_modules_requested": [
-   "m5"
+   "m1",
+   "m2",
+   "m3",
+   "m4",
+   "m5",
+   "m6",
+   "m8",
+   "m9"
   ],
   "full_overall": "YELLOW",
-  "full_ts": "2026-10-05",
+  "full_ts": "2026-10-08",
   "modules": [
    {
     "module": "M1 revenue_acceleration",
     "status": "YELLOW",
     "headline": "2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月",
-    "ts": "2026-10-05T10:50:53.702092+00:00"
+    "ts": "2026-10-08T10:55:52.781998+00:00"
    },
    {
     "module": "M2 bullwhip_health",
     "status": "GREEN",
     "headline": "合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32",
-    "ts": "2026-10-05T10:50:53.702092+00:00"
+    "ts": "2026-10-08T10:55:52.781998+00:00"
    },
    {
     "module": "M3 thai_shadow",
     "status": "YELLOW",
     "headline": "DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8%",
-    "ts": "2026-10-05T10:50:53.702092+00:00"
+    "ts": "2026-10-08T10:55:52.781998+00:00"
    },
    {
     "module": "M4 customs_flow",
     "status": "GREEN",
-    "headline": "US 進口 HS850440 (TH+TW) 近3月 $1399.9M, YoY +30.6%",
-    "ts": "2026-10-05T10:50:53.702092+00:00"
+    "headline": "US 進口 HS850440 (TH+TW) 近3月 $1366.7M, YoY +22.4%",
+    "ts": "2026-10-08T10:55:52.781998+00:00"
    },
    {
     "module": "M5 narrative_triggers",
     "status": "YELLOW",
-    "headline": "capex_cut:6e / vr300_delay:17e(22m) / debt_financed_capex:13e(14m) / lc_psu_competition:0e",
-    "ts": "2026-10-08T09:27:07.301429+00:00"
+    "headline": "capex_cut:6e / vr300_delay:18e(23m) / debt_financed_capex:14e(15m) / lc_psu_competition:0e",
+    "ts": "2026-10-08T10:55:52.781998+00:00"
    },
    {
     "module": "M6 peer_divergence",
-    "status": "RED",
-    "headline": "cooling:3324領先+36pp",
-    "ts": "2026-10-05T10:50:53.702092+00:00"
+    "status": "YELLOW",
+    "headline": "cooling:3324領先+23pp",
+    "ts": "2026-10-08T10:55:52.781998+00:00"
    },
    {
     "module": "M8 revision_velocity",
     "status": "NO_DATA",
     "headline": "下修 0/上修 0（樣本不足 <3，NO_DATA）",
-    "ts": "2026-10-05T10:50:53.702092+00:00"
+    "ts": "2026-10-08T10:55:52.781998+00:00"
    },
    {
     "module": "M9 valuation",
     "status": "GREEN",
-    "headline": "PER 63.8（3 年第 88 百分位；20 日前第 79）；觀察",
-    "ts": "2026-10-05T10:50:53.702092+00:00"
+    "headline": "PER 62.5（3 年第 86 百分位；20 日前第 79）；觀察",
+    "ts": "2026-10-08T10:55:52.781998+00:00"
    }
   ],
   "divergence": {
    "flag": null,
-   "text": "無背離（前提 YELLOW、價格 20 日 +8.9%）；PER 63.8，3 年分位 79 → 88",
+   "text": "無背離（前提 YELLOW、價格 20 日 +8.9%）；PER 62.5，3 年分位 79 → 86",
    "premise": "YELLOW",
-   "premise_ts": "2026-10-05T10:50:53.702092+00:00",
+   "premise_ts": "2026-10-08T10:55:52.361936+00:00",
    "ret_pct": 8.86,
    "lookback_sessions": 20,
    "as_of": "2026-10-08",
    "valuation": {
-    "per": 63.81,
-    "per_pct": 87.6,
-    "per_then": 56.02,
-    "per_pct_then": 79.1,
+    "per": 62.54,
+    "per_pct": 85.8,
+    "per_then": 57.45,
+    "per_pct_then": 79.4,
     "history_years": 3
    }
   },
