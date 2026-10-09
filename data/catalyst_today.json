@@ -1,65 +1,68 @@
 {
-  "updated_at": "2026-10-08T00:21:02.975477",
+  "updated_at": "2026-10-09T00:35:07.900218",
   "stats": {
     "total_items": 57,
-    "items_with_company": 9,
+    "items_with_company": 14,
     "items_with_catalyst": 9,
-    "items_both": 0
+    "items_both": 3
   },
-  "count": 7,
+  "count": 12,
   "tickers": [
+    "SBUX",
     "NVDA",
-    "MSFT",
-    "DELL",
     "AMZN",
-    "DIS",
-    "RTX",
-    "QCOM"
+    "ORCL",
+    "CRWV",
+    "COST",
+    "MSFT",
+    "MU",
+    "PLTR",
+    "META",
+    "GOOGL",
+    "BA"
   ],
   "details": [
+    {
+      "symbol": "SBUX",
+      "score": 4.5,
+      "evidence": [
+        {
+          "title": "Why a Starbucks takeover of Chipotle would — and wouldn't — make sense for both companies",
+          "catalysts": [
+            "takeover"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Feel like a pumpkin-spice burrito? Analysts try to wrap their heads around a possible Starbucks-Chipotle tie-up.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Starbucks declines comment on Chipotle takeover report, says laser focused on turnaround",
+          "catalysts": [
+            "takeover"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
     {
       "symbol": "NVDA",
       "score": 2.5,
       "evidence": [
         {
-          "title": "Microsoft to sell $2,599 Surface Laptop Ultra containing Nvidia AI chip",
+          "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
           "catalysts": [],
           "has_catalyst": false
         },
-        {
-          "title": "SpaceX’s plans to buy more Nvidia GPUs is keeping Jim Cramer bullish on the chip stock ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apollo, banks in talks to finance SpaceX's $40 billion Nvidia GPU purchase",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
         {
           "title": "Microsoft to sell $2,599 Surface Laptop Ultra containing Nvidia AI chip",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Microsoft and Nvidia are teaming up on a supercharged AI laptop",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DELL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump awarding medals to Musk, Dell, Nadella and other tech execs at science summit",
+          "title": "Micron, Nvidia and AI chip stocks fall as report on OpenAI’s revenue causes ‘undue concern’",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -67,43 +70,111 @@
     },
     {
       "symbol": "AMZN",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Amazon overhauls aging devices lineup with higher-priced Alexa tablet, dumping the budget Fire",
+          "catalysts": [
+            "upgraded"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "FCC to vote on auctioning 25MHz of 'prime spectrum' in move that could benefit Amazon, SpaceX",
+          "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DIS",
+      "symbol": "CRWV",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Disney+ to stream upcoming Super Bowl ",
+          "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RTX",
+      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft and Nvidia are teaming up on a supercharged AI laptop",
+          "title": "Costco's sales resilience is giving Cramer a reason to feel better about the stock",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "QCOM",
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Qualcomm and Arm kick off trial, potential for huge damages in focus",
+          "title": "Microsoft to sell $2,599 Surface Laptop Ultra containing Nvidia AI chip",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron, Nvidia and AI chip stocks fall as report on OpenAI’s revenue causes ‘undue concern’",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why a longtime skeptic of Palantir’s stock is finally saying it’s time to buy",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Meta bans TikTok from advertising on its apps, Bloomberg News reports",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Lawmakers raise alarm at Google plan to acquire Spirit Airlines data for AI models",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Exclusive-Southwest Airlines weighs Boeing 787 for long-haul international push, sources say",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -111,6 +182,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1
+    "OpenAI (private)": 2
   }
 }
