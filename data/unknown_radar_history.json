@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-09-03",
-    "last_seen": "2026-10-08",
-    "consecutive_days": 9,
-    "total_mentions": 19,
+    "last_seen": "2026-10-09",
+    "consecutive_days": 10,
+    "total_mentions": 21,
     "ticker": "NDAQ"
   },
   "Mattel": {
@@ -12,20 +12,6 @@
     "consecutive_days": 2,
     "total_mentions": 5,
     "ticker": "MAT"
-  },
-  "Gemini": {
-    "first_seen": "2026-10-01",
-    "last_seen": "2026-10-01",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "GEMI"
-  },
-  "Foreign": {
-    "first_seen": "2026-10-01",
-    "last_seen": "2026-10-01",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BLX"
   },
   "Software": {
     "first_seen": "2026-10-02",
@@ -96,5 +82,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "GD"
+  },
+  "North American": {
+    "first_seen": "2026-10-09",
+    "last_seen": "2026-10-09",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "NOA"
+  },
+  "Sports": {
+    "first_seen": "2026-10-09",
+    "last_seen": "2026-10-09",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LTRYW"
   }
 }

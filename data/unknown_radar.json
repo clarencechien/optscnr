@@ -1,53 +1,41 @@
 {
-  "updated_at": "2026-10-08T01:19:18.119268",
-  "count": 4,
+  "updated_at": "2026-10-09T01:27:08.001767",
+  "count": 3,
   "blind_spots": [
     {
       "name": "Nasdaq",
       "ticker": "NDAQ",
       "mentions_today": 2,
-      "total_mentions": 19,
-      "consecutive_days": 9,
+      "total_mentions": 21,
+      "consecutive_days": 10,
       "is_strong": true,
       "evidence": [
-        "Anthropic will be 'most ridiculous IPO' of year, analyst says",
-        "Strange market anomaly is creating a buying opportunity in the Nasdaq 100"
+        "U.S. stock futures steady after Nasdaq slides on OpenAI revenue concerns",
+        "Veea regains full Nasdaq listing compliance; shares surge"
       ]
     },
     {
-      "name": "Levi Strauss",
-      "ticker": "LEVI",
-      "mentions_today": 4,
-      "total_mentions": 4,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Levi Strauss hikes profit guidance after tariff refunds, but its sales outlook is less optimistic",
-        "Levi Strauss hikes profit guidance after tariff refunds, but its sales outlook is less optimistic"
-      ]
-    },
-    {
-      "name": "Webull",
-      "ticker": "BULLW",
+      "name": "North American",
+      "ticker": "NOA",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Trading platform Webull's China ties create national security risk, congressional panel finds; stock",
-        "Trading platform Webull's China ties create national security risk, congressional panel finds; stock"
+        "PepsiCo cuts earnings forecast as North American turnaround takes longer than expected",
+        "PepsiCo cuts earnings forecast as North American turnaround takes longer than expected"
       ]
     },
     {
-      "name": "General Dynamics",
-      "ticker": "GD",
+      "name": "Sports",
+      "ticker": "LTRYW",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "General Dynamics taps insider Danny Deep as next CEO",
-        "General Dynamics names current president Deep as next CEO"
+        "Sports gambling seeps even deeper into Wall Street's world as hundreds of pro team ETFs emerge",
+        "Sports gambling seeps even deeper into Wall Street's world as hundreds of pro team ETFs emerge"
       ]
     }
   ]
