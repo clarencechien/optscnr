@@ -6,20 +6,6 @@
     "total_mentions": 21,
     "ticker": "NDAQ"
   },
-  "Mattel": {
-    "first_seen": "2026-10-01",
-    "last_seen": "2026-10-02",
-    "consecutive_days": 2,
-    "total_mentions": 5,
-    "ticker": "MAT"
-  },
-  "Software": {
-    "first_seen": "2026-10-02",
-    "last_seen": "2026-10-02",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SFWJ"
-  },
   "United Airlines": {
     "first_seen": "2026-10-02",
     "last_seen": "2026-10-03",
@@ -33,13 +19,6 @@
     "consecutive_days": 2,
     "total_mentions": 4,
     "ticker": "DAL"
-  },
-  "Accenture": {
-    "first_seen": "2026-10-02",
-    "last_seen": "2026-10-02",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ACN"
   },
   "Lennar": {
     "first_seen": "2026-10-05",
@@ -96,5 +75,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "LTRYW"
+  },
+  "Starlink": {
+    "first_seen": "2026-10-10",
+    "last_seen": "2026-10-10",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "OTAI-UN"
+  },
+  "Delta Air Lines": {
+    "first_seen": "2026-10-10",
+    "last_seen": "2026-10-10",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DAL"
   }
 }

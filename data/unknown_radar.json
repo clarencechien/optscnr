@@ -1,41 +1,29 @@
 {
-  "updated_at": "2026-10-09T01:27:08.001767",
-  "count": 3,
+  "updated_at": "2026-10-10T01:15:28.403099",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 21,
-      "consecutive_days": 10,
-      "is_strong": true,
-      "evidence": [
-        "U.S. stock futures steady after Nasdaq slides on OpenAI revenue concerns",
-        "Veea regains full Nasdaq listing compliance; shares surge"
-      ]
-    },
-    {
-      "name": "North American",
-      "ticker": "NOA",
+      "name": "Starlink",
+      "ticker": "OTAI-UN",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "PepsiCo cuts earnings forecast as North American turnaround takes longer than expected",
-        "PepsiCo cuts earnings forecast as North American turnaround takes longer than expected"
+        "Verizon posts worst day since 2002 as SpaceX U.S. network plans whack cell provider stocks",
+        "Venezuela president authorizes SpaceX’s Starlink to operate in the country"
       ]
     },
     {
-      "name": "Sports",
-      "ticker": "LTRYW",
+      "name": "Delta Air Lines",
+      "ticker": "DAL",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Sports gambling seeps even deeper into Wall Street's world as hundreds of pro team ETFs emerge",
-        "Sports gambling seeps even deeper into Wall Street's world as hundreds of pro team ETFs emerge"
+        "Delta Air Lines cuts 2026 forecast on fuel surge, but CEO says demand is still strong",
+        "Delta Air Lines cuts 2026 forecast on fuel surge, but CEO says demand is still strong"
       ]
     }
   ]
