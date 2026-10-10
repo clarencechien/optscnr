@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T05:19:44.627552",
+  "updated_at": "2026-10-10T05:53:55.089587",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
@@ -14,21 +14,21 @@
   "details": [
     {
       "symbol": "CHPT",
-      "price": 9.29,
-      "gain_30d_pct": 48.6,
-      "market_cap_m": 249.0,
-      "avg_volume_m": 2.3,
+      "price": 7.92,
+      "gain_30d_pct": 42.2,
+      "market_cap_m": 213.0,
+      "avg_volume_m": 1.29,
       "short_pct_float": 21.3,
-      "score": 26.14
+      "score": 25.5
     },
     {
       "symbol": "SES",
-      "price": 0.88,
-      "gain_30d_pct": 63.9,
-      "market_cap_m": 328.0,
-      "avg_volume_m": 26.42,
+      "price": 0.78,
+      "gain_30d_pct": 49.4,
+      "market_cap_m": 290.0,
+      "avg_volume_m": 27.51,
       "short_pct_float": 16.0,
-      "score": 22.42
+      "score": 20.96
     }
   ]
 }
