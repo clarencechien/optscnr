@@ -1,12 +1,12 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-10-09 19:03 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-10-10 10:50 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
 ---
 
-# 📬 台股週報 — 2026-10-09
+# 📬 台股週報 — 2026-10-10
 
 > 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。**沒有任何一行是買賣建議；曝險與部位由人管。**
 
@@ -100,19 +100,19 @@ _README 由 build_readme.py 於 2026-10-09 19:03 UTC 重組；兩區塊各為該
 
 ## 5. 下週日曆
 
-- 2026-10-10（1 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
-- 2026-11-10（32 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
+- 2026-10-10（0 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
+- 2026-11-10（31 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
 
 ## 6. 資料健康
 
 - ✅ 天氣台：最新 2026-10-08
 - ✅ DCA 帳本：最新 2026-10-08
-- ✅ delta_radar：最新 2026-10-09
+- ✅ delta_radar：最新 2026-10-10
 - ✅ tsmc_radar：最新 2026-10-09
 - ✅ 賭場 sector：最新 2026-10-09
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-09T19:03:20+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-10T10:50:26+00:00*
 
 ---
 
@@ -133,9 +133,9 @@ _README 由 build_readme.py 於 2026-10-09 19:03 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-10-09 09:37 UTC
+# Delta Radar (2308.TW) — 2026-10-10 10:50 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m1）｜模組色僅供參考 🟢 GREEN
 
 ## 前提 vs 價格：無背離（前提 YELLOW、價格 20 日 +8.9%）；PER 62.5，3 年分位 79 → 86
 
@@ -145,68 +145,20 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟡 YELLOW | capex_cut:6e / vr300_delay:19e(23m) / debt_financed_capex:13e(14m) / lc_psu_competition:0e |
+| M1 revenue_acceleration | 🟡 YELLOW | 2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月 |
 
-### M5 narrative_triggers — 🟡 YELLOW
+### M1 revenue_acceleration — 🟡 YELLOW
 ```json
 {
-  "events": {
-    "capex_cut": 6,
-    "vr300_delay": 19,
-    "debt_financed_capex": 13,
-    "lc_psu_competition": 0
-  },
-  "mentions": {
-    "capex_cut": 6,
-    "vr300_delay": 23,
-    "debt_financed_capex": 14,
-    "lc_psu_competition": 0
-  },
-  "scoring": {
-    "capex_cut": {
-      "events": 6,
-      "mentions": 6,
-      "gate": "zscore",
-      "z": 1.17,
-      "denial": false
-    },
-    "vr300_delay": {
-      "events": 19,
-      "mentions": 23,
-      "gate": "zscore",
-      "z": 3.33,
-      "denial": true
-    },
-    "debt_financed_capex": {
-      "events": 13,
-      "mentions": 14,
-      "gate": "zscore",
-      "z": -0.49,
-      "denial": false
-    },
-    "lc_psu_competition": {
-      "events": 0,
-      "mentions": 0,
-      "gate": "absolute",
-      "z": null,
-      "denial": false
-    }
-  }
+  "latest_month": "2026-08",
+  "latest_yoy_pct": 34.9,
+  "yoy_slope_pp_per_month": -2.9,
+  "consecutive_decel_months": 2
 }
 ```
-- [vr300_delay] 官方否認偵測 → 上限 🟡（爭議中）
-- [capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
-- [capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review
-- [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
-- [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
-- [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
-- [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
-- [debt_financed_capex] Oracle Courts Apollo and Goldman for AI Chip Financing as Debt Tops $169 Billion - TIKR.com
-- [debt_financed_capex] AI Companies’ Debt Now Equals 68% of New Long-Term U.S. Treasury Borrowing This Year, JPMorgan Finds - Yahoo Finance
-- [debt_financed_capex] Oracle’s Negative Free Cash Flow Exposes the Uncomfortable Truth About AI’s Financing Game - AOL.com
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**135/135**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**136/136**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）

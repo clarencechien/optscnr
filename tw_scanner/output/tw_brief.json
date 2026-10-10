@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-09T19:03:20+00:00",
- "today": "2026-10-09",
+ "generated_at": "2026-10-10T10:50:26+00:00",
+ "today": "2026-10-10",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-09）：本月預算已於 2026-10-05 動用（月末例行），本月不再行動。",
@@ -12,7 +12,7 @@
  "weather": {
   "status": "OK",
   "as_of": "2026-10-08",
-  "age_days": 1,
+  "age_days": 2,
   "regime": "RISK_ON",
   "emoji": "☀️",
   "score": -0.139,
@@ -96,7 +96,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-10-08",
-  "age_days": 1,
+  "age_days": 2,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -241,11 +241,11 @@
  "delta": {
   "status": "OK",
   "label": "2308",
-  "as_of": "2026-10-09",
+  "as_of": "2026-10-10",
   "age_days": 0,
-  "last_overall": "PARTIAL(m5)",
+  "last_overall": "PARTIAL(m1)",
   "last_modules_requested": [
-   "m5"
+   "m1"
   ],
   "full_overall": "YELLOW",
   "full_ts": "2026-10-08",
@@ -254,7 +254,7 @@
     "module": "M1 revenue_acceleration",
     "status": "YELLOW",
     "headline": "2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月",
-    "ts": "2026-10-08T10:55:52.781998+00:00"
+    "ts": "2026-10-10T10:50:25.007109+00:00"
    },
    {
     "module": "M2 bullwhip_health",
@@ -321,7 +321,7 @@
   "status": "OK",
   "label": "2330",
   "as_of": "2026-10-09",
-  "age_days": 0,
+  "age_days": 1,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -399,7 +399,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-10-09",
-  "age_days": 0,
+  "age_days": 1,
   "rows": [
    {
     "ticker": "3661",
@@ -642,12 +642,12 @@
   {
    "date": "2026-10-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 1
+   "days": 0
   },
   {
    "date": "2026-11-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 32
+   "days": 31
   }
  ],
  "checks": [
@@ -664,7 +664,7 @@
   {
    "level": "ok",
    "label": "delta_radar 正常",
-   "text": "delta_radar：最新 2026-10-09"
+   "text": "delta_radar：最新 2026-10-10"
   },
   {
    "level": "ok",
