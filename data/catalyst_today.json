@@ -1,47 +1,32 @@
 {
-  "updated_at": "2026-10-09T00:35:07.900218",
+  "updated_at": "2026-10-10T00:15:31.235349",
   "stats": {
     "total_items": 57,
-    "items_with_company": 14,
-    "items_with_catalyst": 9,
-    "items_both": 3
+    "items_with_company": 8,
+    "items_with_catalyst": 8,
+    "items_both": 1
   },
-  "count": 12,
+  "count": 9,
   "tickers": [
-    "SBUX",
+    "TSLA",
     "NVDA",
-    "AMZN",
-    "ORCL",
-    "CRWV",
-    "COST",
-    "MSFT",
     "MU",
-    "PLTR",
-    "META",
-    "GOOGL",
-    "BA"
+    "XYZ",
+    "AAPL",
+    "MSFT",
+    "SMCI",
+    "AMZN",
+    "QCOM"
   ],
   "details": [
     {
-      "symbol": "SBUX",
-      "score": 4.5,
+      "symbol": "TSLA",
+      "score": 2,
       "evidence": [
         {
-          "title": "Why a Starbucks takeover of Chipotle would — and wouldn't — make sense for both companies",
+          "title": "Tesla drops 'Full Self-Driving' brand name in Europe after regulator pushback",
           "catalysts": [
-            "takeover"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Feel like a pumpkin-spice burrito? Analysts try to wrap their heads around a possible Starbucks-Chipotle tie-up.",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Starbucks declines comment on Chipotle takeover report, says laser focused on turnaround",
-          "catalysts": [
-            "takeover"
+            "drops"
           ],
           "has_catalyst": true
         }
@@ -49,77 +34,15 @@
     },
     {
       "symbol": "NVDA",
-      "score": 2.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
+          "title": "Two massive trades just happened in Micron and Nvidia. What they could mean for chips",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Microsoft to sell $2,599 Surface Laptop Ultra containing Nvidia AI chip",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron, Nvidia and AI chip stocks fall as report on OpenAI’s revenue causes ‘undue concern’",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Amazon overhauls aging devices lineup with higher-priced Alexa tablet, dumping the budget Fire",
-          "catalysts": [
-            "upgraded"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COST",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Costco's sales resilience is giving Cramer a reason to feel better about the stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Microsoft to sell $2,599 Surface Laptop Ultra containing Nvidia AI chip",
+          "title": "Super Micro contractor pleads guilty in scheme to divert AI servers with Nvidia chips to China",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -130,51 +53,73 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron, Nvidia and AI chip stocks fall as report on OpenAI’s revenue causes ‘undue concern’",
+          "title": "Two massive trades just happened in Micron and Nvidia. What they could mean for chips",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why a longtime skeptic of Palantir’s stock is finally saying it’s time to buy",
+          "title": "Treasury's Bessent hires Trump's controversial former Fed board pick, Judy Shelton, as advisor ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta bans TikTok from advertising on its apps, Bloomberg News reports",
+          "title": "Is iPhone 18 demand cooling off? Here’s how deep Apple reportedly is cutting component orders.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Lawmakers raise alarm at Google plan to acquire Spirit Airlines data for AI models",
+          "title": "Microsoft is nearing a big milestone that solidifies its revival",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "SMCI",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Exclusive-Southwest Airlines weighs Boeing 787 for long-haul international push, sources say",
+          "title": "Super Micro contractor pleads guilty in scheme to divert AI servers with Nvidia chips to China",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Amazon shuffles Alexa leadership following high-end tablet release",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Qualcomm and Arm jury to return next week after deliberations in contract dispute case",
           "catalysts": [],
           "has_catalyst": false
         }
