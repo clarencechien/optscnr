@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-10-10 10:50 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-10-10 11:15 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -108,11 +108,11 @@ _README 由 build_readme.py 於 2026-10-10 10:50 UTC 重組；兩區塊各為該
 - ✅ 天氣台：最新 2026-10-08
 - ✅ DCA 帳本：最新 2026-10-08
 - ✅ delta_radar：最新 2026-10-10
-- ✅ tsmc_radar：最新 2026-10-09
+- ✅ tsmc_radar：最新 2026-10-10
 - ✅ 賭場 sector：最新 2026-10-09
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-10T10:50:26+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-10T11:15:36+00:00*
 
 ---
 
@@ -179,9 +179,9 @@ _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組�
 
 ---
 
-# TSMC Radar (2330.TW) — 2026-10-09 10:27 UTC
+# TSMC Radar (2330.TW) — 2026-10-10 11:15 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m1）｜模組色僅供參考 🟢 GREEN
 
 ## 前提 vs 價格：無背離（前提 GREEN、價格 20 日 +3.2%）；PER 29.6，3 年分位 77 → 83
 
@@ -191,82 +191,20 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟢 GREEN | export_controls_tariffs:14e / n2_arizona_ramp:9e(10m) / cowos_capacity:7e / geopolitics:4e / hyperscaler_capex:6e |
+| M1 revenue_acceleration | 🟢 GREEN | 2026-09 YoY +54.6%, slope -4.41pp/月, 連續減速 0 個月 |
 
-### M5 narrative_triggers — 🟢 GREEN
+### M1 revenue_acceleration — 🟢 GREEN
 ```json
 {
-  "events": {
-    "export_controls_tariffs": 14,
-    "n2_arizona_ramp": 9,
-    "cowos_capacity": 7,
-    "geopolitics": 4,
-    "hyperscaler_capex": 6
-  },
-  "mentions": {
-    "export_controls_tariffs": 14,
-    "n2_arizona_ramp": 10,
-    "cowos_capacity": 7,
-    "geopolitics": 4,
-    "hyperscaler_capex": 6
-  },
-  "scoring": {
-    "export_controls_tariffs": {
-      "events": 14,
-      "mentions": 14,
-      "gate": "zscore",
-      "z": -0.65,
-      "denial": false
-    },
-    "n2_arizona_ramp": {
-      "events": 9,
-      "mentions": 10,
-      "gate": "zscore",
-      "z": -1.0,
-      "denial": false
-    },
-    "cowos_capacity": {
-      "events": 7,
-      "mentions": 7,
-      "gate": "zscore",
-      "z": -1.93,
-      "denial": false
-    },
-    "geopolitics": {
-      "events": 4,
-      "mentions": 4,
-      "gate": "zscore",
-      "z": 0.77,
-      "denial": false
-    },
-    "hyperscaler_capex": {
-      "events": 6,
-      "mentions": 6,
-      "gate": "zscore",
-      "z": 1.11,
-      "denial": false
-    }
-  }
+  "latest_month": "2026-09",
+  "latest_yoy_pct": 54.6,
+  "yoy_slope_pp_per_month": -4.41,
+  "consecutive_decel_months": 0
 }
 ```
-- [export_controls_tariffs] Huawei chairman thanks the US for export restrictions on chips, says it supercharged China’s semiconductor industry — Wa
-- [export_controls_tariffs] Key facts: TSMC to Invest Up to $265B in Arizona; Reviews Export Controls - TradingView
-- [export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F
-- [n2_arizona_ramp] Samsung's 2nm Yield Approaches 60%, Leveraging Tesla Orders to Challenge TSMC - BigGo Finance
-- [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea
-- [n2_arizona_ramp] Tech News:Samsung 2nm Chip Yield Surpasses 60%, Closing in on TSMC - LinkedIn
-- [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech
-- [cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes
-- [cowos_capacity] TSMC Accelerates CoPoS Packaging to Replace CoWoS, as Glass Core Substrates Cut Costs 30% and Boost Wafer Utilization Pa
-- [geopolitics] China's president Xi Jinping calls Taiwan reunification "unstoppable" — military drills around the island escalate in ar
-- [geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India
-- [geopolitics] China Rings Taiwan With Live-Fire Drills, Tensions Spike - Modern Diplomacy
-- [hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
-- [hyperscaler_capex] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review
-- [hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **2** 筆；state 已有 outcomes 的 entry：**28/28**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**29/29**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---
