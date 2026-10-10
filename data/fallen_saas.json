@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T06:37:02.887780",
+  "updated_at": "2026-10-10T07:14:49.853589",
   "criteria": {
     "MIN_DRAWDOWN_FROM_52W_HIGH": 0.55,
     "MIN_REBOUND_FROM_52W_LOW": 1.03,
@@ -9,21 +9,7 @@
     "MIN_VOL_RATIO": 1.2,
     "MIN_AVG_VOLUME": 500000
   },
-  "count": 1,
-  "tickers": [
-    "PLNT"
-  ],
-  "details": [
-    {
-      "symbol": "PLNT",
-      "price": 42.41,
-      "high_52w": 114.26,
-      "low_52w": 37.03,
-      "drawdown_pct": 62.9,
-      "rebound_pct": 14.5,
-      "vol_ratio": 1.68,
-      "market_cap_b": 3.2,
-      "score": 30.73
-    }
-  ]
+  "count": 0,
+  "tickers": [],
+  "details": []
 }
