@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11T09:55:41+00:00",
+ "generated_at": "2026-10-11T11:03:10+00:00",
  "today": "2026-10-11",
  "cadence": "weekly",
  "tldr": [
@@ -243,9 +243,9 @@
   "label": "2308",
   "as_of": "2026-10-11",
   "age_days": 0,
-  "last_overall": "PARTIAL(m5)",
+  "last_overall": "PARTIAL(m1)",
   "last_modules_requested": [
-   "m5"
+   "m1"
   ],
   "full_overall": "YELLOW",
   "full_ts": "2026-10-08",
@@ -254,7 +254,7 @@
     "module": "M1 revenue_acceleration",
     "status": "YELLOW",
     "headline": "2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月",
-    "ts": "2026-10-10T10:50:25.007109+00:00"
+    "ts": "2026-10-11T11:03:08.470188+00:00"
    },
    {
     "module": "M2 bullwhip_health",
