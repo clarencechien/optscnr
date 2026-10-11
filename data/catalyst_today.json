@@ -1,81 +1,36 @@
 {
-  "updated_at": "2026-10-10T00:15:31.235349",
+  "updated_at": "2026-10-11T23:52:19.154032",
   "stats": {
     "total_items": 57,
-    "items_with_company": 8,
-    "items_with_catalyst": 8,
-    "items_both": 1
+    "items_with_company": 7,
+    "items_with_catalyst": 7,
+    "items_both": 0
   },
-  "count": 9,
+  "count": 5,
   "tickers": [
-    "TSLA",
-    "NVDA",
-    "MU",
-    "XYZ",
-    "AAPL",
-    "MSFT",
-    "SMCI",
     "AMZN",
-    "QCOM"
+    "MSFT",
+    "JPM",
+    "INTC",
+    "NVDA"
   ],
   "details": [
     {
-      "symbol": "TSLA",
-      "score": 2,
+      "symbol": "AMZN",
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Tesla drops 'Full Self-Driving' brand name in Europe after regulator pushback",
-          "catalysts": [
-            "drops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Two massive trades just happened in Micron and Nvidia. What they could mean for chips",
+          "title": "Amazon in talks to acquire AI startup Decart for $7 bln- WSJ",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Super Micro contractor pleads guilty in scheme to divert AI servers with Nvidia chips to China",
+          "title": "Amazon in talks to buy AI startup Decart for around $7 billion, WSJ reports",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Two massive trades just happened in Micron and Nvidia. What they could mean for chips",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Treasury's Bessent hires Trump's controversial former Fed board pick, Judy Shelton, as advisor ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Is iPhone 18 demand cooling off? Here’s how deep Apple reportedly is cutting component orders.",
+          "title": "Amazon in talks to acquire AI startup Decart for $7B: WSJ",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -86,47 +41,45 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft is nearing a big milestone that solidifies its revival",
+          "title": "Vance says Microsoft replaced laid-off workers with foreign hires. Here’s what the visa data shows",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "SMCI",
+      "symbol": "JPM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Super Micro contractor pleads guilty in scheme to divert AI servers with Nvidia chips to China",
+          "title": "JPMorgan makes bullish call in fixed income space, suggests it's a once in a generation opportunity",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "INTC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon shuffles Alexa leadership following high-end tablet release",
+          "title": "How Supreme Court justices are leaning in major 401(k) case over private funds and underperformance",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "QCOM",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Qualcomm and Arm jury to return next week after deliberations in contract dispute case",
+          "title": "Nvidia GPUs are everywhere. Here are the ways companies are accessing them",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "OpenAI (private)": 2
-  }
+  "watch_only": {}
 }
