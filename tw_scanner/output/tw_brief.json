@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-12T09:44:46+00:00",
+ "generated_at": "2026-10-12T10:40:43+00:00",
  "today": "2026-10-12",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-09）：本月預算已於 2026-10-05 動用（月末例行），本月不再行動。",
   "鋒面 ☀️ RISK_ON（本週由 NEUTRAL 轉入）。",
   "2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +5.8%）；PER 62.5，3 年分位 79 → 86",
-  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +3.2%）；PER 29.6，3 年分位 77 → 83",
+  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +3.0%）；PER 29.6，3 年分位 77 → 83",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.67%。"
  ],
  "weather": {
@@ -320,11 +320,11 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-10-11",
-  "age_days": 1,
-  "last_overall": "PARTIAL(m1)",
+  "as_of": "2026-10-12",
+  "age_days": 0,
+  "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
-   "m1"
+   "m5"
   ],
   "full_overall": "GREEN",
   "full_ts": "2026-10-08",
@@ -356,8 +356,8 @@
    {
     "module": "M5 narrative_triggers",
     "status": "GREEN",
-    "headline": "export_controls_tariffs:14e / n2_arizona_ramp:9e(10m) / cowos_capacity:5e / geopolitics:4e / hyperscaler_capex:6e",
-    "ts": "2026-10-11T09:55:38.533298+00:00"
+    "headline": "export_controls_tariffs:15e / n2_arizona_ramp:11e(12m) / cowos_capacity:0e / geopolitics:4e / hyperscaler_capex:0e",
+    "ts": "2026-10-12T10:40:41.295112+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -380,12 +380,12 @@
   ],
   "divergence": {
    "flag": null,
-   "text": "無背離（前提 GREEN、價格 20 日 +3.2%）；PER 29.6，3 年分位 77 → 83",
+   "text": "無背離（前提 GREEN、價格 20 日 +3.0%）；PER 29.6，3 年分位 77 → 83",
    "premise": "GREEN",
    "premise_ts": "2026-10-08T11:26:32.439434+00:00",
-   "ret_pct": 3.24,
+   "ret_pct": 3.04,
    "lookback_sessions": 20,
-   "as_of": "2026-10-08",
+   "as_of": "2026-10-12",
    "valuation": {
     "per": 29.56,
     "per_pct": 83.1,
@@ -664,7 +664,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-10-11"
+   "text": "tsmc_radar：最新 2026-10-12"
   },
   {
    "level": "ok",
