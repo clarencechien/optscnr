@@ -1,29 +1,17 @@
 {
-  "updated_at": "2026-10-10T01:15:28.403099",
-  "count": 2,
+  "updated_at": "2026-10-12T00:43:52.721135",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Starlink",
-      "ticker": "OTAI-UN",
+      "name": "Stellantis",
+      "ticker": "STLA",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Verizon posts worst day since 2002 as SpaceX U.S. network plans whack cell provider stocks",
-        "Venezuela president authorizes SpaceX’s Starlink to operate in the country"
-      ]
-    },
-    {
-      "name": "Delta Air Lines",
-      "ticker": "DAL",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Delta Air Lines cuts 2026 forecast on fuel surge, but CEO says demand is still strong",
-        "Delta Air Lines cuts 2026 forecast on fuel surge, but CEO says demand is still strong"
+        "Stellantis bets on small affordable EVs for European comeback",
+        "Stellantis unveils low-cost electric cars in bid to revive European sales"
       ]
     }
   ]

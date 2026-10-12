@@ -6,20 +6,6 @@
     "total_mentions": 21,
     "ticker": "NDAQ"
   },
-  "United Airlines": {
-    "first_seen": "2026-10-02",
-    "last_seen": "2026-10-03",
-    "consecutive_days": 2,
-    "total_mentions": 4,
-    "ticker": "UAL"
-  },
-  "Delta": {
-    "first_seen": "2026-10-02",
-    "last_seen": "2026-10-03",
-    "consecutive_days": 2,
-    "total_mentions": 4,
-    "ticker": "DAL"
-  },
   "Lennar": {
     "first_seen": "2026-10-05",
     "last_seen": "2026-10-05",
@@ -89,5 +75,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "DAL"
+  },
+  "Stellantis": {
+    "first_seen": "2026-10-12",
+    "last_seen": "2026-10-12",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "STLA"
   }
 }
