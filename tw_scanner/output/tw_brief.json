@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T12:29:38+00:00",
+ "generated_at": "2026-10-12T13:19:10+00:00",
  "today": "2026-10-12",
  "cadence": "weekly",
  "tldr": [
@@ -322,16 +322,9 @@
   "label": "2330",
   "as_of": "2026-10-12",
   "age_days": 0,
-  "last_overall": "GREEN",
+  "last_overall": "PARTIAL(m1)",
   "last_modules_requested": [
-   "m1",
-   "m2",
-   "m3",
-   "m4",
-   "m5",
-   "m6",
-   "m8",
-   "m9"
+   "m1"
   ],
   "full_overall": "GREEN",
   "full_ts": "2026-10-12",
@@ -340,7 +333,7 @@
     "module": "M1 revenue_acceleration",
     "status": "GREEN",
     "headline": "2026-09 YoY +54.6%, slope -4.41pp/月, 連續減速 0 個月",
-    "ts": "2026-10-12T12:08:06.331036+00:00"
+    "ts": "2026-10-12T13:19:07.570838+00:00"
    },
    {
     "module": "M2 bullwhip_health",
@@ -389,7 +382,7 @@
    "flag": null,
    "text": "無背離（前提 GREEN、價格 20 日 +3.0%）；PER 29.4，3 年分位 77 → 82",
    "premise": "GREEN",
-   "premise_ts": "2026-10-12T12:08:05.861472+00:00",
+   "premise_ts": "2026-10-12T12:08:06.331036+00:00",
    "ret_pct": 3.04,
    "lookback_sessions": 20,
    "as_of": "2026-10-12",

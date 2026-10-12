@@ -5335,5 +5335,58 @@
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
     }
+  },
+  {
+    "ts": "2026-10-12T13:19:07.570838+00:00",
+    "overall": "PARTIAL(m1)",
+    "modules_requested": [
+      "m1"
+    ],
+    "modules": [
+      {
+        "module": "M1 revenue_acceleration",
+        "status": "GREEN",
+        "headline": "2026-09 YoY +54.6%, slope -4.41pp/月, 連續減速 0 個月",
+        "metrics": {
+          "latest_month": "2026-09",
+          "latest_yoy_pct": 54.6,
+          "yoy_slope_pp_per_month": -4.41,
+          "consecutive_decel_months": 0
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 GREEN、價格 20 日 +3.0%）；PER 29.4，3 年分位 77 → 82",
+      "premise": "GREEN",
+      "premise_ts": "2026-10-12T12:08:06.331036+00:00",
+      "ret_pct": 3.04,
+      "lookback_sessions": 20,
+      "as_of": "2026-10-12",
+      "valuation": {
+        "per": 29.44,
+        "per_pct": 82.1,
+        "per_then": 28.57,
+        "per_pct_then": 76.7,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-10-12",
+      "benchmark": "0050",
+      "entry_close": 2540.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
   }
 ]
