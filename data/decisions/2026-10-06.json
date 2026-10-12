@@ -59,7 +59,16 @@
         "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
       },
       "note": "10/22 法說已由官方公告確認；9/30 向加州監管機關送出 10 年地下化計畫，金額 $16.6B",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 1.39,
+        "t10": null,
+        "t20": null,
+        "peak": 1.39,
+        "mature": false,
+        "verdict": "➖持平(峰1.4x/今1.4x)",
+        "filled_at": "2026-10-12"
+      }
     }
   ],
   "facts_proposed": [

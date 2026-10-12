@@ -63,11 +63,11 @@
       "outcome": {
         "t5": 0.47,
         "t10": 0.42,
-        "t20": null,
+        "t20": 0.22,
         "peak": 0.47,
-        "mature": false,
+        "mature": true,
         "verdict": "❌沒噴(峰0.5x)",
-        "filled_at": "2026-10-09"
+        "filled_at": "2026-10-12"
       }
     }
   ],

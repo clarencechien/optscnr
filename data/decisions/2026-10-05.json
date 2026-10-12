@@ -59,7 +59,16 @@
         "source": "https://investor.pgecorp.com/news-events/press-releases/press-release-details/2026/PGE-Corporation-Schedules-Third-Quarter-2026-Earnings-Release-and-Conference-Call/default.aspx"
       },
       "note": "公司公告確認Q3法說10/22；野火責任改革案已擱置，9/30遞出$16.6B地下化計畫",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 1.5,
+        "t10": null,
+        "t20": null,
+        "peak": 1.5,
+        "mature": false,
+        "verdict": "➖持平(峰1.5x/今1.5x)",
+        "filled_at": "2026-10-12"
+      }
     }
   ],
   "facts_proposed": [
