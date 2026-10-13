@@ -1,17 +1,41 @@
 {
-  "updated_at": "2026-10-12T00:43:52.721135",
-  "count": 1,
+  "updated_at": "2026-10-13T02:43:08.910803",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "Stellantis",
-      "ticker": "STLA",
-      "mentions_today": 2,
-      "total_mentions": 2,
+      "name": "Six Flags",
+      "ticker": "FUN",
+      "mentions_today": 4,
+      "total_mentions": 4,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Stellantis bets on small affordable EVs for European comeback",
-        "Stellantis unveils low-cost electric cars in bid to revive European sales"
+        "Six Flags shares plunge after-hours following report of deadly roller coaster incident",
+        "Six Flags shares plunge after-hours following report of deadly roller coaster incident"
+      ]
+    },
+    {
+      "name": "Georgia",
+      "ticker": "GPJA",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Six Flags shares plunge after-hours following report of deadly roller coaster incident",
+        "Six Flags shares slide after fatal roller coaster incident in Georgia"
+      ]
+    },
+    {
+      "name": "Delta",
+      "ticker": "DAL",
+      "mentions_today": 3,
+      "total_mentions": 3,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "FAA warns U.S. airlines of safety risks over Saudi Arabia after attacks",
+        "Delta delays debut of Saudi Arabia service until March after Riyadh airport attacks"
       ]
     }
   ]

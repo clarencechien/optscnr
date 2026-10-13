@@ -6,20 +6,6 @@
     "total_mentions": 21,
     "ticker": "NDAQ"
   },
-  "Lennar": {
-    "first_seen": "2026-10-05",
-    "last_seen": "2026-10-05",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "LEN-B"
-  },
-  "Austin": {
-    "first_seen": "2026-10-05",
-    "last_seen": "2026-10-05",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "AUST"
-  },
   "Beijing": {
     "first_seen": "2026-10-06",
     "last_seen": "2026-10-06",
@@ -82,5 +68,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "STLA"
+  },
+  "Six Flags": {
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "consecutive_days": 1,
+    "total_mentions": 4,
+    "ticker": "FUN"
+  },
+  "Georgia": {
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "GPJA"
+  },
+  "Delta": {
+    "first_seen": "2026-10-13",
+    "last_seen": "2026-10-13",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "DAL"
   }
 }
