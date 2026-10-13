@@ -10584,8 +10584,8 @@
       "t5_excess_pct": 1.61,
       "t10_ret_pct": 14.03,
       "t10_excess_pct": 11.05,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 5.97,
+      "t20_excess_pct": 2.99
     }
   },
   {
@@ -10617,8 +10617,8 @@
       "t5_excess_pct": 1.61,
       "t10_ret_pct": 14.03,
       "t10_excess_pct": 11.05,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": 5.97,
+      "t20_excess_pct": 2.99
     }
   },
   {
@@ -12615,8 +12615,8 @@
       "entry_close": 1910.0,
       "t5_ret_pct": 4.97,
       "t5_excess_pct": 1.81,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -7.07,
+      "t10_excess_pct": -7.07,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -12877,8 +12877,8 @@
       "entry_close": 1910.0,
       "t5_ret_pct": 4.97,
       "t5_excess_pct": 1.81,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -7.07,
+      "t10_excess_pct": -7.07,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -13941,8 +13941,8 @@
       "entry_date": "2026-10-04",
       "benchmark": "0050",
       "entry_close": 2005.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -11.47,
+      "t5_excess_pct": -8.41,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -14039,8 +14039,8 @@
       "entry_date": "2026-10-05",
       "benchmark": "0050",
       "entry_close": 2005.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -11.47,
+      "t5_excess_pct": -8.41,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -14301,8 +14301,8 @@
       "entry_date": "2026-10-05",
       "benchmark": "0050",
       "entry_close": 2005.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -11.47,
+      "t5_excess_pct": -8.41,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -15555,6 +15555,104 @@
       "entry_date": "2026-10-12",
       "benchmark": "0050",
       "entry_close": 1900.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-10-13T09:44:05.990253+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:5e(6m) / vr300_delay:18e(21m) / debt_financed_capex:15e(16m) / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 5,
+            "vr300_delay": 18,
+            "debt_financed_capex": 15,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 6,
+            "vr300_delay": 21,
+            "debt_financed_capex": 16,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 5,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": 0.06,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 18,
+              "mentions": 21,
+              "gate": "zscore",
+              "z": 0.37,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 15,
+              "mentions": 16,
+              "gate": "zscore",
+              "z": 0.45,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[debt_financed_capex] Broadcom Vs. Oracle: Whose AI Chip Debt Financing Scheme Looks Worse? - 24/7 Wall St.",
+          "[debt_financed_capex] Oracle Courts Apollo and Goldman for AI Chip Financing as Debt Tops $169 Billion - TIKR.com",
+          "[debt_financed_capex] Oracle’s Negative Free Cash Flow Exposes the Uncomfortable Truth About AI’s Financing Game - AOL.com"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 YELLOW、價格 20 日 +6.0%）；PER 60.5，3 年分位 79 → 83",
+      "premise": "YELLOW",
+      "premise_ts": "2026-10-12T11:20:05.555342+00:00",
+      "ret_pct": 5.97,
+      "lookback_sessions": 20,
+      "as_of": "2026-10-13",
+      "valuation": {
+        "per": 60.47,
+        "per_pct": 83.2,
+        "per_then": 57.13,
+        "per_pct_then": 79.2,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-10-13",
+      "benchmark": "0050",
+      "entry_close": 1775.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,

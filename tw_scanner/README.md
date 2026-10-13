@@ -1,12 +1,12 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-10-12 21:53 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-10-13 09:44 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
 ---
 
-# 📬 台股週報 — 2026-10-12
+# 📬 台股週報 — 2026-10-13
 
 > 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。**沒有任何一行是買賣建議；曝險與部位由人管。**
 
@@ -14,7 +14,7 @@ _README 由 build_readme.py 於 2026-10-12 21:53 UTC 重組；兩區塊各為該
 
 - 週檢查（2026-10-16）：本月預算已於 2026-10-12 動用（月末例行），本月不再行動。
 - 鋒面 ☀️ RISK_ON（本週由 NEUTRAL 轉入）。
-- 2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +5.8%）；PER 60.5，3 年分位 79 → 83
+- 2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +6.0%）；PER 60.5，3 年分位 79 → 83
 - 2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +3.0%）；PER 29.4，3 年分位 77 → 82
 - 投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.67%。
 
@@ -48,16 +48,16 @@ _README 由 build_readme.py 於 2026-10-12 21:53 UTC 重組；兩區塊各為該
 
 ### 2308
 - 前提（最近全模組 2026-10-12）：🟡 YELLOW
-- 無背離（前提 YELLOW、價格 20 日 +5.8%）；PER 60.5，3 年分位 79 → 83
+- 無背離（前提 YELLOW、價格 20 日 +6.0%）；PER 60.5，3 年分位 79 → 83
   - 🟡 M1 revenue_acceleration：2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32
   - 🟡 M3 thai_shadow：DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8%
   - 🟢 M4 customs_flow：US 進口 HS850440 (TH+TW) 近3月 $1366.7M, YoY +22.4%
-  - 🟢 M5 narrative_triggers：capex_cut:0e / vr300_delay:0e / debt_financed_capex:0e / lc_psu_competition:0e
+  - 🟢 M5 narrative_triggers：capex_cut:5e(6m) / vr300_delay:18e(21m) / debt_financed_capex:15e(16m) / lc_psu_competition:0e
   - 🟡 M6 peer_divergence：cooling:3324領先+23pp
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 60.5（3 年第 83 百分位；20 日前第 79）；觀察
-- 回填樣本 99 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
+- 回填樣本 101 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
 
 ### 2330
 - 前提（最近全模組 2026-10-12）：🟢 GREEN
@@ -100,18 +100,18 @@ _README 由 build_readme.py 於 2026-10-12 21:53 UTC 重組；兩區塊各為該
 
 ## 5. 下週日曆
 
-- 2026-11-10（29 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
+- 2026-11-10（28 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
 
 ## 6. 資料健康
 
 - ✅ 天氣台：最新 2026-10-12
 - ✅ DCA 帳本：最新 2026-10-12
-- ✅ delta_radar：最新 2026-10-12
+- ✅ delta_radar：最新 2026-10-13
 - ✅ tsmc_radar：最新 2026-10-12
 - ✅ 賭場 sector：最新 2026-10-12
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-12T21:53:43+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-13T09:44:07+00:00*
 
 ---
 
@@ -132,11 +132,11 @@ _README 由 build_readme.py 於 2026-10-12 21:53 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-10-12 12:29 UTC
+# Delta Radar (2308.TW) — 2026-10-13 09:44 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m1）｜模組色僅供參考 🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
-## 前提 vs 價格：無背離（前提 YELLOW、價格 20 日 +5.8%）；PER 60.5，3 年分位 79 → 83
+## 前提 vs 價格：無背離（前提 YELLOW、價格 20 日 +6.0%）；PER 60.5，3 年分位 79 → 83
 
 GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、
 敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。
@@ -144,32 +144,79 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M1 revenue_acceleration | 🟡 YELLOW | 2026-08 YoY +34.9%, slope -2.90pp/月, 連續減速 2 個月 |
+| M5 narrative_triggers | 🟢 GREEN | capex_cut:5e(6m) / vr300_delay:18e(21m) / debt_financed_capex:15e(16m) / lc_psu_competition:0e |
 
-### M1 revenue_acceleration — 🟡 YELLOW
+### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
-  "latest_month": "2026-08",
-  "latest_yoy_pct": 34.9,
-  "yoy_slope_pp_per_month": -2.9,
-  "consecutive_decel_months": 2
+  "events": {
+    "capex_cut": 5,
+    "vr300_delay": 18,
+    "debt_financed_capex": 15,
+    "lc_psu_competition": 0
+  },
+  "mentions": {
+    "capex_cut": 6,
+    "vr300_delay": 21,
+    "debt_financed_capex": 16,
+    "lc_psu_competition": 0
+  },
+  "scoring": {
+    "capex_cut": {
+      "events": 5,
+      "mentions": 6,
+      "gate": "zscore",
+      "z": 0.06,
+      "denial": false
+    },
+    "vr300_delay": {
+      "events": 18,
+      "mentions": 21,
+      "gate": "zscore",
+      "z": 0.37,
+      "denial": true
+    },
+    "debt_financed_capex": {
+      "events": 15,
+      "mentions": 16,
+      "gate": "zscore",
+      "z": 0.45,
+      "denial": false
+    },
+    "lc_psu_competition": {
+      "events": 0,
+      "mentions": 0,
+      "gate": "absolute",
+      "z": null,
+      "denial": false
+    }
+  }
 }
 ```
+- [capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
+- [capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
+- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
+- [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
+- [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
+- [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
+- [debt_financed_capex] Broadcom Vs. Oracle: Whose AI Chip Debt Financing Scheme Looks Worse? - 24/7 Wall St.
+- [debt_financed_capex] Oracle Courts Apollo and Goldman for AI Chip Financing as Debt Tops $169 Billion - TIKR.com
+- [debt_financed_capex] Oracle’s Negative Free Cash Flow Exposes the Uncomfortable Truth About AI’s Financing Game - AOL.com
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**141/141**
+- 本次回填 **8** 筆；state 已有 outcomes 的 entry：**142/142**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）
 | 模組 | GREEN n / T+20 超額 | YELLOW+RED n / 超額 | 狀態翻轉 | 判準 |
 |---|---|---|---|---|
-| M1 | 47 / -7.38 | 0 / — | 1 | 樣本不足（缺一側 cohort） |
-| M2 | 18 / -7.09 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向對 |
-| M3 | 27 / -10.89 | 13 / -1.15 | 1 | 無法判定（狀態翻轉 1 次 < 3；cohort 等於兩段日曆時間）；方向反 |
-| M4 | 31 / -6.59 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M5 | 37 / -1.87 | 50 / -9.29 | 47 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
-| M6 | 0 / — | 23 / -2.73 | 2 | 樣本不足（缺一側 cohort） |
-| M8 | 23 / -2.73 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
+| M1 | 47 / -7.38 | 2 / +2.99 | 1 | 無法判定（狀態翻轉 1 次 < 3；cohort 等於兩段日曆時間）；方向反 |
+| M2 | 19 / -6.56 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向對 |
+| M3 | 27 / -10.89 | 14 / -0.86 | 1 | 無法判定（狀態翻轉 1 次 < 3；cohort 等於兩段日曆時間）；方向反 |
+| M4 | 32 / -6.29 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
+| M5 | 38 / -1.74 | 50 / -9.29 | 47 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
+| M6 | 0 / — | 24 / -2.50 | 2 | 樣本不足（缺一側 cohort） |
+| M8 | 24 / -2.50 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 
 _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組，cohort 比較等於比兩段日曆時間。翻轉 < 3 次一律「無法判定」。_
 
