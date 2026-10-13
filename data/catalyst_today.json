@@ -1,127 +1,115 @@
 {
-  "updated_at": "2026-10-13T02:12:06.013422",
+  "updated_at": "2026-10-13T23:49:14.817084",
   "stats": {
     "total_items": 57,
     "items_with_company": 12,
-    "items_with_catalyst": 8,
+    "items_with_catalyst": 6,
     "items_both": 1
   },
-  "count": 12,
+  "count": 11,
   "tickers": [
-    "SBUX",
+    "MU",
+    "BAC",
+    "AAPL",
     "JPM",
-    "MSFT",
-    "NVDA",
-    "TSLA",
-    "META",
-    "GM",
-    "IONQ",
+    "DELL",
+    "WMT",
+    "ASTS",
     "AVGO",
-    "INTC",
-    "AMD",
-    "MU"
+    "AMZN",
+    "GOOGL",
+    "DIS"
   ],
   "details": [
     {
-      "symbol": "SBUX",
-      "score": 2,
+      "symbol": "MU",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Starbucks says it is not buying Chipotle after takeover speculation",
+          "title": "Micron sinks, other memory-linked names dip for a second day",
           "catalysts": [
-            "takeover"
+            "sinks"
           ],
           "has_catalyst": true
+        },
+        {
+          "title": "Micron’s stock extends declines as China competition heats up",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Bank of America fined $1.2 billion over money-laundering violations",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Why is Bank of America stock sliding today?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Apple releases HomeView smart home hub with screen as showcase for Siri AI",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple’s HomeView brings personalized Siri to smart home, takes on Amazon and Google",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "JPM",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Why older Americans' wealth may be helping keep consumer spending strong",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "JPMorgan options market prices in a 2.8% post-earnings move",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft hits a big milestone that solidifies its revival",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia and AMD shares fall as new AI announcements fail to re-energize investors",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Elon Musk gives $276 million to Republican groups, becomes biggest known 2026 midterm donor",
+          "title": "JPMorgan Chase blocks outside AI agents like Muse, Instinct from directly accessing accounts",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "DELL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Meta debuts Muse Wonder AI model in latest test of users' willingness to pay",
+          "title": "Michael Dell says AI needs safeguards and controls, and government has a role to play",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GM",
+      "symbol": "WMT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "GM CEO: We're making leaps and bounds toward 'eyes-off, hands-off' driving",
+          "title": "Walmart to cover some GLP-1s, inhalers and insulin for employees at no cost as it expands benefits",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "IONQ",
+      "symbol": "ASTS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion",
+          "title": "AST SpaceMobile’s stock is feeling the heat from SpaceX’s wireless plans",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -132,40 +120,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
+          "title": "Was Broadcom CEO bullish or bearish on AI? ‘Gamblers’ comment creates storm.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
+          "title": "Apple’s HomeView brings personalized Siri to smart home, takes on Amazon and Google",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia and AMD shares fall as new AI announcements fail to re-energize investors",
+          "title": "Apple’s HomeView brings personalized Siri to smart home, takes on Amazon and Google",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why is Micron Technology stock sliding today?",
+          "title": "Character.AI files for bankruptcy, to sell some assets to Disney for $20 million",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -173,6 +161,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1
+    "Anthropic (private)": 3,
+    "OpenAI (private)": 2
   }
 }
