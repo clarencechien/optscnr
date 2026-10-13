@@ -2039,9 +2039,9 @@
       "t5_ret_pct": 4.04,
       "t5_excess_pct": 0.88,
       "t5_excess_smh_pct": 1.16,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
-      "t10_excess_smh_pct": null,
+      "t10_ret_pct": 0.61,
+      "t10_excess_pct": 0.61,
+      "t10_excess_smh_pct": -0.51,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -2311,9 +2311,9 @@
       "t5_ret_pct": 4.04,
       "t5_excess_pct": 0.88,
       "t5_excess_smh_pct": 1.16,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
-      "t10_excess_smh_pct": null,
+      "t10_ret_pct": 0.61,
+      "t10_excess_pct": 0.61,
+      "t10_excess_smh_pct": -0.51,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -3780,9 +3780,9 @@
       "entry_date": "2026-10-03",
       "benchmark": "0050",
       "entry_close": 2575.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
-      "t5_excess_smh_pct": null,
+      "t5_ret_pct": -3.3,
+      "t5_excess_pct": -0.24,
+      "t5_excess_smh_pct": 3.47,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -3896,9 +3896,9 @@
       "entry_date": "2026-10-04",
       "benchmark": "0050",
       "entry_close": 2575.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
-      "t5_excess_smh_pct": null,
+      "t5_ret_pct": -3.3,
+      "t5_excess_pct": -0.24,
+      "t5_excess_smh_pct": 3.47,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -4012,9 +4012,9 @@
       "entry_date": "2026-10-05",
       "benchmark": "0050",
       "entry_close": 2575.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
-      "t5_excess_smh_pct": null,
+      "t5_ret_pct": -3.3,
+      "t5_excess_pct": -0.24,
+      "t5_excess_smh_pct": 3.47,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -4217,9 +4217,9 @@
       "entry_date": "2026-10-05",
       "benchmark": "0050",
       "entry_close": 2575.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
-      "t5_excess_smh_pct": null,
+      "t5_ret_pct": -3.3,
+      "t5_excess_pct": -0.24,
+      "t5_excess_smh_pct": 3.47,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -5378,6 +5378,122 @@
       "entry_date": "2026-10-12",
       "benchmark": "0050",
       "entry_close": 2540.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
+  },
+  {
+    "ts": "2026-10-13T10:28:13.735889+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "RED",
+        "headline": "export_controls_tariffs:16e / n2_arizona_ramp:11e(12m) / cowos_capacity:6e / geopolitics:3e / hyperscaler_capex:5e(6m)",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 16,
+            "n2_arizona_ramp": 11,
+            "cowos_capacity": 6,
+            "geopolitics": 3,
+            "hyperscaler_capex": 5
+          },
+          "mentions": {
+            "export_controls_tariffs": 16,
+            "n2_arizona_ramp": 12,
+            "cowos_capacity": 6,
+            "geopolitics": 3,
+            "hyperscaler_capex": 6
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 16,
+              "mentions": 16,
+              "gate": "zscore",
+              "z": 4.91,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 11,
+              "mentions": 12,
+              "gate": "zscore",
+              "z": 1.46,
+              "denial": false
+            },
+            "cowos_capacity": {
+              "events": 6,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": 0.05,
+              "denial": false
+            },
+            "geopolitics": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -1.07,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 5,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": 0.13,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F",
+          "[export_controls_tariffs] Huawei chairman thanks the US for export restrictions on chips, says it supercharged China’s semiconductor industry — Wa",
+          "[export_controls_tariffs] Key facts: TSMC to Invest Up to $265B in Arizona; Reviews Export Controls - TradingView",
+          "[n2_arizona_ramp] Samsung's 2nm Yield Approaches 60%, Leveraging Tesla Orders to Challenge TSMC - BigGo Finance",
+          "[n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea",
+          "[n2_arizona_ramp] Tech News:Samsung 2nm Chip Yield Surpasses 60%, Closing in on TSMC - LinkedIn",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes",
+          "[cowos_capacity] AMD backs Taiwan EFB packaging chain to cut CoWoS reliance - digitimes",
+          "[geopolitics] China's president Xi Jinping calls Taiwan reunification \"unstoppable\" — military drills around the island escalate in ar",
+          "[geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India",
+          "[geopolitics] China’s planned military exercises near Taiwan may have another target: Japan - The Japan Times",
+          "[hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[hyperscaler_capex] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St."
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 GREEN、價格 20 日 +1.6%）；PER 29.4，3 年分位 77 → 82",
+      "premise": "GREEN",
+      "premise_ts": "2026-10-12T12:08:06.331036+00:00",
+      "ret_pct": 1.63,
+      "lookback_sessions": 20,
+      "as_of": "2026-10-13",
+      "valuation": {
+        "per": 29.44,
+        "per_pct": 82.1,
+        "per_then": 28.57,
+        "per_pct_then": 76.7,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-10-13",
+      "benchmark": "0050",
+      "entry_close": 2490.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t5_excess_smh_pct": null,

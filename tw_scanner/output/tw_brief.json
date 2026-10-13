@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-13T09:44:07+00:00",
+ "generated_at": "2026-10-13T10:28:16+00:00",
  "today": "2026-10-13",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-16）：本月預算已於 2026-10-12 動用（月末例行），本月不再行動。",
   "鋒面 ☀️ RISK_ON（本週由 NEUTRAL 轉入）。",
   "2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +6.0%）；PER 60.5，3 年分位 79 → 83",
-  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +3.0%）；PER 29.4，3 年分位 77 → 82",
+  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +1.6%）；PER 29.4，3 年分位 77 → 82",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.67%。"
  ],
  "weather": {
@@ -320,11 +320,11 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-10-12",
-  "age_days": 1,
-  "last_overall": "PARTIAL(m1)",
+  "as_of": "2026-10-13",
+  "age_days": 0,
+  "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
-   "m1"
+   "m5"
   ],
   "full_overall": "GREEN",
   "full_ts": "2026-10-12",
@@ -355,9 +355,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "YELLOW",
-    "headline": "export_controls_tariffs:14e / n2_arizona_ramp:11e(12m) / cowos_capacity:6e / geopolitics:4e / hyperscaler_capex:5e",
-    "ts": "2026-10-12T12:08:06.331036+00:00"
+    "status": "RED",
+    "headline": "export_controls_tariffs:16e / n2_arizona_ramp:11e(12m) / cowos_capacity:6e / geopolitics:3e / hyperscaler_capex:5e(6m)",
+    "ts": "2026-10-13T10:28:13.735889+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -380,12 +380,12 @@
   ],
   "divergence": {
    "flag": null,
-   "text": "無背離（前提 GREEN、價格 20 日 +3.0%）；PER 29.4，3 年分位 77 → 82",
+   "text": "無背離（前提 GREEN、價格 20 日 +1.6%）；PER 29.4，3 年分位 77 → 82",
    "premise": "GREEN",
    "premise_ts": "2026-10-12T12:08:06.331036+00:00",
-   "ret_pct": 3.04,
+   "ret_pct": 1.63,
    "lookback_sessions": 20,
-   "as_of": "2026-10-12",
+   "as_of": "2026-10-13",
    "valuation": {
     "per": 29.44,
     "per_pct": 82.1,
@@ -664,7 +664,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-10-12"
+   "text": "tsmc_radar：最新 2026-10-13"
   },
   {
    "level": "ok",

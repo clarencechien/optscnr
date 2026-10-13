@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-10-13 09:44 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-10-13 10:28 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -15,7 +15,7 @@ _README 由 build_readme.py 於 2026-10-13 09:44 UTC 重組；兩區塊各為該
 - 週檢查（2026-10-16）：本月預算已於 2026-10-12 動用（月末例行），本月不再行動。
 - 鋒面 ☀️ RISK_ON（本週由 NEUTRAL 轉入）。
 - 2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +6.0%）；PER 60.5，3 年分位 79 → 83
-- 2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +3.0%）；PER 29.4，3 年分位 77 → 82
+- 2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +1.6%）；PER 29.4，3 年分位 77 → 82
 - 投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.67%。
 
 ## 1. 本期機械指示（DCA 規則影子帳本）
@@ -61,12 +61,12 @@ _README 由 build_readme.py 於 2026-10-13 09:44 UTC 重組；兩區塊各為該
 
 ### 2330
 - 前提（最近全模組 2026-10-12）：🟢 GREEN
-- 無背離（前提 GREEN、價格 20 日 +3.0%）；PER 29.4，3 年分位 77 → 82
+- 無背離（前提 GREEN、價格 20 日 +1.6%）；PER 29.4，3 年分位 77 → 82
   - 🟢 M1 revenue_acceleration：2026-09 YoY +54.6%, slope -4.41pp/月, 連續減速 0 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9
   - 🟢 M3 adr_premium：ADR 溢價 +13.9%（1 年第 22 百分位；觀察）
   - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3675.7M, YoY +60.6%
-  - 🟡 M5 narrative_triggers：export_controls_tariffs:14e / n2_arizona_ramp:11e(12m) / cowos_capacity:6e / geopolitics:4e / hyperscaler_capex:5e
+  - 🔴 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:11e(12m) / cowos_capacity:6e / geopolitics:3e / hyperscaler_capex:5e(6m)
   - 🟢 M6 peer_divergence：cohort 內 2330 未被對手顯著反超（離散在容忍帶內）
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 29.4（3 年第 82 百分位；20 日前第 77）；觀察
@@ -107,11 +107,11 @@ _README 由 build_readme.py 於 2026-10-13 09:44 UTC 重組；兩區塊各為該
 - ✅ 天氣台：最新 2026-10-12
 - ✅ DCA 帳本：最新 2026-10-12
 - ✅ delta_radar：最新 2026-10-13
-- ✅ tsmc_radar：最新 2026-10-12
+- ✅ tsmc_radar：最新 2026-10-13
 - ✅ 賭場 sector：最新 2026-10-12
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-13T09:44:07+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-13T10:28:16+00:00*
 
 ---
 
@@ -225,11 +225,11 @@ _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組�
 
 ---
 
-# TSMC Radar (2330.TW) — 2026-10-12 13:19 UTC
+# TSMC Radar (2330.TW) — 2026-10-13 10:28 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m1）｜模組色僅供參考 🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟡 YELLOW
 
-## 前提 vs 價格：無背離（前提 GREEN、價格 20 日 +3.0%）；PER 29.4，3 年分位 77 → 82
+## 前提 vs 價格：無背離（前提 GREEN、價格 20 日 +1.6%）；PER 29.4，3 年分位 77 → 82
 
 GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、
 敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。
@@ -237,20 +237,82 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M1 revenue_acceleration | 🟢 GREEN | 2026-09 YoY +54.6%, slope -4.41pp/月, 連續減速 0 個月 |
+| M5 narrative_triggers | 🔴 RED | export_controls_tariffs:16e / n2_arizona_ramp:11e(12m) / cowos_capacity:6e / geopolitics:3e / hyperscaler_capex:5e(6m) |
 
-### M1 revenue_acceleration — 🟢 GREEN
+### M5 narrative_triggers — 🔴 RED
 ```json
 {
-  "latest_month": "2026-09",
-  "latest_yoy_pct": 54.6,
-  "yoy_slope_pp_per_month": -4.41,
-  "consecutive_decel_months": 0
+  "events": {
+    "export_controls_tariffs": 16,
+    "n2_arizona_ramp": 11,
+    "cowos_capacity": 6,
+    "geopolitics": 3,
+    "hyperscaler_capex": 5
+  },
+  "mentions": {
+    "export_controls_tariffs": 16,
+    "n2_arizona_ramp": 12,
+    "cowos_capacity": 6,
+    "geopolitics": 3,
+    "hyperscaler_capex": 6
+  },
+  "scoring": {
+    "export_controls_tariffs": {
+      "events": 16,
+      "mentions": 16,
+      "gate": "zscore",
+      "z": 4.91,
+      "denial": false
+    },
+    "n2_arizona_ramp": {
+      "events": 11,
+      "mentions": 12,
+      "gate": "zscore",
+      "z": 1.46,
+      "denial": false
+    },
+    "cowos_capacity": {
+      "events": 6,
+      "mentions": 6,
+      "gate": "zscore",
+      "z": 0.05,
+      "denial": false
+    },
+    "geopolitics": {
+      "events": 3,
+      "mentions": 3,
+      "gate": "zscore",
+      "z": -1.07,
+      "denial": false
+    },
+    "hyperscaler_capex": {
+      "events": 5,
+      "mentions": 6,
+      "gate": "zscore",
+      "z": 0.13,
+      "denial": false
+    }
+  }
 }
 ```
+- [export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F
+- [export_controls_tariffs] Huawei chairman thanks the US for export restrictions on chips, says it supercharged China’s semiconductor industry — Wa
+- [export_controls_tariffs] Key facts: TSMC to Invest Up to $265B in Arizona; Reviews Export Controls - TradingView
+- [n2_arizona_ramp] Samsung's 2nm Yield Approaches 60%, Leveraging Tesla Orders to Challenge TSMC - BigGo Finance
+- [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea
+- [n2_arizona_ramp] Tech News:Samsung 2nm Chip Yield Surpasses 60%, Closing in on TSMC - LinkedIn
+- [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech
+- [cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes
+- [cowos_capacity] AMD backs Taiwan EFB packaging chain to cut CoWoS reliance - digitimes
+- [geopolitics] China's president Xi Jinping calls Taiwan reunification "unstoppable" — military drills around the island escalate in ar
+- [geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India
+- [geopolitics] China’s planned military exercises near Taiwan may have another target: Japan - The Japan Times
+- [hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
+- [hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
+- [hyperscaler_capex] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**34/34**
+- 本次回填 **7** 筆；state 已有 outcomes 的 entry：**35/35**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ---
