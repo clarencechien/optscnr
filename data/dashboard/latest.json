@@ -1,8 +1,72 @@
 {
   "market_date": "2026-10-12",
-  "generated_at": "2026-10-12T23:05:46Z",
+  "generated_at": "2026-10-13T03:04:33Z",
   "prereg_date": "2026-09-08",
-  "n_candidates": 0,
-  "n_report_rows": 2217,
-  "candidates": []
+  "n_candidates": 1,
+  "n_report_rows": 2355,
+  "candidates": [
+    {
+      "signal_id": "2026-10-12_NVDA_2026-11-20_275.0",
+      "ticker": "NVDA",
+      "expiry": "2026-11-20",
+      "strike": 275.0,
+      "dte": 39,
+      "spot": 226.32000732421875,
+      "otm_pct": 21.5,
+      "last": 0.52,
+      "bid": 0.52,
+      "ask": 0.53,
+      "iv": 35.2,
+      "oi": 35000,
+      "oi_d7": 725,
+      "oi_delta_status": "confirmed",
+      "volume": 3641,
+      "score": 8,
+      "tags": "🚀點火(7.2x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(11-17)",
+      "features": [
+        "ignition",
+        "cigar_butt",
+        "mass_grave"
+      ],
+      "warnings": [],
+      "events": [
+        "📅覆蓋財報(11-17)"
+      ],
+      "recent_spots": [
+        {
+          "date": "2026-10-05",
+          "spot": 238.9
+        },
+        {
+          "date": "2026-10-06",
+          "spot": 239.24
+        },
+        {
+          "date": "2026-10-07",
+          "spot": 237.47
+        },
+        {
+          "date": "2026-10-08",
+          "spot": 230.48
+        },
+        {
+          "date": "2026-10-09",
+          "spot": 229.28
+        },
+        {
+          "date": "2026-10-12",
+          "spot": 226.32
+        }
+      ],
+      "tier": "lottery",
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      }
+    }
+  ]
 }

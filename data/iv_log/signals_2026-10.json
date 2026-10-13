@@ -30271,5 +30271,111 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-10-12_NVDA_2026-11-20_275.0",
+    "snapshot_date": "2026-10-12",
+    "ticker": "NVDA",
+    "expiry": "2026-11-20",
+    "strike": 275.0,
+    "score": 8,
+    "tags": "🚀點火(7.2x) 🚬菸屁股 🔥萬人塚 📅覆蓋財報(11-17)",
+    "entry_price": 0.52,
+    "entry_iv": 35.1568984375,
+    "entry_spot": 226.32000732421875,
+    "oi": 35000,
+    "oi_d7": 725,
+    "oi_delta_status": "confirmed",
+    "features": [
+      "ignition",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-17)"
+    ],
+    "volume": 3641,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.52,
+    "entry_ask": 0.53,
+    "last_trade_at": "2026-10-12 19:59:57",
+    "quote_at": "2026-10-13T03:04:33Z",
+    "underlying_at": "2026-10-13T03:04:33Z",
+    "structural_pass": true,
+    "strategy": "A_HOLD",
+    "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "不設停損、不賣半；DTE 21 全出"
+    },
+    "path": [
+      {
+        "date": "2026-10-12",
+        "spot": 226.32000732421875,
+        "last": 0.52,
+        "bid": 0.52,
+        "ask": 0.53,
+        "iv": 35.1568984375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-12_META_2026-10-23_800.0",
+    "snapshot_date": "2026-10-12",
+    "ticker": "META",
+    "expiry": "2026-10-23",
+    "strike": 800.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🚀點火(4.2x) 📅覆蓋財報(10-21)",
+    "entry_price": 3.63,
+    "entry_iv": 39.72838592529296,
+    "entry_spot": 742.9600219726562,
+    "oi": 1693,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "ignition"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-21)"
+    ],
+    "volume": 2916,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.45,
+    "entry_ask": 3.85,
+    "last_trade_at": "2026-10-12 19:59:28",
+    "quote_at": "2026-10-13T03:04:33Z",
+    "underlying_at": "2026-10-13T03:04:33Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-12",
+        "spot": 742.9600219726562,
+        "last": 3.63,
+        "bid": 3.45,
+        "ask": 3.85,
+        "iv": 39.72838592529296
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
