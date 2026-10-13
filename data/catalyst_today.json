@@ -1,36 +1,51 @@
 {
-  "updated_at": "2026-10-11T23:52:19.154032",
+  "updated_at": "2026-10-13T02:12:06.013422",
   "stats": {
     "total_items": 57,
-    "items_with_company": 7,
-    "items_with_catalyst": 7,
-    "items_both": 0
+    "items_with_company": 12,
+    "items_with_catalyst": 8,
+    "items_both": 1
   },
-  "count": 5,
+  "count": 12,
   "tickers": [
-    "AMZN",
-    "MSFT",
+    "SBUX",
     "JPM",
+    "MSFT",
+    "NVDA",
+    "TSLA",
+    "META",
+    "GM",
+    "IONQ",
+    "AVGO",
     "INTC",
-    "NVDA"
+    "AMD",
+    "MU"
   ],
   "details": [
     {
-      "symbol": "AMZN",
-      "score": 1.5,
+      "symbol": "SBUX",
+      "score": 2,
       "evidence": [
         {
-          "title": "Amazon in talks to acquire AI startup Decart for $7 bln- WSJ",
+          "title": "Starbucks says it is not buying Chipotle after takeover speculation",
+          "catalysts": [
+            "takeover"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Why older Americans' wealth may be helping keep consumer spending strong",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Amazon in talks to buy AI startup Decart for around $7 billion, WSJ reports",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Amazon in talks to acquire AI startup Decart for $7B: WSJ",
+          "title": "JPMorgan options market prices in a 2.8% post-earnings move",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -38,21 +53,86 @@
     },
     {
       "symbol": "MSFT",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Vance says Microsoft replaced laid-off workers with foreign hires. Here’s what the visa data shows",
+          "title": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Microsoft hits a big milestone that solidifies its revival",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "JPM",
+      "symbol": "NVDA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Microsoft to rely more on homegrown AI chips, reducing dependence on Nvidia",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia and AMD shares fall as new AI announcements fail to re-energize investors",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "JPMorgan makes bullish call in fixed income space, suggests it's a once in a generation opportunity",
+          "title": "Elon Musk gives $276 million to Republican groups, becomes biggest known 2026 midterm donor",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Meta debuts Muse Wonder AI model in latest test of users' willingness to pay",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "GM CEO: We're making leaps and bounds toward 'eyes-off, hands-off' driving",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "IONQ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "IonQ to acquire cybersecurity firm Elisity in an all-stock deal for up to $1.3 billion",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -63,23 +143,36 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "How Supreme Court justices are leaning in major 401(k) case over private funds and underperformance",
+          "title": "Intel, Broadcom CEOs warn capital crunch could become AI's biggest bottleneck",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NVDA",
+      "symbol": "AMD",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia GPUs are everywhere. Here are the ways companies are accessing them",
+          "title": "Nvidia and AMD shares fall as new AI announcements fail to re-energize investors",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why is Micron Technology stock sliding today?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "Anthropic (private)": 1
+  }
 }
