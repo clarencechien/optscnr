@@ -1,39 +1,69 @@
 {
-  "updated_at": "2026-10-13T23:49:14.817084",
+  "updated_at": "2026-10-14T23:22:43.335056",
   "stats": {
     "total_items": 57,
-    "items_with_company": 12,
-    "items_with_catalyst": 6,
-    "items_both": 1
+    "items_with_company": 13,
+    "items_with_catalyst": 7,
+    "items_both": 4
   },
-  "count": 11,
+  "count": 8,
   "tickers": [
-    "MU",
-    "BAC",
-    "AAPL",
-    "JPM",
     "DELL",
-    "WMT",
-    "ASTS",
-    "AVGO",
-    "AMZN",
-    "GOOGL",
-    "DIS"
+    "HPE",
+    "CRWV",
+    "BAC",
+    "MS",
+    "RKLB",
+    "NFLX",
+    "BRK-B"
   ],
   "details": [
     {
-      "symbol": "MU",
-      "score": 2.5,
+      "symbol": "DELL",
+      "score": 4,
       "evidence": [
         {
-          "title": "Micron sinks, other memory-linked names dip for a second day",
+          "title": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
           "catalysts": [
-            "sinks"
+            "plunges",
+            "downgraded"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "HPE",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
+          "catalysts": [
+            "plunges",
+            "downgraded"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Traders pile into 'bubble puts' on CoreWeave as neocloud stocks plunge",
+          "catalysts": [
+            "plunge"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Micron’s stock extends declines as China competition heats up",
+          "title": "CoreWeave’s AI bonds tumble, raising red flags for the wider market",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -41,119 +71,78 @@
     },
     {
       "symbol": "BAC",
-      "score": 1.0,
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Bank of America fined $1.2 billion over money-laundering violations",
+          "title": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Why is Bank of America stock sliding today?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Apple releases HomeView smart home hub with screen as showcase for Siri AI",
+          "title": "Bank of America shares drop after third-quarter revenue miss and regulatory penalty",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Apple’s HomeView brings personalized Siri to smart home, takes on Amazon and Google",
+          "title": "Bank of America adds a profit miss to the misery of a $1.2 billion government fine",
+          "catalysts": [
+            "falls"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
+          "catalysts": [
+            "tops estimates"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Rocket Lab’s stock slides as the company pushes back Neutron’s first launch",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Rocket Lab pushes Neutron rocket’s debut flight to 2027, shares fall",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Why is Rocket Lab stock tumbling today?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "JPM",
+      "symbol": "NFLX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "JPMorgan Chase blocks outside AI agents like Muse, Instinct from directly accessing accounts",
+          "title": "Netflix to lay off roughly 1,000 employees, or 6% of workforce ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DELL",
+      "symbol": "BRK-B",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Michael Dell says AI needs safeguards and controls, and government has a role to play",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Walmart to cover some GLP-1s, inhalers and insulin for employees at no cost as it expands benefits",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ASTS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "AST SpaceMobile’s stock is feeling the heat from SpaceX’s wireless plans",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Was Broadcom CEO bullish or bearish on AI? ‘Gamblers’ comment creates storm.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Apple’s HomeView brings personalized Siri to smart home, takes on Amazon and Google",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Apple’s HomeView brings personalized Siri to smart home, takes on Amazon and Google",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Character.AI files for bankruptcy, to sell some assets to Disney for $20 million",
+          "title": "Bending Spoons skyrockets 41% as Berkshire Hathaway makes $330 million investment",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -161,7 +150,8 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 2
+    "OpenAI (private)": 3,
+    "Anthropic (private)": 2,
+    "Saudi Aramco": 1
   }
 }
