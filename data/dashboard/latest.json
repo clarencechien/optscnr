@@ -1,8 +1,72 @@
 {
-  "market_date": "2026-10-13",
-  "generated_at": "2026-10-14T01:16:19Z",
+  "market_date": "2026-10-14",
+  "generated_at": "2026-10-14T23:05:42Z",
   "prereg_date": "2026-09-08",
-  "n_candidates": 0,
-  "n_report_rows": 2651,
-  "candidates": []
+  "n_candidates": 1,
+  "n_report_rows": 2937,
+  "candidates": [
+    {
+      "signal_id": "2026-10-14_IBIT_2026-11-20_52.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 52.0,
+      "dte": 37,
+      "spot": 46.2400016784668,
+      "otm_pct": 12.5,
+      "last": 0.56,
+      "bid": 0.57,
+      "ask": 0.59,
+      "iv": 39.2,
+      "oi": 33170,
+      "oi_d7": 171,
+      "oi_delta_status": "confirmed",
+      "volume": 1449,
+      "score": 8,
+      "tags": "🚀點火(2.8x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+      "features": [
+        "ignition",
+        "cigar_butt",
+        "mass_grave"
+      ],
+      "warnings": [],
+      "events": [
+        "📅無財報(ETF)"
+      ],
+      "recent_spots": [
+        {
+          "date": "2026-10-07",
+          "spot": 47.21
+        },
+        {
+          "date": "2026-10-08",
+          "spot": 46.26
+        },
+        {
+          "date": "2026-10-09",
+          "spot": 46.55
+        },
+        {
+          "date": "2026-10-12",
+          "spot": 46.86
+        },
+        {
+          "date": "2026-10-13",
+          "spot": 47.13
+        },
+        {
+          "date": "2026-10-14",
+          "spot": 46.24
+        }
+      ],
+      "tier": "lottery",
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      }
+    }
+  ]
 }
