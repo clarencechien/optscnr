@@ -1,41 +1,41 @@
 {
-  "updated_at": "2026-10-13T02:43:08.910803",
+  "updated_at": "2026-10-14T00:36:50.330700",
   "count": 3,
   "blind_spots": [
     {
       "name": "Six Flags",
       "ticker": "FUN",
-      "mentions_today": 4,
-      "total_mentions": 4,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "mentions_today": 2,
+      "total_mentions": 6,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "Six Flags shares plunge after-hours following report of deadly roller coaster incident",
-        "Six Flags shares plunge after-hours following report of deadly roller coaster incident"
+        "Six Flags shares decline following deadly roller coaster incident",
+        "Six Flags’ stock slumps near 17-year low after fatal incident"
       ]
     },
     {
-      "name": "Georgia",
-      "ticker": "GPJA",
-      "mentions_today": 3,
-      "total_mentions": 3,
+      "name": "Galderma",
+      "ticker": "GDERF",
+      "mentions_today": 2,
+      "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Six Flags shares plunge after-hours following report of deadly roller coaster incident",
-        "Six Flags shares slide after fatal roller coaster incident in Georgia"
+        "Galderma to buy Zo Skin from Blackstone for $1.5 bln, Reuters reports",
+        "Exclusive-Galderma agrees to buy ZO Skin Health for around $1.5 billion, sources say"
       ]
     },
     {
-      "name": "Delta",
-      "ticker": "DAL",
-      "mentions_today": 3,
-      "total_mentions": 3,
+      "name": "Enovix",
+      "ticker": "ENVX",
+      "mentions_today": 2,
+      "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "FAA warns U.S. airlines of safety risks over Saudi Arabia after attacks",
-        "Delta delays debut of Saudi Arabia service until March after Riyadh airport attacks"
+        "Why is Enovix stock surging after-hours today?",
+        "Enovix surges on 100K-unit drone battery order"
       ]
     }
   ]

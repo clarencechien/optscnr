@@ -6,13 +6,6 @@
     "total_mentions": 21,
     "ticker": "NDAQ"
   },
-  "Beijing": {
-    "first_seen": "2026-10-06",
-    "last_seen": "2026-10-06",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "BGTCF"
-  },
   "Levi Strauss": {
     "first_seen": "2026-10-08",
     "last_seen": "2026-10-08",
@@ -71,9 +64,9 @@
   },
   "Six Flags": {
     "first_seen": "2026-10-13",
-    "last_seen": "2026-10-13",
-    "consecutive_days": 1,
-    "total_mentions": 4,
+    "last_seen": "2026-10-14",
+    "consecutive_days": 2,
+    "total_mentions": 6,
     "ticker": "FUN"
   },
   "Georgia": {
@@ -89,5 +82,19 @@
     "consecutive_days": 1,
     "total_mentions": 3,
     "ticker": "DAL"
+  },
+  "Galderma": {
+    "first_seen": "2026-10-14",
+    "last_seen": "2026-10-14",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GDERF"
+  },
+  "Enovix": {
+    "first_seen": "2026-10-14",
+    "last_seen": "2026-10-14",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "ENVX"
   }
 }
