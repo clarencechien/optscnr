@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-10-15T00:41:49Z",
- "n_days": 27,
+ "generated_at": "2026-10-15T23:15:46Z",
+ "n_days": 28,
  "t8_by_event_answer": {
   "有": {
-   "n": 6,
-   "hit_rate": 0.833,
-   "avg_peak": 3.1
+   "n": 7,
+   "hit_rate": 0.714,
+   "avg_peak": 2.86
   },
   "無": {
    "n": 3,
@@ -19,6 +19,58 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-10-14",
+   "decided_at": "2026-10-15T00:35:13.170Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-10-14_IBIT_2026-11-20_52.0",
+     "ticker": "IBIT",
+     "expiry": "2026-11-20",
+     "strike": 52,
+     "entry_price": 0.56,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "未確認",
+      "date": null,
+      "what": "IBIT 是現貨比特幣 ETF，沒有財報或法說；到期日 2026-11-20 前查不到 IBIT 本身已排定的事件",
+      "source": null
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": -2,
+       "date": "2026-10-08"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "ETF無財報；FOMC決議10-28；Strategy之MSCI資格決定預計10-16",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-10-13",
    "decided_at": "2026-10-14T00:35:39.335Z",
@@ -124,7 +176,7 @@
       "peak": 1.39,
       "mature": false,
       "verdict": "➖持平(峰1.4x/今1.4x)",
-      "filled_at": "2026-10-14"
+      "filled_at": "2026-10-15"
      }
     }
    ]
@@ -179,12 +231,12 @@
      "status": "answered",
      "outcome": {
       "t5": 1.5,
-      "t10": null,
+      "t10": 1.46,
       "t20": null,
       "peak": 1.5,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-14"
+      "filled_at": "2026-10-15"
      }
     }
    ]
@@ -244,7 +296,7 @@
       "peak": 0.83,
       "mature": false,
       "verdict": "➖持平(峰0.8x/今0.5x)",
-      "filled_at": "2026-10-14"
+      "filled_at": "2026-10-15"
      }
     }
    ]
@@ -304,7 +356,7 @@
       "peak": 1.63,
       "mature": false,
       "verdict": "➖持平(峰1.6x/今1.6x)",
-      "filled_at": "2026-10-14"
+      "filled_at": "2026-10-15"
      }
     },
     {
@@ -353,7 +405,7 @@
       "peak": 0.9,
       "mature": false,
       "verdict": "➖持平(峰0.9x/今0.4x)",
-      "filled_at": "2026-10-14"
+      "filled_at": "2026-10-15"
      }
     },
     {
@@ -402,7 +454,7 @@
       "peak": 1.45,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-14"
+      "filled_at": "2026-10-15"
      }
     }
    ]
@@ -488,11 +540,11 @@
      "outcome": {
       "t5": 0.88,
       "t10": 0.94,
-      "t20": null,
-      "peak": 0.94,
-      "mature": false,
-      "verdict": "➖持平(峰0.9x/今0.9x)",
-      "filled_at": "2026-10-14"
+      "t20": 1.41,
+      "peak": 1.41,
+      "mature": true,
+      "verdict": "➖持平(峰1.4x/今1.4x)",
+      "filled_at": "2026-10-15"
      }
     }
    ]
