@@ -1,17 +1,41 @@
 {
-  "updated_at": "2026-10-15T00:06:25.661394",
-  "count": 1,
+  "updated_at": "2026-10-15T23:51:46.832271",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "Neutron",
-      "ticker": "LIME",
-      "mentions_today": 3,
-      "total_mentions": 3,
+      "name": "Porsche",
+      "ticker": "POAHF",
+      "mentions_today": 2,
+      "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Rocket Lab’s stock slides as the company pushes back Neutron’s first launch",
-        "Rocket Lab’s stock slides as the company pushes back Neutron’s first launch"
+        "Porsche reveals Mission S concept car that previews new design identity",
+        "Porsche reveals Mission S concept car that previews new design identity"
+      ]
+    },
+    {
+      "name": "Mission",
+      "ticker": "AVO",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Porsche reveals Mission S concept car that previews new design identity",
+        "Porsche reveals Mission S concept car that previews new design identity"
+      ]
+    },
+    {
+      "name": "JetBlue",
+      "ticker": "JBLU",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "JetBlue’s new domestic first class, BlueFirst, is now on sale",
+        "JetBlue’s new domestic first class, BlueFirst, is now on sale"
       ]
     }
   ]

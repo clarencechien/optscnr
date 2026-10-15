@@ -103,5 +103,26 @@
     "consecutive_days": 1,
     "total_mentions": 3,
     "ticker": "LIME"
+  },
+  "Porsche": {
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "POAHF"
+  },
+  "Mission": {
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "AVO"
+  },
+  "JetBlue": {
+    "first_seen": "2026-10-15",
+    "last_seen": "2026-10-15",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "JBLU"
   }
 }
