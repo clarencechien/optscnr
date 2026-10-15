@@ -1000,5 +1000,17 @@
       "retail_mtx": 68.3,
       "margin_chg": 83.7
     }
+  },
+  {
+    "date": "2026-10-15",
+    "regime": "RISK_ON",
+    "score": -0.839,
+    "alerts": [],
+    "pcts": {
+      "f_spot_20d": 15.5,
+      "tx_delta": 0.4,
+      "retail_mtx": 94.8,
+      "margin_chg": 11.1
+    }
   }
 ]
