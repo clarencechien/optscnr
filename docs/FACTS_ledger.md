@@ -267,3 +267,6 @@
 - PCG ｜ 加州野火責任改革提案失敗並遭擱置，PCG 股價因此重挫；CNBC 2026-09-02 報導 CEO Patti Poppe 呼籲議會重新推動改革。8/25 入庫事實中「8/31 立法截止」一事的後續結果即此 ｜ 2026-09-02 ｜ https://www.cnbc.com/quotes/PCG ｜ 2026-10-05 LLM 提案
 - PCG ｜ PG&E 宣布 2026 年第三季普通股股利每股 $0.05，2026-09-30 為除息日暨登記日，2026-10-15 發放 ｜ 2026-10-15 ｜ https://finance.yahoo.com/markets/stocks/articles/pg-e-sets-dates-quarterly-104500128.html ｜ 2026-10-05 LLM 提案
 - PCG ｜ PG&E 宣布 2026 年第三季普通股現金股利每股 $0.05，登記日 2026-09-30，2026-10-15 發放 ｜ 2026-09-18 ｜ http://www.prnewswire.com/news-releases/pge-sets-dates-for-quarterly-stock-dividends-302882677.html ｜ 2026-10-06 LLM 提案
+- IBIT ｜ IBIT 2026-10-12 單日淨流出 6,540 萬美元，是當日美國現貨比特幣 ETF 唯一有淨流動的一檔；10-07 曾流出 2.077 億美元；累計淨流入約 656.7 億美元 ｜ 2026-10-12 ｜ https://cryptobriefing.com/blackrock-ibit-bitcoin-etf-outflow-65-million/ ｜ 2026-10-14 LLM 提案
+- IBIT ｜ 2026-10-13 美國現貨比特幣 ETF 合計淨流入約 1.756 億美元，其中 IBIT 6,590 萬美元、FBTC 1.031 億美元 ｜ 2026-10-13 ｜ https://news.bitcoin.com/bitcoin-etf/fidelity-blackrock-lead-176m-bitcoin-etf-rebound ｜ 2026-10-14 LLM 提案
+- IBIT ｜ 宏觀排定事件：市場關注 FOMC 2026-10-28 決議是否維持利率不變；比特幣曝險股 Strategy 的 MSCI 指數資格決定預計 2026-10-16 公布（兩者都不是 IBIT 自身事件） ｜ 2026-10-14 ｜ https://bitcoinnewsdigest.substack.com/p/bitcoin-news-digest-october-14-2026 ｜ 2026-10-14 LLM 提案
