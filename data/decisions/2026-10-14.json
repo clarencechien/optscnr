@@ -1,0 +1,114 @@
+{
+  "market_date": "2026-10-14",
+  "decided_at": "2026-10-15T00:35:13.170Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-14T23:05:42Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 28,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-14_IBIT_2026-11-20_52.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 52,
+      "entry_price": 0.56,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -2,
+          "date": "2026-10-08"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "IBIT 是現貨比特幣 ETF，沒有財報或法說；到期日 2026-11-20 前查不到 IBIT 本身已排定的事件",
+        "source": null
+      },
+      "note": "ETF無財報；FOMC決議10-28；Strategy之MSCI資格決定預計10-16",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "IBIT",
+      "fact": "IBIT 2026-10-12 單日淨流出 6,540 萬美元，是當日美國現貨比特幣 ETF 唯一有淨流動的一檔；10-07 曾流出 2.077 億美元；累計淨流入約 656.7 億美元",
+      "date": "2026-10-12",
+      "source": "https://cryptobriefing.com/blackrock-ibit-bitcoin-etf-outflow-65-million/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "2026-10-13 美國現貨比特幣 ETF 合計淨流入約 1.756 億美元，其中 IBIT 6,590 萬美元、FBTC 1.031 億美元",
+      "date": "2026-10-13",
+      "source": "https://news.bitcoin.com/bitcoin-etf/fidelity-blackrock-lead-176m-bitcoin-etf-rebound"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "宏觀排定事件：市場關注 FOMC 2026-10-28 決議是否維持利率不變；比特幣曝險股 Strategy 的 MSCI 指數資格決定預計 2026-10-16 公布（兩者都不是 IBIT 自身事件）",
+      "date": "2026-10-14",
+      "source": "https://bitcoinnewsdigest.substack.com/p/bitcoin-news-digest-october-14-2026"
+    }
+  ],
+  "facts_appended": 3,
+  "raw_answer": "{\"market_date\":\"2026-10-14\",\"candidates\":[{\"signal_id\":\"2026-10-14_IBIT_2026-11-20_52.0\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"IBIT 是現貨比特幣 ETF，沒有財報或法說；到期日 2026-11-20 前查不到 IBIT 本身已排定的事件\",\"source\":null},\"note\":\"ETF無財報；FOMC決議10-28；Strategy之MSCI資格決定預計10-16\"}],\"facts_proposed\":[{\"ticker\":\"IBIT\",\"fact\":\"IBIT 2026-10-12 單日淨流出 6,540 萬美元，是當日美國現貨比特幣 ETF 唯一有淨流動的一檔；10-07 曾流出 2.077 億美元；累計淨流入約 656.7 億美元\",\"date\":\"2026-10-12\",\"source\":\"https://cryptobriefing.com/blackrock-ibit-bitcoin-etf-outflow-65-million/\"},{\"ticker\":\"IBIT\",\"fact\":\"2026-10-13 美國現貨比特幣 ETF 合計淨流入約 1.756 億美元，其中 IBIT 6,590 萬美元、FBTC 1.031 億美元\",\"date\":\"2026-10-13\",\"source\":\"https://news.bitcoin.com/bitcoin-etf/fidelity-blackrock-lead-176m-bitcoin-etf-rebound\"},{\"ticker\":\"IBIT\",\"fact\":\"宏觀排定事件：市場關注 FOMC 2026-10-28 決議是否維持利率不變；比特幣曝險股 Strategy 的 MSCI 指數資格決定預計 2026-10-16 公布（兩者都不是 IBIT 自身事件）\",\"date\":\"2026-10-14\",\"source\":\"https://bitcoinnewsdigest.substack.com/p/bitcoin-news-digest-october-14-2026\"}]}",
+  "usage": {
+    "prompt_tokens": 29203,
+    "completion_tokens": 2093,
+    "total_tokens": 31296,
+    "cost": 0.178672,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.178672,
+      "upstream_inference_prompt_cost": 0.116812,
+      "upstream_inference_completions_cost": 0.04186
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1308,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
