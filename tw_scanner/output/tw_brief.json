@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-10-14T18:12:24+00:00",
- "today": "2026-10-14",
+ "generated_at": "2026-10-15T08:13:17+00:00",
+ "today": "2026-10-15",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-16）：本月預算已於 2026-10-12 動用（月末例行），本月不再行動。",
   "鋒面 ☀️ RISK_ON（本週未變）。",
   "2308 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +6.0%）；PER 60.5，3 年分位 79 → 83",
-  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +1.6%）；PER 29.4，3 年分位 77 → 82",
+  "2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +2.5%）；PER 29.4，3 年分位 77 → 82",
   "投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.67%。"
  ],
  "weather": {
   "status": "OK",
   "as_of": "2026-10-14",
-  "age_days": 0,
+  "age_days": 1,
   "regime": "RISK_ON",
   "emoji": "☀️",
   "score": 0.05,
@@ -90,7 +90,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-10-14",
-  "age_days": 0,
+  "age_days": 1,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -236,7 +236,7 @@
   "status": "OK",
   "label": "2308",
   "as_of": "2026-10-13",
-  "age_days": 1,
+  "age_days": 2,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -314,8 +314,8 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-10-13",
-  "age_days": 1,
+  "as_of": "2026-10-15",
+  "age_days": 0,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -349,9 +349,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "RED",
-    "headline": "export_controls_tariffs:16e / n2_arizona_ramp:11e(12m) / cowos_capacity:6e / geopolitics:3e / hyperscaler_capex:5e(6m)",
-    "ts": "2026-10-13T10:28:13.735889+00:00"
+    "status": "YELLOW",
+    "headline": "export_controls_tariffs:16e / n2_arizona_ramp:10e(11m) / cowos_capacity:6e / geopolitics:4e / hyperscaler_capex:6e(7m)",
+    "ts": "2026-10-15T08:13:14.818099+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -374,12 +374,12 @@
   ],
   "divergence": {
    "flag": null,
-   "text": "無背離（前提 GREEN、價格 20 日 +1.6%）；PER 29.4，3 年分位 77 → 82",
+   "text": "無背離（前提 GREEN、價格 20 日 +2.5%）；PER 29.4，3 年分位 77 → 82",
    "premise": "GREEN",
    "premise_ts": "2026-10-12T12:08:06.331036+00:00",
-   "ret_pct": 1.63,
+   "ret_pct": 2.52,
    "lookback_sessions": 20,
-   "as_of": "2026-10-13",
+   "as_of": "2026-10-15",
    "valuation": {
     "per": 29.44,
     "per_pct": 82.1,
@@ -388,12 +388,12 @@
     "history_years": 3
    }
   },
-  "scored_n": 0
+  "scored_n": 4
  },
  "casino": {
   "status": "OK",
   "as_of": "2026-10-14",
-  "age_days": 0,
+  "age_days": 1,
   "rows": [
    {
     "ticker": "3661",
@@ -646,7 +646,7 @@
   {
    "date": "2026-11-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 27
+   "days": 26
   }
  ],
  "checks": [
@@ -668,7 +668,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-10-13"
+   "text": "tsmc_radar：最新 2026-10-15"
   },
   {
    "level": "ok",
