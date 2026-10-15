@@ -1,126 +1,44 @@
 {
-  "updated_at": "2026-10-14T23:22:43.335056",
+  "updated_at": "2026-10-15T23:12:38.556747",
   "stats": {
     "total_items": 57,
     "items_with_company": 13,
-    "items_with_catalyst": 7,
-    "items_both": 4
+    "items_with_catalyst": 8,
+    "items_both": 0
   },
-  "count": 8,
+  "count": 13,
   "tickers": [
-    "DELL",
-    "HPE",
-    "CRWV",
-    "BAC",
-    "MS",
-    "RKLB",
+    "NVDA",
     "NFLX",
-    "BRK-B"
+    "DIS",
+    "CRWV",
+    "AMD",
+    "TSLA",
+    "AAPL",
+    "DELL",
+    "META",
+    "AVGO",
+    "TSM",
+    "MU",
+    "GILD"
   ],
   "details": [
     {
-      "symbol": "DELL",
-      "score": 4,
+      "symbol": "NVDA",
+      "score": 2.0,
       "evidence": [
         {
-          "title": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
-          "catalysts": [
-            "plunges",
-            "downgraded"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "HPE",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Dell stock plunges 11%, leading data center sell-off as fears mount about 'enterprise AI timing'",
-          "catalysts": [
-            "plunges",
-            "downgraded"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "CoreWeave shares tumble as bond yields near 15% on concern about AI borrowing binge",
+          "title": "Nvidia, AMD, Dell sink in global tech rout on AI funding worries",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Traders pile into 'bubble puts' on CoreWeave as neocloud stocks plunge",
-          "catalysts": [
-            "plunge"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "CoreWeave’s AI bonds tumble, raising red flags for the wider market",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BAC",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos",
+          "title": "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Bank of America shares drop after third-quarter revenue miss and regulatory penalty",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Bank of America adds a profit miss to the misery of a $1.2 billion government fine",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
-          "catalysts": [
-            "tops estimates"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "RKLB",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Rocket Lab’s stock slides as the company pushes back Neutron’s first launch",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Rocket Lab pushes Neutron rocket’s debut flight to 2027, shares fall",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Why is Rocket Lab stock tumbling today?",
+          "title": "TSMC chip capacity is ‘fierce’ battleground for AI customers, amid record quarter",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -128,21 +46,161 @@
     },
     {
       "symbol": "NFLX",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Netflix to lay off roughly 1,000 employees, or 6% of workforce ",
+          "title": "Netflix Chief Content Officer Bela Bajaria is leaving, will be replaced by Peter Rice",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Netflix names former Disney executive Rice as new content chief as Bajaria departs",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
+      "symbol": "DIS",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Netflix Chief Content Officer Bela Bajaria is leaving, will be replaced by Peter Rice",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Netflix names former Disney executive Rice as new content chief as Bajaria departs",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "CoreWeave credit default swaps hit distress levels as investors sour on AI debt",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "CoreWeave’s polarizing stock rebounds as Wall Street squares off about AI spending",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Nvidia, AMD, Dell sink in global tech rout on AI funding worries",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "TSMC chip capacity is ‘fierce’ battleground for AI customers, amid record quarter",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Tesla plans next-generation Roadster reveal after almost a decade of delays",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Tesla energy executive Snyder steps down, WSJ reports",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Apple and Meta team up to make Muse AI model run on Mac computers ",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "TSMC chip capacity is ‘fierce’ battleground for AI customers, amid record quarter",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DELL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Bending Spoons skyrockets 41% as Berkshire Hathaway makes $330 million investment",
+          "title": "Nvidia, AMD, Dell sink in global tech rout on AI funding worries",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Apple and Meta team up to make Muse AI model run on Mac computers ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "TSMC chip capacity is ‘fierce’ battleground for AI customers, amid record quarter",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "TSMC chip capacity is ‘fierce’ battleground for AI customers, amid record quarter",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Memory stocks are getting hammered. China and a 2029 oversupply are the big worries",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GILD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Big pharma stocks close near all-time highs as tech selloff pushes investors toward safer bets",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -150,8 +208,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 3,
-    "Anthropic (private)": 2,
-    "Saudi Aramco": 1
+    "Anthropic (private)": 4
   }
 }
