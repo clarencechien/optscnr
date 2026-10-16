@@ -270,3 +270,7 @@
 - IBIT ｜ IBIT 2026-10-12 單日淨流出 6,540 萬美元，是當日美國現貨比特幣 ETF 唯一有淨流動的一檔；10-07 曾流出 2.077 億美元；累計淨流入約 656.7 億美元 ｜ 2026-10-12 ｜ https://cryptobriefing.com/blackrock-ibit-bitcoin-etf-outflow-65-million/ ｜ 2026-10-14 LLM 提案
 - IBIT ｜ 2026-10-13 美國現貨比特幣 ETF 合計淨流入約 1.756 億美元，其中 IBIT 6,590 萬美元、FBTC 1.031 億美元 ｜ 2026-10-13 ｜ https://news.bitcoin.com/bitcoin-etf/fidelity-blackrock-lead-176m-bitcoin-etf-rebound ｜ 2026-10-14 LLM 提案
 - IBIT ｜ 宏觀排定事件：市場關注 FOMC 2026-10-28 決議是否維持利率不變；比特幣曝險股 Strategy 的 MSCI 指數資格決定預計 2026-10-16 公布（兩者都不是 IBIT 自身事件） ｜ 2026-10-14 ｜ https://bitcoinnewsdigest.substack.com/p/bitcoin-news-digest-october-14-2026 ｜ 2026-10-14 LLM 提案
+- NVDA ｜ Q2 FY2027（2026-08-26 公布）營收 $96.2B、年增 106%，資料中心營收 $89.0B、年增 117%，non-GAAP EPS $2.22 ｜ 2026-08-26 ｜ https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm ｜ 2026-10-15 LLM 提案
+- NVDA ｜ Q3 FY2027 財測：營收 $108.0B ±2%，GAAP 和 non-GAAP 毛利率都是 74.0% ±50bp，高於 LSEG 共識 $104.19B；截至 2026-09-28，官方新聞室還沒有 Q3 法說會通知 ｜ 2026-08-26 ｜ https://trendandticker.com/markets/semiconductors/nvidia-earnings-date-q3-fiscal-2027-2026 ｜ 2026-10-15 LLM 提案
+- NVDA ｜ Public.com 標示 Q3 FY2027 財報和法說會為 2026-11-18（週三），共識 EPS $2.47；和 WSH、TipRanks 不一致，待審 ｜ 2026-11-18 ｜ https://public.com/stocks/nvda/earnings ｜ 2026-10-15 LLM 提案
+- NVDA ｜ TipRanks 標示 Q3 FY2027 財報為 2026-11-25 盤後，頁面同時寫「Confirmed」和「依過往排程估計」，自相矛盾；這個日期晚於 11-20 月選到期日，待審 ｜ 2026-11-25 ｜ https://www.tipranks.com/stocks/nvda/earnings ｜ 2026-10-15 LLM 提案
