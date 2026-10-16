@@ -6,27 +6,6 @@
     "total_mentions": 21,
     "ticker": "NDAQ"
   },
-  "Levi Strauss": {
-    "first_seen": "2026-10-08",
-    "last_seen": "2026-10-08",
-    "consecutive_days": 1,
-    "total_mentions": 4,
-    "ticker": "LEVI"
-  },
-  "Webull": {
-    "first_seen": "2026-10-08",
-    "last_seen": "2026-10-08",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BULLW"
-  },
-  "General Dynamics": {
-    "first_seen": "2026-10-08",
-    "last_seen": "2026-10-08",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GD"
-  },
   "North American": {
     "first_seen": "2026-10-09",
     "last_seen": "2026-10-09",
@@ -124,5 +103,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "JBLU"
+  },
+  "EchoStar": {
+    "first_seen": "2026-10-16",
+    "last_seen": "2026-10-16",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SATS"
   }
 }
