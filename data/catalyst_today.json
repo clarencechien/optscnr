@@ -1,76 +1,47 @@
 {
-  "updated_at": "2026-10-15T23:12:38.556747",
+  "updated_at": "2026-10-16T22:58:06.859755",
   "stats": {
     "total_items": 57,
-    "items_with_company": 13,
-    "items_with_catalyst": 8,
-    "items_both": 0
+    "items_with_company": 16,
+    "items_with_catalyst": 9,
+    "items_both": 4
   },
-  "count": 13,
+  "count": 11,
   "tickers": [
-    "NVDA",
-    "NFLX",
-    "DIS",
-    "CRWV",
-    "AMD",
     "TSLA",
+    "CRWV",
+    "TWLO",
+    "BA",
     "AAPL",
-    "DELL",
-    "META",
-    "AVGO",
-    "TSM",
-    "MU",
-    "GILD"
+    "NFLX",
+    "NVDA",
+    "NKE",
+    "OKTA",
+    "RKLB",
+    "PLTR"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 2.0,
+      "symbol": "TSLA",
+      "score": 6.5,
       "evidence": [
         {
-          "title": "Nvidia, AMD, Dell sink in global tech rout on AI funding worries",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Tesla unveils long-delayed Roadster developed with SpaceX, fueling merger speculation",
+          "catalysts": [
+            "merger",
+            "unveils"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Nvidia and Cisco confirm multimillion-dollar donations to Trump's White House ballroom",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Prediction market odds on Tesla-SpaceX merger are above 50% for early 2027",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "TSMC chip capacity is ‘fierce’ battleground for AI customers, amid record quarter",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Netflix Chief Content Officer Bela Bajaria is leaving, will be replaced by Peter Rice",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Netflix names former Disney executive Rice as new content chief as Bajaria departs",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Netflix Chief Content Officer Bela Bajaria is leaving, will be replaced by Peter Rice",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Netflix names former Disney executive Rice as new content chief as Bajaria departs",
+          "title": "Tesla shares caught up in tech rout despite new Roadster with flight capabilities",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -78,47 +49,51 @@
     },
     {
       "symbol": "CRWV",
-      "score": 1.0,
+      "score": 3.0,
       "evidence": [
         {
-          "title": "CoreWeave credit default swaps hit distress levels as investors sour on AI debt",
+          "title": "The Austin Powers steamroller: How to trade CoreWeave's slow moving crisis",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "CoreWeave’s polarizing stock rebounds as Wall Street squares off about AI spending",
+          "title": "Here's how the CoreWeave sell-off is affecting OpenAI vs. Anthropic valuations",
           "catalysts": [],
           "has_catalyst": false
+        },
+        {
+          "title": "Why did CoreWeave stock get crushed this week? Look to this corner of the debt market for clues",
+          "catalysts": [
+            "surged"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMD",
-      "score": 1.0,
+      "symbol": "TWLO",
+      "score": 2,
       "evidence": [
         {
-          "title": "Nvidia, AMD, Dell sink in global tech rout on AI funding worries",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "TSMC chip capacity is ‘fierce’ battleground for AI customers, amid record quarter",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Twilio falls 11% on sector-wide selling",
+          "catalysts": [
+            "falls"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "TSLA",
+      "symbol": "BA",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Tesla plans next-generation Roadster reveal after almost a decade of delays",
+          "title": "Norway's $2 trillion wealth fund was frozen out of major defense companies. That may be about to change",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Tesla energy executive Snyder steps down, WSJ reports",
+          "title": "Exclusive-Boeing sales chief McMullen to retire, company memo says",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -126,81 +101,76 @@
     },
     {
       "symbol": "AAPL",
-      "score": 1.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Apple and Meta team up to make Muse AI model run on Mac computers ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "TSMC chip capacity is ‘fierce’ battleground for AI customers, amid record quarter",
+          "title": "Apple’s $1,999 iPhone Duo puts the company's status-symbol power to the test",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DELL",
+      "symbol": "NFLX",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia, AMD, Dell sink in global tech rout on AI funding worries",
+          "title": "Here's who Netflix just brought in to run content — and what it means for the streamer",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Apple and Meta team up to make Muse AI model run on Mac computers ",
+          "title": "I watched Nvidia's Jensen Huang work the room in London. He brought big checks — and a blunt message",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AVGO",
+      "symbol": "NKE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "TSMC chip capacity is ‘fierce’ battleground for AI customers, amid record quarter",
+          "title": "Nike's India campus is a long-term growth bet amid turnaround",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSM",
+      "symbol": "OKTA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "TSMC chip capacity is ‘fierce’ battleground for AI customers, amid record quarter",
+          "title": "Okta slumps 10% as recent profit-taking continues",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "RKLB",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Memory stocks are getting hammered. China and a 2029 oversupply are the big worries",
+          "title": "Rocket Lab extends losing streak with another 8% retreat",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GILD",
+      "symbol": "PLTR",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Big pharma stocks close near all-time highs as tech selloff pushes investors toward safer bets",
+          "title": "Palantir Technologies declines 7% amid broader tech selloff",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -208,6 +178,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 4
+    "Anthropic (private)": 3,
+    "OpenAI (private)": 2
   }
 }
