@@ -1,0 +1,130 @@
+{
+  "market_date": "2026-10-15",
+  "decided_at": "2026-10-16T00:35:02.126Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-15T23:05:36Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 29,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-15_NVDA_2026-11-20_230.0",
+      "ticker": "NVDA",
+      "expiry": "2026-11-20",
+      "strike": 230,
+      "entry_price": 5.75,
+      "strategy": "C_LADDER4",
+      "strategy_label": "4口階梯 2/4/8x + 1口 runner（實彈）",
+      "sell_points": {
+        "take_profit": [
+          11.5,
+          23,
+          46
+        ],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "4 口：三口掛 2/4/8x 限價，最後一口 DTE 21 出"
+      },
+      "facts_used": 9,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -3.2,
+          "date": "2026-10-14"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "NVIDIA 還沒正式公布 Q3 FY2027 財報日，第三方網站給的日期互相矛盾，其中一個晚於 2026-11-20 到期日，所以無法確認財報會落在到期前",
+        "source": null
+      },
+      "note": "官方未公布；第三方報11-17/11-18/11-25，末者晚於到期",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "NVDA",
+      "fact": "Q2 FY2027（2026-08-26 公布）營收 $96.2B、年增 106%，資料中心營收 $89.0B、年增 117%，non-GAAP EPS $2.22",
+      "date": "2026-08-26",
+      "source": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm"
+    },
+    {
+      "ticker": "NVDA",
+      "fact": "Q3 FY2027 財測：營收 $108.0B ±2%，GAAP 和 non-GAAP 毛利率都是 74.0% ±50bp，高於 LSEG 共識 $104.19B；截至 2026-09-28，官方新聞室還沒有 Q3 法說會通知",
+      "date": "2026-08-26",
+      "source": "https://trendandticker.com/markets/semiconductors/nvidia-earnings-date-q3-fiscal-2027-2026"
+    },
+    {
+      "ticker": "NVDA",
+      "fact": "Wall Street Horizon 標示 Q3 FY2027 財報為 2026-11-17（週二）盤後、狀態 CONFIRMED；這和其他來源不一致，NVIDIA 也還沒正式公告，待審",
+      "date": "2026-11-17",
+      "source": "https://www.wallstreethorizon.com/nvidia-earnings-calendar"
+    },
+    {
+      "ticker": "NVDA",
+      "fact": "Public.com 標示 Q3 FY2027 財報和法說會為 2026-11-18（週三），共識 EPS $2.47；和 WSH、TipRanks 不一致，待審",
+      "date": "2026-11-18",
+      "source": "https://public.com/stocks/nvda/earnings"
+    },
+    {
+      "ticker": "NVDA",
+      "fact": "TipRanks 標示 Q3 FY2027 財報為 2026-11-25 盤後，頁面同時寫「Confirmed」和「依過往排程估計」，自相矛盾；這個日期晚於 11-20 月選到期日，待審",
+      "date": "2026-11-25",
+      "source": "https://www.tipranks.com/stocks/nvda/earnings"
+    }
+  ],
+  "facts_appended": 4,
+  "raw_answer": "{\"market_date\":\"2026-10-15\",\"candidates\":[{\"signal_id\":\"2026-10-15_NVDA_2026-11-20_230.0\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"NVIDIA 還沒正式公布 Q3 FY2027 財報日，第三方網站給的日期互相矛盾，其中一個晚於 2026-11-20 到期日，所以無法確認財報會落在到期前\",\"source\":null},\"note\":\"官方未公布；第三方報11-17/11-18/11-25，末者晚於到期\"}],\"facts_proposed\":[{\"ticker\":\"NVDA\",\"fact\":\"Q2 FY2027（2026-08-26 公布）營收 $96.2B、年增 106%，資料中心營收 $89.0B、年增 117%，non-GAAP EPS $2.22\",\"date\":\"2026-08-26\",\"source\":\"https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm\"},{\"ticker\":\"NVDA\",\"fact\":\"Q3 FY2027 財測：營收 $108.0B ±2%，GAAP 和 non-GAAP 毛利率都是 74.0% ±50bp，高於 LSEG 共識 $104.19B；截至 2026-09-28，官方新聞室還沒有 Q3 法說會通知\",\"date\":\"2026-08-26\",\"source\":\"https://trendandticker.com/markets/semiconductors/nvidia-earnings-date-q3-fiscal-2027-2026\"},{\"ticker\":\"NVDA\",\"fact\":\"Wall Street Horizon 標示 Q3 FY2027 財報為 2026-11-17（週二）盤後、狀態 CONFIRMED；這和其他來源不一致，NVIDIA 也還沒正式公告，待審\",\"date\":\"2026-11-17\",\"source\":\"https://www.wallstreethorizon.com/nvidia-earnings-calendar\"},{\"ticker\":\"NVDA\",\"fact\":\"Public.com 標示 Q3 FY2027 財報和法說會為 2026-11-18（週三），共識 EPS $2.47；和 WSH、TipRanks 不一致，待審\",\"date\":\"2026-11-18\",\"source\":\"https://public.com/stocks/nvda/earnings\"},{\"ticker\":\"NVDA\",\"fact\":\"TipRanks 標示 Q3 FY2027 財報為 2026-11-25 盤後，頁面同時寫「Confirmed」和「依過往排程估計」，自相矛盾；這個日期晚於 11-20 月選到期日，待審\",\"date\":\"2026-11-25\",\"source\":\"https://www.tipranks.com/stocks/nvda/earnings\"}]}",
+  "usage": {
+    "prompt_tokens": 51216,
+    "completion_tokens": 2909,
+    "total_tokens": 54125,
+    "cost": 0.283044,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.283044,
+      "upstream_inference_prompt_cost": 0.204864,
+      "upstream_inference_completions_cost": 0.05818
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1850,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
