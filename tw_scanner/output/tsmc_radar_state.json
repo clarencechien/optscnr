@@ -1034,9 +1034,9 @@
       "t10_ret_pct": 5.24,
       "t10_excess_pct": -1.02,
       "t10_excess_smh_pct": -6.71,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null,
-      "t20_excess_smh_pct": null
+      "t20_ret_pct": 1.47,
+      "t20_excess_pct": -1.12,
+      "t20_excess_smh_pct": -7.02
     }
   },
   {
@@ -3551,9 +3551,9 @@
       "t5_ret_pct": 1.59,
       "t5_excess_pct": -0.23,
       "t5_excess_smh_pct": 3.3,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
-      "t10_excess_smh_pct": null,
+      "t10_ret_pct": -3.59,
+      "t10_excess_pct": -0.14,
+      "t10_excess_smh_pct": 5.96,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -4605,9 +4605,9 @@
       "entry_date": "2026-10-08",
       "benchmark": "0050",
       "entry_close": 2550.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
-      "t5_excess_smh_pct": null,
+      "t5_ret_pct": -5.1,
+      "t5_excess_pct": 0.08,
+      "t5_excess_smh_pct": 2.88,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -5882,6 +5882,122 @@
       "entry_date": "2026-10-15",
       "benchmark": "0050",
       "entry_close": 2440.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
+  },
+  {
+    "ts": "2026-10-16T08:05:59.650608+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "export_controls_tariffs:16e / n2_arizona_ramp:9e(12m) / cowos_capacity:5e / geopolitics:3e / hyperscaler_capex:6e(7m)",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 16,
+            "n2_arizona_ramp": 9,
+            "cowos_capacity": 5,
+            "geopolitics": 3,
+            "hyperscaler_capex": 6
+          },
+          "mentions": {
+            "export_controls_tariffs": 16,
+            "n2_arizona_ramp": 12,
+            "cowos_capacity": 5,
+            "geopolitics": 3,
+            "hyperscaler_capex": 7
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 16,
+              "mentions": 16,
+              "gate": "zscore",
+              "z": 1.14,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 9,
+              "mentions": 12,
+              "gate": "zscore",
+              "z": -1.08,
+              "denial": false
+            },
+            "cowos_capacity": {
+              "events": 5,
+              "mentions": 5,
+              "gate": "zscore",
+              "z": -0.17,
+              "denial": false
+            },
+            "geopolitics": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -1.37,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 6,
+              "mentions": 7,
+              "gate": "zscore",
+              "z": 0.48,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F",
+          "[export_controls_tariffs] Huawei chairman thanks the US for export restrictions on chips, says it supercharged China’s semiconductor industry — Wa",
+          "[export_controls_tariffs] Key facts: TSMC to Invest Up to $265B in Arizona; Reviews Export Controls - TradingView",
+          "[n2_arizona_ramp] [News] Samsung 2nm Yields Reportedly at ~55%, Below Mass Production Threshold; Qualcomm May Opt for TSMC - TrendForce",
+          "[n2_arizona_ramp] Samsung's 2nm Yield Approaches 60%, Leveraging Tesla Orders to Challenge TSMC - BigGo Finance",
+          "[n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - Medium",
+          "[cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes",
+          "[geopolitics] China's president Xi Jinping calls Taiwan reunification \"unstoppable\" — military drills around the island escalate in ar",
+          "[geopolitics] China Rings Taiwan With Live-Fire Drills, Tensions Spike - Modern Diplomacy",
+          "[geopolitics] In the shadow of China’s military, Taiwan’s globally critical suppliers keep working - Automotive News",
+          "[hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[hyperscaler_capex] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review",
+          "[hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St."
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 YELLOW、價格 20 日 +1.5%）；PER 28.9，3 年分位 71 → 78",
+      "premise": "YELLOW",
+      "premise_ts": "2026-10-15T09:12:56.809815+00:00",
+      "ret_pct": 1.47,
+      "lookback_sessions": 20,
+      "as_of": "2026-10-16",
+      "valuation": {
+        "per": 28.86,
+        "per_pct": 77.7,
+        "per_then": 27.94,
+        "per_pct_then": 70.9,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-10-16",
+      "benchmark": "0050",
+      "entry_close": 2420.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t5_excess_smh_pct": null,
