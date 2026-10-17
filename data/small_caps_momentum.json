@@ -1,34 +1,24 @@
 {
-  "updated_at": "2026-10-10T05:53:55.089587",
+  "updated_at": "2026-10-17T04:27:04.077155",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 2,
+  "count": 1,
   "tickers": [
-    "CHPT",
     "SES"
   ],
   "details": [
     {
-      "symbol": "CHPT",
-      "price": 7.92,
-      "gain_30d_pct": 42.2,
-      "market_cap_m": 213.0,
-      "avg_volume_m": 1.29,
-      "short_pct_float": 21.3,
-      "score": 25.5
-    },
-    {
       "symbol": "SES",
-      "price": 0.78,
-      "gain_30d_pct": 49.4,
-      "market_cap_m": 290.0,
-      "avg_volume_m": 27.51,
-      "short_pct_float": 16.0,
-      "score": 20.96
+      "price": 0.71,
+      "gain_30d_pct": 41.9,
+      "market_cap_m": 265.0,
+      "avg_volume_m": 26.82,
+      "short_pct_float": 15.8,
+      "score": 20.04
     }
   ]
 }
