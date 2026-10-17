@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-16T00:35:29Z",
- "n_days": 28,
+ "generated_at": "2026-10-17T00:42:45Z",
+ "n_days": 29,
  "t8_by_event_answer": {
   "有": {
    "n": 7,
@@ -19,6 +19,62 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-10-15",
+   "decided_at": "2026-10-16T00:35:02.126Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-10-15_NVDA_2026-11-20_230.0",
+     "ticker": "NVDA",
+     "expiry": "2026-11-20",
+     "strike": 230,
+     "entry_price": 5.75,
+     "strategy": "C_LADDER4",
+     "sell_points": {
+      "take_profit": [
+       11.5,
+       23,
+       46
+      ],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "4 口：三口掛 2/4/8x 限價，最後一口 DTE 21 出"
+     },
+     "q_event": {
+      "answer": "未確認",
+      "date": null,
+      "what": "NVIDIA 還沒正式公布 Q3 FY2027 財報日，第三方網站給的日期互相矛盾，其中一個晚於 2026-11-20 到期日，所以無法確認財報會落在到期前",
+      "source": null
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": -3.2,
+       "date": "2026-10-14"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "官方未公布；第三方報11-17/11-18/11-25，末者晚於到期",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-10-14",
    "decided_at": "2026-10-15T00:35:13.170Z",
@@ -171,12 +227,12 @@
      "status": "answered",
      "outcome": {
       "t5": 1.39,
-      "t10": null,
+      "t10": 1.46,
       "t20": null,
-      "peak": 1.39,
+      "peak": 1.46,
       "mature": false,
-      "verdict": "➖持平(峰1.4x/今1.4x)",
-      "filled_at": "2026-10-15"
+      "verdict": "➖持平(峰1.5x/今1.5x)",
+      "filled_at": "2026-10-16"
      }
     }
    ]
@@ -236,7 +292,7 @@
       "peak": 1.5,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-15"
+      "filled_at": "2026-10-16"
      }
     }
    ]
@@ -296,7 +352,7 @@
       "peak": 0.83,
       "mature": false,
       "verdict": "➖持平(峰0.8x/今0.5x)",
-      "filled_at": "2026-10-15"
+      "filled_at": "2026-10-16"
      }
     }
    ]
@@ -356,7 +412,7 @@
       "peak": 1.63,
       "mature": false,
       "verdict": "➖持平(峰1.6x/今1.6x)",
-      "filled_at": "2026-10-15"
+      "filled_at": "2026-10-16"
      }
     },
     {
@@ -405,7 +461,7 @@
       "peak": 0.9,
       "mature": false,
       "verdict": "➖持平(峰0.9x/今0.4x)",
-      "filled_at": "2026-10-15"
+      "filled_at": "2026-10-16"
      }
     },
     {
@@ -454,7 +510,7 @@
       "peak": 1.45,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-15"
+      "filled_at": "2026-10-16"
      }
     }
    ]
