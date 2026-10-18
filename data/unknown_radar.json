@@ -1,18 +1,5 @@
 {
-  "updated_at": "2026-10-16T23:52:33.313457",
-  "count": 1,
-  "blind_spots": [
-    {
-      "name": "EchoStar",
-      "ticker": "SATS",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "EchoStar’s stock looks like a stealthy way to ride the SpaceX wave, J.P. Morgan says",
-        "EchoStar’s stock looks like a stealthy way to ride the SpaceX wave, J.P. Morgan says"
-      ]
-    }
-  ]
+  "updated_at": "2026-10-18T23:39:31.650194",
+  "count": 0,
+  "blind_spots": []
 }

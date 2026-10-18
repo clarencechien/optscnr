@@ -1,39 +1,4 @@
 {
-  "Nasdaq": {
-    "first_seen": "2026-09-03",
-    "last_seen": "2026-10-09",
-    "consecutive_days": 10,
-    "total_mentions": 21,
-    "ticker": "NDAQ"
-  },
-  "North American": {
-    "first_seen": "2026-10-09",
-    "last_seen": "2026-10-09",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "NOA"
-  },
-  "Sports": {
-    "first_seen": "2026-10-09",
-    "last_seen": "2026-10-09",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "LTRYW"
-  },
-  "Starlink": {
-    "first_seen": "2026-10-10",
-    "last_seen": "2026-10-10",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "OTAI-UN"
-  },
-  "Delta Air Lines": {
-    "first_seen": "2026-10-10",
-    "last_seen": "2026-10-10",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "DAL"
-  },
   "Stellantis": {
     "first_seen": "2026-10-12",
     "last_seen": "2026-10-12",
