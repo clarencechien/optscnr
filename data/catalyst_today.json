@@ -1,29 +1,25 @@
 {
-  "updated_at": "2026-10-16T22:58:06.859755",
+  "updated_at": "2026-10-18T22:32:25.270330",
   "stats": {
     "total_items": 57,
-    "items_with_company": 16,
-    "items_with_catalyst": 9,
-    "items_both": 4
+    "items_with_company": 8,
+    "items_with_catalyst": 6,
+    "items_both": 3
   },
-  "count": 11,
+  "count": 7,
   "tickers": [
     "TSLA",
-    "CRWV",
-    "TWLO",
-    "BA",
+    "BRK-B",
     "AAPL",
-    "NFLX",
-    "NVDA",
-    "NKE",
-    "OKTA",
-    "RKLB",
-    "PLTR"
+    "META",
+    "AMZN",
+    "BA",
+    "MSFT"
   ],
   "details": [
     {
       "symbol": "TSLA",
-      "score": 6.5,
+      "score": 6,
       "evidence": [
         {
           "title": "Tesla unveils long-delayed Roadster developed with SpaceX, fueling merger speculation",
@@ -39,70 +35,36 @@
             "merger"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "Tesla shares caught up in tech rout despite new Roadster with flight capabilities",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWV",
-      "score": 3.0,
+      "symbol": "BRK-B",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "The Austin Powers steamroller: How to trade CoreWeave's slow moving crisis",
+          "title": "Software’s new consolidator gets big vote of confidence from Berkshire",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Here's how the CoreWeave sell-off is affecting OpenAI vs. Anthropic valuations",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Why did CoreWeave stock get crushed this week? Look to this corner of the debt market for clues",
+          "title": "Berkshire shares buck market sell-off, rally to highest since Buffett said he would step down as CEO",
           "catalysts": [
-            "surged"
+            "rally"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TWLO",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Twilio falls 11% on sector-wide selling",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Norway's $2 trillion wealth fund was frozen out of major defense companies. That may be about to change",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Exclusive-Boeing sales chief McMullen to retire, company memo says",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "AAPL",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
+        {
+          "title": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
           "title": "Apple’s $1,999 iPhone Duo puts the company's status-symbol power to the test",
           "catalysts": [],
@@ -111,66 +73,49 @@
       ]
     },
     {
-      "symbol": "NFLX",
-      "score": 0.5,
+      "symbol": "META",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Here's who Netflix just brought in to run content — and what it means for the streamer",
+          "title": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "These surprising stocks could be some of the biggest drivers of S&P 500 earnings growth",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NVDA",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "I watched Nvidia's Jensen Huang work the room in London. He brought big checks — and a blunt message",
+          "title": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NKE",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nike's India campus is a long-term growth bet amid turnaround",
+          "title": "These surprising stocks could be some of the biggest drivers of S&P 500 earnings growth",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "OKTA",
+      "symbol": "MSFT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Okta slumps 10% as recent profit-taking continues",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RKLB",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Rocket Lab extends losing streak with another 8% retreat",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Palantir Technologies declines 7% amid broader tech selloff",
+          "title": "Microsoft pulls out of UK data center deal with Nscale, Telegraph reports",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -178,7 +123,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 2
+    "Anthropic (private)": 2
   }
 }
