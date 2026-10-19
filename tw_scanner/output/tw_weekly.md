@@ -7,7 +7,7 @@
 - 週檢查（2026-10-16）：本週無警報、預算未動 → 等（2026-10-23 再看）。
 - 鋒面 ☀️ RISK_ON（本週未變）。
 - 2308 前提 🔴 RED；無背離（前提 RED、價格 20 日 -4.1%）；PER 52.2，3 年分位 77 → 72
-- 2330 前提 🟡 YELLOW；無背離（前提 YELLOW、價格 20 日 +1.7%）；PER 28.9，3 年分位 71 → 78
+- 2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 +1.7%）；PER 28.1，3 年分位 67 → 71
 - 投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.67%。
 
 ## 1. 本期機械指示（DCA 規則影子帳本）
@@ -52,16 +52,16 @@
 - 回填樣本 109 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
 
 ### 2330
-- 前提（最近全模組 2026-10-15）：🟡 YELLOW
-- 無背離（前提 YELLOW、價格 20 日 +1.7%）；PER 28.9，3 年分位 71 → 78
+- 前提（最近全模組 2026-10-19）：🟢 GREEN
+- 無背離（前提 GREEN、價格 20 日 +1.7%）；PER 28.1，3 年分位 67 → 71
   - 🟢 M1 revenue_acceleration：2026-09 YoY +54.6%, slope -4.41pp/月, 連續減速 0 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9
-  - 🟢 M3 adr_premium：ADR 溢價 +14.1%（1 年第 22 百分位；觀察）
+  - 🟢 M3 adr_premium：ADR 溢價 +10.6%（1 年第 5 百分位；觀察）
   - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3675.7M, YoY +60.6%
-  - 🟡 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:9e(10m) / cowos_capacity:4e / geopolitics:5e / hyperscaler_capex:6e
+  - 🟢 M5 narrative_triggers：export_controls_tariffs:16e / n2_arizona_ramp:10e(11m) / cowos_capacity:4e / geopolitics:5e / hyperscaler_capex:6e
   - 🟢 M6 peer_divergence：cohort 內 2330 未被對手顯著反超（離散在容忍帶內）
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
-  - 🟢 M9 valuation：PER 28.9（3 年第 78 百分位；20 日前第 71）；觀察
+  - 🟢 M9 valuation：PER 28.1（3 年第 71 百分位；20 日前第 67）；觀察
 - 回填樣本 5 筆（T+20 超額）；退役判準見 `tsmc_radar_report.md`
 
 
@@ -103,4 +103,4 @@
 - ✅ 賭場 sector：最新 2026-10-16
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-19T09:18:19+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-19T10:00:50+00:00*
