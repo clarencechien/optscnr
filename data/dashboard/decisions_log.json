@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-19T00:35:43Z",
+ "generated_at": "2026-10-19T23:19:27Z",
  "n_days": 30,
  "t8_by_event_answer": {
   "有": {
@@ -133,7 +133,15 @@
      },
      "note": "ETF無財報；FOMC決議10-28；Strategy之MSCI資格決定預計10-16",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.73,
+      "t10": null,
+      "t20": null,
+      "peak": 0.73,
+      "mature": false,
+      "verdict": "➖持平(峰0.7x/今0.7x)",
+      "filled_at": "2026-10-19"
+     }
     }
    ]
   },
@@ -242,7 +250,7 @@
       "peak": 1.46,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-16"
+      "filled_at": "2026-10-19"
      }
     }
    ]
@@ -302,7 +310,7 @@
       "peak": 1.5,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-16"
+      "filled_at": "2026-10-19"
      }
     }
    ]
@@ -362,7 +370,7 @@
       "peak": 0.83,
       "mature": false,
       "verdict": "➖持平(峰0.8x/今0.5x)",
-      "filled_at": "2026-10-16"
+      "filled_at": "2026-10-19"
      }
     }
    ]
@@ -422,7 +430,7 @@
       "peak": 1.63,
       "mature": false,
       "verdict": "➖持平(峰1.6x/今1.6x)",
-      "filled_at": "2026-10-16"
+      "filled_at": "2026-10-19"
      }
     },
     {
@@ -471,7 +479,7 @@
       "peak": 0.9,
       "mature": false,
       "verdict": "➖持平(峰0.9x/今0.4x)",
-      "filled_at": "2026-10-16"
+      "filled_at": "2026-10-19"
      }
     },
     {
@@ -520,7 +528,7 @@
       "peak": 1.45,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-16"
+      "filled_at": "2026-10-19"
      }
     }
    ]

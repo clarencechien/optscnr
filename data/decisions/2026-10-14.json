@@ -59,7 +59,16 @@
         "source": null
       },
       "note": "ETF無財報；FOMC決議10-28；Strategy之MSCI資格決定預計10-16",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.73,
+        "t10": null,
+        "t20": null,
+        "peak": 0.73,
+        "mature": false,
+        "verdict": "➖持平(峰0.7x/今0.7x)",
+        "filled_at": "2026-10-19"
+      }
     }
   ],
   "facts_proposed": [
