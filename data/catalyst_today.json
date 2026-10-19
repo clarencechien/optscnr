@@ -1,72 +1,77 @@
 {
-  "updated_at": "2026-10-18T22:32:25.270330",
+  "updated_at": "2026-10-19T23:53:59.227751",
   "stats": {
-    "total_items": 57,
+    "total_items": 37,
     "items_with_company": 8,
-    "items_with_catalyst": 6,
-    "items_both": 3
+    "items_with_catalyst": 8,
+    "items_both": 2
   },
-  "count": 7,
+  "count": 8,
   "tickers": [
-    "TSLA",
-    "BRK-B",
-    "AAPL",
-    "META",
     "AMZN",
+    "NVDA",
+    "TGT",
+    "MU",
+    "META",
+    "INTC",
     "BA",
-    "MSFT"
+    "GOOGL"
   ],
   "details": [
     {
-      "symbol": "TSLA",
+      "symbol": "AMZN",
       "score": 6,
       "evidence": [
         {
-          "title": "Tesla unveils long-delayed Roadster developed with SpaceX, fueling merger speculation",
+          "title": "3M expands Amazon data center partnership, shares gain",
           "catalysts": [
-            "merger",
-            "unveils"
+            "gain",
+            "partnership"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Prediction market odds on Tesla-SpaceX merger are above 50% for early 2027",
+          "title": "3M rises after disclosing expanded Amazon data center products relationship",
           "catalysts": [
-            "merger"
+            "rises"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "BRK-B",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Software’s new consolidator gets big vote of confidence from Berkshire",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Berkshire shares buck market sell-off, rally to highest since Buffett said he would step down as CEO",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
+      "symbol": "NVDA",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
+          "title": "Micron and other chip stocks spring back to life after bruising selloff",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Apple’s $1,999 iPhone Duo puts the company's status-symbol power to the test",
+          "title": "Nvidia-backed Nscale, Anthropic in talks for new $45 billion AI cloud deal, source says",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "When should you dump your target-date funds?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron and other chip stocks spring back to life after bruising selloff",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -74,26 +79,21 @@
     },
     {
       "symbol": "META",
-      "score": 1.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "These surprising stocks could be some of the biggest drivers of S&P 500 earnings growth",
+          "title": "Micron and other chip stocks spring back to life after bruising selloff",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "INTC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Always on, always listening: New AI devices are pushing legal limits and could put users in jeopardy",
+          "title": "Why a former Intel skeptic is giving up his negative call on the stock after four years",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -104,18 +104,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "These surprising stocks could be some of the biggest drivers of S&P 500 earnings growth",
+          "title": "US set to announce certification of Boeing 737 MAX 10 on Tuesday, sources say",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft pulls out of UK data center deal with Nscale, Telegraph reports",
+          "title": "Former Google CEO Schmidt owns 1% stake in Anthropic, Bloomberg reports",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -123,6 +123,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2
+    "Anthropic (private)": 5,
+    "OpenAI (private)": 1
   }
 }
