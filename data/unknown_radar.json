@@ -1,5 +1,18 @@
 {
-  "updated_at": "2026-10-18T23:39:31.650194",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-10-20T00:39:09.793905",
+  "count": 1,
+  "blind_spots": [
+    {
+      "name": "Credit",
+      "ticker": "CACC",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Credit markets have entered uncharted territory as the riskiest junk bonds send a warning to investo",
+        "Credit markets have entered uncharted territory as the riskiest junk bonds send a warning to investo"
+      ]
+    }
+  ]
 }

@@ -1,11 +1,4 @@
 {
-  "Stellantis": {
-    "first_seen": "2026-10-12",
-    "last_seen": "2026-10-12",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "STLA"
-  },
   "Six Flags": {
     "first_seen": "2026-10-13",
     "last_seen": "2026-10-14",
@@ -75,5 +68,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "SATS"
+  },
+  "Credit": {
+    "first_seen": "2026-10-20",
+    "last_seen": "2026-10-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CACC"
   }
 }
