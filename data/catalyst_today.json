@@ -1,37 +1,158 @@
 {
-  "updated_at": "2026-10-19T23:53:59.227751",
+  "updated_at": "2026-10-20T23:19:25.200937",
   "stats": {
-    "total_items": 37,
-    "items_with_company": 8,
-    "items_with_catalyst": 8,
-    "items_both": 2
+    "total_items": 57,
+    "items_with_company": 18,
+    "items_with_catalyst": 9,
+    "items_both": 7
   },
-  "count": 8,
+  "count": 14,
   "tickers": [
-    "AMZN",
-    "NVDA",
+    "TSLA",
+    "SMCI",
+    "DELL",
+    "HPE",
+    "NFLX",
+    "WMT",
+    "CRM",
     "TGT",
-    "MU",
-    "META",
-    "INTC",
     "BA",
-    "GOOGL"
+    "AAPL",
+    "CRWV",
+    "GM",
+    "COST",
+    "AMZN"
   ],
   "details": [
     {
-      "symbol": "AMZN",
-      "score": 6,
+      "symbol": "TSLA",
+      "score": 8,
       "evidence": [
         {
-          "title": "3M expands Amazon data center partnership, shares gain",
+          "title": "Tesla’s stock rises as Elon Musk drops new clues about a possible SpaceX merger",
           "catalysts": [
-            "gain",
-            "partnership"
+            "rises",
+            "drops",
+            "merger"
           ],
           "has_catalyst": true
         },
         {
-          "title": "3M rises after disclosing expanded Amazon data center products relationship",
+          "title": "SpaceX and Tesla form special committees to evaluate potential merger, Musk says",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "SMCI",
+      "score": 4.5,
+      "evidence": [
+        {
+          "title": "Super Micro’s stock soars after surprise update — with Dell and HPE shares joining the rally",
+          "catalysts": [
+            "soars",
+            "rally"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Super Micro sees quarterly revenue soaring on AI server boom",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Super Micro’s stock soars after surprise update — with Dell and HPE shares joining the rally",
+          "catalysts": [
+            "soars",
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "HPE",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Super Micro’s stock soars after surprise update — with Dell and HPE shares joining the rally",
+          "catalysts": [
+            "soars",
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 3.5,
+      "evidence": [
+        {
+          "title": "Netflix posts third-quarter earnings beat, but shares fall on advertising and revenue guidance",
+          "catalysts": [
+            "earnings beat"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Traders are betting Netflix's stock drama may be coming to an end",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Netflix vows to revive viewership trends, but investors hit ‘sell’ on the stock",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Walmart launches joint membership with Sam's Club as it leans into delivery, gas discounts",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Walmart takes aim at Amazon and Costco with new membership program — but is it a good deal?",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 51%",
+          "catalysts": [
+            "acquisition"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Western Alliance projects 11%-12% net interest income growth as deposit optimization target rises to at least $5b",
           "catalysts": [
             "rises"
           ],
@@ -40,82 +161,76 @@
       ]
     },
     {
-      "symbol": "NVDA",
+      "symbol": "BA",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Micron and other chip stocks spring back to life after bruising selloff",
+          "title": "Boeing wins FAA approval for 737 Max 10 after years of delays as Duffy says certification process should be faster",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia-backed Nscale, Anthropic in talks for new $45 billion AI cloud deal, source says",
+          "title": "FAA certifies Boeing’s 737 MAX 10, clearing way for deliveries",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
-      "score": 0.5,
+      "symbol": "AAPL",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "When should you dump your target-date funds?",
+          "title": "Apple adds U.S. titanium supplier for iPhone Duo as supply stays tight",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple shares aren't cheap. Here's how to get long for less",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "CRWV",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron and other chip stocks spring back to life after bruising selloff",
+          "title": "Obsessed with CoreWeave and the AI trade? You're missing out on some great stocks",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
+      "symbol": "GM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron and other chip stocks spring back to life after bruising selloff",
+          "title": "General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "INTC",
+      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why a former Intel skeptic is giving up his negative call on the stock after four years",
+          "title": "Walmart takes aim at Amazon and Costco with new membership program — but is it a good deal?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
+      "symbol": "AMZN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "US set to announce certification of Boeing 737 MAX 10 on Tuesday, sources say",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Former Google CEO Schmidt owns 1% stake in Anthropic, Bloomberg reports",
+          "title": "Walmart takes aim at Amazon and Costco with new membership program — but is it a good deal?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -123,7 +238,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 5,
-    "OpenAI (private)": 1
+    "OpenAI (private)": 2,
+    "Anthropic (private)": 1
   }
 }
