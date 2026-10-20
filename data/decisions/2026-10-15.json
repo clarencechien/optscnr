@@ -63,7 +63,16 @@
         "source": null
       },
       "note": "官方未公布；第三方報11-17/11-18/11-25，末者晚於到期",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.84,
+        "t10": null,
+        "t20": null,
+        "peak": 0.84,
+        "mature": false,
+        "verdict": "➖持平(峰0.8x/今0.8x)",
+        "filled_at": "2026-10-20"
+      }
     }
   ],
   "facts_proposed": [

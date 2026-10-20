@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-20T01:13:35Z",
+ "generated_at": "2026-10-20T23:16:07Z",
  "n_days": 31,
  "t8_by_event_answer": {
   "有": {
@@ -91,7 +91,15 @@
      },
      "note": "官方未公布；第三方報11-17/11-18/11-25，末者晚於到期",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.84,
+      "t10": null,
+      "t20": null,
+      "peak": 0.84,
+      "mature": false,
+      "verdict": "➖持平(峰0.8x/今0.8x)",
+      "filled_at": "2026-10-20"
+     }
     }
    ]
   },
@@ -150,7 +158,7 @@
       "peak": 0.73,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-10-19"
+      "filled_at": "2026-10-20"
      }
     }
    ]
@@ -260,7 +268,7 @@
       "peak": 1.46,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-19"
+      "filled_at": "2026-10-20"
      }
     }
    ]
@@ -320,7 +328,7 @@
       "peak": 1.5,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-19"
+      "filled_at": "2026-10-20"
      }
     }
    ]
@@ -380,7 +388,7 @@
       "peak": 0.83,
       "mature": false,
       "verdict": "➖持平(峰0.8x/今0.5x)",
-      "filled_at": "2026-10-19"
+      "filled_at": "2026-10-20"
      }
     }
    ]
@@ -440,7 +448,7 @@
       "peak": 1.63,
       "mature": false,
       "verdict": "➖持平(峰1.6x/今1.6x)",
-      "filled_at": "2026-10-19"
+      "filled_at": "2026-10-20"
      }
     },
     {
@@ -489,7 +497,7 @@
       "peak": 0.9,
       "mature": false,
       "verdict": "➖持平(峰0.9x/今0.4x)",
-      "filled_at": "2026-10-19"
+      "filled_at": "2026-10-20"
      }
     },
     {
@@ -538,7 +546,7 @@
       "peak": 1.45,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-19"
+      "filled_at": "2026-10-20"
      }
     }
    ]
