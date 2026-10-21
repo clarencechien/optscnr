@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-10-21T13:22:24+00:00",
- "market_date": "2026-10-20",
+ "generated_at": "2026-10-21T14:12:29+00:00",
+ "market_date": "2026-10-21",
  "today": "2026-10-21",
  "days_since_ipo": 131,
- "price": 147.9600067138672,
- "market_cap_t": 1.947,
+ "price": 164.80999755859375,
+ "market_cap_t": 2.169,
  "c_pool": {
   "level": "L1",
   "level_prev": "L1",
@@ -12,38 +12,54 @@
   "gate_mode": "near",
   "gates": {
    "near": {
-    "value": 0.6554803332519532,
-    "pctile": 51.1,
-    "rel_calm": false,
-    "abs_acceptable": false,
+    "pctile": 21.3,
+    "rel_calm": true,
+    "abs_acceptable": true,
     "stable": false,
+    "n_samples": 89,
+    "value": 0.5001270690917969,
+    "ok": false,
     "level": "L1",
     "pctile_calm": 40,
     "abs_gate": 0.55
    },
    "leaps": {
-    "value": 0.5951,
-    "pctile": 2.1,
+    "pctile": 2.0,
     "rel_calm": true,
     "abs_acceptable": false,
     "stable": true,
+    "n_samples": 49,
+    "value": 0.5902,
+    "exp": "2029-01-19",
+    "ok": false,
     "level": "L1",
     "pctile_calm": 40,
     "abs_gate": 0.55
    },
    "carry": {
-    "min_carry_pct": 5.9,
-    "ok": false,
+    "min_carry_pct": 0.03,
+    "best_strike": {
+     "exp": "2028-12-15",
+     "strike": 20.0,
+     "bid": 141.4,
+     "ask": 148.45,
+     "oi": 202,
+     "dte": 786,
+     "intrinsic": 144.81,
+     "extrinsic": 0.12,
+     "carry_pct_annual": 0.03
+    },
+    "ok": true,
     "stable": false,
-    "level": "L1",
     "threshold": 5.0,
-    "approx": true
+    "n_strikes": 154,
+    "level": "L1"
    }
   },
   "l2_streak_days": 0,
   "l2_start": null,
   "l2_last_date": "2026-10-14",
-  "l2_days_since_close": 4,
+  "l2_days_since_close": 5,
   "l2_segments": [
    {
     "start": "2026-08-25",
@@ -63,31 +79,31 @@
   ],
   "conditions": {
    "iv_gate_calm_stable": false,
-   "iv_gate_abs_ok": false,
+   "iv_gate_abs_ok": true,
    "liquidity_ok": true,
    "viewpoint_ok": true,
    "labels": [
-    "IV 相對冷卻且穩定",
-    "IV 絕對可接受（≤防線）",
+    "IV 相對冷卻且穩定（near）",
+    "IV 絕對可接受（≤防線）（near）",
     "流動性過關",
     "觀點信心達標"
    ]
   },
   "iv": {
-   "atm": 0.6554803332519532,
-   "pctile": 51.1,
+   "atm": 0.5001270690917969,
+   "pctile": 21.3,
    "stable": false,
-   "leaps_atm": 0.5951,
+   "leaps_atm": 0.5902,
    "leaps_exp": "2029-01-19",
    "abs_gate": 0.55
   },
   "liquidity": {
-   "total_int": 1150288,
-   "usable_strikes": 107,
-   "best_spread_pct": 0.017,
+   "total_int": 1168764,
+   "usable_strikes": 178,
+   "best_spread_pct": 0.008,
    "liquid": true
   },
-  "skew": "neutral",
+  "skew": "put",
   "viewpoint": {
    "confidence": 5,
    "catalyst": "xAI grok 4.7 incoming, 4.6 分數比預期還好",
@@ -98,69 +114,69 @@
   },
   "strikes": [
    {
-    "exp": "2028-12-15",
+    "exp": "2028-01-21",
     "strike": 100.0,
-    "bid": 72.0,
-    "ask": 73.25,
-    "oi": 7703,
-    "spread_pct": 0.017,
-    "dte": 787,
-    "mid": 72.62,
-    "intrinsic": 47.96,
-    "extrinsic": 24.66,
-    "carry_pct_annual": 7.73
-   },
-   {
-    "exp": "2027-09-17",
-    "strike": 90.0,
-    "bid": 65.25,
-    "ask": 66.55,
-    "oi": 671,
-    "spread_pct": 0.02,
-    "dte": 332,
-    "mid": 65.9,
-    "intrinsic": 57.96,
-    "extrinsic": 7.94,
-    "carry_pct_annual": 5.9
-   },
-   {
-    "exp": "2027-12-17",
-    "strike": 110.0,
-    "bid": 54.5,
-    "ask": 55.6,
-    "oi": 265,
-    "spread_pct": 0.02,
-    "dte": 423,
-    "mid": 55.05,
-    "intrinsic": 37.96,
-    "extrinsic": 17.09,
-    "carry_pct_annual": 9.97
+    "bid": 76.35,
+    "ask": 77.0,
+    "oi": 3029,
+    "spread_pct": 0.008,
+    "dte": 457,
+    "mid": 76.67,
+    "intrinsic": 64.81,
+    "extrinsic": 11.87,
+    "carry_pct_annual": 5.75
    },
    {
     "exp": "2028-01-21",
-    "strike": 90.0,
-    "bid": 69.0,
-    "ask": 70.4,
-    "oi": 158,
-    "spread_pct": 0.02,
-    "dte": 458,
-    "mid": 69.7,
-    "intrinsic": 57.96,
-    "extrinsic": 11.74,
-    "carry_pct_annual": 6.32
+    "strike": 110.0,
+    "bid": 69.7,
+    "ask": 70.5,
+    "oi": 721,
+    "spread_pct": 0.011,
+    "dte": 457,
+    "mid": 70.1,
+    "intrinsic": 54.81,
+    "extrinsic": 15.29,
+    "carry_pct_annual": 7.41
+   },
+   {
+    "exp": "2028-01-21",
+    "strike": 130.0,
+    "bid": 56.65,
+    "ask": 57.4,
+    "oi": 1651,
+    "spread_pct": 0.013,
+    "dte": 457,
+    "mid": 57.02,
+    "intrinsic": 34.81,
+    "extrinsic": 22.22,
+    "carry_pct_annual": 10.77
+   },
+   {
+    "exp": "2028-01-21",
+    "strike": 95.0,
+    "bid": 79.35,
+    "ask": 80.5,
+    "oi": 199,
+    "spread_pct": 0.014,
+    "dte": 457,
+    "mid": 79.92,
+    "intrinsic": 69.81,
+    "extrinsic": 10.12,
+    "carry_pct_annual": 4.9
    },
    {
     "exp": "2028-06-16",
-    "strike": 110.0,
-    "bid": 61.05,
-    "ask": 62.3,
-    "oi": 263,
-    "spread_pct": 0.02,
-    "dte": 605,
-    "mid": 61.67,
-    "intrinsic": 37.96,
-    "extrinsic": 23.71,
-    "carry_pct_annual": 9.67
+    "strike": 100.0,
+    "bid": 80.35,
+    "ask": 81.45,
+    "oi": 577,
+    "spread_pct": 0.014,
+    "dte": 604,
+    "mid": 80.9,
+    "intrinsic": 64.81,
+    "extrinsic": 16.09,
+    "carry_pct_annual": 5.9
    }
   ],
   "response": {
@@ -182,15 +198,15 @@
  "positions": {
   "shares": 779,
   "avg_cost": 145.56,
-  "unrealized_pct": 1.6,
+  "unrealized_pct": 13.2,
   "pool_c_cash": 20000,
   "n_buys": 4
  },
  "sage_health": {
-  "last_run": "2026-10-21T00:41:16.270969",
-  "market_date": "2026-10-20",
+  "last_run": "2026-10-21T14:12:29.498034",
+  "market_date": "2026-10-21",
   "ran_for_latest_market_day": true,
-  "latest_market_day": "2026-10-20",
+  "latest_market_day": "2026-10-21",
   "missed_days": [
    "2026-09-14",
    "2026-09-15",
@@ -206,7 +222,7 @@
   {
    "level": "ok",
    "label": "Sage 今日有跑",
-   "text": "Option Sage 市場日 2026-10-20，判定 L1"
+   "text": "Option Sage 市場日 2026-10-21，判定 L1"
   },
   {
    "level": "warn",
@@ -221,12 +237,12 @@
   {
    "level": "ok",
    "label": "space_radar 正常",
-   "text": "space_radar 市值 1.947T、階段 3"
+   "text": "space_radar 市值 2.169T、階段 3"
   }
  ],
- "do_line": "C 池：🟡 L2 在 4 個交易日前關門（最後 2026-10-14），現在 L1。",
+ "do_line": "C 池：🟡 L2 在 5 個交易日前關門（最後 2026-10-14），現在 L1。",
  "items": [
-  "關門原因看第 1 段四條件哪一條變紅；近月 IV 現在 66%。",
+  "關門原因看第 1 段四條件哪一條變紅；近月 IV 現在 50%。",
   "剛關門的窗常常會再開（這檔 IV 冷靜態是 45–50%），不用追，但要知道它剛亮過。",
   "資料都正常。"
  ],
