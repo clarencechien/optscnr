@@ -23,6 +23,13 @@
       "price": 159,
       "pool": "A-market",
       "note": "A Pool 補單"
+    },
+    {
+      "date": "2026-07-30",
+      "shares": 209,
+      "price": 114.68,
+      "pool": "B-floor",
+      "note": "B 池第一張 GTC（1.5T 錨點）成交"
     }
   ]
 }
