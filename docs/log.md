@@ -232,7 +232,9 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
   $100C 2028-12 是 7.73%，都 ❌（門檻 5%）。`level_leaps` 全程 0 日 L2（LEAPS IV 絕對值一直 > 55%）。
 - `spcx_brief.py` → `output/spcx_brief.json`（零網路；缺檔 NO_DATA；`--selftest` 12 項）：level／L2 連續日／起算日／關門幾個交易日／
   三條線／四條件／strike（含 carry）／觀點新鮮度／持倉／回應狀態（L2 起算 2 個交易日為期限，`config/spcx_c_decisions.json` 只增不改）／Sage 健康。
-- `notify_transition.py`：只在轉換、Sage 沒跑、逾期第一天發一則；secrets `SPCX_NOTIFY_URL`／`SPCX_NOTIFY_TOKEN`，沒設只印。
+- `notify_transition.py`：只在轉換、Sage 沒跑、逾期第一天發一則；管道＝BentoDrop API 推送明文模式（`POST {URL}/api/push`、`{"text"}`、
+  Bearer `bd_…`，token 要勾明文；照 bentodrop repo `src/routes/tokens.ts` 的規則對過），secrets `SPCX_NOTIFY_URL`／`SPCX_NOTIFY_TOKEN`，沒設只印；
+  `--test` 可不動資料送一則測試。加密模式（§12.3 ECDH）沒做：要的話用 bentodrop 的 `cli/bentodrop-push.mjs`，Python 不重做。
   workflow 步驟排在 commit **之後**（handoff 寫在 README 之前）：推播掛了 run 變紅但資料已入庫。commit message 帶 `[C池 L1 L1->L2]`。
 
 **呈現層**：Worker `/api/spcx`（轉發，不算）、`/api/brief?m=spcx` 302；`/brief?m=spcx` 第三分頁六段；US／TW 頁頂跨市場橫幅

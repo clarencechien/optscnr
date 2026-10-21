@@ -85,7 +85,9 @@ jobs:
           fi
       # 轉換事件推播（PLAN §五）：只在 level 變、Sage 沒跑、回應逾期第一天發。
       # 排在 commit 之後：推播管道掛了會把 run 標紅（要看得見），但資料已經入庫。
-      # secrets：SPCX_NOTIFY_URL（BentoDrop 推送 endpoint 或 webhook）、SPCX_NOTIFY_TOKEN；沒設就只印不發。
+      # secrets：SPCX_NOTIFY_URL＝https://bentodrop.ai-apps.work（BentoDrop 站台根；程式自己接 /api/push）、
+      #          SPCX_NOTIFY_TOKEN＝BentoDrop 設定 → API Tokens 建的 bd_… token（要勾「明文模式」）。沒設就只印不發。
+      # 想改接一般 webhook：再加 env NOTIFY_FORMAT=webhook。管道驗證：本機 `python spcx_radar/notify_transition.py --test`。
       - name: Notify on C-pool transition
         if: always()
         run: python spcx_radar/notify_transition.py
