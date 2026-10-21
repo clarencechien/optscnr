@@ -1,0 +1,14 @@
+{
+  "_說明": "C 池 L2 亮燈後的人工回應（append-only，手動維護）。每次 L2 段落（transition 到 L2 起算）2 個交易日內必須有一筆；跳過也要寫理由，不然下次還是靜默錯過。spcx_brief.py 讀這裡算 response.status（pending / answered / overdue）。",
+  "_格式": "{date: 回應日, l2_start: 本段 L2 起始日（看 brief 的 c_pool.l2_start）, action: act|skip, detail: act 時寫下了什麼（≤ C 池一半）, reason: 為什麼, by: 誰}",
+  "_SOP": "見 PLAYBOOK.md「C 池 L2 回應 SOP」：①重讀 viewpoint 問『這個催化劑市場知道嗎』②看 Sage 的可用 strike 與 carry_pct_annual 跟 SGOV 比③2 個交易日內寫一筆",
+  "decisions": [
+    {
+      "date": "2026-10-21",
+      "l2_start": "2026-09-22",
+      "action": "skip",
+      "reason": "事後補記：9/22–10/15 這段 L2 亮了 16 個交易日，管道沒接到人（PLAN_2026-10_c_pool_alert）。沒有做出判斷，不算 skip 的理由，只是留痕：這段錯過了。",
+      "by": "clarence"
+    }
+  ]
+}

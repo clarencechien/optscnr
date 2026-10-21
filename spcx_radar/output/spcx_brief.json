@@ -1,0 +1,234 @@
+{
+ "generated_at": "2026-10-21T13:22:24+00:00",
+ "market_date": "2026-10-20",
+ "today": "2026-10-21",
+ "days_since_ipo": 131,
+ "price": 147.9600067138672,
+ "market_cap_t": 1.947,
+ "c_pool": {
+  "level": "L1",
+  "level_prev": "L1",
+  "transition": null,
+  "gate_mode": "near",
+  "gates": {
+   "near": {
+    "value": 0.6554803332519532,
+    "pctile": 51.1,
+    "rel_calm": false,
+    "abs_acceptable": false,
+    "stable": false,
+    "level": "L1",
+    "pctile_calm": 40,
+    "abs_gate": 0.55
+   },
+   "leaps": {
+    "value": 0.5951,
+    "pctile": 2.1,
+    "rel_calm": true,
+    "abs_acceptable": false,
+    "stable": true,
+    "level": "L1",
+    "pctile_calm": 40,
+    "abs_gate": 0.55
+   },
+   "carry": {
+    "min_carry_pct": 5.9,
+    "ok": false,
+    "stable": false,
+    "level": "L1",
+    "threshold": 5.0,
+    "approx": true
+   }
+  },
+  "l2_streak_days": 0,
+  "l2_start": null,
+  "l2_last_date": "2026-10-14",
+  "l2_days_since_close": 4,
+  "l2_segments": [
+   {
+    "start": "2026-08-25",
+    "end": "2026-08-27",
+    "days": 2
+   },
+   {
+    "start": "2026-08-31",
+    "end": "2026-09-04",
+    "days": 5
+   },
+   {
+    "start": "2026-09-09",
+    "end": "2026-10-14",
+    "days": 19
+   }
+  ],
+  "conditions": {
+   "iv_gate_calm_stable": false,
+   "iv_gate_abs_ok": false,
+   "liquidity_ok": true,
+   "viewpoint_ok": true,
+   "labels": [
+    "IV 相對冷卻且穩定",
+    "IV 絕對可接受（≤防線）",
+    "流動性過關",
+    "觀點信心達標"
+   ]
+  },
+  "iv": {
+   "atm": 0.6554803332519532,
+   "pctile": 51.1,
+   "stable": false,
+   "leaps_atm": 0.5951,
+   "leaps_exp": "2029-01-19",
+   "abs_gate": 0.55
+  },
+  "liquidity": {
+   "total_int": 1150288,
+   "usable_strikes": 107,
+   "best_spread_pct": 0.017,
+   "liquid": true
+  },
+  "skew": "neutral",
+  "viewpoint": {
+   "confidence": 5,
+   "catalyst": "xAI grok 4.7 incoming, 4.6 分數比預期還好",
+   "thesis": "starship incoming",
+   "updated": "2026-08-18",
+   "age_days": 64,
+   "stale": true
+  },
+  "strikes": [
+   {
+    "exp": "2028-12-15",
+    "strike": 100.0,
+    "bid": 72.0,
+    "ask": 73.25,
+    "oi": 7703,
+    "spread_pct": 0.017,
+    "dte": 787,
+    "mid": 72.62,
+    "intrinsic": 47.96,
+    "extrinsic": 24.66,
+    "carry_pct_annual": 7.73
+   },
+   {
+    "exp": "2027-09-17",
+    "strike": 90.0,
+    "bid": 65.25,
+    "ask": 66.55,
+    "oi": 671,
+    "spread_pct": 0.02,
+    "dte": 332,
+    "mid": 65.9,
+    "intrinsic": 57.96,
+    "extrinsic": 7.94,
+    "carry_pct_annual": 5.9
+   },
+   {
+    "exp": "2027-12-17",
+    "strike": 110.0,
+    "bid": 54.5,
+    "ask": 55.6,
+    "oi": 265,
+    "spread_pct": 0.02,
+    "dte": 423,
+    "mid": 55.05,
+    "intrinsic": 37.96,
+    "extrinsic": 17.09,
+    "carry_pct_annual": 9.97
+   },
+   {
+    "exp": "2028-01-21",
+    "strike": 90.0,
+    "bid": 69.0,
+    "ask": 70.4,
+    "oi": 158,
+    "spread_pct": 0.02,
+    "dte": 458,
+    "mid": 69.7,
+    "intrinsic": 57.96,
+    "extrinsic": 11.74,
+    "carry_pct_annual": 6.32
+   },
+   {
+    "exp": "2028-06-16",
+    "strike": 110.0,
+    "bid": 61.05,
+    "ask": 62.3,
+    "oi": 263,
+    "spread_pct": 0.02,
+    "dte": 605,
+    "mid": 61.67,
+    "intrinsic": 37.96,
+    "extrinsic": 23.71,
+    "carry_pct_annual": 9.67
+   }
+  ],
+  "response": {
+   "required": false,
+   "deadline": null,
+   "status": "n/a",
+   "last": {
+    "date": "2026-10-21",
+    "l2_start": "2026-09-22",
+    "action": "skip",
+    "reason": "事後補記：9/22–10/15 這段 L2 亮了 16 個交易日，管道沒接到人（PLAN_2026-10_c_pool_alert）。沒有做出判斷，不算 skip 的理由，只是留痕：這段錯過了。",
+    "detail": null,
+    "by": "clarence"
+   },
+   "overdue_days": 0,
+   "n_decisions": 1
+  }
+ },
+ "positions": {
+  "shares": 779,
+  "avg_cost": 145.56,
+  "unrealized_pct": 1.6,
+  "pool_c_cash": 20000,
+  "n_buys": 4
+ },
+ "sage_health": {
+  "last_run": "2026-10-21T00:41:16.270969",
+  "market_date": "2026-10-20",
+  "ran_for_latest_market_day": true,
+  "latest_market_day": "2026-10-20",
+  "missed_days": [
+   "2026-09-14",
+   "2026-09-15",
+   "2026-09-16",
+   "2026-09-17",
+   "2026-09-18",
+   "2026-10-08",
+   "2026-10-09"
+  ],
+  "history_has_level": true
+ },
+ "checks": [
+  {
+   "level": "ok",
+   "label": "Sage 今日有跑",
+   "text": "Option Sage 市場日 2026-10-20，判定 L1"
+  },
+  {
+   "level": "warn",
+   "label": "Sage 缺 7 天",
+   "text": "近 45 天 Sage 沒跑的交易日：2026-09-14、2026-09-15、2026-09-16、2026-09-17、2026-09-18、2026-10-08、2026-10-09"
+  },
+  {
+   "level": "warn",
+   "label": "觀點可能過期",
+   "text": "viewpoint 更新於 2026-08-18，已 64 天（>60）；L2 亮時先重讀催化劑還成不成立"
+  },
+  {
+   "level": "ok",
+   "label": "space_radar 正常",
+   "text": "space_radar 市值 1.947T、階段 3"
+  }
+ ],
+ "do_line": "C 池：🟡 L2 在 4 個交易日前關門（最後 2026-10-14），現在 L1。",
+ "items": [
+  "關門原因看第 1 段四條件哪一條變紅；近月 IV 現在 66%。",
+  "剛關門的窗常常會再開（這檔 IV 冷靜態是 45–50%），不用追，但要知道它剛亮過。",
+  "資料都正常。"
+ ],
+ "note": "C 池 gate 不是 hand：brief 只轉發 Sage 的判定與可用 strike，不建議部位；回應紀錄在 config/spcx_c_decisions.json。"
+}

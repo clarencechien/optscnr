@@ -75,5 +75,10 @@
   "opt_deep_itm_delta": 0.8,
   "opt_deep_itm_moneyness": 0.85,
   "opt_viewpoint_min_confidence": 4,
+  "opt_gate_mode": "near",
+  "opt_leaps_iv_pctile_calm": 40,
+  "opt_leaps_iv_abs_acceptable": 0.55,
+  "opt_max_carry_pct": 5.0,
+  "_gate_mode_note": "near=近月ATM IV(現狀) / leaps=LEAPS IV / carry=深價內LEAPS外在價值年化%。三條線都算都記，只有這個決定 L2。12/9 復盤用 history 選。",
   "_option_sage_note": "Option Sage(C池沉思者)的閾值。嚴起點，可調。流動性門檻先保守，用 spcx_options_history.csv 累積後校準。"
 }

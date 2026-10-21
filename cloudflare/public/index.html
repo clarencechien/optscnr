@@ -49,6 +49,10 @@
     font-size: 13px; font-weight: 600; background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--hair); white-space: nowrap; }
   .chip i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); display: inline-block; }
   .chip.ok i { background: var(--good); } .chip.warn i { background: var(--warn); } .chip.bad i { background: var(--crit); } .chip.info i { background: var(--accent); }
+  /* SPCX C 池燈（PLAN_2026-10_c_pool_alert §4.2）：L0 灰／L1 黃／L2 綠／回應逾期紅閃；點了開 /brief?m=spcx，沒有按鈕 */
+  a.chip { text-decoration: none; } a.chip:hover { border-color: var(--accent); }
+  .chip.blink { border-color: var(--crit); animation: chipblink 1s steps(2, start) infinite; }
+  @keyframes chipblink { to { border-color: transparent; } }
   .ts { color: var(--muted); font-size: 13px; }
 
   /* ---- layout ---- */
@@ -131,6 +135,7 @@
   <span class="chip info" id="mktChip"><i></i>市場日 —</span>
   <span class="chip" id="schedChip"><i></i>排程 —</span>
   <span class="chip" id="llmChip"><i></i>LLM —</span>
+  <a class="chip" id="spcxChip" href="/brief?m=spcx" target="_blank" rel="noopener" title="SPCX C 池 Option Sage 判定（點開 C 池頁）"><i></i>SPCX C 池 —</a>
   <span class="spacer"></span>
   <span class="ts" id="ts">載入中…</span>
 </div></header>
@@ -151,6 +156,7 @@
     <button role="tab" data-tab="sched">排程</button>
     <a href="/brief" target="_blank" rel="noopener" style="padding:6px 14px;font-weight:600;color:var(--accent);white-space:nowrap;text-decoration:none">電子報 ↗</a>
     <a href="/brief?m=tw" target="_blank" rel="noopener" style="padding:6px 14px;font-weight:600;color:var(--accent);white-space:nowrap;text-decoration:none">台股週報 ↗</a>
+    <a href="/brief?m=spcx" target="_blank" rel="noopener" style="padding:6px 14px;font-weight:600;color:var(--accent);white-space:nowrap;text-decoration:none">SPCX C 池 ↗</a>
   </div>
 
   <!-- ===================== 今日候選 ===================== -->
@@ -487,7 +493,21 @@ async function loadFacts() {
   catch (e) { $('#factsMeta').textContent = `（/api/facts 讀取失敗：${String(e.message || e).split('｜')[0]}）`; return; }
   renderFacts(); renderCandidates();
 }
-loadLatest(); loadMatrix(); loadDecisions(); loadHealth(); loadFacts();
+async function loadSpcx() {
+  // C 池燈：只讀 /api/spcx（Worker 轉發 spcx_brief.json），顏色只看 level 與回應狀態；Worker／頁面都不做判定
+  const el = $('#spcxChip');
+  try {
+    const b = await getJson('/api/spcx');
+    const c = b.c_pool || {}, r = c.response || {};
+    el.classList.remove('blink');
+    if (r.status === 'overdue') { chip(el, 'bad', `SPCX C 池 L2 回應逾期 ${r.overdue_days} 日`); el.classList.add('blink'); }
+    else if (c.level === 'L2') chip(el, 'ok', `SPCX C 池 L2 第 ${c.l2_streak_days} 日${r.status === 'answered' ? '・已回應' : `・期限 ${String(r.deadline || '').slice(5)}`}`);
+    else if (c.level === 'L1') chip(el, 'warn', `SPCX C 池 L1${c.l2_days_since_close != null && c.l2_days_since_close <= 5 ? `・L2 ${c.l2_days_since_close} 日前關門` : ''}`);
+    else if (c.level === 'L0') chip(el, '', 'SPCX C 池 L0');
+    else chip(el, 'bad', 'SPCX C 池 NO_DATA');
+  } catch (e) { chip(el, '', `SPCX C 池 讀取失敗`); }
+}
+loadLatest(); loadMatrix(); loadDecisions(); loadHealth(); loadFacts(); loadSpcx();
 </script>
 </body>
 </html>

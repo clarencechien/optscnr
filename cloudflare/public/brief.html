@@ -60,6 +60,19 @@
   .big { font-size: 20px; font-weight: 700; }
   .action { border-left: 4px solid var(--accent); padding-left: 12px; margin: 8px 0; }
   .path { display:flex; gap:6px; flex-wrap:wrap; } .path span { padding:3px 10px; border-radius:999px; background:var(--surface-2); border:1px solid var(--hair); font-size:13px; }
+  /* 跨市場橫幅：SPCX C 池 L2 亮著／剛關門／回應逾期（PLAN_2026-10_c_pool_alert §4） */
+  .banner { display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding: 10px 14px; margin: 0 0 10px; border-radius: 10px; border: 1px solid var(--hair);
+    background: var(--surface-2); color: var(--ink); font-size: 15px; line-height: 1.5; }
+  .banner[hidden] { display: none; }
+  .banner b { font-weight: 700; } .banner a { margin-left:auto; font-weight:600; white-space:nowrap; }
+  .banner.green { border-color: var(--good); background: color-mix(in srgb, var(--good) 14%, var(--surface)); }
+  .banner.yellow { border-color: var(--warn); background: color-mix(in srgb, var(--warn) 16%, var(--surface)); }
+  .banner.red { border-color: var(--crit); background: color-mix(in srgb, var(--crit) 14%, var(--surface)); animation: blink 1.2s steps(2, start) infinite; }
+  @keyframes blink { to { border-color: transparent; } }
+  .simple.lv-L2 { border-left-color: var(--good); } .simple.lv-L1 { border-left-color: var(--warn); } .simple.lv-L0 { border-left-color: var(--muted); } .simple.overdue { border-left-color: var(--crit); }
+  .gate-cur td { font-weight: 700; } .cond { display:flex; gap:8px; flex-wrap:wrap; margin: 8px 0; }
+  .cond span { display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border-radius:999px; background:var(--surface-2); border:1px solid var(--hair); font-size:13px; font-weight:600; }
+  .cond span i { width:9px; height:9px; border-radius:50%; background:var(--muted); display:inline-block; } .cond span.ok i { background:var(--good); } .cond span.no i { background:var(--crit); }
   /* 上半：一分鐘白話版（手機優先） */
   .simple { background: var(--surface); border:1px solid var(--hair); border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 16px; margin: 0 0 8px; }
   .simple .do { font-size: 20px; font-weight: 700; line-height: 1.45; margin: 0 0 8px; }
@@ -94,9 +107,10 @@
   <div class="masthead">
     <div><h1 id="title">🚬 optscnr 電子報</h1><div class="date" id="date">載入中…</div></div>
     <div class="nav" id="nav"></div>
-    <div class="switch" id="switch"><a href="/brief?m=us" data-m="us">US 美股</a><a href="/brief?m=tw" data-m="tw">TW 台股</a></div>
+    <div class="switch" id="switch"><a href="/brief?m=us" data-m="us">US 美股</a><a href="/brief?m=tw" data-m="tw">TW 台股</a><a href="/brief?m=spcx" data-m="spcx">SPCX C 池</a></div>
   </div>
 
+  <div class="banner" id="spcx-banner" hidden></div>
   <div class="simple" id="simple"><div class="do" id="simple-do">讀取中…</div><ul id="simple-list"></ul><div class="lights" id="lights"></div><div class="hint">上面是白話版；完整資料在下方，點各段展開。</div></div>
   <div class="tldr" id="tldr-box" hidden><ul id="tldr"></ul></div>
 
@@ -131,6 +145,16 @@
   <details class="sec"><summary><span class="n">6</span>資料健康</summary><div class="body"><div class="card"><ul class="checks" id="tw-checks"></ul></div></div></details>
   </section>
 
+  <section id="spcx" hidden>
+  <div class="full-title">完整資料（點段落展開）</div>
+  <details class="sec"><summary><span class="n">1</span>本回合判定（Option Sage 四條件）</summary><div class="body"><div id="sp-judge"></div></div></details>
+  <details class="sec"><summary><span class="n">2</span>三條 gate 線（只有現行那條決定 L2）</summary><div class="body"><div id="sp-gates"></div></div></details>
+  <details class="sec"><summary><span class="n">3</span>可用 strike（Sage 原樣轉發，不是建議）</summary><div class="body"><div id="sp-strikes"></div></div></details>
+  <details class="sec"><summary><span class="n">4</span>觀點（催化劑／論點）</summary><div class="body"><div id="sp-view"></div></div></details>
+  <details class="sec"><summary><span class="n">5</span>持倉與 C 池現金</summary><div class="body"><div id="sp-pos"></div></div></details>
+  <details class="sec"><summary><span class="n">6</span>資料健康</summary><div class="body"><div class="card"><ul class="checks" id="sp-checks"></ul><div class="muted" id="sp-health"></div></div></div></details>
+  </section>
+
   <div class="foot" id="foot-us">
     唯讀頁，不會觸發 LLM 或補發。資料主權在 git：候選 <code>data/dashboard/</code>、答案 <code>data/decisions/</code>、矩陣 <code>data/strategy_matrix.json</code>。
     完整互動版（History 矩陣、Decisions 逐日、事實庫、排程）在 <a href="/">dashboard</a>（需登入）。<br>
@@ -140,6 +164,11 @@
     唯讀頁，每 5 分鐘從 GitHub 讀 <code>tw_scanner/output/tw_brief.json</code>；不觸發任何動作。
     規則影子帳本是等額假設，不記真實部位；沒有任何一行是買賣建議，曝險與部位由人管。
     人讀版與明細：<a href="https://github.com/clarencechien/optscnr/blob/main/tw_scanner/README.md" target="_blank" rel="noopener">tw_scanner/README.md</a>。
+  </div>
+  <div class="foot" id="foot-spcx" hidden>
+    唯讀頁，每 5 分鐘從 GitHub 讀 <code>spcx_radar/output/spcx_brief.json</code>；Worker 不做任何判定，只轉發 Option Sage 的結果。
+    C 池 gate 不是 hand：這頁沒有任何一行是買賣建議；L2 亮了要做的三步在 PLAYBOOK「C 池 L2 回應 SOP」，回應寫進 <code>spcx_radar/config/spcx_c_decisions.json</code>（只增不改）。
+    人讀版：<a href="https://github.com/clarencechien/optscnr/blob/main/spcx_radar/README.md" target="_blank" rel="noopener">spcx_radar/README.md</a>。
   </div>
 </main>
 
@@ -358,29 +387,134 @@ function renderTW(b) {
   $('#tw-checks').innerHTML = (b.checks || []).map(c => `<li class="${c.level}"><i></i><span>${esc(c.text)}</span></li>`).join('');
 }
 
-// ---------------------------------------------------------------- 切換：?m=tw 只呈現台股、其餘美股
+// ---------------------------------------------------------------- SPCX C 池（Option Sage 判定；Worker 只轉發 spcx_brief.json）
+const LV_EMOJI = { L2: '🟢', L1: '🟡', L0: '⚪' };
+const pc = (x, d = 0) => (x == null ? '—' : (Number(x) * 100).toFixed(d) + '%');
+const md = s => (s ? String(s).slice(5).replace('-', '/') : '—');
+const yn = v => (v == null ? '—' : v ? '✅' : '❌');
+
+/** 跨市場橫幅文字與顏色；回 null 代表不用顯示。只看 level（三條 gate 線不影響橫幅）。 */
+function spcxBanner(b) {
+  const c = b.c_pool || {}, r = c.response || {};
+  const link = `<a href="/brief?m=spcx">看 C 池 →</a>`;
+  if (c.level === 'L2') {
+    if (r.status === 'overdue') return { cls: 'red', html: `🔴 <b>SPCX C 池 L2 亮著，回應已逾期 ${r.overdue_days} 個交易日</b>（期限 ${md(r.deadline)}）。三步 SOP 做完寫進 decisions。${link}` };
+    const resp = r.status === 'answered' ? `已回應（${esc((r.last || {}).action || '')}）` : `回應期限 ${md(r.deadline)}`;
+    return { cls: 'green', html: `🟢 <b>SPCX C 池 L2：第 ${c.l2_streak_days} 個交易日</b>（自 ${md(c.l2_start)}）・${resp}。${link}` };
+  }
+  if (c.l2_days_since_close != null && c.l2_days_since_close <= 5 && c.l2_last_date)
+    return { cls: 'yellow', html: `🟡 <b>SPCX C 池 L2 在 ${c.l2_days_since_close} 個交易日前關門</b>（最後 ${md(c.l2_last_date)}），現在 ${esc(c.level || '—')}。${link}` };
+  return null;
+}
+function showBanner(b) {
+  const bn = spcxBanner(b), el = $('#spcx-banner');
+  if (!bn) { el.hidden = true; return; }
+  el.className = `banner ${bn.cls}`; el.innerHTML = bn.html; el.hidden = false;
+}
+
+function simpleSPCX(b) {
+  return { doLine: b.do_line || 'C 池：資料還沒到。', items: b.items || [] };
+}
+
+function renderSPCX(b) {
+  const c = b.c_pool || {}, r = c.response || {}, g = c.gates || {}, cd = c.conditions || {}, vp = c.viewpoint || {}, p = b.positions || {}, h = b.sage_health || {};
+  $('#date').textContent = `市場日 ${b.market_date || '—'}｜產出 ${tpe(b.generated_at)}（台北）`;
+  $('#nav').innerHTML = '';
+  renderSimple(simpleSPCX(b), b.checks);
+  const sp = $('#simple'); sp.classList.remove('lv-L0', 'lv-L1', 'lv-L2', 'overdue');
+  if (r.status === 'overdue') sp.classList.add('overdue'); else if (c.level) sp.classList.add(`lv-${c.level}`);
+
+  // ---- 1 本回合判定 ----
+  const labels = cd.labels && cd.labels.length === 4 ? cd.labels : ['IV 相對冷卻且穩定', 'IV 絕對可接受（≤防線）', '流動性過關', '觀點信心達標'];
+  const vals = [cd.iv_gate_calm_stable, cd.iv_gate_abs_ok, cd.liquidity_ok, cd.viewpoint_ok];
+  const head = c.level === 'L2' ? `${LV_EMOJI.L2} L2 第 ${c.l2_streak_days} 個交易日 <span class="muted">自 ${esc(c.l2_start || '—')}</span>`
+    : c.level ? `${LV_EMOJI[c.level] || ''} ${esc(c.level)} <span class="muted">${c.l2_last_date ? `上次 L2 ${esc(c.l2_last_date)}（${c.l2_days_since_close} 個交易日前關門）` : '尚未亮過 L2'}</span>`
+    : '⚪ NO_DATA';
+  const respHtml = r.status === 'n/a' ? '<div class="muted">不在 L2，不需回應。</div>'
+    : `<div class="${r.status === 'overdue' ? 'action' : ''}" style="${r.status === 'overdue' ? 'border-left-color:var(--crit)' : ''}">回應：<b>${esc({ pending: '待回應', answered: '已回應', overdue: `逾期 ${r.overdue_days} 個交易日` }[r.status] || r.status)}</b>・期限 ${esc(r.deadline || '—')}（L2 起算 2 個交易日）</div>`;
+  const last = r.last ? `<div class="muted" style="margin-top:6px">最近一筆回應 ${esc(r.last.date)}：<b>${esc(r.last.action)}</b>（L2 自 ${esc(r.last.l2_start || '—')}）${r.last.reason ? '——' + esc(r.last.reason) : ''}${r.last.by ? `・${esc(r.last.by)}` : ''}</div>` : '<div class="muted" style="margin-top:6px">decisions 尚無任何回應紀錄。</div>';
+  const segs = (c.l2_segments || []).slice(-5).reverse();
+  $('#sp-judge').innerHTML = `<div class="card"><div class="big">${head}</div>
+    <div class="cond">${labels.map((l, i) => `<span class="${vals[i] == null ? '' : vals[i] ? 'ok' : 'no'}"><i></i>${esc(l)}</span>`).join('')}</div>
+    <div class="kv"><div><b>gate 模式</b><span>${esc(c.gate_mode || '—')}</span></div><div><b>近月 ATM IV</b><span>${pc((c.iv || {}).atm)}（第 ${(c.iv || {}).pctile ?? '—'} 百分位）</span></div>
+      <div><b>偏態</b><span>${esc(c.skew || '—')}</span></div><div><b>轉換</b><span>${esc(c.transition || '無（昨 ' + (c.level_prev || '—') + '）')}</span></div></div>
+    ${respHtml}${last}
+    ${segs.length ? `<div class="muted" style="margin-top:8px">近期 L2 段：${segs.map(s => `${esc(s.start)}→${esc(s.end)}（${s.days} 日）`).join('・')}</div>` : ''}</div>`;
+
+  // ---- 2 三條 gate 線 ----
+  const row = (k, name, cells, lv) => `<tr class="${k === c.gate_mode ? 'gate-cur' : ''}"><td>${esc(name)}${k === c.gate_mode ? ' <span class="tag acc">現行 gate</span>' : ''}</td>${cells}<td>${LV_EMOJI[lv] || '⚪'} ${esc(lv || 'NO_DATA')}</td></tr>`;
+  const ivRow = (k, name, x) => x && !x.status ? row(k, name, `<td class="num">${pc(x.value, 1)}</td><td class="num">${x.pctile ?? '—'}</td><td>${yn(x.rel_calm)} ≤${x.pctile_calm ?? '—'}</td><td>${yn(x.abs_acceptable)} ≤${pc(x.abs_gate)}</td><td>${yn(x.stable)}</td>`, x.level)
+    : row(k, name, '<td class="muted" colspan="5">NO_DATA</td>', null);
+  const cr = g.carry;
+  const carryRow = cr && !cr.status ? row('carry', '深價內 LEAPS carry（年化外在價值%）', `<td class="num">${cr.min_carry_pct == null ? '—' : cr.min_carry_pct.toFixed(1) + '%'}${cr.approx ? ' <span class="muted">≈</span>' : ''}</td><td class="num muted">${cr.best_strike ? esc(String(cr.best_strike)) : (cr.n_strikes != null ? `${cr.n_strikes} 檔` : '—')}</td><td colspan="2">${yn(cr.ok)} ≤${cr.threshold ?? '—'}%</td><td>${yn(cr.stable)}</td>`, cr.level)
+    : row('carry', '深價內 LEAPS carry', '<td class="muted" colspan="5">NO_DATA</td>', null);
+  $('#sp-gates').innerHTML = `<div class="card"><div class="scroll"><table><thead><tr><th>尺</th><th class="num">今值</th><th class="num">分位</th><th>相對冷</th><th>絕對</th><th>穩定</th><th>判定</th></tr></thead>
+    <tbody>${ivRow('near', '近月 ATM IV', g.near)}${ivRow('leaps', 'LEAPS ATM IV', g.leaps)}${carryRow}</tbody></table></div>
+    <div class="muted" style="margin-top:8px">三條線每天都算都記（history 的 level_near／level_leaps／level_carry），但只有 <b>${esc(c.gate_mode || 'near')}</b> 那條決定 L2 與橫幅。
+    ${['near', 'leaps', 'carry'].filter(k => g[k] && !g[k].status && g[k].level !== (g[c.gate_mode] || {}).level).length ? '🔀 三條線意見不一致：留給 12/9 復盤，不在這裡改規則。' : ''}
+    carry 標 ≈ 代表回填時只用報告前 5 名近似。</div></div>`;
+
+  // ---- 3 可用 strike ----
+  const liq = c.liquidity || {}, st = c.strikes || [];
+  $('#sp-strikes').innerHTML = `<div class="card"><div class="kv"><div><b>總 OI</b><span>${n0(liq.total_int)}</span></div><div><b>可用 strike</b><span>${liq.usable_strikes ?? '—'}</span></div><div><b>最窄價差</b><span>${pc(liq.best_spread_pct, 1)}</span></div><div><b>流動性</b><span>${yn(liq.liquid)}</span></div></div>
+    ${st.length ? `<div class="scroll"><table><thead><tr><th>到期</th><th class="num">履約</th><th class="num">bid/ask</th><th class="num">mid</th><th class="num">OI</th><th class="num">價差</th><th class="num">DTE</th><th class="num">外在</th><th class="num">carry/年</th></tr></thead>
+      <tbody>${st.map(s => `<tr><td>${esc(s.exp)}</td><td class="num">${f2(s.strike)}</td><td class="num">${f2(s.bid)}/${f2(s.ask)}</td><td class="num">${f2(s.mid)}</td><td class="num">${n0(s.oi)}</td><td class="num">${pc(s.spread_pct, 1)}</td><td class="num">${s.dte ?? '—'}</td><td class="num">${f2(s.extrinsic)}</td><td class="num">${s.carry_pct_annual == null ? '—' : s.carry_pct_annual.toFixed(1) + '%'}</td></tr>`).join('')}</tbody></table></div>` : '<div class="empty">Sage 沒有輸出可用 strike</div>'}
+    <div class="muted" style="margin-top:8px">這是 Sage 的 liquidity.detail 原樣轉發（價差最窄前幾名），不是挑哪一檔的建議；要不要買、買哪檔，照 PLAYBOOK 三步走完才算。</div></div>`;
+
+  // ---- 4 觀點 ----
+  $('#sp-view').innerHTML = `<div class="card ${vp.stale ? 'action' : ''}" style="${vp.stale ? 'border-left-color:var(--warn)' : ''}">
+    <div class="kv"><div><b>信心</b><span>${vp.confidence ?? '—'} / 5</span></div><div><b>更新</b><span>${esc(vp.updated || '—')}${vp.age_days != null ? `（${vp.age_days} 天前）` : ''}</span></div></div>
+    <div><b>催化劑</b>：${esc(vp.catalyst || '—')}</div><div><b>論點</b>：${esc(vp.thesis || '—')}</div>
+    ${vp.stale ? '<div class="muted" style="margin-top:6px">🟡 觀點超過 60 天沒更新：L2 亮時先重讀催化劑還成不成立，再決定。</div>' : ''}</div>`;
+
+  // ---- 5 持倉 ----
+  $('#sp-pos').innerHTML = `<div class="card"><div class="kv">
+    <div><b>股數</b><span>${n0(p.shares)}</span></div><div><b>均價</b><span>$${f2(p.avg_cost)}</span></div><div><b>現價</b><span>$${f2(b.price)}</span></div>
+    <div><b>未實現</b><span>${p.unrealized_pct == null ? '—' : (p.unrealized_pct > 0 ? '+' : '') + p.unrealized_pct + '%'}</span></div>
+    <div><b>C 池現金</b><span>$${n0(p.pool_c_cash)}</span></div><div><b>DCA 次數</b><span>${p.n_buys ?? '—'}</span></div>
+    <div><b>市值</b><span>${b.market_cap_t != null ? b.market_cap_t + 'T' : '—'}</span></div><div><b>上市天數</b><span>${b.days_since_ipo ?? '—'}</span></div></div>
+    <div class="muted">持倉來自 spcx_dca_log.json，只是給 C 池決策看規模，不是追蹤報酬。</div></div>`;
+
+  // ---- 6 資料健康 ----
+  $('#sp-checks').innerHTML = (b.checks || []).map(x => `<li class="${x.level}"><i></i><span>${esc(x.text)}</span></li>`).join('');
+  $('#sp-health').innerHTML = `Sage 最後跑 ${esc(h.last_run || '—')}・市場日 ${esc(h.market_date || '—')}・IV 歷史到 ${esc(h.latest_market_day || '—')}${h.missed_days && h.missed_days.length ? `・近 45 天漏 ${h.missed_days.length} 天` : ''}。${b.note ? esc(b.note) : ''}`;
+}
+
+// ---------------------------------------------------------------- 切換：?m=us|tw|spcx（預設美股）
 (async () => {
   const qs = new URLSearchParams(location.search);
-  const tw = (qs.get('m') || qs.get('market') || '').toLowerCase() === 'tw';
+  const m = (qs.get('m') || qs.get('market') || 'us').toLowerCase();
+  const market = m === 'tw' ? 'tw' : m === 'spcx' ? 'spcx' : 'us';
   const d = qs.get('d');
-  document.title = tw ? '台股週報' : 'optscnr 電子報';
-  $('#title').textContent = tw ? '📬 台股週報' : '🚬 optscnr 電子報';
-  $('#us').hidden = tw; $('#tw').hidden = !tw;
-  $('#foot-us').hidden = tw; $('#foot-tw').hidden = !tw;
-  document.querySelectorAll('#switch a').forEach(a => a.classList.toggle('on', (a.dataset.m === 'tw') === tw));
+  const TITLE = { us: ['optscnr 電子報', '🚬 optscnr 電子報'], tw: ['台股週報', '📬 台股週報'], spcx: ['SPCX C 池', '🛰️ SPCX C 池'] };
+  document.title = TITLE[market][0];
+  $('#title').textContent = TITLE[market][1];
+  for (const k of ['us', 'tw', 'spcx']) { $(`#${k}`).hidden = k !== market; $(`#foot-${k}`).hidden = k !== market; }
+  document.querySelectorAll('#switch a').forEach(a => a.classList.toggle('on', a.dataset.m === market));
   // 桌機預設展開完整資料；手機預設收合（上半白話版就夠看）
   if (matchMedia('(min-width: 900px)').matches) document.querySelectorAll('details.sec').forEach(d => d.open = true);
+  const API = { us: '/api/brief' + (d ? `?d=${encodeURIComponent(d)}` : ''), tw: '/api/tw', spcx: '/api/spcx' };
+  const RENDER = { us: renderUS, tw: renderTW, spcx: renderSPCX };
   try {
-    const url = tw ? '/api/tw' : '/api/brief' + (d ? `?d=${encodeURIComponent(d)}` : '');
+    const url = API[market];
     const r = await fetch(url, { cache: 'no-store' });
     if (!r.ok) throw new Error(`${url.split('?')[0]} ${r.status}`);
-    (tw ? renderTW : renderUS)(await r.json());
+    RENDER[market](await r.json());
   } catch (e) {
     $('#date').textContent = '讀取失敗';
     $('#simple-do').textContent = '讀取失敗';
-    $('#simple-list').innerHTML = tw
+    $('#simple-list').innerHTML = market === 'tw'
       ? `<li>台股週報資料讀不到：${esc(String(e.message || e))}。首次排程跑完才有 tw_brief.json；人讀版在 <a href="https://github.com/clarencechien/optscnr/blob/main/tw_scanner/README.md">tw_scanner/README.md</a>。</li>`
+      : market === 'spcx'
+      ? `<li>C 池資料讀不到：${esc(String(e.message || e))}。space_radar 排程跑完才有 spcx_brief.json；人讀版在 <a href="https://github.com/clarencechien/optscnr/blob/main/spcx_radar/README.md">spcx_radar/README.md</a>。</li>`
       : `<li>電子報資料讀不到：${esc(String(e.message || e))}。若你有登入 dashboard，直接開 <a href="/">dashboard</a>。</li>`;
+  }
+  // 跨市場橫幅（PLAN §4）：US／TW 頁也要看得到 C 池 L2 亮著／剛關門／逾期；主內容先畫完再拉，拉不到就安靜
+  if (market !== 'spcx') {
+    try {
+      const r = await fetch('/api/spcx', { cache: 'no-store' });
+      if (r.ok) showBanner(await r.json());
+    } catch {}
   }
 })();
 </script>

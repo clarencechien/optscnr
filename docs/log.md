@@ -218,6 +218,30 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 不放寬樂透 size 上限、不放寬絞肉區（DTE<21）閘門、不因單月命中率改規則、
 盤後開牌標的只標記不自動排除。
 
+## SPCX C 池管道：Option Sage 判定要到人手上（2026-10-21，PLAN_2026-10_c_pool_alert + patch）
+
+**起因**：9/22–10/14 Sage 的 L2 亮了 16 個交易日，commit message 與 README 都有寫，但沒人看到。不是判斷錯，是管道沒接到人。
+
+**資料層（sage_v0.4）**
+- `spcx_options_history.csv` 新增判定欄：`level`、`transition`，以及 patch 1 的三條 gate 線 `level_near／level_leaps／level_carry`
+  與 leaps_*／carry_* 欄、`gate_mode`。`backfill_level.py` 一次性回填 69 列（冪等；`--verify-git` 與 git 逐 commit 的
+  spcx_options.json 比對 49 日零不符）。結果：L2 26 日（不是 handoff 估的 21±3；handoff 表格把 10/15 記成 L2，實際 atm_iv 0.5529 > 0.55 是 L1）、
+  三段 L2：8/25→8/27、8/31→9/4、9/9→10/14。
+- gate 模式 config 化：`opt_gate_mode` near｜leaps｜carry，**預設 near＝行為零改變**。三條線每天都算都記，只有現行那條決定 L2；
+  報告印三行、現行粗體。carry＝深價內 LEAPS 外在價值年化%（對全部可用 strike 取最小；外在<0 的壞報價丟掉）；10/20 最小 5.9%（2027-09 $90C）、
+  $100C 2028-12 是 7.73%，都 ❌（門檻 5%）。`level_leaps` 全程 0 日 L2（LEAPS IV 絕對值一直 > 55%）。
+- `spcx_brief.py` → `output/spcx_brief.json`（零網路；缺檔 NO_DATA；`--selftest` 12 項）：level／L2 連續日／起算日／關門幾個交易日／
+  三條線／四條件／strike（含 carry）／觀點新鮮度／持倉／回應狀態（L2 起算 2 個交易日為期限，`config/spcx_c_decisions.json` 只增不改）／Sage 健康。
+- `notify_transition.py`：只在轉換、Sage 沒跑、逾期第一天發一則；secrets `SPCX_NOTIFY_URL`／`SPCX_NOTIFY_TOKEN`，沒設只印。
+  workflow 步驟排在 commit **之後**（handoff 寫在 README 之前）：推播掛了 run 變紅但資料已入庫。commit message 帶 `[C池 L1 L1->L2]`。
+
+**呈現層**：Worker `/api/spcx`（轉發，不算）、`/api/brief?m=spcx` 302；`/brief?m=spcx` 第三分頁六段；US／TW 頁頂跨市場橫幅
+（綠 L2 第 N 日／黃 5 個交易日內剛關門／紅閃逾期）；dashboard「SPCX C 池」燈同規則、點開分頁、沒有按鈕。
+PLAYBOOK 第三章加「C 池 L2 回應 SOP」三步（看／決／記）。Zero Trust Bypass 要再加 path `/api/spcx`。
+
+**沒做的**：gate 門檻一個都沒改；brief 不給 strike 建議（只轉發 Sage 的 liquidity.detail）；三條線意見不一致只標記，留 12/9 復盤。
+沙盒無網路，Sage 實跑（handoff 驗收 1–3）只能用 10/20 的 spcx_options.json 當 mock 驗。
+
 ## 第 5 批：Worker 接 LLM decisions + 事實庫活用 + dashboard 改版（2026-09-08，第三批）
 
 - **cloudflare/src/index.js**：每發 cron 都跑「第二鬧鐘 → decisions」。decisions 冪等：讀 main 的
