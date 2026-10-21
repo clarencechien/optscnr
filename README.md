@@ -3,7 +3,7 @@
 **市場基準日**: 2026-10-20
 **掃描執行於**: 2026-10-21 00:47 UTC
 
-**📚 文件**: `CONTEXT.md`（紅線與系統地圖）｜`docs/PLAN_2026-09_strategy_dashboard.md`（策略矩陣預先登記＋建置）｜`docs/FACTS_ledger.md`（事實庫）｜`docs/CASEBOOK_2026-07.md`（判例）｜`SHADOWLOG_<月>.md`（校準）｜`cloudflare/README.md`（dashboard／第二鬧鐘／LLM 三題）｜`tw_scanner/README.md`（台股週報／DCA 影子帳本／2308・2330 論點監控／賭場 sector）
+**📚 文件**: `CONTEXT.md`（紅線與系統地圖）｜`docs/PLAN_2026-09_strategy_dashboard.md`（策略矩陣預先登記＋建置）｜`docs/FACTS_ledger.md`（事實庫）｜`docs/CASEBOOK_2026-07.md`（判例）｜`SHADOWLOG_<月>.md`（校準）｜`cloudflare/README.md`（dashboard／第二鬧鐘／LLM 三題／電子報）｜`tw_scanner/README.md`（台股週報／DCA 影子帳本／2308・2330 論點監控／賭場 sector）｜`spcx_radar/README.md`（SPCX 雷達／C 池燈號：綠燈要在 2 個交易日內回答）
 
 **📅 乾淨窗口計數**: 今日 451 筆「吃不到財報」（窗口內無事件的純動能局）／報表信號 3051 筆（分母＝進入報表的信號列，非掃描到的全部合約）。數字越小＝市場越被財報事件佔據，今天越沒有你要的獵物（環境序列：`data/earnings_window_history.csv`）
 
