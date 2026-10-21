@@ -1,158 +1,75 @@
 {
-  "updated_at": "2026-10-20T23:19:25.200937",
+  "updated_at": "2026-10-21T23:32:55.942006",
   "stats": {
     "total_items": 57,
-    "items_with_company": 18,
-    "items_with_catalyst": 9,
-    "items_both": 7
+    "items_with_company": 20,
+    "items_with_catalyst": 20,
+    "items_both": 9
   },
   "count": 14,
   "tickers": [
     "TSLA",
-    "SMCI",
-    "DELL",
-    "HPE",
-    "NFLX",
-    "WMT",
-    "CRM",
-    "TGT",
-    "BA",
-    "AAPL",
+    "META",
     "CRWV",
+    "NFLX",
+    "GS",
+    "MS",
+    "JPM",
+    "IBM",
     "GM",
-    "COST",
-    "AMZN"
+    "INTC",
+    "AAPL",
+    "XYZ",
+    "NVDA",
+    "MRNA"
   ],
   "details": [
     {
       "symbol": "TSLA",
-      "score": 8,
+      "score": 17.5,
       "evidence": [
         {
-          "title": "Tesla’s stock rises as Elon Musk drops new clues about a possible SpaceX merger",
-          "catalysts": [
-            "rises",
-            "drops",
-            "merger"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "SpaceX and Tesla form special committees to evaluate potential merger, Musk says",
-          "catalysts": [
-            "merger"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SMCI",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "Super Micro’s stock soars after surprise update — with Dell and HPE shares joining the rally",
-          "catalysts": [
-            "soars",
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Super Micro sees quarterly revenue soaring on AI server boom",
+          "title": "Tesla beats on earnings and sales even as auto revenue declines",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DELL",
-      "score": 4,
-      "evidence": [
+        },
         {
-          "title": "Super Micro’s stock soars after surprise update — with Dell and HPE shares joining the rally",
+          "title": "SpaceX stock jumps 10% after earnings beat and Musk hints at Tesla tie-up",
           "catalysts": [
-            "soars",
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "HPE",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Super Micro’s stock soars after surprise update — with Dell and HPE shares joining the rally",
-          "catalysts": [
-            "soars",
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 3.5,
-      "evidence": [
-        {
-          "title": "Netflix posts third-quarter earnings beat, but shares fall on advertising and revenue guidance",
-          "catalysts": [
+            "jumps",
+            "jumped",
+            "merger",
             "earnings beat"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Traders are betting Netflix's stock drama may be coming to an end",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Netflix vows to revive viewership trends, but investors hit ‘sell’ on the stock",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Walmart launches joint membership with Sam's Club as it leans into delivery, gas discounts",
+          "title": "Meta and Tesla bulls get confidence boost after SpaceX earnings",
           "catalysts": [
-            "launches"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Walmart takes aim at Amazon and Costco with new membership program — but is it a good deal?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Salesforce announces $5.66 billion deal for Braze, sending BRZE stock soaring 51%",
-          "catalysts": [
-            "acquisition"
+            "rally"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "TGT",
-      "score": 2,
+      "symbol": "META",
+      "score": 6.5,
       "evidence": [
         {
-          "title": "Western Alliance projects 11%-12% net interest income growth as deposit optimization target rises to at least $5b",
+          "title": "Meta ordered to pay $25 billion penalty in New Mexico Cambridge Analytica case",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta and Tesla bulls get confidence boost after SpaceX earnings",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Meta’s stock rises as investors glimpse an opportunity that could dwarf the ad business",
           "catalysts": [
             "rises"
           ],
@@ -161,43 +78,76 @@
       ]
     },
     {
-      "symbol": "BA",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Boeing wins FAA approval for 737 Max 10 after years of delays as Duffy says certification process should be faster",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "FAA certifies Boeing’s 737 MAX 10, clearing way for deliveries",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Apple adds U.S. titanium supplier for iPhone Duo as supply stays tight",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apple shares aren't cheap. Here's how to get long for less",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
       "symbol": "CRWV",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "CoreWeave’s market confidence erodes as bond yields spike and stock sinks",
+          "catalysts": [
+            "sinks"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Netflix has dipped its toe into theatrical. Is it ready to jump in?",
+          "catalysts": [
+            "jump"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MS",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "IBM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Obsessed with CoreWeave and the AI trade? You're missing out on some great stocks",
+          "title": "IBM beats on top and bottom lines as CEO Krishna touts 'Super Intelligence' traction",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -208,29 +158,62 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance",
+          "title": "GM aims to develop vehicles in as little as two years with AI, software push",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
+      "symbol": "INTC",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Walmart takes aim at Amazon and Costco with new membership program — but is it a good deal?",
+          "title": "Intel hits construction milestone at Ohio chip fab that’s at least 5 years behind schedule ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Walmart takes aim at Amazon and Costco with new membership program — but is it a good deal?",
+          "title": "Apple's iPhone Duo in short supply — plus, the 2 stocks fueling an AI rebound",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "United Airlines set to open its biggest airport lounge in $2.6 billion overhaul at Houston hub",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRNA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Moderna is about to release the trial results for its cancer vaccine. A lot is riding on this data.",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -238,7 +221,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2,
-    "Anthropic (private)": 1
+    "OpenAI (private)": 1
   }
 }
