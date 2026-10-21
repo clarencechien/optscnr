@@ -1,0 +1,114 @@
+{
+  "market_date": "2026-10-20",
+  "decided_at": "2026-10-21T00:35:08.341Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-20T23:05:33Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 32,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-20_IBIT_2026-12-18_55.0",
+      "ticker": "IBIT",
+      "expiry": "2026-12-18",
+      "strike": 55,
+      "entry_price": 0.61,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-11-27",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -1.9,
+          "date": "2026-10-14"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "IBIT 是 ETF，沒有財報；在 2026-12-18 到期日前，查不到這檔基金本身已排定的事件",
+        "source": null
+      },
+      "note": "ETF無財報；查無基金專屬排定事件。FOMC決議10-28、12-09（聯準會）",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "IBIT",
+      "fact": "IBIT 在 2026-10-19 單日淨流入 $665.16M，是 2025-10-07 以來最大單日淨流入；同日美國現貨比特幣 ETF 合計淨流入 $526.6M，比特幣卡在 $82,000–83,000 區間",
+      "date": "2026-10-19",
+      "source": "https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "BlackRock 在 2026-10-19 向 SEC 申請 iShares Bitcoin Managed Protect ETF（PBIT），以 IBIT 選擇權搭配現金及短債，提供有上限的上漲曝險與下檔保護；IBIT 資產管理規模超過 $65B",
+      "date": "2026-10-19",
+      "source": "https://www.theblock.co/news/regulation/2026-10-19-blackrock-files-bitcoin-managed-protect-etf-downside-protection-ibit-421087"
+    },
+    {
+      "ticker": "",
+      "fact": "FOMC 2026 年剩下兩場會議：10-27~28（10-28 14:00 ET 決議，沒有點陣圖）和 12-08~09（12-09 決議，附 SEP 點陣圖）；9 月會議升息 25bp 至 3.75–4.00%",
+      "date": "2026-10-28",
+      "source": "https://www.regardsofwallstreet.com/tools/fed-meeting-calendar"
+    }
+  ],
+  "facts_appended": 2,
+  "raw_answer": "{\"market_date\":\"2026-10-20\",\"candidates\":[{\"signal_id\":\"2026-10-20_IBIT_2026-12-18_55.0\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"IBIT 是 ETF，沒有財報；在 2026-12-18 到期日前，查不到這檔基金本身已排定的事件\",\"source\":null},\"note\":\"ETF無財報；查無基金專屬排定事件。FOMC決議10-28、12-09（聯準會）\"}],\"facts_proposed\":[{\"ticker\":\"IBIT\",\"fact\":\"IBIT 在 2026-10-19 單日淨流入 $665.16M，是 2025-10-07 以來最大單日淨流入；同日美國現貨比特幣 ETF 合計淨流入 $526.6M，比特幣卡在 $82,000–83,000 區間\",\"date\":\"2026-10-19\",\"source\":\"https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102\"},{\"ticker\":\"IBIT\",\"fact\":\"BlackRock 在 2026-10-19 向 SEC 申請 iShares Bitcoin Managed Protect ETF（PBIT），以 IBIT 選擇權搭配現金及短債，提供有上限的上漲曝險與下檔保護；IBIT 資產管理規模超過 $65B\",\"date\":\"2026-10-19\",\"source\":\"https://www.theblock.co/news/regulation/2026-10-19-blackrock-files-bitcoin-managed-protect-etf-downside-protection-ibit-421087\"},{\"ticker\":\"通用(環境)\",\"fact\":\"FOMC 2026 年剩下兩場會議：10-27~28（10-28 14:00 ET 決議，沒有點陣圖）和 12-08~09（12-09 決議，附 SEP 點陣圖）；9 月會議升息 25bp 至 3.75–4.00%\",\"date\":\"2026-10-28\",\"source\":\"https://www.regardsofwallstreet.com/tools/fed-meeting-calendar\"}]}",
+  "usage": {
+    "prompt_tokens": 29649,
+    "completion_tokens": 1946,
+    "total_tokens": 31595,
+    "cost": 0.177516,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.177516,
+      "upstream_inference_prompt_cost": 0.118596,
+      "upstream_inference_completions_cost": 0.03892
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1109,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
