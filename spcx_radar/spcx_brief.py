@@ -265,58 +265,64 @@ def build_brief(base_dir: str, today: dt.date | None = None) -> dict:
 
     # ---- checks ----
     checks = []
+    # 文案原則（2026-10-21 擁有者要求）：dashboard 的詞要簡單明白——用綠燈／黃燈／灰燈，不講 gate、L2「就是這個」、關門這類黑話
     if not opts:
-        checks.append({"level": "bad", "label": "Sage 無輸出", "text": "Option Sage：NO_DATA（缺 spcx_options.json）"})
+        checks.append({"level": "bad", "label": "沒有判定", "text": "判定程式沒有輸出（缺 spcx_options.json）"})
     elif not health["ran_for_latest_market_day"]:
-        checks.append({"level": "bad", "label": "Sage 今日沒跑", "text": f"Option Sage 最後市場日 {health['market_date']}，IV 歷史已到 {health['latest_market_day']}——Sage 這天沒跑（continue-on-error 吞掉了）"})
+        checks.append({"level": "bad", "label": "今天沒跑", "text": f"判定程式最後跑到 {health['market_date']}，IV 資料已經到 {health['latest_market_day']}，今天這天沒跑"})
     else:
-        checks.append({"level": "ok", "label": "Sage 今日有跑", "text": f"Option Sage 市場日 {health['market_date']}，判定 {level}"})
+        checks.append({"level": "ok", "label": "今天有跑", "text": f"判定程式今天有跑（市場日 {health['market_date']}），結果 {level}"})
     if health["missed_days"]:
-        checks.append({"level": "warn", "label": f"Sage 缺 {len(health['missed_days'])} 天", "text": f"近 45 天 Sage 沒跑的交易日：{'、'.join(health['missed_days'])}"})
+        checks.append({"level": "warn", "label": f"漏跑 {len(health['missed_days'])} 天", "text": f"最近 45 天有 {len(health['missed_days'])} 個交易日沒跑：{'、'.join(health['missed_days'])}"})
     if opt_hist and not health["history_has_level"]:
-        checks.append({"level": "warn", "label": "history 無 level", "text": "spcx_options_history.csv 最近幾列沒有 level 欄——backfill_level.py 還沒跑或 Sage 版本舊"})
+        checks.append({"level": "warn", "label": "歷史缺判定欄", "text": "spcx_options_history.csv 最近幾列沒有 level 欄：backfill_level.py 還沒跑或判定程式版本舊"})
     if resp["status"] == "overdue":
-        checks.append({"level": "bad", "label": "L2 未回應", "text": f"L2 自 {stats['l2_start']} 亮起，回應期限 {resp['deadline']} 已過 {resp['overdue_days']} 個交易日，spcx_c_decisions.json 沒有這段的紀錄"})
+        checks.append({"level": "bad", "label": "還沒回答", "text": f"綠燈從 {stats['l2_start']} 亮到現在，{resp['deadline']} 前該回答，已經晚了 {resp['overdue_days']} 個交易日"})
     elif resp["status"] == "pending":
-        checks.append({"level": "warn", "label": "L2 待回應", "text": f"L2 自 {stats['l2_start']} 亮起，{resp['deadline']} 前要在 spcx_c_decisions.json 記一筆 act/skip"})
+        checks.append({"level": "warn", "label": "等你回答", "text": f"綠燈從 {stats['l2_start']} 亮起，{resp['deadline']} 前要回答：做、不做、還是再看"})
     elif resp["status"] == "answered":
-        checks.append({"level": "ok", "label": "L2 已回應", "text": f"本段 L2 已有人工回應：{resp['last']['date']} {resp['last']['action']}"})
+        checks.append({"level": "ok", "label": "已回答", "text": f"這段綠燈已經回答：{resp['last']['date']} {resp['last']['action']}"})
     if vp_age is None:
-        checks.append({"level": "warn", "label": "觀點無日期", "text": "viewpoint 沒有 updated 日期"})
+        checks.append({"level": "warn", "label": "看法沒日期", "text": "你的看法（viewpoint）沒有寫更新日期"})
     elif vp_age > VIEWPOINT_STALE_DAYS:
-        checks.append({"level": "warn", "label": "觀點可能過期", "text": f"viewpoint 更新於 {vp_updated}，已 {vp_age} 天（>{VIEWPOINT_STALE_DAYS}）；L2 亮時先重讀催化劑還成不成立"})
+        checks.append({"level": "warn", "label": "看法太舊", "text": f"你的看法是 {vp_updated} 寫的，已經 {vp_age} 天沒更新；燈亮時先想一下理由還成不成立"})
     else:
-        checks.append({"level": "ok", "label": "觀點在期內", "text": f"viewpoint 更新於 {vp_updated}（{vp_age} 天）"})
+        checks.append({"level": "ok", "label": "看法還新", "text": f"你的看法 {vp_updated} 更新（{vp_age} 天前）"})
     if radar:
-        checks.append({"level": "ok", "label": "space_radar 正常", "text": f"space_radar 市值 {radar.get('market_cap_t')}T、階段 {radar.get('stage')}"})
+        checks.append({"level": "ok", "label": "雷達正常", "text": f"space_radar 有跑：市值 {radar.get('market_cap_t')}T、階段 {radar.get('stage')}"})
     else:
-        checks.append({"level": "warn", "label": "space_radar 無輸出", "text": "space_radar.json 缺"})
+        checks.append({"level": "warn", "label": "雷達沒輸出", "text": "space_radar.json 缺"})
 
     # ---- 白話版 ----
     gm = (opts or {}).get("gate_mode", "near")
     near = gates.get("near") or {}
     iv_pct = f"{near['value']*100:.0f}%" if near.get("value") else "—"
+    LV_WORD = {"L2": "綠燈", "L1": "黃燈", "L0": "灰燈"}
+    GM_WORD = {"near": "近月 IV", "leaps": "長天期 IV", "carry": "借錢成本"}
+    lv_word = lambda lv: f"{LV_WORD.get(lv, '—')}（{lv}）" if lv else "—"   # noqa: E731
     if not opts:
         do_line, items = "C 池：資料還沒到，不動。", []
     elif level == "L2":
-        do_line = (f"C 池：🟢 L2「就是這個」已亮 {stats['l2_streak_days']} 個交易日。"
-                   + {"answered": "你已回應。", "pending": f"{resp['deadline']} 前要寫一筆 act 或 skip。",
-                      "overdue": f"回應已逾期 {resp['overdue_days']} 個交易日——先寫一筆，哪怕是 skip。"}.get(resp["status"], ""))
-        items = [f"四條件全中（gate {gm}）：近月 IV {iv_pct}、流動性 {'過' if liq.get('liquid') else '未過'}、觀點 {((opts or {}).get('viewpoint') or {}).get('confidence')}/5。",
-                 "模組是門不是手：它只說環境到了，哪個 strike、多少口由你決定，單次不超過 C 池一半。",
-                 "下面第 3 段有 Sage 列的可用 strike 與每張的隱含融資成本（跟 SGOV 殖利率比）。"]
+        do_line = (f"C 池：🟢 綠燈（L2），已經亮了 {stats['l2_streak_days']} 天。"
+                   + {"answered": "你已經回答過了。", "pending": f"{resp['deadline']} 前要回答：做、不做、還是再看。",
+                      "overdue": f"回答已經晚了 {resp['overdue_days']} 天，先寫一筆，寫「不做」也算。"}.get(resp["status"], ""))
+        items = [f"四個條件都過了：IV {iv_pct}、合約{'好買賣' if liq.get('liquid') else '不好買賣'}、你的看法信心 {((opts or {}).get('viewpoint') or {}).get('confidence')}/5。",
+                 "燈亮只代表環境到了，不是叫你買。買哪一檔、買多少，自己決定，一次不超過 C 池的一半。",
+                 "第 3 段列了好買賣的合約，和每一檔一年的持有成本。"]
     elif stats.get("l2_days_since_close") is not None and stats["l2_days_since_close"] <= BANNER_AFTER_CLOSE_TDAYS and stats.get("l2_last_date"):
-        do_line = f"C 池：🟡 L2 在 {stats['l2_days_since_close']} 個交易日前關門（最後 {stats['l2_last_date']}），現在 {level}。"
-        items = [f"關門原因看第 1 段四條件哪一條變紅；近月 IV 現在 {iv_pct}。",
-                 "剛關門的窗常常會再開（這檔 IV 冷靜態是 45–50%），不用追，但要知道它剛亮過。"]
+        do_line = f"C 池：🟡 綠燈 {stats['l2_days_since_close']} 天前熄了（最後一天 {stats['l2_last_date']}），現在是{lv_word(level)}。"
+        items = [f"為什麼熄：看第 1 段哪個條件變紅。IV 現在 {iv_pct}。",
+                 "剛熄的燈常常會再亮，不用追，但要知道它剛亮過。"]
     else:
-        do_line = f"C 池：{'🟡 L1 觀察' if level == 'L1' else '⚪ L0 靜默'}。近月 IV {iv_pct}，{'等它回到 45–50%（這檔的冷靜態）' if level == 'L1' else '可以睡'}。"
-        items = [f"gate 模式 {gm}；三條線各自判定：near {gates.get('near', {}).get('level', '—')}／leaps {gates.get('leaps', {}).get('level', '—')}／carry {gates.get('carry', {}).get('level', '—')}。"]
+        do_line = (f"C 池：{'🟡 黃燈（L1）' if level == 'L1' else '⚪ 灰燈（L0）'}，不用做什麼。IV {iv_pct}"
+                   + ("，等它回到 45–50%。" if level == "L1" else "。"))
+        items = [f"現在用「{GM_WORD.get(gm, gm)}」這把尺。三把尺各自的結果：近月 IV {lv_word(gates.get('near', {}).get('level'))}／"
+                 f"長天期 IV {lv_word(gates.get('leaps', {}).get('level'))}／借錢成本 {lv_word(gates.get('carry', {}).get('level'))}。"]
         if stats.get("l2_segments"):
             last = stats["l2_segments"][-1]
-            items.append(f"上一段 L2：{last['start']}→{last['end']}（{last['days']} 個交易日）。")
+            items.append(f"上一次綠燈：{last['start']}→{last['end']}（{last['days']} 天）。")
     bad = sum(1 for c in checks if c["level"] == "bad")
-    items.append(f"有 {bad} 項資料異常，見資料健康。" if bad else "資料都正常。")
+    items.append(f"有 {bad} 項資料有問題，看最後一段。" if bad else "資料都正常。")
 
     return {
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
@@ -409,7 +415,7 @@ def selftest() -> bool:
     cp = b["c_pool"]
     check(cp["l2_streak_days"] == 4 and cp["l2_start"] == "2026-10-02" and cp["l2_days_since_close"] == 0, f"連續 L2 天數＝4、起始 10/02（got {cp['l2_streak_days']}, {cp['l2_start']}）")
     check(cp["response"]["deadline"] == "2026-10-06" and cp["response"]["status"] == "overdue" and cp["response"]["overdue_days"] == 1, f"期限 10/06、逾期 1 日（got {cp['response']})")
-    check(any(c['label'] == 'L2 未回應' and c['level'] == 'bad' for c in b["checks"]) and "逾期" in b["do_line"], "逾期 → 紅燈 + 白話版點名")
+    check(any(c['label'] == '還沒回答' and c['level'] == 'bad' for c in b["checks"]) and "晚了" in b["do_line"], "逾期 → 紅燈 + 白話版點名")
     check(cp["strikes"][0]["carry_pct_annual"] and abs(cp["strikes"][0]["carry_pct_annual"] - 7.7) < 0.4, f"strike carry 年化（got {cp['strikes'][0].get('carry_pct_annual')}）")
     check(b["positions"]["shares"] == 200 and b["positions"]["avg_cost"] == 145.0 and b["positions"]["pool_c_cash"] == 20000, "持倉與 C 池現金")
     check("2026-10-09" in b["sage_health"]["missed_days"], "IV 歷史有、Sage 沒跑的日子進 missed_days")
@@ -424,12 +430,12 @@ def selftest() -> bool:
     # 關門後 2 個交易日 → l2_days_since_close=2、橫幅黃
     write(["L2", "L2", "L2", "L1", "L1"], "L1")
     b = build_brief(base, dt.date(2026, 10, 7))
-    check(b["c_pool"]["l2_days_since_close"] == 2 and b["c_pool"]["l2_last_date"] == "2026-10-05" and b["c_pool"]["response"]["status"] == "n/a" and "關門" in b["do_line"], f"關門 2 個交易日（got {b['c_pool']['l2_days_since_close']}）")
+    check(b["c_pool"]["l2_days_since_close"] == 2 and b["c_pool"]["l2_last_date"] == "2026-10-05" and b["c_pool"]["response"]["status"] == "n/a" and "熄了" in b["do_line"], f"關門 2 個交易日（got {b['c_pool']['l2_days_since_close']}）")
     check(b["c_pool"]["l2_segments"][-1]["days"] == 3, "L2 段落天數")
     # 觀點過期
     write(["L1"] * 5, "L1", vp_updated="2026-06-01")
     b = build_brief(base, dt.date(2026, 10, 7))
-    check(b["c_pool"]["viewpoint"]["stale"] and any(c["label"] == "觀點可能過期" for c in b["checks"]), "觀點 >60 天 → 標黃")
+    check(b["c_pool"]["viewpoint"]["stale"] and any(c["label"] == "看法太舊" for c in b["checks"]), "觀點 >60 天 → 標黃")
     shutil.rmtree(base, ignore_errors=True)
     return ok
 

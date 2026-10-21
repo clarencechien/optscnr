@@ -147,12 +147,11 @@
 
   <section id="spcx" hidden>
   <div class="full-title">完整資料（點段落展開）</div>
-  <details class="sec"><summary><span class="n">1</span>本回合判定（Option Sage 四條件）</summary><div class="body"><div id="sp-judge"></div></div></details>
-  <details class="sec"><summary><span class="n">2</span>三條 gate 線（只有現行那條決定 L2）</summary><div class="body"><div id="sp-gates"></div></div></details>
-  <details class="sec"><summary><span class="n">3</span>可用 strike（Sage 原樣轉發，不是建議）</summary><div class="body"><div id="sp-strikes"></div></div></details>
-  <details class="sec"><summary><span class="n">4</span>觀點（催化劑／論點）</summary><div class="body"><div id="sp-view"></div></div></details>
-  <details class="sec"><summary><span class="n">5</span>持倉與 C 池現金</summary><div class="body"><div id="sp-pos"></div></div></details>
-  <details class="sec"><summary><span class="n">6</span>資料健康</summary><div class="body"><div class="card"><ul class="checks" id="sp-checks"></ul><div class="muted" id="sp-health"></div></div></div></details>
+  <details class="sec"><summary><span class="n">1</span>今天的燈：四個條件</summary><div class="body"><div id="sp-judge"></div></div></details>
+  <details class="sec"><summary><span class="n">2</span>三把尺，現在用哪一把</summary><div class="body"><div id="sp-gates"></div></div></details>
+  <details class="sec"><summary><span class="n">3</span>好買賣的合約（不是建議）</summary><div class="body"><div id="sp-strikes"></div></div></details>
+  <details class="sec"><summary><span class="n">4</span>你的看法還成立嗎</summary><div class="body"><div id="sp-view"></div></div></details>
+  <details class="sec"><summary><span class="n">5</span>資料有沒有問題</summary><div class="body"><div class="card"><ul class="checks" id="sp-checks"></ul><div class="muted" id="sp-health"></div></div></div></details>
   </section>
 
   <div class="foot" id="foot-us">
@@ -166,8 +165,8 @@
     人讀版與明細：<a href="https://github.com/clarencechien/optscnr/blob/main/tw_scanner/README.md" target="_blank" rel="noopener">tw_scanner/README.md</a>。
   </div>
   <div class="foot" id="foot-spcx" hidden>
-    唯讀頁，每 5 分鐘從 GitHub 讀 <code>spcx_radar/output/spcx_brief.json</code>；Worker 不做任何判定，只轉發 Option Sage 的結果。
-    C 池 gate 不是 hand：這頁沒有任何一行是買賣建議；L2 亮了要做的三步在 PLAYBOOK「C 池 L2 回應 SOP」，回應寫進 <code>spcx_radar/config/spcx_c_decisions.json</code>（只增不改）。
+    唯讀頁，每 5 分鐘從 GitHub 讀 <code>spcx_radar/output/spcx_brief.json</code>；這頁只顯示判定程式（Option Sage）的結果，自己不算任何東西。
+    燈亮不等於要買：這頁沒有任何一行是買賣建議。綠燈亮了要做的三步寫在 PLAYBOOK「C 池 L2 回應 SOP」，回答記在 <code>spcx_radar/config/spcx_c_decisions.json</code>（只加不改）。
     人讀版：<a href="https://github.com/clarencechien/optscnr/blob/main/spcx_radar/README.md" target="_blank" rel="noopener">spcx_radar/README.md</a>。
   </div>
 </main>
@@ -389,6 +388,8 @@ function renderTW(b) {
 
 // ---------------------------------------------------------------- SPCX C 池（Option Sage 判定；Worker 只轉發 spcx_brief.json）
 const LV_EMOJI = { L2: '🟢', L1: '🟡', L0: '⚪' };
+const LV_WORD = { L2: '綠燈', L1: '黃燈', L0: '灰燈' };
+const lvWord = lv => (lv ? `${LV_EMOJI[lv] || '⚪'} ${LV_WORD[lv] || lv}（${lv}）` : '⚪ 沒資料');
 const pc = (x, d = 0) => (x == null ? '—' : (Number(x) * 100).toFixed(d) + '%');
 const md = s => (s ? String(s).slice(5).replace('-', '/') : '—');
 const yn = v => (v == null ? '—' : v ? '✅' : '❌');
@@ -398,12 +399,12 @@ function spcxBanner(b) {
   const c = b.c_pool || {}, r = c.response || {};
   const link = `<a href="/brief?m=spcx">看 C 池 →</a>`;
   if (c.level === 'L2') {
-    if (r.status === 'overdue') return { cls: 'red', html: `🔴 <b>SPCX C 池 L2 亮著，回應已逾期 ${r.overdue_days} 個交易日</b>（期限 ${md(r.deadline)}）。三步 SOP 做完寫進 decisions。${link}` };
-    const resp = r.status === 'answered' ? `已回應（${esc((r.last || {}).action || '')}）` : `回應期限 ${md(r.deadline)}`;
-    return { cls: 'green', html: `🟢 <b>SPCX C 池 L2：第 ${c.l2_streak_days} 個交易日</b>（自 ${md(c.l2_start)}）・${resp}。${link}` };
+    if (r.status === 'overdue') return { cls: 'red', html: `🔴 <b>SPCX C 池綠燈亮著，你還沒回答</b>（${md(r.deadline)} 前該答，已經晚 ${r.overdue_days} 天）。寫「不做」也算回答。${link}` };
+    const resp = r.status === 'answered' ? `已回答（${esc((r.last || {}).action || '')}）` : `${md(r.deadline)} 前要回答`;
+    return { cls: 'green', html: `🟢 <b>SPCX C 池綠燈：第 ${c.l2_streak_days} 天</b>（${md(c.l2_start)} 起）・${resp}。${link}` };
   }
   if (c.l2_days_since_close != null && c.l2_days_since_close <= 5 && c.l2_last_date)
-    return { cls: 'yellow', html: `🟡 <b>SPCX C 池 L2 在 ${c.l2_days_since_close} 個交易日前關門</b>（最後 ${md(c.l2_last_date)}），現在 ${esc(c.level || '—')}。${link}` };
+    return { cls: 'yellow', html: `🟡 <b>SPCX C 池綠燈 ${c.l2_days_since_close} 天前熄了</b>（最後一天 ${md(c.l2_last_date)}），現在${LV_WORD[c.level] || '—'}。${link}` };
   return null;
 }
 function showBanner(b) {
@@ -424,61 +425,60 @@ function renderSPCX(b) {
   const sp = $('#simple'); sp.classList.remove('lv-L0', 'lv-L1', 'lv-L2', 'overdue');
   if (r.status === 'overdue') sp.classList.add('overdue'); else if (c.level) sp.classList.add(`lv-${c.level}`);
 
-  // ---- 1 本回合判定 ----
-  const labels = cd.labels && cd.labels.length === 4 ? cd.labels : ['IV 相對冷卻且穩定', 'IV 絕對可接受（≤防線）', '流動性過關', '觀點信心達標'];
+  // ---- 1 今天的燈：四個條件（白話標籤固定，程式原文放 title） ----
+  const PLAIN = ['IV 比平常低，而且穩住了', 'IV 在 55% 以下', '合約好買賣', '你的看法信心夠'];
+  const raw = cd.labels && cd.labels.length === 4 ? cd.labels : PLAIN;
   const vals = [cd.iv_gate_calm_stable, cd.iv_gate_abs_ok, cd.liquidity_ok, cd.viewpoint_ok];
-  const head = c.level === 'L2' ? `${LV_EMOJI.L2} L2 第 ${c.l2_streak_days} 個交易日 <span class="muted">自 ${esc(c.l2_start || '—')}</span>`
-    : c.level ? `${LV_EMOJI[c.level] || ''} ${esc(c.level)} <span class="muted">${c.l2_last_date ? `上次 L2 ${esc(c.l2_last_date)}（${c.l2_days_since_close} 個交易日前關門）` : '尚未亮過 L2'}</span>`
-    : '⚪ NO_DATA';
-  const respHtml = r.status === 'n/a' ? '<div class="muted">不在 L2，不需回應。</div>'
-    : `<div class="${r.status === 'overdue' ? 'action' : ''}" style="${r.status === 'overdue' ? 'border-left-color:var(--crit)' : ''}">回應：<b>${esc({ pending: '待回應', answered: '已回應', overdue: `逾期 ${r.overdue_days} 個交易日` }[r.status] || r.status)}</b>・期限 ${esc(r.deadline || '—')}（L2 起算 2 個交易日）</div>`;
-  const last = r.last ? `<div class="muted" style="margin-top:6px">最近一筆回應 ${esc(r.last.date)}：<b>${esc(r.last.action)}</b>（L2 自 ${esc(r.last.l2_start || '—')}）${r.last.reason ? '——' + esc(r.last.reason) : ''}${r.last.by ? `・${esc(r.last.by)}` : ''}</div>` : '<div class="muted" style="margin-top:6px">decisions 尚無任何回應紀錄。</div>';
+  const head = c.level === 'L2' ? `${LV_EMOJI.L2} 綠燈 第 ${c.l2_streak_days} 天 <span class="muted">${esc(c.l2_start || '—')} 起</span>`
+    : c.level ? `${lvWord(c.level)} <span class="muted">${c.l2_last_date ? `上次綠燈到 ${esc(c.l2_last_date)}（${c.l2_days_since_close} 天前熄）` : '還沒亮過綠燈'}</span>`
+    : '⚪ 沒資料';
+  const respHtml = r.status === 'n/a' ? '<div class="muted">現在不用回答什麼。</div>'
+    : r.status === 'overdue' ? `<div class="action" style="border-left-color:var(--crit)"><b>你還沒回答</b>：${esc(r.deadline || '—')} 前該答，已經晚 ${r.overdue_days} 天。做、不做、再看，寫一筆就好。</div>`
+    : r.status === 'pending' ? `<div class="action"><b>${esc(r.deadline || '—')} 前要回答</b>：做、不做、還是再看。</div>`
+    : `<div class="action" style="border-left-color:var(--good)"><b>這段綠燈已經回答</b>。</div>`;
+  const ACT = { skip: '不做', buy: '做', act: '做', watch: '再看' };
+  const last = r.last ? `<div class="muted" style="margin-top:6px">上次回答 ${esc(r.last.date)}：<b>${esc(ACT[r.last.action] || r.last.action)}</b>（綠燈 ${esc(r.last.l2_start || '—')} 起那段）${r.last.reason ? '。' + esc(r.last.reason) : ''}</div>` : '<div class="muted" style="margin-top:6px">還沒有任何回答紀錄。</div>';
   const segs = (c.l2_segments || []).slice(-5).reverse();
   $('#sp-judge').innerHTML = `<div class="card"><div class="big">${head}</div>
-    <div class="cond">${labels.map((l, i) => `<span class="${vals[i] == null ? '' : vals[i] ? 'ok' : 'no'}"><i></i>${esc(l)}</span>`).join('')}</div>
-    <div class="kv"><div><b>gate 模式</b><span>${esc(c.gate_mode || '—')}</span></div><div><b>近月 ATM IV</b><span>${pc((c.iv || {}).atm)}（第 ${(c.iv || {}).pctile ?? '—'} 百分位）</span></div>
-      <div><b>偏態</b><span>${esc(c.skew || '—')}</span></div><div><b>轉換</b><span>${esc(c.transition || '無（昨 ' + (c.level_prev || '—') + '）')}</span></div></div>
+    <div class="cond">${PLAIN.map((l, i) => `<span class="${vals[i] == null ? '' : vals[i] ? 'ok' : 'no'}" title="${esc(raw[i])}"><i></i>${esc(l)}</span>`).join('')}</div>
+    <div class="kv"><div><b>IV 現在</b><span>${pc((c.iv || {}).atm)}<span class="muted">（比過去 ${(c.iv || {}).pctile ?? '—'}% 的日子高）</span></span></div>
+      <div><b>跟昨天比</b><span>${c.transition ? esc(c.transition.replace('->', ' → ')) : '一樣（' + esc(c.level_prev || '—') + '）'}</span></div>
+      <div><b>用哪把尺</b><span>${esc(GM_WORD[c.gate_mode] || c.gate_mode || '—')}</span></div></div>
     ${respHtml}${last}
-    ${segs.length ? `<div class="muted" style="margin-top:8px">近期 L2 段：${segs.map(s => `${esc(s.start)}→${esc(s.end)}（${s.days} 日）`).join('・')}</div>` : ''}</div>`;
+    ${segs.length ? `<div class="muted" style="margin-top:8px">之前亮過：${segs.map(s => `${esc(s.start)}→${esc(s.end)}（${s.days} 天）`).join('・')}</div>` : ''}</div>`;
 
-  // ---- 2 三條 gate 線 ----
-  const row = (k, name, cells, lv) => `<tr class="${k === c.gate_mode ? 'gate-cur' : ''}"><td>${esc(name)}${k === c.gate_mode ? ' <span class="tag acc">現行 gate</span>' : ''}</td>${cells}<td>${LV_EMOJI[lv] || '⚪'} ${esc(lv || 'NO_DATA')}</td></tr>`;
-  const ivRow = (k, name, x) => x && !x.status ? row(k, name, `<td class="num">${pc(x.value, 1)}</td><td class="num">${x.pctile ?? '—'}</td><td>${yn(x.rel_calm)} ≤${x.pctile_calm ?? '—'}</td><td>${yn(x.abs_acceptable)} ≤${pc(x.abs_gate)}</td><td>${yn(x.stable)}</td>`, x.level)
-    : row(k, name, '<td class="muted" colspan="5">NO_DATA</td>', null);
+  // ---- 2 三把尺 ----
+  const cur = c.gate_mode || 'near';
+  const row = (k, name, cells, lv) => `<tr class="${k === cur ? 'gate-cur' : ''}"><td>${esc(name)}${k === cur ? ' <span class="tag acc">現在用</span>' : ''}</td>${cells}<td>${lvWord(lv)}</td></tr>`;
+  const ivRow = (k, name, x) => x && !x.status ? row(k, name, `<td class="num">${pc(x.value, 1)}</td><td>${yn(x.rel_calm)}</td><td>${yn(x.abs_acceptable)}</td><td>${yn(x.stable)}</td>`, x.level)
+    : row(k, name, '<td class="muted" colspan="4">沒資料</td>', null);
   const cr = g.carry;
-  const carryRow = cr && !cr.status ? row('carry', '深價內 LEAPS carry（年化外在價值%）', `<td class="num">${cr.min_carry_pct == null ? '—' : cr.min_carry_pct.toFixed(1) + '%'}${cr.approx ? ' <span class="muted">≈</span>' : ''}</td><td class="num muted">${cr.best_strike ? esc(String(cr.best_strike)) : (cr.n_strikes != null ? `${cr.n_strikes} 檔` : '—')}</td><td colspan="2">${yn(cr.ok)} ≤${cr.threshold ?? '—'}%</td><td>${yn(cr.stable)}</td>`, cr.level)
-    : row('carry', '深價內 LEAPS carry', '<td class="muted" colspan="5">NO_DATA</td>', null);
-  $('#sp-gates').innerHTML = `<div class="card"><div class="scroll"><table><thead><tr><th>尺</th><th class="num">今值</th><th class="num">分位</th><th>相對冷</th><th>絕對</th><th>穩定</th><th>判定</th></tr></thead>
-    <tbody>${ivRow('near', '近月 ATM IV', g.near)}${ivRow('leaps', 'LEAPS ATM IV', g.leaps)}${carryRow}</tbody></table></div>
-    <div class="muted" style="margin-top:8px">三條線每天都算都記（history 的 level_near／level_leaps／level_carry），但只有 <b>${esc(c.gate_mode || 'near')}</b> 那條決定 L2 與橫幅。
-    ${['near', 'leaps', 'carry'].filter(k => g[k] && !g[k].status && g[k].level !== (g[c.gate_mode] || {}).level).length ? '🔀 三條線意見不一致：留給 12/9 復盤，不在這裡改規則。' : ''}
-    carry 標 ≈ 代表回填時只用報告前 5 名近似。</div></div>`;
+  const carryRow = cr && !cr.status ? row('carry', '借錢成本（一年）', `<td class="num">${cr.min_carry_pct == null ? '—' : cr.min_carry_pct.toFixed(1) + '%'}${cr.approx ? ' <span class="muted">約</span>' : ''}</td><td colspan="2">${yn(cr.ok)} <span class="muted">要 ≤${cr.threshold ?? '—'}%</span></td><td>${yn(cr.stable)}</td>`, cr.level)
+    : row('carry', '借錢成本（一年）', '<td class="muted" colspan="4">沒資料</td>', null);
+  const disagree = ['near', 'leaps', 'carry'].some(k => g[k] && !g[k].status && g[k].level !== (g[cur] || {}).level);
+  $('#sp-gates').innerHTML = `<div class="card"><div class="scroll"><table><thead><tr><th>尺</th><th class="num">現在</th><th>比平常低</th><th>低於上限</th><th>穩住</th><th>結果</th></tr></thead>
+    <tbody>${ivRow('near', '近月 IV', g.near)}${ivRow('leaps', '長天期 IV', g.leaps)}${carryRow}</tbody></table></div>
+    <div class="muted" style="margin-top:8px">三把尺每天都量、都記，但只有標「現在用」的那把決定燈的顏色。${disagree ? '三把尺意見不一樣，先記著，12/9 復盤再說。' : ''}
+    「借錢成本」是深價內長天期合約多付的時間價值，換算成一年幾 %；「約」代表是用舊資料估的。</div></div>`;
 
-  // ---- 3 可用 strike ----
+  // ---- 3 好買賣的合約 ----
   const liq = c.liquidity || {}, st = c.strikes || [];
-  $('#sp-strikes').innerHTML = `<div class="card"><div class="kv"><div><b>總 OI</b><span>${n0(liq.total_int)}</span></div><div><b>可用 strike</b><span>${liq.usable_strikes ?? '—'}</span></div><div><b>最窄價差</b><span>${pc(liq.best_spread_pct, 1)}</span></div><div><b>流動性</b><span>${yn(liq.liquid)}</span></div></div>
-    ${st.length ? `<div class="scroll"><table><thead><tr><th>到期</th><th class="num">履約</th><th class="num">bid/ask</th><th class="num">mid</th><th class="num">OI</th><th class="num">價差</th><th class="num">DTE</th><th class="num">外在</th><th class="num">carry/年</th></tr></thead>
-      <tbody>${st.map(s => `<tr><td>${esc(s.exp)}</td><td class="num">${f2(s.strike)}</td><td class="num">${f2(s.bid)}/${f2(s.ask)}</td><td class="num">${f2(s.mid)}</td><td class="num">${n0(s.oi)}</td><td class="num">${pc(s.spread_pct, 1)}</td><td class="num">${s.dte ?? '—'}</td><td class="num">${f2(s.extrinsic)}</td><td class="num">${s.carry_pct_annual == null ? '—' : s.carry_pct_annual.toFixed(1) + '%'}</td></tr>`).join('')}</tbody></table></div>` : '<div class="empty">Sage 沒有輸出可用 strike</div>'}
-    <div class="muted" style="margin-top:8px">這是 Sage 的 liquidity.detail 原樣轉發（價差最窄前幾名），不是挑哪一檔的建議；要不要買、買哪檔，照 PLAYBOOK 三步走完才算。</div></div>`;
+  $('#sp-strikes').innerHTML = `<div class="card"><div class="kv"><div><b>好不好買賣</b><span>${liq.liquid ? '✅ 好' : '❌ 不好'}</span></div><div><b>能用的合約</b><span>${liq.usable_strikes ?? '—'} 檔</span></div><div><b>最小買賣價差</b><span>${pc(liq.best_spread_pct, 1)}</span></div><div><b>未平倉總量</b><span>${n0(liq.total_int)}</span></div></div>
+    ${st.length ? `<div class="scroll"><table><thead><tr><th>到期</th><th class="num">履約價</th><th class="num">買／賣價</th><th class="num">未平倉</th><th class="num">價差</th><th class="num">剩幾天</th><th class="num">時間價值</th><th class="num">一年成本</th></tr></thead>
+      <tbody>${st.map(s => `<tr><td>${esc(s.exp)}</td><td class="num">${f2(s.strike)}</td><td class="num">${f2(s.bid)}／${f2(s.ask)}</td><td class="num">${n0(s.oi)}</td><td class="num">${pc(s.spread_pct, 1)}</td><td class="num">${s.dte ?? '—'}</td><td class="num">${f2(s.extrinsic)}</td><td class="num">${s.carry_pct_annual == null ? '—' : s.carry_pct_annual.toFixed(1) + '%'}</td></tr>`).join('')}</tbody></table></div>` : '<div class="empty">今天沒有列出合約</div>'}
+    <div class="muted" style="margin-top:8px">這幾檔是買賣價差最小的，照好買賣的程度排，不是要你買哪一檔。要不要買、買哪檔，照 PLAYBOOK 三步走完再決定。</div></div>`;
 
-  // ---- 4 觀點 ----
+  // ---- 4 你的看法 ----
   $('#sp-view').innerHTML = `<div class="card ${vp.stale ? 'action' : ''}" style="${vp.stale ? 'border-left-color:var(--warn)' : ''}">
-    <div class="kv"><div><b>信心</b><span>${vp.confidence ?? '—'} / 5</span></div><div><b>更新</b><span>${esc(vp.updated || '—')}${vp.age_days != null ? `（${vp.age_days} 天前）` : ''}</span></div></div>
-    <div><b>催化劑</b>：${esc(vp.catalyst || '—')}</div><div><b>論點</b>：${esc(vp.thesis || '—')}</div>
-    ${vp.stale ? '<div class="muted" style="margin-top:6px">🟡 觀點超過 60 天沒更新：L2 亮時先重讀催化劑還成不成立，再決定。</div>' : ''}</div>`;
+    <div class="kv"><div><b>信心</b><span>${vp.confidence ?? '—'} / 5</span></div><div><b>上次更新</b><span>${esc(vp.updated || '—')}${vp.age_days != null ? `（${vp.age_days} 天前）` : ''}</span></div></div>
+    <div><b>看好的理由</b>：${esc(vp.catalyst || '—')}</div><div><b>一句話</b>：${esc(vp.thesis || '—')}</div>
+    ${vp.stale ? '<div class="muted" style="margin-top:6px">🟡 超過 60 天沒更新。燈亮時先問自己：這個理由還成立嗎？</div>' : ''}</div>`;
 
-  // ---- 5 持倉 ----
-  $('#sp-pos').innerHTML = `<div class="card"><div class="kv">
-    <div><b>股數</b><span>${n0(p.shares)}</span></div><div><b>均價</b><span>$${f2(p.avg_cost)}</span></div><div><b>現價</b><span>$${f2(b.price)}</span></div>
-    <div><b>未實現</b><span>${p.unrealized_pct == null ? '—' : (p.unrealized_pct > 0 ? '+' : '') + p.unrealized_pct + '%'}</span></div>
-    <div><b>C 池現金</b><span>$${n0(p.pool_c_cash)}</span></div><div><b>DCA 次數</b><span>${p.n_buys ?? '—'}</span></div>
-    <div><b>市值</b><span>${b.market_cap_t != null ? b.market_cap_t + 'T' : '—'}</span></div><div><b>上市天數</b><span>${b.days_since_ipo ?? '—'}</span></div></div>
-    <div class="muted">持倉來自 spcx_dca_log.json，只是給 C 池決策看規模，不是追蹤報酬。</div></div>`;
-
-  // ---- 6 資料健康 ----
+  // ---- 5 資料有沒有問題 ----
   $('#sp-checks').innerHTML = (b.checks || []).map(x => `<li class="${x.level}"><i></i><span>${esc(x.text)}</span></li>`).join('');
-  $('#sp-health').innerHTML = `Sage 最後跑 ${esc(h.last_run || '—')}・市場日 ${esc(h.market_date || '—')}・IV 歷史到 ${esc(h.latest_market_day || '—')}${h.missed_days && h.missed_days.length ? `・近 45 天漏 ${h.missed_days.length} 天` : ''}。${b.note ? esc(b.note) : ''}`;
+  $('#sp-health').innerHTML = `判定程式上次跑：${esc(h.last_run ? tpe(h.last_run + (h.last_run.endsWith('Z') ? '' : 'Z')) : '—')}（台北）・資料到 ${esc(h.latest_market_day || '—')}${h.missed_days && h.missed_days.length ? `・最近 45 天漏跑 ${h.missed_days.length} 天` : ''}。`;
 }
+const GM_WORD = { near: '近月 IV', leaps: '長天期 IV', carry: '借錢成本' };
 
 // ---------------------------------------------------------------- 切換：?m=us|tw|spcx（預設美股）
 (async () => {
