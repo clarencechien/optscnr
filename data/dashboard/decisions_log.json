@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-20T23:16:07Z",
- "n_days": 31,
+ "generated_at": "2026-10-21T00:48:03Z",
+ "n_days": 32,
  "t8_by_event_answer": {
   "有": {
    "n": 7,
@@ -19,6 +19,58 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-10-20",
+   "decided_at": "2026-10-21T00:35:08.341Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-10-20_IBIT_2026-12-18_55.0",
+     "ticker": "IBIT",
+     "expiry": "2026-12-18",
+     "strike": 55,
+     "entry_price": 0.61,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-11-27",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "未確認",
+      "date": null,
+      "what": "IBIT 是 ETF，沒有財報；在 2026-12-18 到期日前，查不到這檔基金本身已排定的事件",
+      "source": null
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": -1.9,
+       "date": "2026-10-14"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "ETF無財報；查無基金專屬排定事件。FOMC決議10-28、12-09（聯準會）",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-10-19",
    "decided_at": "2026-10-20T00:35:08.019Z",

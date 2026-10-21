@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-20 23:16 UTC",
+  "generated_at": "2026-10-21 00:48 UTC",
   "prereg_date": "2026-09-08",
   "cost_factor": 0.86,
   "min_n": 30,
-  "n_signals": 2330,
+  "n_signals": 2333,
   "n_mature": 1038,
   "overall": {
     "n": 1038,
@@ -675,9 +675,9 @@
     "horizon_days": 20,
     "threshold_pct": 10.0,
     "listed_n": 402,
-    "listed_rate": 0.152,
+    "listed_rate": 0.154,
     "universe_rate": 0.209,
-    "edge_pp": -5.7,
+    "edge_pp": -5.5,
     "verdict_rule": "上榜組 − universe < 5 個百分點（≥100 個上榜標的-日後判）→ 選標的無 edge"
   }
 }
