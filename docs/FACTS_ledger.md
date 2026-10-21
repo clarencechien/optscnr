@@ -274,3 +274,5 @@
 - NVDA ｜ Q3 FY2027 財測：營收 $108.0B ±2%，GAAP 和 non-GAAP 毛利率都是 74.0% ±50bp，高於 LSEG 共識 $104.19B；截至 2026-09-28，官方新聞室還沒有 Q3 法說會通知 ｜ 2026-08-26 ｜ https://trendandticker.com/markets/semiconductors/nvidia-earnings-date-q3-fiscal-2027-2026 ｜ 2026-10-15 LLM 提案
 - NVDA ｜ Public.com 標示 Q3 FY2027 財報和法說會為 2026-11-18（週三），共識 EPS $2.47；和 WSH、TipRanks 不一致，待審 ｜ 2026-11-18 ｜ https://public.com/stocks/nvda/earnings ｜ 2026-10-15 LLM 提案
 - NVDA ｜ TipRanks 標示 Q3 FY2027 財報為 2026-11-25 盤後，頁面同時寫「Confirmed」和「依過往排程估計」，自相矛盾；這個日期晚於 11-20 月選到期日，待審 ｜ 2026-11-25 ｜ https://www.tipranks.com/stocks/nvda/earnings ｜ 2026-10-15 LLM 提案
+- IBIT ｜ IBIT 在 2026-10-19 單日淨流入 $665.16M，是 2025-10-07 以來最大單日淨流入；同日美國現貨比特幣 ETF 合計淨流入 $526.6M，比特幣卡在 $82,000–83,000 區間 ｜ 2026-10-19 ｜ https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102 ｜ 2026-10-20 LLM 提案
+- IBIT ｜ BlackRock 在 2026-10-19 向 SEC 申請 iShares Bitcoin Managed Protect ETF（PBIT），以 IBIT 選擇權搭配現金及短債，提供有上限的上漲曝險與下檔保護；IBIT 資產管理規模超過 $65B ｜ 2026-10-19 ｜ https://www.theblock.co/news/regulation/2026-10-19-blackrock-files-bitcoin-managed-protect-etf-downside-protection-ibit-421087 ｜ 2026-10-20 LLM 提案
