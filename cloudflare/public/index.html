@@ -500,12 +500,12 @@ async function loadSpcx() {
     const b = await getJson('/api/spcx');
     const c = b.c_pool || {}, r = c.response || {};
     el.classList.remove('blink');
-    if (r.status === 'overdue') { chip(el, 'bad', `SPCX C 池 L2 回應逾期 ${r.overdue_days} 日`); el.classList.add('blink'); }
-    else if (c.level === 'L2') chip(el, 'ok', `SPCX C 池 L2 第 ${c.l2_streak_days} 日${r.status === 'answered' ? '・已回應' : `・期限 ${String(r.deadline || '').slice(5)}`}`);
-    else if (c.level === 'L1') chip(el, 'warn', `SPCX C 池 L1${c.l2_days_since_close != null && c.l2_days_since_close <= 5 ? `・L2 ${c.l2_days_since_close} 日前關門` : ''}`);
-    else if (c.level === 'L0') chip(el, '', 'SPCX C 池 L0');
-    else chip(el, 'bad', 'SPCX C 池 NO_DATA');
-  } catch (e) { chip(el, '', `SPCX C 池 讀取失敗`); }
+    if (r.status === 'overdue') { chip(el, 'bad', `SPCX C 池 綠燈，你還沒回答（晚 ${r.overdue_days} 天）`); el.classList.add('blink'); }
+    else if (c.level === 'L2') chip(el, 'ok', `SPCX C 池 綠燈 第 ${c.l2_streak_days} 天${r.status === 'answered' ? '・已回答' : `・${String(r.deadline || '').slice(5).replace('-', '/')} 前回答`}`);
+    else if (c.level === 'L1') chip(el, 'warn', `SPCX C 池 黃燈${c.l2_days_since_close != null && c.l2_days_since_close <= 5 ? `・綠燈 ${c.l2_days_since_close} 天前熄` : ''}`);
+    else if (c.level === 'L0') chip(el, '', 'SPCX C 池 灰燈');
+    else chip(el, 'bad', 'SPCX C 池 沒資料');
+  } catch (e) { chip(el, '', `SPCX C 池 讀不到`); }
 }
 loadLatest(); loadMatrix(); loadDecisions(); loadHealth(); loadFacts(); loadSpcx();
 </script>
