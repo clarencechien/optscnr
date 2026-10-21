@@ -103,7 +103,9 @@ L2 在 5 個交易日內剛關門顯示黃色，L2 回應逾期（L2 起算 2 �
 顏色規則一樣，點了開 `/brief?m=spcx`，沒有按鈕。回應怎麼寫：`spcx_radar/PLAYBOOK.md`「C 池 L2 回應 SOP」。
 
 要公開分享，Zero Trust 的 Bypass 應用程式再加一條 path：**`/api/spcx`**（`/brief` 已涵蓋 `?m=spcx`）。
-推播（轉換事件才發）走 Actions 不走 Worker：repo secrets `SPCX_NOTIFY_URL`／`SPCX_NOTIFY_TOKEN`，見 `spcx_radar/notify_transition.py`。
+推播（轉換事件才發）走 Actions 不走 Worker，管道是 BentoDrop 的 API 推送明文模式（`POST /api/push`、`{"text"}`、Bearer `bd_…`）：
+repo secrets `SPCX_NOTIFY_URL`＝`https://bentodrop.ai-apps.work`、`SPCX_NOTIFY_TOKEN`＝BentoDrop 設定 → API Tokens 建的 token（**要勾明文模式**，
+否則 403）。這則訊息只有 level／價／IV／連結，沒有需要加密的內容；明文訊息 24 小時後 BentoDrop 自動刪。見 `spcx_radar/notify_transition.py`。
 
 ## 它做什麼
 
