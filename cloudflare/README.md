@@ -91,6 +91,20 @@ Cron 不走 HTTP，不受 Access 影響。原本的 WAF Challenge 可以拿掉�
 `tw_scanner/tw_brief.py` 在天氣台／delta_radar 跑完後組裝；Worker 只轉發。舊路徑 `/tw` 轉址到 `/brief?m=tw`。
 要公開分享，Zero Trust 的 Bypass 應用程式再加兩條 path：`/tw` 與 `/api/tw`（`/brief` 已涵蓋帶參數的情況）。
 
+### SPCX C 池：`/brief?m=spcx`、跨市場橫幅、dashboard 燈（PLAN_2026-10_c_pool_alert）
+
+第三個分頁 **`?m=spcx`** 呈現 Option Sage 的 C 池判定：本回合四條件、三條 gate 線（近月 IV／LEAPS IV／深價內 carry，只有現行 gate 決定 L2）、
+可用 strike（Sage 原樣轉發，不是建議）、觀點、持倉與 C 池現金、資料健康。資料來自 **`/api/spcx`**（Worker 從 GitHub 讀
+`spcx_radar/output/spcx_brief.json`，快取 5 分鐘；`/api/brief?m=spcx` 轉到同一份）；JSON 由 Actions 的 `spcx_radar/spcx_brief.py`
+在 space_radar + Sage 跑完後組裝，**Worker 不做任何判定**。
+
+「忘了看」的解法不是推播，是橫幅：US／TW 電子報頁最上面會拉一次 `/api/spcx`，L2 亮著顯示綠色（第幾個交易日、回應期限），
+L2 在 5 個交易日內剛關門顯示黃色，L2 回應逾期（L2 起算 2 個交易日沒寫 decisions）顯示紅色閃爍。dashboard 頁首多一顆「SPCX C 池」燈，
+顏色規則一樣，點了開 `/brief?m=spcx`，沒有按鈕。回應怎麼寫：`spcx_radar/PLAYBOOK.md`「C 池 L2 回應 SOP」。
+
+要公開分享，Zero Trust 的 Bypass 應用程式再加一條 path：**`/api/spcx`**（`/brief` 已涵蓋 `?m=spcx`）。
+推播（轉換事件才發）走 Actions 不走 Worker：repo secrets `SPCX_NOTIFY_URL`／`SPCX_NOTIFY_TOKEN`，見 `spcx_radar/notify_transition.py`。
+
 ## 它做什麼
 
 | 時間 (UTC) | 動作 |
@@ -98,7 +112,7 @@ Cron 不走 HTTP，不受 Access 影響。原本的 WAF Challenge 可以拿掉�
 | 23:05 平日 | ① 第二鬧鐘：22:00 之後 scanner.yml 有沒有任何 run；沒有 → `workflow_dispatch` ② decisions（見下） |
 | 00:35 週二~六 | 同上（GitHub 延遲 3-8 小時的事故形狀，跨日再檢查一次） |
 | 02:05 週二~六 | 同上（decisions 最後一次補：補發的 scanner 到這時也該跑完了） |
-| 任何時間 | `/api/health` 排程健康；`/api/alarm/check` 手動補發；`POST /api/decide` 手動產生 decisions；`/api/decisions` 最近 N 天；`/api/facts` 解析後的事實庫；**`/brief` + `/api/brief` 公開唯讀電子報**；**`/brief?m=tw` + `/api/tw` 公開唯讀台股週報** |
+| 任何時間 | `/api/health` 排程健康；`/api/alarm/check` 手動補發；`POST /api/decide` 手動產生 decisions；`/api/decisions` 最近 N 天；`/api/facts` 解析後的事實庫；**`/brief` + `/api/brief` 公開唯讀電子報**；**`/brief?m=tw` + `/api/tw` 公開唯讀台股週報**；**`/brief?m=spcx` + `/api/spcx` 公開唯讀 SPCX C 池（Sage 判定、橫幅與 dashboard 燈的資料源）** |
 
 **decisions 流程（冪等，同一市場日只寫一次）**：讀 main 的 `data/dashboard/latest.json` → `data/decisions/<市場日>.json` 已存在就跳過
 → 候選 0 筆：不呼叫 LLM、直接記檔 → 否則讀 `docs/PROMPT_daily_report_reading_v4.md` 的 ```` ```prompt ```` 區塊（**改 prompt 不用重新部署**）

@@ -81,6 +81,11 @@ _OPTION_DEFAULTS = {
     'opt_deep_itm_moneyness': 0.85,  # strike ≤ 現價 × 此值 = 深價內（delta 抓不到時的近似）
     # --- 觀點 gate（決定三：信心分數）---
     'opt_viewpoint_min_confidence': 4,  # 【嚴起點】觀點信心 ≥ 4（滿分 5）才算 gate 通過
+    # --- gate 模式（PLAN_2026-10 patch 1：三條線並算，只有這個決定 L2；預設 near＝現狀）---
+    'opt_gate_mode': 'near',             # near / leaps / carry
+    'opt_leaps_iv_pctile_calm': 40,      # leaps 模式：LEAPS IV 分位 ≤ 此值
+    'opt_leaps_iv_abs_acceptable': 0.55, # leaps 模式：LEAPS IV 絕對值 ≤ 此值
+    'opt_max_carry_pct': 5.0,            # carry 模式：深價內 LEAPS 外在價值年化 % ≤ 此值
 }
 
 
@@ -112,6 +117,11 @@ LEAPS_MIN_DAYS = _CFG['opt_leaps_min_days']
 LEAPS_MIN_YEAR = _CFG['opt_leaps_min_year']
 DEEP_ITM_MONEYNESS = _CFG['opt_deep_itm_moneyness']
 VIEWPOINT_MIN_CONFIDENCE = _CFG['opt_viewpoint_min_confidence']
+GATE_MODE = str(_CFG['opt_gate_mode']).lower() if str(_CFG['opt_gate_mode']).lower() in ('near', 'leaps', 'carry') else 'near'
+LEAPS_IV_PCTILE_CALM = _CFG['opt_leaps_iv_pctile_calm']
+LEAPS_IV_ABS_ACCEPTABLE = _CFG['opt_leaps_iv_abs_acceptable']
+MAX_CARRY_PCT = _CFG['opt_max_carry_pct']
+GATE_MODES = ('near', 'leaps', 'carry')
 
 
 def days_since_ipo():
@@ -121,58 +131,116 @@ def days_since_ipo():
 # ============================================================
 # 訊號 1：IV 水位（雙軌——相對分位 + 絕對值，兩個都報）
 # ============================================================
-def get_iv_signal(current_atm_iv):
-    """雙軌 IV 判斷。沿用 space_radar 的 IV 歷史（唯讀）。
-
-    回傳 dict：
-      - atm_iv（絕對值）
-      - pctile（相對分位，資料不足為 None）
-      - n_samples
-      - rel_calm（相對冷卻：分位 ≤ CALM）
-      - abs_acceptable（絕對可接受：IV ≤ 嚴防線）
-      - stable（最近 N 天都相對冷卻）
-    關鍵：rel_calm 與 abs_acceptable 是兩件事。
-      相對分位會說「78% 算冷卻」（比過自己 110% 高點），
-      但絕對值 78% 對買 LEAPS 仍貴 → abs_acceptable=False 擋住。
-    """
-    result = {
-        'atm_iv': current_atm_iv,
-        'pctile': None,
-        'n_samples': 0,
-        'rel_calm': False,
-        'abs_acceptable': False,
-        'stable': False,
-    }
-    if current_atm_iv is None:
+def _iv_gate(series, current_iv, pctile_calm, abs_ok, stable_days, min_samples=None):
+    """泛化的 IV gate（patch 1）：輸入一條 IV 序列（已含當前值、舊→新）與當前值，
+    回傳 {atm_iv, pctile, n_samples, rel_calm, abs_acceptable, stable}。
+    near 與 leaps 兩種模式只差序列來源與閾值。純函式，回填可直接餵截斷後的序列。"""
+    min_samples = IV_PCTILE_MIN_SAMPLES if min_samples is None else min_samples
+    result = {'atm_iv': current_iv, 'pctile': None, 'n_samples': 0,
+              'rel_calm': False, 'abs_acceptable': False, 'stable': False}
+    if current_iv is None:
         return result
+    result['abs_acceptable'] = current_iv <= abs_ok     # 絕對防線（嚴）：與相對分位完全獨立
+    ivs = [float(x) for x in (series or []) if x is not None and not pd.isna(x)]
+    n = len(ivs)
+    result['n_samples'] = n
+    if n >= min_samples:
+        s = pd.Series(ivs)
+        pctile = float((s < current_iv).sum()) / n * 100
+        result['pctile'] = round(pctile, 1)
+        result['rel_calm'] = pctile <= pctile_calm
+        # 穩定：最近 N 個值的分位都 ≤ calm（序列尾端含當前值）
+        recent = ivs[-stable_days:]
+        if len(recent) >= stable_days:
+            result['stable'] = all(float((s < iv).sum()) / n * 100 <= pctile_calm for iv in recent)
+    return result
 
-    # 絕對防線（嚴）：與相對分位完全獨立
-    result['abs_acceptable'] = current_atm_iv <= IV_ABS_ACCEPTABLE
 
-    # 相對分位（讀 space_radar 累積的 IV 歷史）
-    if not os.path.exists(IV_HISTORY_PATH):
-        return result
+def _load_series(path, col, before_date=None):
+    """讀 history 某欄成 list（舊→新）；before_date 給了就只取日期 < 它的列（回填／leaps 用）。"""
+    if not os.path.exists(path):
+        return []
     try:
-        df = pd.read_csv(IV_HISTORY_PATH)
-        ivs = df['atm_iv'].dropna()
-        n = len(ivs)
-        result['n_samples'] = n
-        if n >= IV_PCTILE_MIN_SAMPLES:
-            pctile = (ivs < current_atm_iv).sum() / n * 100
-            result['pctile'] = round(pctile, 1)
-            result['rel_calm'] = pctile <= IV_PCTILE_CALM
-            # 穩定：最近 N 天的分位都 ≤ CALM
-            recent = df.tail(IV_STABLE_DAYS)
-            if len(recent) >= IV_STABLE_DAYS:
-                all_calm = True
-                for iv in recent['atm_iv'].dropna():
-                    p = (ivs < iv).sum() / n * 100
-                    if p > IV_PCTILE_CALM:
-                        all_calm = False
-                        break
-                result['stable'] = all_calm
+        df = pd.read_csv(path)
+        if col not in df.columns:
+            return []
+        if before_date is not None and 'date' in df.columns:
+            df = df[df['date'].astype(str) < str(before_date)]
+        return [float(x) for x in df.sort_values('date')[col].dropna()] if 'date' in df.columns \
+            else [float(x) for x in df[col].dropna()]
     except Exception:
-        pass
+        return []
+
+
+def get_iv_signal(current_atm_iv):
+    """near 模式（現狀）：近月 ATM IV 對 space_radar 的 spcx_iv_history.csv（唯讀）算分位。
+    關鍵：rel_calm 與 abs_acceptable 是兩件事——分位會說「78% 算冷卻」，絕對值 78% 仍貴。
+    IV 歷史檔由 space_radar 先寫、已含今天，所以序列直接用整檔。"""
+    return _iv_gate(_load_series(IV_HISTORY_PATH, 'atm_iv'), current_atm_iv,
+                    IV_PCTILE_CALM, IV_ABS_ACCEPTABLE, IV_STABLE_DAYS)
+
+
+def get_leaps_iv_signal(current_leaps_iv, market_date=None):
+    """leaps 模式：同一套邏輯，輸入換成最長天期 LEAPS 的 ATM IV，分位對 Sage 自己的
+    spcx_options_history.csv 的 leaps_atm_iv 序列算。history 還沒寫今天，所以序列＝舊列＋當前值。"""
+    series = _load_series(OPTIONS_HISTORY_PATH, 'leaps_atm_iv', before_date=market_date) + \
+        ([current_leaps_iv] if current_leaps_iv is not None else [])
+    return _iv_gate(series, current_leaps_iv, LEAPS_IV_PCTILE_CALM, LEAPS_IV_ABS_ACCEPTABLE, IV_STABLE_DAYS)
+
+
+# ============================================================
+# 訊號 1c：隱含融資成本（carry 模式，patch 1）
+# ============================================================
+def carry_of(strike_row, price, market_date):
+    """單一深價內 strike 的 carry：extrinsic / price / (DTE/365) × 100。
+    深價內 LEAPS 的真實成本是外在價值不是 IV；這是「用 LEAPS 借錢持股」的隱含年利率。
+    回傳 dict（含 dte / intrinsic / extrinsic / carry_pct_annual），DTE ≤ 0 或資料不足回 None。"""
+    try:
+        exp_dt = datetime.strptime(str(strike_row['exp'])[:10], '%Y-%m-%d').date()
+        md = market_date if hasattr(market_date, 'year') else datetime.strptime(str(market_date)[:10], '%Y-%m-%d').date()
+        dte = (exp_dt - md).days
+        bid, ask = float(strike_row['bid']), float(strike_row['ask'])
+        if dte <= 0 or bid <= 0 or ask <= 0 or not price:
+            return None
+        mid = (bid + ask) / 2
+        intrinsic = max(price - float(strike_row['strike']), 0.0)
+        extrinsic = mid - intrinsic
+        if extrinsic < 0:
+            # 中價低於內在價值＝報價過期或套利假象（10/15 回填看到 -1.9%），不能當「便宜」計入
+            return None
+        return {'dte': dte, 'mid': round(mid, 2), 'intrinsic': round(intrinsic, 2),
+                'extrinsic': round(extrinsic, 2),
+                'carry_pct_annual': round(extrinsic / price / (dte / 365) * 100, 2)}
+    except Exception:
+        return None
+
+
+def get_carry_signal(liq_sig, price, market_date):
+    """對所有深價內可用 strike（liq_sig['usable_all']，不只報告的前 5 名）算 carry，取最小。
+    gate = 最小 carry ≤ MAX_CARRY_PCT 且連續 IV_STABLE_DAYS 天（穩定看 history 的 min_carry_pct）。
+    順手把 carry 欄位寫進 liq_sig['detail'] 的每筆（brief 原樣轉發，不另算）。"""
+    result = {'min_carry_pct': None, 'best_strike': None, 'ok': False, 'stable': False,
+              'threshold': MAX_CARRY_PCT, 'n_strikes': 0}
+    best = None
+    for s in liq_sig.get('usable_all') or liq_sig.get('detail') or []:
+        c = carry_of(s, price, market_date)
+        if c is None:
+            continue
+        result['n_strikes'] += 1
+        if best is None or c['carry_pct_annual'] < best['carry_pct_annual']:
+            best = {**s, **c}
+    for s in liq_sig.get('detail') or []:
+        c = carry_of(s, price, market_date)
+        if c:
+            s.update(c)
+    if best is None:
+        return result
+    result['min_carry_pct'] = best['carry_pct_annual']
+    result['best_strike'] = {k: best[k] for k in ('exp', 'strike', 'bid', 'ask', 'oi', 'dte', 'intrinsic', 'extrinsic', 'carry_pct_annual')}
+    result['ok'] = best['carry_pct_annual'] <= MAX_CARRY_PCT
+    prev = _load_series(OPTIONS_HISTORY_PATH, 'min_carry_pct', before_date=market_date)
+    recent = prev[-(IV_STABLE_DAYS - 1):] if IV_STABLE_DAYS > 1 else []
+    result['stable'] = result['ok'] and len(recent) >= IV_STABLE_DAYS - 1 and all(x <= MAX_CARRY_PCT for x in recent)
     return result
 
 
@@ -276,6 +344,8 @@ def get_liquidity_signal(tk, current_price):
     result['usable_strikes'] = len(usable)
     result['best_spread_pct'] = round(best_spread, 3) if best_spread is not None else None
     result['detail'] = sorted(usable, key=lambda x: x['spread_pct'])[:5]
+    # patch 1：carry 要看全部深價內可用 strike，不只報告的前 5 名（不進報告，只給 get_carry_signal）
+    result['usable_all'] = sorted(usable, key=lambda x: x['spread_pct'])
 
     # 流動性過關：總 INT + 總量 + 至少一個可用 strike
     result['liquid'] = (
@@ -438,7 +508,7 @@ def get_viewpoint_signal():
 # ============================================================
 # 出手判斷（L2：四條件硬性 AND，缺一不亮）
 # ============================================================
-def evaluate_action_level(iv_sig, liq_sig, viewpoint_sig):
+def evaluate_action_level(iv_sig, liq_sig, viewpoint_sig, iv_leaps=None, carry=None, gate_mode=None):
     """三層輸出判斷。L2 門檻刻意設極高。
 
     四條件硬性 AND（缺一不亮 L2）：
@@ -446,37 +516,67 @@ def evaluate_action_level(iv_sig, liq_sig, viewpoint_sig):
       2. IV 絕對可接受（abs_acceptable，嚴防線）
       3. 流動性過關（liquid）
       4. 觀點信心達標（viewpoint passes）
+    patch 1：前兩條由 gate_mode 決定量哪把尺（near=近月 ATM IV／leaps=LEAPS IV／carry=隱含融資成本），
+    後兩條不變。conditions 的 key 帶模式名，報告才看得出用的是哪條。
 
-    回傳 (level, reasons)：level ∈ {'L0','L1','L2'}
+    回傳 (level, conditions)：level ∈ {'L0','L1','L2'}
     """
-    c1 = iv_sig['rel_calm'] and iv_sig['stable']
-    c2 = iv_sig['abs_acceptable']
+    mode = (gate_mode or GATE_MODE)
+    empty = {'rel_calm': False, 'stable': False, 'abs_acceptable': False}
+    gates = {
+        'near': ((iv_sig['rel_calm'] and iv_sig['stable']), iv_sig['abs_acceptable'], 'IV 相對冷卻且穩定', 'IV 絕對可接受（≤防線）'),
+        'leaps': (((iv_leaps or empty)['rel_calm'] and (iv_leaps or empty)['stable']), (iv_leaps or empty)['abs_acceptable'],
+                  'LEAPS IV 相對冷卻且穩定', 'LEAPS IV 絕對可接受（≤防線）'),
+        'carry': (bool((carry or {}).get('stable')), bool((carry or {}).get('ok')),
+                  '隱含融資成本連續達標', '隱含融資成本 ≤ 門檻'),
+    }
+    if mode not in gates:
+        mode = 'near'
+    c1, c2, k1, k2 = gates[mode]
     c3 = liq_sig['liquid']
     c4 = viewpoint_sig['passes']
 
     conditions = {
-        'IV 相對冷卻且穩定': c1,
-        'IV 絕對可接受（≤防線）': c2,
+        f'{k1}（{mode}）': c1,
+        f'{k2}（{mode}）': c2,
         '流動性過關': c3,
         '觀點信心達標': c4,
     }
-    passed = sum(conditions.values())
 
     if all(conditions.values()):
         return 'L2', conditions
 
-    # L1：環境在變（流動性建立 OR IV 開始相對冷卻），但四條件未齊
-    if c3 or iv_sig['rel_calm']:
+    # L1：環境在變（流動性建立 OR 該模式的「相對冷卻」），但四條件未齊
+    rel = iv_sig['rel_calm'] if mode == 'near' else ((iv_leaps or empty)['rel_calm'] if mode == 'leaps' else bool((carry or {}).get('ok')))
+    if c3 or rel:
         return 'L1', conditions
 
     # L0：靜默，還早
     return 'L0', conditions
 
 
+def levels_by_mode(iv_sig, liq_sig, viewpoint_sig, iv_leaps, carry):
+    """三種 gate 模式各自會給的 level（不管 config 指哪個）——12/9 復盤的關鍵欄。"""
+    return {m: evaluate_action_level(iv_sig, liq_sig, viewpoint_sig, iv_leaps, carry, gate_mode=m)[0]
+            for m in GATE_MODES}
+
+
 # ============================================================
 # 歷史記錄（本模組自己寫，唯一寫入者）
 # ============================================================
-def record_options_history(price, iv_sig, liq_sig, skew_sig, phase, record_date=None):
+def record_options_history(price, iv_sig, liq_sig, skew_sig, phase, record_date=None,
+                           level=None, iv_leaps=None, carry=None, levels=None, gate_mode=None):
+    """結構時序（本模組唯一寫入者）。
+
+    2026-10-21（PLAN_2026-10_c_pool_alert）：加 `level` 與 `transition` 兩欄。
+    9/4–10/15 L2 亮了 21 個交易日沒人看到，事後要證明亮過得翻 git——判定從此進 history。
+    transition：與 history 最後一筆（日期早於本筆）的 level 比，不同就記 "L1->L2" 這種字串，否則空。
+    patch 1：加三條 gate 線的欄位（leaps_* / min_carry_pct / carry_* / gate_mode / level_near|leaps|carry），
+    12/9 復盤直接 groupby 看三條線各亮了幾天、分歧在哪。
+    """
+    iv_leaps = iv_leaps or {}
+    carry = carry or {}
+    levels = levels or {}
     record = {
         'date': (record_date or datetime.now().strftime('%Y-%m-%d')),
         'price': round(price, 2) if price else None,
@@ -491,11 +591,30 @@ def record_options_history(price, iv_sig, liq_sig, skew_sig, phase, record_date=
         'best_spread_pct': liq_sig['best_spread_pct'],
         'skew_type': skew_sig['skew_type'],
         'phase': phase,
+        'level': level,
+        'transition': None,
+        'leaps_pctile': iv_leaps.get('pctile'),
+        'leaps_rel_calm': iv_leaps.get('rel_calm'),
+        'leaps_abs_ok': iv_leaps.get('abs_acceptable'),
+        'leaps_stable': iv_leaps.get('stable'),
+        'min_carry_pct': carry.get('min_carry_pct'),
+        'carry_ok': carry.get('ok'),
+        'carry_stable': carry.get('stable'),
+        'gate_mode': gate_mode or GATE_MODE,
+        'level_near': levels.get('near'),
+        'level_leaps': levels.get('leaps'),
+        'level_carry': levels.get('carry'),
     }
     if os.path.exists(OPTIONS_HISTORY_PATH):
         df = pd.read_csv(OPTIONS_HISTORY_PATH)
         df = df[df['date'] != record['date']]
-        df = pd.concat([df, pd.DataFrame([record])], ignore_index=True)
+        prev = df[df['date'] < record['date']].sort_values('date')
+        if level is not None and 'level' in prev.columns and len(prev):
+            prev_level = prev['level'].dropna()
+            prev_level = str(prev_level.iloc[-1]) if len(prev_level) else None
+            if prev_level and prev_level != level:
+                record['transition'] = f"{prev_level}->{level}"
+        df = pd.concat([df, pd.DataFrame([record])], ignore_index=True).sort_values('date')
     else:
         df = pd.DataFrame([record])
     df.to_csv(OPTIONS_HISTORY_PATH, index=False)
@@ -506,7 +625,10 @@ def record_options_history(price, iv_sig, liq_sig, skew_sig, phase, record_date=
 # 報告生成（沉思者的聲音，三層）
 # ============================================================
 def generate_report(price, iv_sig, liq_sig, skew_sig, phase_code, phase_label,
-                    viewpoint_sig, level, conditions):
+                    viewpoint_sig, level, conditions, iv_leaps=None, carry=None, levels=None):
+    iv_leaps = iv_leaps or {}
+    carry = carry or {}
+    levels = levels or {}
     md = "\n## 🧘 SPCX Option Sage（C 池沉思者）\n\n"
     md += f"_回合制 D+1｜{datetime.now().strftime('%Y-%m-%d')}（上市第 {days_since_ipo()} 天）_\n\n"
 
@@ -519,19 +641,27 @@ def generate_report(price, iv_sig, liq_sig, skew_sig, phase_code, phase_label,
 
     # 三訊號儀表
     md += "### 三結構訊號\n\n"
-    # IV 雙軌
-    iv_pct_str = f"{iv_sig['atm_iv']*100:.0f}%" if iv_sig['atm_iv'] else "—"
-    pctile_str = f"分位 {iv_sig['pctile']:.0f}" if iv_sig['pctile'] is not None else f"分位無基準(n={iv_sig['n_samples']})"
-    md += f"- **IV 水位（雙軌）**：{iv_pct_str}｜{pctile_str}\n"
-    md += f"  - 相對冷卻（分位≤{IV_PCTILE_CALM}）：{'✅' if iv_sig['rel_calm'] else '❌'}"
-    md += f"　絕對可接受（≤{IV_ABS_ACCEPTABLE*100:.0f}%嚴防線）：{'✅' if iv_sig['abs_acceptable'] else '❌'}"
-    md += f"　連續穩定：{'✅' if iv_sig['stable'] else '❌'}\n"
+    ok = lambda b: '✅' if b else '❌'
+    # patch 1：三條 gate 線並列（現行 gate 加粗），分歧本身就是 12/9 要看的證據
+    def _iv_line(name, mode, sig):
+        cur = f"{sig['atm_iv']*100:.0f}%" if sig.get('atm_iv') else "—"
+        pct = f"分位 {sig['pctile']:.0f}" if sig.get('pctile') is not None else f"分位無基準(n={sig.get('n_samples', 0)})"
+        label = f"**{name}（{mode}｜現行 gate）**" if GATE_MODE == mode else f"{name}（{mode}）"
+        return (f"- {label}：{cur}｜{pct}｜相對冷卻 {ok(sig.get('rel_calm'))} 絕對 {ok(sig.get('abs_acceptable'))}"
+                f" 穩定 {ok(sig.get('stable'))}｜單獨判定 {levels.get(mode, '—')}\n")
+    md += _iv_line("IV 水位", "near", iv_sig)
+    md += _iv_line("LEAPS IV", "leaps", {**iv_leaps, 'atm_iv': liq_sig.get('leaps_atm_iv')})
+    bs = carry.get('best_strike') or {}
+    clabel = "**隱含融資成本（carry｜現行 gate）**" if GATE_MODE == 'carry' else "隱含融資成本（carry）"
+    if carry.get('min_carry_pct') is not None:
+        md += (f"- {clabel}：{carry['min_carry_pct']:.1f}%/年（{bs.get('exp')} ${bs.get('strike', 0):.0f}C，外在 {bs.get('extrinsic')}）"
+               f"｜門檻 {carry.get('threshold', MAX_CARRY_PCT):.1f}%｜{ok(carry.get('ok'))} 連續 {ok(carry.get('stable'))}｜單獨判定 {levels.get('carry', '—')}\n")
+    else:
+        md += f"- {clabel}：無可用深價內 strike，無法計算\n"
     if iv_sig['rel_calm'] and not iv_sig['abs_acceptable']:
-        md += f"  - ⚠️ **相對冷卻但絕對仍貴**：分位說便宜，但 {iv_pct_str} 對買 LEAPS 仍是貴保費。嚴防線擋住，正確。\n"
-    # LEAPS 專屬 IV（sage_v0.2：C 池真正要買的東西的保費水位）
-    if liq_sig.get('leaps_atm_iv') is not None:
-        md += f"- **LEAPS IV（{liq_sig['leaps_iv_exp']}，最長天期）**：{liq_sig['leaps_atm_iv']*100:.0f}%"
-        md += "（序列建立中，供未來 LEAPS gate 校準；近月 ATM IV 不能代表 LEAPS 保費）\n"
+        md += f"  - ⚠️ **相對冷卻但絕對仍貴**：分位說便宜，但近月 IV 對買 LEAPS 仍是貴保費。嚴防線擋住，正確。\n"
+    if levels and len(set(levels.values())) > 1:
+        md += f"  - 🔀 **三條線分歧**：near {levels.get('near')}／leaps {levels.get('leaps')}／carry {levels.get('carry')}。深價內 LEAPS 的真實成本是外在價值，不是近月 IV——12/9 復盤用 history 的 level_* 欄選尺。\n"
     # 流動性
     md += f"- **流動性深度**：{'✅ 可下單' if liq_sig['liquid'] else '❌ 未達標'}"
     md += f"（LEAPS INT 總和 {liq_sig['total_int']}/門檻{LIQ_MIN_TOTAL_INT}"
@@ -564,25 +694,28 @@ def generate_report(price, iv_sig, liq_sig, skew_sig, phase_code, phase_label,
         md += f"- _尚未填入觀點（config/spcx_c_viewpoint.json）。沒有觀點 = L2 永遠不會亮。_\n\n"
 
     # === 三層輸出 ===
-    md += "### 🎯 本回合判斷\n\n"
+    md += f"### 🎯 本回合判斷（gate: {GATE_MODE}）\n\n"
     if level == 'L2':
         md += "## 🟢🟢🟢 L2 — 就是這個\n\n"
         md += "**四條件全中。這是非常稀有的時刻——沉思者出手。**\n\n"
-        for cond, ok in conditions.items():
-            md += f"- {cond}：{'✅' if ok else '❌'}\n"
+        for cond, ok_ in conditions.items():
+            md += f"- {cond}：{'✅' if ok_ else '❌'}\n"
         md += "\n**但記住**：模組是 gate（門），不是 hand（手）。它只說「環境到了、四條件齊了」，\n"
         md += "**不建議買哪個 strike / 到期日**——具體下單仍是你手動決定。\n"
-        md += "可用 strike 參考（價差最窄前幾名）：\n\n"
+        md += "**回應 SOP**：2 個交易日內在 `config/spcx_c_decisions.json` 記一筆 act 或 skip（PLAYBOOK「C 池 L2 回應 SOP」）。\n"
+        md += "可用 strike 參考（價差最窄前幾名；carry＝外在價值年化，跟 SGOV 殖利率比）：\n\n"
         for s in liq_sig['detail']:
-            md += f"  - {s['exp']} ${s['strike']:.0f} call（INT {s['oi']}，價差 {s['spread_pct']*100:.1f}%，bid/ask {s['bid']}/{s['ask']}）\n"
+            md += f"  - {s['exp']} ${s['strike']:.0f} call（INT {s['oi']}，價差 {s['spread_pct']*100:.1f}%，bid/ask {s['bid']}/{s['ask']}"
+            md += f"，carry {s['carry_pct_annual']:.1f}%/年" if s.get('carry_pct_annual') is not None else ""
+            md += "）\n"
         md += "\n_單次進場不超過 C 池一半，輸了不補。_\n\n"
     elif level == 'L1':
         md += "## 🟡 L1 — 觀察\n\n"
         md += "**環境在變，但四條件未齊。持續觀察，還不到出手。**\n\n"
-        for cond, ok in conditions.items():
-            md += f"- {cond}：{'✅' if ok else '❌'}\n"
+        for cond, ok_ in conditions.items():
+            md += f"- {cond}：{'✅' if ok_ else '❌'}\n"
         # 點出缺哪一條
-        missing = [c for c, ok in conditions.items() if not ok]
+        missing = [c for c, ok_ in conditions.items() if not ok_]
         md += f"\n還缺：{'、'.join(missing)}。給方向感，不給行動。\n\n"
     else:
         md += "## ⚪ L0 — 靜默\n\n"
@@ -591,7 +724,7 @@ def generate_report(price, iv_sig, liq_sig, skew_sig, phase_code, phase_label,
         if phase_code == 'P0':
             md += "選擇權市場還沒成形，買什麼都付最貴保費撞最寬價差。）\n\n"
         else:
-            missing = [c for c, ok in conditions.items() if not ok]
+            missing = [c for c, ok_ in conditions.items() if not ok_]
             md += f"距出手還缺：{'、'.join(missing)}。）\n\n"
 
     md += "---\n_重劍無鋒，大巧不工。寧可一年不出手，不出錯手。_\n\n"
@@ -635,40 +768,68 @@ def main():
     liq_sig = get_liquidity_signal(tk, price)
     skew_sig = get_skew_signal(tk, price)
     viewpoint_sig = get_viewpoint_signal()
+    # patch 1：另外兩條 gate 線（都算都記，只有 GATE_MODE 那條決定 level）
+    iv_leaps = get_leaps_iv_signal(liq_sig.get('leaps_atm_iv'), market_date=str(market_date))
+    carry = get_carry_signal(liq_sig, price, market_date)
 
     # 階段 + 出手判斷
     phase_code, phase_label = determine_phase(iv_sig, liq_sig, skew_sig)
-    level, conditions = evaluate_action_level(iv_sig, liq_sig, viewpoint_sig)
+    level, conditions = evaluate_action_level(iv_sig, liq_sig, viewpoint_sig, iv_leaps, carry)
+    levels = levels_by_mode(iv_sig, liq_sig, viewpoint_sig, iv_leaps, carry)
 
     print(f"📍 階段：{phase_label}")
     print(f"   IV：{atm_iv*100:.0f}%" if atm_iv else "   IV：無資料", end="")
     if iv_sig['pctile'] is not None:
         print(f"（分位 {iv_sig['pctile']:.0f}）", end="")
     print(f"｜相對冷卻 {iv_sig['rel_calm']}｜絕對可接受 {iv_sig['abs_acceptable']}")
+    print(f"   LEAPS IV：{(liq_sig.get('leaps_atm_iv') or 0)*100:.0f}%（分位 {iv_leaps['pctile']}）｜carry 最小 {carry['min_carry_pct']}%/年")
     print(f"   流動性：{'可下單' if liq_sig['liquid'] else '未達標'}"
           f"（INT {liq_sig['total_int']}，可用 strike {liq_sig['usable_strikes']}）")
     print(f"   skew：{skew_sig['skew_type']}")
     print(f"   觀點：{'有且達標' if viewpoint_sig['passes'] else ('有但信心不足' if viewpoint_sig['has_viewpoint'] else '未填')}")
-    print(f"🎯 本回合：{level}")
+    print(f"🎯 本回合：{level}（gate {GATE_MODE}；三條線 {levels}）")
 
-    # 記錄歷史
-    record_options_history(price, iv_sig, liq_sig, skew_sig, phase_code, record_date=str(market_date))
+    # 記錄歷史（判定算完才記：level / transition / 三條線一起進 history）
+    hist_df = record_options_history(price, iv_sig, liq_sig, skew_sig, phase_code,
+                                     record_date=str(market_date), level=level,
+                                     iv_leaps=iv_leaps, carry=carry, levels=levels, gate_mode=GATE_MODE)
+    try:
+        transition = hist_df.loc[hist_df['date'] == str(market_date), 'transition'].iloc[-1]
+        transition = None if pd.isna(transition) else str(transition)
+    except Exception:
+        transition = None
+    if transition:
+        print(f"🔔 判定轉換：{transition}")
 
     # 報告
     md = generate_report(price, iv_sig, liq_sig, skew_sig, phase_code, phase_label,
-                         viewpoint_sig, level, conditions)
+                         viewpoint_sig, level, conditions, iv_leaps=iv_leaps, carry=carry, levels=levels)
     with open(REPORT_PATH, 'w', encoding='utf-8') as f:
         f.write(md)
 
+    liq_out = {k: v for k, v in liq_sig.items() if k != 'usable_all'}   # usable_all 只給 carry 用，不進 JSON
     output = {
         'updated_at': datetime.now().isoformat(),
-        'version': 'sage_v0.3',
+        'version': 'sage_v0.4',
+        'market_date': str(market_date),
         'days_since_ipo': d,
         'price': price,
         'phase': phase_code,
         'level': level,
+        'transition': transition,
+        'gate_mode': GATE_MODE,
+        'gates': {
+            'near': {**{k: iv_sig[k] for k in ('pctile', 'rel_calm', 'abs_acceptable', 'stable', 'n_samples')},
+                     'value': iv_sig['atm_iv'], 'ok': bool(iv_sig['rel_calm'] and iv_sig['stable'] and iv_sig['abs_acceptable']),
+                     'level': levels['near'], 'pctile_calm': IV_PCTILE_CALM, 'abs_gate': IV_ABS_ACCEPTABLE},
+            'leaps': {**{k: iv_leaps[k] for k in ('pctile', 'rel_calm', 'abs_acceptable', 'stable', 'n_samples')},
+                      'value': liq_sig.get('leaps_atm_iv'), 'exp': liq_sig.get('leaps_iv_exp'),
+                      'ok': bool(iv_leaps['rel_calm'] and iv_leaps['stable'] and iv_leaps['abs_acceptable']),
+                      'level': levels['leaps'], 'pctile_calm': LEAPS_IV_PCTILE_CALM, 'abs_gate': LEAPS_IV_ABS_ACCEPTABLE},
+            'carry': {**carry, 'level': levels['carry']},
+        },
         'iv': iv_sig,
-        'liquidity': liq_sig,
+        'liquidity': liq_out,
         'skew': skew_sig,
         'viewpoint': viewpoint_sig,
         'conditions': conditions,

@@ -28,6 +28,10 @@ jobs:
       - name: Run option sage
         run: python spcx_radar/spcx_options.py
         continue-on-error: true
+      # C 池 brief（PLAN_2026-10_c_pool_alert）：把 radar + Sage + 人工回應組成 spcx_brief.json，
+      # Worker /api/spcx 轉發給 /brief 橫幅、SPCX 分頁、dashboard 燈。零網路、缺檔標 NO_DATA，不該掛。
+      - name: Build SPCX brief
+        run: python spcx_radar/spcx_brief.py
       # 重組資料夾 README（space_radar + sage 兩區塊，像主 scanner 一樣以 README 為報表）
       - name: Build folder README
         run: python spcx_radar/build_readme.py
@@ -46,9 +50,11 @@ jobs:
             spcx_radar/output/spcx_options.json \
             spcx_radar/output/spcx_options_report.md \
             spcx_radar/output/spcx_options_history.csv \
+            spcx_radar/output/spcx_brief.json \
             spcx_radar/config/spcx_dca_log.json \
             spcx_radar/config/spcx_config.json \
-            spcx_radar/config/spcx_c_viewpoint.json
+            spcx_radar/config/spcx_c_viewpoint.json \
+            spcx_radar/config/spcx_c_decisions.json
           do
             if [ -f "$f" ]; then
               git add "$f"
@@ -63,7 +69,9 @@ jobs:
           if git diff --quiet --cached; then
             echo "No changes to commit"
           else
-            git commit -m "🚀 Daily SPCX space radar + option sage [skip ci]"
+            # commit message 帶 C 池判定（PLAN §〇 缺口 1：L2 與 L0 同管道同音量——至少 git log 一眼看得出）
+            LVL=$(python -c "import json;b=json.load(open('spcx_radar/output/spcx_brief.json'));c=b.get('c_pool',{});print((c.get('level') or '?')+(' '+c['transition'] if c.get('transition') else ''))" 2>/dev/null || echo "?")
+            git commit -m "🚀 Daily SPCX space radar + option sage [C池 ${LVL}] [skip ci]"
             # push 前先 rebase 到最新 main：排程延遲會讓多個 workflow 擠在同一時段 push，
             # 沒 rebase 就被 non-fast-forward 拒絕、整次掃描結果丟失（2026-09-02 事故）。
             # 各 workflow 寫的檔案互不重疊，rebase 不會衝突；三次重試後仍失敗就大聲失敗。
@@ -75,3 +83,12 @@ jobs:
             [ "$ok" = 1 ] || { echo "::error::push 三次皆失敗"; exit 1; }
             echo "已 push 成功"
           fi
+      # 轉換事件推播（PLAN §五）：只在 level 變、Sage 沒跑、回應逾期第一天發。
+      # 排在 commit 之後：推播管道掛了會把 run 標紅（要看得見），但資料已經入庫。
+      # secrets：SPCX_NOTIFY_URL（BentoDrop 推送 endpoint 或 webhook）、SPCX_NOTIFY_TOKEN；沒設就只印不發。
+      - name: Notify on C-pool transition
+        if: always()
+        run: python spcx_radar/notify_transition.py
+        env:
+          NOTIFY_URL: ${{ secrets.SPCX_NOTIFY_URL }}
+          NOTIFY_TOKEN: ${{ secrets.SPCX_NOTIFY_TOKEN }}

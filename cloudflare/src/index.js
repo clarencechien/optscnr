@@ -534,8 +534,9 @@ function sameOrigin(request, url) {
 // ------------------------------------------------------------------ 電子報（公開、唯讀、不觸發任何動作）
 /** 這些路徑跳過 Worker 端的 Access 驗證。Cloudflare Access 本身仍會擋——要公開分享，
  *  在 Zero Trust 另建一個 path 為 /brief* 與 /api/brief 的應用程式、policy 用 Bypass（見 cloudflare/README.md）。 */
-const PUBLIC_PATHS = new Set(["/brief", "/brief.html", "/api/brief", "/tw", "/api/tw"]);
+const PUBLIC_PATHS = new Set(["/brief", "/brief.html", "/api/brief", "/tw", "/api/tw", "/api/spcx"]);
 const TW_BRIEF_PATH = "tw_scanner/output/tw_brief.json";
+const SPCX_BRIEF_PATH = "spcx_radar/output/spcx_brief.json";   // C 池 brief（PLAN_2026-10_c_pool_alert）：Worker 只轉發、不算
 
 /** /api/brief?d=YYYY-MM-DD：把候選、decisions、矩陣摘要、排程狀態、資料檢查彙整成一份；只讀 GitHub。 */
 async function brief(env, dateParam) {
@@ -618,6 +619,9 @@ export default {
         // 同一個端點帶 m=tw → 台股週報 JSON（與 /api/tw 同源）
         return Response.redirect(`${url.origin}/api/tw`, 302);
       }
+      if (url.pathname === "/api/brief" && (url.searchParams.get("m") || "").toLowerCase() === "spcx") {
+        return Response.redirect(`${url.origin}/api/spcx`, 302);   // m=spcx → C 池 brief JSON
+      }
       if (url.pathname === "/api/brief") {
         // 公開唯讀；GitHub API 有配額，快取 5 分鐘。d 只准 YYYY-MM-DD：它會拼進 GitHub Contents API 的路徑
         const dParam = url.searchParams.get("d");
@@ -640,6 +644,19 @@ export default {
         const tw = await ghGetJson(env, TW_BRIEF_PATH);
         if (!tw) return Response.json({ error: "tw_brief.json 尚未產生（tw_scanner 排程跑完才有）" }, { status: 404, headers: noStore });
         const res = Response.json(tw, { headers: { "Cache-Control": "public, max-age=300" } });
+        if (ctx) ctx.waitUntil(cache.put(key, res.clone()));
+        return res;
+      }
+      if (url.pathname === "/api/spcx") {
+        // SPCX C 池 brief（公開唯讀）：Actions 的 spcx_brief.py 組好 JSON，Worker 只轉發；快取 5 分鐘。
+        // 橫幅／dashboard 燈都讀這一份，Worker 不做任何判定。
+        const key = new Request(`${url.origin}/api/spcx`, { method: "GET" });
+        const cache = caches.default;
+        const hit = await cache.match(key);
+        if (hit) return hit;
+        const sp = await ghGetJson(env, SPCX_BRIEF_PATH);
+        if (!sp) return Response.json({ error: "spcx_brief.json 尚未產生（space_radar 排程跑完才有）" }, { status: 404, headers: noStore });
+        const res = Response.json(sp, { headers: { "Cache-Control": "public, max-age=300" } });
         if (ctx) ctx.waitUntil(cache.put(key, res.clone()));
         return res;
       }
