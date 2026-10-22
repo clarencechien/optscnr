@@ -2,7 +2,7 @@
   "_說明": "C 池觀點欄位。Option Sage 只檢查有沒有填 + 信心夠不夠，不會自己生觀點。沒填 active=true 或信心 < 門檻(預設4)，L2 永遠不會亮。",
   "_信心分數定義": "1=隨便想想 / 2=有點根據 / 3=做了功課但不確定市場錯 / 4=有把握市場某處定價錯且我知道為什麼 / 5=極高把握(罕見)",
   "active": true,
-  "catalyst": "xAI grok 4.7 incoming, 4.6 分數比預期還好",
+  "catalyst": "xAI grok 4.7真的上線了, 5.0要來了, 現在spcx光賣算力半年就回本了",
   "thesis": "starship incoming",
   "confidence": 5,
   "updated": "2026-08-18"
