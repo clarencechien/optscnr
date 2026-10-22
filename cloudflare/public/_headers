@@ -1,0 +1,27 @@
+# Workers Assets 會讀這個檔(wrangler.toml 的 [assets] directory = ./public)。
+# 它只套用在**靜態檔**上 —— Worker 自己用 Response.json 組的回應走 src/index.js
+# 的 harden(),兩邊要一起改。
+#
+# 為什麼要有 CSP:/brief 是公開頁(Access 的 optscnr-brief 應用把它 bypass 掉),
+# 任何人都打得開,而它會把 GitHub 來的 JSON 渲染進 DOM。目前那條路徑有 esc(),
+# CSP 是第二道。
+#
+# 各條的理由(改前端的外部資源時這裡要跟著改,否則線上會被擋掉):
+#   script-src 'unsafe-inline'   brief.html 與 index.html 的邏輯都寫在行內 <script>,
+#                                靜態資產沒有 nonce 可用。兩頁都沒有 on* 行內屬性,
+#                                所以不需要 script-src-attr
+#   style-src  fonts.googleapis  兩頁都 link 了 Google Fonts 的樣式表
+#   font-src   fonts.gstatic     上面那份樣式表會再去抓字型檔
+#   connect-src raw.githubusercontent.com
+#                                index.html:235 的 RAW 常數直接 fetch GitHub 的
+#                                raw 檔(dashboard 讀 repo 內容用)
+#   img-src 'self' data:         兩頁都沒有 <img>,留最小集合
+# github.com 只出現在 <a href> 裡(人讀版連結),不是載入,所以不需要任何指令。
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://raw.githubusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
