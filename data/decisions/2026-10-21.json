@@ -1,0 +1,156 @@
+{
+  "market_date": "2026-10-21",
+  "decided_at": "2026-10-22T00:35:07.933Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-21T23:05:34Z",
+  "n_candidates": 2,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 33,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-21_IBIT_2026-11-20_52.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 52,
+      "entry_price": 0.69,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": 2.4,
+          "date": "2026-10-21"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-10-28",
+        "what": "這是聯準會的事件，不是 IBIT 自己的事件：FOMC 於美東時間 14:00 公布利率決議；IBIT 是 ETF，沒有財報。",
+        "source": "https://fedratecalc.com/fomc-meeting-schedule/october-2026/"
+      },
+      "note": "FOMC會議10/27–28，紀要11/18公布；10/19 IBIT淨流入6.65億美元",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-10-21_IBIT_2026-11-20_53.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 53,
+      "entry_price": 0.51,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": 2.4,
+          "date": "2026-10-21"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-10-28",
+        "what": "這是聯準會的事件，不是 IBIT 自己的事件：FOMC 於美東時間 14:00 公布利率決議；IBIT 是 ETF，沒有財報。",
+        "source": "https://fedratecalc.com/fomc-meeting-schedule/october-2026/"
+      },
+      "note": "FOMC會議10/27–28，紀要11/18公布；10/19 IBIT淨流入6.65億美元",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "IBIT",
+      "fact": "IBIT 單日淨流入 6.6516 億美元，是 2025-10-07 以來最大的一天；同日美國現貨比特幣 ETF 合計淨流入 5.266 億美元，比特幣卡在 82,000–83,000 美元區間。",
+      "date": "2026-10-19",
+      "source": "https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "BlackRock 申請新基金 iShares Bitcoin Managed Protect ETF，設計是對 IBIT 提供下檔保護，同時保留上檔曝險；IBIT 淨資產 663.7 億美元。",
+      "date": "2026-10-19",
+      "source": "https://www.kucoin.com/news/flash/blackrock-s-ibit-bitcoin-etf-sees-665m-inflow-largest-since-october-2025"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "這是聯準會的事件，不是 IBIT 自己的事件：FOMC 會議 2026-10-27 至 10-28 召開，10-28 美東 14:00 公布決議、14:30 開記者會，這次沒有點陣圖；會議紀要 2026-11-18 公布，下一次決議 2026-12-09。",
+      "date": "2026-10-28",
+      "source": "https://www.smartcalendars.ai/en/feeds/fed-fomc-meeting-calendar"
+    }
+  ],
+  "facts_appended": 1,
+  "raw_answer": "{\"market_date\":\"2026-10-21\",\"candidates\":[{\"signal_id\":\"2026-10-21_IBIT_2026-11-20_52.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-10-28\",\"what\":\"這是聯準會的事件，不是 IBIT 自己的事件：FOMC 於美東時間 14:00 公布利率決議；IBIT 是 ETF，沒有財報。\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/october-2026/\"},\"note\":\"FOMC會議10/27–28，紀要11/18公布；10/19 IBIT淨流入6.65億美元\"},{\"signal_id\":\"2026-10-21_IBIT_2026-11-20_53.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-10-28\",\"what\":\"這是聯準會的事件，不是 IBIT 自己的事件：FOMC 於美東時間 14:00 公布利率決議；IBIT 是 ETF，沒有財報。\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/october-2026/\"},\"note\":\"FOMC會議10/27–28，紀要11/18公布；10/19 IBIT淨流入6.65億美元\"}],\"facts_proposed\":[{\"ticker\":\"IBIT\",\"fact\":\"IBIT 單日淨流入 6.6516 億美元，是 2025-10-07 以來最大的一天；同日美國現貨比特幣 ETF 合計淨流入 5.266 億美元，比特幣卡在 82,000–83,000 美元區間。\",\"date\":\"2026-10-19\",\"source\":\"https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102\"},{\"ticker\":\"IBIT\",\"fact\":\"BlackRock 申請新基金 iShares Bitcoin Managed Protect ETF，設計是對 IBIT 提供下檔保護，同時保留上檔曝險；IBIT 淨資產 663.7 億美元。\",\"date\":\"2026-10-19\",\"source\":\"https://www.kucoin.com/news/flash/blackrock-s-ibit-bitcoin-etf-sees-665m-inflow-largest-since-october-2025\"},{\"ticker\":\"IBIT\",\"fact\":\"這是聯準會的事件，不是 IBIT 自己的事件：FOMC 會議 2026-10-27 至 10-28 召開，10-28 美東 14:00 公布決議、14:30 開記者會，這次沒有點陣圖；會議紀要 2026-11-18 公布，下一次決議 2026-12-09。\",\"date\":\"2026-10-28\",\"source\":\"https://www.smartcalendars.ai/en/feeds/fed-fomc-meeting-calendar\"}]}",
+  "usage": {
+    "prompt_tokens": 31946,
+    "completion_tokens": 2260,
+    "total_tokens": 34206,
+    "cost": 0.192984,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.192984,
+      "upstream_inference_prompt_cost": 0.127784,
+      "upstream_inference_completions_cost": 0.0452
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1200,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}

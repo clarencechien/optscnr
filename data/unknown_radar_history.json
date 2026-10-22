@@ -1,25 +1,4 @@
 {
-  "Six Flags": {
-    "first_seen": "2026-10-13",
-    "last_seen": "2026-10-14",
-    "consecutive_days": 2,
-    "total_mentions": 6,
-    "ticker": "FUN"
-  },
-  "Galderma": {
-    "first_seen": "2026-10-14",
-    "last_seen": "2026-10-14",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "GDERF"
-  },
-  "Enovix": {
-    "first_seen": "2026-10-14",
-    "last_seen": "2026-10-14",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ENVX"
-  },
   "Neutron": {
     "first_seen": "2026-10-15",
     "last_seen": "2026-10-15",
@@ -75,5 +54,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BBY"
+  },
+  "Southwest Airlines": {
+    "first_seen": "2026-10-22",
+    "last_seen": "2026-10-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LUV"
+  },
+  "EBay": {
+    "first_seen": "2026-10-22",
+    "last_seen": "2026-10-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "EBAY"
+  },
+  "Webull": {
+    "first_seen": "2026-10-22",
+    "last_seen": "2026-10-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BULLW"
+  },
+  "Arcus Biosciences": {
+    "first_seen": "2026-10-22",
+    "last_seen": "2026-10-22",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "RCUS"
   }
 }

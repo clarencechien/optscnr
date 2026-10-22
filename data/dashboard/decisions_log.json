@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-10-21T00:48:03Z",
- "n_days": 32,
+ "generated_at": "2026-10-22T00:50:44Z",
+ "n_days": 33,
  "t8_by_event_answer": {
   "有": {
-   "n": 7,
-   "hit_rate": 0.714,
-   "avg_peak": 2.86
+   "n": 9,
+   "hit_rate": 0.556,
+   "avg_peak": 2.58
   },
   "無": {
    "n": 3,
@@ -13,12 +13,105 @@
    "avg_peak": 1.48
   },
   "未確認": {
-   "n": 1,
+   "n": 2,
    "hit_rate": 0.0,
-   "avg_peak": 0.47
+   "avg_peak": 0.69
   }
  },
  "days": [
+  {
+   "market_date": "2026-10-21",
+   "decided_at": "2026-10-22T00:35:07.933Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 2,
+   "candidates": [
+    {
+     "signal_id": "2026-10-21_IBIT_2026-11-20_52.0",
+     "ticker": "IBIT",
+     "expiry": "2026-11-20",
+     "strike": 52,
+     "entry_price": 0.69,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-10-28",
+      "what": "這是聯準會的事件，不是 IBIT 自己的事件：FOMC 於美東時間 14:00 公布利率決議；IBIT 是 ETF，沒有財報。",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/october-2026/"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": 2.4,
+       "date": "2026-10-21"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "FOMC會議10/27–28，紀要11/18公布；10/19 IBIT淨流入6.65億美元",
+     "status": "answered",
+     "outcome": null
+    },
+    {
+     "signal_id": "2026-10-21_IBIT_2026-11-20_53.0",
+     "ticker": "IBIT",
+     "expiry": "2026-11-20",
+     "strike": 53,
+     "entry_price": 0.51,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-10-28",
+      "what": "這是聯準會的事件，不是 IBIT 自己的事件：FOMC 於美東時間 14:00 公布利率決議；IBIT 是 ETF，沒有財報。",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/october-2026/"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": 2.4,
+       "date": "2026-10-21"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "FOMC會議10/27–28，紀要11/18公布；10/19 IBIT淨流入6.65億美元",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-10-20",
    "decided_at": "2026-10-21T00:35:08.341Z",
@@ -150,7 +243,7 @@
       "peak": 0.84,
       "mature": false,
       "verdict": "➖持平(峰0.8x/今0.8x)",
-      "filled_at": "2026-10-20"
+      "filled_at": "2026-10-21"
      }
     }
    ]
@@ -210,7 +303,7 @@
       "peak": 0.73,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-10-20"
+      "filled_at": "2026-10-21"
      }
     }
    ]
@@ -320,7 +413,7 @@
       "peak": 1.46,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-20"
+      "filled_at": "2026-10-21"
      }
     }
    ]
@@ -380,7 +473,7 @@
       "peak": 1.5,
       "mature": false,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-20"
+      "filled_at": "2026-10-21"
      }
     }
    ]
@@ -440,7 +533,7 @@
       "peak": 0.83,
       "mature": false,
       "verdict": "➖持平(峰0.8x/今0.5x)",
-      "filled_at": "2026-10-20"
+      "filled_at": "2026-10-21"
      }
     }
    ]
@@ -496,11 +589,11 @@
      "outcome": {
       "t5": 1.33,
       "t10": 1.63,
-      "t20": null,
+      "t20": 1.63,
       "peak": 1.63,
-      "mature": false,
+      "mature": true,
       "verdict": "➖持平(峰1.6x/今1.6x)",
-      "filled_at": "2026-10-20"
+      "filled_at": "2026-10-21"
      }
     },
     {
@@ -545,11 +638,11 @@
      "outcome": {
       "t5": 0.9,
       "t10": 0.43,
-      "t20": null,
+      "t20": 0.33,
       "peak": 0.9,
-      "mature": false,
-      "verdict": "➖持平(峰0.9x/今0.4x)",
-      "filled_at": "2026-10-20"
+      "mature": true,
+      "verdict": "➖持平(峰0.9x/今0.3x)",
+      "filled_at": "2026-10-21"
      }
     },
     {
@@ -594,11 +687,11 @@
      "outcome": {
       "t5": 1.05,
       "t10": 1.45,
-      "t20": null,
-      "peak": 1.45,
-      "mature": false,
+      "t20": 1.53,
+      "peak": 1.53,
+      "mature": true,
       "verdict": "➖持平(峰1.5x/今1.5x)",
-      "filled_at": "2026-10-20"
+      "filled_at": "2026-10-21"
      }
     }
    ]

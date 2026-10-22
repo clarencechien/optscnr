@@ -1,29 +1,53 @@
 {
-  "updated_at": "2026-10-21T00:08:05.682979",
-  "count": 2,
+  "updated_at": "2026-10-22T00:13:32.884681",
+  "count": 4,
   "blind_spots": [
     {
-      "name": "United Airlines",
-      "ticker": "UAL",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "United Airlines slashes 2026 profit outlook on fuel prices, but travelers keep booking despite highe",
-        "United Airlines slashes 2026 profit outlook on fuel prices, but travelers keep booking despite highe"
-      ]
-    },
-    {
-      "name": "Best Buy",
-      "ticker": "BBY",
+      "name": "Southwest Airlines",
+      "ticker": "LUV",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Best Buy launches new gaming hub ahead of 'Zelda' and 'Grand Theft Auto VI'",
-        "Best Buy launches new gaming hub ahead of 'Zelda' and 'Grand Theft Auto VI'"
+        "Southwest Airlines cuts 2026 profit forecast on higher fuel",
+        "Southwest Airlines cuts 2026 profit forecast on higher fuel"
+      ]
+    },
+    {
+      "name": "EBay",
+      "ticker": "EBAY",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "EBay to lay off 9% of workforce in its second round of job cuts this year",
+        "EBay to lay off 9% of workforce in its second round of job cuts this year"
+      ]
+    },
+    {
+      "name": "Webull",
+      "ticker": "BULLW",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "House committee says Webull messages point to China access to U.S. customer data",
+        "House committee says Webull messages point to China access to U.S. customer data"
+      ]
+    },
+    {
+      "name": "Arcus Biosciences",
+      "ticker": "RCUS",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Arcus Biosciences stock falls on public offering announcement",
+        "Arcus Biosciences slides 20% on stock offering, kidney-cancer data"
       ]
     }
   ]
