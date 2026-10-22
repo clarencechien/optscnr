@@ -521,6 +521,28 @@ async function verifyAccess(request, env) {
 // ------------------------------------------------------------------ entry points
 const noStore = { "Cache-Control": "no-store" };
 
+/** Worker 自己組的回應要帶的安全標頭。
+ *
+ *  public/_headers 只套用在**靜態檔**上(Workers Assets 讀它),Response.json 走不到。
+ *  這裡是那一半。CSP 用 `default-src 'none'` 的「這是資料不是頁面」版本 ——
+ *  瀏覽器對子資源(fetch 回來的 JSON)本來就會忽略 CSP,它只在有人直接把網址
+ *  貼進網址列、那份 JSON 變成一份文件時才有意義。 */
+const SEC = {
+  "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+  "Content-Security-Policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+};
+
+/** 把安全標頭補上去。在 fetch() 出口統一套,不要在十四個 Response.json 旁邊各寫一次
+ *  —— 那樣下一個新增的端點就是會忘記的那個。 */
+function harden(res) {
+  const h = new Headers(res.headers);
+  for (const [k, v] of Object.entries(SEC)) h.set(k, v);
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
+}
+
 /** 會改狀態的端點只收同源請求：擋 CSRF（Access cookie 若被瀏覽器帶上，跨站表單也能打到這裡）。
  *  curl／無 Origin 的呼叫放行（那已經過了 Access JWT）。 */
 function sameOrigin(request, url) {
@@ -534,7 +556,14 @@ function sameOrigin(request, url) {
 // ------------------------------------------------------------------ 電子報（公開、唯讀、不觸發任何動作）
 /** 這些路徑跳過 Worker 端的 Access 驗證。Cloudflare Access 本身仍會擋——要公開分享，
  *  在 Zero Trust 另建一個 path 為 /brief* 與 /api/brief 的應用程式、policy 用 Bypass（見 cloudflare/README.md）。 */
-const PUBLIC_PATHS = new Set(["/brief", "/brief.html", "/api/brief", "/tw", "/api/tw", "/api/spcx"]);
+/** 不需要 Access 的路徑。**必須與 Zero Trust 的 `optscnr-brief` 應用 bypass 清單一致** ——
+ *  那邊是邊緣的第一道,這邊是 Worker 自己的第二道;少了這一層,Access 設定一被動到就全開。
+ *
+ *  `/brief.html` 刻意不在這裡:靜態檔由 Workers Assets 在 Worker **之前**供應
+ *  (wrangler.toml 沒有 run_worker_first),所以直接開 `/brief.html` 根本到不了這個判斷,
+ *  擋它的是 Access 的 `optscnr` 應用。放在這裡只是看起來有、實際上是死的,
+ *  還會讓人以為 `/brief.html` 是公開的(它不是,會要求登入)。公開的入口只有 `/brief`。 */
+const PUBLIC_PATHS = new Set(["/brief", "/api/brief", "/tw", "/api/tw", "/api/spcx"]);
 const TW_BRIEF_PATH = "tw_scanner/output/tw_brief.json";
 const SPCX_BRIEF_PATH = "spcx_radar/output/spcx_brief.json";   // C 池 brief（PLAN_2026-10_c_pool_alert）：Worker 只轉發、不算
 
@@ -607,6 +636,11 @@ export default {
   },
 
   async fetch(request, env, ctx) {
+    return harden(await route(request, env, ctx));
+  },
+};
+
+async function route(request, env, ctx) {
     const url = new URL(request.url);
     if (!PUBLIC_PATHS.has(url.pathname)) {
       const access = await verifyAccess(request, env);
@@ -681,7 +715,8 @@ export default {
     } catch (e) {
       return Response.json({ error: String(e) }, { status: 500, headers: noStore });
     }
-    // 其餘：靜態 dashboard（cloudflare/public/）
+    // 其餘：靜態 dashboard（cloudflare/public/）。
+    // 注意：直接命中檔案的請求根本到不了這裡 —— Workers Assets 在 Worker 之前就供完檔，
+    // 那條路徑的標頭來自 public/_headers。這一行只處理 Worker 轉給 ASSETS 的情況。
     return env.ASSETS.fetch(request);
-  },
-};
+}
