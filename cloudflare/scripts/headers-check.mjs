@@ -23,8 +23,21 @@ const worker = (await import(pathToFileURL(path.resolve(rel)).href)).default;
 
 globalThis.caches = { default: { match: async () => undefined, put: async () => {} } };
 
+// ASSETS 的替身要學 Workers Assets 預設的 html_handling = auto-trailing-slash:
+// 直接要 *.html 會被 307 轉到去掉副檔名的路徑。少了這一條,Worker 把 /brief 改寫成
+// /brief.html 再丟給 ASSETS 的無限轉址(2026-10-22 正式站)在這裡就測不出來。
+const fakeAssets = {
+  fetch: async (req) => {
+    const u = new URL(req.url);
+    if (u.pathname.endsWith('.html')) {
+      const to = u.pathname === '/index.html' ? '/' : u.pathname.slice(0, -'.html'.length);
+      return new Response(null, { status: 307, headers: { location: to } });
+    }
+    return new Response('<html>dash</html>', { headers: { 'content-type': 'text/html' } });
+  },
+};
 const baseEnv = {
-  ASSETS: { fetch: async () => new Response('<html>dash</html>', { headers: { 'content-type': 'text/html' } }) },
+  ASSETS: fakeAssets,
   GITHUB_OWNER: 'x', GITHUB_REPO: 'y', DEFAULT_BRANCH: 'main',
   // 不設 GITHUB_TOKEN:上游呼叫會失敗,但那不影響要驗的東西(路由與標頭)
 };
@@ -72,7 +85,10 @@ async function checkBriefIsUsable() {
   const res = await worker.fetch(new Request('https://optscnr.ai-apps.work/brief'), env, ctx);
   const csp = res.headers.get('content-security-policy') || '';
   const ok = res.status === 200 && isPageCsp(csp) && /fonts\.googleapis\.com/.test(csp);
-  console.log(`${ok ? '✓' : '✗'} ${'/brief 拿到頁面版 CSP'.padEnd(26)} ${String(res.status).padEnd(5)} ${ok ? '行內 script 與字型都放行' : 'CSP: ' + csp.slice(0, 70)}`);
+  const why = res.status >= 300 && res.status < 400
+    ? `被轉址到 ${res.headers.get('location')}(run_worker_first 之後這就是無限迴圈)`
+    : 'CSP: ' + csp.slice(0, 70);
+  console.log(`${ok ? '✓' : '✗'} ${'/brief 拿到 200 + 頁面版 CSP'.padEnd(26)} ${String(res.status).padEnd(5)} ${ok ? '行內 script 與字型都放行' : why}`);
   return ok;
 }
 
