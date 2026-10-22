@@ -1,33 +1,33 @@
 {
-  "updated_at": "2026-10-22T00:44:35.104474",
+  "updated_at": "2026-10-22T01:59:36.575913",
   "version": "sage_v0.4",
   "market_date": "2026-10-21",
   "days_since_ipo": 132,
-  "price": 147.7899932861328,
-  "phase": "P2",
+  "price": 159.30999755859375,
+  "phase": "P1",
   "level": "L1",
   "transition": null,
   "gate_mode": "near",
   "gates": {
     "near": {
-      "pctile": 43.8,
-      "rel_calm": false,
-      "abs_acceptable": false,
+      "pctile": 38.2,
+      "rel_calm": true,
+      "abs_acceptable": true,
       "stable": false,
       "n_samples": 89,
-      "value": 0.5783733569335938,
+      "value": 0.5485884985351563,
       "ok": false,
       "level": "L1",
       "pctile_calm": 40,
       "abs_gate": 0.55
     },
     "leaps": {
-      "pctile": 28.6,
+      "pctile": 26.5,
       "rel_calm": true,
       "abs_acceptable": false,
       "stable": true,
       "n_samples": 49,
-      "value": 0.6184,
+      "value": 0.6102,
       "exp": "2029-01-19",
       "ok": false,
       "level": "L1",
@@ -35,41 +35,54 @@
       "abs_gate": 0.55
     },
     "carry": {
-      "min_carry_pct": 3.81,
+      "min_carry_pct": 0.04,
       "best_strike": {
-        "exp": "2028-12-15",
-        "strike": 5.0,
-        "bid": 153.5,
-        "ask": 156.3,
-        "oi": 166,
-        "dte": 786,
-        "intrinsic": 142.79,
-        "extrinsic": 12.11,
-        "carry_pct_annual": 3.81
+        "exp": "2027-06-17",
+        "strike": 25.0,
+        "bid": 131.15,
+        "ask": 137.55,
+        "oi": 123,
+        "dte": 239,
+        "intrinsic": 134.31,
+        "extrinsic": 0.04,
+        "carry_pct_annual": 0.04
       },
       "ok": true,
       "stable": false,
       "threshold": 5.0,
-      "n_strikes": 136,
+      "n_strikes": 155,
       "level": "L1"
     }
   },
   "iv": {
-    "atm_iv": 0.5783733569335938,
-    "pctile": 43.8,
+    "atm_iv": 0.5485884985351563,
+    "pctile": 38.2,
     "n_samples": 89,
-    "rel_calm": false,
-    "abs_acceptable": false,
+    "rel_calm": true,
+    "abs_acceptable": true,
     "stable": false
   },
   "liquidity": {
     "has_leaps": true,
     "total_int": 1168764,
     "total_vol": 188127,
-    "usable_strikes": 136,
-    "best_spread_pct": 0.018,
+    "usable_strikes": 156,
+    "best_spread_pct": 0.016,
     "liquid": true,
     "detail": [
+      {
+        "exp": "2028-12-15",
+        "strike": 135.0,
+        "oi": 1610,
+        "spread_pct": 0.016,
+        "bid": 64.6,
+        "ask": 65.65,
+        "dte": 786,
+        "mid": 65.12,
+        "intrinsic": 24.31,
+        "extrinsic": 40.82,
+        "carry_pct_annual": 11.9
+      },
       {
         "exp": "2028-12-15",
         "strike": 5.0,
@@ -79,9 +92,9 @@
         "ask": 156.3,
         "dte": 786,
         "mid": 154.9,
-        "intrinsic": 142.79,
-        "extrinsic": 12.11,
-        "carry_pct_annual": 3.81
+        "intrinsic": 154.31,
+        "extrinsic": 0.59,
+        "carry_pct_annual": 0.17
       },
       {
         "exp": "2029-01-19",
@@ -92,9 +105,22 @@
         "ask": 79.15,
         "dte": 821,
         "mid": 78.43,
-        "intrinsic": 37.79,
-        "extrinsic": 40.64,
-        "carry_pct_annual": 12.22
+        "intrinsic": 49.31,
+        "extrinsic": 29.12,
+        "carry_pct_annual": 8.13
+      },
+      {
+        "exp": "2027-03-19",
+        "strike": 135.0,
+        "oi": 1165,
+        "spread_pct": 0.021,
+        "bid": 34.9,
+        "ask": 35.65,
+        "dte": 149,
+        "mid": 35.27,
+        "intrinsic": 24.31,
+        "extrinsic": 10.97,
+        "carry_pct_annual": 16.86
       },
       {
         "exp": "2027-09-17",
@@ -105,44 +131,18 @@
         "ask": 62.1,
         "dte": 331,
         "mid": 61.38,
-        "intrinsic": 37.79,
-        "extrinsic": 23.59,
-        "carry_pct_annual": 17.6
-      },
-      {
-        "exp": "2028-06-16",
-        "strike": 120.0,
-        "oi": 207,
-        "spread_pct": 0.026,
-        "bid": 65.1,
-        "ask": 66.8,
-        "dte": 604,
-        "mid": 65.95,
-        "intrinsic": 27.79,
-        "extrinsic": 38.16,
-        "carry_pct_annual": 15.6
-      },
-      {
-        "exp": "2027-06-17",
-        "strike": 125.0,
-        "oi": 464,
-        "spread_pct": 0.027,
-        "bid": 46.5,
-        "ask": 47.75,
-        "dte": 239,
-        "mid": 47.12,
-        "intrinsic": 22.79,
-        "extrinsic": 24.34,
-        "carry_pct_annual": 25.15
+        "intrinsic": 49.31,
+        "extrinsic": 12.07,
+        "carry_pct_annual": 8.35
       }
     ],
-    "leaps_atm_iv": 0.6184,
+    "leaps_atm_iv": 0.6102,
     "leaps_iv_exp": "2029-01-19"
   },
   "skew": {
-    "skew_type": "put",
-    "call_iv": 0.544,
-    "put_iv": 0.614,
+    "skew_type": "neutral",
+    "call_iv": 0.538,
+    "put_iv": 0.557,
     "pc_vol_ratio": 0.702
   },
   "viewpoint": {
@@ -158,7 +158,7 @@
   },
   "conditions": {
     "IV \u76f8\u5c0d\u51b7\u537b\u4e14\u7a69\u5b9a\uff08near\uff09": false,
-    "IV \u7d55\u5c0d\u53ef\u63a5\u53d7\uff08\u2264\u9632\u7dda\uff09\uff08near\uff09": false,
+    "IV \u7d55\u5c0d\u53ef\u63a5\u53d7\uff08\u2264\u9632\u7dda\uff09\uff08near\uff09": true,
     "\u6d41\u52d5\u6027\u904e\u95dc": true,
     "\u89c0\u9ede\u4fe1\u5fc3\u9054\u6a19": true
   }
