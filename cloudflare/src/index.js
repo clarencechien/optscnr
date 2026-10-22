@@ -590,10 +590,9 @@ function sameOrigin(request, url) {
 /** 不需要 Access 的路徑。**必須與 Zero Trust 的 `optscnr-brief` 應用 bypass 清單一致** ——
  *  那邊是邊緣的第一道,這邊是 Worker 自己的第二道;少了這一層,Access 設定一被動到就全開。
  *
- *  `/brief.html` 刻意不在這裡:靜態檔由 Workers Assets 在 Worker **之前**供應
- *  (wrangler.toml 沒有 run_worker_first),所以直接開 `/brief.html` 根本到不了這個判斷,
- *  擋它的是 Access 的 `optscnr` 應用。放在這裡只是看起來有、實際上是死的,
- *  還會讓人以為 `/brief.html` 是公開的(它不是,會要求登入)。公開的入口只有 `/brief`。 */
+ *  `/brief.html` 刻意不在這裡:公開的入口只有 `/brief`。直接開 `/brief.html` 會進到
+ *  這個判斷(run_worker_first = true)然後被要求登入;就算放行,Workers Assets 也會
+ *  依 auto-trailing-slash 把它 307 轉回 `/brief`。放進來只會讓人以為它是公開的。 */
 const PUBLIC_PATHS = new Set(["/brief", "/api/brief", "/tw", "/api/tw", "/api/spcx"]);
 const TW_BRIEF_PATH = "tw_scanner/output/tw_brief.json";
 const SPCX_BRIEF_PATH = "spcx_radar/output/spcx_brief.json";   // C 池 brief（PLAN_2026-10_c_pool_alert）：Worker 只轉發、不算
@@ -699,7 +698,13 @@ async function route(request, env, ctx) {
         if (ctx) ctx.waitUntil(cache.put(key, res.clone()));
         return res;
       }
-      if (url.pathname === "/brief") return env.ASSETS.fetch(new Request(new URL("/brief.html", url).toString(), request));
+      // /brief 直接交給 Workers Assets:它自己會依 html_handling(預設 auto-trailing-slash)
+      // 把 /brief 對到 brief.html。**不可以**在這裡改寫成 /brief.html 再丟給 ASSETS ——
+      // 同一條規則會把 /brief.html 以 307/308 轉回 /brief,而 run_worker_first = true 之後
+      // 那個 /brief 又回到這一行,就成了無限轉址(2026-10-22 正式站 ERR_TOO_MANY_REDIRECTS)。
+      // run_worker_first 打開之前這一行根本跑不到(/brief 在 Worker 之前就被靜態檔接走),
+      // 所以錯誤的改寫一直沒被發現。
+      if (url.pathname === "/brief") return env.ASSETS.fetch(request);
       if (url.pathname === "/api/tw") {
         // 台股週報（公開唯讀）：Python 在 Actions 組好 tw_brief.json，Worker 只轉發；快取 5 分鐘
         const key = new Request(`${url.origin}/api/tw`, { method: "GET" });
@@ -746,8 +751,7 @@ async function route(request, env, ctx) {
     } catch (e) {
       return Response.json({ error: String(e) }, { status: 500, headers: noStore });
     }
-    // 其餘：靜態 dashboard（cloudflare/public/）。
-    // 注意：直接命中檔案的請求根本到不了這裡 —— Workers Assets 在 Worker 之前就供完檔，
-    // 那條路徑的標頭來自 public/_headers。這一行只處理 Worker 轉給 ASSETS 的情況。
+    // 其餘：靜態 dashboard（cloudflare/public/）。run_worker_first = true 之後,靜態檔的
+    // 請求也都走到這裡;標頭由 public/_headers 設好,harden() 只補缺的、不覆蓋。
     return env.ASSETS.fetch(request);
 }
