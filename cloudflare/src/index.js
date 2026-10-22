@@ -489,7 +489,18 @@ function b64urlToBytes(s) {
  *  注意：靜態頁（public/）由 Cloudflare 先供檔、不經過這裡，所以「頁面開得了但 /api 全 401」
  *  就是這個檢查沒過——不是頁面壞了。 */
 async function verifyAccess(request, env) {
-  if (!env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD) return { ok: true };
+  if (!env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD) {
+    // 刻意維持放行(fail-open):邊緣的 Access 應用 `optscnr` 蓋整個 host,
+    // 所以這一層消失時還有它擋著。**但讓它 OK 的是那個 Cloudflare 設定,不是這裡的程式碼**
+    // —— 哪天有人把那個應用改成只蓋特定路徑(bentodrop / ytplayer / mahou 都是那種形狀),
+    // 這裡就會變成真的洞。所以至少要出聲,不要靜靜地少一層。
+    console.warn(JSON.stringify({
+      event: "access_check_disabled",
+      reason: "ACCESS_TEAM_DOMAIN 或 ACCESS_AUD 未設",
+      effect: "Worker 這一層不驗 JWT,只剩邊緣的 Cloudflare Access",
+    }));
+    return { ok: true };
+  }
   const team = String(env.ACCESS_TEAM_DOMAIN).replace(/^https?:\/\//, "").replace(/\/.*$/, "");
   let token = request.headers.get("Cf-Access-Jwt-Assertion");
   if (!token) {
@@ -532,14 +543,34 @@ const SEC = {
   "X-Frame-Options": "DENY",
   "Referrer-Policy": "strict-origin-when-cross-origin",
   "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
-  "Content-Security-Policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
 };
+
+/** JSON／非頁面回應的 CSP:「這是資料,不是頁面」。
+ *  瀏覽器對 fetch 回來的子資源本來就忽略 CSP,它只在有人把網址直接貼進網址列、
+ *  那份 JSON 變成一份文件時才有意義。 */
+const DATA_CSP = "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'";
+
+/** HTML 頁面的 CSP。**必須與 public/_headers 那一份一致** ——
+ *  兩邊都存在的原因:`run_worker_first = true` 時靜態檔也會經過這裡,
+ *  而 `_headers` 是把那個旗標拿掉之後的安全網。改一邊要改另一邊。 */
+const PAGE_CSP =
+  "default-src 'self'; script-src 'self' 'unsafe-inline'; " +
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+  "font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; " +
+  "connect-src 'self' https://raw.githubusercontent.com; " +
+  "object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'";
 
 /** 把安全標頭補上去。在 fetch() 出口統一套,不要在十四個 Response.json 旁邊各寫一次
  *  —— 那樣下一個新增的端點就是會忘記的那個。 */
 function harden(res) {
   const h = new Headers(res.headers);
   for (const [k, v] of Object.entries(SEC)) h.set(k, v);
+  // CSP 不覆寫:`_headers` 已經給靜態檔配好頁面用的那一份,蓋掉它會讓 dashboard
+  // 與 /brief 連自己的行內 script 都載不了。只有沒人設過時才補。
+  if (!h.has("Content-Security-Policy")) {
+    const ct = h.get("Content-Type") || "";
+    h.set("Content-Security-Policy", /text\/html/i.test(ct) ? PAGE_CSP : DATA_CSP);
+  }
   return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
 }
 

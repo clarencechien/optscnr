@@ -30,6 +30,12 @@ crons = ["5 23 * * 1-5", "35 0 * * 2-6", "5 2 * * 2-6"]
 [assets]
 directory = "./public"
 binding = "ASSETS"
+# 靜態檔也先進 Worker。預設(false)時 Cloudflare 會在 Worker 之前就把 public/ 裡
+# 比對得到的檔案送出去 —— / 、/index.html 、/brief.html 都是，於是 verifyAccess
+# 與 harden() 這兩層對它們完全不生效，dashboard 只剩邊緣的 Access 擋著。
+# 設 true 之後兩層都蓋得到。代價:每一次靜態檔請求都會叫起 Worker。
+# (sukemu 的 wrangler.jsonc 同樣理由設了這個旗標。)
+run_worker_first = true
 
 [vars]
 GITHUB_OWNER = "clarencechien"

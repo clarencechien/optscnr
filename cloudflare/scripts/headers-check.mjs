@@ -33,6 +33,13 @@ const baseEnv = {
 // 也就是**兩個變數沒設時這一層整個不驗**。正式環境兩個都設了(2026-10-22 以
 // Cloudflare API 確認),但測試若不設,下面每一條「要 Access」的斷言都會假通過。
 const env = { ...baseEnv, ACCESS_TEAM_DOMAIN: 'swtech.cloudflareaccess.com', ACCESS_AUD: 'a'.repeat(64) };
+
+// CSP 要分兩種:HTML 頁面要能載行內 script 與 Google Fonts,JSON 則是
+// 「這是資料不是頁面」。harden() 若把頁面的 CSP 蓋成 default-src 'none',
+// dashboard 與 /brief 會連自己的行內 script 都載不了 —— 那是 run_worker_first
+// 打開之後才會發生的事,所以這裡要驗。
+const isPageCsp = (c) => /script-src 'self' 'unsafe-inline'/.test(c || '');
+const isDataCsp = (c) => /^default-src 'none'/.test(c || '');
 const ctx = { waitUntil() {} };
 
 const WANT = [
@@ -58,6 +65,17 @@ const CASES = [
   ['/                 要 Access', '/',              false],
 ];
 
+// run_worker_first = true 之後,靜態檔也會經過 Worker。
+// 公開的那一頁必須拿到**頁面版** CSP,不能被 harden() 蓋成 default-src 'none' ——
+// 蓋掉的話 /brief 連自己的行內 <script> 都載不了,頁面是空的。
+async function checkBriefIsUsable() {
+  const res = await worker.fetch(new Request('https://optscnr.ai-apps.work/brief'), env, ctx);
+  const csp = res.headers.get('content-security-policy') || '';
+  const ok = res.status === 200 && isPageCsp(csp) && /fonts\.googleapis\.com/.test(csp);
+  console.log(`${ok ? '✓' : '✗'} ${'/brief 拿到頁面版 CSP'.padEnd(26)} ${String(res.status).padEnd(5)} ${ok ? '行內 script 與字型都放行' : 'CSP: ' + csp.slice(0, 70)}`);
+  return ok;
+}
+
 let bad = 0;
 for (const [name, p, isPublic] of CASES) {
   let res;
@@ -73,21 +91,52 @@ for (const [name, p, isPublic] of CASES) {
   const gateOk = isPublic ? res.status !== 401 : res.status === 401;
   const ok = gateOk && missing.length === 0;
   if (!ok) bad++;
+  // CSP 的種類要跟 content-type 對得上
+  const csp = res.headers.get('content-security-policy');
+  const html = /text\/html/i.test(res.headers.get('content-type') || '');
+  const cspOk = missing.length ? true : (html ? isPageCsp(csp) : isDataCsp(csp));
+  const all = ok && cspOk;
+  if (ok && !cspOk) bad++;
   console.log(
-    `${ok ? '✓' : '✗'} ${name.padEnd(26)} ${String(res.status).padEnd(5)} ` +
-    `${missing.length ? '缺標頭:' + missing.join(', ') : '五個標頭都在'}${gateOk ? '' : '  ← 閘門不對'}`,
+    `${all ? '✓' : '✗'} ${name.padEnd(26)} ${String(res.status).padEnd(5)} ` +
+    `${missing.length ? '缺標頭:' + missing.join(', ') : '五個標頭都在'}` +
+    `${gateOk ? '' : '  ← 閘門不對'}` +
+    `${cspOk ? '' : `  ← CSP 種類不對(${html ? '頁面' : 'JSON'} 拿到 ${isPageCsp(csp) ? '頁面版' : isDataCsp(csp) ? '資料版' : '未知'})`}`,
   );
 }
 
-// 把 verifyAccess 的 fail-open 行為寫成一條明確的斷言,免得它靜靜地變成「沒有第二層」。
+if (!(await checkBriefIsUsable())) bad++;
+
+// 正式環境的那條路:public/_headers 已經替靜態檔設好頁面版 CSP,harden() **不可以**
+// 蓋掉它。這是 run_worker_first 打開之後最容易弄壞 dashboard 的一步。
 {
+  const PRESET = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com";
+  const envWithHeaders = {
+    ...env,
+    ASSETS: { fetch: async () => new Response('<html>dash</html>', {
+      headers: { 'content-type': 'text/html', 'content-security-policy': PRESET },
+    }) },
+  };
+  const res = await worker.fetch(new Request('https://optscnr.ai-apps.work/brief'), envWithHeaders, ctx);
+  const kept = res.headers.get('content-security-policy') === PRESET;
+  if (!kept) bad++;
+  console.log(`${kept ? '✓' : '✗'} ${'_headers 的 CSP 不被蓋掉'.padEnd(26)} ${String(res.status).padEnd(5)} ${kept ? '原樣保留' : '被 harden() 覆寫成:' + (res.headers.get('content-security-policy') || '').slice(0, 60)}`);
+}
+
+// fail-open 現在會在 Workers Logs 留一行。驗它有沒有真的叫 console.warn。
+{
+  const warned = [];
+  const orig = console.warn;
+  console.warn = (...a) => warned.push(a.join(' '));
   const res = await worker.fetch(new Request('https://optscnr.ai-apps.work/api/facts'), baseEnv, ctx);
+  console.warn = orig;
   const open = res.status !== 401;
+  const noisy = warned.some((w) => w.includes('access_check_disabled'));
+  if (!noisy) bad++;
   console.log(
-    `${open ? '!' : '✓'} ${'ACCESS_* 沒設時'.padEnd(26)} ${String(res.status).padEnd(5)} ` +
-    (open
-      ? 'verifyAccess 直接放行 —— 這一層只在兩個 secret 都在時才存在(目前正式環境有設)'
-      : '仍然擋下來'),
+    `${noisy ? '✓' : '✗'} ${'ACCESS_* 沒設時'.padEnd(26)} ${String(res.status).padEnd(5)} ` +
+    (open ? 'fail-open(刻意:邊緣 Access 蓋整個 host)' : '擋下來') +
+    (noisy ? ',而且有寫進 log' : ' —— ✗ 沒有留下任何 log,會靜靜地少一層'),
   );
 }
 
