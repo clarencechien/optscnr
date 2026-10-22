@@ -64653,5 +64653,105 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-10-21_MS_2026-12-18_200.0",
+    "snapshot_date": "2026-10-21",
+    "ticker": "MS",
+    "expiry": "2026-12-18",
+    "strike": 200.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅財報已過(10-14)",
+    "entry_price": 3.35,
+    "entry_iv": 28.85813330078124,
+    "entry_spot": 187.01,
+    "oi": 3618,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(10-14)"
+    ],
+    "volume": 5192,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.35,
+    "entry_ask": 3.85,
+    "last_trade_at": "2026-10-21 19:59:24",
+    "quote_at": "2026-10-22T00:43:29Z",
+    "underlying_at": "2026-10-22T00:43:29Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-21",
+        "spot": 187.00999450683594,
+        "last": 3.35,
+        "bid": 3.35,
+        "ask": 3.85,
+        "iv": 28.85813330078124
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-21_IBM_2026-11-20_300.0",
+    "snapshot_date": "2026-10-21",
+    "ticker": "IBM",
+    "expiry": "2026-11-20",
+    "strike": 300.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅財報日未知",
+    "entry_price": 1.41,
+    "entry_iv": 45.55718505859375,
+    "entry_spot": 251.46,
+    "oi": 2097,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報日未知"
+    ],
+    "volume": 2844,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.32,
+    "entry_ask": 1.46,
+    "last_trade_at": "2026-10-21 19:59:52",
+    "quote_at": "2026-10-22T00:43:29Z",
+    "underlying_at": "2026-10-22T00:43:29Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-21",
+        "spot": 251.4600067138672,
+        "last": 1.41,
+        "bid": 1.32,
+        "ask": 1.46,
+        "iv": 45.55718505859375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
