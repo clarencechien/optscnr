@@ -2,7 +2,19 @@
 
 _README 由 build_readme.py 於 2026-10-22 00:44 UTC 重組；兩區塊各為該模組最近一次排程的輸出。_
 
-> 執行手冊：[PLAYBOOK.md](PLAYBOOK.md)｜8 月後任務計劃：[PLAN_2026-08.md](PLAN_2026-08.md)｜手動維護檔在 `config/`（dca_log / viewpoint / spcx_config）
+> 執行手冊：[PLAYBOOK.md](PLAYBOOK.md)｜8 月後任務計劃：[PLAN_2026-08.md](PLAN_2026-08.md)｜C 池管道（燈號／橫幅／推播／回應）：[PLAN_2026-10_c_pool_alert.md](PLAN_2026-10_c_pool_alert.md)｜手動維護檔在 `config/`（dca_log / viewpoint / spcx_config / **spcx_c_decisions**＝你的回答，只加不改）
+
+---
+
+## 🚦 C 池燈號
+
+**🟡 黃燈（L1）**，上次綠燈到 2026-10-14（5 天前熄）｜市場日 2026-10-21｜用「近月 IV」這把尺
+
+C 池：🟡 L2 在 5 個交易日前關門（最後 2026-10-14），現在 L1。
+
+三把尺各自的結果：近月 IV 黃燈／長天期 IV 黃燈／借錢成本 黃燈（只有現在用的那把決定燈色）。
+
+> 完整版（四個條件、三把尺、好買賣的合約、你的看法、資料健康）：[https://optscnr.ai-apps.work/brief?m=spcx](https://optscnr.ai-apps.work/brief?m=spcx)｜燈亮後怎麼做：[PLAYBOOK.md「C 池 L2 回應 SOP」](PLAYBOOK.md)｜判定每天寫進 `output/spcx_options_history.csv`（level／transition／三把尺）｜轉換那天會推播一則（BentoDrop）
 
 ---
 

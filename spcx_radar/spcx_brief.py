@@ -187,17 +187,33 @@ def positions_section(dca: dict | None, price: float | None, cfg: dict | None) -
             "pool_c_cash": pool_c, "n_buys": len(buys)}
 
 
-def sage_health(opts: dict | None, iv_hist: list[dict], opt_hist: list[dict], today: dt.date) -> dict:
+def scan_calendar(base_dir: str) -> set[str]:
+    """交易日曆：主 scanner 每個交易日在 repo 根目錄 data/ 留一個 YYYY-MM-DD.csv（零網路、不用假日表）。
+    只靠 IV 歷史當日曆會有盲點：space_radar 整天沒跑的日子，IV 歷史沒那列，就看不出漏跑。"""
+    try:
+        import glob as _glob
+        import re as _re
+        root = os.path.dirname(os.path.abspath(base_dir))
+        return {os.path.basename(p)[:10] for p in _glob.glob(os.path.join(root, "data", "*.csv"))
+                if _re.match(r"^\d{4}-\d{2}-\d{2}\.csv$", os.path.basename(p))}
+    except Exception:
+        return set()
+
+
+def sage_health(opts: dict | None, iv_hist: list[dict], opt_hist: list[dict], today: dt.date, calendar_days=()) -> dict:
     iv_dates = sorted({r["date"] for r in iv_hist if r.get("date")})
     opt_dates = {r["date"] for r in opt_hist if r.get("date")}
-    recent = [d for d in iv_dates if _d(d) and (today - _d(d)).days <= 45]
-    missed = [d for d in recent if d not in opt_dates]
-    last_market = iv_dates[-1] if iv_dates else None
+    within = lambda d: _d(d) is not None and 0 <= (today - _d(d)).days <= 45   # noqa: E731
+    cal = {d for d in calendar_days if within(d)}
+    recent = sorted({d for d in iv_dates if within(d)} | cal)
+    missed = [d for d in recent if d not in opt_dates]            # Sage 沒寫的交易日（含整天沒跑的）
+    radar_missed = [d for d in sorted(cal) if d not in iv_dates]  # space_radar 整天沒跑的交易日
+    last_market = max(iv_dates[-1:] + sorted(cal)[-1:]) if (iv_dates or cal) else None
     # sage_v0.4 之前的 JSON 沒有 market_date：退回 history 最後一列（同一次 Sage 寫的）
     sage_md = (opts or {}).get("market_date") or (opt_hist[-1].get("date") if opt_hist else None)
     return {"last_run": (opts or {}).get("updated_at"), "market_date": sage_md,
             "ran_for_latest_market_day": bool(last_market and last_market in opt_dates),
-            "latest_market_day": last_market, "missed_days": missed,
+            "latest_market_day": last_market, "missed_days": missed, "radar_missed_days": radar_missed,
             "history_has_level": any(r.get("level") for r in opt_hist[-3:])}
 
 
@@ -252,7 +268,7 @@ def build_brief(base_dir: str, today: dt.date | None = None) -> dict:
     vp_detail = ((opts or {}).get("viewpoint") or {}).get("detail") or {}
     vp_updated = _d(vp_detail.get("updated") or (vp or {}).get("updated"))
     vp_age = (today - vp_updated).days if vp_updated else None
-    health = sage_health(opts, iv_hist, opt_hist, today)
+    health = sage_health(opts, iv_hist, opt_hist, today, calendar_days=scan_calendar(base_dir))
     conds = (opts or {}).get("conditions") or {}
     cond_vals = list(conds.values())
     conditions = {
@@ -273,7 +289,9 @@ def build_brief(base_dir: str, today: dt.date | None = None) -> dict:
     else:
         checks.append({"level": "ok", "label": "今天有跑", "text": f"判定程式今天有跑（市場日 {health['market_date']}），結果 {level}"})
     if health["missed_days"]:
-        checks.append({"level": "warn", "label": f"漏跑 {len(health['missed_days'])} 天", "text": f"最近 45 天有 {len(health['missed_days'])} 個交易日沒跑：{'、'.join(health['missed_days'])}"})
+        checks.append({"level": "warn", "label": f"漏跑 {len(health['missed_days'])} 天", "text": f"最近 45 天有 {len(health['missed_days'])} 個交易日判定程式沒跑：{'、'.join(health['missed_days'])}"})
+    if health.get("radar_missed_days"):
+        checks.append({"level": "warn", "label": f"雷達漏跑 {len(health['radar_missed_days'])} 天", "text": f"最近 45 天 space_radar 整天沒跑的交易日（主 scanner 有跑）：{'、'.join(health['radar_missed_days'])}"})
     if opt_hist and not health["history_has_level"]:
         checks.append({"level": "warn", "label": "歷史缺判定欄", "text": "spcx_options_history.csv 最近幾列沒有 level 欄：backfill_level.py 還沒跑或判定程式版本舊"})
     if resp["status"] == "overdue":
@@ -368,8 +386,11 @@ def selftest() -> bool:
         print(("  ✅ " if cond else "  ❌ ") + msg, file=sys.stderr)
         ok = ok and bool(cond)
 
-    base = tempfile.mkdtemp(prefix="spcx_brief_selftest_")
+    root = tempfile.mkdtemp(prefix="spcx_brief_selftest_")
+    base = os.path.join(root, "spcx_radar")
     os.makedirs(os.path.join(base, "output")); os.makedirs(os.path.join(base, "config"))
+    # 交易日曆 fixture：主 scanner 的 data/YYYY-MM-DD.csv（09-29 兩邊都沒跑 → 雷達漏跑＋判定漏跑）
+    os.makedirs(os.path.join(root, "data")); open(os.path.join(root, "data", "2026-09-29.csv"), "w").close()
     b = build_brief(base, dt.date(2026, 10, 21))
     check(b["c_pool"]["level"] is None and any(c["level"] == "bad" for c in b["checks"]) and "不動" in b["do_line"], "全缺 → NO_DATA 不崩潰")
 
@@ -388,7 +409,7 @@ def selftest() -> bool:
             w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
         with open(os.path.join(base, "output", "spcx_iv_history.csv"), "w", newline="") as f:
             w = csv.DictWriter(f, fieldnames=["date", "price", "atm_iv"]); w.writeheader()
-            w.writerows([{"date": r["date"], "price": "150", "atm_iv": "0.5"} for r in rows] + [{"date": "2026-10-09", "price": "150", "atm_iv": "0.5"}])
+            w.writerows([{"date": "2026-09-30", "price": "150", "atm_iv": "0.5"}] + [{"date": r["date"], "price": "150", "atm_iv": "0.5"} for r in rows])
         md = rows[-1]["date"]
         json.dump({"updated_at": "2026-10-21T00:41:16", "market_date": md, "price": 147.96, "level": opts_level, "transition": None,
                    "gate_mode": "near", "days_since_ipo": 131,
@@ -418,7 +439,9 @@ def selftest() -> bool:
     check(any(c['label'] == '還沒回答' and c['level'] == 'bad' for c in b["checks"]) and "晚了" in b["do_line"], "逾期 → 紅燈 + 白話版點名")
     check(cp["strikes"][0]["carry_pct_annual"] and abs(cp["strikes"][0]["carry_pct_annual"] - 7.7) < 0.4, f"strike carry 年化（got {cp['strikes'][0].get('carry_pct_annual')}）")
     check(b["positions"]["shares"] == 200 and b["positions"]["avg_cost"] == 145.0 and b["positions"]["pool_c_cash"] == 20000, "持倉與 C 池現金")
-    check("2026-10-09" in b["sage_health"]["missed_days"], "IV 歷史有、Sage 沒跑的日子進 missed_days")
+    check("2026-09-30" in b["sage_health"]["missed_days"], "IV 歷史有、Sage 沒跑的日子進 missed_days")
+    check("2026-09-29" in b["sage_health"]["missed_days"] and b["sage_health"]["radar_missed_days"] == ["2026-09-29"]
+          and any(c["label"].startswith("雷達漏跑") for c in b["checks"]), "主 scanner 有跑、space_radar 整天沒跑 → 雷達漏跑")
     # 有回應 → answered
     write(["L1", "L2", "L2", "L2", "L2"], "L2", decisions=[{"date": "2026-10-05", "l2_start": "2026-10-02", "action": "skip", "reason": "r", "by": "c"}])
     b = build_brief(base, dt.date(2026, 10, 7))
