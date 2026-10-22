@@ -322,9 +322,12 @@ def get_liquidity_signal(tk, current_price):
         # 只看深價內 call（C 池的工具：delta≈1 的長天期）
         deep = calls[calls['strike'] <= deep_itm_strike_max].copy()
         for _, row in deep.iterrows():
-            bid = row.get('bid', 0) or 0
-            ask = row.get('ask', 0) or 0
-            oi = int(row.get('openInterest', 0) or 0)
+            # yfinance 的 bid/ask/openInterest 可能是 NaN；NaN 是 truthy，`or 0` 擋不住，
+            # int(NaN) 直接炸（2026-09-14～18、10-08～09 共 7 個交易日 Sage 就是這樣掛的）
+            bid, ask, oi = row.get('bid'), row.get('ask'), row.get('openInterest')
+            bid = 0.0 if bid is None or pd.isna(bid) else float(bid)
+            ask = 0.0 if ask is None or pd.isna(ask) else float(ask)
+            oi = 0 if oi is None or pd.isna(oi) else int(oi)
             if bid <= 0 or ask <= 0:
                 continue
             mid = (bid + ask) / 2

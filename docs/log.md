@@ -241,6 +241,12 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 （綠 L2 第 N 日／黃 5 個交易日內剛關門／紅閃逾期）；dashboard「SPCX C 池」燈同規則、點開分頁、沒有按鈕。
 PLAYBOOK 第三章加「C 池 L2 回應 SOP」三步（看／決／記）。Zero Trust Bypass 要再加 path `/api/spcx`。
 
+**Sage 漏跑 7 天的真因（2026-10-22 查 Actions log）**：不是 GitHub cron。space_radar.yml 最近 45 天每個交易日都有跑（對照主 scanner
+的 data/*.csv 日曆零缺），是 Sage 在 `get_liquidity_signal` 炸 `ValueError: cannot convert float NaN to integer`——yfinance 回的
+openInterest 是 NaN，NaN 是 truthy，`or 0` 擋不住，`int(NaN)` 直接死；continue-on-error 把它吞成綠色 run。修：bid/ask/OI 用 `pd.isna` 判空。
+順便補盲點：brief 的 Sage 健康檢查原本只拿 IV 歷史當日曆，space_radar 整天沒跑的日子看不出來；改成並上主 scanner 的 `data/YYYY-MM-DD.csv`，
+多一項「雷達漏跑」。不需要像主 scanner 那樣加 Worker 第二鬧鐘——數據上 space_radar 沒漏過。
+
 **沒做的**：gate 門檻一個都沒改；brief 不給 strike 建議（只轉發 Sage 的 liquidity.detail）；三條線意見不一致只標記，留 12/9 復盤。
 沙盒無網路，Sage 實跑（handoff 驗收 1–3）只能用 10/20 的 spcx_options.json 當 mock 驗。
 
