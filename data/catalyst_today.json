@@ -1,85 +1,30 @@
 {
-  "updated_at": "2026-10-21T23:32:55.942006",
+  "updated_at": "2026-10-22T23:31:00.927641",
   "stats": {
     "total_items": 57,
-    "items_with_company": 20,
-    "items_with_catalyst": 20,
-    "items_both": 9
+    "items_with_company": 15,
+    "items_with_catalyst": 7,
+    "items_both": 2
   },
-  "count": 14,
+  "count": 12,
   "tickers": [
+    "CRWV",
+    "MRNA",
+    "MRK",
     "TSLA",
     "META",
-    "CRWV",
-    "NFLX",
-    "GS",
-    "MS",
-    "JPM",
-    "IBM",
-    "GM",
-    "INTC",
-    "AAPL",
-    "XYZ",
     "NVDA",
-    "MRNA"
+    "DIS",
+    "AMZN",
+    "LRCX",
+    "TGT",
+    "MU",
+    "INTC"
   ],
   "details": [
     {
-      "symbol": "TSLA",
-      "score": 17.5,
-      "evidence": [
-        {
-          "title": "Tesla beats on earnings and sales even as auto revenue declines",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "SpaceX stock jumps 10% after earnings beat and Musk hints at Tesla tie-up",
-          "catalysts": [
-            "jumps",
-            "jumped",
-            "merger",
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Meta and Tesla bulls get confidence boost after SpaceX earnings",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 6.5,
-      "evidence": [
-        {
-          "title": "Meta ordered to pay $25 billion penalty in New Mexico Cambridge Analytica case",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meta and Tesla bulls get confidence boost after SpaceX earnings",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Meta’s stock rises as investors glimpse an opportunity that could dwarf the ad business",
-          "catalysts": [
-            "rises"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
       "symbol": "CRWV",
-      "score": 2,
+      "score": 3.0,
       "evidence": [
         {
           "title": "CoreWeave’s market confidence erodes as bond yields spike and stock sinks",
@@ -87,78 +32,153 @@
             "sinks"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 2,
-      "evidence": [
+        },
         {
-          "title": "Netflix has dipped its toe into theatrical. Is it ready to jump in?",
-          "catalysts": [
-            "jump"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 2,
-      "evidence": [
+          "title": "Blackstone's Jon Gray says CoreWeave can 'find a way through' financing pressure",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
-          "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MS",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "IBM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "IBM beats on top and bottom lines as CEO Krishna touts 'Super Intelligence' traction",
+          "title": "CoreWeave set off a wave of anxiety — but Wall Street’s dire prognosis is premature",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GM",
+      "symbol": "MRNA",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Moderna shares plunge after cancer vaccine data leaks — despite positive results",
+          "catalysts": [
+            "plunge"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Moderna’s cancer vaccine hits its targets, but a data leak rattled investors and the stock tumbled",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRK",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Moderna shares plunge after cancer vaccine data leaks — despite positive results",
+          "catalysts": [
+            "plunge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "SpaceX and Tesla have high election stakes as Elon Musk pours $366 million into campaigns",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Analysis-Musk’s political baggage clouds prospects for SpaceX-Tesla deal",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Meta’s deal to keep Zuckerberg in California adds fuel to wealth tax debate ahead of election",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "A lesson from poker tells us not to fold on Meta after its earnings sell-off. Here’s why",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Nvidia CEO Jensen Huang says neocloud demand is 'off the charts' but capital is scarce",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia's Jensen Huang says he sees no sign of a 2029 memory glut: 'You can always use more'",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "GM aims to develop vehicles in as little as two years with AI, software push",
+          "title": "Disney’s multiplatform Super Bowl plan frustrates ABC affiliates",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Musk's clash with Ukraine accelerates demand for Starlink alternatives. Few exist",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "LRCX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -169,51 +189,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Intel hits construction milestone at Ohio chip fab that’s at least 5 years behind schedule ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Apple's iPhone Duo in short supply — plus, the 2 stocks fueling an AI rebound",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "United Airlines set to open its biggest airport lounge in $2.6 billion overhaul at Houston hub",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nvidia announces plug and play Vera Rubin racks that can be shipped on a truck ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MRNA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Moderna is about to release the trial results for its cancer vaccine. A lot is riding on this data.",
+          "title": "FCC grants Intel waiver for foreign-made robotic devices",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -221,6 +197,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1
+    "OpenAI (private)": 2
   }
 }
