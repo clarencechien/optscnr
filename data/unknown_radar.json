@@ -1,53 +1,41 @@
 {
-  "updated_at": "2026-10-22T00:13:32.884681",
-  "count": 4,
+  "updated_at": "2026-10-23T00:10:06.705611",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "Southwest Airlines",
-      "ticker": "LUV",
-      "mentions_today": 2,
-      "total_mentions": 2,
+      "name": "Starlink",
+      "ticker": "OTAI-UN",
+      "mentions_today": 4,
+      "total_mentions": 4,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Southwest Airlines cuts 2026 profit forecast on higher fuel",
-        "Southwest Airlines cuts 2026 profit forecast on higher fuel"
+        "Trump asked Musk to lift Starlink slowdown, WSJ reports",
+        "Trump asked Musk to lift Starlink slowdown, WSJ reports"
       ]
     },
     {
-      "name": "EBay",
-      "ticker": "EBAY",
+      "name": "Etsy",
+      "ticker": "ETSY",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "EBay to lay off 9% of workforce in its second round of job cuts this year",
-        "EBay to lay off 9% of workforce in its second round of job cuts this year"
+        "Etsy bans AI-generated recipes and patterns from its online marketplace",
+        "Etsy bans AI-generated recipes and patterns from its online marketplace"
       ]
     },
     {
-      "name": "Webull",
-      "ticker": "BULLW",
+      "name": "Airbnb",
+      "ticker": "ABNB",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "House committee says Webull messages point to China access to U.S. customer data",
-        "House committee says Webull messages point to China access to U.S. customer data"
-      ]
-    },
-    {
-      "name": "Arcus Biosciences",
-      "ticker": "RCUS",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Arcus Biosciences stock falls on public offering announcement",
-        "Arcus Biosciences slides 20% on stock offering, kidney-cancer data"
+        "American Express brings Airbnb bookings and rewards to Amex Travel platform",
+        "American Express brings Airbnb bookings and rewards to Amex Travel platform"
       ]
     }
   ]
