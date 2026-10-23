@@ -70808,5 +70808,558 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_MRK_2026-10-30_165.0",
+    "snapshot_date": "2026-10-22",
+    "ticker": "MRK",
+    "expiry": "2026-10-30",
+    "strike": 165.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅覆蓋財報(10-29)",
+    "entry_price": 0.38,
+    "entry_iv": 52.3442265625,
+    "entry_spot": 147.24,
+    "oi": 1181,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-29)"
+    ],
+    "volume": 7015,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.23,
+    "entry_ask": 0.53,
+    "last_trade_at": "2026-10-22 19:52:56",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 147.24000549316406,
+        "last": 0.38,
+        "bid": 0.23,
+        "ask": 0.53,
+        "iv": 52.3442265625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_AMD_2026-11-20_650.0",
+    "snapshot_date": "2026-10-22",
+    "ticker": "AMD",
+    "expiry": "2026-11-20",
+    "strike": 650.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(11-03) ⚠️流動性稀薄(7條/OI52,453)",
+    "entry_price": 3.61,
+    "entry_iv": 61.9693744506836,
+    "entry_spot": 507.93,
+    "oi": 5290,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [
+      "⚠️流動性稀薄(7條/OI52,453)"
+    ],
+    "events": [
+      "📅覆蓋財報(11-03)"
+    ],
+    "volume": 10185,
+    "premium_tier": "heavy",
+    "news_at_signal": false,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.45,
+    "entry_ask": 3.7,
+    "last_trade_at": "2026-10-22 19:59:03",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 507.92999267578125,
+        "last": 3.61,
+        "bid": 3.45,
+        "ask": 3.7,
+        "iv": 61.9693744506836
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_MU_2026-10-30_950.0",
+    "snapshot_date": "2026-10-22",
+    "ticker": "MU",
+    "expiry": "2026-10-30",
+    "strike": 950.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次12-23)",
+    "entry_price": 5.3,
+    "entry_iv": 61.51161535644532,
+    "entry_spot": 856.49,
+    "oi": 2590,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-23)"
+    ],
+    "volume": 9061,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 5.1,
+    "entry_ask": 5.35,
+    "last_trade_at": "2026-10-22 19:59:56",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 856.489990234375,
+        "last": 5.3,
+        "bid": 5.1,
+        "ask": 5.35,
+        "iv": 61.51161535644532
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_MU_2026-10-30_1000.0",
+    "snapshot_date": "2026-10-22",
+    "ticker": "MU",
+    "expiry": "2026-10-30",
+    "strike": 1000.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次12-23)",
+    "entry_price": 2.05,
+    "entry_iv": 65.19810192871094,
+    "entry_spot": 856.49,
+    "oi": 5658,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-23)"
+    ],
+    "volume": 8509,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.98,
+    "entry_ask": 2.12,
+    "last_trade_at": "2026-10-22 19:59:56",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 856.489990234375,
+        "last": 2.05,
+        "bid": 1.98,
+        "ask": 2.12,
+        "iv": 65.19810192871094
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_MRK_2027-01-15_165.0",
+    "snapshot_date": "2026-10-22",
+    "ticker": "MRK",
+    "expiry": "2027-01-15",
+    "strike": 165.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(10-29)",
+    "entry_price": 3.85,
+    "entry_iv": 34.48551843261719,
+    "entry_spot": 147.24,
+    "oi": 1821,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-29)"
+    ],
+    "volume": 4531,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.1,
+    "entry_ask": 3.8,
+    "last_trade_at": "2026-10-22 19:28:11",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 147.24000549316406,
+        "last": 3.85,
+        "bid": 3.1,
+        "ask": 3.8,
+        "iv": 34.48551843261719
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_MRK_2026-10-30_152.5",
+    "snapshot_date": "2026-10-22",
+    "ticker": "MRK",
+    "expiry": "2026-10-30",
+    "strike": 152.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(10-29)",
+    "entry_price": 2.2,
+    "entry_iv": 50.85498364257812,
+    "entry_spot": 147.24,
+    "oi": 3085,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-29)"
+    ],
+    "volume": 3924,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.02,
+    "entry_ask": 2.35,
+    "last_trade_at": "2026-10-22 19:58:58",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 147.24000549316406,
+        "last": 2.2,
+        "bid": 2.02,
+        "ask": 2.35,
+        "iv": 50.85498364257812
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_AMZN_2027-03-19_360.0",
+    "snapshot_date": "2026-10-22",
+    "ticker": "AMZN",
+    "expiry": "2027-03-19",
+    "strike": 360.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(10-29)",
+    "entry_price": 1.9,
+    "entry_iv": 37.31141790771484,
+    "entry_spot": 250.38,
+    "oi": 2419,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-29)"
+    ],
+    "volume": 3229,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.86,
+    "entry_ask": 1.95,
+    "last_trade_at": "2026-10-22 19:58:57",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 250.3800048828125,
+        "last": 1.9,
+        "bid": 1.86,
+        "ask": 1.95,
+        "iv": 37.31141790771484
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_LRCX_2026-12-18_280.0",
+    "snapshot_date": "2026-10-22",
+    "ticker": "LRCX",
+    "expiry": "2026-12-18",
+    "strike": 280.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅財報已過(10-21)",
+    "entry_price": 5.35,
+    "entry_iv": 54.13864221191409,
+    "entry_spot": 230.15,
+    "oi": 756,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(10-21)"
+    ],
+    "volume": 3151,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 4.85,
+    "entry_ask": 5.7,
+    "last_trade_at": "2026-10-22 19:38:30",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 230.14999389648438,
+        "last": 5.35,
+        "bid": 4.85,
+        "ask": 5.7,
+        "iv": 54.13864221191409
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_TGT_2026-11-20_165.0",
+    "snapshot_date": "2026-10-22",
+    "ticker": "TGT",
+    "expiry": "2026-11-20",
+    "strike": 165.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(11-18)",
+    "entry_price": 4.78,
+    "entry_iv": 43.93366613769531,
+    "entry_spot": 158.11,
+    "oi": 1381,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(11-18)"
+    ],
+    "volume": 1745,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 4.55,
+    "entry_ask": 5.0,
+    "last_trade_at": "2026-10-22 19:58:16",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 158.11000061035156,
+        "last": 4.78,
+        "bid": 4.55,
+        "ask": 5.0,
+        "iv": 43.93366613769531
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_MRK_2026-10-30_155.0",
+    "snapshot_date": "2026-10-22",
+    "ticker": "MRK",
+    "expiry": "2026-10-30",
+    "strike": 155.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(10-29)",
+    "entry_price": 1.67,
+    "entry_iv": 50.586431640624994,
+    "entry_spot": 147.24,
+    "oi": 829,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(10-29)"
+    ],
+    "volume": 1583,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.4,
+    "entry_ask": 1.91,
+    "last_trade_at": "2026-10-22 19:56:07",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 147.24000549316406,
+        "last": 1.67,
+        "bid": 1.4,
+        "ask": 1.91,
+        "iv": 50.586431640624994
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-10-22_MU_2026-10-30_980.0",
+    "snapshot_date": "2026-10-22",
+    "ticker": "MU",
+    "expiry": "2026-10-30",
+    "strike": 980.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次12-23)",
+    "entry_price": 2.88,
+    "entry_iv": 63.37927246093751,
+    "entry_spot": 856.49,
+    "oi": 836,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-23)"
+    ],
+    "volume": 1273,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.84,
+    "entry_ask": 2.98,
+    "last_trade_at": "2026-10-22 19:59:54",
+    "quote_at": "2026-10-23T00:43:37Z",
+    "underlying_at": "2026-10-23T00:43:37Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-10-22",
+        "spot": 856.489990234375,
+        "last": 2.88,
+        "bid": 2.84,
+        "ask": 2.98,
+        "iv": 63.37927246093751
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
