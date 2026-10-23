@@ -1,99 +1,35 @@
 {
-  "updated_at": "2026-10-22T23:31:00.927641",
+  "updated_at": "2026-10-23T23:22:45.605003",
   "stats": {
     "total_items": 57,
-    "items_with_company": 15,
-    "items_with_catalyst": 7,
-    "items_both": 2
+    "items_with_company": 11,
+    "items_with_catalyst": 10,
+    "items_both": 1
   },
-  "count": 12,
+  "count": 10,
   "tickers": [
-    "CRWV",
-    "MRNA",
-    "MRK",
     "TSLA",
     "META",
+    "MRNA",
+    "AAPL",
+    "MRK",
+    "CRWD",
     "NVDA",
-    "DIS",
-    "AMZN",
-    "LRCX",
-    "TGT",
-    "MU",
-    "INTC"
+    "BE",
+    "BA",
+    "TGT"
   ],
   "details": [
     {
-      "symbol": "CRWV",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "CoreWeave’s market confidence erodes as bond yields spike and stock sinks",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Blackstone's Jon Gray says CoreWeave can 'find a way through' financing pressure",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "CoreWeave set off a wave of anxiety — but Wall Street’s dire prognosis is premature",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MRNA",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Moderna shares plunge after cancer vaccine data leaks — despite positive results",
-          "catalysts": [
-            "plunge"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Moderna’s cancer vaccine hits its targets, but a data leak rattled investors and the stock tumbled",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MRK",
+      "symbol": "TSLA",
       "score": 2,
       "evidence": [
         {
-          "title": "Moderna shares plunge after cancer vaccine data leaks — despite positive results",
+          "title": "With earnings in rearview mirror, SpaceX-Tesla merger chatter takes center stage",
           "catalysts": [
-            "plunge"
+            "merger"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "SpaceX and Tesla have high election stakes as Elon Musk pours $366 million into campaigns",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Analysis-Musk’s political baggage clouds prospects for SpaceX-Tesla deal",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
@@ -102,12 +38,61 @@
       "score": 1.0,
       "evidence": [
         {
-          "title": "Meta’s deal to keep Zuckerberg in California adds fuel to wealth tax debate ahead of election",
+          "title": "Meta shares are down 9% this week. Here's why Mike Khouw is buying now",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "A lesson from poker tells us not to fold on Meta after its earnings sell-off. Here’s why",
+          "title": "Senator says planned Meta commercial terms update could harm US businesses",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRNA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Doctors call Moderna, Merck cancer vaccine data a major advancement — despite Wall Street reaction",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "The real test for Moderna’s cancer vaccine isn’t about beating Keytruda. It’s keeping cancer from coming back in the long term.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Doctors call Moderna, Merck cancer vaccine data a major advancement — despite Wall Street reaction",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "CrowdStrike CEO's alarming prediction — plus, the sell-off spreads beyond tech",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -115,48 +100,32 @@
     },
     {
       "symbol": "NVDA",
-      "score": 1.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia CEO Jensen Huang says neocloud demand is 'off the charts' but capital is scarce",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia's Jensen Huang says he sees no sign of a 2029 memory glut: 'You can always use more'",
+          "title": "On the ground at Nvidia's AI showpiece: Jensen-mania, robot ducks and neocloud distress",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DIS",
+      "symbol": "BE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Disney’s multiplatform Super Bowl plan frustrates ABC affiliates",
+          "title": "This hot AI-fueled stock has been in a rut. It just beat earnings expectations by 36%.",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Musk's clash with Ukraine accelerates demand for Starlink alternatives. Few exist",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "LRCX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
+          "title": "Allegiant exercises options for six Boeing 737 MAX jets worth over $720 million",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -167,29 +136,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "3 big reasons Micron and other chip stocks fell hard on Thursday",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "FCC grants Intel waiver for foreign-made robotic devices",
+          "title": "Dr. Reddy’s outlines semaglutide relaunch in November 2026 and reiterates 6M-7M devices target",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -197,6 +144,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2
+    "Anthropic (private)": 1
   }
 }
