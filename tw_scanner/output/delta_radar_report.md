@@ -1,6 +1,6 @@
-# Delta Radar (2308.TW) — 2026-10-22 08:55 UTC
+# Delta Radar (2308.TW) — 2026-10-23 07:55 UTC
 
-## 總判定：🔴 RED
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
 ## 前提 vs 價格：無背離（前提 RED、價格 20 日 -16.8%）；PER 51.7，3 年分位 78 → 71
 
@@ -10,70 +10,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M1 revenue_acceleration | 🔴 RED | 2026-09 YoY +14.6%, slope -13.60pp/月, 連續減速 3 個月 |
-| M2 bullwhip_health | 🟢 GREEN | 合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32 |
-| M3 thai_shadow | 🟡 YELLOW | DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8% |
-| M4 customs_flow | 🟢 GREEN | US 進口 HS850440 (TH+TW) 近3月 $1366.7M, YoY +22.4% |
-| M5 narrative_triggers | 🟢 GREEN | capex_cut:7e / vr300_delay:16e(21m) / debt_financed_capex:14e(15m) / lc_psu_competition:0e |
-| M6 peer_divergence | 🔴 RED | cooling:3324領先+37pp |
-| M8 revision_velocity | ⚪ NO_DATA | 下修 0/上修 0（樣本不足 <3，NO_DATA） |
-| M9 valuation（觀察） | 🟢 GREEN | PER 51.7（3 年第 71 百分位；20 日前第 78）；觀察 |
-
-### M1 revenue_acceleration — 🔴 RED
-```json
-{
-  "latest_month": "2026-09",
-  "latest_yoy_pct": 14.6,
-  "yoy_slope_pp_per_month": -13.6,
-  "consecutive_decel_months": 3
-}
-```
-
-### M2 bullwhip_health — 🟢 GREEN
-```json
-{
-  "as_of": "2026-06-30",
-  "contract_liab_qoq_pct": 17.3,
-  "inventory_qoq_pct": 17.0,
-  "fcf_to_net_income": 1.32,
-  "accounts_used": {
-    "contract": "CurrentContractLiabilities",
-    "inventory": "Inventories",
-    "ocf": "CashFlowsFromOperatingActivities",
-    "capex": "PropertyAndPlantAndEquipment",
-    "net_income": "IncomeAfterTaxes"
-  }
-}
-```
-
-### M3 thai_shadow — 🟡 YELLOW
-```json
-{
-  "latest_q": "2026-06-30",
-  "rev_yoy_pct": 52.5,
-  "gross_margin_pct": 26.8
-}
-```
-- 泰子公司毛利率 26.8% 跌破 27.0% 地板
-
-### M4 customs_flow — 🟢 GREEN
-```json
-{
-  "window": "2026-06..2026-08",
-  "rolling_value_usd_m": 1366.7,
-  "rolling_yoy_pct": 22.4,
-  "by_country": {
-    "THAILAND": {
-      "rolling_value_usd_m": 840.7,
-      "rolling_yoy_pct": 11.8
-    },
-    "TAIWAN": {
-      "rolling_value_usd_m": 526.0,
-      "rolling_yoy_pct": 44.1
-    }
-  }
-}
-```
+| M5 narrative_triggers | 🟢 GREEN | capex_cut:7e / vr300_delay:16e(21m) / debt_financed_capex:13e(14m) / lc_psu_competition:0e |
 
 ### M5 narrative_triggers — 🟢 GREEN
 ```json
@@ -81,13 +18,13 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
   "events": {
     "capex_cut": 7,
     "vr300_delay": 16,
-    "debt_financed_capex": 14,
+    "debt_financed_capex": 13,
     "lc_psu_competition": 0
   },
   "mentions": {
     "capex_cut": 7,
     "vr300_delay": 21,
-    "debt_financed_capex": 15,
+    "debt_financed_capex": 14,
     "lc_psu_competition": 0
   },
   "scoring": {
@@ -95,7 +32,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
       "events": 7,
       "mentions": 7,
       "gate": "zscore",
-      "z": 0.97,
+      "z": 0.87,
       "denial": false
     },
     "vr300_delay": {
@@ -106,10 +43,10 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
       "denial": true
     },
     "debt_financed_capex": {
-      "events": 14,
-      "mentions": 15,
+      "events": 13,
+      "mentions": 14,
       "gate": "zscore",
-      "z": 0.16,
+      "z": -0.04,
       "denial": false
     },
     "lc_psu_competition": {
@@ -130,81 +67,10 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
 - [debt_financed_capex] Top hyperscalers likely to have more AI-linked debt than now known, S&P Global warns - Reuters
 - [debt_financed_capex] S&P Warns Tech Giants' AI Debt May Hide Undisclosed Liabilities as $7 Trillion Capex Pressure Emerges - BigGo Finance
-- [debt_financed_capex] Oracle's Negative Free Cash Flow Exposes the Uncomfortable Truth About AI's Financing Game - 24/7 Wall St.
-
-### M6 peer_divergence — 🔴 RED
-```json
-{
-  "groups": {
-    "power": {
-      "direction": "peer_lead_risk",
-      "delta_3m_yoy": 32.4,
-      "best_peer": "6282",
-      "best_peer_3m_yoy": 34.8,
-      "peer_lead_pp": 2.4,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "2301": 28.3,
-        "6282": 34.8
-      }
-    },
-    "cooling": {
-      "direction": "peer_lead_risk",
-      "delta_3m_yoy": 32.4,
-      "best_peer": "3324",
-      "best_peer_3m_yoy": 69.0,
-      "peer_lead_pp": 36.6,
-      "status": "RED",
-      "peers_3m_yoy": {
-        "3324": 69.0,
-        "3017": 52.2
-      }
-    },
-    "rack": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 32.4,
-      "best_peer": "2382",
-      "best_peer_3m_yoy": 128.5,
-      "peer_lead_pp": 96.1,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "2317": 48.2,
-        "2382": 128.5,
-        "6669": 63.2
-      }
-    }
-  }
-}
-```
-- [cooling] 3324 3m YoY 69.0% vs 2308 32.4%（領先 +37pp）
-
-### M8 revision_velocity — ⚪ NO_DATA
-```json
-{
-  "up_hits": 0,
-  "down_hits": 0,
-  "total": 0,
-  "down_ratio": null
-}
-```
-
-### M9 valuation — 🟢 GREEN
-```json
-{
-  "as_of": "2026-10-21",
-  "per": 51.72,
-  "per_pct": 70.9,
-  "per_then": 55.22,
-  "per_pct_then": 77.6,
-  "pbr": 14.37,
-  "dividend_yield": 0.71,
-  "history_years": 3,
-  "n": 734
-}
-```
+- [debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **8** 筆；state 已有 outcomes 的 entry：**147/147**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**148/148**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）

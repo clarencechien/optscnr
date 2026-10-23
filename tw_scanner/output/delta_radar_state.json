@@ -16642,5 +16642,103 @@
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
+  },
+  {
+    "ts": "2026-10-23T07:55:54.296431+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:7e / vr300_delay:16e(21m) / debt_financed_capex:13e(14m) / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 7,
+            "vr300_delay": 16,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 7,
+            "vr300_delay": 21,
+            "debt_financed_capex": 14,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 7,
+              "mentions": 7,
+              "gate": "zscore",
+              "z": 0.87,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 16,
+              "mentions": 21,
+              "gate": "zscore",
+              "z": 0.04,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 13,
+              "mentions": 14,
+              "gate": "zscore",
+              "z": -0.04,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] The AI trade is at a 'critical' crossroads as rising rates threaten a capex slowdown, AllianceBernstein says - Business ",
+          "[capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[debt_financed_capex] Top hyperscalers likely to have more AI-linked debt than now known, S&P Global warns - Reuters",
+          "[debt_financed_capex] S&P Warns Tech Giants' AI Debt May Hide Undisclosed Liabilities as $7 Trillion Capex Pressure Emerges - BigGo Finance",
+          "[debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 RED、價格 20 日 -16.8%）；PER 51.7，3 年分位 78 → 71",
+      "premise": "RED",
+      "premise_ts": "2026-10-22T08:55:15.266333+00:00",
+      "ret_pct": -16.8,
+      "lookback_sessions": 20,
+      "as_of": "2026-10-22",
+      "valuation": {
+        "per": 51.72,
+        "per_pct": 70.9,
+        "per_then": 55.22,
+        "per_pct_then": 77.6,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-10-23",
+      "benchmark": "0050",
+      "entry_close": null,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
   }
 ]
