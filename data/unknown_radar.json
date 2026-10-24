@@ -1,41 +1,41 @@
 {
-  "updated_at": "2026-10-23T00:10:06.705611",
+  "updated_at": "2026-10-24T00:01:22.125021",
   "count": 3,
   "blind_spots": [
     {
       "name": "Starlink",
       "ticker": "OTAI-UN",
-      "mentions_today": 4,
-      "total_mentions": 4,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "mentions_today": 5,
+      "total_mentions": 9,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "Trump asked Musk to lift Starlink slowdown, WSJ reports",
-        "Trump asked Musk to lift Starlink slowdown, WSJ reports"
+        "In hunt for Starlink alternative, Ukraine partners with Nokia and satellite maker ICEYE",
+        "In hunt for Starlink alternative, Ukraine partners with Nokia and satellite maker ICEYE"
       ]
     },
     {
-      "name": "Etsy",
-      "ticker": "ETSY",
+      "name": "Canadian",
+      "ticker": "CNDIF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Etsy bans AI-generated recipes and patterns from its online marketplace",
-        "Etsy bans AI-generated recipes and patterns from its online marketplace"
+        "Trump dropping some Canada tariffs but 'replacing' them with other products",
+        "Some Republicans are opposing Trump on tariffs. Maine’s Susan Collins just got him to back down on C"
       ]
     },
     {
-      "name": "Airbnb",
-      "ticker": "ABNB",
+      "name": "Beijing",
+      "ticker": "BGTCF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "American Express brings Airbnb bookings and rewards to Amex Travel platform",
-        "American Express brings Airbnb bookings and rewards to Amex Travel platform"
+        "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
+        "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch"
       ]
     }
   ]
