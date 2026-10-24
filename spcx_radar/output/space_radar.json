@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-10-23T00:43:59.228298",
+  "updated_at": "2026-10-24T00:48:47.339795",
   "version": "v8.7",
   "stage": 3,
-  "price": 159.30999755859375,
-  "market_cap_t": 2.097,
+  "price": 144.75,
+  "market_cap_t": 1.905,
   "total_shares_b": 13.16,
   "hard_cap_t": 2.2,
-  "atm_iv": 0.5668174829101563,
-  "iv_percentile": 45.6,
-  "pc_ratio": 0.5653932584269663,
+  "atm_iv": 0.5386195227050782,
+  "iv_percentile": 36.3,
+  "pc_ratio": 0.37556276829651347,
   "c_pool_frozen": false,
   "iv_stable": false,
   "gtc_levels_a": [
@@ -65,14 +65,14 @@
     }
   ],
   "dca_metrics": {
-    "ma50": 149.2,
+    "ma50": 149.28,
     "ma200": null,
-    "current_price": 159.31,
+    "current_price": 144.75,
     "avg_cost": 145.56,
     "total_shares": 779,
     "total_invested": 113393.12,
-    "current_value": 124102.49,
-    "unrealized_pnl_pct": 9.4,
+    "current_value": 112760.25,
+    "unrealized_pnl_pct": -0.6,
     "pool_a_target": 120000.0,
     "pool_a_filled_pct": 94.5
   },
@@ -82,49 +82,49 @@
       "desc": "Rocket Lab\uff08\u5c0f\u578b\u767c\u5c04\uff0c\u4e92\u88dc\u578b\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -25.2
+      "recent_trend_pct": -23.8
     },
     {
       "ticker": "ASTS",
       "desc": "AST SpaceMobile\uff08\u885b\u661f\u76f4\u9023\uff0c\u7af6\u722d\u578b\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -26.6
+      "recent_trend_pct": -25.9
     },
     {
       "ticker": "RDW",
       "desc": "Redwire\uff08\u592a\u7a7a\u88fd\u9020\uff0c\u90e8\u5206\u7af6\u722d\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -18.1
+      "recent_trend_pct": -17.3
     },
     {
       "ticker": "PL",
       "desc": "Planet Labs\uff08\u885b\u661f\u5f71\u50cf\uff0c\u5229\u57fa\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -18.4
+      "recent_trend_pct": -18.3
     },
     {
       "ticker": "LUNR",
       "desc": "Intuitive Machines\uff08\u767b\u6708\uff0c\u90e8\u5206\u7af6\u722d\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -23.1
+      "recent_trend_pct": -22.3
     },
     {
       "ticker": "SPIR",
       "desc": "Spire Global\uff08\u885b\u661f\u6578\u64da\uff0c\u5229\u57fa\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -17.9
+      "recent_trend_pct": -16.9
     },
     {
       "ticker": "BKSY",
       "desc": "BlackSky\uff08\u885b\u661f\u5f71\u50cf\uff0c\u5229\u57fa\uff09",
       "price": NaN,
       "change_1m_pct": NaN,
-      "recent_trend_pct": -19.3
+      "recent_trend_pct": -18.9
     }
   ]
 }
