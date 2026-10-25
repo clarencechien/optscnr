@@ -1,41 +1,53 @@
 {
-  "updated_at": "2026-10-24T00:01:22.125021",
-  "count": 3,
+  "updated_at": "2026-10-25T23:32:50.920364",
+  "count": 4,
   "blind_spots": [
     {
       "name": "Starlink",
       "ticker": "OTAI-UN",
-      "mentions_today": 5,
-      "total_mentions": 9,
-      "consecutive_days": 2,
+      "mentions_today": 3,
+      "total_mentions": 12,
+      "consecutive_days": 3,
       "is_strong": true,
       "evidence": [
-        "In hunt for Starlink alternative, Ukraine partners with Nokia and satellite maker ICEYE",
-        "In hunt for Starlink alternative, Ukraine partners with Nokia and satellite maker ICEYE"
-      ]
-    },
-    {
-      "name": "Canadian",
-      "ticker": "CNDIF",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Trump dropping some Canada tariffs but 'replacing' them with other products",
-        "Some Republicans are opposing Trump on tariffs. Maine’s Susan Collins just got him to back down on C"
+        "Ukraine disputes Elon Musk’s claim that its military violated Starlink terms during drone operations",
+        "Ukraine disputes Elon Musk’s claim that its military violated Starlink terms during drone operations"
       ]
     },
     {
       "name": "Beijing",
       "ticker": "BGTCF",
       "mentions_today": 2,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
+        "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch"
+      ]
+    },
+    {
+      "name": "Georgia",
+      "ticker": "GPJA",
+      "mentions_today": 4,
+      "total_mentions": 4,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Audi defends plans for a $4 billion Georgia plant amid VW restructuring, tariffs",
+        "Audi defends plans for a $4 billion Georgia plant amid VW restructuring, tariffs"
+      ]
+    },
+    {
+      "name": "Ethan Allen",
+      "ticker": "ETD",
+      "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
-        "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch"
+        "Proxy advisory firm Glass Lewis backs Bergeron in Ethan Allen fight",
+        "Glass Lewis backs activist's bid to replace entire Ethan Allen board"
       ]
     }
   ]
