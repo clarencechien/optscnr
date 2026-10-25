@@ -1,122 +1,158 @@
 {
-  "updated_at": "2026-10-18T00:58:41.146014",
+  "updated_at": "2026-10-25T01:07:20.280536",
   "criteria": {
     "MIN_MARKET_CAP": 15000000000.0,
     "MAX_PCT_FROM_52W_LOW": 1.8,
     "MIN_AVG_VOLUME": 5000000.0,
     "MIN_VOL_RATIO_20D": 1.2
   },
-  "count": 12,
+  "count": 16,
   "tickers": [
-    "SKYD",
     "MDT",
+    "SKYD",
+    "VST",
+    "CMG",
     "NKE",
     "O",
-    "ROL",
-    "VST",
     "BA",
+    "ROL",
     "PCG",
     "PEP",
     "KEY",
-    "TJX",
-    "SBUX"
+    "TSCO",
+    "RF",
+    "SBUX",
+    "FITB",
+    "KMI"
   ],
   "details": [
     {
-      "symbol": "SKYD",
-      "price": 6.91,
-      "pct_from_52w_low": 1.04,
-      "vol_ratio_20d": 2.48,
-      "market_cap_b": 34.8,
-      "score": 21.96
-    },
-    {
       "symbol": "MDT",
-      "price": 94.75,
-      "pct_from_52w_low": 1.29,
-      "vol_ratio_20d": 2.58,
-      "market_cap_b": 121.2,
-      "score": 19.98
+      "price": 95.41,
+      "pct_from_52w_low": 1.3,
+      "vol_ratio_20d": 2.59,
+      "market_cap_b": 122.0,
+      "score": 19.92
     },
     {
-      "symbol": "NKE",
-      "price": 37.13,
-      "pct_from_52w_low": 1.16,
-      "vol_ratio_20d": 1.66,
-      "market_cap_b": 55.1,
-      "score": 16.7
-    },
-    {
-      "symbol": "O",
-      "price": 56.08,
-      "pct_from_52w_low": 1.06,
-      "vol_ratio_20d": 1.44,
-      "market_cap_b": 53.1,
-      "score": 16.63
-    },
-    {
-      "symbol": "ROL",
-      "price": 33.45,
-      "pct_from_52w_low": 1.14,
-      "vol_ratio_20d": 1.57,
-      "market_cap_b": 16.1,
-      "score": 16.42
+      "symbol": "SKYD",
+      "price": 7.77,
+      "pct_from_52w_low": 1.18,
+      "vol_ratio_20d": 2.3,
+      "market_cap_b": 39.2,
+      "score": 19.74
     },
     {
       "symbol": "VST",
-      "price": 152.02,
-      "pct_from_52w_low": 1.15,
-      "vol_ratio_20d": 1.46,
-      "market_cap_b": 51.0,
-      "score": 15.85
+      "price": 140.16,
+      "pct_from_52w_low": 1.06,
+      "vol_ratio_20d": 1.52,
+      "market_cap_b": 47.0,
+      "score": 17.03
+    },
+    {
+      "symbol": "CMG",
+      "price": 27.52,
+      "pct_from_52w_low": 1.01,
+      "vol_ratio_20d": 1.21,
+      "market_cap_b": 34.8,
+      "score": 15.99
+    },
+    {
+      "symbol": "NKE",
+      "price": 37.3,
+      "pct_from_52w_low": 1.17,
+      "vol_ratio_20d": 1.52,
+      "market_cap_b": 55.4,
+      "score": 15.94
+    },
+    {
+      "symbol": "O",
+      "price": 56.89,
+      "pct_from_52w_low": 1.07,
+      "vol_ratio_20d": 1.31,
+      "market_cap_b": 53.8,
+      "score": 15.84
     },
     {
       "symbol": "BA",
-      "price": 190.21,
-      "pct_from_52w_low": 1.08,
-      "vol_ratio_20d": 1.29,
-      "market_cap_b": 150.2,
-      "score": 15.69
+      "price": 188.35,
+      "pct_from_52w_low": 1.07,
+      "vol_ratio_20d": 1.26,
+      "market_cap_b": 148.9,
+      "score": 15.62
+    },
+    {
+      "symbol": "ROL",
+      "price": 34.82,
+      "pct_from_52w_low": 1.19,
+      "vol_ratio_20d": 1.49,
+      "market_cap_b": 16.8,
+      "score": 15.58
     },
     {
       "symbol": "PCG",
-      "price": 13.09,
-      "pct_from_52w_low": 1.11,
-      "vol_ratio_20d": 1.31,
-      "market_cap_b": 39.3,
-      "score": 15.44
+      "price": 12.63,
+      "pct_from_52w_low": 1.07,
+      "vol_ratio_20d": 1.21,
+      "market_cap_b": 37.9,
+      "score": 15.29
     },
     {
       "symbol": "PEP",
-      "price": 131.49,
-      "pct_from_52w_low": 1.06,
-      "vol_ratio_20d": 1.21,
-      "market_cap_b": 179.2,
-      "score": 15.39
+      "price": 135.77,
+      "pct_from_52w_low": 1.1,
+      "vol_ratio_20d": 1.2,
+      "market_cap_b": 185.0,
+      "score": 15.0
     },
     {
       "symbol": "KEY",
-      "price": 19.99,
-      "pct_from_52w_low": 1.18,
-      "vol_ratio_20d": 1.32,
-      "market_cap_b": 21.3,
-      "score": 14.78
+      "price": 21.08,
+      "pct_from_52w_low": 1.25,
+      "vol_ratio_20d": 1.43,
+      "market_cap_b": 22.5,
+      "score": 14.66
     },
     {
-      "symbol": "TJX",
-      "price": 147.33,
-      "pct_from_52w_low": 1.2,
-      "vol_ratio_20d": 1.25,
-      "market_cap_b": 162.8,
-      "score": 14.23
+      "symbol": "TSCO",
+      "price": 33.42,
+      "pct_from_52w_low": 1.18,
+      "vol_ratio_20d": 1.21,
+      "market_cap_b": 17.4,
+      "score": 14.29
+    },
+    {
+      "symbol": "RF",
+      "price": 28.47,
+      "pct_from_52w_low": 1.21,
+      "vol_ratio_20d": 1.21,
+      "market_cap_b": 24.3,
+      "score": 13.96
     },
     {
       "symbol": "SBUX",
-      "price": 97.52,
-      "pct_from_52w_low": 1.25,
-      "vol_ratio_20d": 1.23,
-      "market_cap_b": 111.2,
-      "score": 13.65
+      "price": 100.8,
+      "pct_from_52w_low": 1.29,
+      "vol_ratio_20d": 1.21,
+      "market_cap_b": 114.9,
+      "score": 13.13
+    },
+    {
+      "symbol": "FITB",
+      "price": 52.98,
+      "pct_from_52w_low": 1.3,
+      "vol_ratio_20d": 1.2,
+      "market_cap_b": 48.0,
+      "score": 13.0
+    },
+    {
+      "symbol": "KMI",
+      "price": 34.43,
+      "pct_from_52w_low": 1.34,
+      "vol_ratio_20d": 1.22,
+      "market_cap_b": 76.7,
+      "score": 12.64
     }
   ]
 }
