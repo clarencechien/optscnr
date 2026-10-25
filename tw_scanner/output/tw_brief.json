@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-24T08:03:05+00:00",
- "today": "2026-10-24",
+ "generated_at": "2026-10-25T08:20:14+00:00",
+ "today": "2026-10-25",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-10-23）：本月預算已於 2026-10-19 動用（月末例行），本月不再行動。",
@@ -12,7 +12,7 @@
  "weather": {
   "status": "OK",
   "as_of": "2026-10-22",
-  "age_days": 2,
+  "age_days": 3,
   "regime": "DE_RISK",
   "emoji": "🌧️",
   "score": -0.726,
@@ -96,7 +96,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-10-22",
-  "age_days": 2,
+  "age_days": 3,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -242,7 +242,7 @@
   "status": "OK",
   "label": "2308",
   "as_of": "2026-10-23",
-  "age_days": 1,
+  "age_days": 2,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -320,7 +320,7 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "age_days": 0,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
@@ -355,9 +355,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "RED",
-    "headline": "export_controls_tariffs:13e / n2_arizona_ramp:10e(12m) / cowos_capacity:6e / geopolitics:4e / hyperscaler_capex:8e",
-    "ts": "2026-10-24T08:03:03.010977+00:00"
+    "status": "YELLOW",
+    "headline": "export_controls_tariffs:14e / n2_arizona_ramp:17e(25m) / cowos_capacity:7e / geopolitics:2e / hyperscaler_capex:6e",
+    "ts": "2026-10-25T08:20:09.751651+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -399,7 +399,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-10-23",
-  "age_days": 1,
+  "age_days": 2,
   "rows": [
    {
     "ticker": "3661",
@@ -652,7 +652,7 @@
   {
    "date": "2026-11-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 17
+   "days": 16
   }
  ],
  "checks": [
@@ -674,7 +674,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-10-24"
+   "text": "tsmc_radar：最新 2026-10-25"
   },
   {
    "level": "ok",
