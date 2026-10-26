@@ -62,12 +62,12 @@
       "status": "answered",
       "outcome": {
         "t5": 0.73,
-        "t10": null,
+        "t10": 0.36,
         "t20": null,
         "peak": 0.73,
         "mature": false,
-        "verdict": "➖持平(峰0.7x/今0.7x)",
-        "filled_at": "2026-10-23"
+        "verdict": "➖持平(峰0.7x/今0.4x)",
+        "filled_at": "2026-10-26"
       }
     }
   ],

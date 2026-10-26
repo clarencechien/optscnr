@@ -59,7 +59,16 @@
         "source": null
       },
       "note": "ETF無財報；查無基金專屬排定事件。FOMC決議10-28、12-09（聯準會）",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.57,
+        "t10": null,
+        "t20": null,
+        "peak": 0.57,
+        "mature": false,
+        "verdict": "➖持平(峰0.6x/今0.6x)",
+        "filled_at": "2026-10-26"
+      }
     }
   ],
   "facts_proposed": [

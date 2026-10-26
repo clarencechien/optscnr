@@ -59,7 +59,16 @@
         "source": "https://fedratecalc.com/fomc-meeting-schedule/october-2026/"
       },
       "note": "FOMC會議10/27–28，紀要11/18公布；10/19 IBIT淨流入6.65億美元",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.29,
+        "t10": null,
+        "t20": null,
+        "peak": 0.29,
+        "mature": false,
+        "verdict": "❌沒噴(峰0.3x)",
+        "filled_at": "2026-10-26"
+      }
     },
     {
       "signal_id": "2026-10-21_IBIT_2026-11-20_53.0",
@@ -101,7 +110,16 @@
         "source": "https://fedratecalc.com/fomc-meeting-schedule/october-2026/"
       },
       "note": "FOMC會議10/27–28，紀要11/18公布；10/19 IBIT淨流入6.65億美元",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.27,
+        "t10": null,
+        "t20": null,
+        "peak": 0.27,
+        "mature": false,
+        "verdict": "❌沒噴(峰0.3x)",
+        "filled_at": "2026-10-26"
+      }
     }
   ],
   "facts_proposed": [
