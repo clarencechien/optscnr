@@ -7248,5 +7248,277 @@
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
     }
+  },
+  {
+    "ts": "2026-10-26T10:15:01.498288+00:00",
+    "overall": "GREEN",
+    "modules_requested": [
+      "m1",
+      "m2",
+      "m3",
+      "m4",
+      "m5",
+      "m6",
+      "m8",
+      "m9"
+    ],
+    "modules": [
+      {
+        "module": "M1 revenue_acceleration",
+        "status": "GREEN",
+        "headline": "2026-09 YoY +54.6%, slope -4.41pp/月, 連續減速 0 個月",
+        "metrics": {
+          "latest_month": "2026-09",
+          "latest_yoy_pct": 54.6,
+          "yoy_slope_pp_per_month": -4.41,
+          "consecutive_decel_months": 0
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      },
+      {
+        "module": "M2 bullwhip_health",
+        "status": "GREEN",
+        "headline": "合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9",
+        "metrics": {
+          "as_of": null,
+          "contract_liab_qoq_pct": null,
+          "inventory_qoq_pct": 23.8,
+          "fcf_to_net_income": 0.9,
+          "accounts_used": {
+            "contract": "",
+            "inventory": "Inventories",
+            "ocf": "CashFlowsFromOperatingActivities",
+            "capex": "PropertyAndPlantAndEquipment",
+            "net_income": "IncomeAfterTaxes"
+          }
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      },
+      {
+        "module": "M3 adr_premium",
+        "status": "GREEN",
+        "headline": "ADR 溢價 +14.4%（1 年第 25 百分位；觀察）",
+        "metrics": {
+          "as_of": "2026-10-23",
+          "premium_pct": 14.4,
+          "percentile_1y": 25.0,
+          "n": 369
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": true
+      },
+      {
+        "module": "M4 customs_flow",
+        "status": "GREEN",
+        "headline": "US 進口 HS854231 (TH+TW) 近3月 $3675.7M, YoY +60.6%",
+        "metrics": {
+          "window": "2026-06..2026-08",
+          "rolling_value_usd_m": 3675.7,
+          "rolling_yoy_pct": 60.6,
+          "by_country": {
+            "TAIWAN": {
+              "rolling_value_usd_m": 3675.7,
+              "rolling_yoy_pct": 60.6
+            }
+          }
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      },
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "export_controls_tariffs:14e / n2_arizona_ramp:9e(11m) / cowos_capacity:8e / geopolitics:3e / hyperscaler_capex:5e",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 14,
+            "n2_arizona_ramp": 9,
+            "cowos_capacity": 8,
+            "geopolitics": 3,
+            "hyperscaler_capex": 5
+          },
+          "mentions": {
+            "export_controls_tariffs": 14,
+            "n2_arizona_ramp": 11,
+            "cowos_capacity": 8,
+            "geopolitics": 3,
+            "hyperscaler_capex": 5
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 14,
+              "mentions": 14,
+              "gate": "zscore",
+              "z": -0.45,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 9,
+              "mentions": 11,
+              "gate": "zscore",
+              "z": -0.7,
+              "denial": false
+            },
+            "cowos_capacity": {
+              "events": 8,
+              "mentions": 8,
+              "gate": "zscore",
+              "z": 2.46,
+              "denial": false
+            },
+            "geopolitics": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -1.0,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 5,
+              "mentions": 5,
+              "gate": "zscore",
+              "z": -2.12,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] TSMC is seeking chipmaking equipment that doesn't contain Chinese rare-earth magnets — asks suppliers to provide alterna",
+          "[export_controls_tariffs] TSMC Seeks Rare-Earth-Free Factory Equipment as China’s Export Controls Threaten Chip Supply Chains - Tekedia",
+          "[export_controls_tariffs] How Taiwan's New AI Chip Export Controls Could Affect China｜Industry｜2026-10-20｜web only - 天下雜誌",
+          "[n2_arizona_ramp] Samsung's 2nm Yield Approaches 60%, Leveraging Tesla Orders to Challenge TSMC - BigGo Finance",
+          "[n2_arizona_ramp] Tech News:Samsung 2nm Chip Yield Surpasses 60%, Closing in on TSMC - LinkedIn",
+          "[n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] CoWoS Advanced Compute Packaging Crisis Explained: The Single Biggest Constraint on Global AI Supply Chain Growth - Inte",
+          "[cowos_capacity] TSMC Accelerates CoPoS Packaging to Replace CoWoS, as Glass Core Substrates Cut Costs 30% and Boost Wafer Utilization Pa",
+          "[geopolitics] China's president Xi Jinping calls Taiwan reunification \"unstoppable\" — military drills around the island escalate in ar",
+          "[geopolitics] In the shadow of China’s military, Taiwan’s globally critical suppliers keep working - Automotive News",
+          "[geopolitics] China’s planned military exercises near Taiwan may have another target: Japan - The Japan Times",
+          "[hyperscaler_capex] Why Tesla's $5 billion capex cut isn't the warning sign AI stock bears think it is - Yahoo Finance",
+          "[hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[hyperscaler_capex] The AI trade is at a 'critical' crossroads as rising rates threaten a capex slowdown, AllianceBernstein says - Business "
+        ],
+        "error": null,
+        "observe_only": false
+      },
+      {
+        "module": "M6 peer_divergence",
+        "status": "GREEN",
+        "headline": "cohort 內 2330 未被對手顯著反超（離散在容忍帶內）",
+        "metrics": {
+          "groups": {
+            "foundry_contrast": {
+              "direction": "cohort_confirm",
+              "delta_3m_yoy": 50.9,
+              "best_peer": "2303",
+              "best_peer_3m_yoy": 25.6,
+              "peer_lead_pp": -25.2,
+              "status": "GREEN",
+              "peers_3m_yoy": {
+                "2303": 25.6
+              }
+            },
+            "backend": {
+              "direction": "cohort_confirm",
+              "delta_3m_yoy": 50.9,
+              "best_peer": "2383",
+              "best_peer_3m_yoy": 142.7,
+              "peer_lead_pp": 91.8,
+              "status": "GREEN",
+              "peers_3m_yoy": {
+                "3711": 44.8,
+                "3037": 54.9,
+                "2383": 142.7
+              }
+            },
+            "asic_lead": {
+              "direction": "cohort_confirm",
+              "delta_3m_yoy": 50.9,
+              "best_peer": "3661",
+              "best_peer_3m_yoy": 317.1,
+              "peer_lead_pp": 266.2,
+              "status": "GREEN",
+              "peers_3m_yoy": {
+                "3661": 317.1,
+                "3443": 122.4
+              }
+            }
+          }
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      },
+      {
+        "module": "M8 revision_velocity",
+        "status": "NO_DATA",
+        "headline": "下修 0/上修 0（樣本不足 <3，NO_DATA）",
+        "metrics": {
+          "up_hits": 0,
+          "down_hits": 0,
+          "total": 0,
+          "down_ratio": null
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      },
+      {
+        "module": "M9 valuation",
+        "status": "GREEN",
+        "headline": "PER 27.6（3 年第 66 百分位；20 日前第 78）；觀察",
+        "metrics": {
+          "as_of": "2026-10-22",
+          "per": 27.65,
+          "per_pct": 65.6,
+          "per_then": 28.75,
+          "per_pct_then": 77.5,
+          "pbr": 9.61,
+          "dividend_yield": 0.92,
+          "history_years": 3,
+          "n": 733
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": true
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 GREEN、價格 20 日 -3.8%）；PER 27.6，3 年分位 78 → 66",
+      "premise": "GREEN",
+      "premise_ts": "2026-10-26T10:15:00.941618+00:00",
+      "ret_pct": -3.83,
+      "lookback_sessions": 20,
+      "as_of": "2026-10-22",
+      "valuation": {
+        "per": 27.65,
+        "per_pct": 65.6,
+        "per_then": 28.75,
+        "per_pct_then": 77.5,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-10-26",
+      "benchmark": "0050",
+      "entry_close": null,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
   }
 ]
