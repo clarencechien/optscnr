@@ -1,36 +1,105 @@
 {
-  "updated_at": "2026-10-25T22:44:58.785094",
+  "updated_at": "2026-10-27T00:01:25.110930",
   "stats": {
     "total_items": 57,
-    "items_with_company": 4,
-    "items_with_catalyst": 3,
+    "items_with_company": 9,
+    "items_with_catalyst": 5,
     "items_both": 0
   },
-  "count": 4,
+  "count": 10,
   "tickers": [
+    "META",
+    "MSFT",
+    "AMD",
     "NVDA",
-    "BRK-B",
+    "AVGO",
     "AAPL",
+    "WMT",
+    "AMZN",
+    "TGT",
     "XYZ"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 0.5,
+      "symbol": "META",
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Nvidia's role as AI financier faces first big test as neoclouds take market hit",
+          "title": "Meta, SpaceX, Anthropic stoke the AI funding frenzy. What it means for our stocks",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meta announces $95 billion stock offering to fund AI expansion",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BRK-B",
-      "score": 0.5,
+      "symbol": "MSFT",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Berkshire shares shake the Buffett blues with new all-time highs",
+          "title": "Microsoft offers voluntary buyouts to 60,000 employees as AI leads to efficiency push",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Microsoft offers buyouts to around 60,000 employees to contain costs",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Meta announces $95 billion stock offering to fund AI expansion",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Meta announces $95 billion stock offering to fund AI expansion",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Meta announces $95 billion stock offering to fund AI expansion",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -41,7 +110,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
+          "title": "Apple responds to user reports of broken iPhone Duo screens on new foldable phone",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "A possible DoorDash-Instacart deal is all about keeping up with Walmart and Amazon, analysts say",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "A possible DoorDash-Instacart deal is all about keeping up with Walmart and Amazon, analysts say",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Analysis-China’s lab-grown diamond makers target AI, chip sectors for next wave of growth",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -52,12 +154,15 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Trump says he ordered DOJ suit to block Alaska Senate race certification if Republican loses",
+          "title": "US judge refuses to block Eli Lilly weight-loss drug ads, rules against Novo Nordisk",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "Anthropic (private)": 5,
+    "OpenAI (private)": 1
+  }
 }
