@@ -1,0 +1,210 @@
+{
+  "market_date": "2026-10-26",
+  "decided_at": "2026-10-27T00:35:07.789Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-26T23:05:39Z",
+  "n_candidates": 3,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 36,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-26_IBIT_2026-11-20_52.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 52,
+      "entry_price": 0.2,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -3.7,
+          "date": "2026-10-22"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "IBIT 是 ETF，沒有財報。到期日 2026-11-20 前查不到這檔基金本身已排定的事件。",
+        "source": null
+      },
+      "note": "沒查到基金層級的排定事件。10-19 單日淨流入 $665M，是一年來最大。",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-10-26_NKE_2026-11-20_40.0",
+      "ticker": "NKE",
+      "expiry": "2026-11-20",
+      "strike": 40,
+      "entry_price": 0.9,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 2,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -2.7,
+          "date": "2026-10-23"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-11-16",
+        "what": "Nike 投資人日 2026-11-16 至 11-17；11-17 主場簡報於太平洋時間 08:30 開始網路直播。",
+        "source": "https://www.businesswire.com/news/home/20261023108212/en/NIKE-Inc.-Announces-2026-Investor-Day-Webcast"
+      },
+      "note": "【衝突】Q1 財報實際在 10-01 發布，不是 09-29 https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-10-26_IBIT_2026-12-18_55.0",
+      "ticker": "IBIT",
+      "expiry": "2026-12-18",
+      "strike": 55,
+      "entry_price": 0.35,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-11-27",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -3.7,
+          "date": "2026-10-22"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "IBIT 是 ETF，沒有財報。到期日 2026-12-18 前查不到這檔基金本身已排定的事件。",
+        "source": null
+      },
+      "note": "沒查到基金層級的排定事件。10-23 資產規模約 $65.9B。",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "NKE",
+      "fact": "Nike 於 2026-10-23 公告：2026-11-16 至 11-17 舉辦投資人日，11-17 主場簡報在太平洋時間 08:30 至 12:00 網路直播。",
+      "date": "2026-11-16",
+      "source": "https://www.businesswire.com/news/home/20261023108212/en/NIKE-Inc.-Announces-2026-Investor-Day-Webcast"
+    },
+    {
+      "ticker": "NKE",
+      "fact": "更正：FY27 Q1 財報實際在 2026-10-01 盤後發布（事實庫原記預計 09-29）。營收 $11.21B，年減 4%，低於預期的 $11.32B；EPS $0.48，高於預期的 $0.43；大中華區營收減 26%。",
+      "date": "2026-10-01",
+      "source": "https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html"
+    },
+    {
+      "ticker": "NKE",
+      "fact": "FY27 財測：營收預計減少高個位數百分比，調整後 EPS $1.15–1.35（市場共識 $1.66）；另推出 Pace 重組計畫，目標到 FY2031 省下約 $2.5B。",
+      "date": "2026-10-01",
+      "source": "https://www.marketbeat.com/stocks/NYSE/NKE/earnings/"
+    },
+    {
+      "ticker": "NKE",
+      "fact": "FY27 Q2 財報排在 2026-12-17 盤後（TipRanks 標示已確認），市場預估 EPS $0.38。",
+      "date": "2026-12-17",
+      "source": "https://www.tipranks.com/stocks/nke/earnings"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "IBIT 在 2026-10-19 單日淨流入 $665.16M，是 2025-10-07 以來最大的單日流入。",
+      "date": "2026-10-19",
+      "source": "https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102"
+    }
+  ],
+  "facts_appended": 4,
+  "raw_answer": "{\"market_date\":\"2026-10-26\",\"candidates\":[{\"signal_id\":\"2026-10-26_IBIT_2026-11-20_52.0\",\"ticker\":\"IBIT\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"IBIT 是 ETF，沒有財報。到期日 2026-11-20 前查不到這檔基金本身已排定的事件。\",\"source\":null},\"note\":\"沒查到基金層級的排定事件。10-19 單日淨流入 $665M，是一年來最大。\"},{\"signal_id\":\"2026-10-26_NKE_2026-11-20_40.0\",\"ticker\":\"NKE\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-11-16\",\"what\":\"Nike 投資人日 2026-11-16 至 11-17；11-17 主場簡報於太平洋時間 08:30 開始網路直播。\",\"source\":\"https://www.businesswire.com/news/home/20261023108212/en/NIKE-Inc.-Announces-2026-Investor-Day-Webcast\"},\"note\":\"【衝突】Q1 財報實際在 10-01 發布，不是 09-29 https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html\"},{\"signal_id\":\"2026-10-26_IBIT_2026-12-18_55.0\",\"ticker\":\"IBIT\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"IBIT 是 ETF，沒有財報。到期日 2026-12-18 前查不到這檔基金本身已排定的事件。\",\"source\":null},\"note\":\"沒查到基金層級的排定事件。10-23 資產規模約 $65.9B。\"}],\"facts_proposed\":[{\"ticker\":\"NKE\",\"fact\":\"Nike 於 2026-10-23 公告：2026-11-16 至 11-17 舉辦投資人日，11-17 主場簡報在太平洋時間 08:30 至 12:00 網路直播。\",\"date\":\"2026-11-16\",\"source\":\"https://www.businesswire.com/news/home/20261023108212/en/NIKE-Inc.-Announces-2026-Investor-Day-Webcast\"},{\"ticker\":\"NKE\",\"fact\":\"更正：FY27 Q1 財報實際在 2026-10-01 盤後發布（事實庫原記預計 09-29）。營收 $11.21B，年減 4%，低於預期的 $11.32B；EPS $0.48，高於預期的 $0.43；大中華區營收減 26%。\",\"date\":\"2026-10-01\",\"source\":\"https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html\"},{\"ticker\":\"NKE\",\"fact\":\"FY27 財測：營收預計減少高個位數百分比，調整後 EPS $1.15–1.35（市場共識 $1.66）；另推出 Pace 重組計畫，目標到 FY2031 省下約 $2.5B。\",\"date\":\"2026-10-01\",\"source\":\"https://www.marketbeat.com/stocks/NYSE/NKE/earnings/\"},{\"ticker\":\"NKE\",\"fact\":\"FY27 Q2 財報排在 2026-12-17 盤後（TipRanks 標示已確認），市場預估 EPS $0.38。\",\"date\":\"2026-12-17\",\"source\":\"https://www.tipranks.com/stocks/nke/earnings\"},{\"ticker\":\"IBIT\",\"fact\":\"IBIT 在 2026-10-19 單日淨流入 $665.16M，是 2025-10-07 以來最大的單日流入。\",\"date\":\"2026-10-19\",\"source\":\"https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102\"}]}",
+  "usage": {
+    "prompt_tokens": 86354,
+    "completion_tokens": 2981,
+    "total_tokens": 89335,
+    "cost": 0.455036,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.455036,
+      "upstream_inference_prompt_cost": 0.345416,
+      "upstream_inference_completions_cost": 0.05962
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1397,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 5
+    }
+  },
+  "error": null
+}
