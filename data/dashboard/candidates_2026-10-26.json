@@ -1,9 +1,9 @@
 {
   "market_date": "2026-10-26",
-  "generated_at": "2026-10-26T23:05:39Z",
+  "generated_at": "2026-10-27T01:31:20Z",
   "prereg_date": "2026-09-08",
   "n_candidates": 3,
-  "n_report_rows": 2687,
+  "n_report_rows": 2966,
   "candidates": [
     {
       "signal_id": "2026-10-26_IBIT_2026-11-20_52.0",
@@ -16,7 +16,7 @@
       "last": 0.2,
       "bid": 0.18,
       "ask": 0.2,
-      "iv": 38.6,
+      "iv": 39.3,
       "oi": 37573,
       "oi_d7": 809,
       "oi_delta_status": "confirmed",
@@ -79,7 +79,7 @@
       "last": 0.9,
       "bid": 0.87,
       "ask": 0.9,
-      "iv": 42.2,
+      "iv": 43.1,
       "oi": 30230,
       "oi_d7": 1142,
       "oi_delta_status": "confirmed",
@@ -142,7 +142,7 @@
       "last": 0.35,
       "bid": 0.34,
       "ask": 0.35,
-      "iv": 39.4,
+      "iv": 39.8,
       "oi": 48466,
       "oi_d7": 1299,
       "oi_delta_status": "confirmed",
