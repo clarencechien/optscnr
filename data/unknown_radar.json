@@ -1,53 +1,53 @@
 {
-  "updated_at": "2026-10-25T23:32:50.920364",
+  "updated_at": "2026-10-27T00:49:40.991704",
   "count": 4,
   "blind_spots": [
     {
-      "name": "Starlink",
-      "ticker": "OTAI-UN",
+      "name": "DoorDash",
+      "ticker": "DASH",
       "mentions_today": 3,
-      "total_mentions": 12,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "Ukraine disputes Elon Musk’s claim that its military violated Starlink terms during drone operations",
-        "Ukraine disputes Elon Musk’s claim that its military violated Starlink terms during drone operations"
-      ]
-    },
-    {
-      "name": "Beijing",
-      "ticker": "BGTCF",
-      "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch",
-        "Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch"
-      ]
-    },
-    {
-      "name": "Georgia",
-      "ticker": "GPJA",
-      "mentions_today": 4,
-      "total_mentions": 4,
+      "total_mentions": 3,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Audi defends plans for a $4 billion Georgia plant amid VW restructuring, tariffs",
-        "Audi defends plans for a $4 billion Georgia plant amid VW restructuring, tariffs"
+        "A possible DoorDash-Instacart deal is all about keeping up with Walmart and Amazon, analysts say",
+        "A possible DoorDash-Instacart deal is all about keeping up with Walmart and Amazon, analysts say"
       ]
     },
     {
-      "name": "Ethan Allen",
-      "ticker": "ETD",
+      "name": "Cheesecake Factory",
+      "ticker": "CAKE",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Proxy advisory firm Glass Lewis backs Bergeron in Ethan Allen fight",
-        "Glass Lewis backs activist's bid to replace entire Ethan Allen board"
+        "Bessent dines at Cheesecake Factory, slams Obama over Trump joke",
+        "Bessent dines at Cheesecake Factory, slams Obama over Trump joke"
+      ]
+    },
+    {
+      "name": "JetBlue",
+      "ticker": "JBLU",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "JetBlue posts bigger loss on fuel costs, but CEO says margins improving",
+        "JetBlue seeks to reassure investors as losses deepen"
+      ]
+    },
+    {
+      "name": "Apollo",
+      "ticker": "APOS",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Apollo to buy nearly 10% stake in Abu Dhabi-backed alternative asset manager Mubadala Capital",
+        "Pimco buys $4 billion of SpaceX AI debt package led by Apollo - Bloomberg"
       ]
     }
   ]

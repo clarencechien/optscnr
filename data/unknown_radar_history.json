@@ -96,5 +96,33 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "ETD"
+  },
+  "Cheesecake Factory": {
+    "first_seen": "2026-10-27",
+    "last_seen": "2026-10-27",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CAKE"
+  },
+  "JetBlue": {
+    "first_seen": "2026-10-27",
+    "last_seen": "2026-10-27",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "JBLU"
+  },
+  "Apollo": {
+    "first_seen": "2026-10-27",
+    "last_seen": "2026-10-27",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "APOS"
+  },
+  "DoorDash": {
+    "first_seen": "2026-10-27",
+    "last_seen": "2026-10-27",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "DASH"
   }
 }
