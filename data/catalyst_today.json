@@ -1,127 +1,162 @@
 {
-  "updated_at": "2026-10-27T00:01:25.110930",
+  "updated_at": "2026-10-27T23:55:44.871623",
   "stats": {
     "total_items": 57,
-    "items_with_company": 9,
-    "items_with_catalyst": 5,
-    "items_both": 0
+    "items_with_company": 16,
+    "items_with_catalyst": 11,
+    "items_both": 5
   },
-  "count": 10,
+  "count": 13,
   "tickers": [
-    "META",
-    "MSFT",
-    "AMD",
+    "HOOD",
     "NVDA",
+    "GOOGL",
+    "META",
+    "AMD",
     "AVGO",
-    "AAPL",
-    "WMT",
-    "AMZN",
     "TGT",
-    "XYZ"
+    "BA",
+    "AMZN",
+    "ORCL",
+    "WMT",
+    "BRK-B",
+    "CRWV"
   ],
   "details": [
     {
-      "symbol": "META",
-      "score": 1.5,
+      "symbol": "HOOD",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Meta, SpaceX, Anthropic stoke the AI funding frenzy. What it means for our stocks",
+          "title": "Robinhood shares fall 4% as crypto slump weighs on profits, offsetting gains in new businesses",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Retail traders buy the dip on chip stocks — but Robinhood gets burned by the crypto market",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Meta announces $95 billion stock offering to fund AI expansion",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Microsoft offers voluntary buyouts to 60,000 employees as AI leads to efficiency push",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft offers buyouts to around 60,000 employees to contain costs",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Meta announces $95 billion stock offering to fund AI expansion",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Robinhood profit misses estimates as crypto trading slows",
+          "catalysts": [
+            "misses estimates"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "NVDA",
-      "score": 1.0,
+      "score": 4,
       "evidence": [
         {
-          "title": "Meta announces $95 billion stock offering to fund AI expansion",
+          "title": "Nvidia, AMD to invest $4 billion in Meta as tech giants deepen AI partnership",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "How Broadcom’s stock can surge and overcome ‘the biggest dislocation in the market’",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 2.0,
+      "evidence": [
+        {
+          "title": "Chart: Anthropic's cash pile towers over nearly every U.S. company",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering",
+          "title": "AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. ",
           "catalysts": [],
           "has_catalyst": false
+        },
+        {
+          "title": "Walmart says AI training is boosting confidence with the technology among its 2.1 million associates",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Nvidia, AMD to invest $4 billion in Meta as tech giants deepen AI partnership",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Nvidia, AMD to invest $4 billion in Meta as tech giants deepen AI partnership",
+          "catalysts": [
+            "partnership"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "AVGO",
-      "score": 1.0,
+      "score": 2,
       "evidence": [
         {
-          "title": "Meta announces $95 billion stock offering to fund AI expansion",
+          "title": "How Broadcom’s stock can surge and overcome ‘the biggest dislocation in the market’",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "JetBlue has been losing money for years. It just charted a path to profitability.",
+          "catalysts": [
+            "rises"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "BA",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Boeing says it won't significantly ramp up 737 Max production until late 2027",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia, AMD and Broadcom could buy Meta shares as part of $35 billion stock offering",
+          "title": "Boeing shares slide on a disappointing cash flow update. Why this dip is buyable",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Apple responds to user reports of broken iPhone Duo screens on new foldable phone",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "A possible DoorDash-Instacart deal is all about keeping up with Walmart and Amazon, analysts say",
+          "title": "The big reason Boeing’s stock is falling so hard after earnings",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -129,32 +164,69 @@
     },
     {
       "symbol": "AMZN",
-      "score": 0.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "A possible DoorDash-Instacart deal is all about keeping up with Walmart and Amazon, analysts say",
+          "title": "Amazon's anti-tokenmaxxing memo says engineers should be pickier about using AI",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
-      "score": 0.5,
+      "symbol": "ORCL",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Analysis-China’s lab-grown diamond makers target AI, chip sectors for next wave of growth",
+          "title": "AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. ",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Oracle integrates ChatGPT, Codex into apps and expands cloud chip lineup",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "WMT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Walmart says AI training is boosting confidence with the technology among its 2.1 million associates",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Walmart’s margins in Mexico tighten as costs outpace sales growth",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
       "score": 0.5,
       "evidence": [
         {
-          "title": "US judge refuses to block Eli Lilly weight-loss drug ads, rules against Novo Nordisk",
+          "title": "Chart: Anthropic's cash pile towers over nearly every U.S. company",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "CoreWeave and other AI stocks rise as Anthropic restores the market’s faith in sustained spending",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -163,6 +235,6 @@
   ],
   "watch_only": {
     "Anthropic (private)": 5,
-    "OpenAI (private)": 1
+    "OpenAI (private)": 2
   }
 }
