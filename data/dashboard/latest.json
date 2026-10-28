@@ -1,28 +1,28 @@
 {
-  "market_date": "2026-10-27",
-  "generated_at": "2026-10-28T01:27:19Z",
+  "market_date": "2026-10-28",
+  "generated_at": "2026-10-28T23:05:28Z",
   "prereg_date": "2026-09-08",
-  "n_candidates": 2,
-  "n_report_rows": 3288,
+  "n_candidates": 1,
+  "n_report_rows": 3249,
   "candidates": [
     {
-      "signal_id": "2026-10-27_IBIT_2026-12-18_55.0",
+      "signal_id": "2026-10-28_IBIT_2026-11-20_50.0",
       "ticker": "IBIT",
-      "expiry": "2026-12-18",
-      "strike": 55.0,
-      "dte": 52,
-      "spot": 45.7,
-      "otm_pct": 20.4,
-      "last": 0.36,
-      "bid": 0.35,
-      "ask": 0.36,
-      "iv": 38.8,
-      "oi": 49760,
-      "oi_d7": 2558,
+      "expiry": "2026-11-20",
+      "strike": 50.0,
+      "dte": 23,
+      "spot": 46.13999938964844,
+      "otm_pct": 8.4,
+      "last": 0.5,
+      "bid": 0.48,
+      "ask": 0.5,
+      "iv": 36.9,
+      "oi": 38987,
+      "oi_d7": 5059,
       "oi_delta_status": "confirmed",
-      "volume": 13801,
+      "volume": 3902,
       "score": 8,
-      "tags": "🚀點火(7.8x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
+      "tags": "🚀點火(2.9x) 🚬菸屁股 🔥萬人塚 📅無財報(ETF)",
       "features": [
         "ignition",
         "cigar_butt",
@@ -33,10 +33,6 @@
         "📅無財報(ETF)"
       ],
       "recent_spots": [
-        {
-          "date": "2026-10-20",
-          "spot": 46.71
-        },
         {
           "date": "2026-10-21",
           "spot": 47.84
@@ -56,6 +52,10 @@
         {
           "date": "2026-10-27",
           "spot": 45.7
+        },
+        {
+          "date": "2026-10-28",
+          "spot": 46.14
         }
       ],
       "tier": "lottery",
@@ -64,70 +64,7 @@
       "sell_points": {
         "take_profit": [],
         "stop": null,
-        "exit_by": "2026-11-27",
-        "note": "不設停損、不賣半；DTE 21 全出"
-      }
-    },
-    {
-      "signal_id": "2026-10-27_SOFI_2027-01-15_20.0",
-      "ticker": "SOFI",
-      "expiry": "2027-01-15",
-      "strike": 20.0,
-      "dte": 80,
-      "spot": 16.4,
-      "otm_pct": 22.0,
-      "last": 0.41,
-      "bid": 0.38,
-      "ask": 0.42,
-      "iv": 48.0,
-      "oi": 116937,
-      "oi_d7": 2319,
-      "oi_delta_status": "confirmed",
-      "volume": 13122,
-      "score": 8,
-      "tags": "🚀點火(3.5x) 🚬菸屁股 🔥萬人塚 📅財報已過(10-27)",
-      "features": [
-        "ignition",
-        "cigar_butt",
-        "mass_grave"
-      ],
-      "warnings": [],
-      "events": [
-        "📅財報已過(10-27)"
-      ],
-      "recent_spots": [
-        {
-          "date": "2026-10-20",
-          "spot": 14.68
-        },
-        {
-          "date": "2026-10-21",
-          "spot": 14.9
-        },
-        {
-          "date": "2026-10-22",
-          "spot": 14.77
-        },
-        {
-          "date": "2026-10-23",
-          "spot": 14.615
-        },
-        {
-          "date": "2026-10-26",
-          "spot": 14.46
-        },
-        {
-          "date": "2026-10-27",
-          "spot": 16.4
-        }
-      ],
-      "tier": "lottery",
-      "strategy": "A_HOLD",
-      "strategy_label": "死抱到末點（樂透∧IV<50）",
-      "sell_points": {
-        "take_profit": [],
-        "stop": null,
-        "exit_by": "2026-12-25",
+        "exit_by": "2026-10-30",
         "note": "不設停損、不賣半；DTE 21 全出"
       }
     }
