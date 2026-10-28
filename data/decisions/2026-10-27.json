@@ -1,0 +1,180 @@
+{
+  "market_date": "2026-10-27",
+  "decided_at": "2026-10-28T00:35:08.786Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-27T23:05:27Z",
+  "n_candidates": 2,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 37,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-27_IBIT_2026-12-18_55.0",
+      "ticker": "IBIT",
+      "expiry": "2026-12-18",
+      "strike": 55,
+      "entry_price": 0.36,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-11-27",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -3.7,
+          "date": "2026-10-22"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "ETF 沒有財報。到期前沒查到發行人的排定事件；只有宏觀面的 FOMC 2026-12-09 決議，它不算本檔事件",
+        "source": null
+      },
+      "note": "FOMC 12/09 決議附點陣圖。10/19 單日淨流入 $665M，是 2025-10-07 以來最大",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-10-27_SOFI_2027-01-15_20.0",
+      "ticker": "SOFI",
+      "expiry": "2027-01-15",
+      "strike": 20,
+      "entry_price": 0.41,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-12-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 6,
+      "q_gap": {
+        "answer": "有",
+        "direction": "up",
+        "pct": 13.4,
+        "date": "2026-10-27",
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": 13.4,
+          "date": "2026-10-27"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-12-21",
+        "what": "S&P 500 十二月季度調整生效日。這是納入窗口，SOFI 有沒有被納入還不知道（9 月已落選）",
+        "source": "https://tickericons.com/changes"
+      },
+      "note": "Q3 已在 10/27 公布：營收 $1.39B（+44%），調升 2026 指引至 $5.04B。下次財報應在到期後",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "SOFI",
+      "fact": "Q3 2026 財報：營收 $1.39B（年增 44%），調整後 EPS $0.18（預期 $0.17），調整後 EBITDA $470M，會員 1,710 萬；2026 調整後淨營收指引調升至 $5.04B，並首次給出 2027 指引 $6.4B",
+      "date": "2026-10-27",
+      "source": "https://www.sec.gov/Archives/edgar/data/0001818874/000181887426000065/a2026q3earningsrelease.htm"
+    },
+    {
+      "ticker": "SOFI",
+      "fact": "財報公布當天股價上漲超過 14%",
+      "date": "2026-10-27",
+      "source": "https://www.gurufocus.com/news/9144822/sofi-sofi-reports-strong-q3-earnings-shares-surge-over-14"
+    },
+    {
+      "ticker": "SOFI",
+      "fact": "S&P 500 九月季度調整再度落選：新納入 BE、ILMN、P 三家，剔除 TAP、TTD、BLDR，9/21 開盤前生效",
+      "date": "2026-09-04",
+      "source": "https://www.prnewswire.com/news-releases/bloom-energy-illumina-and-everpure-set-to-join-sp-500-others-to-join-sp-100-sp-midcap-400-and-sp-smallcap-600-302870517.html"
+    },
+    {
+      "ticker": "SOFI",
+      "fact": "S&P 500 下一次季度調整在 2026-12-21 生效（SOFI 是否納入未定）",
+      "date": "2026-12-21",
+      "source": "https://tickericons.com/changes"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "IBIT 單日淨流入 $665.16M，是 2025-10-07 以來最大；資產規模約 $66.37B",
+      "date": "2026-10-19",
+      "source": "https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "比特幣 ETF 類別 10/22 淨流出 $635.5M；10 月 1–26 日累計淨流出約 $202M；10/26 淨流入 $110.3M 全部進了 IBIT",
+      "date": "2026-10-26",
+      "source": "https://cryptobriefing.com/blackrock-ibit-110m-bitcoin-etf-inflows"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "宏觀：FOMC 12 月會議在 12/8–12/9 召開，2026-12-09 14:00 ET 公布利率決議，附經濟預測摘要（SEP）與點陣圖",
+      "date": "2026-12-09",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/december-2026/"
+    }
+  ],
+  "facts_appended": 6,
+  "raw_answer": "{\"market_date\": \"2026-10-27\",\n \"candidates\": [\n  {\"signal_id\": \"2026-10-27_IBIT_2026-12-18_55.0\",\n   \"q_event\": {\"answer\": \"未確認\", \"date\": null, \"what\": \"ETF 沒有財報。到期前沒查到發行人的排定事件；只有宏觀面的 FOMC 2026-12-09 決議，它不算本檔事件\", \"source\": null},\n   \"note\": \"FOMC 12/09 決議附點陣圖。10/19 單日淨流入 $665M，是 2025-10-07 以來最大\"},\n  {\"signal_id\": \"2026-10-27_SOFI_2027-01-15_20.0\",\n   \"q_event\": {\"answer\": \"有\", \"date\": \"2026-12-21\", \"what\": \"S&P 500 十二月季度調整生效日。這是納入窗口，SOFI 有沒有被納入還不知道（9 月已落選）\", \"source\": \"https://tickericons.com/changes\"},\n   \"note\": \"Q3 已在 10/27 公布：營收 $1.39B（+44%），調升 2026 指引至 $5.04B。下次財報應在到期後\"}\n ],\n \"facts_proposed\": [\n  {\"ticker\": \"SOFI\", \"fact\": \"Q3 2026 財報：營收 $1.39B（年增 44%），調整後 EPS $0.18（預期 $0.17），調整後 EBITDA $470M，會員 1,710 萬；2026 調整後淨營收指引調升至 $5.04B，並首次給出 2027 指引 $6.4B\", \"date\": \"2026-10-27\", \"source\": \"https://www.sec.gov/Archives/edgar/data/0001818874/000181887426000065/a2026q3earningsrelease.htm\"},\n  {\"ticker\": \"SOFI\", \"fact\": \"財報公布當天股價上漲超過 14%\", \"date\": \"2026-10-27\", \"source\": \"https://www.gurufocus.com/news/9144822/sofi-sofi-reports-strong-q3-earnings-shares-surge-over-14\"},\n  {\"ticker\": \"SOFI\", \"fact\": \"S&P 500 九月季度調整再度落選：新納入 BE、ILMN、P 三家，剔除 TAP、TTD、BLDR，9/21 開盤前生效\", \"date\": \"2026-09-04\", \"source\": \"https://www.prnewswire.com/news-releases/bloom-energy-illumina-and-everpure-set-to-join-sp-500-others-to-join-sp-100-sp-midcap-400-and-sp-smallcap-600-302870517.html\"},\n  {\"ticker\": \"SOFI\", \"fact\": \"S&P 500 下一次季度調整在 2026-12-21 生效（SOFI 是否納入未定）\", \"date\": \"2026-12-21\", \"source\": \"https://tickericons.com/changes\"},\n  {\"ticker\": \"IBIT\", \"fact\": \"IBIT 單日淨流入 $665.16M，是 2025-10-07 以來最大；資產規模約 $66.37B\", \"date\": \"2026-10-19\", \"source\": \"https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102\"},\n  {\"ticker\": \"IBIT\", \"fact\": \"比特幣 ETF 類別 10/22 淨流出 $635.5M；10 月 1–26 日累計淨流出約 $202M；10/26 淨流入 $110.3M 全部進了 IBIT\", \"date\": \"2026-10-26\", \"source\": \"https://cryptobriefing.com/blackrock-ibit-110m-bitcoin-etf-inflows\"},\n  {\"ticker\": \"IBIT\", \"fact\": \"宏觀：FOMC 12 月會議在 12/8–12/9 召開，2026-12-09 14:00 ET 公布利率決議，附經濟預測摘要（SEP）與點陣圖\", \"date\": \"2026-12-09\", \"source\": \"https://fedratecalc.com/fomc-meeting-schedule/december-2026/\"}\n ]}",
+  "usage": {
+    "prompt_tokens": 119890,
+    "completion_tokens": 3729,
+    "total_tokens": 123619,
+    "cost": 0.60414,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.60414,
+      "upstream_inference_prompt_cost": 0.47956,
+      "upstream_inference_completions_cost": 0.07458
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2033,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 5
+    }
+  },
+  "error": null
+}
