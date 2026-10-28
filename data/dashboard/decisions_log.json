@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-27T23:16:21Z",
- "n_days": 36,
+ "generated_at": "2026-10-28T01:34:54Z",
+ "n_days": 37,
  "t8_by_event_answer": {
   "有": {
    "n": 11,
@@ -19,6 +19,99 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-10-27",
+   "decided_at": "2026-10-28T00:35:08.786Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 2,
+   "candidates": [
+    {
+     "signal_id": "2026-10-27_IBIT_2026-12-18_55.0",
+     "ticker": "IBIT",
+     "expiry": "2026-12-18",
+     "strike": 55,
+     "entry_price": 0.36,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-11-27",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "未確認",
+      "date": null,
+      "what": "ETF 沒有財報。到期前沒查到發行人的排定事件；只有宏觀面的 FOMC 2026-12-09 決議，它不算本檔事件",
+      "source": null
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": -3.7,
+       "date": "2026-10-22"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "FOMC 12/09 決議附點陣圖。10/19 單日淨流入 $665M，是 2025-10-07 以來最大",
+     "status": "answered",
+     "outcome": null
+    },
+    {
+     "signal_id": "2026-10-27_SOFI_2027-01-15_20.0",
+     "ticker": "SOFI",
+     "expiry": "2027-01-15",
+     "strike": 20,
+     "entry_price": 0.41,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-12-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-12-21",
+      "what": "S&P 500 十二月季度調整生效日。這是納入窗口，SOFI 有沒有被納入還不知道（9 月已落選）",
+      "source": "https://tickericons.com/changes"
+     },
+     "q_gap": {
+      "answer": "有",
+      "direction": "up",
+      "pct": 13.4,
+      "date": "2026-10-27",
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": 13.4,
+       "date": "2026-10-27"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "Q3 已在 10/27 公布：營收 $1.39B（+44%），調升 2026 指引至 $5.04B。下次財報應在到期後",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-10-26",
    "decided_at": "2026-10-27T00:35:07.789Z",
