@@ -281,3 +281,9 @@
 - NKE ｜ 更正：FY27 Q1 財報實際在 2026-10-01 盤後發布（事實庫原記預計 09-29）。營收 $11.21B，年減 4%，低於預期的 $11.32B；EPS $0.48，高於預期的 $0.43；大中華區營收減 26%。 ｜ 2026-10-01 ｜ https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html ｜ 2026-10-26 LLM 提案
 - NKE ｜ FY27 財測：營收預計減少高個位數百分比，調整後 EPS $1.15–1.35（市場共識 $1.66）；另推出 Pace 重組計畫，目標到 FY2031 省下約 $2.5B。 ｜ 2026-10-01 ｜ https://www.marketbeat.com/stocks/NYSE/NKE/earnings/ ｜ 2026-10-26 LLM 提案
 - NKE ｜ FY27 Q2 財報排在 2026-12-17 盤後（TipRanks 標示已確認），市場預估 EPS $0.38。 ｜ 2026-12-17 ｜ https://www.tipranks.com/stocks/nke/earnings ｜ 2026-10-26 LLM 提案
+- SOFI ｜ Q3 2026 財報：營收 $1.39B（年增 44%），調整後 EPS $0.18（預期 $0.17），調整後 EBITDA $470M，會員 1,710 萬；2026 調整後淨營收指引調升至 $5.04B，並首次給出 2027 指引 $6.4B ｜ 2026-10-27 ｜ https://www.sec.gov/Archives/edgar/data/0001818874/000181887426000065/a2026q3earningsrelease.htm ｜ 2026-10-27 LLM 提案
+- SOFI ｜ 財報公布當天股價上漲超過 14% ｜ 2026-10-27 ｜ https://www.gurufocus.com/news/9144822/sofi-sofi-reports-strong-q3-earnings-shares-surge-over-14 ｜ 2026-10-27 LLM 提案
+- SOFI ｜ S&P 500 九月季度調整再度落選：新納入 BE、ILMN、P 三家，剔除 TAP、TTD、BLDR，9/21 開盤前生效 ｜ 2026-09-04 ｜ https://www.prnewswire.com/news-releases/bloom-energy-illumina-and-everpure-set-to-join-sp-500-others-to-join-sp-100-sp-midcap-400-and-sp-smallcap-600-302870517.html ｜ 2026-10-27 LLM 提案
+- SOFI ｜ S&P 500 下一次季度調整在 2026-12-21 生效（SOFI 是否納入未定） ｜ 2026-12-21 ｜ https://tickericons.com/changes ｜ 2026-10-27 LLM 提案
+- IBIT ｜ 比特幣 ETF 類別 10/22 淨流出 $635.5M；10 月 1–26 日累計淨流出約 $202M；10/26 淨流入 $110.3M 全部進了 IBIT ｜ 2026-10-26 ｜ https://cryptobriefing.com/blackrock-ibit-110m-bitcoin-etf-inflows ｜ 2026-10-27 LLM 提案
+- IBIT ｜ 宏觀：FOMC 12 月會議在 12/8–12/9 召開，2026-12-09 14:00 ET 公布利率決議，附經濟預測摘要（SEP）與點陣圖 ｜ 2026-12-09 ｜ https://fedratecalc.com/fomc-meeting-schedule/december-2026/ ｜ 2026-10-27 LLM 提案
