@@ -1,53 +1,29 @@
 {
-  "updated_at": "2026-10-27T00:49:40.991704",
-  "count": 4,
+  "updated_at": "2026-10-28T00:44:20.932100",
+  "count": 2,
   "blind_spots": [
-    {
-      "name": "DoorDash",
-      "ticker": "DASH",
-      "mentions_today": 3,
-      "total_mentions": 3,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "A possible DoorDash-Instacart deal is all about keeping up with Walmart and Amazon, analysts say",
-        "A possible DoorDash-Instacart deal is all about keeping up with Walmart and Amazon, analysts say"
-      ]
-    },
-    {
-      "name": "Cheesecake Factory",
-      "ticker": "CAKE",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Bessent dines at Cheesecake Factory, slams Obama over Trump joke",
-        "Bessent dines at Cheesecake Factory, slams Obama over Trump joke"
-      ]
-    },
     {
       "name": "JetBlue",
       "ticker": "JBLU",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "mentions_today": 3,
+      "total_mentions": 5,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "JetBlue posts bigger loss on fuel costs, but CEO says margins improving",
-        "JetBlue seeks to reassure investors as losses deepen"
+        "JetBlue stock surges as company outlook calms investors",
+        "JetBlue has been losing money for years. It just charted a path to profitability."
       ]
     },
     {
-      "name": "Apollo",
-      "ticker": "APOS",
+      "name": "Royal Caribbean",
+      "ticker": "RCL",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Apollo to buy nearly 10% stake in Abu Dhabi-backed alternative asset manager Mubadala Capital",
-        "Pimco buys $4 billion of SpaceX AI debt package led by Apollo - Bloomberg"
+        "Early third-quarter earnings show a 'resilient' U.S. consumer, with signs of strain",
+        "Royal Caribbean outlines $17.85-$17.95 2026 adjusted EPS while advancing Sandals/Beaches deal for ea"
       ]
     }
   ]
