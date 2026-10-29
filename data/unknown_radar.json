@@ -1,29 +1,17 @@
 {
-  "updated_at": "2026-10-28T00:44:20.932100",
-  "count": 2,
+  "updated_at": "2026-10-29T01:14:02.314265",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "JetBlue",
-      "ticker": "JBLU",
-      "mentions_today": 3,
-      "total_mentions": 5,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "JetBlue stock surges as company outlook calms investors",
-        "JetBlue has been losing money for years. It just charted a path to profitability."
-      ]
-    },
-    {
-      "name": "Royal Caribbean",
-      "ticker": "RCL",
+      "name": "Fortinet",
+      "ticker": "FTNT",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Early third-quarter earnings show a 'resilient' U.S. consumer, with signs of strain",
-        "Royal Caribbean outlines $17.85-$17.95 2026 adjusted EPS while advancing Sandals/Beaches deal for ea"
+        "Fortinet’s stock is taking a dive after earnings. Here’s why.",
+        "Fortinet’s stock is taking a dive after earnings. Here’s why."
       ]
     }
   ]

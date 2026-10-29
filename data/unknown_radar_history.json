@@ -1,18 +1,4 @@
 {
-  "United Airlines": {
-    "first_seen": "2026-10-21",
-    "last_seen": "2026-10-21",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "UAL"
-  },
-  "Best Buy": {
-    "first_seen": "2026-10-21",
-    "last_seen": "2026-10-21",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BBY"
-  },
   "Southwest Airlines": {
     "first_seen": "2026-10-22",
     "last_seen": "2026-10-22",
@@ -124,5 +110,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "RCL"
+  },
+  "Fortinet": {
+    "first_seen": "2026-10-29",
+    "last_seen": "2026-10-29",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "FTNT"
   }
 }
