@@ -1,0 +1,120 @@
+{
+  "market_date": "2026-10-28",
+  "decided_at": "2026-10-29T00:35:09.272Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-28T23:05:28Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 38,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-28_IBIT_2026-11-20_50.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 50,
+      "entry_price": 0.5,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -3.7,
+          "date": "2026-10-22"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "無",
+        "date": null,
+        "what": "IBIT 是現貨比特幣 ETF，沒有財報；查不到 2026-11-20 前有基金本身的排定事件。",
+        "source": null
+      },
+      "note": "總經事件（非本檔）：11-03 期中選舉、11-10 CPI；10-28 FOMC 與市場日同一天",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "IBIT",
+      "fact": "2026-10-19 IBIT 單日淨流入 $665.16M，是 2025-10-07 以來最大，AUM 約 $66.37B；同日 BTC 在 $82K–83K 區間，沒有跟漲。",
+      "date": "2026-10-19",
+      "source": "https://alpha-maven.com/story/crypto/bitcoin-etf-ibit-665-million-inflow-in-one-day-cryptoticker"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "2026-10-22 美國現貨 BTC ETF 合計淨流出 $635.6M，是 6 月以來最大單日流出；其中 IBIT −$254.1M。",
+      "date": "2026-10-22",
+      "source": "https://techyorker.com/bitcoin-etfs-swing-back-to-net-outflows-as-636-million-in-withdrawals-erase-previous-days-inflows/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "截至 2026-10-26，BTC ETF 10 月累計淨流出約 $202M；10-26 當天類別淨流入 $110.3M 全部進 IBIT，IBIT 資產約 $64.8B。",
+      "date": "2026-10-26",
+      "source": "https://cryptobriefing.com/blackrock-ibit-110m-bitcoin-etf-inflows/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "BlackRock 申請 iShares Bitcoin Managed Protection ETF，用 IBIT 選擇權把每批起始虧損限制在約 10%，換來收益上限。",
+      "date": "2026-10-19",
+      "source": "https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102"
+    }
+  ],
+  "facts_appended": 3,
+  "raw_answer": "{\"market_date\":\"2026-10-28\",\"candidates\":[{\"signal_id\":\"2026-10-28_IBIT_2026-11-20_50.0\",\"q_event\":{\"answer\":\"無\",\"date\":null,\"what\":\"IBIT 是現貨比特幣 ETF，沒有財報；查不到 2026-11-20 前有基金本身的排定事件。\",\"source\":null},\"note\":\"總經事件（非本檔）：11-03 期中選舉、11-10 CPI；10-28 FOMC 與市場日同一天\"}],\"facts_proposed\":[{\"ticker\":\"IBIT\",\"fact\":\"2026-10-19 IBIT 單日淨流入 $665.16M，是 2025-10-07 以來最大，AUM 約 $66.37B；同日 BTC 在 $82K–83K 區間，沒有跟漲。\",\"date\":\"2026-10-19\",\"source\":\"https://alpha-maven.com/story/crypto/bitcoin-etf-ibit-665-million-inflow-in-one-day-cryptoticker\"},{\"ticker\":\"IBIT\",\"fact\":\"2026-10-22 美國現貨 BTC ETF 合計淨流出 $635.6M，是 6 月以來最大單日流出；其中 IBIT −$254.1M。\",\"date\":\"2026-10-22\",\"source\":\"https://techyorker.com/bitcoin-etfs-swing-back-to-net-outflows-as-636-million-in-withdrawals-erase-previous-days-inflows/\"},{\"ticker\":\"IBIT\",\"fact\":\"截至 2026-10-26，BTC ETF 10 月累計淨流出約 $202M；10-26 當天類別淨流入 $110.3M 全部進 IBIT，IBIT 資產約 $64.8B。\",\"date\":\"2026-10-26\",\"source\":\"https://cryptobriefing.com/blackrock-ibit-110m-bitcoin-etf-inflows/\"},{\"ticker\":\"IBIT\",\"fact\":\"BlackRock 申請 iShares Bitcoin Managed Protection ETF，用 IBIT 選擇權把每批起始虧損限制在約 10%，換來收益上限。\",\"date\":\"2026-10-19\",\"source\":\"https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102\"}]}",
+  "usage": {
+    "prompt_tokens": 45058,
+    "completion_tokens": 2425,
+    "total_tokens": 47483,
+    "cost": 0.248732,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.248732,
+      "upstream_inference_prompt_cost": 0.180232,
+      "upstream_inference_completions_cost": 0.0485
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1514,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
