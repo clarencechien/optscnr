@@ -1,178 +1,107 @@
 {
-  "updated_at": "2026-10-27T23:55:44.871623",
+  "updated_at": "2026-10-29T00:15:11.339050",
   "stats": {
     "total_items": 57,
-    "items_with_company": 16,
-    "items_with_catalyst": 11,
-    "items_both": 5
+    "items_with_company": 17,
+    "items_with_catalyst": 15,
+    "items_both": 8
   },
-  "count": 13,
+  "count": 11,
   "tickers": [
-    "HOOD",
-    "NVDA",
     "GOOGL",
-    "META",
-    "AMD",
-    "AVGO",
-    "TGT",
-    "BA",
-    "AMZN",
+    "MSFT",
+    "F",
+    "NOW",
     "ORCL",
-    "WMT",
-    "BRK-B",
-    "CRWV"
+    "MU",
+    "MRVL",
+    "AAPL",
+    "NVDA",
+    "XYZ",
+    "WMT"
   ],
   "details": [
     {
-      "symbol": "HOOD",
+      "symbol": "GOOGL",
       "score": 4.5,
       "evidence": [
         {
-          "title": "Robinhood shares fall 4% as crypto slump weighs on profits, offsetting gains in new businesses",
+          "title": "Alphabet sinks 10% as it holds 2026 capex unchanged, expects significant increase in 2027",
           "catalysts": [
-            "gains"
+            "sinks"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Retail traders buy the dip on chip stocks — but Robinhood gets burned by the crypto market",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Robinhood profit misses estimates as crypto trading slows",
+          "title": "Options traders break down a massive Alphabet trade into earnings",
           "catalysts": [
-            "misses estimates"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Nvidia, AMD to invest $4 billion in Meta as tech giants deepen AI partnership",
-          "catalysts": [
-            "partnership"
+            "rally"
           ],
           "has_catalyst": true
         },
         {
-          "title": "How Broadcom’s stock can surge and overcome ‘the biggest dislocation in the market’",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 2.0,
-      "evidence": [
-        {
-          "title": "Chart: Anthropic's cash pile towers over nearly every U.S. company",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Walmart says AI training is boosting confidence with the technology among its 2.1 million associates",
+          "title": "Why Alphabet’s stock could see its worst drop in years after the latest results",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "META",
-      "score": 2,
+      "symbol": "MSFT",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Nvidia, AMD to invest $4 billion in Meta as tech giants deepen AI partnership",
+          "title": "Microsoft stock jumps 4% as cloud growth drives earnings and revenue beat",
           "catalysts": [
-            "partnership"
+            "jumps"
           ],
           "has_catalyst": true
+        },
+        {
+          "title": "Options traders break down a massive Alphabet trade into earnings",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "The major reason Microsoft’s stock is heading higher after earnings",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
-      "score": 2,
+      "symbol": "F",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Nvidia, AMD to invest $4 billion in Meta as tech giants deepen AI partnership",
-          "catalysts": [
-            "partnership"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "How Broadcom’s stock can surge and overcome ‘the biggest dislocation in the market’",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "JetBlue has been losing money for years. It just charted a path to profitability.",
-          "catalysts": [
-            "rises"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Boeing says it won't significantly ramp up 737 Max production until late 2027",
+          "title": "Ford reports mixed third-quarter results, says 2027 earnings will be in line with this year",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Boeing shares slide on a disappointing cash flow update. Why this dip is buyable",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "The big reason Boeing’s stock is falling so hard after earnings",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Ford’s third-quarter core profit ticks higher despite rising commodity costs",
+          "catalysts": [
+            "rising"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 1.0,
+      "symbol": "NOW",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Amazon's anti-tokenmaxxing memo says engineers should be pickier about using AI",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "ServiceNow’s stock slides as earnings miss overshadows a raised AI outlook",
+          "catalysts": [
+            "earnings miss"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. ",
+          "title": "Servicenow targets $1.7B+ AI ACV by year-end while raising 2026 free cash flow margin goal to 36%",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -180,15 +109,76 @@
     },
     {
       "symbol": "ORCL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Oracle stock pops 11% as long-term revenue forecast and clarity on financing ease debt concerns ",
+          "catalysts": [
+            "pops"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Fed chairman talks tough on inflation — plus, what's behind Micron's big rally",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MRVL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Lumentum’s stock pops as investors cheer a possible sale to Marvell",
+          "catalysts": [
+            "pops"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
       "score": 1.0,
       "evidence": [
         {
-          "title": "AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. ",
+          "title": "Hands-on with Apple's first touchscreen laptop: Touch is totally optional",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Oracle integrates ChatGPT, Codex into apps and expands cloud chip lineup",
+          "title": "Apple brings touch to the Mac, reversing years-old stance on touchscreen laptop",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Nvidia's $12.9 billion Hugging Face deal draws DOJ scrutiny",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Peltola campaign aides, DSCC officials helped recruit second Dan Sullivan in Alaska race: NYT",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -196,45 +186,15 @@
     },
     {
       "symbol": "WMT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Walmart says AI training is boosting confidence with the technology among its 2.1 million associates",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Walmart’s margins in Mexico tighten as costs outpace sales growth",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Chart: Anthropic's cash pile towers over nearly every U.S. company",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "CoreWeave and other AI stocks rise as Anthropic restores the market’s faith in sustained spending",
+          "title": "US FTC demands Walmart, Uber, Delta and others hand over data on personalized pricing",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "Anthropic (private)": 5,
-    "OpenAI (private)": 2
-  }
+  "watch_only": {}
 }
