@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T01:58:24Z",
+ "generated_at": "2026-10-29T23:16:09Z",
  "n_days": 38,
  "t8_by_event_answer": {
   "有": {
@@ -373,7 +373,7 @@
       "peak": 0.29,
       "mature": false,
       "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-10-28"
+      "filled_at": "2026-10-29"
      }
     },
     {
@@ -422,7 +422,7 @@
       "peak": 0.27,
       "mature": false,
       "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-10-28"
+      "filled_at": "2026-10-29"
      }
     }
    ]
@@ -482,7 +482,7 @@
       "peak": 0.57,
       "mature": false,
       "verdict": "➖持平(峰0.6x/今0.6x)",
-      "filled_at": "2026-10-28"
+      "filled_at": "2026-10-29"
      }
     }
    ]
@@ -566,7 +566,7 @@
       "peak": 0.84,
       "mature": false,
       "verdict": "➖持平(峰0.8x/今0.8x)",
-      "filled_at": "2026-10-28"
+      "filled_at": "2026-10-29"
      }
     }
    ]
@@ -626,7 +626,7 @@
       "peak": 0.73,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.4x)",
-      "filled_at": "2026-10-28"
+      "filled_at": "2026-10-29"
      }
     }
    ]

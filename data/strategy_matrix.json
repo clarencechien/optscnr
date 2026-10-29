@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-10-29 01:58 UTC",
+  "generated_at": "2026-10-29 23:16 UTC",
   "prereg_date": "2026-09-08",
   "cost_factor": 0.86,
   "min_n": 30,
-  "n_signals": 2566,
-  "n_mature": 1143,
+  "n_signals": 2625,
+  "n_mature": 1153,
   "overall": {
-    "n": 1143,
-    "events": 688,
-    "hit": 0.143,
+    "n": 1153,
+    "events": 694,
+    "hit": 0.142,
     "ev": {
-      "A_hold": 0.959,
-      "B_half2x": 0.92,
-      "C_bound": 0.999,
-      "half3x": 0.939,
-      "rungs248": 0.932,
-      "stop_half": 0.967
+      "A_hold": 0.956,
+      "B_half2x": 0.918,
+      "C_bound": 0.996,
+      "half3x": 0.937,
+      "rungs248": 0.929,
+      "stop_half": 0.964
     },
     "ev_event_weighted": {
-      "A_hold": 0.903,
-      "B_half2x": 0.868,
-      "C_bound": 0.947,
-      "half3x": 0.89,
-      "rungs248": 0.879,
-      "stop_half": 0.928
+      "A_hold": 0.9,
+      "B_half2x": 0.866,
+      "C_bound": 0.944,
+      "half3x": 0.887,
+      "rungs248": 0.877,
+      "stop_half": 0.926
     },
     "best": "C_bound"
   },
@@ -50,24 +50,24 @@
     "best": "C_bound"
   },
   "oos_all": {
-    "n": 388,
-    "events": 225,
-    "hit": 0.08,
+    "n": 398,
+    "events": 231,
+    "hit": 0.078,
     "ev": {
-      "A_hold": 0.72,
-      "B_half2x": 0.713,
-      "C_bound": 0.767,
-      "half3x": 0.729,
-      "rungs248": 0.717,
-      "stop_half": 0.797
+      "A_hold": 0.719,
+      "B_half2x": 0.711,
+      "C_bound": 0.763,
+      "half3x": 0.728,
+      "rungs248": 0.716,
+      "stop_half": 0.793
     },
     "ev_event_weighted": {
-      "A_hold": 0.705,
-      "B_half2x": 0.688,
-      "C_bound": 0.759,
-      "half3x": 0.704,
-      "rungs248": 0.696,
-      "stop_half": 0.782
+      "A_hold": 0.703,
+      "B_half2x": 0.687,
+      "C_bound": 0.755,
+      "half3x": 0.703,
+      "rungs248": 0.695,
+      "stop_half": 0.778
     },
     "best": "stop_half"
   },
@@ -119,10 +119,10 @@
       "n": 352
     },
     "2026-10": {
-      "A_hold": 0.695,
-      "B_half2x": 0.688,
-      "C_bound": 0.747,
-      "n": 105
+      "A_hold": 0.69,
+      "B_half2x": 0.684,
+      "C_bound": 0.735,
+      "n": 115
     }
   },
   "cells": [
@@ -167,24 +167,24 @@
       "tier": "lottery",
       "tier_label": "樂透<1.5",
       "dte": "46-120",
-      "n": 141,
-      "events": 111,
-      "hit": 0.163,
+      "n": 142,
+      "events": 112,
+      "hit": 0.162,
       "ev": {
-        "A_hold": 0.905,
-        "B_half2x": 0.899,
-        "C_bound": 0.905,
-        "half3x": 0.914,
-        "rungs248": 0.903,
+        "A_hold": 0.906,
+        "B_half2x": 0.9,
+        "C_bound": 0.906,
+        "half3x": 0.915,
+        "rungs248": 0.904,
         "stop_half": 0.951
       },
       "ev_event_weighted": {
-        "A_hold": 0.879,
-        "B_half2x": 0.872,
-        "C_bound": 0.879,
-        "half3x": 0.886,
-        "rungs248": 0.878,
-        "stop_half": 0.927
+        "A_hold": 0.88,
+        "B_half2x": 0.873,
+        "C_bound": 0.88,
+        "half3x": 0.887,
+        "rungs248": 0.879,
+        "stop_half": 0.928
       },
       "best": "stop_half",
       "status": "可用"
@@ -410,24 +410,24 @@
       "tier": "lottery",
       "tier_label": "樂透<1.5",
       "dte": "21-45",
-      "n": 43,
-      "events": 31,
-      "hit": 0.093,
+      "n": 45,
+      "events": 33,
+      "hit": 0.089,
       "ev": {
-        "A_hold": 0.221,
-        "B_half2x": 0.257,
-        "C_bound": 0.609,
-        "half3x": 0.284,
-        "rungs248": 0.282,
-        "stop_half": 0.609
+        "A_hold": 0.222,
+        "B_half2x": 0.256,
+        "C_bound": 0.604,
+        "half3x": 0.281,
+        "rungs248": 0.28,
+        "stop_half": 0.604
       },
       "ev_event_weighted": {
-        "A_hold": 0.282,
-        "B_half2x": 0.333,
-        "C_bound": 0.651,
-        "half3x": 0.369,
-        "rungs248": 0.367,
-        "stop_half": 0.651
+        "A_hold": 0.279,
+        "B_half2x": 0.326,
+        "C_bound": 0.642,
+        "half3x": 0.361,
+        "rungs248": 0.359,
+        "stop_half": 0.642
       },
       "best": "C_bound",
       "status": "可用"
@@ -437,24 +437,24 @@
       "tier": "lottery",
       "tier_label": "樂透<1.5",
       "dte": "46-120",
-      "n": 211,
-      "events": 161,
-      "hit": 0.062,
+      "n": 217,
+      "events": 164,
+      "hit": 0.06,
       "ev": {
-        "A_hold": 0.648,
-        "B_half2x": 0.653,
-        "C_bound": 0.737,
-        "half3x": 0.646,
-        "rungs248": 0.651,
-        "stop_half": 0.737
+        "A_hold": 0.652,
+        "B_half2x": 0.658,
+        "C_bound": 0.734,
+        "half3x": 0.65,
+        "rungs248": 0.655,
+        "stop_half": 0.734
       },
       "ev_event_weighted": {
-        "A_hold": 0.604,
-        "B_half2x": 0.608,
-        "C_bound": 0.705,
-        "half3x": 0.603,
-        "rungs248": 0.606,
-        "stop_half": 0.705
+        "A_hold": 0.607,
+        "B_half2x": 0.611,
+        "C_bound": 0.703,
+        "half3x": 0.606,
+        "rungs248": 0.609,
+        "stop_half": 0.703
       },
       "best": "C_bound",
       "status": "可用"
@@ -464,24 +464,24 @@
       "tier": "lottery",
       "tier_label": "樂透<1.5",
       "dte": ">120",
-      "n": 236,
-      "events": 182,
+      "n": 237,
+      "events": 183,
       "hit": 0.089,
       "ev": {
-        "A_hold": 0.889,
-        "B_half2x": 0.867,
-        "C_bound": 0.882,
-        "half3x": 0.885,
-        "rungs248": 0.879,
-        "stop_half": 0.882
+        "A_hold": 0.887,
+        "B_half2x": 0.865,
+        "C_bound": 0.88,
+        "half3x": 0.883,
+        "rungs248": 0.877,
+        "stop_half": 0.88
       },
       "ev_event_weighted": {
-        "A_hold": 0.878,
-        "B_half2x": 0.857,
-        "C_bound": 0.876,
-        "half3x": 0.875,
-        "rungs248": 0.869,
-        "stop_half": 0.876
+        "A_hold": 0.875,
+        "B_half2x": 0.855,
+        "C_bound": 0.874,
+        "half3x": 0.872,
+        "rungs248": 0.866,
+        "stop_half": 0.874
       },
       "best": "A_hold",
       "status": "可用"
@@ -682,7 +682,7 @@
     "threshold_pct": 10.0,
     "listed_n": 488,
     "listed_rate": 0.137,
-    "universe_rate": 0.189,
+    "universe_rate": 0.19,
     "edge_pp": -5.2,
     "verdict_rule": "上榜組 − universe < 5 個百分點（≥100 個上榜標的-日後判）→ 選標的無 edge"
   }
