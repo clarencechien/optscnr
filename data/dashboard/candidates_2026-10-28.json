@@ -1,9 +1,9 @@
 {
   "market_date": "2026-10-28",
-  "generated_at": "2026-10-28T23:05:28Z",
+  "generated_at": "2026-10-29T01:51:23Z",
   "prereg_date": "2026-09-08",
   "n_candidates": 1,
-  "n_report_rows": 3249,
+  "n_report_rows": 3130,
   "candidates": [
     {
       "signal_id": "2026-10-28_IBIT_2026-11-20_50.0",
@@ -16,7 +16,7 @@
       "last": 0.5,
       "bid": 0.48,
       "ask": 0.5,
-      "iv": 36.9,
+      "iv": 37.7,
       "oi": 38987,
       "oi_d7": 5059,
       "oi_delta_status": "confirmed",

@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-28T23:16:48Z",
- "n_days": 37,
+ "generated_at": "2026-10-29T01:58:24Z",
+ "n_days": 38,
  "t8_by_event_answer": {
   "有": {
    "n": 11,
@@ -19,6 +19,58 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-10-28",
+   "decided_at": "2026-10-29T00:35:09.272Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-10-28_IBIT_2026-11-20_50.0",
+     "ticker": "IBIT",
+     "expiry": "2026-11-20",
+     "strike": 50,
+     "entry_price": 0.5,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-10-30",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "無",
+      "date": null,
+      "what": "IBIT 是現貨比特幣 ETF，沒有財報；查不到 2026-11-20 前有基金本身的排定事件。",
+      "source": null
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": -3.7,
+       "date": "2026-10-22"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "總經事件（非本檔）：11-03 期中選舉、11-10 CPI；10-28 FOMC 與市場日同一天",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-10-27",
    "decided_at": "2026-10-28T00:35:08.786Z",
