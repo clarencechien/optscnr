@@ -287,3 +287,6 @@
 - SOFI ｜ S&P 500 下一次季度調整在 2026-12-21 生效（SOFI 是否納入未定） ｜ 2026-12-21 ｜ https://tickericons.com/changes ｜ 2026-10-27 LLM 提案
 - IBIT ｜ 比特幣 ETF 類別 10/22 淨流出 $635.5M；10 月 1–26 日累計淨流出約 $202M；10/26 淨流入 $110.3M 全部進了 IBIT ｜ 2026-10-26 ｜ https://cryptobriefing.com/blackrock-ibit-110m-bitcoin-etf-inflows ｜ 2026-10-27 LLM 提案
 - IBIT ｜ 宏觀：FOMC 12 月會議在 12/8–12/9 召開，2026-12-09 14:00 ET 公布利率決議，附經濟預測摘要（SEP）與點陣圖 ｜ 2026-12-09 ｜ https://fedratecalc.com/fomc-meeting-schedule/december-2026/ ｜ 2026-10-27 LLM 提案
+- IBIT ｜ 2026-10-19 IBIT 單日淨流入 $665.16M，是 2025-10-07 以來最大，AUM 約 $66.37B；同日 BTC 在 $82K–83K 區間，沒有跟漲。 ｜ 2026-10-19 ｜ https://alpha-maven.com/story/crypto/bitcoin-etf-ibit-665-million-inflow-in-one-day-cryptoticker ｜ 2026-10-28 LLM 提案
+- IBIT ｜ 2026-10-22 美國現貨 BTC ETF 合計淨流出 $635.6M，是 6 月以來最大單日流出；其中 IBIT −$254.1M。 ｜ 2026-10-22 ｜ https://techyorker.com/bitcoin-etfs-swing-back-to-net-outflows-as-636-million-in-withdrawals-erase-previous-days-inflows/ ｜ 2026-10-28 LLM 提案
+- IBIT ｜ 截至 2026-10-26，BTC ETF 10 月累計淨流出約 $202M；10-26 當天類別淨流入 $110.3M 全部進 IBIT，IBIT 資產約 $64.8B。 ｜ 2026-10-26 ｜ https://cryptobriefing.com/blackrock-ibit-110m-bitcoin-etf-inflows/ ｜ 2026-10-28 LLM 提案
