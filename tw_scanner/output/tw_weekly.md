@@ -6,7 +6,7 @@
 
 - 週檢查（2026-10-30）：本月預算已於 2026-10-27 動用（月末例行），本月不再行動。
 - 鋒面 🌧️ DE_RISK（本週未變）。
-- 2308 前提 🔴 RED；無背離（前提 RED、價格 20 日 -20.5%）；PER 49.6，3 年分位 83 → 66
+- 2308 前提 🔴 RED；無背離（前提 RED、價格 20 日 -22.5%）；PER 44.4，3 年分位 84 → 63
 - 2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 -2.4%）；PER 27.6，3 年分位 78 → 66
 - 投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.67%。
 
@@ -39,17 +39,17 @@
 ## 3. 論點監控（2308 delta_radar／2330 tsmc_radar）
 
 ### 2308
-- 前提（最近全模組 2026-10-26）：🔴 RED
-- 無背離（前提 RED、價格 20 日 -20.5%）；PER 49.6，3 年分位 83 → 66
+- 前提（最近全模組 2026-10-29）：🔴 RED
+- 無背離（前提 RED、價格 20 日 -22.5%）；PER 44.4，3 年分位 84 → 63
   - 🔴 M1 revenue_acceleration：2026-09 YoY +14.6%, slope -13.60pp/月, 連續減速 3 個月
-  - 🟢 M2 bullwhip_health：合約負債 QoQ +17.3% / 存貨 QoQ +17.0% / FCF/淨利 1.32
-  - 🟡 M3 thai_shadow：DELTA.BK 2026-06-30 營收 YoY +52.5%, GM 26.8%
+  - 🟢 M2 bullwhip_health：合約負債 QoQ +35.3% / 存貨 QoQ +20.7% / FCF/淨利 1.74
+  - 🟢 M3 thai_shadow：DELTA.BK 2026-09-30 營收 YoY +42.4%, GM 27.3%
   - 🟢 M4 customs_flow：US 進口 HS850440 (TH+TW) 近3月 $1366.7M, YoY +22.4%
-  - 🟢 M5 narrative_triggers：capex_cut:8e(9m) / vr300_delay:14e(20m) / debt_financed_capex:14e / lc_psu_competition:0e
+  - 🟢 M5 narrative_triggers：capex_cut:3e / vr300_delay:13e(18m) / debt_financed_capex:13e(15m) / lc_psu_competition:0e
   - 🔴 M6 peer_divergence：cooling:3324領先+37pp
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
-  - 🟢 M9 valuation：PER 49.6（3 年第 66 百分位；20 日前第 83）；觀察
-- 回填樣本 116 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
+  - 🟢 M9 valuation：PER 44.4（3 年第 63 百分位；20 日前第 84）；觀察
+- 回填樣本 119 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
 
 ### 2330
 - 前提（最近全模組 2026-10-26）：🟢 GREEN
@@ -98,9 +98,9 @@
 
 - ✅ 天氣台：最新 2026-10-28
 - ✅ DCA 帳本：最新 2026-10-28
-- ✅ delta_radar：最新 2026-10-27
+- ✅ delta_radar：最新 2026-10-29
 - ✅ tsmc_radar：最新 2026-10-29
 - ✅ 賭場 sector：最新 2026-10-28
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-29T09:52:06+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-29T10:25:06+00:00*
