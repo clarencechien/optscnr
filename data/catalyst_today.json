@@ -1,46 +1,183 @@
 {
-  "updated_at": "2026-10-29T00:15:11.339050",
+  "updated_at": "2026-10-30T00:09:35.527546",
   "stats": {
     "total_items": 57,
-    "items_with_company": 17,
-    "items_with_catalyst": 15,
-    "items_both": 8
+    "items_with_company": 23,
+    "items_with_catalyst": 10,
+    "items_both": 6
   },
-  "count": 11,
+  "count": 15,
   "tickers": [
+    "INTC",
+    "SBUX",
     "GOOGL",
-    "MSFT",
-    "F",
+    "RIVN",
     "NOW",
-    "ORCL",
-    "MU",
-    "MRVL",
-    "AAPL",
+    "WDC",
+    "SNDK",
+    "COIN",
+    "AMZN",
+    "MSFT",
     "NVDA",
-    "XYZ",
-    "WMT"
+    "TGT",
+    "META",
+    "MRK",
+    "GILD"
   ],
   "details": [
     {
-      "symbol": "GOOGL",
-      "score": 4.5,
+      "symbol": "INTC",
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Alphabet sinks 10% as it holds 2026 capex unchanged, expects significant increase in 2027",
+          "title": "Intel stock plunges 21% as chipmaker blames PC slowdown for weak guidance",
           "catalysts": [
-            "sinks"
+            "plunges"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Options traders break down a massive Alphabet trade into earnings",
+          "title": "Why Intel’s stock is sinking toward its worst drop in two years",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Intel shares drop 21% on Israel factory blast, PC weakness",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SBUX",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Starbucks sales miss expectations, but its U.S. turnaround is gaining steam",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "A Starbucks turnaround is brewing — but perhaps not quickly enough",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Starbucks sees annual profit above estimates as turnaround gains traction",
           "catalysts": [
-            "rally"
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Alphabet tanks nearly 13% for worst day ever, losing $500 billion in value",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Reddit shares sink on weak sales guidance and plans login requirement test as Google search traffic shrinks",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Jim Cramer: Why investors are punishing Alphabet and giving Microsoft a pass",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RIVN",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Rivian third-quarter earnings beat estimates as software revenue, R2 deliveries rise",
+          "catalysts": [
+            "earnings beat"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Why Alphabet’s stock could see its worst drop in years after the latest results",
+          "title": "Rivian says it’s on track for $250 million Uber funding by year-end, R2 demand strong",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NOW",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "ServiceNow shares plunge 27% to worst day ever after earnings revive AI disruption fears",
+          "catalysts": [
+            "plunge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "WDC",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Sandisk sees revenue nearly quintuple — and a stock split is on the way",
+          "catalysts": [
+            "climbed"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Sandisk sees revenue nearly quintuple — and a stock split is on the way",
+          "catalysts": [
+            "climbed"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "COIN",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Coinbase returns to profit as crypto investment gains offset trading weakness",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.5,
+      "evidence": [
+        {
+          "title": "Amazon posts negative free cash flow of $42.4 billion, holds 2026 capex unchanged",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Amazon’s bold cloud forecast isn’t enough to stave off a stock drop",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Amazon outlines AWS growing north of 40% in 2027 and 2028, as it targets $1T revenue in 5 to 10 years",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -48,115 +185,15 @@
     },
     {
       "symbol": "MSFT",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "Microsoft stock jumps 4% as cloud growth drives earnings and revenue beat",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Options traders break down a massive Alphabet trade into earnings",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "The major reason Microsoft’s stock is heading higher after earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Ford reports mixed third-quarter results, says 2027 earnings will be in line with this year",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Ford’s third-quarter core profit ticks higher despite rising commodity costs",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NOW",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "ServiceNow’s stock slides as earnings miss overshadows a raised AI outlook",
-          "catalysts": [
-            "earnings miss"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Servicenow targets $1.7B+ AI ACV by year-end while raising 2026 free cash flow margin goal to 36%",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Oracle stock pops 11% as long-term revenue forecast and clarity on financing ease debt concerns ",
-          "catalysts": [
-            "pops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Fed chairman talks tough on inflation — plus, what's behind Micron's big rally",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MRVL",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Lumentum’s stock pops as investors cheer a possible sale to Marvell",
-          "catalysts": [
-            "pops"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Hands-on with Apple's first touchscreen laptop: Touch is totally optional",
+          "title": "Jim Cramer: Why investors are punishing Alphabet and giving Microsoft a pass",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Apple brings touch to the Mac, reversing years-old stance on touchscreen laptop",
+          "title": "AI buildout hits snag as Google and Microsoft put off raising capex forecasts",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -167,29 +204,51 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia's $12.9 billion Hugging Face deal draws DOJ scrutiny",
+          "title": "Nvidia responds to report Jensen Huang was target of Chinese asset, says diversion allegations were 'investigated and debunked'",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "XYZ",
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Peltola campaign aides, DSCC officials helped recruit second Dan Sullivan in Alaska race: NYT",
+          "title": "Nvidia responds to report Jensen Huang was target of Chinese asset, says diversion allegations were 'investigated and debunked'",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "WMT",
+      "symbol": "META",
       "score": 0.5,
       "evidence": [
         {
-          "title": "US FTC demands Walmart, Uber, Delta and others hand over data on personalized pricing",
+          "title": "Meta loses appeals against interim measures imposed by French regulators",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Merck to boost next decade revenue forecast on new drugs optimism",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GILD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Gilead hikes 2026 sales outlook, says Medicare cuts Biktarvy price by 38% starting in 2028",
           "catalysts": [],
           "has_catalyst": false
         }
