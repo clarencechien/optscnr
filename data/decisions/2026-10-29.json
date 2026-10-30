@@ -1,0 +1,210 @@
+{
+  "market_date": "2026-10-29",
+  "decided_at": "2026-10-30T00:35:07.760Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-29T23:05:34Z",
+  "n_candidates": 3,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 39,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-29_IBIT_2026-11-20_50.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 50,
+      "entry_price": 0.34,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -1.6,
+          "date": "2026-10-26"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "ETF沒有財報；到期前查不到發行方的排定事件，只有總經數據（11/10 CPI、11/18 FOMC會議紀要）",
+        "source": null
+      },
+      "note": "10/28 FOMC按兵不動，利率維持3.75–4%，兩票主張升息；BTC在8.2–8.3萬區間",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-10-29_IBIT_2026-11-20_53.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 53,
+      "entry_price": 0.11,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -1.6,
+          "date": "2026-10-26"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "ETF沒有財報；到期前查不到發行方的排定事件，只有總經數據（11/10 CPI、11/18 FOMC會議紀要）",
+        "source": null
+      },
+      "note": "10/28 FOMC按兵不動，利率維持3.75–4%，兩票主張升息；BTC在8.2–8.3萬區間",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-10-29_IBIT_2026-12-18_50.0",
+      "ticker": "IBIT",
+      "expiry": "2026-12-18",
+      "strike": 50,
+      "entry_price": 0.89,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-11-27",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -1.6,
+          "date": "2026-10-26"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-12-09",
+        "what": "聯準會的事件（不是IBIT本身）：FOMC 12/8–9開會，12/9公布利率決策和點陣圖，市場預期可能升息",
+        "source": "https://www.federalreserve.gov/newsevents/2026-december.htm"
+      },
+      "note": "報導指升息疑慮壓制BTC；ETF沒有財報，查不到發行方的排定事件",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "IBIT",
+      "fact": "FOMC在2026-10-27至28開會，以10比2決議維持利率3.75–4%（Cook和Hammack主張升25bp）；下次會議12/8–9，12/9 14:00 ET公布決策，附點陣圖",
+      "date": "2026-10-28",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "IBIT在2026-10-19單日淨流入6.6516億美元，是2025-10-07以來最大；同日BlackRock申請iShares Bitcoin Managed Protect ETF",
+      "date": "2026-10-19",
+      "source": "https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "截至2026-10-16那一週，IBIT淨流出約1.654億美元，占美國現貨BTC ETF該週淨流出2.284億美元的約72%",
+      "date": "2026-10-16",
+      "source": "https://247wallst.com/investing/cryptocurrency/2026/10/18/blackrocks-bitcoin-etf-lost-165-million-in-a-week-is-wall-street-pulling-back/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "IBIT在2026-10-28的淨值為45.9552美元，年初至今總報酬−7.22%，52週區間33.19–64.78美元",
+      "date": "2026-10-28",
+      "source": "https://www.blackrock.com/us/individual/products/333011/ishares-bitcoin-trust-etf"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "12月FOMC前的總經數據日程：10月就業11/6、10月CPI 11/10、FOMC會議紀要11/18、10月PCE 11/25、11月就業12/4",
+      "date": "2026-10-20",
+      "source": "https://fattail.ai/fomc-meeting-schedule-2026/"
+    }
+  ],
+  "facts_appended": 3,
+  "raw_answer": "{\"market_date\":\"2026-10-29\",\"candidates\":[{\"signal_id\":\"2026-10-29_IBIT_2026-11-20_50.0\",\"ticker\":\"IBIT\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"ETF沒有財報；到期前查不到發行方的排定事件，只有總經數據（11/10 CPI、11/18 FOMC會議紀要）\",\"source\":null},\"note\":\"10/28 FOMC按兵不動，利率維持3.75–4%，兩票主張升息；BTC在8.2–8.3萬區間\"},{\"signal_id\":\"2026-10-29_IBIT_2026-11-20_53.0\",\"ticker\":\"IBIT\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"ETF沒有財報；到期前查不到發行方的排定事件，只有總經數據（11/10 CPI、11/18 FOMC會議紀要）\",\"source\":null},\"note\":\"10/28 FOMC按兵不動，利率維持3.75–4%，兩票主張升息；BTC在8.2–8.3萬區間\"},{\"signal_id\":\"2026-10-29_IBIT_2026-12-18_50.0\",\"ticker\":\"IBIT\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-12-09\",\"what\":\"聯準會的事件（不是IBIT本身）：FOMC 12/8–9開會，12/9公布利率決策和點陣圖，市場預期可能升息\",\"source\":\"https://www.federalreserve.gov/newsevents/2026-december.htm\"},\"note\":\"報導指升息疑慮壓制BTC；ETF沒有財報，查不到發行方的排定事件\"}],\"facts_proposed\":[{\"ticker\":\"IBIT\",\"fact\":\"FOMC在2026-10-27至28開會，以10比2決議維持利率3.75–4%（Cook和Hammack主張升25bp）；下次會議12/8–9，12/9 14:00 ET公布決策，附點陣圖\",\"date\":\"2026-10-28\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},{\"ticker\":\"IBIT\",\"fact\":\"IBIT在2026-10-19單日淨流入6.6516億美元，是2025-10-07以來最大；同日BlackRock申請iShares Bitcoin Managed Protect ETF\",\"date\":\"2026-10-19\",\"source\":\"https://www.theblock.co/news/markets/2026-10-20-blackrock-ibit-bitcoin-etf-665-million-421102\"},{\"ticker\":\"IBIT\",\"fact\":\"截至2026-10-16那一週，IBIT淨流出約1.654億美元，占美國現貨BTC ETF該週淨流出2.284億美元的約72%\",\"date\":\"2026-10-16\",\"source\":\"https://247wallst.com/investing/cryptocurrency/2026/10/18/blackrocks-bitcoin-etf-lost-165-million-in-a-week-is-wall-street-pulling-back/\"},{\"ticker\":\"IBIT\",\"fact\":\"IBIT在2026-10-28的淨值為45.9552美元，年初至今總報酬−7.22%，52週區間33.19–64.78美元\",\"date\":\"2026-10-28\",\"source\":\"https://www.blackrock.com/us/individual/products/333011/ishares-bitcoin-trust-etf\"},{\"ticker\":\"IBIT\",\"fact\":\"12月FOMC前的總經數據日程：10月就業11/6、10月CPI 11/10、FOMC會議紀要11/18、10月PCE 11/25、11月就業12/4\",\"date\":\"2026-10-20\",\"source\":\"https://fattail.ai/fomc-meeting-schedule-2026/\"}]}",
+  "usage": {
+    "prompt_tokens": 36993,
+    "completion_tokens": 2599,
+    "total_tokens": 39592,
+    "cost": 0.219952,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.219952,
+      "upstream_inference_prompt_cost": 0.147972,
+      "upstream_inference_completions_cost": 0.05198
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1227,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
