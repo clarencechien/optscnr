@@ -1,221 +1,39 @@
 {
-  "updated_at": "2026-10-30T00:09:35.527546",
+  "updated_at": "2026-10-30T23:58:55.637550",
   "stats": {
     "total_items": 57,
-    "items_with_company": 23,
-    "items_with_catalyst": 10,
-    "items_both": 6
+    "items_with_company": 10,
+    "items_with_catalyst": 9,
+    "items_both": 0
   },
-  "count": 15,
+  "count": 8,
   "tickers": [
     "INTC",
-    "SBUX",
-    "GOOGL",
-    "RIVN",
-    "NOW",
-    "WDC",
-    "SNDK",
-    "COIN",
-    "AMZN",
-    "MSFT",
-    "NVDA",
-    "TGT",
     "META",
-    "MRK",
-    "GILD"
+    "AMD",
+    "AAPL",
+    "TSLA",
+    "OKTA",
+    "MSFT",
+    "GOOGL"
   ],
   "details": [
     {
       "symbol": "INTC",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Intel stock plunges 21% as chipmaker blames PC slowdown for weak guidance",
-          "catalysts": [
-            "plunges"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Why Intel’s stock is sinking toward its worst drop in two years",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Intel shares drop 21% on Israel factory blast, PC weakness",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SBUX",
-      "score": 3.0,
-      "evidence": [
-        {
-          "title": "Starbucks sales miss expectations, but its U.S. turnaround is gaining steam",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "A Starbucks turnaround is brewing — but perhaps not quickly enough",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Starbucks sees annual profit above estimates as turnaround gains traction",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Alphabet tanks nearly 13% for worst day ever, losing $500 billion in value",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Reddit shares sink on weak sales guidance and plans login requirement test as Google search traffic shrinks",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Jim Cramer: Why investors are punishing Alphabet and giving Microsoft a pass",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RIVN",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Rivian third-quarter earnings beat estimates as software revenue, R2 deliveries rise",
-          "catalysts": [
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Rivian says it’s on track for $250 million Uber funding by year-end, R2 demand strong",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NOW",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "ServiceNow shares plunge 27% to worst day ever after earnings revive AI disruption fears",
-          "catalysts": [
-            "plunge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "WDC",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Sandisk sees revenue nearly quintuple — and a stock split is on the way",
-          "catalysts": [
-            "climbed"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Sandisk sees revenue nearly quintuple — and a stock split is on the way",
-          "catalysts": [
-            "climbed"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "COIN",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Coinbase returns to profit as crypto investment gains offset trading weakness",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
       "score": 1.5,
       "evidence": [
         {
-          "title": "Amazon posts negative free cash flow of $42.4 billion, holds 2026 capex unchanged",
+          "title": "Intel stock has worst day since 1970s, wiping about $12 billion off government's stake",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Amazon’s bold cloud forecast isn’t enough to stave off a stock drop",
+          "title": "Why Intel’s stock saw its worst day in decades — and a $140 billion wipeout",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Amazon outlines AWS growing north of 40% in 2027 and 2028, as it targets $1T revenue in 5 to 10 years",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Jim Cramer: Why investors are punishing Alphabet and giving Microsoft a pass",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "AI buildout hits snag as Google and Microsoft put off raising capex forecasts",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nvidia responds to report Jensen Huang was target of Chinese asset, says diversion allegations were 'investigated and debunked'",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nvidia responds to report Jensen Huang was target of Chinese asset, says diversion allegations were 'investigated and debunked'",
+          "title": "AMD’s stock slides after Intel earnings reveal two big issues",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -223,32 +41,91 @@
     },
     {
       "symbol": "META",
-      "score": 0.5,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Meta loses appeals against interim measures imposed by French regulators",
+          "title": "Meta outlook revised downward by S&P on cash flow and capex concerns",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Musk and Zuckerberg echo Trump's push to rebrand AI as 'super intelligence' on earnings calls. Others do not",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "S&P Global revises Meta’s outlook to ’negative’ on AI spending, cash flow worries",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MRK",
-      "score": 0.5,
+      "symbol": "AMD",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Merck to boost next decade revenue forecast on new drugs optimism",
+          "title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "AMD’s stock slides after Intel earnings reveal two big issues",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GILD",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Gilead hikes 2026 sales outlook, says Medicare cuts Biktarvy price by 38% starting in 2028",
+          "title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Musk and Zuckerberg echo Trump's push to rebrand AI as 'super intelligence' on earnings calls. Others do not",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "OKTA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "This cybersecurity stock will be the next to join the S&P 500",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft is winning the cloud wars and becoming Wall Street’s new golden child",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Google weighs cybersecurity role in Pentagon’s Golden Dome project - Bloomberg",
           "catalysts": [],
           "has_catalyst": false
         }
