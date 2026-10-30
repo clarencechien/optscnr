@@ -74,3 +74,4 @@ date,price,atm_iv,iv_pctile,total_int,total_vol,usable_strikes,best_spread_pct,s
 2026-10-26,147.49,0.5476933251953126,38.0,1299780,80916,150,0.018,neutral,P1,0.6097,2029-01-19,L1,,25.0,True,False,True,0.11,True,True,near,L1,L1,L2,
 2026-10-27,146.9,0.5418340087890626,37.6,1323867,69994,112,0.014,neutral,P1,0.6018,2029-01-19,L2,L1->L2,9.4,True,False,True,0.7,True,True,near,L2,L1,L2,
 2026-10-28,145.23,0.5159146716308594,29.8,1346582,67262,139,0.016,neutral,P1,0.5977,2029-01-19,L2,,3.7,True,False,True,0.39,True,True,near,L2,L1,L2,
+2026-10-29,143.89,0.5203091589355469,31.6,1363588,59922,129,0.02,neutral,P1,0.5868,2029-01-19,L2,,1.8,True,False,True,0.12,True,True,near,L2,L1,L2,
