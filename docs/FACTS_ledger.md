@@ -290,3 +290,6 @@
 - IBIT ｜ 2026-10-19 IBIT 單日淨流入 $665.16M，是 2025-10-07 以來最大，AUM 約 $66.37B；同日 BTC 在 $82K–83K 區間，沒有跟漲。 ｜ 2026-10-19 ｜ https://alpha-maven.com/story/crypto/bitcoin-etf-ibit-665-million-inflow-in-one-day-cryptoticker ｜ 2026-10-28 LLM 提案
 - IBIT ｜ 2026-10-22 美國現貨 BTC ETF 合計淨流出 $635.6M，是 6 月以來最大單日流出；其中 IBIT −$254.1M。 ｜ 2026-10-22 ｜ https://techyorker.com/bitcoin-etfs-swing-back-to-net-outflows-as-636-million-in-withdrawals-erase-previous-days-inflows/ ｜ 2026-10-28 LLM 提案
 - IBIT ｜ 截至 2026-10-26，BTC ETF 10 月累計淨流出約 $202M；10-26 當天類別淨流入 $110.3M 全部進 IBIT，IBIT 資產約 $64.8B。 ｜ 2026-10-26 ｜ https://cryptobriefing.com/blackrock-ibit-110m-bitcoin-etf-inflows/ ｜ 2026-10-28 LLM 提案
+- IBIT ｜ 截至2026-10-16那一週，IBIT淨流出約1.654億美元，占美國現貨BTC ETF該週淨流出2.284億美元的約72% ｜ 2026-10-16 ｜ https://247wallst.com/investing/cryptocurrency/2026/10/18/blackrocks-bitcoin-etf-lost-165-million-in-a-week-is-wall-street-pulling-back/ ｜ 2026-10-29 LLM 提案
+- IBIT ｜ IBIT在2026-10-28的淨值為45.9552美元，年初至今總報酬−7.22%，52週區間33.19–64.78美元 ｜ 2026-10-28 ｜ https://www.blackrock.com/us/individual/products/333011/ishares-bitcoin-trust-etf ｜ 2026-10-29 LLM 提案
+- IBIT ｜ 12月FOMC前的總經數據日程：10月就業11/6、10月CPI 11/10、FOMC會議紀要11/18、10月PCE 11/25、11月就業12/4 ｜ 2026-10-20 ｜ https://fattail.ai/fomc-meeting-schedule-2026/ ｜ 2026-10-29 LLM 提案
