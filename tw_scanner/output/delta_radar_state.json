@@ -12977,8 +12977,8 @@
       "t5_excess_pct": 7.05,
       "t10_ret_pct": -2.72,
       "t10_excess_pct": -4.25,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -27.25,
+      "t20_excess_pct": -21.54
     }
   },
   {
@@ -13027,8 +13027,8 @@
       "t5_excess_pct": 7.05,
       "t10_ret_pct": -2.72,
       "t10_excess_pct": -4.25,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -27.25,
+      "t20_excess_pct": -21.54
     }
   },
   {
@@ -13125,8 +13125,8 @@
       "t5_excess_pct": 7.05,
       "t10_ret_pct": -2.72,
       "t10_excess_pct": -4.25,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -27.25,
+      "t20_excess_pct": -21.54
     }
   },
   {
@@ -13387,8 +13387,8 @@
       "t5_excess_pct": 7.05,
       "t10_ret_pct": -2.72,
       "t10_excess_pct": -4.25,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -27.25,
+      "t20_excess_pct": -21.54
     }
   },
   {
@@ -13485,8 +13485,8 @@
       "t5_excess_pct": 7.05,
       "t10_ret_pct": -2.72,
       "t10_excess_pct": -4.25,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -27.25,
+      "t20_excess_pct": -21.54
     }
   },
   {
@@ -17354,6 +17354,104 @@
       "entry_date": "2026-10-29",
       "benchmark": "0050",
       "entry_close": 1480.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-10-30T08:58:55.412913+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:7e(8m) / vr300_delay:13e(18m) / debt_financed_capex:12e(14m) / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 7,
+            "vr300_delay": 13,
+            "debt_financed_capex": 12,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 8,
+            "vr300_delay": 18,
+            "debt_financed_capex": 14,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 7,
+              "mentions": 8,
+              "gate": "zscore",
+              "z": 0.54,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 13,
+              "mentions": 18,
+              "gate": "zscore",
+              "z": -1.83,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 12,
+              "mentions": 14,
+              "gate": "zscore",
+              "z": -1.07,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - Yahoo Finance",
+          "[capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[debt_financed_capex] AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. - CNBC",
+          "[debt_financed_capex] Microsoft Returns to Bond Market to Raise at Least $25 Billion in First Major Debt Sale in Nine Years to Fund AI Infrast",
+          "[debt_financed_capex] Top hyperscalers likely to have more AI-linked debt than now known, S&P Global warns - Reuters"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 RED、價格 20 日 -27.2%）；PER 44.4，3 年分位 84 → 63",
+      "premise": "RED",
+      "premise_ts": "2026-10-29T10:25:04.728478+00:00",
+      "ret_pct": -27.25,
+      "lookback_sessions": 20,
+      "as_of": "2026-10-30",
+      "valuation": {
+        "per": 44.44,
+        "per_pct": 62.7,
+        "per_then": 60.79,
+        "per_pct_then": 84.3,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-10-30",
+      "benchmark": "0050",
+      "entry_close": 1335.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,

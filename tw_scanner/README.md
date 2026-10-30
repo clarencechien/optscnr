@@ -1,12 +1,12 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-10-29 19:17 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-10-30 08:58 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
 ---
 
-# 📬 台股週報 — 2026-10-29
+# 📬 台股週報 — 2026-10-30
 
 > 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。**沒有任何一行是買賣建議；曝險與部位由人管。**
 
@@ -14,7 +14,7 @@ _README 由 build_readme.py 於 2026-10-29 19:17 UTC 重組；兩區塊各為該
 
 - 週檢查（2026-10-30）：本月預算已於 2026-10-27 動用（月末例行），本月不再行動。
 - 鋒面 🌧️ DE_RISK（本週未變）。
-- 2308 前提 🔴 RED；無背離（前提 RED、價格 20 日 -22.5%）；PER 44.4，3 年分位 84 → 63
+- 2308 前提 🔴 RED；無背離（前提 RED、價格 20 日 -27.2%）；PER 44.4，3 年分位 84 → 63
 - 2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 -2.4%）；PER 28.0，3 年分位 77 → 70
 - 投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.67%。
 
@@ -48,16 +48,16 @@ _README 由 build_readme.py 於 2026-10-29 19:17 UTC 重組；兩區塊各為該
 
 ### 2308
 - 前提（最近全模組 2026-10-29）：🔴 RED
-- 無背離（前提 RED、價格 20 日 -22.5%）；PER 44.4，3 年分位 84 → 63
+- 無背離（前提 RED、價格 20 日 -27.2%）；PER 44.4，3 年分位 84 → 63
   - 🔴 M1 revenue_acceleration：2026-09 YoY +14.6%, slope -13.60pp/月, 連續減速 3 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ +35.3% / 存貨 QoQ +20.7% / FCF/淨利 1.74
   - 🟢 M3 thai_shadow：DELTA.BK 2026-09-30 營收 YoY +42.4%, GM 27.3%
   - 🟢 M4 customs_flow：US 進口 HS850440 (TH+TW) 近3月 $1366.7M, YoY +22.4%
-  - 🟢 M5 narrative_triggers：capex_cut:3e / vr300_delay:13e(18m) / debt_financed_capex:13e(15m) / lc_psu_competition:0e
+  - 🟢 M5 narrative_triggers：capex_cut:7e(8m) / vr300_delay:13e(18m) / debt_financed_capex:12e(14m) / lc_psu_competition:0e
   - 🔴 M6 peer_divergence：cooling:3324領先+37pp
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 44.4（3 年第 63 百分位；20 日前第 84）；觀察
-- 回填樣本 119 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
+- 回填樣本 124 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
 
 ### 2330
 - 前提（最近全模組 2026-10-29）：🟢 GREEN
@@ -100,18 +100,18 @@ _README 由 build_readme.py 於 2026-10-29 19:17 UTC 重組；兩區塊各為該
 
 ## 5. 下週日曆
 
-- 2026-11-10（12 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
+- 2026-11-10（11 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
 
 ## 6. 資料健康
 
 - ✅ 天氣台：最新 2026-10-29
 - ✅ DCA 帳本：最新 2026-10-29
-- ✅ delta_radar：最新 2026-10-29
+- ✅ delta_radar：最新 2026-10-30
 - ✅ tsmc_radar：最新 2026-10-29
 - ✅ 賭場 sector：最新 2026-10-29
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-29T19:17:50+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-10-30T08:58:57+00:00*
 
 ---
 
@@ -132,11 +132,11 @@ _README 由 build_readme.py 於 2026-10-29 19:17 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-10-29 10:25 UTC
+# Delta Radar (2308.TW) — 2026-10-30 08:58 UTC
 
-## 總判定：🔴 RED
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
-## 前提 vs 價格：無背離（前提 RED、價格 20 日 -22.5%）；PER 44.4，3 年分位 84 → 63
+## 前提 vs 價格：無背離（前提 RED、價格 20 日 -27.2%）；PER 44.4，3 年分位 84 → 63
 
 GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、
 敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。
@@ -144,105 +144,43 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M1 revenue_acceleration | 🔴 RED | 2026-09 YoY +14.6%, slope -13.60pp/月, 連續減速 3 個月 |
-| M2 bullwhip_health | 🟢 GREEN | 合約負債 QoQ +35.3% / 存貨 QoQ +20.7% / FCF/淨利 1.74 |
-| M3 thai_shadow | 🟢 GREEN | DELTA.BK 2026-09-30 營收 YoY +42.4%, GM 27.3% |
-| M4 customs_flow | 🟢 GREEN | US 進口 HS850440 (TH+TW) 近3月 $1366.7M, YoY +22.4% |
-| M5 narrative_triggers | 🟢 GREEN | capex_cut:3e / vr300_delay:13e(18m) / debt_financed_capex:13e(15m) / lc_psu_competition:0e |
-| M6 peer_divergence | 🔴 RED | cooling:3324領先+37pp |
-| M8 revision_velocity | ⚪ NO_DATA | 下修 0/上修 0（樣本不足 <3，NO_DATA） |
-| M9 valuation（觀察） | 🟢 GREEN | PER 44.4（3 年第 63 百分位；20 日前第 84）；觀察 |
-
-### M1 revenue_acceleration — 🔴 RED
-```json
-{
-  "latest_month": "2026-09",
-  "latest_yoy_pct": 14.6,
-  "yoy_slope_pp_per_month": -13.6,
-  "consecutive_decel_months": 3
-}
-```
-
-### M2 bullwhip_health — 🟢 GREEN
-```json
-{
-  "as_of": "2026-09-30",
-  "contract_liab_qoq_pct": 35.3,
-  "inventory_qoq_pct": 20.7,
-  "fcf_to_net_income": 1.74,
-  "accounts_used": {
-    "contract": "CurrentContractLiabilities",
-    "inventory": "Inventories",
-    "ocf": "CashFlowsFromOperatingActivities",
-    "capex": "PropertyAndPlantAndEquipment",
-    "net_income": "IncomeAfterTaxes"
-  }
-}
-```
-
-### M3 thai_shadow — 🟢 GREEN
-```json
-{
-  "latest_q": "2026-09-30",
-  "rev_yoy_pct": 42.4,
-  "gross_margin_pct": 27.3
-}
-```
-
-### M4 customs_flow — 🟢 GREEN
-```json
-{
-  "window": "2026-06..2026-08",
-  "rolling_value_usd_m": 1366.7,
-  "rolling_yoy_pct": 22.4,
-  "by_country": {
-    "THAILAND": {
-      "rolling_value_usd_m": 840.7,
-      "rolling_yoy_pct": 11.8
-    },
-    "TAIWAN": {
-      "rolling_value_usd_m": 526.0,
-      "rolling_yoy_pct": 44.1
-    }
-  }
-}
-```
+| M5 narrative_triggers | 🟢 GREEN | capex_cut:7e(8m) / vr300_delay:13e(18m) / debt_financed_capex:12e(14m) / lc_psu_competition:0e |
 
 ### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
   "events": {
-    "capex_cut": 3,
+    "capex_cut": 7,
     "vr300_delay": 13,
-    "debt_financed_capex": 13,
+    "debt_financed_capex": 12,
     "lc_psu_competition": 0
   },
   "mentions": {
-    "capex_cut": 3,
+    "capex_cut": 8,
     "vr300_delay": 18,
-    "debt_financed_capex": 15,
+    "debt_financed_capex": 14,
     "lc_psu_competition": 0
   },
   "scoring": {
     "capex_cut": {
-      "events": 3,
-      "mentions": 3,
+      "events": 7,
+      "mentions": 8,
       "gate": "zscore",
-      "z": -1.27,
+      "z": 0.54,
       "denial": false
     },
     "vr300_delay": {
       "events": 13,
       "mentions": 18,
       "gate": "zscore",
-      "z": -0.35,
+      "z": -1.83,
       "denial": true
     },
     "debt_financed_capex": {
-      "events": 13,
-      "mentions": 15,
+      "events": 12,
+      "mentions": 14,
       "gate": "zscore",
-      "z": 0.11,
+      "z": -1.07,
       "denial": false
     },
     "lc_psu_competition": {
@@ -257,98 +195,27 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 ```
 - [capex_cut] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - Yahoo Finance
 - [capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
-- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
+- [capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review
 - [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
 - [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
 - [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
 - [debt_financed_capex] AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. - CNBC
+- [debt_financed_capex] Microsoft Returns to Bond Market to Raise at Least $25 Billion in First Major Debt Sale in Nine Years to Fund AI Infrast
 - [debt_financed_capex] Top hyperscalers likely to have more AI-linked debt than now known, S&P Global warns - Reuters
-- [debt_financed_capex] The AI Buildout Needs a Lot of Money— Enter Debt (and Financial Engineering) - Carson Group
-
-### M6 peer_divergence — 🔴 RED
-```json
-{
-  "groups": {
-    "power": {
-      "direction": "peer_lead_risk",
-      "delta_3m_yoy": 32.4,
-      "best_peer": "6282",
-      "best_peer_3m_yoy": 34.8,
-      "peer_lead_pp": 2.4,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "2301": 28.3,
-        "6282": 34.8
-      }
-    },
-    "cooling": {
-      "direction": "peer_lead_risk",
-      "delta_3m_yoy": 32.4,
-      "best_peer": "3324",
-      "best_peer_3m_yoy": 69.0,
-      "peer_lead_pp": 36.6,
-      "status": "RED",
-      "peers_3m_yoy": {
-        "3324": 69.0,
-        "3017": 52.2
-      }
-    },
-    "rack": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 32.4,
-      "best_peer": "2382",
-      "best_peer_3m_yoy": 128.5,
-      "peer_lead_pp": 96.1,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "2317": 48.2,
-        "2382": 128.5,
-        "6669": 63.2
-      }
-    }
-  }
-}
-```
-- [cooling] 3324 3m YoY 69.0% vs 2308 32.4%（領先 +37pp）
-
-### M8 revision_velocity — ⚪ NO_DATA
-```json
-{
-  "up_hits": 0,
-  "down_hits": 0,
-  "total": 0,
-  "down_ratio": null
-}
-```
-
-### M9 valuation — 🟢 GREEN
-```json
-{
-  "as_of": "2026-10-29",
-  "per": 44.44,
-  "per_pct": 62.7,
-  "per_then": 60.79,
-  "per_pct_then": 84.3,
-  "pbr": 12.08,
-  "dividend_yield": 0.78,
-  "history_years": 3,
-  "n": 733
-}
-```
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **14** 筆；state 已有 outcomes 的 entry：**151/151**
+- 本次回填 **6** 筆；state 已有 outcomes 的 entry：**152/152**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）
 | 模組 | GREEN n / T+20 超額 | YELLOW+RED n / 超額 | 狀態翻轉 | 判準 |
 |---|---|---|---|---|
-| M1 | 47 / -7.38 | 8 / -3.25 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
-| M2 | 23 / -6.99 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向對 |
-| M3 | 27 / -10.89 | 18 / -2.67 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
-| M4 | 36 / -6.59 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M5 | 45 / -2.27 | 59 / -9.34 | 47 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
-| M6 | 0 / — | 28 / -3.43 | 3 | 樣本不足（缺一側 cohort） |
+| M1 | 47 / -7.38 | 9 / -5.28 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
+| M2 | 24 / -7.59 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向對 |
+| M3 | 27 / -10.89 | 19 / -3.66 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
+| M4 | 37 / -6.99 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
+| M5 | 49 / -3.85 | 59 / -9.34 | 47 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
+| M6 | 0 / — | 29 / -4.05 | 3 | 樣本不足（缺一側 cohort） |
 | M8 | 24 / -2.50 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 
 _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組，cohort 比較等於比兩段日曆時間。翻轉 < 3 次一律「無法判定」。_
