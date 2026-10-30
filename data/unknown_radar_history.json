@@ -1,32 +1,4 @@
 {
-  "Southwest Airlines": {
-    "first_seen": "2026-10-22",
-    "last_seen": "2026-10-22",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "LUV"
-  },
-  "EBay": {
-    "first_seen": "2026-10-22",
-    "last_seen": "2026-10-22",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "EBAY"
-  },
-  "Webull": {
-    "first_seen": "2026-10-22",
-    "last_seen": "2026-10-22",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BULLW"
-  },
-  "Arcus Biosciences": {
-    "first_seen": "2026-10-22",
-    "last_seen": "2026-10-22",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "RCUS"
-  },
   "Starlink": {
     "first_seen": "2026-10-23",
     "last_seen": "2026-10-25",
@@ -99,9 +71,9 @@
   },
   "DoorDash": {
     "first_seen": "2026-10-27",
-    "last_seen": "2026-10-27",
-    "consecutive_days": 1,
-    "total_mentions": 3,
+    "last_seen": "2026-10-30",
+    "consecutive_days": 2,
+    "total_mentions": 5,
     "ticker": "DASH"
   },
   "Royal Caribbean": {
@@ -117,5 +89,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "FTNT"
+  },
+  "Reddit": {
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "RDDT"
+  },
+  "Norwegian": {
+    "first_seen": "2026-10-30",
+    "last_seen": "2026-10-30",
+    "consecutive_days": 1,
+    "total_mentions": 3,
+    "ticker": "NCLH"
   }
 }
