@@ -1,12 +1,34 @@
 {
-  "updated_at": "2026-10-24T04:37:49.333577",
+  "updated_at": "2026-10-31T05:42:12.618105",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 0,
-  "tickers": [],
-  "details": []
+  "count": 2,
+  "tickers": [
+    "TDOC",
+    "SES"
+  ],
+  "details": [
+    {
+      "symbol": "TDOC",
+      "price": 8.51,
+      "gain_30d_pct": 35.7,
+      "market_cap_m": 1551.0,
+      "avg_volume_m": 4.86,
+      "short_pct_float": 17.7,
+      "score": 21.25
+    },
+    {
+      "symbol": "SES",
+      "price": 0.79,
+      "gain_30d_pct": 38.6,
+      "market_cap_m": 293.0,
+      "avg_volume_m": 26.64,
+      "short_pct_float": 13.3,
+      "score": 17.15
+    }
+  ]
 }
