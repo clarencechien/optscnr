@@ -6,20 +6,6 @@
     "total_mentions": 12,
     "ticker": "OTAI-UN"
   },
-  "Etsy": {
-    "first_seen": "2026-10-23",
-    "last_seen": "2026-10-23",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ETSY"
-  },
-  "Airbnb": {
-    "first_seen": "2026-10-23",
-    "last_seen": "2026-10-23",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "ABNB"
-  },
   "Canadian": {
     "first_seen": "2026-10-24",
     "last_seen": "2026-10-24",
@@ -92,9 +78,9 @@
   },
   "Reddit": {
     "first_seen": "2026-10-30",
-    "last_seen": "2026-10-30",
-    "consecutive_days": 1,
-    "total_mentions": 3,
+    "last_seen": "2026-10-31",
+    "consecutive_days": 2,
+    "total_mentions": 5,
     "ticker": "RDDT"
   },
   "Norwegian": {
