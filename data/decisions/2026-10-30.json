@@ -1,0 +1,156 @@
+{
+  "market_date": "2026-10-30",
+  "decided_at": "2026-11-01T23:05:02.009Z",
+  "source": "cron 5 23 * * 1-5",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-10-31T01:38:34Z",
+  "n_candidates": 2,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 40,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-10-30_NVDA_2026-11-20_240.0",
+      "ticker": "NVDA",
+      "expiry": "2026-11-20",
+      "strike": 240,
+      "entry_price": 0.72,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 9,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -4.2,
+          "date": "2026-10-30"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-11-17",
+        "what": "NVDA 將於盤後公布 Q3 FY2027 財報，美東 17:00 召開法說會；這天在 11/20 到期日之前",
+        "source": "https://www.investing.com/news/company-news/nvidia-schedules-q3-fiscal-2027-earnings-call-for-nov-17-93CH-4980909"
+      },
+      "note": "公司10/28確認11/17盤後財報；指引營收$1,080億±2%、不含中國",
+      "status": "answered"
+    },
+    {
+      "signal_id": "2026-10-30_IBIT_2026-11-20_53.0",
+      "ticker": "IBIT",
+      "expiry": "2026-11-20",
+      "strike": 53,
+      "entry_price": 0.09,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-10-30",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -5.1,
+          "date": "2026-10-30"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "IBIT 是 ETF，沒有財報；到 11/20 到期日前，查不到它本身有排定的事件",
+        "source": null
+      },
+      "note": "ETF無財報；查無到期前排定事件",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "NVDA",
+      "fact": "Q3 FY2027 財報（該季 2026-10-25 結束）定在 2026-11-17 盤後公布，法說會美東 17:00（太平洋 14:00），公司 2026-10-28 發布通知確認；比往年常見的週三提早一天",
+      "date": "2026-11-17",
+      "source": "https://www.investing.com/news/company-news/nvidia-schedules-q3-fiscal-2027-earnings-call-for-nov-17-93CH-4980909"
+    },
+    {
+      "ticker": "NVDA",
+      "fact": "Q2 FY2027（2026-08-26 公布）營收 $962 億，季增 18%、年增 106%；資料中心 $890 億，年增 117%；調整後 EPS $2.22，市場預期 $2.10；Q3 營收指引 $1,080 億±2%，毛利率 74.0%±50bp",
+      "date": "2026-08-26",
+      "source": "https://www.cmelitegroup.com/knowledge-hub/nvidia-earnings-date/"
+    },
+    {
+      "ticker": "NVDA",
+      "fact": "Q3 FY2027 營收指引 $1,080 億，沒有計入中國資料中心算力營收；2010 年以來 67 次財報隔日漲跌中位數 4.9%（37 漲 30 跌），近四次有三次財報隔日收跌",
+      "date": "2026-11-17",
+      "source": "https://jorgai.com/blog/nvidia-q3-fy2027-earnings-november-17-2026-what-nvda-did-the-day-after-every-report-since-2010"
+    }
+  ],
+  "facts_appended": 3,
+  "raw_answer": "{\"market_date\":\"2026-10-30\",\"candidates\":[{\"signal_id\":\"2026-10-30_NVDA_2026-11-20_240.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-11-17\",\"what\":\"NVDA 將於盤後公布 Q3 FY2027 財報，美東 17:00 召開法說會；這天在 11/20 到期日之前\",\"source\":\"https://www.investing.com/news/company-news/nvidia-schedules-q3-fiscal-2027-earnings-call-for-nov-17-93CH-4980909\"},\"note\":\"公司10/28確認11/17盤後財報；指引營收$1,080億±2%、不含中國\"},{\"signal_id\":\"2026-10-30_IBIT_2026-11-20_53.0\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"IBIT 是 ETF，沒有財報；到 11/20 到期日前，查不到它本身有排定的事件\",\"source\":null},\"note\":\"ETF無財報；查無到期前排定事件\"}],\"facts_proposed\":[{\"ticker\":\"NVDA\",\"fact\":\"Q3 FY2027 財報（該季 2026-10-25 結束）定在 2026-11-17 盤後公布，法說會美東 17:00（太平洋 14:00），公司 2026-10-28 發布通知確認；比往年常見的週三提早一天\",\"date\":\"2026-11-17\",\"source\":\"https://www.investing.com/news/company-news/nvidia-schedules-q3-fiscal-2027-earnings-call-for-nov-17-93CH-4980909\"},{\"ticker\":\"NVDA\",\"fact\":\"Q2 FY2027（2026-08-26 公布）營收 $962 億，季增 18%、年增 106%；資料中心 $890 億，年增 117%；調整後 EPS $2.22，市場預期 $2.10；Q3 營收指引 $1,080 億±2%，毛利率 74.0%±50bp\",\"date\":\"2026-08-26\",\"source\":\"https://www.cmelitegroup.com/knowledge-hub/nvidia-earnings-date/\"},{\"ticker\":\"NVDA\",\"fact\":\"Q3 FY2027 營收指引 $1,080 億，沒有計入中國資料中心算力營收；2010 年以來 67 次財報隔日漲跌中位數 4.9%（37 漲 30 跌），近四次有三次財報隔日收跌\",\"date\":\"2026-11-17\",\"source\":\"https://jorgai.com/blog/nvidia-q3-fy2027-earnings-november-17-2026-what-nvda-did-the-day-after-every-report-since-2010\"}]}",
+  "usage": {
+    "prompt_tokens": 40704,
+    "completion_tokens": 2181,
+    "total_tokens": 42885,
+    "cost": 0.226436,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.226436,
+      "upstream_inference_prompt_cost": 0.162816,
+      "upstream_inference_completions_cost": 0.04362
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1156,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
