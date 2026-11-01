@@ -293,3 +293,6 @@
 - IBIT ｜ 截至2026-10-16那一週，IBIT淨流出約1.654億美元，占美國現貨BTC ETF該週淨流出2.284億美元的約72% ｜ 2026-10-16 ｜ https://247wallst.com/investing/cryptocurrency/2026/10/18/blackrocks-bitcoin-etf-lost-165-million-in-a-week-is-wall-street-pulling-back/ ｜ 2026-10-29 LLM 提案
 - IBIT ｜ IBIT在2026-10-28的淨值為45.9552美元，年初至今總報酬−7.22%，52週區間33.19–64.78美元 ｜ 2026-10-28 ｜ https://www.blackrock.com/us/individual/products/333011/ishares-bitcoin-trust-etf ｜ 2026-10-29 LLM 提案
 - IBIT ｜ 12月FOMC前的總經數據日程：10月就業11/6、10月CPI 11/10、FOMC會議紀要11/18、10月PCE 11/25、11月就業12/4 ｜ 2026-10-20 ｜ https://fattail.ai/fomc-meeting-schedule-2026/ ｜ 2026-10-29 LLM 提案
+- NVDA ｜ Q3 FY2027 財報（該季 2026-10-25 結束）定在 2026-11-17 盤後公布，法說會美東 17:00（太平洋 14:00），公司 2026-10-28 發布通知確認；比往年常見的週三提早一天 ｜ 2026-11-17 ｜ https://www.investing.com/news/company-news/nvidia-schedules-q3-fiscal-2027-earnings-call-for-nov-17-93CH-4980909 ｜ 2026-10-30 LLM 提案
+- NVDA ｜ Q2 FY2027（2026-08-26 公布）營收 $962 億，季增 18%、年增 106%；資料中心 $890 億，年增 117%；調整後 EPS $2.22，市場預期 $2.10；Q3 營收指引 $1,080 億±2%，毛利率 74.0%±50bp ｜ 2026-08-26 ｜ https://www.cmelitegroup.com/knowledge-hub/nvidia-earnings-date/ ｜ 2026-10-30 LLM 提案
+- NVDA ｜ Q3 FY2027 營收指引 $1,080 億，沒有計入中國資料中心算力營收；2010 年以來 67 次財報隔日漲跌中位數 4.9%（37 漲 30 跌），近四次有三次財報隔日收跌 ｜ 2026-11-17 ｜ https://jorgai.com/blog/nvidia-q3-fy2027-earnings-november-17-2026-what-nvda-did-the-day-after-every-report-since-2010 ｜ 2026-10-30 LLM 提案
