@@ -3282,9 +3282,9 @@
       "t10_ret_pct": -1.61,
       "t10_excess_pct": 1.2,
       "t10_excess_smh_pct": 5.66,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null,
-      "t20_excess_smh_pct": null
+      "t20_ret_pct": -6.05,
+      "t20_excess_pct": 1.05,
+      "t20_excess_smh_pct": 0.74
     }
   },
   {
@@ -5613,9 +5613,9 @@
       "t5_ret_pct": -2.25,
       "t5_excess_pct": -0.41,
       "t5_excess_smh_pct": 4.1,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
-      "t10_excess_smh_pct": null,
+      "t10_ret_pct": -4.51,
+      "t10_excess_pct": -0.1,
+      "t10_excess_smh_pct": -5.02,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -5885,9 +5885,9 @@
       "t5_ret_pct": -2.25,
       "t5_excess_pct": -0.41,
       "t5_excess_smh_pct": 4.1,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
-      "t10_excess_smh_pct": null,
+      "t10_ret_pct": -4.51,
+      "t10_excess_pct": -0.1,
+      "t10_excess_smh_pct": -5.02,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -6890,9 +6890,9 @@
       "entry_date": "2026-10-22",
       "benchmark": "0050",
       "entry_close": 2385.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
-      "t5_excess_smh_pct": null,
+      "t5_ret_pct": -2.31,
+      "t5_excess_pct": 0.31,
+      "t5_excess_smh_pct": -9.63,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -8238,7 +8238,121 @@
     "outcomes": {
       "entry_date": "2026-11-01",
       "benchmark": "0050",
-      "entry_close": null,
+      "entry_close": 2330.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
+  },
+  {
+    "ts": "2026-11-02T10:56:17.400300+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "RED",
+        "headline": "export_controls_tariffs:13e(15m) / n2_arizona_ramp:10e / cowos_capacity:9e / geopolitics:1e / hyperscaler_capex:6e(7m)",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 13,
+            "n2_arizona_ramp": 10,
+            "cowos_capacity": 9,
+            "geopolitics": 1,
+            "hyperscaler_capex": 6
+          },
+          "mentions": {
+            "export_controls_tariffs": 15,
+            "n2_arizona_ramp": 10,
+            "cowos_capacity": 9,
+            "geopolitics": 1,
+            "hyperscaler_capex": 7
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 13,
+              "mentions": 15,
+              "gate": "zscore",
+              "z": -0.15,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 10,
+              "mentions": 10,
+              "gate": "zscore",
+              "z": -0.45,
+              "denial": false
+            },
+            "cowos_capacity": {
+              "events": 9,
+              "mentions": 9,
+              "gate": "zscore",
+              "z": 2.51,
+              "denial": false
+            },
+            "geopolitics": {
+              "events": 1,
+              "mentions": 1,
+              "gate": "zscore",
+              "z": -1.13,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 6,
+              "mentions": 7,
+              "gate": "zscore",
+              "z": -0.14,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] TSMC is seeking chipmaking equipment that doesn't contain Chinese rare-earth magnets — asks suppliers to provide alterna",
+          "[export_controls_tariffs] TSMC Seeks Rare-Earth-Free Factory Equipment as China’s Export Controls Threaten Chip Supply Chains - Tekedia",
+          "[export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC, report claim",
+          "[n2_arizona_ramp] Samsung's 2nm Yield Approaches 60%, Leveraging Tesla Orders to Challenge TSMC - BigGo Finance",
+          "[n2_arizona_ramp] Lee Jae-yong drives Samsung foundry rebound with 2nm orders, yield push - Chosunbiz",
+          "[n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - Beth Kindig – Medium",
+          "[cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes",
+          "[geopolitics] China’s Coast Guard Rehearses Blockade Tools as Taiwan Plans Counter-Drills - Tech Times",
+          "[hyperscaler_capex] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool",
+          "[hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[hyperscaler_capex] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 GREEN、價格 20 日 -6.0%）；PER 28.0，3 年分位 77 → 70",
+      "premise": "GREEN",
+      "premise_ts": "2026-10-29T10:57:02.513622+00:00",
+      "ret_pct": -6.05,
+      "lookback_sessions": 20,
+      "as_of": "2026-11-02",
+      "valuation": {
+        "per": 27.99,
+        "per_pct": 69.5,
+        "per_then": 28.69,
+        "per_pct_then": 77.2,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-11-02",
+      "benchmark": "0050",
+      "entry_close": 2330.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t5_excess_smh_pct": null,
