@@ -59,7 +59,16 @@
         "source": null
       },
       "note": "總經事件（非本檔）：11-03 期中選舉、11-10 CPI；10-28 FOMC 與市場日同一天",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.26,
+        "t10": null,
+        "t20": null,
+        "peak": 0.26,
+        "mature": false,
+        "verdict": "❌沒噴(峰0.3x)",
+        "filled_at": "2026-11-02"
+      }
     }
   ],
   "facts_proposed": [

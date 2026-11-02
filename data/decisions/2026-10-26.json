@@ -59,7 +59,16 @@
         "source": null
       },
       "note": "沒查到基金層級的排定事件。10-19 單日淨流入 $665M，是一年來最大。",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.35,
+        "t10": null,
+        "t20": null,
+        "peak": 0.35,
+        "mature": false,
+        "verdict": "❌沒噴(峰0.4x)",
+        "filled_at": "2026-11-02"
+      }
     },
     {
       "signal_id": "2026-10-26_NKE_2026-11-20_40.0",
@@ -101,7 +110,16 @@
         "source": "https://www.businesswire.com/news/home/20261023108212/en/NIKE-Inc.-Announces-2026-Investor-Day-Webcast"
       },
       "note": "【衝突】Q1 財報實際在 10-01 發布，不是 09-29 https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 1.41,
+        "t10": null,
+        "t20": null,
+        "peak": 1.41,
+        "mature": false,
+        "verdict": "➖持平(峰1.4x/今1.4x)",
+        "filled_at": "2026-11-02"
+      }
     },
     {
       "signal_id": "2026-10-26_IBIT_2026-12-18_55.0",
@@ -143,7 +161,16 @@
         "source": null
       },
       "note": "沒查到基金層級的排定事件。10-23 資產規模約 $65.9B。",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.54,
+        "t10": null,
+        "t20": null,
+        "peak": 0.54,
+        "mature": false,
+        "verdict": "➖持平(峰0.5x/今0.5x)",
+        "filled_at": "2026-11-02"
+      }
     }
   ],
   "facts_proposed": [

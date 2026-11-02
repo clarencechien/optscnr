@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T00:35:47Z",
+ "generated_at": "2026-11-02T23:20:24Z",
  "n_days": 40,
  "t8_by_event_answer": {
   "有": {
@@ -294,7 +294,15 @@
      },
      "note": "總經事件（非本檔）：11-03 期中選舉、11-10 CPI；10-28 FOMC 與市場日同一天",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.26,
+      "t10": null,
+      "t20": null,
+      "peak": 0.26,
+      "mature": false,
+      "verdict": "❌沒噴(峰0.3x)",
+      "filled_at": "2026-11-02"
+     }
     }
    ]
   },
@@ -346,7 +354,15 @@
      },
      "note": "FOMC 12/09 決議附點陣圖。10/19 單日淨流入 $665M，是 2025-10-07 以來最大",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.53,
+      "t10": null,
+      "t20": null,
+      "peak": 0.53,
+      "mature": false,
+      "verdict": "➖持平(峰0.5x/今0.5x)",
+      "filled_at": "2026-11-02"
+     }
     },
     {
      "signal_id": "2026-10-27_SOFI_2027-01-15_20.0",
@@ -387,7 +403,15 @@
      },
      "note": "Q3 已在 10/27 公布：營收 $1.39B（+44%），調升 2026 指引至 $5.04B。下次財報應在到期後",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 1.07,
+      "t10": null,
+      "t20": null,
+      "peak": 1.07,
+      "mature": false,
+      "verdict": "➖持平(峰1.1x/今1.1x)",
+      "filled_at": "2026-11-02"
+     }
     }
    ]
   },
@@ -439,7 +463,15 @@
      },
      "note": "沒查到基金層級的排定事件。10-19 單日淨流入 $665M，是一年來最大。",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.35,
+      "t10": null,
+      "t20": null,
+      "peak": 0.35,
+      "mature": false,
+      "verdict": "❌沒噴(峰0.4x)",
+      "filled_at": "2026-11-02"
+     }
     },
     {
      "signal_id": "2026-10-26_NKE_2026-11-20_40.0",
@@ -480,7 +512,15 @@
      },
      "note": "【衝突】Q1 財報實際在 10-01 發布，不是 09-29 https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 1.41,
+      "t10": null,
+      "t20": null,
+      "peak": 1.41,
+      "mature": false,
+      "verdict": "➖持平(峰1.4x/今1.4x)",
+      "filled_at": "2026-11-02"
+     }
     },
     {
      "signal_id": "2026-10-26_IBIT_2026-12-18_55.0",
@@ -521,7 +561,15 @@
      },
      "note": "沒查到基金層級的排定事件。10-23 資產規模約 $65.9B。",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.54,
+      "t10": null,
+      "t20": null,
+      "peak": 0.54,
+      "mature": false,
+      "verdict": "➖持平(峰0.5x/今0.5x)",
+      "filled_at": "2026-11-02"
+     }
     }
    ]
   },
@@ -595,12 +643,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.29,
-      "t10": null,
+      "t10": 0.1,
       "t20": null,
       "peak": 0.29,
       "mature": false,
       "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-10-30"
+      "filled_at": "2026-11-02"
      }
     },
     {
@@ -644,12 +692,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.27,
-      "t10": null,
+      "t10": 0.12,
       "t20": null,
       "peak": 0.27,
       "mature": false,
       "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-10-30"
+      "filled_at": "2026-11-02"
      }
     }
    ]
@@ -709,7 +757,7 @@
       "peak": 0.57,
       "mature": false,
       "verdict": "➖持平(峰0.6x/今0.3x)",
-      "filled_at": "2026-10-30"
+      "filled_at": "2026-11-02"
      }
     }
    ]
@@ -793,7 +841,7 @@
       "peak": 0.84,
       "mature": false,
       "verdict": "➖持平(峰0.8x/今0.8x)",
-      "filled_at": "2026-10-30"
+      "filled_at": "2026-11-02"
      }
     }
    ]
@@ -853,7 +901,7 @@
       "peak": 0.73,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.4x)",
-      "filled_at": "2026-10-30"
+      "filled_at": "2026-11-02"
      }
     }
    ]
