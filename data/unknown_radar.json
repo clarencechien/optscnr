@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-10-31T01:03:04.530149",
+  "updated_at": "2026-11-02T01:01:35.598332",
   "count": 1,
   "blind_spots": [
     {
-      "name": "Reddit",
-      "ticker": "RDDT",
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
       "mentions_today": 2,
-      "total_mentions": 5,
-      "consecutive_days": 2,
-      "is_strong": true,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "Reddit’s stock logs its biggest one-day drop ever. It’s not the last of the bad news, analysts say.",
-        "Reddit’s stock logs its biggest one-day drop ever. It’s not the last of the bad news, analysts say."
+        "Anthropic's path to the Nasdaq just got a lot bumpier",
+        "Anthropic's path to the Nasdaq just got a lot bumpier"
       ]
     }
   ]
