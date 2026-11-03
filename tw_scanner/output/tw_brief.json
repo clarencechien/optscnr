@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T10:45:32+00:00",
+ "generated_at": "2026-11-03T20:19:01+00:00",
  "today": "2026-11-03",
  "cadence": "weekly",
  "tldr": [
@@ -11,24 +11,18 @@
  ],
  "weather": {
   "status": "OK",
-  "as_of": "2026-11-02",
-  "age_days": 1,
+  "as_of": "2026-11-03",
+  "age_days": 0,
   "regime": "DE_RISK",
   "emoji": "🌧️",
-  "score": -0.188,
+  "score": -0.734,
   "pcts": {
    "f_spot_20d": 0.4,
-   "tx_delta": 88.1,
-   "retail_mtx": 53.2,
-   "margin_chg": 27.0
+   "tx_delta": 21.4,
+   "retail_mtx": 70.2,
+   "margin_chg": 1.6
   },
   "week_path": [
-   {
-    "date": "2026-10-27",
-    "regime": "DE_RISK",
-    "score": -0.552,
-    "alerts": []
-   },
    {
     "date": "2026-10-28",
     "regime": "DE_RISK",
@@ -51,6 +45,12 @@
     "date": "2026-11-02",
     "regime": "DE_RISK",
     "score": -0.188,
+    "alerts": []
+   },
+   {
+    "date": "2026-11-03",
+    "regime": "DE_RISK",
+    "score": -0.734,
     "alerts": []
    }
   ],
@@ -89,13 +89,13 @@
  },
  "dca": {
   "status": "OK",
-  "as_of": "2026-11-02",
-  "age_days": 1,
+  "as_of": "2026-11-03",
+  "age_days": 0,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
-   "as_of": "2026-11-02",
-   "last_price": 104.1,
+   "as_of": "2026-11-03",
+   "last_price": 100.6,
    "regime": "DE_RISK",
    "next_regular_buy": "2026-12-06",
    "this_month_bought": false,
@@ -126,8 +126,8 @@
      "invested": 940000.0,
      "avg_cost": 32.86,
      "avg_cost_vs_plain_pct": 0.0,
-     "return_pct": 216.8,
-     "xirr_pct": 28.67,
+     "return_pct": 206.15,
+     "xirr_pct": 27.8,
      "n_boosts": 0
     },
     "weekly_gate": {
@@ -136,8 +136,8 @@
      "invested": 1000000.0,
      "avg_cost": 33.29,
      "avg_cost_vs_plain_pct": 1.31,
-     "return_pct": 212.67,
-     "xirr_pct": 29.06,
+     "return_pct": 202.16,
+     "xirr_pct": 28.17,
      "n_boosts": 6
     },
     "capitulation_boost": {
@@ -146,8 +146,8 @@
      "invested": 1020000.0,
      "avg_cost": 33.08,
      "avg_cost_vs_plain_pct": 0.67,
-     "return_pct": 214.74,
-     "xirr_pct": 28.81,
+     "return_pct": 204.16,
+     "xirr_pct": 27.93,
      "n_boosts": 8
     },
     "regime_scaled": {
@@ -156,8 +156,8 @@
      "invested": 1025000.0,
      "avg_cost": 33.02,
      "avg_cost_vs_plain_pct": 0.49,
-     "return_pct": 215.29,
-     "xirr_pct": 28.61,
+     "return_pct": 204.69,
+     "xirr_pct": 27.74,
      "n_boosts": 0
     },
     "lump_sum": {
@@ -166,8 +166,8 @@
      "invested": 940000.0,
      "avg_cost": 18.5,
      "avg_cost_vs_plain_pct": -43.7,
-     "return_pct": 462.6,
-     "xirr_pct": 24.7,
+     "return_pct": 443.69,
+     "xirr_pct": 24.15,
      "n_boosts": 0
     }
    },
@@ -185,8 +185,8 @@
      "invested": 120000.0,
      "avg_cost": 84.07,
      "avg_cost_vs_plain_pct": 0.0,
-     "return_pct": 23.82,
-     "xirr_pct": 47.77,
+     "return_pct": 19.66,
+     "xirr_pct": 38.8,
      "n_boosts": 0
     },
     "weekly_gate": {
@@ -195,8 +195,8 @@
      "invested": 140000.0,
      "avg_cost": 85.33,
      "avg_cost_vs_plain_pct": 1.5,
-     "return_pct": 21.99,
-     "xirr_pct": 47.63,
+     "return_pct": 17.89,
+     "xirr_pct": 38.1,
      "n_boosts": 2
     },
     "capitulation_boost": {
@@ -205,8 +205,8 @@
      "invested": 140000.0,
      "avg_cost": 85.8,
      "avg_cost_vs_plain_pct": 2.06,
-     "return_pct": 21.32,
-     "xirr_pct": 46.17,
+     "return_pct": 17.25,
+     "xirr_pct": 36.67,
      "n_boosts": 2
     },
     "regime_scaled": {
@@ -215,8 +215,8 @@
      "invested": 140000.0,
      "avg_cost": 84.92,
      "avg_cost_vs_plain_pct": 1.01,
-     "return_pct": 22.59,
-     "xirr_pct": 46.62,
+     "return_pct": 18.46,
+     "xirr_pct": 37.49,
      "n_boosts": 0
     },
     "lump_sum": {
@@ -225,8 +225,8 @@
      "invested": 120000.0,
      "avg_cost": 63.35,
      "avg_cost_vs_plain_pct": -24.65,
-     "return_pct": 64.31,
-     "xirr_pct": 65.22,
+     "return_pct": 58.79,
+     "xirr_pct": 59.4,
      "n_boosts": 0
     }
    }
@@ -392,17 +392,17 @@
  },
  "casino": {
   "status": "OK",
-  "as_of": "2026-11-02",
-  "age_days": 1,
+  "as_of": "2026-11-03",
+  "age_days": 0,
   "rows": [
    {
     "ticker": "3661",
     "name": "世芯-KY",
     "bucket": "ASIC",
     "in_0050": false,
-    "close": 3395.0,
-    "ret20_pct": -9.22,
-    "excess20_pct": -2.12,
+    "close": 3140.0,
+    "ret20_pct": -16.6,
+    "excess20_pct": -5.71,
     "yoy_pct": 496.0,
     "yoy_avg_pct": 317.1,
     "yoy_slope_pp": 157.11
@@ -412,9 +412,9 @@
     "name": "台光電",
     "bucket": "CCL",
     "in_0050": true,
-    "close": 4705.0,
-    "ret20_pct": -4.66,
-    "excess20_pct": 2.44,
+    "close": 4395.0,
+    "ret20_pct": -11.66,
+    "excess20_pct": -0.77,
     "yoy_pct": 168.9,
     "yoy_avg_pct": 142.7,
     "yoy_slope_pp": 19.74
@@ -424,9 +424,9 @@
     "name": "廣達",
     "bucket": "機櫃",
     "in_0050": true,
-    "close": 318.0,
-    "ret20_pct": -4.65,
-    "excess20_pct": 2.45,
+    "close": 311.5,
+    "ret20_pct": -6.74,
+    "excess20_pct": 4.15,
     "yoy_pct": 76.7,
     "yoy_avg_pct": 128.5,
     "yoy_slope_pp": -27.31
@@ -436,9 +436,9 @@
     "name": "創意",
     "bucket": "ASIC",
     "in_0050": false,
-    "close": 7285.0,
-    "ret20_pct": -9.39,
-    "excess20_pct": -2.29,
+    "close": 6795.0,
+    "ret20_pct": -13.99,
+    "excess20_pct": -3.1,
     "yoy_pct": 97.8,
     "yoy_avg_pct": 122.4,
     "yoy_slope_pp": -30.3
@@ -448,9 +448,9 @@
     "name": "緯創",
     "bucket": "機櫃",
     "in_0050": true,
-    "close": 181.5,
-    "ret20_pct": -1.63,
-    "excess20_pct": 5.47,
+    "close": 176.5,
+    "ret20_pct": -7.35,
+    "excess20_pct": 3.54,
     "yoy_pct": 87.2,
     "yoy_avg_pct": 104.8,
     "yoy_slope_pp": 13.21
@@ -460,9 +460,9 @@
     "name": "雙鴻",
     "bucket": "散熱",
     "in_0050": false,
-    "close": 1395.0,
-    "ret20_pct": -8.82,
-    "excess20_pct": -1.72,
+    "close": 1320.0,
+    "ret20_pct": -13.44,
+    "excess20_pct": -2.55,
     "yoy_pct": 23.2,
     "yoy_avg_pct": 69.0,
     "yoy_slope_pp": -46.74
@@ -472,9 +472,9 @@
     "name": "智邦",
     "bucket": "網通",
     "in_0050": true,
-    "close": 1615.0,
-    "ret20_pct": -9.01,
-    "excess20_pct": -1.91,
+    "close": 1495.0,
+    "ret20_pct": -21.32,
+    "excess20_pct": -10.43,
     "yoy_pct": 66.1,
     "yoy_avg_pct": 65.7,
     "yoy_slope_pp": -2.78
@@ -484,9 +484,9 @@
     "name": "緯穎",
     "bucket": "機櫃",
     "in_0050": true,
-    "close": 1820.0,
-    "ret20_pct": -12.92,
-    "excess20_pct": -5.82,
+    "close": 1770.0,
+    "ret20_pct": -16.11,
+    "excess20_pct": -5.22,
     "yoy_pct": 100.0,
     "yoy_avg_pct": 63.2,
     "yoy_slope_pp": 30.38
@@ -496,9 +496,9 @@
     "name": "欣興",
     "bucket": "載板",
     "in_0050": true,
-    "close": 997.0,
-    "ret20_pct": -15.15,
-    "excess20_pct": -8.05,
+    "close": 902.0,
+    "ret20_pct": -25.76,
+    "excess20_pct": -14.87,
     "yoy_pct": 64.7,
     "yoy_avg_pct": 54.9,
     "yoy_slope_pp": 10.49
@@ -508,9 +508,9 @@
     "name": "奇鋐",
     "bucket": "散熱",
     "in_0050": true,
-    "close": 3060.0,
-    "ret20_pct": -10.92,
-    "excess20_pct": -3.82,
+    "close": 2935.0,
+    "ret20_pct": -16.38,
+    "excess20_pct": -5.49,
     "yoy_pct": 44.9,
     "yoy_avg_pct": 52.2,
     "yoy_slope_pp": -6.24
@@ -520,9 +520,9 @@
     "name": "台積電",
     "bucket": "製造",
     "in_0050": true,
-    "close": 2330.0,
-    "ret20_pct": -6.05,
-    "excess20_pct": 1.05,
+    "close": 2295.0,
+    "ret20_pct": -8.57,
+    "excess20_pct": 2.32,
     "yoy_pct": 54.6,
     "yoy_avg_pct": 50.9,
     "yoy_slope_pp": 4.98
@@ -532,9 +532,9 @@
     "name": "鴻海",
     "bucket": "機櫃",
     "in_0050": true,
-    "close": 251.0,
-    "ret20_pct": -0.2,
-    "excess20_pct": 6.9,
+    "close": 245.5,
+    "ret20_pct": -3.35,
+    "excess20_pct": 7.54,
     "yoy_pct": 38.4,
     "yoy_avg_pct": 48.2,
     "yoy_slope_pp": -7.89
@@ -544,9 +544,9 @@
     "name": "日月光投控",
     "bucket": "封測",
     "in_0050": true,
-    "close": 674.0,
-    "ret20_pct": -4.13,
-    "excess20_pct": 2.97,
+    "close": 616.0,
+    "ret20_pct": -13.24,
+    "excess20_pct": -2.35,
     "yoy_pct": 45.5,
     "yoy_avg_pct": 44.8,
     "yoy_slope_pp": 1.18
@@ -556,9 +556,9 @@
     "name": "台達電",
     "bucket": "電力",
     "in_0050": true,
-    "close": 1355.0,
-    "ret20_pct": -28.31,
-    "excess20_pct": -21.21,
+    "close": 1270.0,
+    "ret20_pct": -33.33,
+    "excess20_pct": -22.44,
     "yoy_pct": 14.6,
     "yoy_avg_pct": 32.4,
     "yoy_slope_pp": -16.57
@@ -568,9 +568,9 @@
     "name": "光寶科",
     "bucket": "電源",
     "in_0050": true,
-    "close": 243.5,
-    "ret20_pct": -12.88,
-    "excess20_pct": -5.78,
+    "close": 228.0,
+    "ret20_pct": -19.86,
+    "excess20_pct": -8.97,
     "yoy_pct": 22.1,
     "yoy_avg_pct": 28.3,
     "yoy_slope_pp": -7.73
@@ -580,9 +580,9 @@
     "name": "聯發科",
     "bucket": "IC設計",
     "in_0050": true,
-    "close": 3970.0,
-    "ret20_pct": -19.31,
-    "excess20_pct": -12.21,
+    "close": 3675.0,
+    "ret20_pct": -26.2,
+    "excess20_pct": -15.31,
     "yoy_pct": 2.0,
     "yoy_avg_pct": 19.4,
     "yoy_slope_pp": -5.09
@@ -595,51 +595,51 @@
    "first_buy": "2024-01-08",
    "last_buy": "2026-10-06",
    "invested": 170000.0,
-   "basket_value": 464859.0,
-   "basket_return_pct": 173.45,
-   "bench_value": 331468.0,
-   "bench_return_pct": 94.98,
-   "basket_minus_bench_pp": 78.47,
+   "basket_value": 436259.0,
+   "basket_return_pct": 156.62,
+   "bench_value": 320324.0,
+   "bench_return_pct": 88.43,
+   "basket_minus_bench_pp": 68.2,
    "per_ticker_return_pct": {
-    "2330": 103.6,
-    "2308": 158.4,
-    "2317": 37.7,
-    "2382": 12.7,
-    "3231": 47.8,
-    "6669": 98.2,
-    "2454": 170.5,
-    "3661": 10.2,
-    "3443": 355.7,
-    "3017": 280.7,
-    "3324": 91.7,
-    "2301": 89.9,
-    "3711": 252.0,
-    "2383": 512.1,
-    "3037": 445.9,
-    "2345": 107.9
+    "2330": 100.5,
+    "2308": 142.2,
+    "2317": 34.7,
+    "2382": 10.4,
+    "3231": 43.7,
+    "6669": 92.8,
+    "2454": 150.4,
+    "3661": 1.9,
+    "3443": 325.0,
+    "3017": 265.1,
+    "3324": 81.4,
+    "2301": 77.8,
+    "3711": 221.8,
+    "2383": 471.7,
+    "3037": 393.9,
+    "2345": 92.5
    },
    "n_tickers": 16
   },
   "tercile_t20": {
-   "n": 192,
+   "n": 208,
    "horizon": 20,
    "top_tercile": {
-    "n": 64,
-    "excess_avg": 2.31
+    "n": 69,
+    "excess_avg": 2.18
    },
    "bottom_tercile": {
-    "n": 64,
-    "excess_avg": -3.3
+    "n": 69,
+    "excess_avg": -3.74
    },
-   "all_avg": -1.0,
+   "all_avg": -1.3,
    "status": "可讀（n 達門檻）"
   },
   "verdict": {
    "basket": "可讀",
    "rule": "先寫死：籃子 DCA 對 0050 DCA 至少 12 個月；「月營收加速前三分之一 vs 後三分之一」的 T+20 超額各 n≥30 才准下結論。之前一律「累積中」。"
   },
-  "state_n": 512,
-  "scored_n": 192,
+  "state_n": 528,
+  "scored_n": 208,
   "note": "賭場 sector：小部位、預算固定、名單是人挑的、沒有訊號、期望值未證明。只收資料。"
  },
  "calendar": [
@@ -658,12 +658,12 @@
   {
    "level": "ok",
    "label": "天氣台 正常",
-   "text": "天氣台：最新 2026-11-02"
+   "text": "天氣台：最新 2026-11-03"
   },
   {
    "level": "ok",
    "label": "DCA 帳本 正常",
-   "text": "DCA 帳本：最新 2026-11-02"
+   "text": "DCA 帳本：最新 2026-11-03"
   },
   {
    "level": "ok",
@@ -678,7 +678,7 @@
   {
    "level": "ok",
    "label": "賭場 sector 正常",
-   "text": "賭場 sector：最新 2026-11-02"
+   "text": "賭場 sector：最新 2026-11-03"
   }
  ],
  "note": "週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。"
