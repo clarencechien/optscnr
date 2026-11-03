@@ -13535,8 +13535,8 @@
       "t5_excess_pct": 1.33,
       "t10_ret_pct": -14.17,
       "t10_excess_pct": -10.72,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -33.33,
+      "t20_excess_pct": -22.44
     }
   },
   {
@@ -13797,8 +13797,8 @@
       "t5_excess_pct": 1.33,
       "t10_ret_pct": -14.17,
       "t10_excess_pct": -10.72,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -33.33,
+      "t20_excess_pct": -22.44
     }
   },
   {
@@ -16015,8 +16015,8 @@
       "entry_close": 1635.0,
       "t5_ret_pct": -7.65,
       "t5_excess_pct": -5.45,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -22.32,
+      "t10_excess_pct": -14.61,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -16733,8 +16733,8 @@
       "entry_date": "2026-10-23",
       "benchmark": "0050",
       "entry_close": 1510.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -15.89,
+      "t5_excess_pct": -10.26,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -16996,8 +16996,8 @@
       "entry_date": "2026-10-26",
       "benchmark": "0050",
       "entry_close": 1510.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -15.89,
+      "t5_excess_pct": -10.26,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -17094,8 +17094,8 @@
       "entry_date": "2026-10-27",
       "benchmark": "0050",
       "entry_close": 1510.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -15.89,
+      "t5_excess_pct": -10.26,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -17712,6 +17712,104 @@
       "entry_date": "2026-11-02",
       "benchmark": "0050",
       "entry_close": 1355.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-11-03T10:03:13.659912+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:6e(7m) / vr300_delay:8e(9m) / debt_financed_capex:12e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 6,
+            "vr300_delay": 8,
+            "debt_financed_capex": 12,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 7,
+            "vr300_delay": 9,
+            "debt_financed_capex": 12,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 6,
+              "mentions": 7,
+              "gate": "zscore",
+              "z": -0.27,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 8,
+              "mentions": 9,
+              "gate": "zscore",
+              "z": -2.39,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 12,
+              "mentions": 12,
+              "gate": "zscore",
+              "z": -0.71,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Why Tesla's $5 billion capex cut isn't the warning sign AI stock bears think it is - Yahoo Finance",
+          "[capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[capex_cut] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[debt_financed_capex] AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. - CNBC",
+          "[debt_financed_capex] Top hyperscalers likely to have more AI-linked debt than now known, S&P Global warns - Reuters",
+          "[debt_financed_capex] Big Tech will fund more than a third of its AI investments with debt in 2027, Goldman Sachs predicts - Yahoo Finance"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 RED、價格 20 日 -33.3%）；PER 40.7，3 年分位 83 → 61",
+      "premise": "RED",
+      "premise_ts": "2026-11-02T11:41:18.688808+00:00",
+      "ret_pct": -33.33,
+      "lookback_sessions": 20,
+      "as_of": "2026-11-03",
+      "valuation": {
+        "per": 40.69,
+        "per_pct": 61.1,
+        "per_then": 60.15,
+        "per_pct_then": 83.0,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-11-03",
+      "benchmark": "0050",
+      "entry_close": 1270.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
