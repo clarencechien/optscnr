@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-11-03 10:03 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-11-03 10:45 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -15,7 +15,7 @@ _README 由 build_readme.py 於 2026-11-03 10:03 UTC 重組；兩區塊各為該
 - 週檢查（2026-11-06）：本週無警報、預算未動 → 等（2026-11-13 再看）。
 - 鋒面 🌧️ DE_RISK（本週未變）。
 - 2308 前提 🔴 RED；無背離（前提 RED、價格 20 日 -33.3%）；PER 40.7，3 年分位 83 → 61
-- 2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 -6.0%）；PER 27.0，3 年分位 77 → 58
+- 2330 前提 🟢 GREEN；無背離（前提 GREEN、價格 20 日 -8.6%）；PER 27.0，3 年分位 77 → 58
 - 投降窗加碼歷史 8 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +0.67%。
 
 ## 1. 本期機械指示（DCA 規則影子帳本）
@@ -61,16 +61,16 @@ _README 由 build_readme.py 於 2026-11-03 10:03 UTC 重組；兩區塊各為該
 
 ### 2330
 - 前提（最近全模組 2026-11-02）：🟢 GREEN
-- 無背離（前提 GREEN、價格 20 日 -6.0%）；PER 27.0，3 年分位 77 → 58
+- 無背離（前提 GREEN、價格 20 日 -8.6%）；PER 27.0，3 年分位 77 → 58
   - 🟢 M1 revenue_acceleration：2026-09 YoY +54.6%, slope -4.41pp/月, 連續減速 0 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9
   - 🟢 M3 adr_premium：ADR 溢價 +13.5%（1 年第 20 百分位；觀察）
   - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3675.7M, YoY +60.6%
-  - 🟡 M5 narrative_triggers：export_controls_tariffs:13e(15m) / n2_arizona_ramp:20e(27m) / cowos_capacity:6e / geopolitics:1e / hyperscaler_capex:6e(7m)
+  - 🟡 M5 narrative_triggers：export_controls_tariffs:11e(12m) / n2_arizona_ramp:20e(27m) / cowos_capacity:7e / geopolitics:2e / hyperscaler_capex:6e(7m)
   - 🟢 M6 peer_divergence：cohort 內 2330 未被對手顯著反超（離散在容忍帶內）
   - ⚪ M8 revision_velocity：下修 0/上修 1（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 27.0（3 年第 58 百分位；20 日前第 77）；觀察
-- 回填樣本 19 筆（T+20 超額）；退役判準見 `tsmc_radar_report.md`
+- 回填樣本 20 筆（T+20 超額）；退役判準見 `tsmc_radar_report.md`
 
 
 ## 4. 賭場 sector（AI 個股，只收資料）
@@ -108,11 +108,11 @@ _README 由 build_readme.py 於 2026-11-03 10:03 UTC 重組；兩區塊各為該
 - ✅ 天氣台：最新 2026-11-02
 - ✅ DCA 帳本：最新 2026-11-02
 - ✅ delta_radar：最新 2026-11-03
-- ✅ tsmc_radar：最新 2026-11-02
+- ✅ tsmc_radar：最新 2026-11-03
 - ✅ 賭場 sector：最新 2026-11-02
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-03T10:03:15+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-03T10:45:32+00:00*
 
 ---
 
@@ -226,11 +226,11 @@ _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組�
 
 ---
 
-# TSMC Radar (2330.TW) — 2026-11-02 12:34 UTC
+# TSMC Radar (2330.TW) — 2026-11-03 10:45 UTC
 
-## 總判定：🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
-## 前提 vs 價格：無背離（前提 GREEN、價格 20 日 -6.0%）；PER 27.0，3 年分位 77 → 58
+## 前提 vs 價格：無背離（前提 GREEN、價格 20 日 -8.6%）；PER 27.0，3 年分位 77 → 58
 
 GS 4500 劇本前提的機械化監控：營收動能 (M1)、FCF/合約負債 (M2)、實體出貨 (M3/M4)、
 敘事風險 (M5)、跨供應商離散 (M6)、目標價修正 velocity (M8)。
@@ -238,125 +238,66 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M1 revenue_acceleration | 🟢 GREEN | 2026-09 YoY +54.6%, slope -4.41pp/月, 連續減速 0 個月 |
-| M2 bullwhip_health | 🟢 GREEN | 合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9 |
-| M3 adr_premium（觀察） | 🟢 GREEN | ADR 溢價 +13.5%（1 年第 20 百分位；觀察） |
-| M4 customs_flow | 🟢 GREEN | US 進口 HS854231 (TH+TW) 近3月 $3675.7M, YoY +60.6% |
-| M5 narrative_triggers | 🟡 YELLOW | export_controls_tariffs:13e(15m) / n2_arizona_ramp:20e(27m) / cowos_capacity:6e / geopolitics:1e / hyperscaler_capex:6e(7m) |
-| M6 peer_divergence | 🟢 GREEN | cohort 內 2330 未被對手顯著反超（離散在容忍帶內） |
-| M8 revision_velocity | ⚪ NO_DATA | 下修 0/上修 1（樣本不足 <3，NO_DATA） |
-| M9 valuation（觀察） | 🟢 GREEN | PER 27.0（3 年第 58 百分位；20 日前第 77）；觀察 |
-
-### M1 revenue_acceleration — 🟢 GREEN
-```json
-{
-  "latest_month": "2026-09",
-  "latest_yoy_pct": 54.6,
-  "yoy_slope_pp_per_month": -4.41,
-  "consecutive_decel_months": 0
-}
-```
-
-### M2 bullwhip_health — 🟢 GREEN
-```json
-{
-  "as_of": null,
-  "contract_liab_qoq_pct": null,
-  "inventory_qoq_pct": 23.8,
-  "fcf_to_net_income": 0.9,
-  "accounts_used": {
-    "contract": "",
-    "inventory": "Inventories",
-    "ocf": "CashFlowsFromOperatingActivities",
-    "capex": "PropertyAndPlantAndEquipment",
-    "net_income": "IncomeAfterTaxes"
-  }
-}
-```
-
-### M3 adr_premium — 🟢 GREEN
-```json
-{
-  "as_of": "2026-11-02",
-  "premium_pct": 13.51,
-  "percentile_1y": 20.1,
-  "n": 369
-}
-```
-
-### M4 customs_flow — 🟢 GREEN
-```json
-{
-  "window": "2026-06..2026-08",
-  "rolling_value_usd_m": 3675.7,
-  "rolling_yoy_pct": 60.6,
-  "by_country": {
-    "TAIWAN": {
-      "rolling_value_usd_m": 3675.7,
-      "rolling_yoy_pct": 60.6
-    }
-  }
-}
-```
+| M5 narrative_triggers | 🟡 YELLOW | export_controls_tariffs:11e(12m) / n2_arizona_ramp:20e(27m) / cowos_capacity:7e / geopolitics:2e / hyperscaler_capex:6e(7m) |
 
 ### M5 narrative_triggers — 🟡 YELLOW
 ```json
 {
   "events": {
-    "export_controls_tariffs": 13,
+    "export_controls_tariffs": 11,
     "n2_arizona_ramp": 20,
-    "cowos_capacity": 6,
-    "geopolitics": 1,
+    "cowos_capacity": 7,
+    "geopolitics": 2,
     "hyperscaler_capex": 6
   },
   "mentions": {
-    "export_controls_tariffs": 15,
+    "export_controls_tariffs": 12,
     "n2_arizona_ramp": 27,
-    "cowos_capacity": 6,
-    "geopolitics": 1,
+    "cowos_capacity": 7,
+    "geopolitics": 2,
     "hyperscaler_capex": 7
   },
   "scoring": {
     "export_controls_tariffs": {
-      "events": 13,
-      "mentions": 15,
+      "events": 11,
+      "mentions": 12,
       "gate": "zscore",
-      "z": 0.0,
+      "z": -2.5,
       "denial": false
     },
     "n2_arizona_ramp": {
       "events": 20,
       "mentions": 27,
       "gate": "zscore",
-      "z": 2.02,
+      "z": 1.56,
       "denial": true
     },
     "cowos_capacity": {
-      "events": 6,
-      "mentions": 6,
+      "events": 7,
+      "mentions": 7,
       "gate": "zscore",
-      "z": -0.91,
+      "z": 0.0,
       "denial": false
     },
     "geopolitics": {
-      "events": 1,
-      "mentions": 1,
+      "events": 2,
+      "mentions": 2,
       "gate": "zscore",
-      "z": -0.95,
+      "z": -0.07,
       "denial": false
     },
     "hyperscaler_capex": {
       "events": 6,
       "mentions": 7,
       "gate": "zscore",
-      "z": -0.09,
+      "z": -0.05,
       "denial": false
     }
   }
 }
 ```
-- [export_controls_tariffs] TSMC is seeking chipmaking equipment that doesn't contain Chinese rare-earth magnets — asks suppliers to provide alterna
-- [export_controls_tariffs] TSMC Seeks Rare-Earth-Free Factory Equipment as China’s Export Controls Threaten Chip Supply Chains - Tekedia
+- [export_controls_tariffs] TSMC Weighs Rare-Earth-Free Motors Amid China's Export Controls, Moves to Diversify Supply Chain [Taiwan Chip News] - 아시
+- [export_controls_tariffs] How Taiwan's New AI Chip Export Controls Could Affect China｜Industry｜2026-10-20｜web only - 天下雜誌
 - [export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC, report claim
 - [n2_arizona_ramp] [News] Samsung 2nm Yields Reportedly at ~55%, Below Mass Production Threshold; Qualcomm May Opt for TSMC - TrendForce
 - [n2_arizona_ramp] Samsung's 2nm Yield Recovers to 55%... Qualcomm Return Hinges on Sept. 22 Summit - BigGo Finance
@@ -364,92 +305,24 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech
 - [cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - Beth Kindig – Medium
 - [cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes
-- [geopolitics] China’s Coast Guard Rehearses Blockade Tools as Taiwan Plans Counter-Drills - Tech Times
-- [hyperscaler_capex] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool
+- [geopolitics] In the shadow of China’s military, Taiwan’s globally critical suppliers keep working - Automotive News
+- [geopolitics] China’s planned military exercises near Taiwan may have another target: Japan - The Japan Times
+- [hyperscaler_capex] Why Tesla's $5 billion capex cut isn't the warning sign AI stock bears think it is - Yahoo Finance
 - [hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
 - [hyperscaler_capex] Investors Brace for Slowdown in Hyperscaler Spending Growth in AI - Global Banking & Finance Review
 
-### M6 peer_divergence — 🟢 GREEN
-```json
-{
-  "groups": {
-    "foundry_contrast": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 50.9,
-      "best_peer": "2303",
-      "best_peer_3m_yoy": 25.6,
-      "peer_lead_pp": -25.2,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "2303": 25.6
-      }
-    },
-    "backend": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 50.9,
-      "best_peer": "2383",
-      "best_peer_3m_yoy": 142.7,
-      "peer_lead_pp": 91.8,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "3711": 44.8,
-        "3037": 54.9,
-        "2383": 142.7
-      }
-    },
-    "asic_lead": {
-      "direction": "cohort_confirm",
-      "delta_3m_yoy": 50.9,
-      "best_peer": "3661",
-      "best_peer_3m_yoy": 317.1,
-      "peer_lead_pp": 266.2,
-      "status": "GREEN",
-      "peers_3m_yoy": {
-        "3661": 317.1,
-        "3443": 122.4
-      }
-    }
-  }
-}
-```
-
-### M8 revision_velocity — ⚪ NO_DATA
-```json
-{
-  "up_hits": 1,
-  "down_hits": 0,
-  "total": 1,
-  "down_ratio": 0.0
-}
-```
-
-### M9 valuation — 🟢 GREEN
-```json
-{
-  "as_of": "2026-11-02",
-  "per": 27.01,
-  "per_pct": 58.3,
-  "per_then": 28.75,
-  "per_pct_then": 77.2,
-  "pbr": 9.39,
-  "dividend_yield": 0.94,
-  "history_years": 3,
-  "n": 733
-}
-```
-
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**54/54**
+- 本次回填 **8** 筆；state 已有 outcomes 的 entry：**55/55**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-12-31）
 | 模組 | GREEN n / T+20 超額 | YELLOW+RED n / 超額 | 狀態翻轉 | 判準 |
 |---|---|---|---|---|
-| M1 | 7 / +0.81 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M2 | 7 / +0.81 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M4 | 6 / +0.84 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M5 | 5 / +1.25 | 14 / +0.86 | 27 | 累積中（GREEN n=5 < 30）；方向對 |
-| M6 | 7 / +0.81 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
+| M1 | 8 / +1.00 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
+| M2 | 8 / +1.00 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
+| M4 | 7 / +1.05 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
+| M5 | 5 / +1.25 | 15 / +0.96 | 27 | 累積中（GREEN n=5 < 30）；方向對 |
+| M6 | 8 / +1.00 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 | M8 | 0 / — | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 
 _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組，cohort 比較等於比兩段日曆時間。翻轉 < 3 次一律「無法判定」。_
