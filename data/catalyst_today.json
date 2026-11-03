@@ -1,64 +1,146 @@
 {
-  "updated_at": "2026-11-01T23:48:37.705543",
+  "updated_at": "2026-11-03T02:33:30.969590",
   "stats": {
     "total_items": 57,
-    "items_with_company": 6,
-    "items_with_catalyst": 6,
-    "items_both": 1
+    "items_with_company": 16,
+    "items_with_catalyst": 12,
+    "items_both": 6
   },
-  "count": 9,
+  "count": 11,
   "tickers": [
-    "BRK-B",
-    "META",
-    "GOOGL",
+    "AAPL",
+    "PLTR",
+    "INTC",
+    "TSM",
+    "MRVL",
+    "CRWD",
+    "TGT",
     "XYZ",
-    "AMZN",
-    "JPM",
-    "RIVN",
-    "F",
-    "AAPL"
+    "NVDA",
+    "ORCL",
+    "DIS"
   ],
   "details": [
     {
-      "symbol": "BRK-B",
-      "score": 2,
+      "symbol": "AAPL",
+      "score": 5.5,
       "evidence": [
         {
-          "title": "Berkshire ekes out some new highs, but October rally stalls",
+          "title": "CrowdStrike lands an upgrade, and Jim Cramer's advice on Apple ahead of earnings",
           "catalysts": [
-            "rally"
+            "upgrade"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Apple’s iPhone business is booming. Here’s why the stock is falling anyway.",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple forecasts margin drop in holiday quarter as rising memory costs bite",
+          "catalysts": [
+            "rising"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "META",
-      "score": 1.5,
+      "symbol": "PLTR",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Why AI is boosting Meta's ad business while hurting Google search",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Palantir reports booming U.S. commercial revenue growth, topping government for first time",
+          "catalysts": [
+            "jumped"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "For JPMorgan, Amazon, fighting AI bots like Meta Muse may not be a winning long-term strategy",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Here’s why Palantir’s stock is down despite a ‘bombastic’ quarter",
+          "catalysts": [
+            "earnings beat"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Meta outlook revised downward by S&P on cash flow and capex concerns",
+          "title": "Palantir earnings reveal a major AI turning point",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GOOGL",
-      "score": 0.5,
+      "symbol": "INTC",
+      "score": 4,
       "evidence": [
         {
-          "title": "Why AI is boosting Meta's ad business while hurting Google search",
+          "title": "Intel foundry push faces critical test after stock's 45% plunge in October",
+          "catalysts": [
+            "plunge",
+            "foundry"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Intel foundry push faces critical test after stock's 45% plunge in October",
+          "catalysts": [
+            "plunge",
+            "foundry"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MRVL",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Lumentum CEO touts 'enormous' opportunity in massive AI connectivity deal with Marvell",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Marvell and Lumentum shareholders unite in panning merger deal: ‘It’s a trash offer’",
+          "catalysts": [
+            "merger"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "CrowdStrike lands an upgrade, and Jim Cramer's advice on Apple ahead of earnings",
+          "catalysts": [
+            "upgrade"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Disney eyes thousands of layoffs, asks managers to target 20% savings, Bloomberg News reports",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Onsemi outlines AI data center revenue target of more than $3B by 2030, backed by $600M Ferric deal",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -69,62 +151,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "For JPMorgan, Amazon, fighting AI bots like Meta Muse may not be a winning long-term strategy",
+          "title": "Supreme Court rejects DOJ's bid to block California from counting disputed ballots",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "For JPMorgan, Amazon, fighting AI bots like Meta Muse may not be a winning long-term strategy",
+          "title": "CNBC's The China Connection newsletter: Nvidia's humanoid push relies on China-made robot hands",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "JPM",
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "For JPMorgan, Amazon, fighting AI bots like Meta Muse may not be a winning long-term strategy",
+          "title": "Oracle files to sell $20 billion in new stock, bonds to finance AI buildout",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RIVN",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Automakers like Rivian and Ford are ‘democratizing 3D printing’ to reduce costs and increase speed",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "F",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Automakers like Rivian and Ford are ‘democratizing 3D printing’ to reduce costs and increase speed",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Apple’s new earnings era begins at a critical time for Big Tech",
+          "title": "Disney eyes thousands of layoffs, asks managers to target 20% savings, Bloomberg News reports",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -132,7 +192,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1,
+    "Anthropic (private)": 3,
     "OpenAI (private)": 1
   }
 }
