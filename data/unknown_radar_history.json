@@ -57,9 +57,37 @@
   },
   "Nasdaq": {
     "first_seen": "2026-11-02",
-    "last_seen": "2026-11-02",
+    "last_seen": "2026-11-03",
+    "consecutive_days": 2,
+    "total_mentions": 4,
+    "ticker": "NDAQ"
+  },
+  "Kimberly": {
+    "first_seen": "2026-11-03",
+    "last_seen": "2026-11-03",
     "consecutive_days": 1,
     "total_mentions": 2,
-    "ticker": "NDAQ"
+    "ticker": "KMB"
+  },
+  "Kenvue": {
+    "first_seen": "2026-11-03",
+    "last_seen": "2026-11-03",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "KVUE"
+  },
+  "Lumentum": {
+    "first_seen": "2026-11-03",
+    "last_seen": "2026-11-03",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "LITE"
+  },
+  "Australian": {
+    "first_seen": "2026-11-03",
+    "last_seen": "2026-11-03",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "COOTW"
   }
 }
