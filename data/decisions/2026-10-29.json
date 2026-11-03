@@ -59,7 +59,16 @@
         "source": null
       },
       "note": "10/28 FOMC按兵不動，利率維持3.75–4%，兩票主張升息；BTC在8.2–8.3萬區間",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.44,
+        "t10": null,
+        "t20": null,
+        "peak": 0.44,
+        "mature": false,
+        "verdict": "❌沒噴(峰0.4x)",
+        "filled_at": "2026-11-03"
+      }
     },
     {
       "signal_id": "2026-10-29_IBIT_2026-11-20_53.0",
@@ -101,7 +110,16 @@
         "source": null
       },
       "note": "10/28 FOMC按兵不動，利率維持3.75–4%，兩票主張升息；BTC在8.2–8.3萬區間",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.55,
+        "t10": null,
+        "t20": null,
+        "peak": 0.55,
+        "mature": false,
+        "verdict": "➖持平(峰0.5x/今0.5x)",
+        "filled_at": "2026-11-03"
+      }
     },
     {
       "signal_id": "2026-10-29_IBIT_2026-12-18_50.0",
@@ -143,7 +161,16 @@
         "source": "https://www.federalreserve.gov/newsevents/2026-december.htm"
       },
       "note": "報導指升息疑慮壓制BTC；ETF沒有財報，查不到發行方的排定事件",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.74,
+        "t10": null,
+        "t20": null,
+        "peak": 0.74,
+        "mature": false,
+        "verdict": "➖持平(峰0.7x/今0.7x)",
+        "filled_at": "2026-11-03"
+      }
     }
   ],
   "facts_proposed": [
