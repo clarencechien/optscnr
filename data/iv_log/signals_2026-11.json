@@ -1065,5 +1065,256 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-11-02_ORCL_2026-11-13_140.0",
+    "snapshot_date": "2026-11-02",
+    "ticker": "ORCL",
+    "expiry": "2026-11-13",
+    "strike": 140.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次12-14)",
+    "entry_price": 0.55,
+    "entry_iv": 66.30893066406252,
+    "entry_spot": 119.22000122070312,
+    "oi": 1702,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-14)"
+    ],
+    "volume": 3452,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.53,
+    "entry_ask": 0.57,
+    "last_trade_at": "2026-11-02 20:58:47",
+    "quote_at": "2026-11-03T03:29:47Z",
+    "underlying_at": "2026-11-03T03:29:47Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-02",
+        "spot": 119.22000122070312,
+        "last": 0.55,
+        "bid": 0.53,
+        "ask": 0.57,
+        "iv": 66.30893066406252
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-02_TSM_2027-03-19_560.0",
+    "snapshot_date": "2026-11-02",
+    "ticker": "TSM",
+    "expiry": "2027-03-19",
+    "strike": 560.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(01-14)",
+    "entry_price": 3.7,
+    "entry_iv": 39.31335101318359,
+    "entry_spot": 398.6300048828125,
+    "oi": 1940,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(01-14)"
+    ],
+    "volume": 15045,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.55,
+    "entry_ask": 4.05,
+    "last_trade_at": "2026-11-02 19:52:32",
+    "quote_at": "2026-11-03T03:29:47Z",
+    "underlying_at": "2026-11-03T03:29:47Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-02",
+        "spot": 398.6300048828125,
+        "last": 3.7,
+        "bid": 3.55,
+        "ask": 4.05,
+        "iv": 39.31335101318359
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-02_MRVL_2026-11-20_200.0",
+    "snapshot_date": "2026-11-02",
+    "ticker": "MRVL",
+    "expiry": "2026-11-20",
+    "strike": 200.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次12-01)",
+    "entry_price": 3.45,
+    "entry_iv": 79.17501293945313,
+    "entry_spot": 171.41000366210938,
+    "oi": 2000,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-01)"
+    ],
+    "volume": 7263,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.35,
+    "entry_ask": 3.45,
+    "last_trade_at": "2026-11-02 20:59:59",
+    "quote_at": "2026-11-03T03:29:47Z",
+    "underlying_at": "2026-11-03T03:29:47Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-02",
+        "spot": 171.41000366210938,
+        "last": 3.45,
+        "bid": 3.35,
+        "ask": 3.45,
+        "iv": 79.17501293945313
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-02_MRVL_2026-11-20_220.0",
+    "snapshot_date": "2026-11-02",
+    "ticker": "MRVL",
+    "expiry": "2026-11-20",
+    "strike": 220.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次12-01)",
+    "entry_price": 1.16,
+    "entry_iv": 78.75997802734375,
+    "entry_spot": 171.41000366210938,
+    "oi": 2857,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-01)"
+    ],
+    "volume": 4154,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.14,
+    "entry_ask": 1.2,
+    "last_trade_at": "2026-11-02 20:59:34",
+    "quote_at": "2026-11-03T03:29:47Z",
+    "underlying_at": "2026-11-03T03:29:47Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-02",
+        "spot": 171.41000366210938,
+        "last": 1.16,
+        "bid": 1.14,
+        "ask": 1.2,
+        "iv": 78.75997802734375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-02_MRVL_2026-11-20_210.0",
+    "snapshot_date": "2026-11-02",
+    "ticker": "MRVL",
+    "expiry": "2026-11-20",
+    "strike": 210.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次12-01)",
+    "entry_price": 2.0,
+    "entry_iv": 78.8088056640625,
+    "entry_spot": 171.41000366210938,
+    "oi": 1505,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-01)"
+    ],
+    "volume": 2067,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.97,
+    "entry_ask": 2.06,
+    "last_trade_at": "2026-11-02 20:56:24",
+    "quote_at": "2026-11-03T03:29:47Z",
+    "underlying_at": "2026-11-03T03:29:47Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-02",
+        "spot": 171.41000366210938,
+        "last": 2.0,
+        "bid": 1.97,
+        "ask": 2.06,
+        "iv": 78.8088056640625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
