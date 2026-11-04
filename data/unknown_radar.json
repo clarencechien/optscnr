@@ -1,65 +1,29 @@
 {
-  "updated_at": "2026-11-03T03:04:10.720888",
-  "count": 5,
+  "updated_at": "2026-11-04T01:39:38.887233",
+  "count": 2,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
+      "name": "JetBlue",
+      "ticker": "JBLU",
       "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
+      "total_mentions": 7,
+      "consecutive_days": 3,
       "is_strong": true,
       "evidence": [
-        "Nasdaq-100 tumbles into its third correction this year as AI worries mount",
-        "Traders rushing into a leveraged ETF to make a bullish bet on the Nasdaq-100 just got burned"
+        "JetBlue raises bag fees for third time in a year as fuel costs bite",
+        "JetBlue raises bag fees for third time in a year as fuel costs bite"
       ]
     },
     {
-      "name": "Kimberly",
-      "ticker": "KMB",
+      "name": "Mitsui Chemicals",
+      "ticker": "MITUF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Kimberly-Clark closes its acquisition of Tylenol maker Kenvue. What to expect next",
-        "Kimberly-Clark closes its acquisition of Tylenol maker Kenvue. What to expect next"
-      ]
-    },
-    {
-      "name": "Kenvue",
-      "ticker": "KVUE",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Kimberly-Clark closes its acquisition of Tylenol maker Kenvue. What to expect next",
-        "Kimberly-Clark closes its acquisition of Tylenol maker Kenvue. What to expect next"
-      ]
-    },
-    {
-      "name": "Lumentum",
-      "ticker": "LITE",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Marvell and Lumentum shareholders unite in panning merger deal: ‘It’s a trash offer’",
-        "Marvell and Lumentum shareholders unite in panning merger deal: ‘It’s a trash offer’"
-      ]
-    },
-    {
-      "name": "Australian",
-      "ticker": "COOTW",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Exclusive-Australian outback data centre pulls timeline after regulator stalls",
-        "Anthropic plans Australian share offer in IPO, CommSec says"
+        "Japan state fund to sell JSR to Mitsui Chemicals for $8.2 bln- Reuters",
+        "Exclusive-Japan fund JIC plans to sell JSR to Mitsui Chemicals, sources say"
       ]
     }
   ]

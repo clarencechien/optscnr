@@ -1,24 +1,10 @@
 {
-  "Cheesecake Factory": {
-    "first_seen": "2026-10-27",
-    "last_seen": "2026-10-27",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "CAKE"
-  },
   "JetBlue": {
     "first_seen": "2026-10-27",
-    "last_seen": "2026-10-28",
-    "consecutive_days": 2,
-    "total_mentions": 5,
+    "last_seen": "2026-11-04",
+    "consecutive_days": 3,
+    "total_mentions": 7,
     "ticker": "JBLU"
-  },
-  "Apollo": {
-    "first_seen": "2026-10-27",
-    "last_seen": "2026-10-27",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "APOS"
   },
   "DoorDash": {
     "first_seen": "2026-10-27",
@@ -89,5 +75,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "COOTW"
+  },
+  "Mitsui Chemicals": {
+    "first_seen": "2026-11-04",
+    "last_seen": "2026-11-04",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "MITUF"
   }
 }
