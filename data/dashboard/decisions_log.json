@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T02:33:38Z",
+ "generated_at": "2026-11-04T23:17:33Z",
  "n_days": 42,
  "t8_by_event_answer": {
   "有": {
@@ -13,9 +13,9 @@
    "avg_peak": 1.48
   },
   "未確認": {
-   "n": 4,
+   "n": 5,
    "hit_rate": 0.0,
-   "avg_peak": 0.73
+   "avg_peak": 0.75
   }
  },
  "days": [
@@ -87,7 +87,15 @@
      },
      "note": "公司10/28確認11/17盤後財報；指引營收$1,080億±2%、不含中國",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.57,
+      "t10": null,
+      "t20": null,
+      "peak": 0.57,
+      "mature": false,
+      "verdict": "➖持平(峰0.6x/今0.6x)",
+      "filled_at": "2026-11-04"
+     }
     },
     {
      "signal_id": "2026-10-30_IBIT_2026-11-20_53.0",
@@ -128,7 +136,15 @@
      },
      "note": "ETF無財報；查無到期前排定事件",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.67,
+      "t10": null,
+      "t20": null,
+      "peak": 0.67,
+      "mature": false,
+      "verdict": "➖持平(峰0.7x/今0.7x)",
+      "filled_at": "2026-11-04"
+     }
     }
    ]
   },
@@ -187,7 +203,7 @@
       "peak": 0.44,
       "mature": false,
       "verdict": "❌沒噴(峰0.4x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     },
     {
@@ -236,7 +252,7 @@
       "peak": 0.55,
       "mature": false,
       "verdict": "➖持平(峰0.5x/今0.5x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     },
     {
@@ -285,7 +301,7 @@
       "peak": 0.74,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     }
    ]
@@ -345,7 +361,7 @@
       "peak": 0.26,
       "mature": false,
       "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     }
    ]
@@ -405,7 +421,7 @@
       "peak": 0.53,
       "mature": false,
       "verdict": "➖持平(峰0.5x/今0.5x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     },
     {
@@ -454,7 +470,7 @@
       "peak": 1.07,
       "mature": false,
       "verdict": "➖持平(峰1.1x/今1.1x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     }
    ]
@@ -514,7 +530,7 @@
       "peak": 0.35,
       "mature": false,
       "verdict": "❌沒噴(峰0.4x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     },
     {
@@ -563,7 +579,7 @@
       "peak": 1.41,
       "mature": false,
       "verdict": "➖持平(峰1.4x/今1.4x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     },
     {
@@ -612,7 +628,7 @@
       "peak": 0.54,
       "mature": false,
       "verdict": "➖持平(峰0.5x/今0.5x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     }
    ]
@@ -692,7 +708,7 @@
       "peak": 0.29,
       "mature": false,
       "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     },
     {
@@ -741,7 +757,7 @@
       "peak": 0.27,
       "mature": false,
       "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     }
    ]
@@ -801,7 +817,7 @@
       "peak": 0.57,
       "mature": false,
       "verdict": "➖持平(峰0.6x/今0.3x)",
-      "filled_at": "2026-11-03"
+      "filled_at": "2026-11-04"
      }
     }
    ]
@@ -881,11 +897,11 @@
      "outcome": {
       "t5": 0.84,
       "t10": 0.77,
-      "t20": null,
+      "t20": 0.17,
       "peak": 0.84,
-      "mature": false,
-      "verdict": "➖持平(峰0.8x/今0.8x)",
-      "filled_at": "2026-11-03"
+      "mature": true,
+      "verdict": "➖持平(峰0.8x/今0.2x)",
+      "filled_at": "2026-11-04"
      }
     }
    ]
