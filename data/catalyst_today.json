@@ -1,44 +1,47 @@
 {
-  "updated_at": "2026-11-03T02:33:30.969590",
+  "updated_at": "2026-11-04T00:48:33.077183",
   "stats": {
     "total_items": 57,
-    "items_with_company": 16,
-    "items_with_catalyst": 12,
-    "items_both": 6
+    "items_with_company": 20,
+    "items_with_catalyst": 11,
+    "items_both": 8
   },
-  "count": 11,
+  "count": 14,
   "tickers": [
+    "AMD",
     "AAPL",
-    "PLTR",
-    "INTC",
-    "TSM",
-    "MRVL",
-    "CRWD",
-    "TGT",
     "XYZ",
-    "NVDA",
-    "ORCL",
-    "DIS"
+    "CRWD",
+    "META",
+    "SMCI",
+    "TGT",
+    "DIS",
+    "PFE",
+    "SHOP",
+    "GOOGL",
+    "AVGO",
+    "TSLA",
+    "BRK-B"
   ],
   "details": [
     {
-      "symbol": "AAPL",
-      "score": 5.5,
+      "symbol": "AMD",
+      "score": 6.5,
       "evidence": [
         {
-          "title": "CrowdStrike lands an upgrade, and Jim Cramer's advice on Apple ahead of earnings",
+          "title": "AMD stock jumps 8% on earnings as data center revenue nearly doubles ",
           "catalysts": [
-            "upgrade"
+            "jumps"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Apple’s iPhone business is booming. Here’s why the stock is falling anyway.",
+          "title": "AMD has been crushed into earnings. Here’s one way to trade it",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Apple forecasts margin drop in holiday quarter as rising memory costs bite",
+          "title": "Here’s why AMD’s stock is rising — and sending a confident message about the AI trade",
           "catalysts": [
             "rising"
           ],
@@ -47,84 +50,92 @@
       ]
     },
     {
-      "symbol": "PLTR",
+      "symbol": "AAPL",
       "score": 4.5,
       "evidence": [
         {
-          "title": "Palantir reports booming U.S. commercial revenue growth, topping government for first time",
-          "catalysts": [
-            "jumped"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Here’s why Palantir’s stock is down despite a ‘bombastic’ quarter",
-          "catalysts": [
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Palantir earnings reveal a major AI turning point",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Intel foundry push faces critical test after stock's 45% plunge in October",
-          "catalysts": [
-            "plunge",
-            "foundry"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Intel foundry push faces critical test after stock's 45% plunge in October",
-          "catalysts": [
-            "plunge",
-            "foundry"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MRVL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Lumentum CEO touts 'enormous' opportunity in massive AI connectivity deal with Marvell",
+          "title": "Apple warns of risks related to AI agents behaving in 'unintended or unpredictable' ways",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Marvell and Lumentum shareholders unite in panning merger deal: ‘It’s a trash offer’",
+          "title": "Apple stock sinks as global memory crisis hurts profits, giving Ternus his first big test",
           "catalysts": [
-            "merger"
+            "sinks"
           ],
           "has_catalyst": true
+        },
+        {
+          "title": "What analysts are telling us while Apple’s stock falls after earnings report",
+          "catalysts": [
+            "falls"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "XYZ",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "CrowdStrike launches AI kill switch that it says can stop internal agents that go rogue",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Bill Ackman warns of 'casino' stock market as speculative trading grows",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Block outlines 2027 outlook for at least 15% gross profit growth while planning first AI revenue in Q4 2026",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "CRWD",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "CrowdStrike's new kill switch can stop rogue AI agents in their tracks, CEO says",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "CrowdStrike launches AI kill switch that it says can stop internal agents that go rogue",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "META",
       "score": 2,
       "evidence": [
         {
-          "title": "CrowdStrike lands an upgrade, and Jim Cramer's advice on Apple ahead of earnings",
+          "title": "Meta seeks to raise up to $25 billion in debt sale as AI spending jumps",
           "catalysts": [
-            "upgrade"
+            "jumps"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "SMCI",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Super Micro’s stock pops as earnings show booming demand for AI servers",
+          "catalysts": [
+            "pops"
           ],
           "has_catalyst": true
         }
@@ -132,48 +143,10 @@
     },
     {
       "symbol": "TGT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Disney eyes thousands of layoffs, asks managers to target 20% savings, Bloomberg News reports",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Onsemi outlines AI data center revenue target of more than $3B by 2030, backed by $600M Ferric deal",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Supreme Court rejects DOJ's bid to block California from counting disputed ballots",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "CNBC's The China Connection newsletter: Nvidia's humanoid push relies on China-made robot hands",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Oracle files to sell $20 billion in new stock, bonds to finance AI buildout",
+          "title": "Trump DOJ sends target letters to Democrats in Alaska Senate criminal probe: Reports",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -184,7 +157,73 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Disney eyes thousands of layoffs, asks managers to target 20% savings, Bloomberg News reports",
+          "title": "Disney plans several thousand layoffs, asks some managers to cut costs by up to 20%",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PFE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Pfizer hikes full-year outlook on new product growth, taps company veteran as new CFO",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SHOP",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Shopify’s stock slides after earnings. This is what’s worrying Wall Street.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Anthropic’s IPO is a high-stakes referendum on Big Tech — and this chart proves it",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Anthropic’s IPO is a high-stakes referendum on Big Tech — and this chart proves it",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Exclusive-Tesla misled South Korean customers about automated-driving tech, consumer group alleges",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Berkshire-owned utility urges Oregon top court against ’mammoth’ wildfire class action",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -192,7 +231,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 1
+    "Anthropic (private)": 1
   }
 }
