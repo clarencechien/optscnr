@@ -2486,5 +2486,56 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-11-03_GOOGL_2026-11-13_340.0",
+    "snapshot_date": "2026-11-03",
+    "ticker": "GOOGL",
+    "expiry": "2026-11-13",
+    "strike": 340.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅財報已過(10-28)",
+    "entry_price": 0.13,
+    "entry_iv": 50.97705273437501,
+    "entry_spot": 280.0299987792969,
+    "oi": 1167,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(10-28)"
+    ],
+    "volume": 1849,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.04,
+    "entry_ask": 0.15,
+    "last_trade_at": "2026-11-03 20:41:20",
+    "quote_at": "2026-11-04T02:25:15Z",
+    "underlying_at": "2026-11-04T02:25:15Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-03",
+        "spot": 280.0299987792969,
+        "last": 0.13,
+        "bid": 0.04,
+        "ask": 0.15,
+        "iv": 50.97705273437501
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
