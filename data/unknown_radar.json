@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-11-04T01:39:38.887233",
+  "updated_at": "2026-11-05T01:48:15.127946",
   "count": 2,
   "blind_spots": [
     {
-      "name": "JetBlue",
-      "ticker": "JBLU",
-      "mentions_today": 2,
-      "total_mentions": 7,
-      "consecutive_days": 3,
-      "is_strong": true,
+      "name": "Figma",
+      "ticker": "FIG",
+      "mentions_today": 4,
+      "total_mentions": 4,
+      "consecutive_days": 1,
+      "is_strong": false,
       "evidence": [
-        "JetBlue raises bag fees for third time in a year as fuel costs bite",
-        "JetBlue raises bag fees for third time in a year as fuel costs bite"
+        "Figma sinks after earnings beat as company prioritizes long-term growth with AI changes",
+        "Figma sinks after earnings beat as company prioritizes long-term growth with AI changes"
       ]
     },
     {
-      "name": "Mitsui Chemicals",
-      "ticker": "MITUF",
+      "name": "Digital Realty",
+      "ticker": "DLR-PJ",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Japan state fund to sell JSR to Mitsui Chemicals for $8.2 bln- Reuters",
-        "Exclusive-Japan fund JIC plans to sell JSR to Mitsui Chemicals, sources say"
+        "NextDC shares surge 43% after Goodman, Digital Realty stake purchases",
+        "NextDC shares surge 43% after Goodman, Digital Realty stake purchases"
       ]
     }
   ]

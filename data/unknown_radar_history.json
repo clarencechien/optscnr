@@ -13,13 +13,6 @@
     "total_mentions": 5,
     "ticker": "DASH"
   },
-  "Royal Caribbean": {
-    "first_seen": "2026-10-28",
-    "last_seen": "2026-10-28",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "RCL"
-  },
   "Fortinet": {
     "first_seen": "2026-10-29",
     "last_seen": "2026-10-29",
@@ -82,5 +75,19 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "MITUF"
+  },
+  "Digital Realty": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "DLR-PJ"
+  },
+  "Figma": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "consecutive_days": 1,
+    "total_mentions": 4,
+    "ticker": "FIG"
   }
 }
