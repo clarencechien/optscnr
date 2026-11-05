@@ -1,72 +1,42 @@
 {
-  "updated_at": "2026-11-04T00:48:33.077183",
+  "updated_at": "2026-11-05T01:00:07.045753",
   "stats": {
     "total_items": 57,
-    "items_with_company": 20,
-    "items_with_catalyst": 11,
-    "items_both": 8
+    "items_with_company": 9,
+    "items_with_catalyst": 14,
+    "items_both": 3
   },
-  "count": 14,
+  "count": 9,
   "tickers": [
-    "AMD",
+    "QCOM",
     "AAPL",
-    "XYZ",
-    "CRWD",
+    "MSFT",
+    "AMZN",
     "META",
-    "SMCI",
-    "TGT",
-    "DIS",
-    "PFE",
-    "SHOP",
     "GOOGL",
-    "AVGO",
-    "TSLA",
-    "BRK-B"
+    "VST",
+    "MU",
+    "TGT"
   ],
   "details": [
     {
-      "symbol": "AMD",
-      "score": 6.5,
+      "symbol": "QCOM",
+      "score": 5.0,
       "evidence": [
         {
-          "title": "AMD stock jumps 8% on earnings as data center revenue nearly doubles ",
+          "title": "Qualcomm stock drops 7% on weak earnings forecast as memory shortage weighs on smartphone sales",
           "catalysts": [
-            "jumps"
+            "drops"
           ],
           "has_catalyst": true
         },
         {
-          "title": "AMD has been crushed into earnings. Here’s one way to trade it",
+          "title": "SpaceX signs deal with Qualcomm to provide network technology for U.S. mobile service",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Here’s why AMD’s stock is rising — and sending a confident message about the AI trade",
-          "catalysts": [
-            "rising"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 4.5,
-      "evidence": [
-        {
-          "title": "Apple warns of risks related to AI agents behaving in 'unintended or unpredictable' ways",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Apple stock sinks as global memory crisis hurts profits, giving Ternus his first big test",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "What analysts are telling us while Apple’s stock falls after earnings report",
+          "title": "Qualcomm’s stock falls as twin forces pressure sales",
           "catalysts": [
             "falls"
           ],
@@ -75,43 +45,58 @@
       ]
     },
     {
-      "symbol": "XYZ",
-      "score": 3.0,
+      "symbol": "AAPL",
+      "score": 4,
       "evidence": [
         {
-          "title": "CrowdStrike launches AI kill switch that it says can stop internal agents that go rogue",
+          "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
           "catalysts": [
-            "launches"
+            "surge"
           ],
           "has_catalyst": true
         },
         {
-          "title": "Bill Ackman warns of 'casino' stock market as speculative trading grows",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Qualcomm’s stock falls as twin forces pressure sales",
+          "catalysts": [
+            "falls"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "Block outlines 2027 outlook for at least 15% gross profit growth while planning first AI revenue in Q4 2026",
+          "title": "Microsoft and Amazon combined to see a $424 billion market-cap boost — and these factors show why",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWD",
+      "symbol": "AMZN",
       "score": 2.5,
       "evidence": [
         {
-          "title": "CrowdStrike's new kill switch can stop rogue AI agents in their tracks, CEO says",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "CrowdStrike launches AI kill switch that it says can stop internal agents that go rogue",
+          "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
           "catalysts": [
-            "launches"
+            "surge"
           ],
           "has_catalyst": true
+        },
+        {
+          "title": "Microsoft and Amazon combined to see a $424 billion market-cap boost — and these factors show why",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
@@ -120,24 +105,46 @@
       "score": 2,
       "evidence": [
         {
-          "title": "Meta seeks to raise up to $25 billion in debt sale as AI spending jumps",
+          "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
           "catalysts": [
-            "jumps"
+            "surge"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "SMCI",
+      "symbol": "GOOGL",
       "score": 2,
       "evidence": [
         {
-          "title": "Super Micro’s stock pops as earnings show booming demand for AI servers",
+          "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
           "catalysts": [
-            "pops"
+            "surge"
           ],
           "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "VST",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "As Vistra and other energy stocks slide, some analysts warn of an ‘excessive knee-jerk’ reaction",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Micron and other chip stocks slip as election results strike at the core of data-center optimism",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
@@ -146,91 +153,12 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Trump DOJ sends target letters to Democrats in Alaska Senate criminal probe: Reports",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Disney plans several thousand layoffs, asks some managers to cut costs by up to 20%",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PFE",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Pfizer hikes full-year outlook on new product growth, taps company veteran as new CFO",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SHOP",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Shopify’s stock slides after earnings. This is what’s worrying Wall Street.",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Anthropic’s IPO is a high-stakes referendum on Big Tech — and this chart proves it",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AVGO",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Anthropic’s IPO is a high-stakes referendum on Big Tech — and this chart proves it",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Exclusive-Tesla misled South Korean customers about automated-driving tech, consumer group alleges",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BRK-B",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Berkshire-owned utility urges Oregon top court against ’mammoth’ wildfire class action",
+          "title": "Kennametal projects FY 2027 adjusted EPS of $5-$6 while outlining 16%-19% long-term EBITDA margin target",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "Anthropic (private)": 1
-  }
+  "watch_only": {}
 }
