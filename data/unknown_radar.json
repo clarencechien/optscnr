@@ -1,29 +1,17 @@
 {
-  "updated_at": "2026-11-05T01:48:15.127946",
-  "count": 2,
+  "updated_at": "2026-11-06T01:48:14.954944",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Figma",
-      "ticker": "FIG",
-      "mentions_today": 4,
-      "total_mentions": 4,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 3,
+      "total_mentions": 7,
+      "consecutive_days": 3,
+      "is_strong": true,
       "evidence": [
-        "Figma sinks after earnings beat as company prioritizes long-term growth with AI changes",
-        "Figma sinks after earnings beat as company prioritizes long-term growth with AI changes"
-      ]
-    },
-    {
-      "name": "Digital Realty",
-      "ticker": "DLR-PJ",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "NextDC shares surge 43% after Goodman, Digital Realty stake purchases",
-        "NextDC shares surge 43% after Goodman, Digital Realty stake purchases"
+        "Nasdaq sell-off batters Asian chip stocks as SK Hynix, Samsung, Softbank, TSMC tumble",
+        "Nasdaq posts biggest daily drop in 19 months on fears of AI regulations"
       ]
     }
   ]

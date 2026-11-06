@@ -13,13 +13,6 @@
     "total_mentions": 5,
     "ticker": "DASH"
   },
-  "Fortinet": {
-    "first_seen": "2026-10-29",
-    "last_seen": "2026-10-29",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "FTNT"
-  },
   "Reddit": {
     "first_seen": "2026-10-30",
     "last_seen": "2026-10-31",
@@ -36,9 +29,9 @@
   },
   "Nasdaq": {
     "first_seen": "2026-11-02",
-    "last_seen": "2026-11-03",
-    "consecutive_days": 2,
-    "total_mentions": 4,
+    "last_seen": "2026-11-06",
+    "consecutive_days": 3,
+    "total_mentions": 7,
     "ticker": "NDAQ"
   },
   "Kimberly": {
