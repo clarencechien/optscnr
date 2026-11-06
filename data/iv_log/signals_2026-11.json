@@ -9168,5 +9168,55 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-11-05_JPM_2026-11-13_352.5",
+    "snapshot_date": "2026-11-05",
+    "ticker": "JPM",
+    "expiry": "2026-11-13",
+    "strike": 352.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次01-14)",
+    "entry_price": 1.38,
+    "entry_iv": 31.482618774414057,
+    "entry_spot": 337.3399963378906,
+    "oi": 800,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-14)"
+    ],
+    "volume": 1132,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.05,
+    "entry_ask": 1.49,
+    "last_trade_at": "2026-11-05 20:55:47",
+    "quote_at": "2026-11-06T02:33:27Z",
+    "underlying_at": "2026-11-06T02:33:27Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-05",
+        "spot": 337.3399963378906,
+        "last": 1.38,
+        "bid": 1.05,
+        "ask": 1.49,
+        "iv": 31.482618774414057
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]

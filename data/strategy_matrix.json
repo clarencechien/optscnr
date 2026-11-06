@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-05 23:16 UTC",
+  "generated_at": "2026-11-06 02:40 UTC",
   "prereg_date": "2026-09-08",
   "cost_factor": 0.86,
   "min_n": 30,
-  "n_signals": 2856,
+  "n_signals": 2857,
   "n_mature": 1265,
   "overall": {
     "n": 1265,
