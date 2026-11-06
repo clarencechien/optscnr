@@ -14403,8 +14403,8 @@
       "t5_excess_pct": -9.93,
       "t10_ret_pct": -20.73,
       "t10_excess_pct": -13.56,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -48.54,
+      "t20_excess_pct": -27.94
     }
   },
   {
@@ -17452,8 +17452,8 @@
       "entry_date": "2026-10-30",
       "benchmark": "0050",
       "entry_close": 1335.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -20.97,
+      "t5_excess_pct": -9.11,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -18070,6 +18070,104 @@
       "entry_date": "2026-11-05",
       "benchmark": "0050",
       "entry_close": 1130.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-11-06T09:52:12.960513+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "capex_cut:4e / vr300_delay:8e(9m) / debt_financed_capex:13e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 4,
+            "vr300_delay": 8,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 4,
+            "vr300_delay": 9,
+            "debt_financed_capex": 13,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 4,
+              "mentions": 4,
+              "gate": "zscore",
+              "z": -1.74,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 8,
+              "mentions": 9,
+              "gate": "zscore",
+              "z": -1.44,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 13,
+              "mentions": 13,
+              "gate": "zscore",
+              "z": 0.06,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool",
+          "[capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[capex_cut] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[debt_financed_capex] AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. - CNBC",
+          "[debt_financed_capex] AI Investment Returns Under Scrutiny in November 2026: Rising Debt and Big Tech's Cash Flow Concerns - KuCoin",
+          "[debt_financed_capex] Top hyperscalers likely to have more AI-linked debt than now known, S&P Global warns - Reuters"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 RED、價格 20 日 -48.5%）；PER 33.9，3 年分位 87 → 58",
+      "premise": "RED",
+      "premise_ts": "2026-11-05T11:30:27.955227+00:00",
+      "ret_pct": -48.54,
+      "lookback_sessions": 20,
+      "as_of": "2026-11-06",
+      "valuation": {
+        "per": 33.93,
+        "per_pct": 57.7,
+        "per_then": 63.81,
+        "per_pct_then": 87.2,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-11-06",
+      "benchmark": "0050",
+      "entry_close": 1055.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
