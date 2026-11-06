@@ -1,124 +1,40 @@
 {
-  "updated_at": "2026-11-05T01:00:07.045753",
+  "updated_at": "2026-11-06T01:04:02.039896",
   "stats": {
     "total_items": 57,
-    "items_with_company": 9,
+    "items_with_company": 7,
     "items_with_catalyst": 14,
-    "items_both": 3
+    "items_both": 2
   },
-  "count": 9,
+  "count": 6,
   "tickers": [
-    "QCOM",
-    "AAPL",
-    "MSFT",
-    "AMZN",
-    "META",
-    "GOOGL",
-    "VST",
-    "MU",
-    "TGT"
+    "COST",
+    "NET",
+    "TSLA",
+    "NVDA",
+    "JPM",
+    "U"
   ],
   "details": [
     {
-      "symbol": "QCOM",
-      "score": 5.0,
-      "evidence": [
-        {
-          "title": "Qualcomm stock drops 7% on weak earnings forecast as memory shortage weighs on smartphone sales",
-          "catalysts": [
-            "drops"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "SpaceX signs deal with Qualcomm to provide network technology for U.S. mobile service",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Qualcomm’s stock falls as twin forces pressure sales",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 4,
-      "evidence": [
-        {
-          "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Qualcomm’s stock falls as twin forces pressure sales",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Microsoft and Amazon combined to see a $424 billion market-cap boost — and these factors show why",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Microsoft and Amazon combined to see a $424 billion market-cap boost — and these factors show why",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
+      "symbol": "COST",
       "score": 2,
       "evidence": [
         {
-          "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
+          "title": "Costco is taking aim at its May record high — how it got here and where's it going",
           "catalysts": [
-            "surge"
+            "record high"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "GOOGL",
+      "symbol": "NET",
       "score": 2,
       "evidence": [
         {
-          "title": "Hyperscalers and Apple surge after election results remove investor uncertainty",
+          "title": "Cloudflare’s stock mounts a big comeback after fastest sales surge in nearly 4 years",
           "catalysts": [
             "surge"
           ],
@@ -127,38 +43,56 @@
       ]
     },
     {
-      "symbol": "VST",
-      "score": 0.5,
+      "symbol": "TSLA",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "As Vistra and other energy stocks slide, some analysts warn of an ‘excessive knee-jerk’ reaction",
+          "title": "Elon Musk's Tesla and SpaceX lose over $420 billion in combined market cap after midterms",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "The ‘Musk selloff’ deepens as Tesla and SpaceX combine for $456 billion two-day wipeout",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "NVDA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Micron and other chip stocks slip as election results strike at the core of data-center optimism",
+          "title": "Nvidia's Huang is asked to brief Congress on reported Chinese spy relationship",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "JPM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Kennametal projects FY 2027 adjusted EPS of $5-$6 while outlining 16%-19% long-term EBITDA margin target",
+          "title": "Democrats to probe JPMorgan's relationship with Jeffrey Epstein when they take Senate control",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "U",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Why is Unity Software stock surging after-hours today?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "Anthropic (private)": 1
+  }
 }
