@@ -1,0 +1,130 @@
+{
+  "market_date": "2026-11-05",
+  "decided_at": "2026-11-06T00:35:07.820Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-11-05T23:05:36Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 44,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-11-05_GOOGL_2027-01-15_325.0",
+      "ticker": "GOOGL",
+      "expiry": "2027-01-15",
+      "strike": 325,
+      "entry_price": 4.2,
+      "strategy": "C_LADDER4",
+      "strategy_label": "4口階梯 2/4/8x + 1口 runner（實彈）",
+      "sell_points": {
+        "take_profit": [
+          8.4,
+          16.8,
+          33.6
+        ],
+        "stop": null,
+        "exit_by": "2026-12-25",
+        "note": "4 口：三口掛 2/4/8x 限價，最後一口 DTE 21 出"
+      },
+      "facts_used": 2,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 5,
+        "missing_days": 1,
+        "max_move": {
+          "pct": 3.2,
+          "date": "2026-11-04"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "未確認",
+        "date": null,
+        "what": "到期日 2027-01-15 前查不到已排定的催化事件；10-28 財報已過，市場預估的 2027-02-03 Q4 財報在到期日之後",
+        "source": null
+      },
+      "note": "Q3財報2026-10-28已過，營收與EPS雙雙不如預期；Q4財報預估2027-02-03，公司尚未公告",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "GOOGL",
+      "fact": "Q3 2026 財報於 2026-10-28 盤後公布：營收 $1,275.8 億，低於預期 $1,282.2 億；調整後 EPS $2.67，低於預期 $3.02，是近四年來首次營收和獲利同時不如預期；雲端營收 $307 億，高於預期 $287 億；FCF −$90.7 億，比預期的 −$27 億差得多；Q3 資本支出 $513.6 億，低於預期 $550.9 億；全年資本支出指引維持 $1,950-2,050 億",
+      "date": "2026-10-28",
+      "source": "https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html"
+    },
+    {
+      "ticker": "GOOGL",
+      "fact": "Q3 GAAP EPS 為 $2.12，其中股權投資虧損 $87 億拉低 EPS $0.55；財報公布後盤後股價跌超過 8%，大於財報前選擇權隱含的約 5-6% 波動；管理層表示 2027 年資本支出會明顯增加，細節在 Q4 法說公布",
+      "date": "2026-10-28",
+      "source": "https://www.cmelitegroup.com/knowledge-hub/alphabet-earnings-date/"
+    },
+    {
+      "ticker": "GOOGL",
+      "fact": "Q4 2026 財報市場預估在 2027-02-03 公布（分析師預估 EPS $3.19），晚於 2027-01-15 到期日；截至 2026-10-30 公司尚未正式公告日期",
+      "date": "2027-02-03",
+      "source": "https://public.com/stocks/googl/earnings"
+    },
+    {
+      "ticker": "GOOGL",
+      "fact": "董事會宣布季度股利每股 $0.22，股權登記日 2026-12-07，發放日 2026-12-14",
+      "date": "2026-12-07",
+      "source": "https://www.cmelitegroup.com/knowledge-hub/alphabet-earnings-date/"
+    },
+    {
+      "ticker": "GOOGL",
+      "fact": "（已過）廣告科技反壟斷案：Brinkema 法官於 2026-09-02 駁回 DOJ 要求出售 AdX 的請求，改採為期 6 年的行為性救濟（與 Prebid 整合、資料分享、設置監察人）",
+      "date": "2026-09-02",
+      "source": "https://www.cnbc.com/2026/09/02/google-defeats-us-bid-to-force-ad-tech-sale.html"
+    }
+  ],
+  "facts_appended": 5,
+  "raw_answer": "{\"market_date\":\"2026-11-05\",\"candidates\":[{\"signal_id\":\"2026-11-05_GOOGL_2027-01-15_325.0\",\"q_event\":{\"answer\":\"未確認\",\"date\":null,\"what\":\"到期日 2027-01-15 前查不到已排定的催化事件；10-28 財報已過，市場預估的 2027-02-03 Q4 財報在到期日之後\",\"source\":null},\"note\":\"Q3財報2026-10-28已過，營收與EPS雙雙不如預期；Q4財報預估2027-02-03，公司尚未公告\"}],\"facts_proposed\":[{\"ticker\":\"GOOGL\",\"fact\":\"Q3 2026 財報於 2026-10-28 盤後公布：營收 $1,275.8 億，低於預期 $1,282.2 億；調整後 EPS $2.67，低於預期 $3.02，是近四年來首次營收和獲利同時不如預期；雲端營收 $307 億，高於預期 $287 億；FCF −$90.7 億，比預期的 −$27 億差得多；Q3 資本支出 $513.6 億，低於預期 $550.9 億；全年資本支出指引維持 $1,950-2,050 億\",\"date\":\"2026-10-28\",\"source\":\"https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html\"},{\"ticker\":\"GOOGL\",\"fact\":\"Q3 GAAP EPS 為 $2.12，其中股權投資虧損 $87 億拉低 EPS $0.55；財報公布後盤後股價跌超過 8%，大於財報前選擇權隱含的約 5-6% 波動；管理層表示 2027 年資本支出會明顯增加，細節在 Q4 法說公布\",\"date\":\"2026-10-28\",\"source\":\"https://www.cmelitegroup.com/knowledge-hub/alphabet-earnings-date/\"},{\"ticker\":\"GOOGL\",\"fact\":\"Q4 2026 財報市場預估在 2027-02-03 公布（分析師預估 EPS $3.19），晚於 2027-01-15 到期日；截至 2026-10-30 公司尚未正式公告日期\",\"date\":\"2027-02-03\",\"source\":\"https://public.com/stocks/googl/earnings\"},{\"ticker\":\"GOOGL\",\"fact\":\"董事會宣布季度股利每股 $0.22，股權登記日 2026-12-07，發放日 2026-12-14\",\"date\":\"2026-12-07\",\"source\":\"https://www.cmelitegroup.com/knowledge-hub/alphabet-earnings-date/\"},{\"ticker\":\"GOOGL\",\"fact\":\"（已過）廣告科技反壟斷案：Brinkema 法官於 2026-09-02 駁回 DOJ 要求出售 AdX 的請求，改採為期 6 年的行為性救濟（與 Prebid 整合、資料分享、設置監察人）\",\"date\":\"2026-09-02\",\"source\":\"https://www.cnbc.com/2026/09/02/google-defeats-us-bid-to-force-ad-tech-sale.html\"}]}",
+  "usage": {
+    "prompt_tokens": 97327,
+    "completion_tokens": 2347,
+    "total_tokens": 99674,
+    "cost": 0.466248,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.466248,
+      "upstream_inference_prompt_cost": 0.389308,
+      "upstream_inference_completions_cost": 0.04694
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1100,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 3
+    }
+  },
+  "error": null
+}
