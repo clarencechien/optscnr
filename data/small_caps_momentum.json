@@ -1,34 +1,54 @@
 {
-  "updated_at": "2026-10-31T05:42:12.618105",
+  "updated_at": "2026-11-07T05:59:20.088320",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 2,
+  "count": 4,
   "tickers": [
+    "RUN",
+    "EVGO",
     "TDOC",
     "SES"
   ],
   "details": [
     {
+      "symbol": "RUN",
+      "price": 9.98,
+      "gain_30d_pct": 30.1,
+      "market_cap_m": 2415.0,
+      "avg_volume_m": 12.0,
+      "short_pct_float": 35.6,
+      "score": 38.59
+    },
+    {
+      "symbol": "EVGO",
+      "price": 1.83,
+      "gain_30d_pct": 36.6,
+      "market_cap_m": 576.0,
+      "avg_volume_m": 7.58,
+      "short_pct_float": 25.7,
+      "score": 29.4
+    },
+    {
       "symbol": "TDOC",
-      "price": 8.51,
-      "gain_30d_pct": 35.7,
-      "market_cap_m": 1551.0,
-      "avg_volume_m": 4.86,
+      "price": 8.77,
+      "gain_30d_pct": 48.9,
+      "market_cap_m": 1599.0,
+      "avg_volume_m": 5.61,
       "short_pct_float": 17.7,
-      "score": 21.25
+      "score": 22.57
     },
     {
       "symbol": "SES",
-      "price": 0.79,
-      "gain_30d_pct": 38.6,
-      "market_cap_m": 293.0,
-      "avg_volume_m": 26.64,
+      "price": 0.83,
+      "gain_30d_pct": 56.6,
+      "market_cap_m": 309.0,
+      "avg_volume_m": 23.37,
       "short_pct_float": 13.3,
-      "score": 17.15
+      "score": 18.95
     }
   ]
 }
