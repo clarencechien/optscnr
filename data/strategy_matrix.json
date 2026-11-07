@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-06 02:40 UTC",
+  "generated_at": "2026-11-07 02:09 UTC",
   "prereg_date": "2026-09-08",
   "cost_factor": 0.86,
   "min_n": 30,
-  "n_signals": 2857,
+  "n_signals": 2908,
   "n_mature": 1265,
   "overall": {
     "n": 1265,
@@ -676,14 +676,14 @@
     "stop_half": "-50%停+2x半"
   },
   "control": {
-    "n_days": 30,
-    "n_ticker_days": 2103,
+    "n_days": 31,
+    "n_ticker_days": 2171,
     "horizon_days": 20,
     "threshold_pct": 10.0,
-    "listed_n": 583,
+    "listed_n": 594,
     "listed_rate": 0.146,
-    "universe_rate": 0.193,
-    "edge_pp": -4.7,
+    "universe_rate": 0.198,
+    "edge_pp": -5.1,
     "verdict_rule": "上榜組 − universe < 5 個百分點（≥100 個上榜標的-日後判）→ 選標的無 edge"
   }
 }
