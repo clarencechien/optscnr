@@ -1,4 +1,4 @@
-# TSMC Radar (2330.TW) — 2026-11-06 10:46 UTC
+# TSMC Radar (2330.TW) — 2026-11-07 09:59 UTC
 
 ## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
@@ -10,13 +10,13 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟡 YELLOW | export_controls_tariffs:12e(14m) / n2_arizona_ramp:20e(27m) / cowos_capacity:9e / geopolitics:1e / hyperscaler_capex:4e |
+| M5 narrative_triggers | 🟢 GREEN | export_controls_tariffs:11e(14m) / n2_arizona_ramp:20e(27m) / cowos_capacity:9e / geopolitics:1e / hyperscaler_capex:4e |
 
-### M5 narrative_triggers — 🟡 YELLOW
+### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
   "events": {
-    "export_controls_tariffs": 12,
+    "export_controls_tariffs": 11,
     "n2_arizona_ramp": 20,
     "cowos_capacity": 9,
     "geopolitics": 1,
@@ -31,38 +31,38 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
   },
   "scoring": {
     "export_controls_tariffs": {
-      "events": 12,
+      "events": 11,
       "mentions": 14,
       "gate": "zscore",
-      "z": -0.91,
+      "z": -1.69,
       "denial": false
     },
     "n2_arizona_ramp": {
       "events": 20,
       "mentions": 27,
       "gate": "zscore",
-      "z": 0.99,
+      "z": 0.82,
       "denial": true
     },
     "cowos_capacity": {
       "events": 9,
       "mentions": 9,
       "gate": "zscore",
-      "z": 1.59,
+      "z": 1.37,
       "denial": false
     },
     "geopolitics": {
       "events": 1,
       "mentions": 1,
       "gate": "zscore",
-      "z": -0.79,
+      "z": -0.72,
       "denial": false
     },
     "hyperscaler_capex": {
       "events": 4,
       "mentions": 4,
       "gate": "zscore",
-      "z": -1.02,
+      "z": -0.93,
       "denial": false
     }
   }
@@ -75,15 +75,15 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [n2_arizona_ramp] Samsung's 2nm Yield Recovers to 55%... Qualcomm Return Hinges on Sept. 22 Summit - BigGo Finance
 - [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea
 - [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech
-- [cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - Beth Kindig – Medium
 - [cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes
+- [cowos_capacity] TSMC Accelerates CoPoS Packaging to Replace CoWoS, as Glass Core Substrates Cut Costs 30% and Boost Wafer Utilization Pa
 - [geopolitics] China’s Coast Guard Rehearses Blockade Tools as Taiwan Plans Counter-Drills - Tech Times
 - [hyperscaler_capex] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool
 - [hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
-- [hyperscaler_capex] Marvell Drops 8% as AI Capex Slowdown Fears Weigh on Chips; Broadcom, AMD, and Intel Slide - 24/7 Wall St.
+- [hyperscaler_capex] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **6** 筆；state 已有 outcomes 的 entry：**58/58**
+- 本次回填 **2** 筆；state 已有 outcomes 的 entry：**59/59**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-12-31）
@@ -92,7 +92,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 | M1 | 9 / +1.24 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 | M2 | 9 / +1.24 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 | M4 | 8 / +1.32 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M5 | 8 / +1.98 | 17 / +1.14 | 29 | 累積中（GREEN n=8 < 30）；方向對 |
+| M5 | 8 / +1.98 | 17 / +1.14 | 30 | 累積中（GREEN n=8 < 30）；方向對 |
 | M6 | 9 / +1.24 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 | M8 | 0 / — | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 
