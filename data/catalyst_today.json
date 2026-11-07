@@ -1,58 +1,119 @@
 {
-  "updated_at": "2026-11-06T01:04:02.039896",
+  "updated_at": "2026-11-07T00:14:23.631143",
   "stats": {
     "total_items": 57,
-    "items_with_company": 7,
-    "items_with_catalyst": 14,
+    "items_with_company": 12,
+    "items_with_catalyst": 7,
     "items_both": 2
   },
-  "count": 6,
+  "count": 12,
   "tickers": [
-    "COST",
-    "NET",
     "TSLA",
+    "TGT",
+    "QCOM",
+    "MSFT",
+    "COST",
+    "CRWV",
+    "MRNA",
+    "AMD",
     "NVDA",
-    "JPM",
-    "U"
+    "MU",
+    "GOOGL",
+    "META"
   ],
   "details": [
     {
-      "symbol": "COST",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Costco is taking aim at its May record high — how it got here and where's it going",
-          "catalysts": [
-            "record high"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "NET",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Cloudflare’s stock mounts a big comeback after fastest sales surge in nearly 4 years",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
       "symbol": "TSLA",
-      "score": 1.0,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Elon Musk's Tesla and SpaceX lose over $420 billion in combined market cap after midterms",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Tesla to wind down Cybertruck production in Texas next year to ramp Cybercab, Musk says",
+          "catalysts": [
+            "gained"
+          ],
+          "has_catalyst": true
         },
         {
-          "title": "The ‘Musk selloff’ deepens as Tesla and SpaceX combine for $456 billion two-day wipeout",
+          "title": "A long-term Elon Musk backer is cashing out of Tesla — and cutting its SpaceX exposure",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "American Healthcare REIT forecasts $2.23-$2.26 2026 NFFO per share as same-store NOI growth target rises to 12%-14%",
+          "catalysts": [
+            "rises"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "OpenAI, Arm and Qualcomm executives react to post-midterm AI sell-off",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft plans to use fewer neoclouds as AI buildout shows signs of strain",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "COST",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "AI crush is powering one stock to sky-high valuations",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "The AI ‘credit card’ is getting costlier as CoreWeave bond yield tops 16%",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MRNA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Moderna raises 2026 outlook as CEO says newer vaccines are gaining traction",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Nvidia, AMD and other chip stocks rebound — but is relief from the ‘violent’ selloff only temporary?",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -63,29 +124,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Nvidia's Huang is asked to brief Congress on reported Chinese spy relationship",
+          "title": "Nvidia, AMD and other chip stocks rebound — but is relief from the ‘violent’ selloff only temporary?",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "JPM",
+      "symbol": "MU",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Democrats to probe JPMorgan's relationship with Jeffrey Epstein when they take Senate control",
+          "title": "Micron’s stock is dirt cheap — and that’s igniting a fierce online debate",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "U",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Why is Unity Software stock surging after-hours today?",
+          "title": "Google executive Donald Harrison resigns from SpaceX board",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Meta’s Muse app adds customizable spaces feature",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -93,6 +165,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1
+    "OpenAI (private)": 3,
+    "Anthropic (private)": 2
   }
 }
