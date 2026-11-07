@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-11-06T01:48:14.954944",
+  "updated_at": "2026-11-07T01:12:04.566383",
   "count": 1,
   "blind_spots": [
     {
       "name": "Nasdaq",
       "ticker": "NDAQ",
       "mentions_today": 3,
-      "total_mentions": 7,
-      "consecutive_days": 3,
+      "total_mentions": 10,
+      "consecutive_days": 4,
       "is_strong": true,
       "evidence": [
-        "Nasdaq sell-off batters Asian chip stocks as SK Hynix, Samsung, Softbank, TSMC tumble",
-        "Nasdaq posts biggest daily drop in 19 months on fears of AI regulations"
+        "Nasdaq drops into correction territory — here’s what typically happens next",
+        "Nasdaq drops into correction territory — here’s what typically happens next"
       ]
     }
   ]

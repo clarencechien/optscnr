@@ -6,13 +6,6 @@
     "total_mentions": 7,
     "ticker": "JBLU"
   },
-  "DoorDash": {
-    "first_seen": "2026-10-27",
-    "last_seen": "2026-10-30",
-    "consecutive_days": 2,
-    "total_mentions": 5,
-    "ticker": "DASH"
-  },
   "Reddit": {
     "first_seen": "2026-10-30",
     "last_seen": "2026-10-31",
@@ -20,18 +13,11 @@
     "total_mentions": 5,
     "ticker": "RDDT"
   },
-  "Norwegian": {
-    "first_seen": "2026-10-30",
-    "last_seen": "2026-10-30",
-    "consecutive_days": 1,
-    "total_mentions": 3,
-    "ticker": "NCLH"
-  },
   "Nasdaq": {
     "first_seen": "2026-11-02",
-    "last_seen": "2026-11-06",
-    "consecutive_days": 3,
-    "total_mentions": 7,
+    "last_seen": "2026-11-07",
+    "consecutive_days": 4,
+    "total_mentions": 10,
     "ticker": "NDAQ"
   },
   "Kimberly": {
