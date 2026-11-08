@@ -1,86 +1,121 @@
 {
-  "updated_at": "2026-11-07T00:14:23.631143",
+  "updated_at": "2026-11-08T23:56:02.170443",
   "stats": {
     "total_items": 57,
-    "items_with_company": 12,
-    "items_with_catalyst": 7,
-    "items_both": 2
+    "items_with_company": 13,
+    "items_with_catalyst": 4,
+    "items_both": 3
   },
-  "count": 12,
+  "count": 8,
   "tickers": [
-    "TSLA",
-    "TGT",
-    "QCOM",
-    "MSFT",
-    "COST",
-    "CRWV",
-    "MRNA",
-    "AMD",
     "NVDA",
-    "MU",
-    "GOOGL",
-    "META"
+    "OKLO",
+    "TGT",
+    "BRK-B",
+    "AMZN",
+    "META",
+    "CRWV",
+    "GOOGL"
   ],
   "details": [
     {
-      "symbol": "TSLA",
-      "score": 2.5,
+      "symbol": "NVDA",
+      "score": 4.0,
       "evidence": [
         {
-          "title": "Tesla to wind down Cybertruck production in Texas next year to ramp Cybercab, Musk says",
-          "catalysts": [
-            "gained"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "A long-term Elon Musk backer is cashing out of Tesla — and cutting its SpaceX exposure",
+          "title": "Nvidia investigates CEO Jensen Huang's relationship with alleged Chinese spy ",
           "catalysts": [],
           "has_catalyst": false
+        },
+        {
+          "title": "A new setback for the AI trade: Nvidia’s board is probing CEO Huang’s relationship with alleged spy",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia CEO Huang admits to affair, apologizes to employees as probe launched",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "OKLO",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Nuclear stocks surge as Oklo results spark rally for reactors, uranium suppliers",
+          "catalysts": [
+            "surge",
+            "rally"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "TGT",
-      "score": 2,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "American Healthcare REIT forecasts $2.23-$2.26 2026 NFFO per share as same-store NOI growth target rises to 12%-14%",
+          "title": "Poppi founders are going after PepsiCo's Gatorade with new beverage startup Jetty",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia launches probe after report CEO Huang was target of foreign intelligence",
           "catalysts": [
-            "rises"
+            "launches"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "QCOM",
-      "score": 0.5,
+      "symbol": "BRK-B",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "OpenAI, Arm and Qualcomm executives react to post-midterm AI sell-off",
+          "title": "Berkshire Hathaway more than doubles buybacks in third quarter as earnings decline",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Berkshire shares surge as Wall Street swoons amid AI fears",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Amazon's Astro home robot has fans but looks destined for the 'trash heap.' Why it's trying again",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Poppi founders are going after PepsiCo's Gatorade with new beverage startup Jetty",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
-      "score": 0.5,
+      "symbol": "META",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Microsoft plans to use fewer neoclouds as AI buildout shows signs of strain",
+          "title": "Meta chief strategy officer Dave Wehner leaves to join AI infrastructure startup Fireworks as CFO",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COST",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "AI crush is powering one stock to sky-high valuations",
+          "title": "Tech companies face mounting child safety lawsuits while pushing AI into schools",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -91,51 +126,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "The AI ‘credit card’ is getting costlier as CoreWeave bond yield tops 16%",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MRNA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Moderna raises 2026 outlook as CEO says newer vaccines are gaining traction",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nvidia, AMD and other chip stocks rebound — but is relief from the ‘violent’ selloff only temporary?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Nvidia, AMD and other chip stocks rebound — but is relief from the ‘violent’ selloff only temporary?",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Micron’s stock is dirt cheap — and that’s igniting a fierce online debate",
+          "title": "Here are the 2 big things we're watching in the stock market in the week ahead",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -146,18 +137,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Google executive Donald Harrison resigns from SpaceX board",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Meta’s Muse app adds customizable spaces feature",
+          "title": "Tech companies face mounting child safety lawsuits while pushing AI into schools",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -165,7 +145,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 3,
-    "Anthropic (private)": 2
+    "Anthropic (private)": 1
   }
 }
