@@ -1,18 +1,5 @@
 {
-  "updated_at": "2026-11-07T01:12:04.566383",
-  "count": 1,
-  "blind_spots": [
-    {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 3,
-      "total_mentions": 10,
-      "consecutive_days": 4,
-      "is_strong": true,
-      "evidence": [
-        "Nasdaq drops into correction territory — here’s what typically happens next",
-        "Nasdaq drops into correction territory — here’s what typically happens next"
-      ]
-    }
-  ]
+  "updated_at": "2026-11-09T01:13:12.850564",
+  "count": 0,
+  "blind_spots": []
 }

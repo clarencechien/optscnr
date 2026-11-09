@@ -6,13 +6,6 @@
     "total_mentions": 7,
     "ticker": "JBLU"
   },
-  "Reddit": {
-    "first_seen": "2026-10-30",
-    "last_seen": "2026-10-31",
-    "consecutive_days": 2,
-    "total_mentions": 5,
-    "ticker": "RDDT"
-  },
   "Nasdaq": {
     "first_seen": "2026-11-02",
     "last_seen": "2026-11-07",
