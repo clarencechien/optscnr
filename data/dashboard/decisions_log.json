@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T00:35:41Z",
+ "generated_at": "2026-11-09T23:21:24Z",
  "n_days": 45,
  "t8_by_event_answer": {
   "有": {
@@ -13,9 +13,9 @@
    "avg_peak": 1.48
   },
   "未確認": {
-   "n": 5,
+   "n": 6,
    "hit_rate": 0.0,
-   "avg_peak": 0.75
+   "avg_peak": 0.72
   }
  },
  "days": [
@@ -165,12 +165,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.57,
-      "t10": null,
+      "t10": 0.33,
       "t20": null,
       "peak": 0.57,
       "mature": false,
-      "verdict": "➖持平(峰0.6x/今0.6x)",
-      "filled_at": "2026-11-06"
+      "verdict": "➖持平(峰0.6x/今0.3x)",
+      "filled_at": "2026-11-09"
      }
     },
     {
@@ -214,12 +214,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.67,
-      "t10": null,
+      "t10": 0.11,
       "t20": null,
       "peak": 0.67,
       "mature": false,
-      "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-11-06"
+      "verdict": "➖持平(峰0.7x/今0.1x)",
+      "filled_at": "2026-11-09"
      }
     }
    ]
@@ -274,12 +274,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.44,
-      "t10": null,
+      "t10": 0.09,
       "t20": null,
       "peak": 0.44,
       "mature": false,
-      "verdict": "❌沒噴(峰0.4x)",
-      "filled_at": "2026-11-06"
+      "verdict": "💀歸零(0.09x)",
+      "filled_at": "2026-11-09"
      }
     },
     {
@@ -323,12 +323,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.55,
-      "t10": null,
+      "t10": 0.09,
       "t20": null,
       "peak": 0.55,
       "mature": false,
-      "verdict": "➖持平(峰0.5x/今0.5x)",
-      "filled_at": "2026-11-06"
+      "verdict": "💀歸零(0.09x)",
+      "filled_at": "2026-11-09"
      }
     },
     {
@@ -372,12 +372,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.74,
-      "t10": null,
+      "t10": 0.34,
       "t20": null,
       "peak": 0.74,
       "mature": false,
-      "verdict": "➖持平(峰0.7x/今0.7x)",
-      "filled_at": "2026-11-06"
+      "verdict": "➖持平(峰0.7x/今0.3x)",
+      "filled_at": "2026-11-09"
      }
     }
    ]
@@ -432,12 +432,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.26,
-      "t10": null,
+      "t10": 0.06,
       "t20": null,
       "peak": 0.26,
       "mature": false,
-      "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-11-06"
+      "verdict": "💀歸零(0.06x)",
+      "filled_at": "2026-11-09"
      }
     }
    ]
@@ -497,7 +497,7 @@
       "peak": 0.53,
       "mature": false,
       "verdict": "➖持平(峰0.5x/今0.3x)",
-      "filled_at": "2026-11-06"
+      "filled_at": "2026-11-09"
      }
     },
     {
@@ -546,7 +546,7 @@
       "peak": 1.07,
       "mature": false,
       "verdict": "➖持平(峰1.1x/今0.8x)",
-      "filled_at": "2026-11-06"
+      "filled_at": "2026-11-09"
      }
     }
    ]
@@ -606,7 +606,7 @@
       "peak": 0.35,
       "mature": false,
       "verdict": "❌沒噴(峰0.4x)",
-      "filled_at": "2026-11-06"
+      "filled_at": "2026-11-09"
      }
     },
     {
@@ -655,7 +655,7 @@
       "peak": 1.66,
       "mature": false,
       "verdict": "➖持平(峰1.7x/今1.7x)",
-      "filled_at": "2026-11-06"
+      "filled_at": "2026-11-09"
      }
     },
     {
@@ -704,7 +704,7 @@
       "peak": 0.54,
       "mature": false,
       "verdict": "➖持平(峰0.5x/今0.4x)",
-      "filled_at": "2026-11-06"
+      "filled_at": "2026-11-09"
      }
     }
    ]
@@ -784,7 +784,7 @@
       "peak": 0.29,
       "mature": false,
       "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-11-06"
+      "filled_at": "2026-11-09"
      }
     },
     {
@@ -833,7 +833,7 @@
       "peak": 0.27,
       "mature": false,
       "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-11-06"
+      "filled_at": "2026-11-09"
      }
     }
    ]
@@ -889,11 +889,11 @@
      "outcome": {
       "t5": 0.57,
       "t10": 0.3,
-      "t20": null,
+      "t20": 0.16,
       "peak": 0.57,
-      "mature": false,
-      "verdict": "➖持平(峰0.6x/今0.3x)",
-      "filled_at": "2026-11-06"
+      "mature": true,
+      "verdict": "➖持平(峰0.6x/今0.2x)",
+      "filled_at": "2026-11-09"
      }
     }
    ]

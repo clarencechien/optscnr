@@ -62,12 +62,12 @@
       "status": "answered",
       "outcome": {
         "t5": 0.57,
-        "t10": null,
+        "t10": 0.33,
         "t20": null,
         "peak": 0.57,
         "mature": false,
-        "verdict": "➖持平(峰0.6x/今0.6x)",
-        "filled_at": "2026-11-06"
+        "verdict": "➖持平(峰0.6x/今0.3x)",
+        "filled_at": "2026-11-09"
       }
     },
     {
@@ -113,12 +113,12 @@
       "status": "answered",
       "outcome": {
         "t5": 0.67,
-        "t10": null,
+        "t10": 0.11,
         "t20": null,
         "peak": 0.67,
         "mature": false,
-        "verdict": "➖持平(峰0.7x/今0.7x)",
-        "filled_at": "2026-11-06"
+        "verdict": "➖持平(峰0.7x/今0.1x)",
+        "filled_at": "2026-11-09"
       }
     }
   ],
