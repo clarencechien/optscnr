@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-11-10 13:04 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-11-10 13:37 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -62,7 +62,7 @@ _README 由 build_readme.py 於 2026-11-10 13:04 UTC 重組；兩區塊各為該
 ### 2330
 - 前提（最近全模組 2026-11-09）：🟢 GREEN
 - 🔀 背離：前提健在（GREEN）、價格 20 日 -10.4% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 25.9，3 年分位 85 → 48
-  - 🟢 M1 revenue_acceleration：2026-09 YoY +54.6%, slope -4.41pp/月, 連續減速 0 個月
+  - 🟢 M1 revenue_acceleration：2026-10 YoY +59.7%, slope +5.01pp/月, 連續減速 0 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +23.8% / FCF/淨利 0.9
   - 🟢 M3 adr_premium：ADR 溢價 +10.2%（1 年第 4 百分位；觀察）
   - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3666.0M, YoY +65.1%
@@ -112,7 +112,7 @@ _README 由 build_readme.py 於 2026-11-10 13:04 UTC 重組；兩區塊各為該
 - ✅ 賭場 sector：最新 2026-11-09
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-10T13:04:12+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-10T13:37:18+00:00*
 
 ---
 
@@ -179,9 +179,9 @@ _n 是「該狀態的天數」不是獨立樣本：狀態幾乎不翻的模組�
 
 ---
 
-# TSMC Radar (2330.TW) — 2026-11-10 11:03 UTC
+# TSMC Radar (2330.TW) — 2026-11-10 13:37 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m1）｜模組色僅供參考 🟢 GREEN
 
 ## 🔀 前提 vs 價格：🔀 背離：前提健在（GREEN）、價格 20 日 -10.4% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 25.9，3 年分位 85 → 48
 
@@ -191,81 +191,20 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟡 YELLOW | export_controls_tariffs:11e(15m) / n2_arizona_ramp:21e(28m) / cowos_capacity:9e / geopolitics:2e / hyperscaler_capex:4e |
+| M1 revenue_acceleration | 🟢 GREEN | 2026-10 YoY +59.7%, slope +5.01pp/月, 連續減速 0 個月 |
 
-### M5 narrative_triggers — 🟡 YELLOW
+### M1 revenue_acceleration — 🟢 GREEN
 ```json
 {
-  "events": {
-    "export_controls_tariffs": 11,
-    "n2_arizona_ramp": 21,
-    "cowos_capacity": 9,
-    "geopolitics": 2,
-    "hyperscaler_capex": 4
-  },
-  "mentions": {
-    "export_controls_tariffs": 15,
-    "n2_arizona_ramp": 28,
-    "cowos_capacity": 9,
-    "geopolitics": 2,
-    "hyperscaler_capex": 4
-  },
-  "scoring": {
-    "export_controls_tariffs": {
-      "events": 11,
-      "mentions": 15,
-      "gate": "zscore",
-      "z": -1.26,
-      "denial": false
-    },
-    "n2_arizona_ramp": {
-      "events": 21,
-      "mentions": 28,
-      "gate": "zscore",
-      "z": 0.81,
-      "denial": true
-    },
-    "cowos_capacity": {
-      "events": 9,
-      "mentions": 9,
-      "gate": "zscore",
-      "z": 1.0,
-      "denial": false
-    },
-    "geopolitics": {
-      "events": 2,
-      "mentions": 2,
-      "gate": "zscore",
-      "z": 1.56,
-      "denial": false
-    },
-    "hyperscaler_capex": {
-      "events": 4,
-      "mentions": 4,
-      "gate": "zscore",
-      "z": -0.89,
-      "denial": false
-    }
-  }
+  "latest_month": "2026-10",
+  "latest_yoy_pct": 59.7,
+  "yoy_slope_pp_per_month": 5.01,
+  "consecutive_decel_months": 0
 }
 ```
-- [export_controls_tariffs] TSMC is seeking chipmaking equipment that doesn't contain Chinese rare-earth magnets — asks suppliers to provide alterna
-- [export_controls_tariffs] TSMC Seeks Rare-Earth-Free Factory Equipment as China’s Export Controls Threaten Chip Supply Chains - Tekedia
-- [export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F
-- [n2_arizona_ramp] [News] Samsung 2nm Yields Reportedly at ~55%, Below Mass Production Threshold; Qualcomm May Opt for TSMC - TrendForce
-- [n2_arizona_ramp] Samsung's 2nm Yield Recovers to 55%... Qualcomm Return Hinges on Sept. 22 Summit - BigGo Finance
-- [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea
-- [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech
-- [cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - Medium
-- [cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes
-- [geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India
-- [geopolitics] China’s Coast Guard Rehearses Blockade Tools as Taiwan Plans Counter-Drills - Tech Times
-- [hyperscaler_capex] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool
-- [hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
-- [hyperscaler_capex] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **11** 筆；state 已有 outcomes 的 entry：**61/61**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**62/62**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-12-31）
