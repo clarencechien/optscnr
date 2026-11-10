@@ -63,11 +63,11 @@
       "outcome": {
         "t5": 0.29,
         "t10": 0.1,
-        "t20": null,
+        "t20": 0.03,
         "peak": 0.29,
-        "mature": false,
-        "verdict": "❌沒噴(峰0.3x)",
-        "filled_at": "2026-11-09"
+        "mature": true,
+        "verdict": "💀歸零(0.03x)",
+        "filled_at": "2026-11-10"
       }
     },
     {
@@ -114,11 +114,11 @@
       "outcome": {
         "t5": 0.27,
         "t10": 0.12,
-        "t20": null,
+        "t20": 0.02,
         "peak": 0.27,
-        "mature": false,
-        "verdict": "❌沒噴(峰0.3x)",
-        "filled_at": "2026-11-09"
+        "mature": true,
+        "verdict": "💀歸零(0.02x)",
+        "filled_at": "2026-11-10"
       }
     }
   ],

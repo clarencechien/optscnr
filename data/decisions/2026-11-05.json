@@ -63,7 +63,16 @@
         "source": null
       },
       "note": "Q3財報2026-10-28已過，營收與EPS雙雙不如預期；Q4財報預估2027-02-03，公司尚未公告",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 1.02,
+        "t10": null,
+        "t20": null,
+        "peak": 1.02,
+        "mature": false,
+        "verdict": "➖持平(峰1.0x/今1.0x)",
+        "filled_at": "2026-11-10"
+      }
     }
   ],
   "facts_proposed": [

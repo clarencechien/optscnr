@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-10T04:17:40Z",
+ "generated_at": "2026-11-10T23:17:05Z",
  "n_days": 46,
  "t8_by_event_answer": {
   "有": {
-   "n": 11,
-   "hit_rate": 0.455,
-   "avg_peak": 2.38
+   "n": 13,
+   "hit_rate": 0.385,
+   "avg_peak": 2.05
   },
   "無": {
    "n": 3,
@@ -91,7 +91,15 @@
      },
      "note": "Q3財報2026-10-28已過，營收與EPS雙雙不如預期；Q4財報預估2027-02-03，公司尚未公告",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 1.02,
+      "t10": null,
+      "t20": null,
+      "peak": 1.02,
+      "mature": false,
+      "verdict": "➖持平(峰1.0x/今1.0x)",
+      "filled_at": "2026-11-10"
+     }
     }
    ]
   },
@@ -180,7 +188,7 @@
       "peak": 0.57,
       "mature": false,
       "verdict": "➖持平(峰0.6x/今0.3x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     },
     {
@@ -229,7 +237,7 @@
       "peak": 0.67,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.1x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     }
    ]
@@ -289,7 +297,7 @@
       "peak": 0.44,
       "mature": false,
       "verdict": "💀歸零(0.09x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     },
     {
@@ -338,7 +346,7 @@
       "peak": 0.55,
       "mature": false,
       "verdict": "💀歸零(0.09x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     },
     {
@@ -387,7 +395,7 @@
       "peak": 0.74,
       "mature": false,
       "verdict": "➖持平(峰0.7x/今0.3x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     }
    ]
@@ -447,7 +455,7 @@
       "peak": 0.26,
       "mature": false,
       "verdict": "💀歸零(0.06x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     }
    ]
@@ -507,7 +515,7 @@
       "peak": 0.53,
       "mature": false,
       "verdict": "➖持平(峰0.5x/今0.3x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     },
     {
@@ -556,7 +564,7 @@
       "peak": 1.07,
       "mature": false,
       "verdict": "➖持平(峰1.1x/今0.8x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     }
    ]
@@ -616,7 +624,7 @@
       "peak": 0.35,
       "mature": false,
       "verdict": "❌沒噴(峰0.4x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     },
     {
@@ -665,7 +673,7 @@
       "peak": 1.66,
       "mature": false,
       "verdict": "➖持平(峰1.7x/今1.7x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     },
     {
@@ -714,7 +722,7 @@
       "peak": 0.54,
       "mature": false,
       "verdict": "➖持平(峰0.5x/今0.4x)",
-      "filled_at": "2026-11-09"
+      "filled_at": "2026-11-10"
      }
     }
    ]
@@ -790,11 +798,11 @@
      "outcome": {
       "t5": 0.29,
       "t10": 0.1,
-      "t20": null,
+      "t20": 0.03,
       "peak": 0.29,
-      "mature": false,
-      "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-11-09"
+      "mature": true,
+      "verdict": "💀歸零(0.03x)",
+      "filled_at": "2026-11-10"
      }
     },
     {
@@ -839,11 +847,11 @@
      "outcome": {
       "t5": 0.27,
       "t10": 0.12,
-      "t20": null,
+      "t20": 0.02,
       "peak": 0.27,
-      "mature": false,
-      "verdict": "❌沒噴(峰0.3x)",
-      "filled_at": "2026-11-09"
+      "mature": true,
+      "verdict": "💀歸零(0.02x)",
+      "filled_at": "2026-11-10"
      }
     }
    ]
