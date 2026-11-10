@@ -17819,5 +17819,58 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-11-09_LCID_2027-01-15_4.0",
+    "snapshot_date": "2026-11-09",
+    "ticker": "LCID",
+    "expiry": "2027-01-15",
+    "strike": 4.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 ⚠️價格已失效(財報11-09盤後) 📅財報已過(11-09)",
+    "entry_price": 0.65,
+    "entry_iv": 126.172244140625,
+    "entry_spot": 3.5999999046325684,
+    "oi": 1325,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [
+      "⚠️價格已失效(財報11-09盤後)"
+    ],
+    "events": [
+      "📅財報已過(11-09)"
+    ],
+    "volume": 9131,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.54,
+    "entry_ask": 0.71,
+    "last_trade_at": "2026-11-09 20:53:05",
+    "quote_at": "2026-11-10T04:10:11Z",
+    "underlying_at": "2026-11-10T04:10:11Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-09",
+        "spot": 3.5999999046325684,
+        "last": 0.65,
+        "bid": 0.54,
+        "ask": 0.71,
+        "iv": 126.172244140625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
