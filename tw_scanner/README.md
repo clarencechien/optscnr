@@ -1,6 +1,6 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-11-10 11:03 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-11-10 13:04 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
@@ -49,7 +49,7 @@ _README 由 build_readme.py 於 2026-11-10 11:03 UTC 重組；兩區塊各為該
 ### 2308
 - 前提（最近全模組 2026-11-09）：🟡 YELLOW
 - 🔀 背離：前提健在（YELLOW）、價格 20 日 -35.1% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 34.8，3 年分位 86 → 58
-  - 🔴 M1 revenue_acceleration：2026-09 YoY +14.6%, slope -13.60pp/月, 連續減速 3 個月
+  - 🟢 M1 revenue_acceleration：2026-10 YoY +30.1%, slope -5.88pp/月, 連續減速 0 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ +35.3% / 存貨 QoQ +20.7% / FCF/淨利 1.74
   - 🟢 M3 thai_shadow：DELTA.BK 2026-09-30 營收 YoY +42.4%, GM 27.3%
   - 🟡 M4 customs_flow：US 進口 HS850440 (TH+TW) 近3月 $1376.6M, YoY +19.9%
@@ -112,7 +112,7 @@ _README 由 build_readme.py 於 2026-11-10 11:03 UTC 重組；兩區塊各為該
 - ✅ 賭場 sector：最新 2026-11-09
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-10T11:03:38+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-10T13:04:12+00:00*
 
 ---
 
@@ -133,9 +133,9 @@ _README 由 build_readme.py 於 2026-11-10 11:03 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-11-10 10:23 UTC
+# Delta Radar (2308.TW) — 2026-11-10 13:04 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
+## 總判定：⚪ PARTIAL（僅跑 m1）｜模組色僅供參考 🟢 GREEN
 
 ## 🔀 前提 vs 價格：🔀 背離：前提健在（YELLOW）、價格 20 日 -35.1% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 34.8，3 年分位 86 → 58
 
@@ -145,73 +145,26 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟢 GREEN | capex_cut:4e / vr300_delay:8e / debt_financed_capex:14e / lc_psu_competition:0e |
+| M1 revenue_acceleration | 🟢 GREEN | 2026-10 YoY +30.1%, slope -5.88pp/月, 連續減速 0 個月 |
 
-### M5 narrative_triggers — 🟢 GREEN
+### M1 revenue_acceleration — 🟢 GREEN
 ```json
 {
-  "events": {
-    "capex_cut": 4,
-    "vr300_delay": 8,
-    "debt_financed_capex": 14,
-    "lc_psu_competition": 0
-  },
-  "mentions": {
-    "capex_cut": 4,
-    "vr300_delay": 8,
-    "debt_financed_capex": 14,
-    "lc_psu_competition": 0
-  },
-  "scoring": {
-    "capex_cut": {
-      "events": 4,
-      "mentions": 4,
-      "gate": "zscore",
-      "z": -1.2,
-      "denial": false
-    },
-    "vr300_delay": {
-      "events": 8,
-      "mentions": 8,
-      "gate": "zscore",
-      "z": -1.0,
-      "denial": true
-    },
-    "debt_financed_capex": {
-      "events": 14,
-      "mentions": 14,
-      "gate": "zscore",
-      "z": 1.06,
-      "denial": false
-    },
-    "lc_psu_competition": {
-      "events": 0,
-      "mentions": 0,
-      "gate": "absolute",
-      "z": null,
-      "denial": false
-    }
-  }
+  "latest_month": "2026-10",
+  "latest_yoy_pct": 30.1,
+  "yoy_slope_pp_per_month": -5.88,
+  "consecutive_decel_months": 0
 }
 ```
-- [capex_cut] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool
-- [capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
-- [capex_cut] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St.
-- [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
-- [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
-- [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
-- [debt_financed_capex] AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. - CNBC
-- [debt_financed_capex] Top hyperscalers likely to have more AI-linked debt than now known, S&P Global warns - Reuters
-- [debt_financed_capex] Oracle's Negative Free Cash Flow Exposes the Uncomfortable Truth About AI's Financing Game - 24/7 Wall St.
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **7** 筆；state 已有 outcomes 的 entry：**158/158**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**159/159**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）
 | 模組 | GREEN n / T+20 超額 | YELLOW+RED n / 超額 | 狀態翻轉 | 判準 |
 |---|---|---|---|---|
-| M1 | 47 / -7.38 | 12 / -9.94 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向對 |
+| M1 | 47 / -7.38 | 12 / -9.94 | 3 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
 | M2 | 27 / -9.41 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M3 | 27 / -10.89 | 22 / -6.42 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M4 | 40 / -8.26 | 0 / — | 1 | 樣本不足（缺一側 cohort） |
