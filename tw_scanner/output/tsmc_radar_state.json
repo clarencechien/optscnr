@@ -4611,9 +4611,9 @@
       "t10_ret_pct": -5.88,
       "t10_excess_pct": 1.38,
       "t10_excess_smh_pct": 7.94,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null,
-      "t20_excess_smh_pct": null
+      "t20_ret_pct": -10.39,
+      "t20_excess_pct": 2.88,
+      "t20_excess_smh_pct": 15.88
     }
   },
   {
@@ -7009,9 +7009,9 @@
       "t5_ret_pct": -4.38,
       "t5_excess_pct": 1.25,
       "t5_excess_smh_pct": -3.49,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
-      "t10_excess_smh_pct": null,
+      "t10_ret_pct": -4.79,
+      "t10_excess_pct": 1.68,
+      "t10_excess_smh_pct": 7.21,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -7125,9 +7125,9 @@
       "t5_ret_pct": -4.38,
       "t5_excess_pct": 1.25,
       "t5_excess_smh_pct": 1.77,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
-      "t10_excess_smh_pct": null,
+      "t10_ret_pct": -4.79,
+      "t10_excess_pct": 1.68,
+      "t10_excess_smh_pct": 5.22,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -7241,9 +7241,9 @@
       "t5_ret_pct": -4.38,
       "t5_excess_pct": 1.25,
       "t5_excess_smh_pct": 1.77,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
-      "t10_excess_smh_pct": null,
+      "t10_ret_pct": -4.79,
+      "t10_excess_pct": 1.68,
+      "t10_excess_smh_pct": 5.22,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -7513,9 +7513,9 @@
       "t5_ret_pct": -4.38,
       "t5_excess_pct": 1.25,
       "t5_excess_smh_pct": 1.77,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
-      "t10_excess_smh_pct": null,
+      "t10_ret_pct": -4.79,
+      "t10_excess_pct": 1.68,
+      "t10_excess_smh_pct": 5.22,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -7628,8 +7628,8 @@
       "t5_ret_pct": -4.38,
       "t5_excess_pct": 1.25,
       "t5_excess_smh_pct": 2.69,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -4.79,
+      "t10_excess_pct": 1.68,
       "t10_excess_smh_pct": null,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
@@ -8241,7 +8241,7 @@
       "entry_close": 2330.0,
       "t5_ret_pct": -4.08,
       "t5_excess_pct": 2.31,
-      "t5_excess_smh_pct": null,
+      "t5_excess_smh_pct": 0.03,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -8355,7 +8355,7 @@
       "entry_close": 2330.0,
       "t5_ret_pct": -4.08,
       "t5_excess_pct": 2.31,
-      "t5_excess_smh_pct": null,
+      "t5_excess_smh_pct": 0.03,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -8625,7 +8625,7 @@
       "entry_close": 2330.0,
       "t5_ret_pct": -4.08,
       "t5_excess_pct": 2.31,
-      "t5_excess_smh_pct": null,
+      "t5_excess_smh_pct": 0.03,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -8738,8 +8738,8 @@
       "entry_date": "2026-11-03",
       "benchmark": "0050",
       "entry_close": 2295.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -0.44,
+      "t5_excess_pct": 0.45,
       "t5_excess_smh_pct": null,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
@@ -9621,6 +9621,121 @@
       "entry_date": "2026-11-09",
       "benchmark": "0050",
       "entry_close": 2235.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
+  },
+  {
+    "ts": "2026-11-10T11:03:35.755760+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "export_controls_tariffs:11e(15m) / n2_arizona_ramp:21e(28m) / cowos_capacity:9e / geopolitics:2e / hyperscaler_capex:4e",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 11,
+            "n2_arizona_ramp": 21,
+            "cowos_capacity": 9,
+            "geopolitics": 2,
+            "hyperscaler_capex": 4
+          },
+          "mentions": {
+            "export_controls_tariffs": 15,
+            "n2_arizona_ramp": 28,
+            "cowos_capacity": 9,
+            "geopolitics": 2,
+            "hyperscaler_capex": 4
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 11,
+              "mentions": 15,
+              "gate": "zscore",
+              "z": -1.26,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 21,
+              "mentions": 28,
+              "gate": "zscore",
+              "z": 0.81,
+              "denial": true
+            },
+            "cowos_capacity": {
+              "events": 9,
+              "mentions": 9,
+              "gate": "zscore",
+              "z": 1.0,
+              "denial": false
+            },
+            "geopolitics": {
+              "events": 2,
+              "mentions": 2,
+              "gate": "zscore",
+              "z": 1.56,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 4,
+              "mentions": 4,
+              "gate": "zscore",
+              "z": -0.89,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] TSMC is seeking chipmaking equipment that doesn't contain Chinese rare-earth magnets — asks suppliers to provide alterna",
+          "[export_controls_tariffs] TSMC Seeks Rare-Earth-Free Factory Equipment as China’s Export Controls Threaten Chip Supply Chains - Tekedia",
+          "[export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F",
+          "[n2_arizona_ramp] [News] Samsung 2nm Yields Reportedly at ~55%, Below Mass Production Threshold; Qualcomm May Opt for TSMC - TrendForce",
+          "[n2_arizona_ramp] Samsung's 2nm Yield Recovers to 55%... Qualcomm Return Hinges on Sept. 22 Summit - BigGo Finance",
+          "[n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - Medium",
+          "[cowos_capacity] TSMC CoWoS shortage drives SK Hynix-Intel 2.5D push - digitimes",
+          "[geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India",
+          "[geopolitics] China’s Coast Guard Rehearses Blockade Tools as Taiwan Plans Counter-Drills - Tech Times",
+          "[hyperscaler_capex] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool",
+          "[hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[hyperscaler_capex] Is the AI CapEx Trade Cracking? 5 Stocks Most Exposed If OpenAI’s Slowdown Is Real - 24/7 Wall St."
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": "premise_ok_price_down",
+      "text": "🔀 背離：前提健在（GREEN）、價格 20 日 -10.4% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 25.9，3 年分位 85 → 48",
+      "premise": "GREEN",
+      "premise_ts": "2026-11-09T12:59:35.319147+00:00",
+      "ret_pct": -10.39,
+      "lookback_sessions": 20,
+      "as_of": "2026-11-10",
+      "valuation": {
+        "per": 25.91,
+        "per_pct": 47.8,
+        "per_then": 29.96,
+        "per_pct_then": 85.0,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-11-10",
+      "benchmark": "0050",
+      "entry_close": 2285.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t5_excess_smh_pct": null,
