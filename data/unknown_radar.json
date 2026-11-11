@@ -1,18 +1,5 @@
 {
-  "updated_at": "2026-11-10T03:48:43.559518",
-  "count": 1,
-  "blind_spots": [
-    {
-      "name": "Securitize",
-      "ticker": "SECZ",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Tokenization platform Securitize gains 10% postmarket on Q3 results, move into asset-backed finance",
-        "Tokenization platform Securitize gains 10% postmarket on Q3 results, move into asset-backed finance"
-      ]
-    }
-  ]
+  "updated_at": "2026-11-11T01:28:42.128203",
+  "count": 0,
+  "blind_spots": []
 }
