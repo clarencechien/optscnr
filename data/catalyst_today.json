@@ -1,97 +1,85 @@
 {
-  "updated_at": "2026-11-10T02:52:12.057928",
+  "updated_at": "2026-11-11T00:48:57.141014",
   "stats": {
     "total_items": 57,
-    "items_with_company": 16,
-    "items_with_catalyst": 10,
+    "items_with_company": 18,
+    "items_with_catalyst": 12,
     "items_both": 2
   },
-  "count": 7,
+  "count": 9,
   "tickers": [
     "NVDA",
+    "AMZN",
+    "CRWV",
+    "GOOGL",
+    "TGT",
+    "GOLD",
+    "RIVN",
     "AMD",
-    "AVGO",
-    "LCID",
-    "BA",
-    "RKLB",
-    "TGT"
+    "HIMS"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 9.0,
+      "score": 5.5,
       "evidence": [
         {
-          "title": "Jensen Huang affair puts Nvidia's future at risk, with no clear successor to the renowned CEO",
+          "title": "Nvidia's Huang tries to project 'business as usual' in return to office after affair revelation",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia's CEO turmoil gives newly empowered Democrats fresh ammunition in pursuit of oversight",
+          "title": "Nvidia sells off for second day in fallout from Jensen Huang’s affair with alleged spy",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia’s Trump ties draw scrutiny after reports Huang was targeted by Chinese intelligence",
+          "title": "Op-ed: In Nvidia CEO Jensen Huang's alleged China spy scandal, there's plenty of blame to go around",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "AMZN",
       "score": 2,
       "evidence": [
         {
-          "title": "Are AMD and Broadcom the real winners of the Nvidia spy scandal?",
+          "title": "Amazon's Ring unveils flying drone and robot to patrol homes and businesses",
           "catalysts": [
-            "gains"
+            "unveils"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AVGO",
-      "score": 2,
+      "symbol": "CRWV",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Are AMD and Broadcom the real winners of the Nvidia spy scandal?",
-          "catalysts": [
-            "gains"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "LCID",
-      "score": 0.5,
-      "evidence": [
+          "title": "CoreWeave beats on revenue and lifts guidance, easing AI slowdown concerns",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
-          "title": "Lucid misses Wall Street’s earnings expectations, expands loan from Saudi Arabia fund",
+          "title": "CoreWeave earnings put debt-fueled AI build-out under scrutiny",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BA",
-      "score": 0.5,
+      "symbol": "GOOGL",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Boeing to cut 5% of commercial airplane workers as production increase takes longer than expected",
+          "title": "Alphabet shares appear to have bottomed. How to play it for a quick rebound",
           "catalysts": [],
           "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RKLB",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "Rocket Lab shares dip after the company’s ‘defining’ quarter misses the mark",
+          "title": "Ex-Google recruiter: You're answering 'Tell me about yourself?' all wrong, and other job interview mistakes—do this instead",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -99,10 +87,64 @@
     },
     {
       "symbol": "TGT",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Anthropic's trillion-dollar IPO is coming, but retail investors could have owned AI stock much earlier",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Meet the former prosecutor Nvidia hired to investigate the Jensen Huang spy scandal",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "GOLD",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "American Barrick files for NYSE IPO as controlled unit of parent Barrick Mining",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Canada’s Barrick Mining files for IPO of North America business in New York",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RIVN",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Clearway outlines $520M-$590M 2027 CAFD guidance and sets $3.20-$3.40 2031 CAFD per share target",
+          "title": "Rivian CEO says new R2 SUV, autonomy make 2027 an ‘inflection year’ as EV maker marks five years since IPO",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "AMD’s stock fades as investors weigh whether Nvidia’s turmoil will mean lasting wins",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HIMS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Five US states join FTC lawsuit alleging Hims & Hers engaged in unlawful privacy practices",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -110,6 +152,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 2
+    "Anthropic (private)": 3,
+    "OpenAI (private)": 2
   }
 }
