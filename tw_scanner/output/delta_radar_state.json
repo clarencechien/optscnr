@@ -18679,5 +18679,55 @@
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
+  },
+  {
+    "ts": "2026-11-11T12:13:35.829398+00:00",
+    "overall": "PARTIAL(m1)",
+    "modules_requested": [
+      "m1"
+    ],
+    "modules": [
+      {
+        "module": "M1 revenue_acceleration",
+        "status": "GREEN",
+        "headline": "2026-10 YoY +30.1%, slope -5.88pp/月, 連續減速 0 個月",
+        "metrics": {
+          "latest_month": "2026-10",
+          "latest_yoy_pct": 30.1,
+          "yoy_slope_pp_per_month": -5.88,
+          "consecutive_decel_months": 0
+        },
+        "notes": [],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": "premise_ok_price_down",
+      "text": "🔀 背離：前提健在（YELLOW）、價格 20 日 -31.8% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 34.8，3 年分位 86 → 58",
+      "premise": "YELLOW",
+      "premise_ts": "2026-11-09T12:07:13.086840+00:00",
+      "ret_pct": -31.84,
+      "lookback_sessions": 20,
+      "as_of": "2026-11-11",
+      "valuation": {
+        "per": 34.83,
+        "per_pct": 58.2,
+        "per_then": 63.34,
+        "per_pct_then": 86.4,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-11-11",
+      "benchmark": "0050",
+      "entry_close": 1295.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
   }
 ]
