@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-11-11 02:06 UTC",
+  "generated_at": "2026-11-11 23:19 UTC",
   "prereg_date": "2026-09-08",
   "cost_factor": 0.86,
   "min_n": 30,
-  "n_signals": 2970,
-  "n_mature": 1319,
+  "n_signals": 3003,
+  "n_mature": 1351,
   "overall": {
-    "n": 1319,
-    "events": 777,
-    "hit": 0.13,
+    "n": 1351,
+    "events": 792,
+    "hit": 0.127,
     "ev": {
-      "A_hold": 0.918,
-      "B_half2x": 0.883,
-      "C_bound": 0.954,
-      "half3x": 0.9,
-      "rungs248": 0.893,
-      "stop_half": 0.935
+      "A_hold": 0.913,
+      "B_half2x": 0.879,
+      "C_bound": 0.949,
+      "half3x": 0.895,
+      "rungs248": 0.889,
+      "stop_half": 0.93
     },
     "ev_event_weighted": {
-      "A_hold": 0.875,
-      "B_half2x": 0.842,
-      "C_bound": 0.915,
-      "half3x": 0.861,
-      "rungs248": 0.852,
-      "stop_half": 0.906
+      "A_hold": 0.872,
+      "B_half2x": 0.841,
+      "C_bound": 0.912,
+      "half3x": 0.859,
+      "rungs248": 0.85,
+      "stop_half": 0.903
     },
     "best": "C_bound"
   },
@@ -50,23 +50,23 @@
     "best": "C_bound"
   },
   "oos_all": {
-    "n": 564,
-    "events": 314,
-    "hit": 0.067,
+    "n": 596,
+    "events": 329,
+    "hit": 0.065,
     "ev": {
-      "A_hold": 0.699,
-      "B_half2x": 0.691,
+      "A_hold": 0.7,
+      "B_half2x": 0.693,
       "C_bound": 0.733,
       "half3x": 0.703,
-      "rungs248": 0.695,
-      "stop_half": 0.775
+      "rungs248": 0.696,
+      "stop_half": 0.773
     },
     "ev_event_weighted": {
-      "A_hold": 0.692,
-      "B_half2x": 0.675,
-      "C_bound": 0.733,
-      "half3x": 0.687,
-      "rungs248": 0.682,
+      "A_hold": 0.694,
+      "B_half2x": 0.679,
+      "C_bound": 0.734,
+      "half3x": 0.689,
+      "rungs248": 0.685,
       "stop_half": 0.768
     },
     "best": "stop_half"
@@ -119,10 +119,10 @@
       "n": 352
     },
     "2026-10": {
-      "A_hold": 0.674,
-      "B_half2x": 0.66,
-      "C_bound": 0.699,
-      "n": 281
+      "A_hold": 0.679,
+      "B_half2x": 0.67,
+      "C_bound": 0.704,
+      "n": 313
     }
   },
   "cells": [
@@ -140,24 +140,24 @@
       "tier": "lottery",
       "tier_label": "樂透<1.5",
       "dte": "21-45",
-      "n": 76,
-      "events": 64,
-      "hit": 0.303,
+      "n": 77,
+      "events": 65,
+      "hit": 0.299,
       "ev": {
-        "A_hold": 1.774,
-        "B_half2x": 1.306,
-        "C_bound": 1.774,
-        "half3x": 1.435,
-        "rungs248": 1.328,
-        "stop_half": 1.299
+        "A_hold": 1.752,
+        "B_half2x": 1.29,
+        "C_bound": 1.752,
+        "half3x": 1.418,
+        "rungs248": 1.312,
+        "stop_half": 1.288
       },
       "ev_event_weighted": {
-        "A_hold": 1.617,
-        "B_half2x": 1.208,
-        "C_bound": 1.617,
-        "half3x": 1.327,
-        "rungs248": 1.241,
-        "stop_half": 1.268
+        "A_hold": 1.593,
+        "B_half2x": 1.191,
+        "C_bound": 1.593,
+        "half3x": 1.308,
+        "rungs248": 1.223,
+        "stop_half": 1.256
       },
       "best": "A_hold",
       "status": "可用"
@@ -167,24 +167,24 @@
       "tier": "lottery",
       "tier_label": "樂透<1.5",
       "dte": "46-120",
-      "n": 159,
-      "events": 124,
-      "hit": 0.151,
+      "n": 161,
+      "events": 125,
+      "hit": 0.149,
       "ev": {
-        "A_hold": 0.861,
-        "B_half2x": 0.854,
-        "C_bound": 0.861,
-        "half3x": 0.868,
-        "rungs248": 0.858,
-        "stop_half": 0.914
+        "A_hold": 0.855,
+        "B_half2x": 0.848,
+        "C_bound": 0.855,
+        "half3x": 0.862,
+        "rungs248": 0.852,
+        "stop_half": 0.909
       },
       "ev_event_weighted": {
-        "A_hold": 0.848,
-        "B_half2x": 0.84,
-        "C_bound": 0.848,
-        "half3x": 0.855,
-        "rungs248": 0.846,
-        "stop_half": 0.901
+        "A_hold": 0.844,
+        "B_half2x": 0.836,
+        "C_bound": 0.844,
+        "half3x": 0.851,
+        "rungs248": 0.842,
+        "stop_half": 0.897
       },
       "best": "stop_half",
       "status": "可用"
@@ -284,24 +284,24 @@
       "tier": "mid",
       "tier_label": "中間1.5-3",
       "dte": ">120",
-      "n": 12,
-      "events": 11,
-      "hit": 0.083,
+      "n": 13,
+      "events": 12,
+      "hit": 0.077,
       "ev": {
-        "A_hold": 1.135,
-        "B_half2x": 1.132,
-        "C_bound": 1.169,
-        "half3x": 1.135,
-        "rungs248": 1.133,
-        "stop_half": 1.169
+        "A_hold": 1.128,
+        "B_half2x": 1.126,
+        "C_bound": 1.16,
+        "half3x": 1.128,
+        "rungs248": 1.127,
+        "stop_half": 1.16
       },
       "ev_event_weighted": {
-        "A_hold": 1.056,
+        "A_hold": 1.055,
         "B_half2x": 1.054,
-        "C_bound": 1.095,
-        "half3x": 1.056,
+        "C_bound": 1.091,
+        "half3x": 1.055,
         "rungs248": 1.055,
-        "stop_half": 1.095
+        "stop_half": 1.091
       },
       "best": "C_bound",
       "status": "累積中"
@@ -320,24 +320,24 @@
       "tier": "heavy",
       "tier_label": "實彈>3",
       "dte": "21-45",
-      "n": 26,
-      "events": 22,
-      "hit": 0.462,
+      "n": 27,
+      "events": 23,
+      "hit": 0.444,
       "ev": {
-        "A_hold": 1.399,
+        "A_hold": 1.397,
         "B_half2x": 1.336,
-        "C_bound": 1.559,
-        "half3x": 1.48,
-        "rungs248": 1.559,
-        "stop_half": 1.384
+        "C_bound": 1.551,
+        "half3x": 1.475,
+        "rungs248": 1.551,
+        "stop_half": 1.351
       },
       "ev_event_weighted": {
-        "A_hold": 1.389,
-        "B_half2x": 1.313,
-        "C_bound": 1.436,
-        "half3x": 1.435,
-        "rungs248": 1.436,
-        "stop_half": 1.347
+        "A_hold": 1.387,
+        "B_half2x": 1.314,
+        "C_bound": 1.432,
+        "half3x": 1.431,
+        "rungs248": 1.432,
+        "stop_half": 1.31
       },
       "best": "C_bound",
       "status": "累積中"
@@ -347,24 +347,24 @@
       "tier": "heavy",
       "tier_label": "實彈>3",
       "dte": "46-120",
-      "n": 50,
-      "events": 35,
-      "hit": 0.28,
+      "n": 51,
+      "events": 36,
+      "hit": 0.275,
       "ev": {
-        "A_hold": 0.921,
-        "B_half2x": 0.987,
-        "C_bound": 0.958,
-        "half3x": 0.936,
-        "rungs248": 0.958,
-        "stop_half": 1.024
+        "A_hold": 0.912,
+        "B_half2x": 0.976,
+        "C_bound": 0.948,
+        "half3x": 0.927,
+        "rungs248": 0.948,
+        "stop_half": 1.014
       },
       "ev_event_weighted": {
-        "A_hold": 1.0,
-        "B_half2x": 0.968,
-        "C_bound": 0.99,
-        "half3x": 1.022,
-        "rungs248": 0.99,
-        "stop_half": 1.001
+        "A_hold": 0.985,
+        "B_half2x": 0.954,
+        "C_bound": 0.975,
+        "half3x": 1.006,
+        "rungs248": 0.975,
+        "stop_half": 0.987
       },
       "best": "stop_half",
       "status": "可用"
@@ -374,24 +374,24 @@
       "tier": "heavy",
       "tier_label": "實彈>3",
       "dte": ">120",
-      "n": 74,
-      "events": 50,
-      "hit": 0.054,
+      "n": 77,
+      "events": 52,
+      "hit": 0.052,
       "ev": {
-        "A_hold": 0.969,
-        "B_half2x": 0.98,
-        "C_bound": 0.974,
-        "half3x": 0.98,
-        "rungs248": 0.974,
-        "stop_half": 0.982
+        "A_hold": 0.956,
+        "B_half2x": 0.966,
+        "C_bound": 0.961,
+        "half3x": 0.967,
+        "rungs248": 0.961,
+        "stop_half": 0.968
       },
       "ev_event_weighted": {
-        "A_hold": 0.96,
-        "B_half2x": 0.969,
-        "C_bound": 0.964,
-        "half3x": 0.976,
-        "rungs248": 0.964,
-        "stop_half": 0.972
+        "A_hold": 0.95,
+        "B_half2x": 0.959,
+        "C_bound": 0.954,
+        "half3x": 0.966,
+        "rungs248": 0.954,
+        "stop_half": 0.962
       },
       "best": "stop_half",
       "status": "可用"
@@ -437,23 +437,23 @@
       "tier": "lottery",
       "tier_label": "樂透<1.5",
       "dte": "46-120",
-      "n": 276,
-      "events": 200,
-      "hit": 0.058,
+      "n": 289,
+      "events": 206,
+      "hit": 0.055,
       "ev": {
-        "A_hold": 0.68,
-        "B_half2x": 0.684,
-        "C_bound": 0.749,
-        "half3x": 0.679,
-        "rungs248": 0.682,
-        "stop_half": 0.749
+        "A_hold": 0.686,
+        "B_half2x": 0.69,
+        "C_bound": 0.752,
+        "half3x": 0.684,
+        "rungs248": 0.688,
+        "stop_half": 0.752
       },
       "ev_event_weighted": {
-        "A_hold": 0.627,
+        "A_hold": 0.628,
         "B_half2x": 0.63,
         "C_bound": 0.711,
         "half3x": 0.627,
-        "rungs248": 0.628,
+        "rungs248": 0.629,
         "stop_half": 0.711
       },
       "best": "C_bound",
@@ -464,24 +464,24 @@
       "tier": "lottery",
       "tier_label": "樂透<1.5",
       "dte": ">120",
-      "n": 258,
-      "events": 199,
+      "n": 260,
+      "events": 201,
       "hit": 0.081,
       "ev": {
-        "A_hold": 0.876,
-        "B_half2x": 0.856,
+        "A_hold": 0.875,
+        "B_half2x": 0.855,
         "C_bound": 0.87,
-        "half3x": 0.872,
-        "rungs248": 0.867,
+        "half3x": 0.871,
+        "rungs248": 0.866,
         "stop_half": 0.87
       },
       "ev_event_weighted": {
-        "A_hold": 0.866,
-        "B_half2x": 0.848,
-        "C_bound": 0.866,
-        "half3x": 0.864,
-        "rungs248": 0.858,
-        "stop_half": 0.866
+        "A_hold": 0.865,
+        "B_half2x": 0.847,
+        "C_bound": 0.865,
+        "half3x": 0.862,
+        "rungs248": 0.857,
+        "stop_half": 0.865
       },
       "best": "A_hold",
       "status": "可用"
@@ -527,24 +527,24 @@
       "tier": "mid",
       "tier_label": "中間1.5-3",
       "dte": "46-120",
-      "n": 26,
-      "events": 24,
-      "hit": 0.269,
+      "n": 27,
+      "events": 25,
+      "hit": 0.259,
       "ev": {
-        "A_hold": 0.925,
-        "B_half2x": 0.928,
-        "C_bound": 1.011,
-        "half3x": 0.927,
-        "rungs248": 0.927,
-        "stop_half": 1.011
+        "A_hold": 0.921,
+        "B_half2x": 0.924,
+        "C_bound": 1.004,
+        "half3x": 0.922,
+        "rungs248": 0.922,
+        "stop_half": 1.004
       },
       "ev_event_weighted": {
         "A_hold": 0.814,
-        "B_half2x": 0.853,
-        "C_bound": 0.948,
-        "half3x": 0.83,
-        "rungs248": 0.833,
-        "stop_half": 0.948
+        "B_half2x": 0.851,
+        "C_bound": 0.943,
+        "half3x": 0.829,
+        "rungs248": 0.832,
+        "stop_half": 0.943
       },
       "best": "C_bound",
       "status": "累積中"
@@ -554,24 +554,24 @@
       "tier": "mid",
       "tier_label": "中間1.5-3",
       "dte": ">120",
-      "n": 49,
-      "events": 49,
-      "hit": 0.061,
+      "n": 51,
+      "events": 51,
+      "hit": 0.059,
       "ev": {
-        "A_hold": 0.915,
-        "B_half2x": 0.911,
-        "C_bound": 0.944,
-        "half3x": 0.915,
-        "rungs248": 0.913,
-        "stop_half": 0.944
+        "A_hold": 0.91,
+        "B_half2x": 0.906,
+        "C_bound": 0.939,
+        "half3x": 0.91,
+        "rungs248": 0.908,
+        "stop_half": 0.939
       },
       "ev_event_weighted": {
-        "A_hold": 0.915,
-        "B_half2x": 0.911,
-        "C_bound": 0.944,
-        "half3x": 0.915,
-        "rungs248": 0.913,
-        "stop_half": 0.944
+        "A_hold": 0.91,
+        "B_half2x": 0.906,
+        "C_bound": 0.939,
+        "half3x": 0.91,
+        "rungs248": 0.908,
+        "stop_half": 0.939
       },
       "best": "C_bound",
       "status": "可用"
@@ -590,24 +590,24 @@
       "tier": "heavy",
       "tier_label": "實彈>3",
       "dte": "21-45",
-      "n": 21,
-      "events": 20,
-      "hit": 0.095,
+      "n": 22,
+      "events": 21,
+      "hit": 0.136,
       "ev": {
-        "A_hold": 0.75,
-        "B_half2x": 0.72,
-        "C_bound": 0.735,
-        "half3x": 0.748,
-        "rungs248": 0.735,
-        "stop_half": 0.781
+        "A_hold": 0.744,
+        "B_half2x": 0.746,
+        "C_bound": 0.745,
+        "half3x": 0.742,
+        "rungs248": 0.745,
+        "stop_half": 0.805
       },
       "ev_event_weighted": {
-        "A_hold": 0.742,
-        "B_half2x": 0.71,
-        "C_bound": 0.726,
-        "half3x": 0.74,
-        "rungs248": 0.726,
-        "stop_half": 0.774
+        "A_hold": 0.736,
+        "B_half2x": 0.738,
+        "C_bound": 0.737,
+        "half3x": 0.734,
+        "rungs248": 0.737,
+        "stop_half": 0.799
       },
       "best": "stop_half",
       "status": "累積中"
@@ -617,24 +617,24 @@
       "tier": "heavy",
       "tier_label": "實彈>3",
       "dte": "46-120",
-      "n": 40,
-      "events": 38,
-      "hit": 0.175,
+      "n": 42,
+      "events": 40,
+      "hit": 0.167,
       "ev": {
-        "A_hold": 1.15,
-        "B_half2x": 1.131,
-        "C_bound": 1.153,
-        "half3x": 1.155,
-        "rungs248": 1.153,
-        "stop_half": 1.192
+        "A_hold": 1.121,
+        "B_half2x": 1.102,
+        "C_bound": 1.124,
+        "half3x": 1.125,
+        "rungs248": 1.124,
+        "stop_half": 1.169
       },
       "ev_event_weighted": {
-        "A_hold": 1.201,
-        "B_half2x": 1.181,
-        "C_bound": 1.204,
-        "half3x": 1.206,
-        "rungs248": 1.204,
-        "stop_half": 1.228
+        "A_hold": 1.167,
+        "B_half2x": 1.148,
+        "C_bound": 1.171,
+        "half3x": 1.172,
+        "rungs248": 1.171,
+        "stop_half": 1.202
       },
       "best": "stop_half",
       "status": "可用"
@@ -644,24 +644,24 @@
       "tier": "heavy",
       "tier_label": "實彈>3",
       "dte": ">120",
-      "n": 57,
-      "events": 56,
-      "hit": 0.018,
+      "n": 59,
+      "events": 57,
+      "hit": 0.017,
       "ev": {
-        "A_hold": 0.731,
-        "B_half2x": 0.726,
-        "C_bound": 0.729,
-        "half3x": 0.731,
-        "rungs248": 0.729,
-        "stop_half": 0.766
+        "A_hold": 0.724,
+        "B_half2x": 0.719,
+        "C_bound": 0.721,
+        "half3x": 0.724,
+        "rungs248": 0.721,
+        "stop_half": 0.757
       },
       "ev_event_weighted": {
-        "A_hold": 0.731,
-        "B_half2x": 0.726,
-        "C_bound": 0.729,
-        "half3x": 0.731,
-        "rungs248": 0.729,
-        "stop_half": 0.767
+        "A_hold": 0.727,
+        "B_half2x": 0.722,
+        "C_bound": 0.725,
+        "half3x": 0.727,
+        "rungs248": 0.725,
+        "stop_half": 0.762
       },
       "best": "stop_half",
       "status": "可用"
@@ -682,8 +682,8 @@
     "threshold_pct": 10.0,
     "listed_n": 657,
     "listed_rate": 0.161,
-    "universe_rate": 0.217,
-    "edge_pp": -5.6,
+    "universe_rate": 0.218,
+    "edge_pp": -5.7,
     "verdict_rule": "上榜組 − universe < 5 個百分點（≥100 個上榜標的-日後判）→ 選標的無 edge"
   }
 }
