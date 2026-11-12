@@ -1206,5 +1206,17 @@
       "retail_mtx": 43.7,
       "margin_chg": 18.7
     }
+  },
+  {
+    "date": "2026-11-12",
+    "regime": "CAPITULATION",
+    "score": -0.111,
+    "alerts": [],
+    "pcts": {
+      "f_spot_20d": 2.4,
+      "tx_delta": 96.8,
+      "retail_mtx": 31.3,
+      "margin_chg": 9.9
+    }
   }
 ]
