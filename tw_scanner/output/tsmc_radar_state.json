@@ -5500,9 +5500,9 @@
       "t10_ret_pct": -3.01,
       "t10_excess_pct": 1.57,
       "t10_excess_smh_pct": 2.11,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null,
-      "t20_excess_smh_pct": null
+      "t20_ret_pct": -6.02,
+      "t20_excess_pct": 4.17,
+      "t20_excess_smh_pct": 11.75
     }
   },
   {
@@ -7742,8 +7742,8 @@
       "t5_ret_pct": -7.25,
       "t5_excess_pct": 2.17,
       "t5_excess_smh_pct": 13.04,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -3.11,
+      "t10_excess_pct": 2.76,
       "t10_excess_smh_pct": null,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
@@ -8013,8 +8013,8 @@
       "t5_ret_pct": -7.25,
       "t5_excess_pct": 2.17,
       "t5_excess_smh_pct": 13.04,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -3.11,
+      "t10_excess_pct": 2.76,
       "t10_excess_smh_pct": null,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
@@ -8855,7 +8855,7 @@
       "entry_close": 2260.0,
       "t5_ret_pct": 5.97,
       "t5_excess_pct": 2.61,
-      "t5_excess_smh_pct": null,
+      "t5_excess_smh_pct": 5.44,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -9123,8 +9123,8 @@
       "entry_date": "2026-11-05",
       "benchmark": "0050",
       "entry_close": 2240.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 4.46,
+      "t5_excess_pct": 0.55,
       "t5_excess_smh_pct": null,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
@@ -9956,6 +9956,122 @@
       "entry_date": "2026-11-11",
       "benchmark": "0050",
       "entry_close": 2395.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
+  },
+  {
+    "ts": "2026-11-12T10:58:00.621192+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "export_controls_tariffs:13e(16m) / n2_arizona_ramp:22e(28m) / cowos_capacity:7e / geopolitics:2e / hyperscaler_capex:6e",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 13,
+            "n2_arizona_ramp": 22,
+            "cowos_capacity": 7,
+            "geopolitics": 2,
+            "hyperscaler_capex": 6
+          },
+          "mentions": {
+            "export_controls_tariffs": 16,
+            "n2_arizona_ramp": 28,
+            "cowos_capacity": 7,
+            "geopolitics": 2,
+            "hyperscaler_capex": 6
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 13,
+              "mentions": 16,
+              "gate": "zscore",
+              "z": 0.95,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 22,
+              "mentions": 28,
+              "gate": "zscore",
+              "z": 3.14,
+              "denial": true
+            },
+            "cowos_capacity": {
+              "events": 7,
+              "mentions": 7,
+              "gate": "zscore",
+              "z": -1.05,
+              "denial": false
+            },
+            "geopolitics": {
+              "events": 2,
+              "mentions": 2,
+              "gate": "zscore",
+              "z": 1.33,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 6,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": 1.05,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[n2_arizona_ramp] 官方否認偵測 → 上限 🟡（爭議中）",
+          "[export_controls_tariffs] TSMC is seeking chipmaking equipment that doesn't contain Chinese rare-earth magnets — asks suppliers to provide alterna",
+          "[export_controls_tariffs] TSMC Seeks Rare-Earth-Free Factory Equipment as China’s Export Controls Threaten Chip Supply Chains - Tekedia",
+          "[export_controls_tariffs] China is considering export controls on AI technologies, including banning local companies from using TSMC,... - Yahoo F",
+          "[n2_arizona_ramp] [News] Samsung 2nm Yields Reportedly at ~55%, Below Mass Production Threshold; Qualcomm May Opt for TSMC - TrendForce",
+          "[n2_arizona_ramp] Samsung's 2nm Yield Recovers to 55%... Qualcomm Return Hinges on Sept. 22 Summit - BigGo Finance",
+          "[n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] TSMC Accelerates CoPoS Packaging to Replace CoWoS, as Glass Core Substrates Cut Costs 30% and Boost Wafer Utilization Pa",
+          "[cowos_capacity] [News] While TSMC’s CoWoS Faces Supply Shortage, Samsung Reportedly Secures NVIDIA’s 2.5D Advanced Packaging Order - Tre",
+          "[geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India",
+          "[geopolitics] China’s Coast Guard Rehearses Blockade Tools as Taiwan Plans Counter-Drills - Tech Times",
+          "[hyperscaler_capex] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool",
+          "[hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[hyperscaler_capex] Will the next recession be caused by an AI capex cut-off? - InvestorDaily"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 GREEN、價格 20 日 -6.0%）；PER 25.9，3 年分位 85 → 48",
+      "premise": "GREEN",
+      "premise_ts": "2026-11-09T12:59:35.319147+00:00",
+      "ret_pct": -6.02,
+      "lookback_sessions": 20,
+      "as_of": "2026-11-12",
+      "valuation": {
+        "per": 25.91,
+        "per_pct": 47.8,
+        "per_then": 29.96,
+        "per_pct_then": 85.0,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-11-12",
+      "benchmark": "0050",
+      "entry_close": 2340.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t5_excess_smh_pct": null,
