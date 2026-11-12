@@ -1,158 +1,147 @@
 {
-  "updated_at": "2026-11-11T00:48:57.141014",
+  "updated_at": "2026-11-12T01:58:47.324132",
   "stats": {
     "total_items": 57,
-    "items_with_company": 18,
-    "items_with_catalyst": 12,
-    "items_both": 2
+    "items_with_company": 16,
+    "items_with_catalyst": 14,
+    "items_both": 7
   },
-  "count": 9,
+  "count": 8,
   "tickers": [
     "NVDA",
-    "AMZN",
     "CRWV",
-    "GOOGL",
-    "TGT",
-    "GOLD",
-    "RIVN",
-    "AMD",
-    "HIMS"
+    "NBIS",
+    "MU",
+    "SNDK",
+    "BE",
+    "META",
+    "COST"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 5.5,
+      "score": 9.0,
       "evidence": [
         {
-          "title": "Nvidia's Huang tries to project 'business as usual' in return to office after affair revelation",
+          "title": "Nvidia prepares to oust Jensen Huang, WSJ reports — stock sinks ",
+          "catalysts": [
+            "sinks"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia sells off for second day in fallout from Jensen Huang’s affair with alleged spy",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Op-ed: In Nvidia CEO Jensen Huang's alleged China spy scandal, there's plenty of blame to go around",
+          "title": "Cramer's stance on Nvidia's stock amid reports that CEO Jensen Huang may be ousted",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 2,
+      "symbol": "CRWV",
+      "score": 6.5,
       "evidence": [
         {
-          "title": "Amazon's Ring unveils flying drone and robot to patrol homes and businesses",
+          "title": "CoreWeave soars more than 24% for best day since April 2025 after strong Q3 report",
           "catalysts": [
-            "unveils"
+            "soars"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "CoreWeave just gave a shot in the arm to Micron, Lumentum and the rest of the AI trade",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Bloom Energy’s stock rallies as data-center jitters subside",
+          "catalysts": [
+            "rallies"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "CRWV",
-      "score": 1.0,
+      "symbol": "NBIS",
+      "score": 2,
       "evidence": [
         {
-          "title": "CoreWeave beats on revenue and lifts guidance, easing AI slowdown concerns",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "CoreWeave earnings put debt-fueled AI build-out under scrutiny",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "CoreWeave soars more than 24% for best day since April 2025 after strong Q3 report",
+          "catalysts": [
+            "soars"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "GOOGL",
-      "score": 1.0,
+      "symbol": "MU",
+      "score": 2,
       "evidence": [
         {
-          "title": "Alphabet shares appear to have bottomed. How to play it for a quick rebound",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Ex-Google recruiter: You're answering 'Tell me about yourself?' all wrong, and other job interview mistakes—do this instead",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "CoreWeave just gave a shot in the arm to Micron, Lumentum and the rest of the AI trade",
+          "catalysts": [
+            "rally"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "TGT",
-      "score": 1.0,
+      "symbol": "SNDK",
+      "score": 2,
       "evidence": [
         {
-          "title": "Anthropic's trillion-dollar IPO is coming, but retail investors could have owned AI stock much earlier",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Meet the former prosecutor Nvidia hired to investigate the Jensen Huang spy scandal",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Sandisk’s stock just staged a big gain. Here’s how it could march even higher.",
+          "catalysts": [
+            "gain"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "GOLD",
-      "score": 1.0,
+      "symbol": "BE",
+      "score": 2,
       "evidence": [
         {
-          "title": "American Barrick files for NYSE IPO as controlled unit of parent Barrick Mining",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Canada’s Barrick Mining files for IPO of North America business in New York",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Bloom Energy’s stock rallies as data-center jitters subside",
+          "catalysts": [
+            "rallies"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "RIVN",
+      "symbol": "META",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Rivian CEO says new R2 SUV, autonomy make 2027 an ‘inflection year’ as EV maker marks five years since IPO",
+          "title": "Meta head of infrastructure will leave and be succeeded by former AWS cloud exec",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AMD’s stock fades as investors weigh whether Nvidia’s turmoil will mean lasting wins",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HIMS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Five US states join FTC lawsuit alleging Hims & Hers engaged in unlawful privacy practices",
+          "title": "Costco is giving shareholders a big, early holiday gift. How to make sure you get it",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 2
-  }
+  "watch_only": {}
 }
