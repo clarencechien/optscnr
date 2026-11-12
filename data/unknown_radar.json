@@ -1,5 +1,42 @@
 {
-  "updated_at": "2026-11-11T01:28:42.128203",
-  "count": 0,
-  "blind_spots": []
+  "updated_at": "2026-11-12T02:31:16.516041",
+  "count": 3,
+  "blind_spots": [
+    {
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 12,
+      "consecutive_days": 5,
+      "is_strong": true,
+      "evidence": [
+        "Nasdaq futures fall as Nvidia sinks 8% after hours on report board may oust Huang",
+        "Nasdaq futures fall as Nvidia sinks 8% after hours on report board may oust Huang"
+      ]
+    },
+    {
+      "name": "JetBlue",
+      "ticker": "JBLU",
+      "mentions_today": 4,
+      "total_mentions": 11,
+      "consecutive_days": 4,
+      "is_strong": true,
+      "evidence": [
+        "JetBlue unveils new first-class seats to bring back profits",
+        "JetBlue unveils new first-class seats to bring back profits"
+      ]
+    },
+    {
+      "name": "Canadian",
+      "ticker": "CNDIF",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Feds arrest top official of healthcare company, alleging illegal drug importation",
+        "Inside India newsletter: Trump's poll setback fuels hope for U.S.-India trade deal by year end"
+      ]
+    }
+  ]
 }

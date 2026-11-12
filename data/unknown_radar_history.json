@@ -1,24 +1,17 @@
 {
   "JetBlue": {
     "first_seen": "2026-10-27",
-    "last_seen": "2026-11-04",
-    "consecutive_days": 3,
-    "total_mentions": 7,
+    "last_seen": "2026-11-12",
+    "consecutive_days": 4,
+    "total_mentions": 11,
     "ticker": "JBLU"
   },
   "Nasdaq": {
     "first_seen": "2026-11-02",
-    "last_seen": "2026-11-07",
-    "consecutive_days": 4,
-    "total_mentions": 10,
+    "last_seen": "2026-11-12",
+    "consecutive_days": 5,
+    "total_mentions": 12,
     "ticker": "NDAQ"
-  },
-  "Mitsui Chemicals": {
-    "first_seen": "2026-11-04",
-    "last_seen": "2026-11-04",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "MITUF"
   },
   "Digital Realty": {
     "first_seen": "2026-11-05",
@@ -40,5 +33,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "SECZ"
+  },
+  "Canadian": {
+    "first_seen": "2026-11-12",
+    "last_seen": "2026-11-12",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CNDIF"
   }
 }
