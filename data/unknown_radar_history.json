@@ -13,20 +13,6 @@
     "total_mentions": 12,
     "ticker": "NDAQ"
   },
-  "Digital Realty": {
-    "first_seen": "2026-11-05",
-    "last_seen": "2026-11-05",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "DLR-PJ"
-  },
-  "Figma": {
-    "first_seen": "2026-11-05",
-    "last_seen": "2026-11-05",
-    "consecutive_days": 1,
-    "total_mentions": 4,
-    "ticker": "FIG"
-  },
   "Securitize": {
     "first_seen": "2026-11-10",
     "last_seen": "2026-11-10",
@@ -40,5 +26,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "CNDIF"
+  },
+  "Outlook": {
+    "first_seen": "2026-11-13",
+    "last_seen": "2026-11-13",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "OTLK"
+  },
+  "Cisco": {
+    "first_seen": "2026-11-13",
+    "last_seen": "2026-11-13",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "CSCO"
+  },
+  "Bain Capital": {
+    "first_seen": "2026-11-13",
+    "last_seen": "2026-11-13",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "BCSF"
   }
 }

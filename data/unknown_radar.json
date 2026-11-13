@@ -1,41 +1,41 @@
 {
-  "updated_at": "2026-11-12T02:31:16.516041",
+  "updated_at": "2026-11-13T02:08:00.623444",
   "count": 3,
   "blind_spots": [
     {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 12,
-      "consecutive_days": 5,
-      "is_strong": true,
-      "evidence": [
-        "Nasdaq futures fall as Nvidia sinks 8% after hours on report board may oust Huang",
-        "Nasdaq futures fall as Nvidia sinks 8% after hours on report board may oust Huang"
-      ]
-    },
-    {
-      "name": "JetBlue",
-      "ticker": "JBLU",
-      "mentions_today": 4,
-      "total_mentions": 11,
-      "consecutive_days": 4,
-      "is_strong": true,
-      "evidence": [
-        "JetBlue unveils new first-class seats to bring back profits",
-        "JetBlue unveils new first-class seats to bring back profits"
-      ]
-    },
-    {
-      "name": "Canadian",
-      "ticker": "CNDIF",
+      "name": "Outlook",
+      "ticker": "OTLK",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Feds arrest top official of healthcare company, alleging illegal drug importation",
-        "Inside India newsletter: Trump's poll setback fuels hope for U.S.-India trade deal by year end"
+        "Widespread Microsoft outage takes down Outlook and other 365 services",
+        "Widespread Microsoft outage takes down Outlook and other 365 services"
+      ]
+    },
+    {
+      "name": "Cisco",
+      "ticker": "CSCO",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Cisco beats on earnings, says AI infrastructure revenue will double this fiscal year",
+        "Cisco beats on earnings, says AI infrastructure revenue will double this fiscal year"
+      ]
+    },
+    {
+      "name": "Bain Capital",
+      "ticker": "BCSF",
+      "mentions_today": 2,
+      "total_mentions": 2,
+      "consecutive_days": 1,
+      "is_strong": false,
+      "evidence": [
+        "Bain Capital’s head of real estate uses this strategy to counter the economy’s ‘cocktail of disrupti",
+        "Bain Capital’s head of real estate uses this strategy to counter the economy’s ‘cocktail of disrupti"
       ]
     }
   ]
