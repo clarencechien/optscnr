@@ -1,68 +1,109 @@
 {
-  "updated_at": "2026-11-12T01:58:47.324132",
+  "updated_at": "2026-11-13T01:23:23.121122",
   "stats": {
     "total_items": 57,
-    "items_with_company": 16,
-    "items_with_catalyst": 14,
-    "items_both": 7
+    "items_with_company": 22,
+    "items_with_catalyst": 7,
+    "items_both": 5
   },
-  "count": 8,
+  "count": 7,
   "tickers": [
     "NVDA",
+    "DIS",
+    "MSFT",
+    "AMZN",
+    "ORCL",
     "CRWV",
-    "NBIS",
-    "MU",
-    "SNDK",
-    "BE",
-    "META",
-    "COST"
+    "NBIS"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 9.0,
+      "score": 12.0,
       "evidence": [
         {
-          "title": "Nvidia prepares to oust Jensen Huang, WSJ reports — stock sinks ",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports",
+          "title": "Alice Huang tied to Nvidia’s biggest Chinese competitor",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Cramer's stance on Nvidia's stock amid reports that CEO Jensen Huang may be ousted",
+          "title": "Jensen Huang is out and Nvidia stock is down—what market pros say about buying dips",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia: Ex-prosecutor Joon Kim and Wachtell, Lipton bring big track record to investigation",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWV",
-      "score": 6.5,
+      "symbol": "DIS",
+      "score": 4,
       "evidence": [
         {
-          "title": "CoreWeave soars more than 24% for best day since April 2025 after strong Q3 report",
+          "title": "Disney's 'Star Wars' is coming to Cosm domes ahead of 50th anniversary as part of multiyear film deal",
           "catalysts": [
-            "soars"
+            "partnership",
+            "collaboration"
           ],
           "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 2.5,
+      "evidence": [
+        {
+          "title": "Widespread Microsoft outage takes down Outlook and other 365 services",
+          "catalysts": [],
+          "has_catalyst": false
         },
         {
-          "title": "CoreWeave just gave a shot in the arm to Micron, Lumentum and the rest of the AI trade",
+          "title": "Cerebras surges 17% after beating on quarterly revenue and announcing Microsoft deal",
           "catalysts": [
-            "rally"
+            "surges"
           ],
           "has_catalyst": true
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 2,
+      "evidence": [
         {
-          "title": "Bloom Energy’s stock rallies as data-center jitters subside",
+          "title": "Cerebras surges 17% after beating on quarterly revenue and announcing Microsoft deal",
           "catalysts": [
-            "rallies"
+            "surges"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "ORCL",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Cerebras surges 17% after beating on quarterly revenue and announcing Microsoft deal",
+          "catalysts": [
+            "surges"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "CRWV",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Nebius falls 16% as company expects increased 2026 capex spend, issues weak outlook",
+          "catalysts": [
+            "falls"
           ],
           "has_catalyst": true
         }
@@ -73,75 +114,16 @@
       "score": 2,
       "evidence": [
         {
-          "title": "CoreWeave soars more than 24% for best day since April 2025 after strong Q3 report",
+          "title": "Nebius falls 16% as company expects increased 2026 capex spend, issues weak outlook",
           "catalysts": [
-            "soars"
+            "falls"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MU",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "CoreWeave just gave a shot in the arm to Micron, Lumentum and the rest of the AI trade",
-          "catalysts": [
-            "rally"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Sandisk’s stock just staged a big gain. Here’s how it could march even higher.",
-          "catalysts": [
-            "gain"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "BE",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Bloom Energy’s stock rallies as data-center jitters subside",
-          "catalysts": [
-            "rallies"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Meta head of infrastructure will leave and be succeeded by former AWS cloud exec",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COST",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Costco is giving shareholders a big, early holiday gift. How to make sure you get it",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "Cerebras (pre-IPO)": 1
+  }
 }
