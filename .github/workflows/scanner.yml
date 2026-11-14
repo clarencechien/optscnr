@@ -12,7 +12,11 @@ permissions:
   contents: write
 jobs:
   scan:
-    runs-on: ubuntu-latest
+    # 釘 ubuntu-24.04（2026-11-14）：ubuntu-latest 在 11/12 換成 26.04，Python 3.9 沒有 26.04 的 build
+    # （actions/python-versions manifest：3.9 只到 24.04），setup-python 直接失敗，11/12、11/13 兩個市場日沒掃。
+    # 不順手升 3.11：3.9 這邊 pip 解出來是 pandas 2.3.3 / numpy 2.0.2 / yfinance 1.2.0，3.11 會變 pandas 3.0 / yfinance 1.7，
+    # 預先登記凍結期（到 2026-12-08）內不換主 scanner 的函式庫大版本。之後要升再一次升 runner＋Python，並先平行跑比對。
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
