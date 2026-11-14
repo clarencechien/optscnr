@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-13T20:40:46+00:00",
- "today": "2026-11-13",
+ "generated_at": "2026-11-14T09:24:05+00:00",
+ "today": "2026-11-14",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-11-13）：本月預算已於 2026-11-09 動用（投降窗 ×2.0），本月不再行動。",
@@ -12,7 +12,7 @@
  "weather": {
   "status": "OK",
   "as_of": "2026-11-13",
-  "age_days": 0,
+  "age_days": 1,
   "regime": "NEUTRAL",
   "emoji": "⛅",
   "score": -0.147,
@@ -100,7 +100,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-11-13",
-  "age_days": 0,
+  "age_days": 1,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -245,7 +245,7 @@
  "delta": {
   "status": "OK",
   "label": "2308",
-  "as_of": "2026-11-13",
+  "as_of": "2026-11-14",
   "age_days": 0,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
@@ -280,9 +280,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "YELLOW",
-    "headline": "capex_cut:6e / vr300_delay:9e / debt_financed_capex:9e(10m) / lc_psu_competition:0e",
-    "ts": "2026-11-13T09:58:11.016368+00:00"
+    "status": "GREEN",
+    "headline": "capex_cut:4e / vr300_delay:9e / debt_financed_capex:9e(10m) / lc_psu_competition:0e",
+    "ts": "2026-11-14T09:24:02.620406+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -325,7 +325,7 @@
   "status": "OK",
   "label": "2330",
   "as_of": "2026-11-13",
-  "age_days": 0,
+  "age_days": 1,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -403,7 +403,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-11-13",
-  "age_days": 0,
+  "age_days": 1,
   "rows": [
    {
     "ticker": "3661",
@@ -656,7 +656,7 @@
   {
    "date": "2026-12-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 27
+   "days": 26
   }
  ],
  "checks": [
@@ -673,7 +673,7 @@
   {
    "level": "ok",
    "label": "delta_radar 正常",
-   "text": "delta_radar：最新 2026-11-13"
+   "text": "delta_radar：最新 2026-11-14"
   },
   {
    "level": "ok",
