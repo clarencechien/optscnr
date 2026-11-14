@@ -1,41 +1,41 @@
 {
-  "updated_at": "2026-11-13T02:08:00.623444",
+  "updated_at": "2026-11-14T01:46:59.944500",
   "count": 3,
   "blind_spots": [
+    {
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 14,
+      "consecutive_days": 6,
+      "is_strong": true,
+      "evidence": [
+        "Is a bottom in for the Nasdaq-100? Charts to watch",
+        "S&P 500, Nasdaq end lower as Nvidia uncertainty weighs on tech shares"
+      ]
+    },
     {
       "name": "Outlook",
       "ticker": "OTLK",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
       "evidence": [
-        "Widespread Microsoft outage takes down Outlook and other 365 services",
-        "Widespread Microsoft outage takes down Outlook and other 365 services"
+        "Microsoft apologizes for massive outage that took down Outlook and other 365 services",
+        "Microsoft apologizes for massive outage that took down Outlook and other 365 services"
       ]
     },
     {
-      "name": "Cisco",
-      "ticker": "CSCO",
+      "name": "Stellantis",
+      "ticker": "STLA",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Cisco beats on earnings, says AI infrastructure revenue will double this fiscal year",
-        "Cisco beats on earnings, says AI infrastructure revenue will double this fiscal year"
-      ]
-    },
-    {
-      "name": "Bain Capital",
-      "ticker": "BCSF",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Bain Capital’s head of real estate uses this strategy to counter the economy’s ‘cocktail of disrupti",
-        "Bain Capital’s head of real estate uses this strategy to counter the economy’s ‘cocktail of disrupti"
+        "‘We will sue them’: Canada threatens Stellantis as Trump trade war reshapes Jeep production plans",
+        "‘We will sue them’: Canada threatens Stellantis as Trump trade war reshapes Jeep production plans"
       ]
     }
   ]

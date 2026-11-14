@@ -8,9 +8,9 @@
   },
   "Nasdaq": {
     "first_seen": "2026-11-02",
-    "last_seen": "2026-11-12",
-    "consecutive_days": 5,
-    "total_mentions": 12,
+    "last_seen": "2026-11-14",
+    "consecutive_days": 6,
+    "total_mentions": 14,
     "ticker": "NDAQ"
   },
   "Securitize": {
@@ -29,9 +29,9 @@
   },
   "Outlook": {
     "first_seen": "2026-11-13",
-    "last_seen": "2026-11-13",
-    "consecutive_days": 1,
-    "total_mentions": 2,
+    "last_seen": "2026-11-14",
+    "consecutive_days": 2,
+    "total_mentions": 4,
     "ticker": "OTLK"
   },
   "Cisco": {
@@ -47,5 +47,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "BCSF"
+  },
+  "Stellantis": {
+    "first_seen": "2026-11-14",
+    "last_seen": "2026-11-14",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "STLA"
   }
 }
