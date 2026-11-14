@@ -218,6 +218,24 @@ IPO 前 SPCX 代號被一檔同名舊 ETF（SPAC and New Issue ETF，已改名 S
 不放寬樂透 size 上限、不放寬絞肉區（DTE<21）閘門、不因單月命中率改規則、
 盤後開牌標的只標記不自動排除。
 
+## 主 scanner 停擺兩天：ubuntu-latest 換 26.04、Python 3.9 沒有 build（2026-11-14）
+
+**現象**：11/12 23:05Z（Worker 補發）起 scanner.yml 每次都在「Set up Python」死：
+`The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04`。最後一次成功是 11/12 03:07Z（市場日 11/11）；
+市場日 11/12、11/13 沒有掃描 CSV、沒有信號快照、沒有候選 JSON。
+
+**原因**：GitHub 把 `ubuntu-latest` 從 24.04 換到 26.04；actions/python-versions 的 manifest 裡 3.9 只有 22.04／24.04 的 build。
+全 repo 只有 scanner.yml 還停在 3.9（其餘 workflow 是 3.11／3.12，沒受影響）。
+
+**修**：`runs-on: ubuntu-24.04`，其他都不動。不順手升 3.11——3.9 這邊 pip 實際解出 pandas 2.3.3／numpy 2.0.2／yfinance 1.2.0，
+3.11 會一次跳到 pandas 3.0／yfinance 1.7；預先登記凍結期（到 12/08）內不換主 scanner 的函式庫大版本。
+12/08 之後再一次升 runner＋Python，先在分支平行跑、比對同一市場日的 CSV 再切。
+
+**資料缺口**：11/12 的選擇權快照補不回來。OI Δ7d 找 7 天前的檔有 +1/+2 天容忍，11/19、11/20 會退到 11/11 的檔（變成 Δ8d／Δ9d），不會壞。
+11/13 可以補：週日或週一 ET 09:30 前手動跑一次，v3.13 會走補跑模式、以 11/13 為市場基準日。
+
+**教訓**：`ubuntu-latest`＋已 EOL 的 Python 是定時炸彈；釘版本的地方要寫明為什麼釘、什麼時候解。
+
 ## SPCX C 池管道：Option Sage 判定要到人手上（2026-10-21，PLAN_2026-10_c_pool_alert + patch）
 
 **起因**：9/22–10/14 Sage 的 L2 亮了 16 個交易日，commit message 與 README 都有寫，但沒人看到。不是判斷錯，是管道沒接到人。
