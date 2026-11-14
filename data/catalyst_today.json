@@ -1,52 +1,55 @@
 {
-  "updated_at": "2026-11-13T01:23:23.121122",
+  "updated_at": "2026-11-14T00:59:05.415040",
   "stats": {
     "total_items": 57,
-    "items_with_company": 22,
-    "items_with_catalyst": 7,
-    "items_both": 5
+    "items_with_company": 19,
+    "items_with_catalyst": 8,
+    "items_both": 2
   },
-  "count": 7,
+  "count": 9,
   "tickers": [
     "NVDA",
-    "DIS",
+    "AMD",
     "MSFT",
-    "AMZN",
-    "ORCL",
-    "CRWV",
-    "NBIS"
+    "HOOD",
+    "GS",
+    "AAPL",
+    "GOOGL",
+    "META",
+    "INTC"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 12.0,
+      "score": 9.5,
       "evidence": [
         {
-          "title": "Alice Huang tied to Nvidia’s biggest Chinese competitor",
+          "title": "Nvidia is done with Jensen Huang. The fallout in Washington is just beginning",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Jensen Huang is out and Nvidia stock is down—what market pros say about buying dips",
+          "title": "Trump doesn’t plan to raise Nvidia, spy issue during China trip: U.S. officials",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia: Ex-prosecutor Joon Kim and Wachtell, Lipton bring big track record to investigation",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Nvidia stock suffers longest weekly losing streak since 2012 as market value sinks by $1.7 trillion",
+          "catalysts": [
+            "sinks"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "DIS",
-      "score": 4,
+      "symbol": "AMD",
+      "score": 2,
       "evidence": [
         {
-          "title": "Disney's 'Star Wars' is coming to Cosm domes ahead of 50th anniversary as part of multiyear film deal",
+          "title": "AMD and other chip stocks slide as Wall Street rethinks the AI trade without Jensen Huang",
           "catalysts": [
-            "partnership",
-            "collaboration"
+            "gain"
           ],
           "has_catalyst": true
         }
@@ -54,76 +57,89 @@
     },
     {
       "symbol": "MSFT",
-      "score": 2.5,
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Widespread Microsoft outage takes down Outlook and other 365 services",
+          "title": "Microsoft apologizes for massive outage that took down Outlook and other 365 services",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Cerebras surges 17% after beating on quarterly revenue and announcing Microsoft deal",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
+          "title": "Microsoft 365 outage expected to have minimal insurance impact",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
-      "score": 2,
+      "symbol": "HOOD",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Cerebras surges 17% after beating on quarterly revenue and announcing Microsoft deal",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
+          "title": "Supreme Court agrees to hear Robinhood challenge to IPO information omission lawsuit ",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ORCL",
-      "score": 2,
+      "symbol": "GS",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Cerebras surges 17% after beating on quarterly revenue and announcing Microsoft deal",
-          "catalysts": [
-            "surges"
-          ],
-          "has_catalyst": true
+          "title": "Goldman Sachs looks to cash in on big IPOs twice. Anthropic’s historic deal is its next chance",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWV",
-      "score": 2,
+      "symbol": "AAPL",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Nebius falls 16% as company expects increased 2026 capex spend, issues weak outlook",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
+          "title": "Apple, Alphabet and Uber survived major founder transitions. Nvidia will be a harder test",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NBIS",
-      "score": 2,
+      "symbol": "GOOGL",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Nebius falls 16% as company expects increased 2026 capex spend, issues weak outlook",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
+          "title": "Apple, Alphabet and Uber survived major founder transitions. Nvidia will be a harder test",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Free speech nonprofit says US to end efforts to curb Facebook group and app reporting ICE activity",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Soros Fund ramps up Intel stake to over $340 million in third quarter",
+          "catalysts": [],
+          "has_catalyst": false
         }
       ]
     }
   ],
   "watch_only": {
-    "Cerebras (pre-IPO)": 1
+    "Anthropic (private)": 3,
+    "OpenAI (private)": 1
   }
 }
