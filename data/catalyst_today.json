@@ -1,137 +1,109 @@
 {
-  "updated_at": "2026-11-14T00:59:05.415040",
+  "updated_at": "2026-11-16T00:14:11.600758",
   "stats": {
     "total_items": 57,
-    "items_with_company": 19,
-    "items_with_catalyst": 8,
+    "items_with_company": 15,
+    "items_with_catalyst": 7,
     "items_both": 2
   },
-  "count": 9,
+  "count": 7,
   "tickers": [
     "NVDA",
-    "AMD",
+    "BRK-B",
+    "INTC",
+    "LCID",
+    "RIVN",
     "MSFT",
-    "HOOD",
-    "GS",
-    "AAPL",
-    "GOOGL",
-    "META",
-    "INTC"
+    "AMZN"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 9.5,
+      "score": 5.0,
       "evidence": [
         {
-          "title": "Nvidia is done with Jensen Huang. The fallout in Washington is just beginning",
+          "title": "Bessent calls for ‘dramatic shakeup’ at Nvidia, urges outside CEO",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Trump doesn’t plan to raise Nvidia, spy issue during China trip: U.S. officials",
+          "title": "Nvidia board urged to consider 'potential return of Jensen Huang' by two major investors",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia stock suffers longest weekly losing streak since 2012 as market value sinks by $1.7 trillion",
+          "title": "3 big things we're watching in the stock market in the week ahead",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BRK-B",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Berkshire breaks out to record high with fourth-quarter rally reaching 19%",
           "catalysts": [
-            "sinks"
+            "rally",
+            "record high"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "AMD and other chip stocks slide as Wall Street rethinks the AI trade without Jensen Huang",
-          "catalysts": [
-            "gain"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Microsoft apologizes for massive outage that took down Outlook and other 365 services",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Microsoft 365 outage expected to have minimal insurance impact",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "HOOD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Supreme Court agrees to hear Robinhood challenge to IPO information omission lawsuit ",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Goldman Sachs looks to cash in on big IPOs twice. Anthropic’s historic deal is its next chance",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Apple, Alphabet and Uber survived major founder transitions. Nvidia will be a harder test",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Apple, Alphabet and Uber survived major founder transitions. Nvidia will be a harder test",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Free speech nonprofit says US to end efforts to curb Facebook group and app reporting ICE activity",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
       "symbol": "INTC",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Intel sued by shareholders following 29% stock plunge",
+          "catalysts": [
+            "plunge"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "LCID",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Soros Fund ramps up Intel stake to over $340 million in third quarter",
+          "title": "Rivian, Lucid, Scout CEOs aren’t counting on Democrats to restore EV federal support after midterm wins",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RIVN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Rivian, Lucid, Scout CEOs aren’t counting on Democrats to restore EV federal support after midterm wins",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft apologizes for massive outage that took down Outlook and other 365 services",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "US rocket fails after launch, payload of Amazon internet satellites destroyed",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -139,7 +111,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 1
+    "Anthropic (private)": 3
   }
 }
