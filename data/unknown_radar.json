@@ -1,25 +1,13 @@
 {
-  "updated_at": "2026-11-14T01:46:59.944500",
-  "count": 3,
+  "updated_at": "2026-11-16T01:23:15.065997",
+  "count": 2,
   "blind_spots": [
-    {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 14,
-      "consecutive_days": 6,
-      "is_strong": true,
-      "evidence": [
-        "Is a bottom in for the Nasdaq-100? Charts to watch",
-        "S&P 500, Nasdaq end lower as Nvidia uncertainty weighs on tech shares"
-      ]
-    },
     {
       "name": "Outlook",
       "ticker": "OTLK",
       "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
+      "total_mentions": 6,
+      "consecutive_days": 3,
       "is_strong": true,
       "evidence": [
         "Microsoft apologizes for massive outage that took down Outlook and other 365 services",
@@ -27,15 +15,15 @@
       ]
     },
     {
-      "name": "Stellantis",
-      "ticker": "STLA",
+      "name": "IDP Education",
+      "ticker": "IDPUF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "‘We will sue them’: Canada threatens Stellantis as Trump trade war reshapes Jeep production plans",
-        "‘We will sue them’: Canada threatens Stellantis as Trump trade war reshapes Jeep production plans"
+        "IDP Education rejects Blackstone’s $564.5 million takeover bid for third time",
+        "Australia's IDP Education rejects Blackstone’s sweetened takeover bid"
       ]
     }
   ]

@@ -29,9 +29,9 @@
   },
   "Outlook": {
     "first_seen": "2026-11-13",
-    "last_seen": "2026-11-14",
-    "consecutive_days": 2,
-    "total_mentions": 4,
+    "last_seen": "2026-11-16",
+    "consecutive_days": 3,
+    "total_mentions": 6,
     "ticker": "OTLK"
   },
   "Cisco": {
@@ -54,5 +54,12 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "STLA"
+  },
+  "IDP Education": {
+    "first_seen": "2026-11-16",
+    "last_seen": "2026-11-16",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "IDPUF"
   }
 }
