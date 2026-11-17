@@ -16017,8 +16017,8 @@
       "t5_excess_pct": -5.45,
       "t10_ret_pct": -22.32,
       "t10_excess_pct": -14.61,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null
+      "t20_ret_pct": -35.47,
+      "t20_excess_pct": -21.71
     }
   },
   {
@@ -17812,8 +17812,8 @@
       "entry_close": 1270.0,
       "t5_ret_pct": 0.39,
       "t5_excess_pct": 1.28,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -16.93,
+      "t10_excess_pct": -10.37,
       "t20_ret_pct": null,
       "t20_excess_pct": null
     }
@@ -18524,8 +18524,8 @@
       "entry_date": "2026-11-10",
       "benchmark": "0050",
       "entry_close": 1275.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -17.25,
+      "t5_excess_pct": -11.53,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -18574,8 +18574,8 @@
       "entry_date": "2026-11-10",
       "benchmark": "0050",
       "entry_close": 1275.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -17.25,
+      "t5_excess_pct": -11.53,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t20_ret_pct": null,
@@ -19586,6 +19586,104 @@
       "entry_date": "2026-11-16",
       "benchmark": "0050",
       "entry_close": 1120.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null
+    }
+  },
+  {
+    "ts": "2026-11-17T11:07:28.729835+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "YELLOW",
+        "headline": "capex_cut:3e / vr300_delay:10e(11m) / debt_financed_capex:10e / lc_psu_competition:0e",
+        "metrics": {
+          "events": {
+            "capex_cut": 3,
+            "vr300_delay": 10,
+            "debt_financed_capex": 10,
+            "lc_psu_competition": 0
+          },
+          "mentions": {
+            "capex_cut": 3,
+            "vr300_delay": 11,
+            "debt_financed_capex": 10,
+            "lc_psu_competition": 0
+          },
+          "scoring": {
+            "capex_cut": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -1.37,
+              "denial": false
+            },
+            "vr300_delay": {
+              "events": 10,
+              "mentions": 11,
+              "gate": "zscore",
+              "z": 2.47,
+              "denial": true
+            },
+            "debt_financed_capex": {
+              "events": 10,
+              "mentions": 10,
+              "gate": "zscore",
+              "z": -0.46,
+              "denial": false
+            },
+            "lc_psu_competition": {
+              "events": 0,
+              "mentions": 0,
+              "gate": "absolute",
+              "z": null,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[capex_cut] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool",
+          "[capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[capex_cut] Will the next recession be caused by an AI capex cut-off? - InvestorDaily",
+          "[vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An",
+          "[vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance",
+          "[vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech",
+          "[debt_financed_capex] Will Oracle's Debt-Funded Data Center Buildout Weigh on the Stock Now? - TradingView",
+          "[debt_financed_capex] AI Debt Risks Mount: Why Borrowing by Meta, Alphabet, Microsoft and Oracle Worries Investors - TradingKey",
+          "[debt_financed_capex] AI debt fears ease ahead of Oracle, Alphabet and Amazon updates. Here's what to watch. - CNBC"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": "premise_ok_price_down",
+      "text": "🔀 背離：前提健在（YELLOW）、價格 20 日 -35.5% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 33.6，3 年分位 71 → 56",
+      "premise": "YELLOW",
+      "premise_ts": "2026-11-16T12:02:40.076740+00:00",
+      "ret_pct": -35.47,
+      "lookback_sessions": 20,
+      "as_of": "2026-11-17",
+      "valuation": {
+        "per": 33.63,
+        "per_pct": 56.1,
+        "per_then": 51.88,
+        "per_pct_then": 71.1,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-11-17",
+      "benchmark": "0050",
+      "entry_close": 1055.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t10_ret_pct": null,
