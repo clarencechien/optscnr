@@ -1242,5 +1242,19 @@
       "retail_mtx": 38.9,
       "margin_chg": 5.6
     }
+  },
+  {
+    "date": "2026-11-17",
+    "regime": "NEUTRAL",
+    "score": -0.371,
+    "alerts": [
+      "capitulation"
+    ],
+    "pcts": {
+      "f_spot_20d": 4.4,
+      "tx_delta": 40.1,
+      "retail_mtx": 23.0,
+      "margin_chg": 4.4
+    }
   }
 ]
