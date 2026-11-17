@@ -1,98 +1,157 @@
 {
-  "updated_at": "2026-11-16T00:14:11.600758",
+  "updated_at": "2026-11-17T03:04:32.360082",
   "stats": {
     "total_items": 57,
-    "items_with_company": 15,
-    "items_with_catalyst": 7,
+    "items_with_company": 19,
+    "items_with_catalyst": 8,
     "items_both": 2
   },
-  "count": 7,
+  "count": 12,
   "tickers": [
     "NVDA",
+    "TSLA",
     "BRK-B",
-    "INTC",
-    "LCID",
-    "RIVN",
-    "MSFT",
-    "AMZN"
+    "JPM",
+    "NKE",
+    "BAC",
+    "DIS",
+    "SNDK",
+    "AMD",
+    "PLTR",
+    "AMZN",
+    "MSFT"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 5.0,
+      "score": 6.5,
       "evidence": [
         {
-          "title": "Bessent calls for ‘dramatic shakeup’ at Nvidia, urges outside CEO",
+          "title": "Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access",
+          "catalysts": [
+            "gained"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia board urged to consider 'potential return of Jensen Huang' by two major investors",
+          "title": "Market's Nvidia obsession obscuring an opportunity in this name",
           "catalysts": [],
           "has_catalyst": false
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 4,
+      "evidence": [
         {
-          "title": "3 big things we're watching in the stock market in the week ahead",
-          "catalysts": [],
-          "has_catalyst": false
+          "title": "Prediction market odds for Tesla-SpaceX merger by April 2027 top 60%",
+          "catalysts": [
+            "climbed",
+            "merger"
+          ],
+          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "BRK-B",
-      "score": 4,
+      "score": 1.5,
       "evidence": [
         {
-          "title": "Berkshire breaks out to record high with fourth-quarter rally reaching 19%",
-          "catalysts": [
-            "rally",
-            "record high"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 2,
-      "evidence": [
+          "title": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
-          "title": "Intel sued by shareholders following 29% stock plunge",
-          "catalysts": [
-            "plunge"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "LCID",
-      "score": 0.5,
-      "evidence": [
+          "title": "Warren Buffett donates $5.5 billion, says kindness 'compounds' in Thanksgiving letter",
+          "catalysts": [],
+          "has_catalyst": false
+        },
         {
-          "title": "Rivian, Lucid, Scout CEOs aren’t counting on Democrats to restore EV federal support after midterm wins",
+          "title": "Berkshire upped its bet on a beleaguered U.S. housing market, while souring on these bank stocks",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "RIVN",
+      "symbol": "JPM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Rivian, Lucid, Scout CEOs aren’t counting on Democrats to restore EV federal support after midterm wins",
+          "title": "JPMorgan Chase says temporary software bug is affecting consumer banking",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "NKE",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft apologizes for massive outage that took down Outlook and other 365 services",
+          "title": "CNBC's The China Connection newsletter: As Nike and Lululemon struggle in China, Xiaohongshu is helping local brands take off",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Market's Nvidia obsession obscuring an opportunity in this name",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "SNDK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Stanley Druckenmiller dumped these chip stocks while buying into SpaceX and Palantir",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Stanley Druckenmiller dumped these chip stocks while buying into SpaceX and Palantir",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Stanley Druckenmiller dumped these chip stocks while buying into SpaceX and Palantir",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -103,7 +162,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "US rocket fails after launch, payload of Amazon internet satellites destroyed",
+          "title": "Do Amazon’s Black Friday deals really save you money? A new report casts doubt.",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Microsoft reports phishing attack targeting firms with fake emails",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -111,6 +181,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3
+    "OpenAI (private)": 2,
+    "Anthropic (private)": 2
   }
 }
