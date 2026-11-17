@@ -1,29 +1,17 @@
 {
-  "updated_at": "2026-11-16T01:23:15.065997",
-  "count": 2,
+  "updated_at": "2026-11-17T04:10:38.414629",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Outlook",
-      "ticker": "OTLK",
-      "mentions_today": 2,
-      "total_mentions": 6,
-      "consecutive_days": 3,
-      "is_strong": true,
-      "evidence": [
-        "Microsoft apologizes for massive outage that took down Outlook and other 365 services",
-        "Microsoft apologizes for massive outage that took down Outlook and other 365 services"
-      ]
-    },
-    {
-      "name": "IDP Education",
-      "ticker": "IDPUF",
+      "name": "United Airlines",
+      "ticker": "UAL",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "IDP Education rejects Blackstone’s $564.5 million takeover bid for third time",
-        "Australia's IDP Education rejects Blackstone’s sweetened takeover bid"
+        "United Airlines resolves system outage that affected departing flights",
+        "United Airlines resolves system outage that delayed flights Monday"
       ]
     }
   ]
