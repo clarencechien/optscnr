@@ -6004,9 +6004,9 @@
       "t10_ret_pct": -5.17,
       "t10_excess_pct": 2.54,
       "t10_excess_smh_pct": -1.97,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null,
-      "t20_excess_smh_pct": null
+      "t20_ret_pct": -10.33,
+      "t20_excess_pct": 3.43,
+      "t20_excess_smh_pct": -0.5
     }
   },
   {
@@ -8244,7 +8244,7 @@
       "t5_excess_smh_pct": 0.03,
       "t10_ret_pct": -4.94,
       "t10_excess_pct": 2.41,
-      "t10_excess_smh_pct": null,
+      "t10_excess_smh_pct": 4.19,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -8358,7 +8358,7 @@
       "t5_excess_smh_pct": 0.03,
       "t10_ret_pct": -4.94,
       "t10_excess_pct": 2.41,
-      "t10_excess_smh_pct": null,
+      "t10_excess_smh_pct": 4.19,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -8628,7 +8628,7 @@
       "t5_excess_smh_pct": 0.03,
       "t10_ret_pct": -4.94,
       "t10_excess_pct": 2.41,
-      "t10_excess_smh_pct": null,
+      "t10_excess_smh_pct": 4.19,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -8741,8 +8741,8 @@
       "t5_ret_pct": -0.44,
       "t5_excess_pct": 0.45,
       "t5_excess_smh_pct": 6.29,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -5.45,
+      "t10_excess_pct": 1.11,
       "t10_excess_smh_pct": null,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
@@ -9353,7 +9353,7 @@
       "entry_close": 2235.0,
       "t5_ret_pct": -0.89,
       "t5_excess_pct": 0.14,
-      "t5_excess_smh_pct": null,
+      "t5_excess_smh_pct": 4.34,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -9623,7 +9623,7 @@
       "entry_close": 2235.0,
       "t5_ret_pct": -0.89,
       "t5_excess_pct": 0.14,
-      "t5_excess_smh_pct": null,
+      "t5_excess_smh_pct": 4.34,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -9736,8 +9736,8 @@
       "entry_date": "2026-11-10",
       "benchmark": "0050",
       "entry_close": 2285.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -5.03,
+      "t5_excess_pct": 0.69,
       "t5_excess_smh_pct": null,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
@@ -9789,8 +9789,8 @@
       "entry_date": "2026-11-10",
       "benchmark": "0050",
       "entry_close": 2285.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": -5.03,
+      "t5_excess_pct": 0.69,
       "t5_excess_smh_pct": null,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
@@ -10896,6 +10896,122 @@
       "entry_date": "2026-11-16",
       "benchmark": "0050",
       "entry_close": 2215.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
+  },
+  {
+    "ts": "2026-11-17T11:44:13.620235+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "RED",
+        "headline": "export_controls_tariffs:15e(17m) / n2_arizona_ramp:21e(28m) / cowos_capacity:8e / geopolitics:3e / hyperscaler_capex:3e",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 15,
+            "n2_arizona_ramp": 21,
+            "cowos_capacity": 8,
+            "geopolitics": 3,
+            "hyperscaler_capex": 3
+          },
+          "mentions": {
+            "export_controls_tariffs": 17,
+            "n2_arizona_ramp": 28,
+            "cowos_capacity": 8,
+            "geopolitics": 3,
+            "hyperscaler_capex": 3
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 15,
+              "mentions": 17,
+              "gate": "zscore",
+              "z": 2.21,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 21,
+              "mentions": 28,
+              "gate": "zscore",
+              "z": -0.66,
+              "denial": true
+            },
+            "cowos_capacity": {
+              "events": 8,
+              "mentions": 8,
+              "gate": "zscore",
+              "z": 0.0,
+              "denial": false
+            },
+            "geopolitics": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": 2.66,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -1.15,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] TSMC is seeking chipmaking equipment that doesn't contain Chinese rare-earth magnets — asks suppliers to provide alterna",
+          "[export_controls_tariffs] TSMC Seeks Rare-Earth-Free Factory Equipment as China’s Export Controls Threaten Chip Supply Chains - Tekedia",
+          "[export_controls_tariffs] How Taiwan’s Chip Industry Navigates US Industrial Policy and Export Controls - Global Taiwan Institute",
+          "[n2_arizona_ramp] [News] Samsung 2nm Yields Reportedly at ~55%, Below Mass Production Threshold; Qualcomm May Opt for TSMC - TrendForce",
+          "[n2_arizona_ramp] Samsung's 2nm Yield Recovers to 55%... Qualcomm Return Hinges on Sept. 22 Summit - BigGo Finance",
+          "[n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] TSMC Accelerates CoPoS Packaging to Replace CoWoS, as Glass Core Substrates Cut Costs 30% and Boost Wafer Utilization Pa",
+          "[cowos_capacity] [News] While TSMC’s CoWoS Faces Supply Shortage, Samsung Reportedly Secures NVIDIA’s 2.5D Advanced Packaging Order - Tre",
+          "[geopolitics] China’s Coast Guard Rehearses Blockade Tools as Taiwan Plans Counter-Drills - Tech Times",
+          "[geopolitics] Could China Blockade Taiwan? Naval Drills Raise Fears of a Wider Indo-Pacific Crisis - Modern Diplomacy",
+          "[geopolitics] China stages record drills designed to encircle Taiwan - Reuters",
+          "[hyperscaler_capex] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool",
+          "[hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[hyperscaler_capex] Will the next recession be caused by an AI capex cut-off? - InvestorDaily"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": "premise_ok_price_down",
+      "text": "🔀 背離：前提健在（GREEN）、價格 20 日 -10.3% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 22.5，3 年分位 72 → 27",
+      "premise": "GREEN",
+      "premise_ts": "2026-11-16T12:53:38.922042+00:00",
+      "ret_pct": -10.33,
+      "lookback_sessions": 20,
+      "as_of": "2026-11-17",
+      "valuation": {
+        "per": 22.54,
+        "per_pct": 27.2,
+        "per_then": 28.28,
+        "per_pct_then": 72.1,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-11-17",
+      "benchmark": "0050",
+      "entry_close": 2170.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t5_excess_smh_pct": null,
