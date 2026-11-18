@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-17T23:15:47Z",
- "n_days": 50,
+ "generated_at": "2026-11-18T03:52:50Z",
+ "n_days": 51,
  "t8_by_event_answer": {
   "有": {
    "n": 15,
@@ -19,6 +19,58 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-11-17",
+   "decided_at": "2026-11-18T00:35:07.938Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-11-17_BAC_2027-01-15_55.0",
+     "ticker": "BAC",
+     "expiry": "2027-01-15",
+     "strike": 55,
+     "entry_price": 0.49,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-12-25",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2027-01-15",
+      "what": "Bank of America 2026 年第四季財報，約美東 6:45 盤前發布，8:30 法說；公司已確認日期",
+      "source": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027.html"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 5,
+      "missing_days": 1,
+      "max_move": {
+       "pct": -1.3,
+       "date": "2026-11-17"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "公司3/19公告Q4財報1/15盤前約6:45ET發布，與到期日同一天；WSH亦列已確認",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-11-16",
    "decided_at": "2026-11-17T00:35:08.142Z",
