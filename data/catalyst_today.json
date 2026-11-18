@@ -1,30 +1,27 @@
 {
-  "updated_at": "2026-11-17T03:04:32.360082",
+  "updated_at": "2026-11-18T02:32:35.880781",
   "stats": {
     "total_items": 57,
-    "items_with_company": 19,
+    "items_with_company": 20,
     "items_with_catalyst": 8,
-    "items_both": 2
+    "items_both": 5
   },
-  "count": 12,
+  "count": 9,
   "tickers": [
     "NVDA",
-    "TSLA",
-    "BRK-B",
-    "JPM",
+    "CRWV",
+    "AAPL",
     "NKE",
-    "BAC",
-    "DIS",
-    "SNDK",
-    "AMD",
-    "PLTR",
+    "COST",
+    "MSFT",
+    "CRM",
     "AMZN",
-    "MSFT"
+    "TGT"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 6.5,
+      "score": 14.5,
       "evidence": [
         {
           "title": "Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access",
@@ -34,58 +31,36 @@
           "has_catalyst": true
         },
         {
-          "title": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade",
+          "title": "Nvidia takes positive step forward with stronger sales outlook. Here’s our thoughts on the stock",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Market's Nvidia obsession obscuring an opportunity in this name",
+          "title": "Jensen Huang's Nvidia exit exposes succession and governance risks for companies and boards",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TSLA",
-      "score": 4,
+      "symbol": "CRWV",
+      "score": 2,
       "evidence": [
         {
-          "title": "Prediction market odds for Tesla-SpaceX merger by April 2027 top 60%",
+          "title": "CoreWeave’s stock pops — even as Nvidia talks up a ‘disciplined’ approach to financing",
           "catalysts": [
-            "climbed",
-            "merger"
+            "pops"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "BRK-B",
-      "score": 1.5,
-      "evidence": [
-        {
-          "title": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Warren Buffett donates $5.5 billion, says kindness 'compounds' in Thanksgiving letter",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Berkshire upped its bet on a beleaguered U.S. housing market, while souring on these bank stocks",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "JPM",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "JPMorgan Chase says temporary software bug is affecting consumer banking",
+          "title": "Widespread outages hit banks, air travel, the NSA and Apple, disrupting seemingly everything",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -96,73 +71,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "CNBC's The China Connection newsletter: As Nike and Lululemon struggle in China, Xiaohongshu is helping local brands take off",
+          "title": "Nike lays out financial goals ahead of first investor day in 9 years",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "BAC",
+      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Market's Nvidia obsession obscuring an opportunity in this name",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "SNDK",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Stanley Druckenmiller dumped these chip stocks while buying into SpaceX and Palantir",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMD",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Stanley Druckenmiller dumped these chip stocks while buying into SpaceX and Palantir",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Stanley Druckenmiller dumped these chip stocks while buying into SpaceX and Palantir",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Do Amazon’s Black Friday deals really save you money? A new report casts doubt.",
+          "title": "Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -173,7 +93,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Microsoft reports phishing attack targeting firms with fake emails",
+          "title": "Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Salesforce starts fresh round of job cuts, Business Insider reports",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Amazon’s Bezos says he helped pick Pattinson as Bond",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Popular websites compromised in bid to steal crypto, target iPhone users",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -181,7 +134,7 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2,
-    "Anthropic (private)": 2
+    "OpenAI (private)": 1,
+    "Anthropic (private)": 1
   }
 }
