@@ -13,13 +13,6 @@
     "total_mentions": 14,
     "ticker": "NDAQ"
   },
-  "Securitize": {
-    "first_seen": "2026-11-10",
-    "last_seen": "2026-11-10",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "SECZ"
-  },
   "Canadian": {
     "first_seen": "2026-11-12",
     "last_seen": "2026-11-12",

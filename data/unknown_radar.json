@@ -1,18 +1,5 @@
 {
-  "updated_at": "2026-11-17T04:10:38.414629",
-  "count": 1,
-  "blind_spots": [
-    {
-      "name": "United Airlines",
-      "ticker": "UAL",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "United Airlines resolves system outage that affected departing flights",
-        "United Airlines resolves system outage that delayed flights Monday"
-      ]
-    }
-  ]
+  "updated_at": "2026-11-18T03:08:03.483401",
+  "count": 0,
+  "blind_spots": []
 }
