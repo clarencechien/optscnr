@@ -301,3 +301,6 @@
 - GOOGL ｜ Q4 2026 財報市場預估在 2027-02-03 公布（分析師預估 EPS $3.19），晚於 2027-01-15 到期日；截至 2026-10-30 公司尚未正式公告日期 ｜ 2027-02-03 ｜ https://public.com/stocks/googl/earnings ｜ 2026-11-05 LLM 提案
 - GOOGL ｜ 董事會宣布季度股利每股 $0.22，股權登記日 2026-12-07，發放日 2026-12-14 ｜ 2026-12-07 ｜ https://www.cmelitegroup.com/knowledge-hub/alphabet-earnings-date/ ｜ 2026-11-05 LLM 提案
 - GOOGL ｜ （已過）廣告科技反壟斷案：Brinkema 法官於 2026-09-02 駁回 DOJ 要求出售 AdX 的請求，改採為期 6 年的行為性救濟（與 Prebid 整合、資料分享、設置監察人） ｜ 2026-09-02 ｜ https://www.cnbc.com/2026/09/02/google-defeats-us-bid-to-force-ad-tech-sale.html ｜ 2026-11-05 LLM 提案
+- BAC ｜ 2026 年第四季財報排在 2027-01-15（週五）盤前約美東 6:45 發布，8:30 開法說，公司確認；剛好是 2027-01-15 月選到期日 ｜ 2027-01-15 ｜ https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027.html ｜ 2026-11-17 LLM 提案
+- BAC ｜ 2027 年財報日公司已排定：第一季 2027-04-14、第二季 2027-07-14、第三季 2027-10-13、第四季 2028-01-14（第四季法說改在美東 11:00） ｜ 2026-03-19 ｜ https://www.stocktitan.net/news/BAC/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027-8i4xd8fgz18h.html ｜ 2026-11-17 LLM 提案
+- BAC ｜ Bank of America 與 Blackstone、Citi、Morgan Stanley 宣布 630 億美元融資架構，跟 Broadcom 合作支援 AI 算力（此條只看到新聞列表標題，未讀內文） ｜ 2026-10-26 ｜ https://www.stocktitan.net/news/BAC/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027-8i4xd8fgz18h.html ｜ 2026-11-17 LLM 提案
