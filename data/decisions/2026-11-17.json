@@ -1,0 +1,114 @@
+{
+  "market_date": "2026-11-17",
+  "decided_at": "2026-11-18T00:35:07.938Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-11-17T23:05:36Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 51,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-11-17_BAC_2027-01-15_55.0",
+      "ticker": "BAC",
+      "expiry": "2027-01-15",
+      "strike": 55,
+      "entry_price": 0.49,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-12-25",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 1,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 5,
+        "missing_days": 1,
+        "max_move": {
+          "pct": -1.3,
+          "date": "2026-11-17"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2027-01-15",
+        "what": "Bank of America 2026 年第四季財報，約美東 6:45 盤前發布，8:30 法說；公司已確認日期",
+        "source": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027.html"
+      },
+      "note": "公司3/19公告Q4財報1/15盤前約6:45ET發布，與到期日同一天；WSH亦列已確認",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "BAC",
+      "fact": "2026 年第四季財報排在 2027-01-15（週五）盤前約美東 6:45 發布，8:30 開法說，公司確認；剛好是 2027-01-15 月選到期日",
+      "date": "2027-01-15",
+      "source": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027.html"
+    },
+    {
+      "ticker": "BAC",
+      "fact": "2027 年財報日公司已排定：第一季 2027-04-14、第二季 2027-07-14、第三季 2027-10-13、第四季 2028-01-14（第四季法說改在美東 11:00）",
+      "date": "2026-03-19",
+      "source": "https://www.stocktitan.net/news/BAC/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027-8i4xd8fgz18h.html"
+    },
+    {
+      "ticker": "BAC",
+      "fact": "Bank of America 與 Blackstone、Citi、Morgan Stanley 宣布 630 億美元融資架構，跟 Broadcom 合作支援 AI 算力（此條只看到新聞列表標題，未讀內文）",
+      "date": "2026-10-26",
+      "source": "https://www.stocktitan.net/news/BAC/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027-8i4xd8fgz18h.html"
+    }
+  ],
+  "facts_appended": 3,
+  "raw_answer": "{\"market_date\": \"2026-11-17\",\n \"candidates\": [\n   {\"signal_id\": \"2026-11-17_BAC_2027-01-15_55.0\",\n    \"q_event\": {\"answer\": \"有\", \"date\": \"2027-01-15\", \"what\": \"Bank of America 2026 年第四季財報，約美東 6:45 盤前發布，8:30 法說；公司已確認日期\", \"source\": \"https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027.html\"},\n    \"note\": \"公司3/19公告Q4財報1/15盤前約6:45ET發布，與到期日同一天；WSH亦列已確認\"}\n ],\n \"facts_proposed\": [\n   {\"ticker\": \"BAC\", \"fact\": \"2026 年第四季財報排在 2027-01-15（週五）盤前約美東 6:45 發布，8:30 開法說，公司確認；剛好是 2027-01-15 月選到期日\", \"date\": \"2027-01-15\", \"source\": \"https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027.html\"},\n   {\"ticker\": \"BAC\", \"fact\": \"2027 年財報日公司已排定：第一季 2027-04-14、第二季 2027-07-14、第三季 2027-10-13、第四季 2028-01-14（第四季法說改在美東 11:00）\", \"date\": \"2026-03-19\", \"source\": \"https://www.stocktitan.net/news/BAC/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027-8i4xd8fgz18h.html\"},\n   {\"ticker\": \"BAC\", \"fact\": \"Bank of America 與 Blackstone、Citi、Morgan Stanley 宣布 630 億美元融資架構，跟 Broadcom 合作支援 AI 算力（此條只看到新聞列表標題，未讀內文）\", \"date\": \"2026-10-26\", \"source\": \"https://www.stocktitan.net/news/BAC/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027-8i4xd8fgz18h.html\"}\n ]}",
+  "usage": {
+    "prompt_tokens": 25816,
+    "completion_tokens": 1560,
+    "total_tokens": 27376,
+    "cost": 0.144464,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.144464,
+      "upstream_inference_prompt_cost": 0.103264,
+      "upstream_inference_completions_cost": 0.0312
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 702,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 1
+    }
+  },
+  "error": null
+}
