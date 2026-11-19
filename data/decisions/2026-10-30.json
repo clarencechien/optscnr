@@ -63,11 +63,11 @@
       "outcome": {
         "t5": 0.57,
         "t10": 0.33,
-        "t20": null,
+        "t20": 0.01,
         "peak": 0.57,
-        "mature": false,
-        "verdict": "➖持平(峰0.6x/今0.3x)",
-        "filled_at": "2026-11-18"
+        "mature": true,
+        "verdict": "💀歸零(0.01x)",
+        "filled_at": "2026-11-19"
       }
     },
     {
@@ -114,11 +114,11 @@
       "outcome": {
         "t5": 0.67,
         "t10": 0.11,
-        "t20": null,
+        "t20": 0.11,
         "peak": 0.67,
-        "mature": false,
+        "mature": true,
         "verdict": "➖持平(峰0.7x/今0.1x)",
-        "filled_at": "2026-11-18"
+        "filled_at": "2026-11-19"
       }
     }
   ],

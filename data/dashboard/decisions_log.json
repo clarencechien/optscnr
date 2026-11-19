@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-19T03:46:23Z",
+ "generated_at": "2026-11-19T23:17:17Z",
  "n_days": 52,
  "t8_by_event_answer": {
   "有": {
-   "n": 16,
-   "hit_rate": 0.312,
-   "avg_peak": 1.89
+   "n": 17,
+   "hit_rate": 0.294,
+   "avg_peak": 1.81
   },
   "無": {
    "n": 4,
@@ -13,9 +13,9 @@
    "avg_peak": 1.17
   },
   "未確認": {
-   "n": 11,
+   "n": 12,
    "hit_rate": 0.0,
-   "avg_peak": 0.61
+   "avg_peak": 0.62
   }
  },
  "days": [
@@ -200,7 +200,7 @@
       "peak": 1.02,
       "mature": false,
       "verdict": "➖持平(峰1.0x/今0.9x)",
-      "filled_at": "2026-11-18"
+      "filled_at": "2026-11-19"
      }
     }
    ]
@@ -286,11 +286,11 @@
      "outcome": {
       "t5": 0.57,
       "t10": 0.33,
-      "t20": null,
+      "t20": 0.01,
       "peak": 0.57,
-      "mature": false,
-      "verdict": "➖持平(峰0.6x/今0.3x)",
-      "filled_at": "2026-11-18"
+      "mature": true,
+      "verdict": "💀歸零(0.01x)",
+      "filled_at": "2026-11-19"
      }
     },
     {
@@ -335,11 +335,11 @@
      "outcome": {
       "t5": 0.67,
       "t10": 0.11,
-      "t20": null,
+      "t20": 0.11,
       "peak": 0.67,
-      "mature": false,
+      "mature": true,
       "verdict": "➖持平(峰0.7x/今0.1x)",
-      "filled_at": "2026-11-18"
+      "filled_at": "2026-11-19"
      }
     }
    ]
