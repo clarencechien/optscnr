@@ -1,42 +1,41 @@
 {
-  "updated_at": "2026-11-18T02:32:35.880781",
+  "updated_at": "2026-11-19T01:57:56.530970",
   "stats": {
     "total_items": 57,
-    "items_with_company": 20,
-    "items_with_catalyst": 8,
-    "items_both": 5
+    "items_with_company": 19,
+    "items_with_catalyst": 4,
+    "items_both": 2
   },
-  "count": 9,
+  "count": 10,
   "tickers": [
     "NVDA",
     "CRWV",
-    "AAPL",
-    "NKE",
-    "COST",
+    "HIMS",
+    "PANW",
+    "TGT",
+    "ORCL",
     "MSFT",
-    "CRM",
-    "AMZN",
-    "TGT"
+    "AAPL",
+    "F",
+    "COST"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 14.5,
+      "score": 6.5,
       "evidence": [
         {
-          "title": "Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access",
-          "catalysts": [
-            "gained"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Nvidia takes positive step forward with stronger sales outlook. Here’s our thoughts on the stock",
+          "title": "Nvidia interim CEO Kress tells employees ‘let’s move forward’ at first all-hands meeting since Jensen Huang exit",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Jensen Huang's Nvidia exit exposes succession and governance risks for companies and boards",
+          "title": "Cantor Fitzgerald's Nvidia business interests targeted in Democrats' Lutnick probe ",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -44,45 +43,73 @@
     },
     {
       "symbol": "CRWV",
-      "score": 2,
+      "score": 2.5,
       "evidence": [
         {
-          "title": "CoreWeave’s stock pops — even as Nvidia talks up a ‘disciplined’ approach to financing",
+          "title": "Big bets against AI debt, from CoreWeave to Oracle and the Mag 7, could soon hit the ETF market ",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Nvidia sinks after earnings, dragging down neoclouds CoreWeave, Iren",
           "catalysts": [
-            "pops"
+            "sinks"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "score": 0.5,
+      "symbol": "HIMS",
+      "score": 2,
       "evidence": [
         {
-          "title": "Widespread outages hit banks, air travel, the NSA and Apple, disrupting seemingly everything",
+          "title": "Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy",
+          "catalysts": [
+            "launches"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "PANW",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Palo Alto inks $4.5 billion deal for AI startup Applied Compute, shares pop 7% on earnings",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Palo Alto Networks’ stock gets a fresh AI-fueled boost from earnings",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "NKE",
-      "score": 0.5,
+      "symbol": "TGT",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Nike lays out financial goals ahead of first investor day in 9 years",
+          "title": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Target shares rise 7% as retailer posts best sales growth in five years, hikes guidance",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say",
+          "title": "Big bets against AI debt, from CoreWeave to Oracle and the Mag 7, could soon hit the ETF market ",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -93,40 +120,40 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say",
+          "title": "Vance scraps schedule to address tech outages as Trump admin insists incidents aren't linked",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRM",
+      "symbol": "AAPL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Salesforce starts fresh round of job cuts, Business Insider reports",
+          "title": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "F",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Amazon’s Bezos says he helped pick Pattinson as Bond",
+          "title": "Ford starts U.S. battery cell production using Chinese tech amid geopolitical tensions",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
+      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Popular websites compromised in bid to steal crypto, target iPhone users",
+          "title": "Tech outages are causing people to panic-buy. Costco is benefiting, Mizuho says",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -134,7 +161,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 1,
-    "Anthropic (private)": 1
+    "Anthropic (private)": 5
   }
 }
