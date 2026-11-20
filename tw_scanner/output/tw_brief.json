@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-19T21:51:58+00:00",
- "today": "2026-11-19",
+ "generated_at": "2026-11-20T10:28:27+00:00",
+ "today": "2026-11-20",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-11-20）：本月預算已於 2026-11-09 動用（投降窗 ×2.0），本月不再行動。",
   "鋒面 🌧️ DE_RISK（本週由 NEUTRAL 轉入）。",
-  "2308 前提 🟡 YELLOW；🔀 背離：前提健在（YELLOW）、價格 20 日 -37.7% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 30.0，3 年分位 69 → 46",
+  "2308 前提 🟡 YELLOW；🔀 背離：前提健在（YELLOW）、價格 20 日 -44.6% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 30.0，3 年分位 69 → 46",
   "2330 前提 🟢 GREEN；🔀 背離：前提健在（GREEN）、價格 20 日 -12.7% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 21.4，3 年分位 67 → 21",
   "投降窗加碼歷史 10 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +1.87%。"
  ],
  "weather": {
   "status": "OK",
   "as_of": "2026-11-19",
-  "age_days": 0,
+  "age_days": 1,
   "regime": "DE_RISK",
   "emoji": "🌧️",
   "score": -0.272,
@@ -100,7 +100,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-11-19",
-  "age_days": 0,
+  "age_days": 1,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -249,18 +249,11 @@
  "delta": {
   "status": "OK",
   "label": "2308",
-  "as_of": "2026-11-19",
+  "as_of": "2026-11-20",
   "age_days": 0,
-  "last_overall": "YELLOW",
+  "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
-   "m1",
-   "m2",
-   "m3",
-   "m4",
-   "m5",
-   "m6",
-   "m8",
-   "m9"
+   "m5"
   ],
   "full_overall": "YELLOW",
   "full_ts": "2026-11-19",
@@ -292,8 +285,8 @@
    {
     "module": "M5 narrative_triggers",
     "status": "YELLOW",
-    "headline": "capex_cut:3e / vr300_delay:10e(11m) / debt_financed_capex:9e(10m) / lc_psu_competition:0e",
-    "ts": "2026-11-19T12:08:43.004844+00:00"
+    "headline": "capex_cut:7e(8m) / vr300_delay:9e(10m) / debt_financed_capex:11e / lc_psu_competition:0e",
+    "ts": "2026-11-20T10:28:25.489537+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -316,12 +309,12 @@
   ],
   "divergence": {
    "flag": "premise_ok_price_down",
-   "text": "🔀 背離：前提健在（YELLOW）、價格 20 日 -37.7% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 30.0，3 年分位 69 → 46",
+   "text": "🔀 背離：前提健在（YELLOW）、價格 20 日 -44.6% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 30.0，3 年分位 69 → 46",
    "premise": "YELLOW",
-   "premise_ts": "2026-11-19T12:08:42.506502+00:00",
-   "ret_pct": -37.69,
+   "premise_ts": "2026-11-19T12:08:43.004844+00:00",
+   "ret_pct": -44.62,
    "lookback_sessions": 20,
-   "as_of": "2026-11-19",
+   "as_of": "2026-11-20",
    "valuation": {
     "per": 30.03,
     "per_pct": 46.0,
@@ -336,7 +329,7 @@
   "status": "OK",
   "label": "2330",
   "as_of": "2026-11-19",
-  "age_days": 0,
+  "age_days": 1,
   "last_overall": "GREEN",
   "last_modules_requested": [
    "m1",
@@ -421,7 +414,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-11-19",
-  "age_days": 0,
+  "age_days": 1,
   "rows": [
    {
     "ticker": "3661",
@@ -674,7 +667,7 @@
   {
    "date": "2026-12-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 21
+   "days": 20
   }
  ],
  "checks": [
@@ -691,7 +684,7 @@
   {
    "level": "ok",
    "label": "delta_radar 正常",
-   "text": "delta_radar：最新 2026-11-19"
+   "text": "delta_radar：最新 2026-11-20"
   },
   {
    "level": "ok",
