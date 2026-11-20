@@ -1,41 +1,194 @@
 {
-  "updated_at": "2026-11-19T01:57:56.530970",
+  "updated_at": "2026-11-20T01:51:32.122403",
   "stats": {
     "total_items": 57,
-    "items_with_company": 19,
-    "items_with_catalyst": 4,
-    "items_both": 2
+    "items_with_company": 17,
+    "items_with_catalyst": 9,
+    "items_both": 4
   },
-  "count": 10,
+  "count": 17,
   "tickers": [
     "NVDA",
-    "CRWV",
-    "HIMS",
     "PANW",
-    "TGT",
-    "ORCL",
     "MSFT",
+    "MU",
+    "AVGO",
+    "AMZN",
+    "AMD",
+    "PLTR",
+    "TSLA",
+    "WMT",
+    "NFLX",
+    "DIS",
+    "INTC",
+    "CRWV",
+    "TSM",
     "AAPL",
-    "F",
-    "COST"
+    "BA"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 6.5,
+      "score": 4.0,
       "evidence": [
         {
-          "title": "Nvidia interim CEO Kress tells employees ‘let’s move forward’ at first all-hands meeting since Jensen Huang exit",
+          "title": "California attorney general issues Nvidia subpoena in probe of China chip diversion",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Cantor Fitzgerald's Nvidia business interests targeted in Democrats' Lutnick probe ",
+          "title": "Trump bought Nvidia, Palantir, SpaceX in September as federal deals, White House ties grew",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk",
+          "title": "Jensen Huang's — and Nvidia's — legal exposure balloons",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PANW",
+      "score": 4,
+      "evidence": [
+        {
+          "title": "Palo Alto stock jumps on earnings beat and company's big bet on securing open-weight models",
+          "catalysts": [
+            "jumps",
+            "earnings beat"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong",
+          "catalysts": [
+            "record high"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Why Micron, Broadcom and other AI stocks gave up their gains Thursday",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Why Micron, Broadcom and other AI stocks gave up their gains Thursday",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Amazon app warns New York of higher costs if Mamdani delivery law passes",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Netflix, Amazon, Fox to bid for 2030 men's World Cup rights; Disney out",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "AMD dives on short seller report of alleged China exposure",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Trump bought Nvidia, Palantir, SpaceX in September as federal deals, White House ties grew",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Trump bought Nvidia, Palantir, SpaceX in September as federal deals, White House ties grew",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Walmart hikes outlook as CEO tells CNBC retailer aims to keep prices low despite soaring fuel costs",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Netflix, Amazon, Fox to bid for 2030 men's World Cup rights; Disney out",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Netflix, Amazon, Fox to bid for 2030 men's World Cup rights; Disney out",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Intel signs first external customer for advanced 18A chips",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -43,84 +196,21 @@
     },
     {
       "symbol": "CRWV",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Big bets against AI debt, from CoreWeave to Oracle and the Mag 7, could soon hit the ETF market ",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia sinks after earnings, dragging down neoclouds CoreWeave, Iren",
-          "catalysts": [
-            "sinks"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "HIMS",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy",
-          "catalysts": [
-            "launches"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "PANW",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Palo Alto inks $4.5 billion deal for AI startup Applied Compute, shares pop 7% on earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Palo Alto Networks’ stock gets a fresh AI-fueled boost from earnings",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TGT",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Target shares rise 7% as retailer posts best sales growth in five years, hikes guidance",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Big bets against AI debt, from CoreWeave to Oracle and the Mag 7, could soon hit the ETF market ",
+          "title": "A CoreWeave co-founder just made an unconventional $30 million wager on its battered bonds",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MSFT",
+      "symbol": "TSM",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Vance scraps schedule to address tech outages as Trump admin insists incidents aren't linked",
+          "title": "TSMC tightens China AI chip curbs as new US rules close manufacturing loophole, sources say",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -131,29 +221,18 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk",
+          "title": "UK tribunal confirms government order demanding access to Apple data",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "F",
+      "symbol": "BA",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Ford starts U.S. battery cell production using Chinese tech amid geopolitical tensions",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "COST",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Tech outages are causing people to panic-buy. Costco is benefiting, Mizuho says",
+          "title": "Northrop forgoes challenge to Boeing’s $20B+ Navy fighter win",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -161,6 +240,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 5
+    "Anthropic (private)": 8
   }
 }
