@@ -1,24 +1,10 @@
 {
-  "JetBlue": {
-    "first_seen": "2026-10-27",
-    "last_seen": "2026-11-12",
-    "consecutive_days": 4,
-    "total_mentions": 11,
-    "ticker": "JBLU"
-  },
   "Nasdaq": {
     "first_seen": "2026-11-02",
     "last_seen": "2026-11-14",
     "consecutive_days": 6,
     "total_mentions": 14,
     "ticker": "NDAQ"
-  },
-  "Canadian": {
-    "first_seen": "2026-11-12",
-    "last_seen": "2026-11-12",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "CNDIF"
   },
   "Outlook": {
     "first_seen": "2026-11-13",
@@ -61,5 +47,26 @@
     "consecutive_days": 1,
     "total_mentions": 2,
     "ticker": "UAL"
+  },
+  "Intuit": {
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "consecutive_days": 1,
+    "total_mentions": 4,
+    "ticker": "INTU"
+  },
+  "Sanofi": {
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "SNYNF"
+  },
+  "Greenland": {
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "consecutive_days": 1,
+    "total_mentions": 2,
+    "ticker": "GLNDW"
   }
 }
