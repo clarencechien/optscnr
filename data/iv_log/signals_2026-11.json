@@ -47795,5 +47795,966 @@
     "t10": null,
     "t20": null,
     "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-11-27_68.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-11-27",
+    "strike": 68.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次01-19)",
+    "entry_price": 0.02,
+    "entry_iv": 50.7817421875,
+    "entry_spot": 58.459999084472656,
+    "oi": 4390,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 13741,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.01,
+    "entry_ask": 0.04,
+    "last_trade_at": "2026-11-19 19:58:35",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 0.02,
+        "bid": 0.01,
+        "ask": 0.04,
+        "iv": 50.7817421875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-11-27_67.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-11-27",
+    "strike": 67.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次01-19)",
+    "entry_price": 0.03,
+    "entry_iv": 46.87553125,
+    "entry_spot": 58.459999084472656,
+    "oi": 7435,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 12038,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.01,
+    "entry_ask": 0.04,
+    "last_trade_at": "2026-11-19 20:37:08",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 0.03,
+        "bid": 0.01,
+        "ask": 0.04,
+        "iv": 46.87553125
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2027-03-19_130.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2027-03-19",
+    "strike": 130.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅覆蓋財報(01-19)",
+    "entry_price": 0.04,
+    "entry_iv": 54.49264257812501,
+    "entry_spot": 58.459999084472656,
+    "oi": 4501,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(01-19)"
+    ],
+    "volume": 10556,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.04,
+    "entry_ask": 0.05,
+    "last_trade_at": "2026-11-19 20:26:36",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 0.04,
+        "bid": 0.04,
+        "ask": 0.05,
+        "iv": 54.49264257812501
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-11-27_70.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-11-27",
+    "strike": 70.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次01-19)",
+    "entry_price": 0.01,
+    "entry_iv": 53.51608984375,
+    "entry_spot": 58.459999084472656,
+    "oi": 4242,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 9800,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.01,
+    "entry_ask": 0.03,
+    "last_trade_at": "2026-11-19 20:32:01",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 0.01,
+        "bid": 0.01,
+        "ask": 0.03,
+        "iv": 53.51608984375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-11-27_71.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-11-27",
+    "strike": 71.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次01-19)",
+    "entry_price": 0.01,
+    "entry_iv": 57.0316796875,
+    "entry_spot": 58.459999084472656,
+    "oi": 1766,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 6406,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.01,
+    "entry_ask": 0.03,
+    "last_trade_at": "2026-11-19 18:38:35",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 0.01,
+        "bid": 0.01,
+        "ask": 0.03,
+        "iv": 57.0316796875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-11-27_61.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-11-27",
+    "strike": 61.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次01-19)",
+    "entry_price": 0.34,
+    "entry_iv": 34.668622070312495,
+    "entry_spot": 58.459999084472656,
+    "oi": 3458,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 5944,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.32,
+    "entry_ask": 0.35,
+    "last_trade_at": "2026-11-19 20:59:50",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 0.34,
+        "bid": 0.32,
+        "ask": 0.35,
+        "iv": 34.668622070312495
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-11-27_60.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-11-27",
+    "strike": 60.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次01-19)",
+    "entry_price": 0.58,
+    "entry_iv": 35.1568984375,
+    "entry_spot": 58.459999084472656,
+    "oi": 2147,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 5269,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.58,
+    "entry_ask": 0.61,
+    "last_trade_at": "2026-11-19 20:59:26",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 0.58,
+        "bid": 0.58,
+        "ask": 0.61,
+        "iv": 35.1568984375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-11-27_69.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-11-27",
+    "strike": 69.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次01-19)",
+    "entry_price": 0.03,
+    "entry_iv": 61.71913281250001,
+    "entry_spot": 58.459999084472656,
+    "oi": 2007,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 4890,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.0,
+    "entry_ask": 0.16,
+    "last_trade_at": "2026-11-19 19:19:06",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 0.03,
+        "bid": 0.0,
+        "ask": 0.16,
+        "iv": 61.71913281250001
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_AVGO_2026-11-27_400.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "AVGO",
+    "expiry": "2026-11-27",
+    "strike": 400.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次12-09)",
+    "entry_price": 0.62,
+    "entry_iv": 57.76409423828125,
+    "entry_spot": 346.6499938964844,
+    "oi": 1720,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-09)"
+    ],
+    "volume": 3711,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.55,
+    "entry_ask": 0.69,
+    "last_trade_at": "2026-11-19 20:59:28",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 346.6499938964844,
+        "last": 0.62,
+        "bid": 0.55,
+        "ask": 0.69,
+        "iv": 57.76409423828125
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-11-27_64.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-11-27",
+    "strike": 64.0,
+    "score": 9,
+    "tags": "🚨異常掃貨 🆕新倉暴量 🚬菸屁股 📅吃不到財報(下次01-19)",
+    "entry_price": 0.07,
+    "entry_iv": 38.086556640625,
+    "entry_spot": 58.459999084472656,
+    "oi": 2641,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed",
+      "cigar_butt"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 3214,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.06,
+    "entry_ask": 0.08,
+    "last_trade_at": "2026-11-19 20:58:41",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 0.07,
+        "bid": 0.06,
+        "ask": 0.08,
+        "iv": 38.086556640625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-12-18_70.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-12-18",
+    "strike": 70.0,
+    "score": 8,
+    "tags": "🆕新倉暴量 🚬菸屁股 🔥萬人塚 📅吃不到財報(下次01-19)",
+    "entry_price": 0.14,
+    "entry_iv": 37.9889013671875,
+    "entry_spot": 58.459999084472656,
+    "oi": 35003,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "first_seen_in_feed",
+      "cigar_butt",
+      "mass_grave"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 9572,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 0.11,
+    "entry_ask": 0.13,
+    "last_trade_at": "2026-11-19 20:56:12",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 0.14,
+        "bid": 0.11,
+        "ask": 0.13,
+        "iv": 37.9889013671875
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_MU_2026-11-27_800.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "MU",
+    "expiry": "2026-11-27",
+    "strike": 800.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次12-17)",
+    "entry_price": 4.15,
+    "entry_iv": 78.19846020507812,
+    "entry_spot": 690.4400024414062,
+    "oi": 1903,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-17)"
+    ],
+    "volume": 4733,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 4.0,
+    "entry_ask": 4.3,
+    "last_trade_at": "2026-11-19 20:59:58",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 690.4400024414062,
+        "last": 4.15,
+        "bid": 4.0,
+        "ask": 4.3,
+        "iv": 78.19846020507812
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-12-18_62.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-12-18",
+    "strike": 62.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次01-19)",
+    "entry_price": 1.15,
+    "entry_iv": 36.96352099609375,
+    "entry_spot": 58.459999084472656,
+    "oi": 3407,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 4601,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.08,
+    "entry_ask": 1.12,
+    "last_trade_at": "2026-11-19 20:59:39",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 1.15,
+        "bid": 1.08,
+        "ask": 1.12,
+        "iv": 36.96352099609375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_WMT_2026-11-27_128.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "WMT",
+    "expiry": "2026-11-27",
+    "strike": 128.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅財報已過(11-19)",
+    "entry_price": 1.35,
+    "entry_iv": 29.785858398437494,
+    "entry_spot": 126.04000091552734,
+    "oi": 1115,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(11-19)"
+    ],
+    "volume": 3329,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.29,
+    "entry_ask": 1.39,
+    "last_trade_at": "2026-11-19 20:59:33",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 126.04000091552734,
+        "last": 1.35,
+        "bid": 1.29,
+        "ask": 1.39,
+        "iv": 29.785858398437494
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_WMT_2026-11-27_127.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "WMT",
+    "expiry": "2026-11-27",
+    "strike": 127.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅財報已過(11-19)",
+    "entry_price": 1.75,
+    "entry_iv": 30.61592822265625,
+    "entry_spot": 126.04000091552734,
+    "oi": 1195,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅財報已過(11-19)"
+    ],
+    "volume": 3052,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.7,
+    "entry_ask": 1.84,
+    "last_trade_at": "2026-11-19 20:59:56",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 126.04000091552734,
+        "last": 1.75,
+        "bid": 1.7,
+        "ask": 1.84,
+        "iv": 30.61592822265625
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_MU_2026-11-27_850.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "MU",
+    "expiry": "2026-11-27",
+    "strike": 850.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次12-17)",
+    "entry_price": 1.45,
+    "entry_iv": 79.41915112304687,
+    "entry_spot": 690.4400024414062,
+    "oi": 1648,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次12-17)"
+    ],
+    "volume": 2443,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.33,
+    "entry_ask": 1.45,
+    "last_trade_at": "2026-11-19 20:59:49",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 690.4400024414062,
+        "last": 1.45,
+        "bid": 1.33,
+        "ask": 1.45,
+        "iv": 79.41915112304687
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2027-01-15_61.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2027-01-15",
+    "strike": 61.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次01-19)",
+    "entry_price": 2.52,
+    "entry_iv": 41.345801391601555,
+    "entry_spot": 58.459999084472656,
+    "oi": 1647,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 2019,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.41,
+    "entry_ask": 2.75,
+    "last_trade_at": "2026-11-19 20:49:32",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 2.52,
+        "bid": 2.41,
+        "ask": 2.75,
+        "iv": 41.345801391601555
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2026-12-18_61.0",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2026-12-18",
+    "strike": 61.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次01-19)",
+    "entry_price": 1.5,
+    "entry_iv": 38.64807446289062,
+    "entry_spot": 58.459999084472656,
+    "oi": 1354,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次01-19)"
+    ],
+    "volume": 1805,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.28,
+    "entry_ask": 1.52,
+    "last_trade_at": "2026-11-19 20:52:13",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 1.5,
+        "bid": 1.28,
+        "ask": 1.52,
+        "iv": 38.64807446289062
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-19_NFLX_2027-02-19_62.5",
+    "snapshot_date": "2026-11-19",
+    "ticker": "NFLX",
+    "expiry": "2027-02-19",
+    "strike": 62.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅覆蓋財報(01-19)",
+    "entry_price": 3.56,
+    "entry_iv": 47.11966943359375,
+    "entry_spot": 58.459999084472656,
+    "oi": 764,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅覆蓋財報(01-19)"
+    ],
+    "volume": 1174,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.45,
+    "entry_ask": 3.9,
+    "last_trade_at": "2026-11-19 20:38:42",
+    "quote_at": "2026-11-20T03:27:50Z",
+    "underlying_at": "2026-11-20T03:27:50Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [
+      {
+        "date": "2026-11-19",
+        "spot": 58.459999084472656,
+        "last": 3.56,
+        "bid": 3.45,
+        "ask": 3.9,
+        "iv": 47.11966943359375
+      }
+    ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
   }
 ]
