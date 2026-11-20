@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-19T03:40:27+00:00",
- "market_date": "2026-11-18",
- "today": "2026-11-19",
- "days_since_ipo": 160,
+ "generated_at": "2026-11-20T03:31:16+00:00",
+ "market_date": "2026-11-19",
+ "today": "2026-11-20",
+ "days_since_ipo": 161,
  "price": 143.5,
  "market_cap_t": 1.888,
  "c_pool": {
@@ -12,24 +12,24 @@
   "gate_mode": "near",
   "gates": {
    "near": {
-    "pctile": 37.6,
-    "rel_calm": true,
+    "pctile": 43.6,
+    "rel_calm": false,
     "abs_acceptable": false,
     "stable": false,
-    "n_samples": 109,
-    "value": 0.5518029846191408,
+    "n_samples": 110,
+    "value": 0.5779257702636719,
     "ok": false,
     "level": "L1",
     "pctile_calm": 40,
     "abs_gate": 0.55
    },
    "leaps": {
-    "pctile": 1.4,
+    "pctile": 2.9,
     "rel_calm": true,
     "abs_acceptable": false,
     "stable": true,
-    "n_samples": 69,
-    "value": 0.5813,
+    "n_samples": 70,
+    "value": 0.5856,
     "exp": "2029-01-19",
     "ok": false,
     "level": "L1",
@@ -37,29 +37,29 @@
     "abs_gate": 0.55
    },
    "carry": {
-    "min_carry_pct": 0.26,
+    "min_carry_pct": 0.04,
     "best_strike": {
-     "exp": "2028-12-15",
-     "strike": 5.0,
-     "bid": 136.0,
-     "ask": 142.55,
-     "oi": 210,
-     "dte": 758,
-     "intrinsic": 138.5,
-     "extrinsic": 0.78,
-     "carry_pct_annual": 0.26
+     "exp": "2028-01-21",
+     "strike": 55.0,
+     "bid": 85.3,
+     "ask": 91.85,
+     "oi": 335,
+     "dte": 428,
+     "intrinsic": 88.5,
+     "extrinsic": 0.07,
+     "carry_pct_annual": 0.04
     },
     "ok": true,
     "stable": true,
     "threshold": 5.0,
-    "n_strikes": 117,
+    "n_strikes": 90,
     "level": "L2"
    }
   },
   "l2_streak_days": 0,
   "l2_start": null,
   "l2_last_date": "2026-10-29",
-  "l2_days_since_close": 14,
+  "l2_days_since_close": 15,
   "l2_segments": [
    {
     "start": "2026-08-25",
@@ -95,17 +95,17 @@
    ]
   },
   "iv": {
-   "atm": 0.5518029846191408,
-   "pctile": 37.6,
+   "atm": 0.5779257702636719,
+   "pctile": 43.6,
    "stable": false,
-   "leaps_atm": 0.5813,
+   "leaps_atm": 0.5856,
    "leaps_exp": "2029-01-19",
    "abs_gate": 0.55
   },
   "liquidity": {
-   "total_int": 1767280,
-   "usable_strikes": 118,
-   "best_spread_pct": 0.023,
+   "total_int": 1797459,
+   "usable_strikes": 144,
+   "best_spread_pct": 0.024,
    "liquid": true
   },
   "skew": "put",
@@ -114,74 +114,74 @@
    "catalyst": "xAI grok 4.7真的上線了, 5.0要來了, 現在spcx光賣算力半年就回本了",
    "thesis": "starship incoming",
    "updated": "2026-08-18",
-   "age_days": 93,
+   "age_days": 94,
    "stale": true
   },
   "strikes": [
    {
-    "exp": "2027-03-19",
-    "strike": 120.0,
-    "bid": 32.2,
-    "ask": 32.95,
-    "oi": 1545,
-    "spread_pct": 0.023,
-    "dte": 121,
-    "mid": 32.58,
-    "intrinsic": 23.5,
-    "extrinsic": 9.08,
-    "carry_pct_annual": 19.08
-   },
-   {
     "exp": "2028-12-15",
-    "strike": 100.0,
-    "bid": 67.0,
-    "ask": 68.65,
-    "oi": 12237,
+    "strike": 120.0,
+    "bid": 53.4,
+    "ask": 54.7,
+    "oi": 1536,
     "spread_pct": 0.024,
-    "dte": 758,
-    "mid": 67.83,
-    "intrinsic": 43.5,
-    "extrinsic": 24.33,
-    "carry_pct_annual": 8.16
-   },
-   {
-    "exp": "2029-01-19",
-    "strike": 100.0,
-    "bid": 67.3,
-    "ask": 69.0,
-    "oi": 5177,
-    "spread_pct": 0.025,
-    "dte": 793,
-    "mid": 68.15,
-    "intrinsic": 43.5,
-    "extrinsic": 24.65,
-    "carry_pct_annual": 7.91
+    "dte": 757,
+    "mid": 54.05,
+    "intrinsic": 23.5,
+    "extrinsic": 30.55,
+    "carry_pct_annual": 10.26
    },
    {
     "exp": "2028-12-15",
-    "strike": 80.0,
-    "bid": 78.9,
-    "ask": 81.0,
-    "oi": 767,
-    "spread_pct": 0.026,
-    "dte": 758,
-    "mid": 79.95,
-    "intrinsic": 63.5,
-    "extrinsic": 16.45,
-    "carry_pct_annual": 5.52
+    "strike": 100.0,
+    "bid": 63.2,
+    "ask": 65.0,
+    "oi": 12354,
+    "spread_pct": 0.028,
+    "dte": 757,
+    "mid": 64.1,
+    "intrinsic": 43.5,
+    "extrinsic": 20.6,
+    "carry_pct_annual": 6.92
    },
    {
-    "exp": "2028-01-21",
-    "strike": 120.0,
-    "bid": 45.7,
-    "ask": 47.3,
-    "oi": 7529,
-    "spread_pct": 0.034,
-    "dte": 429,
-    "mid": 46.5,
-    "intrinsic": 23.5,
-    "extrinsic": 23.0,
-    "carry_pct_annual": 13.64
+    "exp": "2027-03-19",
+    "strike": 100.0,
+    "bid": 43.0,
+    "ask": 44.45,
+    "oi": 822,
+    "spread_pct": 0.033,
+    "dte": 120,
+    "mid": 43.73,
+    "intrinsic": 43.5,
+    "extrinsic": 0.23,
+    "carry_pct_annual": 0.48
+   },
+   {
+    "exp": "2027-03-19",
+    "strike": 110.0,
+    "bid": 35.25,
+    "ask": 36.45,
+    "oi": 376,
+    "spread_pct": 0.033,
+    "dte": 120,
+    "mid": 35.85,
+    "intrinsic": 33.5,
+    "extrinsic": 2.35,
+    "carry_pct_annual": 4.98
+   },
+   {
+    "exp": "2027-09-17",
+    "strike": 115.0,
+    "bid": 40.2,
+    "ask": 41.55,
+    "oi": 284,
+    "spread_pct": 0.033,
+    "dte": 302,
+    "mid": 40.88,
+    "intrinsic": 28.5,
+    "extrinsic": 12.38,
+    "carry_pct_annual": 10.42
    }
   ],
   "response": {
@@ -208,10 +208,10 @@
   "n_buys": 4
  },
  "sage_health": {
-  "last_run": "2026-11-19T03:40:27.625465",
-  "market_date": "2026-11-18",
+  "last_run": "2026-11-20T03:31:16.709339",
+  "market_date": "2026-11-19",
   "ran_for_latest_market_day": true,
-  "latest_market_day": "2026-11-18",
+  "latest_market_day": "2026-11-19",
   "missed_days": [
    "2026-10-08",
    "2026-10-09"
@@ -223,7 +223,7 @@
   {
    "level": "ok",
    "label": "今天有跑",
-   "text": "判定程式今天有跑（市場日 2026-11-18），結果 L1"
+   "text": "判定程式今天有跑（市場日 2026-11-19），結果 L1"
   },
   {
    "level": "warn",
@@ -233,7 +233,7 @@
   {
    "level": "warn",
    "label": "看法太舊",
-   "text": "你的看法是 2026-08-18 寫的，已經 93 天沒更新；燈亮時先想一下理由還成不成立"
+   "text": "你的看法是 2026-08-18 寫的，已經 94 天沒更新；燈亮時先想一下理由還成不成立"
   },
   {
    "level": "ok",
@@ -241,7 +241,7 @@
    "text": "space_radar 有跑：市值 1.888T、階段 3"
   }
  ],
- "do_line": "C 池：🟡 黃燈（L1），不用做什麼。IV 55%，等它回到 45–50%。",
+ "do_line": "C 池：🟡 黃燈（L1），不用做什麼。IV 58%，等它回到 45–50%。",
  "items": [
   "現在用「近月 IV」這把尺。三把尺各自的結果：近月 IV 黃燈（L1）／長天期 IV 黃燈（L1）／借錢成本 綠燈（L2）。",
   "上一次綠燈：2026-10-27→2026-10-29（3 天）。",
