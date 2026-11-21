@@ -58,7 +58,7 @@
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +11.0% / FCF/淨利 1.46
   - 🟢 M3 adr_premium：ADR 溢價 +13.7%（1 年第 22 百分位；觀察）
   - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3666.0M, YoY +65.1%
-  - 🔴 M5 narrative_triggers：export_controls_tariffs:12e(14m) / n2_arizona_ramp:13e(16m) / cowos_capacity:3e / geopolitics:5e / hyperscaler_capex:3e
+  - 🟢 M5 narrative_triggers：export_controls_tariffs:13e(15m) / n2_arizona_ramp:21e(28m) / cowos_capacity:7e / geopolitics:3e / hyperscaler_capex:3e
   - 🟢 M6 peer_divergence：cohort 內 2330 未被對手顯著反超（離散在容忍帶內）
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 21.4（3 年第 21 百分位；20 日前第 67）；觀察
@@ -99,8 +99,8 @@
 - ✅ 天氣台：最新 2026-11-20
 - ✅ DCA 帳本：最新 2026-11-20
 - ✅ delta_radar：最新 2026-11-21
-- ✅ tsmc_radar：最新 2026-11-20
+- ✅ tsmc_radar：最新 2026-11-21
 - ✅ 賭場 sector：最新 2026-11-20
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-21T10:11:35+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-21T10:55:08+00:00*

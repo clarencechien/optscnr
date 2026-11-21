@@ -1,6 +1,6 @@
-# TSMC Radar (2330.TW) — 2026-11-20 11:27 UTC
+# TSMC Radar (2330.TW) — 2026-11-21 10:55 UTC
 
-## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟡 YELLOW
+## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
 ## 🔀 前提 vs 價格：🔀 背離：前提健在（GREEN）、價格 20 日 -17.4% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 21.4，3 年分位 67 → 21
 
@@ -10,82 +10,82 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🔴 RED | export_controls_tariffs:12e(14m) / n2_arizona_ramp:13e(16m) / cowos_capacity:3e / geopolitics:5e / hyperscaler_capex:3e |
+| M5 narrative_triggers | 🟢 GREEN | export_controls_tariffs:13e(15m) / n2_arizona_ramp:21e(28m) / cowos_capacity:7e / geopolitics:3e / hyperscaler_capex:3e |
 
-### M5 narrative_triggers — 🔴 RED
+### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
   "events": {
-    "export_controls_tariffs": 12,
-    "n2_arizona_ramp": 13,
-    "cowos_capacity": 3,
-    "geopolitics": 5,
+    "export_controls_tariffs": 13,
+    "n2_arizona_ramp": 21,
+    "cowos_capacity": 7,
+    "geopolitics": 3,
     "hyperscaler_capex": 3
   },
   "mentions": {
-    "export_controls_tariffs": 14,
-    "n2_arizona_ramp": 16,
-    "cowos_capacity": 3,
-    "geopolitics": 5,
+    "export_controls_tariffs": 15,
+    "n2_arizona_ramp": 28,
+    "cowos_capacity": 7,
+    "geopolitics": 3,
     "hyperscaler_capex": 3
   },
   "scoring": {
     "export_controls_tariffs": {
-      "events": 12,
-      "mentions": 14,
+      "events": 13,
+      "mentions": 15,
       "gate": "zscore",
-      "z": -1.07,
+      "z": -0.1,
       "denial": false
     },
     "n2_arizona_ramp": {
-      "events": 13,
-      "mentions": 16,
+      "events": 21,
+      "mentions": 28,
       "gate": "zscore",
-      "z": -16.67,
-      "denial": false
+      "z": 0.11,
+      "denial": true
     },
     "cowos_capacity": {
-      "events": 3,
-      "mentions": 3,
+      "events": 7,
+      "mentions": 7,
       "gate": "zscore",
-      "z": -8.94,
+      "z": -0.07,
       "denial": false
     },
     "geopolitics": {
-      "events": 5,
-      "mentions": 5,
+      "events": 3,
+      "mentions": 3,
       "gate": "zscore",
-      "z": 3.97,
+      "z": 0.54,
       "denial": false
     },
     "hyperscaler_capex": {
       "events": 3,
       "mentions": 3,
       "gate": "zscore",
-      "z": -0.84,
+      "z": -0.76,
       "denial": false
     }
   }
 }
 ```
+- [export_controls_tariffs] Apple supplier TSMC cuts off China chip orders amid tighter export controls - AppleInsider
 - [export_controls_tariffs] Chip supply chain warns of broader disruption from new US export controls - Nikkei Asia
-- [export_controls_tariffs] TSMC Tightens China Chip Restrictions Following New US Export Rules - BusinessToday Malaysia
-- [export_controls_tariffs] U.S. Tightens AI Chip Export Controls... Samsung Electronics, TSMC Halt Chip Shipments to Chinese Customers - 아시아경제
+- [export_controls_tariffs] TSMC suspends shipments as new U.S. export controls hit wider chip market - news.lavx.hu
 - [n2_arizona_ramp] AMD Zen 6 Olympic Ridge Desktop CPUs Reportedly Slip Past Computex 2027 After A Switch To TSMC’s Performance-Focused N2X
 - [n2_arizona_ramp] [News] Samsung 2nm Yields Reportedly at ~55%, Below Mass Production Threshold; Qualcomm May Opt for TSMC - TrendForce
-- [n2_arizona_ramp] TSMC 2nm yield: Apple’s reported capacity easing - NeoTeo
+- [n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea
 - [cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech
-- [cowos_capacity] Intel vs TSMC: How CoWoS Constraints Could Benefit Intel Foundry - Medium
 - [cowos_capacity] TSMC Accelerates CoPoS Packaging to Replace CoWoS, as Glass Core Substrates Cut Costs 30% and Boost Wafer Utilization Pa
+- [cowos_capacity] [News] While TSMC’s CoWoS Faces Supply Shortage, Samsung Reportedly Secures NVIDIA’s 2.5D Advanced Packaging Order - Tre
 - [geopolitics] China’s Coast Guard Rehearses Blockade Tools as Taiwan Plans Counter-Drills - Tech Times
 - [geopolitics] Could China Blockade Taiwan? Naval Drills Raise Fears of a Wider Indo-Pacific Crisis - Modern Diplomacy
-- [geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India
+- [geopolitics] China stages record drills designed to encircle Taiwan - Reuters
 - [hyperscaler_capex] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool
 - [hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
 - [hyperscaler_capex] Will the next recession be caused by an AI capex cut-off? - InvestorDaily
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **8** 筆；state 已有 outcomes 的 entry：**73/73**
+- 本次回填 **3** 筆；state 已有 outcomes 的 entry：**74/74**
 - 遠期報酬視窗：T+5/10/20（2330 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-12-31）
@@ -94,7 +94,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 | M1 | 16 / +2.29 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 | M2 | 13 / +1.81 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 | M4 | 12 / +1.91 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
-| M5 | 15 / +2.85 | 23 / +1.67 | 39 | 累積中（GREEN n=15 < 30）；方向對 |
+| M5 | 15 / +2.85 | 23 / +1.67 | 40 | 累積中（GREEN n=15 < 30）；方向對 |
 | M6 | 13 / +1.81 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 | M8 | 0 / — | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 
