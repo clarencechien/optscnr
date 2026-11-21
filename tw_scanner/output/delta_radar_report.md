@@ -1,4 +1,4 @@
-# Delta Radar (2308.TW) — 2026-11-20 10:28 UTC
+# Delta Radar (2308.TW) — 2026-11-21 10:11 UTC
 
 ## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
@@ -10,43 +10,43 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟡 YELLOW | capex_cut:7e(8m) / vr300_delay:9e(10m) / debt_financed_capex:11e / lc_psu_competition:0e |
+| M5 narrative_triggers | 🟢 GREEN | capex_cut:3e / vr300_delay:8e(9m) / debt_financed_capex:11e / lc_psu_competition:0e |
 
-### M5 narrative_triggers — 🟡 YELLOW
+### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
   "events": {
-    "capex_cut": 7,
-    "vr300_delay": 9,
+    "capex_cut": 3,
+    "vr300_delay": 8,
     "debt_financed_capex": 11,
     "lc_psu_competition": 0
   },
   "mentions": {
-    "capex_cut": 8,
-    "vr300_delay": 10,
+    "capex_cut": 3,
+    "vr300_delay": 9,
     "debt_financed_capex": 11,
     "lc_psu_competition": 0
   },
   "scoring": {
     "capex_cut": {
-      "events": 7,
-      "mentions": 8,
+      "events": 3,
+      "mentions": 3,
       "gate": "zscore",
-      "z": 1.86,
+      "z": -1.05,
       "denial": false
     },
     "vr300_delay": {
-      "events": 9,
-      "mentions": 10,
+      "events": 8,
+      "mentions": 9,
       "gate": "zscore",
-      "z": 0.24,
+      "z": -0.8,
       "denial": true
     },
     "debt_financed_capex": {
       "events": 11,
       "mentions": 11,
       "gate": "zscore",
-      "z": 1.14,
+      "z": 1.0,
       "denial": false
     },
     "lc_psu_competition": {
@@ -61,7 +61,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 ```
 - [capex_cut] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool
 - [capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
-- [capex_cut] The AI trade is at a 'critical' crossroads as rising rates threaten a capex slowdown, AllianceBernstein says - Business 
+- [capex_cut] Will the next recession be caused by an AI capex cut-off? - InvestorDaily
 - [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
 - [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
 - [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
@@ -70,7 +70,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [debt_financed_capex] AI Debt Risks Mount: Why Borrowing by Meta, Alphabet, Microsoft and Oracle Worries Investors - TradingKey
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **3** 筆；state 已有 outcomes 的 entry：**170/170**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**171/171**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）
@@ -80,7 +80,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 | M2 | 30 / -10.60 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M3 | 27 / -10.89 | 25 / -8.21 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M4 | 43 / -9.17 | 0 / — | 1 | 樣本不足（缺一側 cohort） |
-| M5 | 60 / -7.40 | 65 / -10.55 | 50 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
+| M5 | 60 / -7.40 | 65 / -10.55 | 51 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
 | M6 | 0 / — | 35 / -7.23 | 5 | 樣本不足（缺一側 cohort） |
 | M8 | 24 / -2.50 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 

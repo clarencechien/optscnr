@@ -1,4 +1,4 @@
-# 📬 台股週報 — 2026-11-20
+# 📬 台股週報 — 2026-11-21
 
 > 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。**沒有任何一行是買賣建議；曝險與部位由人管。**
 
@@ -45,7 +45,7 @@
   - 🟢 M2 bullwhip_health：合約負債 QoQ +35.3% / 存貨 QoQ +20.7% / FCF/淨利 1.74
   - 🟢 M3 thai_shadow：DELTA.BK 2026-09-30 營收 YoY +42.4%, GM 27.3%
   - 🟡 M4 customs_flow：US 進口 HS850440 (TH+TW) 近3月 $1376.6M, YoY +19.9%
-  - 🟡 M5 narrative_triggers：capex_cut:7e(8m) / vr300_delay:9e(10m) / debt_financed_capex:11e / lc_psu_competition:0e
+  - 🟢 M5 narrative_triggers：capex_cut:3e / vr300_delay:8e(9m) / debt_financed_capex:11e / lc_psu_competition:0e
   - 🟡 M6 peer_divergence：cooling:3324領先+18pp
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 30.0（3 年第 46 百分位；20 日前第 69）；觀察
@@ -92,15 +92,15 @@
 
 ## 5. 下週日曆
 
-- 2026-12-10（20 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
+- 2026-12-10（19 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
 
 ## 6. 資料健康
 
 - ✅ 天氣台：最新 2026-11-20
 - ✅ DCA 帳本：最新 2026-11-20
-- ✅ delta_radar：最新 2026-11-20
+- ✅ delta_radar：最新 2026-11-21
 - ✅ tsmc_radar：最新 2026-11-20
 - ✅ 賭場 sector：最新 2026-11-20
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-20T21:34:28+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-21T10:11:35+00:00*

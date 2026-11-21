@@ -1,12 +1,12 @@
 # 🇹🇼 台股雷達站（週報 + tw_scanner + delta_radar + tsmc_radar + DCA 影子帳本 + 賭場 sector）
 
-_README 由 build_readme.py 於 2026-11-20 21:34 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
+_README 由 build_readme.py 於 2026-11-21 10:11 UTC 重組；兩區塊各為該雷達最近一次排程的輸出，時間戳以區塊內為準。_
 
 > 維護文件：[MANUAL_tw_scanner.md](MANUAL_tw_scanner.md)｜[MANUAL_delta_radar.md](MANUAL_delta_radar.md)｜[MANUAL_dca_ledger.md](MANUAL_dca_ledger.md)（含賭場 sector）｜改進判準與覆核紀錄：[REVIEW_2026-07.md](REVIEW_2026-07.md)
 
 ---
 
-# 📬 台股週報 — 2026-11-20
+# 📬 台股週報 — 2026-11-21
 
 > 給定期定額買 0050 的人，一週看一次。規則影子帳本＋籌碼溫度計＋2308／2330 論點監控＋賭場 sector。**沒有任何一行是買賣建議；曝險與部位由人管。**
 
@@ -53,7 +53,7 @@ _README 由 build_readme.py 於 2026-11-20 21:34 UTC 重組；兩區塊各為該
   - 🟢 M2 bullwhip_health：合約負債 QoQ +35.3% / 存貨 QoQ +20.7% / FCF/淨利 1.74
   - 🟢 M3 thai_shadow：DELTA.BK 2026-09-30 營收 YoY +42.4%, GM 27.3%
   - 🟡 M4 customs_flow：US 進口 HS850440 (TH+TW) 近3月 $1376.6M, YoY +19.9%
-  - 🟡 M5 narrative_triggers：capex_cut:7e(8m) / vr300_delay:9e(10m) / debt_financed_capex:11e / lc_psu_competition:0e
+  - 🟢 M5 narrative_triggers：capex_cut:3e / vr300_delay:8e(9m) / debt_financed_capex:11e / lc_psu_competition:0e
   - 🟡 M6 peer_divergence：cooling:3324領先+18pp
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
   - 🟢 M9 valuation：PER 30.0（3 年第 46 百分位；20 日前第 69）；觀察
@@ -100,18 +100,18 @@ _README 由 build_readme.py 於 2026-11-20 21:34 UTC 重組；兩區塊各為該
 
 ## 5. 下週日曆
 
-- 2026-12-10（20 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
+- 2026-12-10（19 天後）台股月營收公告截止（2330／2308 通常 10 日前後）
 
 ## 6. 資料健康
 
 - ✅ 天氣台：最新 2026-11-20
 - ✅ DCA 帳本：最新 2026-11-20
-- ✅ delta_radar：最新 2026-11-20
+- ✅ delta_radar：最新 2026-11-21
 - ✅ tsmc_radar：最新 2026-11-20
 - ✅ 賭場 sector：最新 2026-11-20
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-20T21:34:28+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-21T10:11:35+00:00*
 
 ---
 
@@ -132,7 +132,7 @@ _README 由 build_readme.py 於 2026-11-20 21:34 UTC 重組；兩區塊各為該
 
 ---
 
-# Delta Radar (2308.TW) — 2026-11-20 10:28 UTC
+# Delta Radar (2308.TW) — 2026-11-21 10:11 UTC
 
 ## 總判定：⚪ PARTIAL（僅跑 m5）｜模組色僅供參考 🟢 GREEN
 
@@ -144,43 +144,43 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 
 | 模組 | 狀態 | 摘要 |
 |---|---|---|
-| M5 narrative_triggers | 🟡 YELLOW | capex_cut:7e(8m) / vr300_delay:9e(10m) / debt_financed_capex:11e / lc_psu_competition:0e |
+| M5 narrative_triggers | 🟢 GREEN | capex_cut:3e / vr300_delay:8e(9m) / debt_financed_capex:11e / lc_psu_competition:0e |
 
-### M5 narrative_triggers — 🟡 YELLOW
+### M5 narrative_triggers — 🟢 GREEN
 ```json
 {
   "events": {
-    "capex_cut": 7,
-    "vr300_delay": 9,
+    "capex_cut": 3,
+    "vr300_delay": 8,
     "debt_financed_capex": 11,
     "lc_psu_competition": 0
   },
   "mentions": {
-    "capex_cut": 8,
-    "vr300_delay": 10,
+    "capex_cut": 3,
+    "vr300_delay": 9,
     "debt_financed_capex": 11,
     "lc_psu_competition": 0
   },
   "scoring": {
     "capex_cut": {
-      "events": 7,
-      "mentions": 8,
+      "events": 3,
+      "mentions": 3,
       "gate": "zscore",
-      "z": 1.86,
+      "z": -1.05,
       "denial": false
     },
     "vr300_delay": {
-      "events": 9,
-      "mentions": 10,
+      "events": 8,
+      "mentions": 9,
       "gate": "zscore",
-      "z": 0.24,
+      "z": -0.8,
       "denial": true
     },
     "debt_financed_capex": {
       "events": 11,
       "mentions": 11,
       "gate": "zscore",
-      "z": 1.14,
+      "z": 1.0,
       "denial": false
     },
     "lc_psu_competition": {
@@ -195,7 +195,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 ```
 - [capex_cut] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool
 - [capex_cut] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha
-- [capex_cut] The AI trade is at a 'critical' crossroads as rising rates threaten a capex slowdown, AllianceBernstein says - Business 
+- [capex_cut] Will the next recession be caused by an AI capex cut-off? - InvestorDaily
 - [vr300_delay] Nvidia's Kyber rack for Rubin Ultra reportedly delayed to 2028, stopgap solution also axed due to customer pushback — An
 - [vr300_delay] Nvidia CEO Jensen Huang Dismisses Vera Rubin Hardware Delay Report, Affirms 'Giant' Production Volumes - Yahoo Finance
 - [vr300_delay] NVIDIA Quashes Rubin & Kyber Rack Delay Rumors, Says “Chip Roadmap Is Intact” - Wccftech
@@ -204,7 +204,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 - [debt_financed_capex] AI Debt Risks Mount: Why Borrowing by Meta, Alphabet, Microsoft and Oracle Worries Investors - TradingKey
 
 ### M7 outcome_backfill — ⚙️ 背景校準（不出色燈）
-- 本次回填 **3** 筆；state 已有 outcomes 的 entry：**170/170**
+- 本次回填 **1** 筆；state 已有 outcomes 的 entry：**171/171**
 - 遠期報酬視窗：T+5/10/20（2308 收盤）｜用 `--hit-rate` 看分模組 gate 有效性表
 
 ### 退役判準（自動計算，判決是人下的；覆核日 2026-10-31）
@@ -214,7 +214,7 @@ M7（後果回填，見報告末）為背景校準任務，不出色燈但每次
 | M2 | 30 / -10.60 | 22 / -8.24 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M3 | 27 / -10.89 | 25 / -8.21 | 2 | 無法判定（狀態翻轉 2 次 < 3；cohort 等於兩段日曆時間）；方向反 |
 | M4 | 43 / -9.17 | 0 / — | 1 | 樣本不足（缺一側 cohort） |
-| M5 | 60 / -7.40 | 65 / -10.55 | 50 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
+| M5 | 60 / -7.40 | 65 / -10.55 | 51 | 通過最低檢驗：GREEN 優於 YELLOW/RED |
 | M6 | 0 / — | 35 / -7.23 | 5 | 樣本不足（缺一側 cohort） |
 | M8 | 24 / -2.50 | 0 / — | 0 | 樣本不足（缺一側 cohort） |
 
