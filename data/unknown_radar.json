@@ -1,41 +1,17 @@
 {
-  "updated_at": "2026-11-20T02:36:17.712216",
-  "count": 3,
+  "updated_at": "2026-11-21T02:50:09.449921",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Intuit",
-      "ticker": "INTU",
-      "mentions_today": 4,
-      "total_mentions": 4,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Intuit to sell Mailchimp to Bending Spoons for $3.68 billion",
-        "Intuit to sell Mailchimp to Bending Spoons for $3.68 billion"
-      ]
-    },
-    {
-      "name": "Sanofi",
-      "ticker": "SNYNF",
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
       "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
+      "total_mentions": 16,
+      "consecutive_days": 7,
+      "is_strong": true,
       "evidence": [
-        "As Sanofi's Pompe drug shortage drags on, some patients struggle to access treatments",
-        "As Sanofi's Pompe drug shortage drags on, some patients struggle to access treatments"
-      ]
-    },
-    {
-      "name": "Greenland",
-      "ticker": "GLNDW",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Denmark ratifies Trump security deal over Greenland after months of diplomatic tensions",
-        "Denmark ratifies Trump security deal over Greenland after months of diplomatic tensions"
+        "Intensifying AI rout wipes out Nasdaq's 2026 gains. Alphabet is a tech bright spot",
+        "Dow, S&P 500 enter correction as Nasdaq suffers worst week since 2020"
       ]
     }
   ]

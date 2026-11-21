@@ -1,9 +1,9 @@
 {
   "Nasdaq": {
     "first_seen": "2026-11-02",
-    "last_seen": "2026-11-14",
-    "consecutive_days": 6,
-    "total_mentions": 14,
+    "last_seen": "2026-11-21",
+    "consecutive_days": 7,
+    "total_mentions": 16,
     "ticker": "NDAQ"
   },
   "Outlook": {
@@ -12,20 +12,6 @@
     "consecutive_days": 3,
     "total_mentions": 6,
     "ticker": "OTLK"
-  },
-  "Cisco": {
-    "first_seen": "2026-11-13",
-    "last_seen": "2026-11-13",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "CSCO"
-  },
-  "Bain Capital": {
-    "first_seen": "2026-11-13",
-    "last_seen": "2026-11-13",
-    "consecutive_days": 1,
-    "total_mentions": 2,
-    "ticker": "BCSF"
   },
   "Stellantis": {
     "first_seen": "2026-11-14",
