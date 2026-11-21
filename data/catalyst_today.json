@@ -1,62 +1,74 @@
 {
-  "updated_at": "2026-11-20T01:51:32.122403",
+  "updated_at": "2026-11-21T01:41:16.356796",
   "stats": {
-    "total_items": 57,
-    "items_with_company": 17,
-    "items_with_catalyst": 9,
-    "items_both": 4
+    "total_items": 47,
+    "items_with_company": 8,
+    "items_with_catalyst": 7,
+    "items_both": 3
   },
-  "count": 17,
+  "count": 8,
   "tickers": [
+    "GOOGL",
     "NVDA",
-    "PANW",
-    "MSFT",
-    "MU",
-    "AVGO",
-    "AMZN",
-    "AMD",
-    "PLTR",
-    "TSLA",
-    "WMT",
-    "NFLX",
-    "DIS",
-    "INTC",
-    "CRWV",
-    "TSM",
     "AAPL",
-    "BA"
+    "MSFT",
+    "ZS",
+    "CRWD",
+    "XYZ",
+    "F"
   ],
   "details": [
     {
-      "symbol": "NVDA",
-      "score": 4.0,
+      "symbol": "GOOGL",
+      "score": 4,
       "evidence": [
         {
-          "title": "California attorney general issues Nvidia subpoena in probe of China chip diversion",
+          "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
+          "catalysts": [
+            "plunges"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Intensifying AI rout wipes out Nasdaq's 2026 gains. Alphabet is a tech bright spot",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "score": 3.5,
+      "evidence": [
+        {
+          "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
+          "catalysts": [
+            "plunges"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Jensen Huang to testify publicly before Senate banking panel, Chairman Scott says",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Trump bought Nvidia, Palantir, SpaceX in September as federal deals, White House ties grew",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Jensen Huang's — and Nvidia's — legal exposure balloons",
+          "title": "Trump says he discussed Jensen Huang with Xi; Bessent tells CNBC Nvidia chip export policy is unchanged",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "PANW",
-      "score": 4,
+      "symbol": "AAPL",
+      "score": 2,
       "evidence": [
         {
-          "title": "Palo Alto stock jumps on earnings beat and company's big bet on securing open-weight models",
+          "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
           "catalysts": [
-            "jumps",
-            "earnings beat"
+            "plunges"
           ],
           "has_catalyst": true
         }
@@ -67,172 +79,62 @@
       "score": 2,
       "evidence": [
         {
-          "title": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong",
+          "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
           "catalysts": [
-            "record high"
+            "plunges"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "MU",
+      "symbol": "ZS",
       "score": 2,
       "evidence": [
         {
-          "title": "Why Micron, Broadcom and other AI stocks gave up their gains Thursday",
+          "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
           "catalysts": [
-            "gains"
+            "jumps"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AVGO",
+      "symbol": "CRWD",
       "score": 2,
       "evidence": [
         {
-          "title": "Why Micron, Broadcom and other AI stocks gave up their gains Thursday",
+          "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
           "catalysts": [
-            "gains"
+            "jumps"
           ],
           "has_catalyst": true
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "XYZ",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Amazon app warns New York of higher costs if Mamdani delivery law passes",
+          "title": "Ford, Honda, Stellantis, VW sue New Jersey to block ’extortionate’ vehicle repair law",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Netflix, Amazon, Fox to bid for 2030 men's World Cup rights; Disney out",
+          "title": "US judge rejects CFTC emergency bid to block New York from policing Kalshi",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMD",
+      "symbol": "F",
       "score": 0.5,
       "evidence": [
         {
-          "title": "AMD dives on short seller report of alleged China exposure",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "PLTR",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump bought Nvidia, Palantir, SpaceX in September as federal deals, White House ties grew",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Trump bought Nvidia, Palantir, SpaceX in September as federal deals, White House ties grew",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Walmart hikes outlook as CEO tells CNBC retailer aims to keep prices low despite soaring fuel costs",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Netflix, Amazon, Fox to bid for 2030 men's World Cup rights; Disney out",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Netflix, Amazon, Fox to bid for 2030 men's World Cup rights; Disney out",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "INTC",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Intel signs first external customer for advanced 18A chips",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "A CoreWeave co-founder just made an unconventional $30 million wager on its battered bonds",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "TSM",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "TSMC tightens China AI chip curbs as new US rules close manufacturing loophole, sources say",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "UK tribunal confirms government order demanding access to Apple data",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Northrop forgoes challenge to Boeing’s $20B+ Navy fighter win",
+          "title": "Ford, Honda, Stellantis, VW sue New Jersey to block ’extortionate’ vehicle repair law",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -240,6 +142,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 8
+    "Anthropic (private)": 7
   }
 }
