@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T03:36:05Z",
+ "generated_at": "2026-11-21T03:24:29Z",
  "n_days": 53,
  "t8_by_event_answer": {
   "有": {
@@ -210,7 +210,7 @@
       "peak": 1.02,
       "mature": false,
       "verdict": "➖持平(峰1.0x/今0.9x)",
-      "filled_at": "2026-11-19"
+      "filled_at": "2026-11-20"
      }
     }
    ]
