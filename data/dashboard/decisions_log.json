@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T00:35:43Z",
+ "generated_at": "2026-11-23T23:18:46Z",
  "n_days": 54,
  "t8_by_event_answer": {
   "有": {
@@ -97,7 +97,15 @@
      },
      "note": "公司3/19公告Q4財報1/15盤前約6:45ET發布，與到期日同一天；WSH亦列已確認",
      "status": "answered",
-     "outcome": null
+     "outcome": {
+      "t5": 0.45,
+      "t10": null,
+      "t20": null,
+      "peak": 0.45,
+      "mature": false,
+      "verdict": "❌沒噴(峰0.4x)",
+      "filled_at": "2026-11-23"
+     }
     }
    ]
   },
@@ -220,7 +228,7 @@
       "peak": 1.02,
       "mature": false,
       "verdict": "➖持平(峰1.0x/今0.9x)",
-      "filled_at": "2026-11-20"
+      "filled_at": "2026-11-23"
      }
     }
    ]

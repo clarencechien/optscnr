@@ -59,7 +59,16 @@
         "source": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/bank-of-america-announces-fourth-quarter-2026-and-quarterly-2027.html"
       },
       "note": "公司3/19公告Q4財報1/15盤前約6:45ET發布，與到期日同一天；WSH亦列已確認",
-      "status": "answered"
+      "status": "answered",
+      "outcome": {
+        "t5": 0.45,
+        "t10": null,
+        "t20": null,
+        "peak": 0.45,
+        "mature": false,
+        "verdict": "❌沒噴(峰0.4x)",
+        "filled_at": "2026-11-23"
+      }
     }
   ],
   "facts_proposed": [
