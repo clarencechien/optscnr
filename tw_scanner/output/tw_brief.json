@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-11-23T13:39:23+00:00",
+ "generated_at": "2026-11-23T14:51:54+00:00",
  "today": "2026-11-23",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-11-20）：本月預算已於 2026-11-09 動用（投降窗 ×2.0），本月不再行動。",
   "鋒面 🌧️ DE_RISK（本週由 NEUTRAL 轉入）。",
   "2308 前提 🟡 YELLOW；🔀 背離：前提健在（YELLOW）、價格 20 日 -36.5% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 29.7，3 年分位 65 → 44",
-  "2330 前提 🟢 GREEN；🔀 背離：前提健在（GREEN）、價格 20 日 -17.4% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 21.4，3 年分位 67 → 21",
+  "2330 前提 🟢 GREEN；🔀 背離：前提健在（GREEN）、價格 20 日 -14.9% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 20.7，3 年分位 65 → 16",
   "投降窗加碼歷史 10 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +1.87%。"
  ],
  "weather": {
@@ -335,81 +335,88 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-11-21",
-  "age_days": 2,
-  "last_overall": "PARTIAL(m5)",
+  "as_of": "2026-11-23",
+  "age_days": 0,
+  "last_overall": "GREEN",
   "last_modules_requested": [
-   "m5"
+   "m1",
+   "m2",
+   "m3",
+   "m4",
+   "m5",
+   "m6",
+   "m8",
+   "m9"
   ],
   "full_overall": "GREEN",
-  "full_ts": "2026-11-19",
+  "full_ts": "2026-11-23",
   "modules": [
    {
     "module": "M1 revenue_acceleration",
     "status": "GREEN",
     "headline": "2026-10 YoY +59.7%, slope +5.01pp/月, 連續減速 0 個月",
-    "ts": "2026-11-19T13:26:07.536440+00:00"
+    "ts": "2026-11-23T14:51:53.047398+00:00"
    },
    {
     "module": "M2 bullwhip_health",
     "status": "GREEN",
     "headline": "合約負債 QoQ n/a / 存貨 QoQ +11.0% / FCF/淨利 1.46",
-    "ts": "2026-11-19T13:26:07.536440+00:00"
+    "ts": "2026-11-23T14:51:53.047398+00:00"
    },
    {
     "module": "M3 adr_premium",
     "status": "GREEN",
-    "headline": "ADR 溢價 +13.7%（1 年第 22 百分位；觀察）",
-    "ts": "2026-11-19T13:26:07.536440+00:00"
+    "headline": "ADR 溢價 +17.6%（1 年第 42 百分位；觀察）",
+    "ts": "2026-11-23T14:51:53.047398+00:00"
    },
    {
     "module": "M4 customs_flow",
     "status": "GREEN",
     "headline": "US 進口 HS854231 (TH+TW) 近3月 $3666.0M, YoY +65.1%",
-    "ts": "2026-11-19T13:26:07.536440+00:00"
+    "ts": "2026-11-23T14:51:53.047398+00:00"
    },
    {
     "module": "M5 narrative_triggers",
     "status": "GREEN",
-    "headline": "export_controls_tariffs:13e(15m) / n2_arizona_ramp:21e(28m) / cowos_capacity:7e / geopolitics:3e / hyperscaler_capex:3e",
-    "ts": "2026-11-21T10:55:04.457193+00:00"
+    "headline": "export_controls_tariffs:12e(15m) / n2_arizona_ramp:23e(28m) / cowos_capacity:7e / geopolitics:1e / hyperscaler_capex:3e",
+    "ts": "2026-11-23T14:51:53.047398+00:00"
    },
    {
     "module": "M6 peer_divergence",
     "status": "GREEN",
     "headline": "cohort 內 2330 未被對手顯著反超（離散在容忍帶內）",
-    "ts": "2026-11-19T13:26:07.536440+00:00"
+    "ts": "2026-11-23T14:51:53.047398+00:00"
    },
    {
     "module": "M8 revision_velocity",
     "status": "NO_DATA",
     "headline": "下修 0/上修 0（樣本不足 <3，NO_DATA）",
-    "ts": "2026-11-19T13:26:07.536440+00:00"
+    "ts": "2026-11-23T14:51:53.047398+00:00"
    },
    {
     "module": "M9 valuation",
     "status": "GREEN",
-    "headline": "PER 21.4（3 年第 21 百分位；20 日前第 67）；觀察",
-    "ts": "2026-11-19T13:26:07.536440+00:00"
+    "headline": "PER 20.7（3 年第 16 百分位；20 日前第 65）；觀察",
+    "ts": "2026-11-23T14:51:53.047398+00:00"
    }
   ],
   "divergence": {
    "flag": "premise_ok_price_down",
-   "text": "🔀 背離：前提健在（GREEN）、價格 20 日 -17.4% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 21.4，3 年分位 67 → 21",
+   "text": "🔀 背離：前提健在（GREEN）、價格 20 日 -14.9% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 20.7，3 年分位 65 → 16",
    "premise": "GREEN",
-   "premise_ts": "2026-11-19T13:26:07.536440+00:00",
-   "ret_pct": -17.36,
+   "premise_ts": "2026-11-23T14:51:52.628897+00:00",
+   "ret_pct": -14.88,
    "lookback_sessions": 20,
-   "as_of": "2026-11-20",
+   "as_of": "2026-11-23",
    "valuation": {
-    "per": 21.37,
-    "per_pct": 21.2,
-    "per_then": 27.88,
-    "per_pct_then": 67.1,
+    "per": 20.66,
+    "per_pct": 16.4,
+    "per_then": 27.65,
+    "per_pct_then": 64.6,
     "history_years": 3
    }
   },
-  "scored_n": 42
+  "scored_n": 43
  },
  "casino": {
   "status": "OK",
@@ -689,7 +696,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-11-21"
+   "text": "tsmc_radar：最新 2026-11-23"
   },
   {
    "level": "ok",
