@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-21T10:55:08+00:00",
- "today": "2026-11-21",
+ "generated_at": "2026-11-23T13:39:23+00:00",
+ "today": "2026-11-23",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-11-20）：本月預算已於 2026-11-09 動用（投降窗 ×2.0），本月不再行動。",
   "鋒面 🌧️ DE_RISK（本週由 NEUTRAL 轉入）。",
-  "2308 前提 🟡 YELLOW；🔀 背離：前提健在（YELLOW）、價格 20 日 -44.6% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 30.0，3 年分位 69 → 46",
+  "2308 前提 🟡 YELLOW；🔀 背離：前提健在（YELLOW）、價格 20 日 -36.5% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 29.7，3 年分位 65 → 44",
   "2330 前提 🟢 GREEN；🔀 背離：前提健在（GREEN）、價格 20 日 -17.4% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 21.4，3 年分位 67 → 21",
   "投降窗加碼歷史 10 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +1.87%。"
  ],
  "weather": {
   "status": "OK",
   "as_of": "2026-11-20",
-  "age_days": 1,
+  "age_days": 3,
   "regime": "DE_RISK",
   "emoji": "🌧️",
   "score": -0.141,
@@ -100,7 +100,7 @@
  "dca": {
   "status": "OK",
   "as_of": "2026-11-20",
-  "age_days": 1,
+  "age_days": 3,
   "instrument": "0050",
   "amount_twd": 10000,
   "current": {
@@ -249,87 +249,94 @@
  "delta": {
   "status": "OK",
   "label": "2308",
-  "as_of": "2026-11-21",
+  "as_of": "2026-11-23",
   "age_days": 0,
-  "last_overall": "PARTIAL(m5)",
+  "last_overall": "YELLOW",
   "last_modules_requested": [
-   "m5"
+   "m1",
+   "m2",
+   "m3",
+   "m4",
+   "m5",
+   "m6",
+   "m8",
+   "m9"
   ],
   "full_overall": "YELLOW",
-  "full_ts": "2026-11-19",
+  "full_ts": "2026-11-23",
   "modules": [
    {
     "module": "M1 revenue_acceleration",
     "status": "GREEN",
     "headline": "2026-10 YoY +30.1%, slope -5.88pp/月, 連續減速 0 個月",
-    "ts": "2026-11-19T12:08:43.004844+00:00"
+    "ts": "2026-11-23T13:39:21.837860+00:00"
    },
    {
     "module": "M2 bullwhip_health",
     "status": "GREEN",
     "headline": "合約負債 QoQ +35.3% / 存貨 QoQ +20.7% / FCF/淨利 1.74",
-    "ts": "2026-11-19T12:08:43.004844+00:00"
+    "ts": "2026-11-23T13:39:21.837860+00:00"
    },
    {
     "module": "M3 thai_shadow",
     "status": "GREEN",
     "headline": "DELTA.BK 2026-09-30 營收 YoY +42.4%, GM 27.3%",
-    "ts": "2026-11-19T12:08:43.004844+00:00"
+    "ts": "2026-11-23T13:39:21.837860+00:00"
    },
    {
     "module": "M4 customs_flow",
     "status": "YELLOW",
     "headline": "US 進口 HS850440 (TH+TW) 近3月 $1376.6M, YoY +19.9%",
-    "ts": "2026-11-19T12:08:43.004844+00:00"
+    "ts": "2026-11-23T13:39:21.837860+00:00"
    },
    {
     "module": "M5 narrative_triggers",
     "status": "GREEN",
-    "headline": "capex_cut:3e / vr300_delay:8e(9m) / debt_financed_capex:11e / lc_psu_competition:0e",
-    "ts": "2026-11-21T10:11:33.832418+00:00"
+    "headline": "capex_cut:3e / vr300_delay:9e / debt_financed_capex:9e(10m) / lc_psu_competition:0e",
+    "ts": "2026-11-23T13:39:21.837860+00:00"
    },
    {
     "module": "M6 peer_divergence",
     "status": "YELLOW",
     "headline": "cooling:3324領先+18pp",
-    "ts": "2026-11-19T12:08:43.004844+00:00"
+    "ts": "2026-11-23T13:39:21.837860+00:00"
    },
    {
     "module": "M8 revision_velocity",
     "status": "NO_DATA",
     "headline": "下修 0/上修 0（樣本不足 <3，NO_DATA）",
-    "ts": "2026-11-19T12:08:43.004844+00:00"
+    "ts": "2026-11-23T13:39:21.837860+00:00"
    },
    {
     "module": "M9 valuation",
     "status": "GREEN",
-    "headline": "PER 30.0（3 年第 46 百分位；20 日前第 69）；觀察",
-    "ts": "2026-11-19T12:08:43.004844+00:00"
+    "headline": "PER 29.7（3 年第 44 百分位；20 日前第 65）；觀察",
+    "ts": "2026-11-23T13:39:21.837860+00:00"
    }
   ],
   "divergence": {
    "flag": "premise_ok_price_down",
-   "text": "🔀 背離：前提健在（YELLOW）、價格 20 日 -44.6% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 30.0，3 年分位 69 → 46",
+   "text": "🔀 背離：前提健在（YELLOW）、價格 20 日 -36.5% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 29.7，3 年分位 65 → 44",
    "premise": "YELLOW",
-   "premise_ts": "2026-11-19T12:08:43.004844+00:00",
-   "ret_pct": -44.62,
+   "premise_ts": "2026-11-23T13:39:21.346088+00:00",
+   "ret_pct": -36.54,
    "lookback_sessions": 20,
-   "as_of": "2026-11-20",
+   "as_of": "2026-11-23",
    "valuation": {
-    "per": 30.03,
-    "per_pct": 46.0,
-    "per_then": 51.08,
-    "per_pct_then": 69.4,
+    "per": 29.73,
+    "per_pct": 44.3,
+    "per_then": 49.65,
+    "per_pct_then": 65.4,
     "history_years": 3
    }
   },
-  "scored_n": 146
+  "scored_n": 147
  },
  "tsmc": {
   "status": "OK",
   "label": "2330",
   "as_of": "2026-11-21",
-  "age_days": 0,
+  "age_days": 2,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -407,7 +414,7 @@
  "casino": {
   "status": "OK",
   "as_of": "2026-11-20",
-  "age_days": 1,
+  "age_days": 3,
   "rows": [
    {
     "ticker": "3661",
@@ -660,7 +667,7 @@
   {
    "date": "2026-12-10",
    "what": "台股月營收公告截止（2330／2308 通常 10 日前後）",
-   "days": 19
+   "days": 17
   }
  ],
  "checks": [
@@ -677,7 +684,7 @@
   {
    "level": "ok",
    "label": "delta_radar 正常",
-   "text": "delta_radar：最新 2026-11-21"
+   "text": "delta_radar：最新 2026-11-23"
   },
   {
    "level": "ok",
