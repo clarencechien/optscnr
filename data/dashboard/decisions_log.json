@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-23T23:18:46Z",
- "n_days": 54,
+ "generated_at": "2026-11-24T06:14:51Z",
+ "n_days": 55,
  "t8_by_event_answer": {
   "有": {
    "n": 17,
@@ -19,6 +19,58 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-11-23",
+   "decided_at": "2026-11-24T00:35:08.379Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": true,
+   "error": null,
+   "n_candidates": 1,
+   "candidates": [
+    {
+     "signal_id": "2026-11-23_IBIT_2026-12-18_42.0",
+     "ticker": "IBIT",
+     "expiry": "2026-12-18",
+     "strike": 42,
+     "entry_price": 0.16,
+     "strategy": "A_HOLD",
+     "sell_points": {
+      "take_profit": [],
+      "stop": null,
+      "exit_by": "2026-11-27",
+      "note": "不設停損、不賣半；DTE 21 全出"
+     },
+     "q_event": {
+      "answer": "有",
+      "date": "2026-12-09",
+      "what": "聯準會的 FOMC 利率決議：12/09 美東 14:00 公布，同時發布 SEP 和點陣圖。這是總體事件，不是 IBIT 發行方自己的事件。",
+      "source": "https://www.federalreserve.gov/newsevents/2026-december.htm"
+     },
+     "q_gap": {
+      "answer": "無",
+      "direction": null,
+      "pct": null,
+      "date": null,
+      "method": "worker",
+      "observed_days": 6,
+      "missing_days": 0,
+      "max_move": {
+       "pct": -5.9,
+       "date": "2026-11-20"
+      }
+     },
+     "q_delta": {
+      "positive": true,
+      "confirmed": true,
+      "method": "worker"
+     },
+     "note": "IBIT 是 ETF，沒有財報。12/09 有 FOMC 決議，12/10 公布 11 月 CPI。",
+     "status": "answered",
+     "outcome": null
+    }
+   ]
+  },
   {
    "market_date": "2026-11-20",
    "decided_at": "2026-11-22T23:05:01.757Z",
