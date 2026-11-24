@@ -1,29 +1,17 @@
 {
-  "updated_at": "2026-11-23T01:58:02.410694",
-  "count": 2,
+  "updated_at": "2026-11-24T05:30:54.029851",
+  "count": 1,
   "blind_spots": [
     {
-      "name": "Quantum",
-      "ticker": "QUBT",
+      "name": "SharkNinja",
+      "ticker": "SN",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "Quantum computing’s first real-world payoff may come in energy, not drug discovery",
-        "Quantum computing’s first real-world payoff may come in energy, not drug discovery"
-      ]
-    },
-    {
-      "name": "Ashland",
-      "ticker": "ASH",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Clariant, CD&R in talks to acquire Ashland, Bloomberg reports",
-        "Clariant, CD&R  in talks to acquire chemicals firm Ashland - Bloomberg"
+        "The newest addition to the S&P 500 is a maker of viral ice-cream machines",
+        "SharkNinja to join S&P 500; Paycom and Guardian shift indexes"
       ]
     }
   ]
