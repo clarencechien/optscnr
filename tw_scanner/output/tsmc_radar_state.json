@@ -7012,9 +7012,9 @@
       "t10_ret_pct": -4.79,
       "t10_excess_pct": 1.68,
       "t10_excess_smh_pct": 7.21,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null,
-      "t20_excess_smh_pct": null
+      "t20_ret_pct": -7.08,
+      "t20_excess_pct": 3.15,
+      "t20_excess_smh_pct": 17.04
     }
   },
   {
@@ -7128,9 +7128,9 @@
       "t10_ret_pct": -4.79,
       "t10_excess_pct": 1.68,
       "t10_excess_smh_pct": 5.22,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null,
-      "t20_excess_smh_pct": null
+      "t20_ret_pct": -7.08,
+      "t20_excess_pct": 3.15,
+      "t20_excess_smh_pct": 7.96
     }
   },
   {
@@ -7244,9 +7244,9 @@
       "t10_ret_pct": -4.79,
       "t10_excess_pct": 1.68,
       "t10_excess_smh_pct": 5.22,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null,
-      "t20_excess_smh_pct": null
+      "t20_ret_pct": -7.08,
+      "t20_excess_pct": 3.15,
+      "t20_excess_smh_pct": 7.96
     }
   },
   {
@@ -7516,9 +7516,9 @@
       "t10_ret_pct": -4.79,
       "t10_excess_pct": 1.68,
       "t10_excess_smh_pct": 5.22,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null,
-      "t20_excess_smh_pct": null
+      "t20_ret_pct": -7.08,
+      "t20_excess_pct": 3.15,
+      "t20_excess_smh_pct": 7.96
     }
   },
   {
@@ -7631,8 +7631,8 @@
       "t10_ret_pct": -4.79,
       "t10_excess_pct": 1.68,
       "t10_excess_smh_pct": 8.53,
-      "t20_ret_pct": null,
-      "t20_excess_pct": null,
+      "t20_ret_pct": -7.08,
+      "t20_excess_pct": 3.15,
       "t20_excess_smh_pct": null
     }
   },
@@ -9356,7 +9356,7 @@
       "t5_excess_smh_pct": 4.34,
       "t10_ret_pct": -9.17,
       "t10_excess_pct": 1.55,
-      "t10_excess_smh_pct": -2.12,
+      "t10_excess_smh_pct": -3.58,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -9626,7 +9626,7 @@
       "t5_excess_smh_pct": 4.34,
       "t10_ret_pct": -9.17,
       "t10_excess_pct": 1.55,
-      "t10_excess_smh_pct": -2.12,
+      "t10_excess_smh_pct": -3.58,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -9739,8 +9739,8 @@
       "t5_ret_pct": -5.03,
       "t5_excess_pct": 0.69,
       "t5_excess_smh_pct": -0.16,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -2.41,
+      "t10_excess_pct": 1.6,
       "t10_excess_smh_pct": null,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
@@ -9792,8 +9792,8 @@
       "t5_ret_pct": -5.03,
       "t5_excess_pct": 0.69,
       "t5_excess_smh_pct": -0.16,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -2.41,
+      "t10_excess_pct": 1.6,
       "t10_excess_smh_pct": null,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
@@ -10627,7 +10627,7 @@
       "entry_close": 2215.0,
       "t5_ret_pct": -8.35,
       "t5_excess_pct": 1.45,
-      "t5_excess_smh_pct": -6.44,
+      "t5_excess_smh_pct": -7.98,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -10898,7 +10898,7 @@
       "entry_close": 2215.0,
       "t5_ret_pct": -8.35,
       "t5_excess_pct": 1.45,
-      "t5_excess_smh_pct": -6.44,
+      "t5_excess_smh_pct": -7.98,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -11012,8 +11012,8 @@
       "entry_date": "2026-11-17",
       "benchmark": "0050",
       "entry_close": 2170.0,
-      "t5_ret_pct": null,
-      "t5_excess_pct": null,
+      "t5_ret_pct": 2.76,
+      "t5_excess_pct": 0.95,
       "t5_excess_smh_pct": null,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
@@ -11786,6 +11786,120 @@
       "entry_date": "2026-11-23",
       "benchmark": "0050",
       "entry_close": 2030.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
+  },
+  {
+    "ts": "2026-11-24T13:34:33.779505+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "GREEN",
+        "headline": "export_controls_tariffs:13e(17m) / n2_arizona_ramp:13e(16m) / cowos_capacity:7e / geopolitics:1e / hyperscaler_capex:6e(7m)",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 13,
+            "n2_arizona_ramp": 13,
+            "cowos_capacity": 7,
+            "geopolitics": 1,
+            "hyperscaler_capex": 6
+          },
+          "mentions": {
+            "export_controls_tariffs": 17,
+            "n2_arizona_ramp": 16,
+            "cowos_capacity": 7,
+            "geopolitics": 1,
+            "hyperscaler_capex": 7
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 13,
+              "mentions": 17,
+              "gate": "zscore",
+              "z": -0.22,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 13,
+              "mentions": 16,
+              "gate": "zscore",
+              "z": -2.78,
+              "denial": false
+            },
+            "cowos_capacity": {
+              "events": 7,
+              "mentions": 7,
+              "gate": "zscore",
+              "z": 0.0,
+              "denial": false
+            },
+            "geopolitics": {
+              "events": 1,
+              "mentions": 1,
+              "gate": "zscore",
+              "z": -1.19,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 6,
+              "mentions": 7,
+              "gate": "zscore",
+              "z": 1.45,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] Chip supply chain warns of broader disruption from new US export controls - Nikkei Asia",
+          "[export_controls_tariffs] Apple supplier TSMC cuts off China chip orders amid tighter export controls - AppleInsider",
+          "[export_controls_tariffs] TSMC and Samsung pause some chip shipments to China due to tighter US export controls - Digital Watch Observatory",
+          "[n2_arizona_ramp] AMD Zen 6 Olympic Ridge Desktop CPUs Reportedly Slip Past Computex 2027 After A Switch To TSMC’s Performance-Focused N2X",
+          "[n2_arizona_ramp] [News] Samsung 2nm Yields Reportedly at ~55%, Below Mass Production Threshold; Qualcomm May Opt for TSMC - TrendForce",
+          "[n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] TSMC Accelerates CoPoS Packaging to Replace CoWoS, as Glass Core Substrates Cut Costs 30% and Boost Wafer Utilization Pa",
+          "[cowos_capacity] [News] While TSMC’s CoWoS Faces Supply Shortage, Samsung Reportedly Secures NVIDIA’s 2.5D Advanced Packaging Order - Tre",
+          "[geopolitics] China’s Coast Guard Rehearses Blockade Tools as Taiwan Plans Counter-Drills - Tech Times",
+          "[hyperscaler_capex] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool",
+          "[hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[hyperscaler_capex] The AI trade is at a 'critical' crossroads as rising rates threaten a capex slowdown, AllianceBernstein says - Business "
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": null,
+      "text": "無背離（前提 GREEN、價格 20 日 -7.1%）；PER 20.7，3 年分位 65 → 16",
+      "premise": "GREEN",
+      "premise_ts": "2026-11-23T14:51:53.047398+00:00",
+      "ret_pct": -7.08,
+      "lookback_sessions": 20,
+      "as_of": "2026-11-24",
+      "valuation": {
+        "per": 20.66,
+        "per_pct": 16.4,
+        "per_then": 27.65,
+        "per_pct_then": 64.6,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-11-24",
+      "benchmark": "0050",
+      "entry_close": 2230.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t5_excess_smh_pct": null,
