@@ -1,0 +1,108 @@
+{
+  "market_date": "2026-11-23",
+  "decided_at": "2026-11-24T00:35:08.379Z",
+  "source": "cron 35 0 * * 2-6",
+  "prompt_version": "v4.2",
+  "model": "anthropic/claude-opus-5.5",
+  "model_served": "anthropic/claude-opus-5.5",
+  "llm_called": true,
+  "web_search": true,
+  "reasoning_effort": "high",
+  "candidates_generated_at": "2026-11-23T23:05:34Z",
+  "n_candidates": 1,
+  "facts_general_n": 12,
+  "facts_error": null,
+  "computed_by_worker": [
+    "q_gap",
+    "q_delta"
+  ],
+  "trading_calendar_days": 55,
+  "trading_calendar_error": null,
+  "candidates": [
+    {
+      "signal_id": "2026-11-23_IBIT_2026-12-18_42.0",
+      "ticker": "IBIT",
+      "expiry": "2026-12-18",
+      "strike": 42,
+      "entry_price": 0.16,
+      "strategy": "A_HOLD",
+      "strategy_label": "死抱到末點（樂透∧IV<50）",
+      "sell_points": {
+        "take_profit": [],
+        "stop": null,
+        "exit_by": "2026-11-27",
+        "note": "不設停損、不賣半；DTE 21 全出"
+      },
+      "facts_used": 0,
+      "q_gap": {
+        "answer": "無",
+        "direction": null,
+        "pct": null,
+        "date": null,
+        "method": "worker",
+        "observed_days": 6,
+        "missing_days": 0,
+        "max_move": {
+          "pct": -5.9,
+          "date": "2026-11-20"
+        }
+      },
+      "q_delta": {
+        "positive": true,
+        "confirmed": true,
+        "method": "worker"
+      },
+      "q_event": {
+        "answer": "有",
+        "date": "2026-12-09",
+        "what": "聯準會的 FOMC 利率決議：12/09 美東 14:00 公布，同時發布 SEP 和點陣圖。這是總體事件，不是 IBIT 發行方自己的事件。",
+        "source": "https://www.federalreserve.gov/newsevents/2026-december.htm"
+      },
+      "note": "IBIT 是 ETF，沒有財報。12/09 有 FOMC 決議，12/10 公布 11 月 CPI。",
+      "status": "answered"
+    }
+  ],
+  "facts_proposed": [
+    {
+      "ticker": "IBIT",
+      "fact": "FOMC 12/08–09 開會，12/09 美東 14:00 公布決議並發布 SEP。目前利率 3.75%–4.00%。10 月會議 10 比 2 維持不變，Cook、Hammack 主張升息 25bp。",
+      "date": "2026-12-09",
+      "source": "https://fedratecalc.com/fomc-meeting-schedule/"
+    },
+    {
+      "ticker": "IBIT",
+      "fact": "BLS 預定 12/10 美東 08:30 公布 11 月 CPI，在 12/09 FOMC 決議之後一天。",
+      "date": "2026-12-10",
+      "source": "https://fattail.ai/fomc-meeting-schedule-2026/"
+    }
+  ],
+  "facts_appended": 0,
+  "raw_answer": "{\"market_date\":\"2026-11-23\",\"candidates\":[{\"signal_id\":\"2026-11-23_IBIT_2026-12-18_42.0\",\"q_event\":{\"answer\":\"有\",\"date\":\"2026-12-09\",\"what\":\"聯準會的 FOMC 利率決議：12/09 美東 14:00 公布，同時發布 SEP 和點陣圖。這是總體事件，不是 IBIT 發行方自己的事件。\",\"source\":\"https://www.federalreserve.gov/newsevents/2026-december.htm\"},\"note\":\"IBIT 是 ETF，沒有財報。12/09 有 FOMC 決議，12/10 公布 11 月 CPI。\"}],\"facts_proposed\":[{\"ticker\":\"IBIT\",\"fact\":\"FOMC 12/08–09 開會，12/09 美東 14:00 公布決議並發布 SEP。目前利率 3.75%–4.00%。10 月會議 10 比 2 維持不變，Cook、Hammack 主張升息 25bp。\",\"date\":\"2026-12-09\",\"source\":\"https://fedratecalc.com/fomc-meeting-schedule/\"},{\"ticker\":\"IBIT\",\"fact\":\"BLS 預定 12/10 美東 08:30 公布 11 月 CPI，在 12/09 FOMC 決議之後一天。\",\"date\":\"2026-12-10\",\"source\":\"https://fattail.ai/fomc-meeting-schedule-2026/\"}]}",
+  "usage": {
+    "prompt_tokens": 44425,
+    "completion_tokens": 1587,
+    "total_tokens": 46012,
+    "cost": 0.22944,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.22944,
+      "upstream_inference_prompt_cost": 0.1777,
+      "upstream_inference_completions_cost": 0.03174
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 976,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "server_tool_use_details": {
+      "web_search_requests": 2
+    }
+  },
+  "error": null
+}
