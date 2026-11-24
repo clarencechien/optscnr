@@ -1,146 +1,128 @@
 {
-  "updated_at": "2026-11-23T01:03:59.569090",
+  "updated_at": "2026-11-24T04:55:23.243142",
   "stats": {
-    "total_items": 57,
-    "items_with_company": 10,
+    "total_items": 47,
+    "items_with_company": 21,
     "items_with_catalyst": 7,
-    "items_both": 2
+    "items_both": 5
   },
-  "count": 8,
+  "count": 6,
   "tickers": [
     "NVDA",
-    "MSFT",
-    "GOOGL",
-    "AAPL",
-    "ZS",
     "CRWD",
+    "ZS",
     "AMZN",
-    "GS"
+    "TGT",
+    "DIS"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 4.0,
+      "score": 13.0,
       "evidence": [
         {
-          "title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
+          "title": "Nvidia surge: What investors should do with the stock and the AI trade now",
+          "catalysts": [
+            "surge"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Trump sealed deal for Nvidia to rehire Jensen Huang as CEO",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Jensen Huang to testify publicly before Senate banking panel, Chairman Scott says",
+          "title": "U.S. adds Megaspeed to trade blacklist over export control concerns amid Nvidia controversy\n",
           "catalysts": [],
           "has_catalyst": false
-        },
-        {
-          "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
-          "catalysts": [
-            "plunges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "Director of National Intelligence Jay Clayton warns Americans of 'bumps in the road' after tech outages",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
-          "catalysts": [
-            "plunges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 2.5,
-      "evidence": [
-        {
-          "title": "26-year-old Google worker earns $323,000 a year—but lives on less than minimum wage",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
-          "catalysts": [
-            "plunges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
-          "catalysts": [
-            "plunges"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "ZS",
-      "score": 2,
-      "evidence": [
-        {
-          "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
-          "catalysts": [
-            "jumps"
-          ],
-          "has_catalyst": true
         }
       ]
     },
     {
       "symbol": "CRWD",
-      "score": 2,
+      "score": 3.0,
       "evidence": [
         {
-          "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
+          "title": "Investors are missing the bigger picture in CrowdStrike's deal to buy Zscaler",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "CrowdStrike CEO defends Zscaler acquisition, calls it a 'winning combination'",
           "catalysts": [
-            "jumps"
+            "acquisition"
           ],
           "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "AMZN",
-      "score": 0.5,
-      "evidence": [
+        },
         {
-          "title": "The Nasdaq is in freefall. Here's one stock to look at",
+          "title": "CrowdStrike to buy Zscaler in $44 billion deal as AI supercharges cyberattacks ",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "ZS",
+      "score": 3.0,
+      "evidence": [
+        {
+          "title": "Investors are missing the bigger picture in CrowdStrike's deal to buy Zscaler",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "CrowdStrike CEO defends Zscaler acquisition, calls it a 'winning combination'",
+          "catalysts": [
+            "acquisition"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "CrowdStrike to buy Zscaler in $44 billion deal as AI supercharges cyberattacks ",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "Amazon faces FAA probe after delivery drone strikes Michigan fiber cable, garage",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Amazon to acquire AI startup Decart's chip software, hire founders",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "TGT",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Goldman Sachs’ economic outlook for 2027",
+          "title": "Fed's John Williams indicates higher interest rates likely 'over time' to address inflation",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "DIS",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "ESPN, NFL to show Super Bowl 61 in Imax theaters",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 1
-  }
+  "watch_only": {}
 }
