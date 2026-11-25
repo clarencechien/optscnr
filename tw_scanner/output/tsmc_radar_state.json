@@ -7633,7 +7633,7 @@
       "t10_excess_smh_pct": 8.53,
       "t20_ret_pct": -7.08,
       "t20_excess_pct": 3.15,
-      "t20_excess_smh_pct": null
+      "t20_excess_smh_pct": 16.44
     }
   },
   {
@@ -9741,7 +9741,7 @@
       "t5_excess_smh_pct": -0.16,
       "t10_ret_pct": -2.41,
       "t10_excess_pct": 1.6,
-      "t10_excess_smh_pct": null,
+      "t10_excess_smh_pct": 9.35,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -9794,7 +9794,7 @@
       "t5_excess_smh_pct": -0.16,
       "t10_ret_pct": -2.41,
       "t10_excess_pct": 1.6,
-      "t10_excess_smh_pct": null,
+      "t10_excess_smh_pct": 9.35,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
       "t20_excess_smh_pct": null
@@ -9906,8 +9906,8 @@
       "t5_ret_pct": -9.19,
       "t5_excess_pct": -0.37,
       "t5_excess_smh_pct": 0.16,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -10.23,
+      "t10_excess_pct": 2.27,
       "t10_excess_smh_pct": null,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
@@ -9959,8 +9959,8 @@
       "t5_ret_pct": -9.19,
       "t5_excess_pct": -0.37,
       "t5_excess_smh_pct": 0.16,
-      "t10_ret_pct": null,
-      "t10_excess_pct": null,
+      "t10_ret_pct": -10.23,
+      "t10_excess_pct": 2.27,
       "t10_excess_smh_pct": null,
       "t20_ret_pct": null,
       "t20_excess_pct": null,
@@ -11014,7 +11014,7 @@
       "entry_close": 2170.0,
       "t5_ret_pct": 2.76,
       "t5_excess_pct": 0.95,
-      "t5_excess_smh_pct": null,
+      "t5_excess_smh_pct": 10.01,
       "t10_ret_pct": null,
       "t10_excess_pct": null,
       "t10_excess_smh_pct": null,
@@ -11900,6 +11900,122 @@
       "entry_date": "2026-11-24",
       "benchmark": "0050",
       "entry_close": 2230.0,
+      "t5_ret_pct": null,
+      "t5_excess_pct": null,
+      "t5_excess_smh_pct": null,
+      "t10_ret_pct": null,
+      "t10_excess_pct": null,
+      "t10_excess_smh_pct": null,
+      "t20_ret_pct": null,
+      "t20_excess_pct": null,
+      "t20_excess_smh_pct": null
+    }
+  },
+  {
+    "ts": "2026-11-25T12:43:49.545417+00:00",
+    "overall": "PARTIAL(m5)",
+    "modules_requested": [
+      "m5"
+    ],
+    "modules": [
+      {
+        "module": "M5 narrative_triggers",
+        "status": "RED",
+        "headline": "export_controls_tariffs:13e(17m) / n2_arizona_ramp:13e(16m) / cowos_capacity:3e / geopolitics:6e / hyperscaler_capex:3e",
+        "metrics": {
+          "events": {
+            "export_controls_tariffs": 13,
+            "n2_arizona_ramp": 13,
+            "cowos_capacity": 3,
+            "geopolitics": 6,
+            "hyperscaler_capex": 3
+          },
+          "mentions": {
+            "export_controls_tariffs": 17,
+            "n2_arizona_ramp": 16,
+            "cowos_capacity": 3,
+            "geopolitics": 6,
+            "hyperscaler_capex": 3
+          },
+          "scoring": {
+            "export_controls_tariffs": {
+              "events": 13,
+              "mentions": 17,
+              "gate": "zscore",
+              "z": -0.22,
+              "denial": false
+            },
+            "n2_arizona_ramp": {
+              "events": 13,
+              "mentions": 16,
+              "gate": "zscore",
+              "z": -1.87,
+              "denial": false
+            },
+            "cowos_capacity": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -2.68,
+              "denial": false
+            },
+            "geopolitics": {
+              "events": 6,
+              "mentions": 6,
+              "gate": "zscore",
+              "z": 2.96,
+              "denial": false
+            },
+            "hyperscaler_capex": {
+              "events": 3,
+              "mentions": 3,
+              "gate": "zscore",
+              "z": -0.62,
+              "denial": false
+            }
+          }
+        },
+        "notes": [
+          "[export_controls_tariffs] Chip supply chain warns of broader disruption from new US export controls - Nikkei Asia",
+          "[export_controls_tariffs] Apple supplier TSMC cuts off China chip orders amid tighter export controls - AppleInsider",
+          "[export_controls_tariffs] TSMC and Samsung pause some chip shipments to China due to tighter US export controls - Digital Watch Observatory",
+          "[n2_arizona_ramp] AMD Zen 6 Olympic Ridge Desktop CPUs Reportedly Slip Past Computex 2027 After A Switch To TSMC’s Performance-Focused N2X",
+          "[n2_arizona_ramp] [News] Samsung 2nm Yields Reportedly at ~55%, Below Mass Production Threshold; Qualcomm May Opt for TSMC - TrendForce",
+          "[n2_arizona_ramp] Qualcomm Weighs TSMC Shift As Samsung 2nm Yield Slips - Businesskorea",
+          "[cowos_capacity] Report: TSMC to Double CoWoS Capacity by 2028 as AI Chip Shortage Spills Over to Rivals - Wccftech",
+          "[cowos_capacity] TSMC Accelerates CoPoS Packaging to Replace CoWoS, as Glass Core Substrates Cut Costs 30% and Boost Wafer Utilization Pa",
+          "[cowos_capacity] AMD backs Taiwan EFB packaging chain to cut CoWoS reliance - digitimes",
+          "[geopolitics] China’s Coast Guard Rehearses Blockade Tools as Taiwan Plans Counter-Drills - Tech Times",
+          "[geopolitics] Could China Blockade Taiwan? Naval Drills Raise Fears of a Wider Indo-Pacific Crisis - Modern Diplomacy",
+          "[geopolitics] 'Strong punishment': China conducts biggest ‘blockade’ drills around Taiwan - The Times of India",
+          "[hyperscaler_capex] Tesla Isn’t a Hyperscaler. Why the AI Bears Are Misreading Its $5 Billion Capex Cut. - The Motley Fool",
+          "[hyperscaler_capex] The AI Capex Wall: Why Financing Constraints Will Trigger A Slowdown - Seeking Alpha",
+          "[hyperscaler_capex] Will the next recession be caused by an AI capex cut-off? - InvestorDaily"
+        ],
+        "error": null,
+        "observe_only": false
+      }
+    ],
+    "divergence": {
+      "flag": "premise_ok_price_down",
+      "text": "🔀 背離：前提健在（GREEN）、價格 20 日 -11.3% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 20.7，3 年分位 65 → 16",
+      "premise": "GREEN",
+      "premise_ts": "2026-11-23T14:51:53.047398+00:00",
+      "ret_pct": -11.34,
+      "lookback_sessions": 20,
+      "as_of": "2026-11-25",
+      "valuation": {
+        "per": 20.66,
+        "per_pct": 16.4,
+        "per_then": 27.65,
+        "per_pct_then": 64.6,
+        "history_years": 3
+      }
+    },
+    "outcomes": {
+      "entry_date": "2026-11-25",
+      "benchmark": "0050",
+      "entry_close": 2150.0,
       "t5_ret_pct": null,
       "t5_excess_pct": null,
       "t5_excess_smh_pct": null,
