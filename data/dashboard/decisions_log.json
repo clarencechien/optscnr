@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-24T23:15:53Z",
- "n_days": 55,
+ "generated_at": "2026-11-25T05:04:55Z",
+ "n_days": 56,
  "t8_by_event_answer": {
   "有": {
    "n": 17,
@@ -19,6 +19,16 @@
   }
  },
  "days": [
+  {
+   "market_date": "2026-11-24",
+   "decided_at": "2026-11-25T00:35:07.490Z",
+   "model": "anthropic/claude-opus-5.5",
+   "prompt_version": "v4.2",
+   "llm_called": false,
+   "error": null,
+   "n_candidates": 0,
+   "candidates": []
+  },
   {
    "market_date": "2026-11-23",
    "decided_at": "2026-11-24T00:35:08.379Z",
