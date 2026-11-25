@@ -1,17 +1,41 @@
 {
-  "updated_at": "2026-11-24T05:30:54.029851",
-  "count": 1,
+  "updated_at": "2026-11-25T04:35:48.472872",
+  "count": 3,
   "blind_spots": [
     {
-      "name": "SharkNinja",
-      "ticker": "SN",
+      "name": "Nasdaq",
+      "ticker": "NDAQ",
+      "mentions_today": 2,
+      "total_mentions": 18,
+      "consecutive_days": 8,
+      "is_strong": true,
+      "evidence": [
+        "Anthropic closes below $83 IPO price, but analysts are still largely positive",
+        "Anthropic’s stock just broke below its IPO price for the first time"
+      ]
+    },
+    {
+      "name": "Sanofi",
+      "ticker": "SNYNF",
+      "mentions_today": 2,
+      "total_mentions": 4,
+      "consecutive_days": 2,
+      "is_strong": true,
+      "evidence": [
+        "Drugmaker Insmed shares rally 14% after Sanofi agrees to buy it in pharma’s biggest deal in three ye",
+        "Drugmaker Insmed shares rally 14% after Sanofi agrees to buy it in pharma’s biggest deal in three ye"
+      ]
+    },
+    {
+      "name": "Beijing",
+      "ticker": "BGTCF",
       "mentions_today": 2,
       "total_mentions": 2,
       "consecutive_days": 1,
       "is_strong": false,
       "evidence": [
-        "The newest addition to the S&P 500 is a maker of viral ice-cream machines",
-        "SharkNinja to join S&P 500; Paycom and Guardian shift indexes"
+        "Jensen Huang tells staff that Nvidia doesn't need a succession plan",
+        "Op-ed: Trump’s Nvidia board intervention put a price on national security. Our adversaries will take"
       ]
     }
   ]
