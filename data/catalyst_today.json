@@ -1,128 +1,167 @@
 {
-  "updated_at": "2026-11-24T04:55:23.243142",
+  "updated_at": "2026-11-25T03:41:05.267252",
   "stats": {
-    "total_items": 47,
-    "items_with_company": 21,
-    "items_with_catalyst": 7,
-    "items_both": 5
+    "total_items": 57,
+    "items_with_company": 24,
+    "items_with_catalyst": 9,
+    "items_both": 3
   },
-  "count": 6,
+  "count": 9,
   "tickers": [
     "NVDA",
-    "CRWD",
-    "ZS",
-    "AMZN",
-    "TGT",
-    "DIS"
+    "DELL",
+    "MU",
+    "META",
+    "BA",
+    "COST",
+    "HPE",
+    "AMBA",
+    "CLSK"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 13.0,
+      "score": 6.0,
       "evidence": [
         {
-          "title": "Nvidia surge: What investors should do with the stock and the AI trade now",
-          "catalysts": [
-            "surge"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Trump sealed deal for Nvidia to rehire Jensen Huang as CEO",
+          "title": "Jensen Huang tells staff that Nvidia doesn't need a succession plan",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "U.S. adds Megaspeed to trade blacklist over export control concerns amid Nvidia controversy\n",
+          "title": "Trump open to pardoning Jensen Huang if needed: NY Post",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Trump wanted Jensen Huang back. Now, the president is all alone in Washington",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CRWD",
-      "score": 3.0,
+      "symbol": "DELL",
+      "score": 4.5,
       "evidence": [
         {
-          "title": "Investors are missing the bigger picture in CrowdStrike's deal to buy Zscaler",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "CrowdStrike CEO defends Zscaler acquisition, calls it a 'winning combination'",
+          "title": "Dell earnings beat on AI strength, company authorizes $25 billion buyback",
           "catalysts": [
-            "acquisition"
+            "earnings beat"
           ],
           "has_catalyst": true
         },
         {
-          "title": "CrowdStrike to buy Zscaler in $44 billion deal as AI supercharges cyberattacks ",
+          "title": "Dell’s stock rises as the AI boom helps sales more than double",
+          "catalysts": [
+            "rises"
+          ],
+          "has_catalyst": true
+        },
+        {
+          "title": "Dell projects Q4 FY2027 revenue $56.25B and non-GAAP EPS $8.40 as AI server revenue targets ~$23.5B",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "ZS",
-      "score": 3.0,
+      "symbol": "MU",
+      "score": 2.5,
       "evidence": [
         {
-          "title": "Investors are missing the bigger picture in CrowdStrike's deal to buy Zscaler",
+          "title": "Micron boosted CEO Sanjay Mehrotra’s security budget by 2,000%, new filing shows",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "CrowdStrike CEO defends Zscaler acquisition, calls it a 'winning combination'",
+          "title": "Micron’s stock falls as an analyst warns about a future supply glut",
           "catalysts": [
-            "acquisition"
+            "falls"
           ],
           "has_catalyst": true
-        },
-        {
-          "title": "CrowdStrike to buy Zscaler in $44 billion deal as AI supercharges cyberattacks ",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "META",
       "score": 1.0,
       "evidence": [
         {
-          "title": "Amazon faces FAA probe after delivery drone strikes Michigan fiber cable, garage",
+          "title": "Who qualifies for Costco’s $30-per-share dividend — plus, Meta puts share plan on hold",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Amazon to acquire AI startup Decart's chip software, hire founders",
+          "title": "How Meta is using Instagram to get an ad boost from its Muse personal AI agent",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "TGT",
-      "score": 0.5,
+      "symbol": "BA",
+      "score": 1.0,
       "evidence": [
         {
-          "title": "Fed's John Williams indicates higher interest rates likely 'over time' to address inflation",
+          "title": "Malaysia Airlines’ parent to buy 10 Boeing 787 Dreamliners, CEO says",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "China Southern orders 50 jets in Boeing’s biggest China deal in nearly a decade",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DIS",
+      "symbol": "COST",
       "score": 0.5,
       "evidence": [
         {
-          "title": "ESPN, NFL to show Super Bowl 61 in Imax theaters",
+          "title": "Who qualifies for Costco’s $30-per-share dividend — plus, Meta puts share plan on hold",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "HPE",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "HPE just posted its strongest growth ever — but its stock is sinking",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "AMBA",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Ambarella anticipates $70M-$75M Q4 revenue amid memory-driven order pushouts",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "CLSK",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "Cleanspark outlines Sandersville first data hall delivery in 4Q 2027 while progressing $2.3B nonrecourse funding",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     }
   ],
-  "watch_only": {}
+  "watch_only": {
+    "Anthropic (private)": 3,
+    "OpenAI (private)": 1
+  }
 }
