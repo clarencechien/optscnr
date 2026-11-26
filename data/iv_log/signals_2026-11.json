@@ -25840,7 +25840,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "❌沒噴(峰0.2x)"
   },
   {
@@ -26005,7 +26012,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.8x/今0.3x)"
   },
   {
@@ -26096,7 +26110,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "❌沒噴(峰0.3x)"
   },
   {
@@ -26261,7 +26282,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.7x/今0.8x)"
   },
   {
@@ -26352,7 +26380,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "💀歸零(0.03x)"
   },
   {
@@ -26517,7 +26552,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.7x/今0.2x)"
   },
   {
@@ -26608,7 +26650,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "❌沒噴(峰0.1x)"
   },
   {
@@ -26741,7 +26790,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.9x/今0.1x)"
   },
   {
@@ -26906,7 +26962,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "❌沒噴(峰0.3x)"
   },
   {
@@ -26997,7 +27060,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "❌沒噴(峰0.2x)"
   },
   {
@@ -27162,7 +27232,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.3x/今0.6x)"
   },
   {
@@ -27253,7 +27330,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
@@ -27344,7 +27428,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "❌沒噴(峰0.4x)"
   },
   {
@@ -27437,7 +27528,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.6x/今1.6x)"
   },
   {
@@ -27528,7 +27626,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.9x/今0.9x)"
   },
   {
@@ -27693,7 +27798,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.2x/今0.6x)"
   },
   {
@@ -27784,7 +27896,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.9x/今0.9x)"
   },
   {
@@ -27874,7 +27993,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "💀歸零(0.03x)"
   },
   {
@@ -28038,7 +28164,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.6x/今0.4x)"
   },
   {
@@ -28202,7 +28335,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.6x/今0.3x)"
   },
   {
@@ -28335,7 +28475,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.6x/今0.2x)"
   },
   {
@@ -28500,7 +28647,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.7x/今0.2x)"
   },
   {
@@ -28590,7 +28744,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "💀歸零(0.02x)"
   },
   {
@@ -28680,7 +28841,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "💀歸零(0.02x)"
   },
   {
@@ -28845,7 +29013,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.1x/今0.5x)"
   },
   {
@@ -28935,7 +29110,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "✅噴了(峰3.6x)"
   },
   {
@@ -29025,7 +29207,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "✅噴了(峰2.3x)"
   },
   {
@@ -29190,7 +29379,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.7x/今0.7x)"
   },
   {
@@ -29280,7 +29476,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.3x/今1.3x)"
   },
   {
@@ -29370,7 +29573,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.3x/今1.3x)"
   },
   {
@@ -29460,7 +29670,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
@@ -29550,7 +29767,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.4x/今1.4x)"
   },
   {
@@ -29640,7 +29864,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.8x/今0.8x)"
   },
   {
@@ -29730,7 +29961,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.3x/今1.3x)"
   },
   {
@@ -29820,7 +30058,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.4x/今1.4x)"
   },
   {
@@ -29985,7 +30230,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.9x/今0.4x)"
   },
   {
@@ -30117,7 +30369,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "💀歸零(0.05x)"
   },
   {
@@ -30207,7 +30466,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰2.0x/今2.0x)"
   },
   {
@@ -30341,7 +30607,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.4x/今1.2x)"
   },
   {
@@ -30505,7 +30778,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.1x/今0.5x)"
   },
   {
@@ -30670,7 +30950,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.9x/今0.8x)"
   },
   {
@@ -30835,7 +31122,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.3x/今1.0x)"
   },
   {
@@ -30999,7 +31293,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.7x/今0.7x)"
   },
   {
@@ -31164,7 +31465,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.0x/今0.7x)"
   },
   {
@@ -31328,7 +31636,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.2x/今0.8x)"
   },
   {
@@ -31492,7 +31807,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.4x/今1.0x)"
   },
   {
@@ -31657,7 +31979,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.9x/今0.8x)"
   },
   {
@@ -31747,7 +32076,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰0.6x/今0.6x)"
   },
   {
@@ -31912,7 +32248,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.0x/今1.0x)"
   },
   {
@@ -32077,7 +32420,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.2x/今1.2x)"
   },
   {
@@ -32242,7 +32592,14 @@
       "observed_at": "2026-11-16",
       "late_days": 0
     },
-    "t20": null,
+    "t20": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "verdict": "➖持平(峰1.1x/今1.1x)"
   },
   {
@@ -50426,7 +50783,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "💀歸零(0.08x)"
   },
@@ -50542,7 +50906,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "💀歸零(0.05x)"
   },
@@ -50658,7 +51029,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "💀歸零(0.04x)"
   },
@@ -50774,7 +51152,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "💀歸零(0.03x)"
   },
@@ -50890,7 +51275,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.8x/今0.8x)"
   },
@@ -51006,7 +51398,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.6x/今0.6x)"
   },
@@ -51121,7 +51520,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.5x/今0.5x)"
   },
@@ -51237,7 +51643,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰1.2x/今1.2x)"
   },
@@ -51353,7 +51766,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.9x/今0.9x)"
   },
@@ -51469,7 +51889,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.7x/今0.7x)"
   },
@@ -51585,7 +52012,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰1.2x/今1.2x)"
   },
@@ -51701,7 +52135,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰1.1x/今1.1x)"
   },
@@ -51816,7 +52257,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "❌沒噴(峰0.3x)"
   },
@@ -51932,7 +52380,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.7x/今0.7x)"
   },
@@ -52047,7 +52502,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "❌沒噴(峰0.4x)"
   },
@@ -52163,7 +52625,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.5x/今0.5x)"
   },
@@ -52279,7 +52748,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰1.0x/今1.0x)"
   },
@@ -52395,7 +52871,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.5x/今0.5x)"
   },
@@ -52511,7 +52994,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.9x/今0.9x)"
   },
@@ -52626,7 +53116,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "💀歸零(0.06x)"
   },
@@ -52742,7 +53239,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.5x/今0.5x)"
   },
@@ -52858,7 +53362,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.6x/今0.6x)"
   },
@@ -52974,7 +53485,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.8x/今0.8x)"
   },
@@ -53090,7 +53608,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰1.3x/今1.3x)"
   },
@@ -53206,7 +53731,14 @@
       "observed_at": "2026-11-23",
       "late_days": 2
     },
-    "t10": null,
+    "t10": {
+      "opt_price": null,
+      "spot": null,
+      "iv": null,
+      "note": "err:Too Many Requests. Rate limited. Try after a while.",
+      "observed_at": "2026-11-26",
+      "late_days": 0
+    },
     "t20": null,
     "verdict": "➖持平(峰0.9x/今0.9x)"
   },
@@ -71158,6 +71690,170 @@
         "iv": 62.890996093750005
       }
     ],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-25_AMZN_2027-01-15_295.0",
+    "snapshot_date": "2026-11-25",
+    "ticker": "AMZN",
+    "expiry": "2027-01-15",
+    "strike": 295.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次02-04)",
+    "entry_price": 1.21,
+    "entry_iv": 35.388829711914056,
+    "entry_spot": 244.42999267578125,
+    "oi": 9136,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次02-04)"
+    ],
+    "volume": 17174,
+    "premium_tier": "lottery",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 1.15,
+    "entry_ask": 1.24,
+    "last_trade_at": "2026-11-25 20:58:58",
+    "quote_at": "2026-11-26T04:12:14Z",
+    "underlying_at": "2026-11-26T04:12:14Z",
+    "structural_pass": false,
+    "strategy": "A_HOLD",
+    "sell_points": null,
+    "path": [],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-25_AMZN_2026-12-04_250.0",
+    "snapshot_date": "2026-11-25",
+    "ticker": "AMZN",
+    "expiry": "2026-12-04",
+    "strike": 250.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次02-04)",
+    "entry_price": 4.4,
+    "entry_iv": 44.092355957031245,
+    "entry_spot": 244.42999267578125,
+    "oi": 1511,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次02-04)"
+    ],
+    "volume": 8343,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 4.2,
+    "entry_ask": 4.4,
+    "last_trade_at": "2026-11-25 20:59:57",
+    "quote_at": "2026-11-26T04:12:14Z",
+    "underlying_at": "2026-11-26T04:12:14Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-25_AMZN_2026-12-04_252.5",
+    "snapshot_date": "2026-11-25",
+    "ticker": "AMZN",
+    "expiry": "2026-12-04",
+    "strike": 252.5,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次02-04)",
+    "entry_price": 3.43,
+    "entry_iv": 43.23787231445312,
+    "entry_spot": 244.42999267578125,
+    "oi": 1167,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次02-04)"
+    ],
+    "volume": 4072,
+    "premium_tier": "heavy",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 3.0,
+    "entry_ask": 3.45,
+    "last_trade_at": "2026-11-25 20:58:21",
+    "quote_at": "2026-11-26T04:12:14Z",
+    "underlying_at": "2026-11-26T04:12:14Z",
+    "structural_pass": false,
+    "strategy": "C_LADDER4",
+    "sell_points": null,
+    "path": [],
+    "t5": null,
+    "t10": null,
+    "t20": null,
+    "verdict": null
+  },
+  {
+    "signal_id": "2026-11-25_AMZN_2026-12-04_255.0",
+    "snapshot_date": "2026-11-25",
+    "ticker": "AMZN",
+    "expiry": "2026-12-04",
+    "strike": 255.0,
+    "score": 8,
+    "tags": "🚨異常掃貨 🆕新倉暴量 📅吃不到財報(下次02-04)",
+    "entry_price": 2.56,
+    "entry_iv": 42.60311303710938,
+    "entry_spot": 244.42999267578125,
+    "oi": 1249,
+    "oi_d7": null,
+    "oi_delta_status": "no_history",
+    "features": [
+      "sweep",
+      "first_seen_in_feed"
+    ],
+    "warnings": [],
+    "events": [
+      "📅吃不到財報(下次02-04)"
+    ],
+    "volume": 2021,
+    "premium_tier": "mid",
+    "news_at_signal": true,
+    "signal_day_underlying_move": null,
+    "why_it_popped": null,
+    "entry_bid": 2.44,
+    "entry_ask": 2.67,
+    "last_trade_at": "2026-11-25 20:59:59",
+    "quote_at": "2026-11-26T04:12:14Z",
+    "underlying_at": "2026-11-26T04:12:14Z",
+    "structural_pass": false,
+    "strategy": "C_STOP_HALF",
+    "sell_points": null,
+    "path": [],
     "t5": null,
     "t10": null,
     "t20": null,
