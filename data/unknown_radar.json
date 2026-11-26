@@ -1,42 +1,5 @@
 {
-  "updated_at": "2026-11-25T04:35:48.472872",
-  "count": 3,
-  "blind_spots": [
-    {
-      "name": "Nasdaq",
-      "ticker": "NDAQ",
-      "mentions_today": 2,
-      "total_mentions": 18,
-      "consecutive_days": 8,
-      "is_strong": true,
-      "evidence": [
-        "Anthropic closes below $83 IPO price, but analysts are still largely positive",
-        "Anthropic’s stock just broke below its IPO price for the first time"
-      ]
-    },
-    {
-      "name": "Sanofi",
-      "ticker": "SNYNF",
-      "mentions_today": 2,
-      "total_mentions": 4,
-      "consecutive_days": 2,
-      "is_strong": true,
-      "evidence": [
-        "Drugmaker Insmed shares rally 14% after Sanofi agrees to buy it in pharma’s biggest deal in three ye",
-        "Drugmaker Insmed shares rally 14% after Sanofi agrees to buy it in pharma’s biggest deal in three ye"
-      ]
-    },
-    {
-      "name": "Beijing",
-      "ticker": "BGTCF",
-      "mentions_today": 2,
-      "total_mentions": 2,
-      "consecutive_days": 1,
-      "is_strong": false,
-      "evidence": [
-        "Jensen Huang tells staff that Nvidia doesn't need a succession plan",
-        "Op-ed: Trump’s Nvidia board intervention put a price on national security. Our adversaries will take"
-      ]
-    }
-  ]
+  "updated_at": "2026-11-26T03:45:48.547470",
+  "count": 0,
+  "blind_spots": []
 }
