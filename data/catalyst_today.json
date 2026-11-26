@@ -1,99 +1,62 @@
 {
-  "updated_at": "2026-11-25T03:41:05.267252",
+  "updated_at": "2026-11-26T02:59:48.499291",
   "stats": {
     "total_items": 57,
-    "items_with_company": 24,
-    "items_with_catalyst": 9,
-    "items_both": 3
+    "items_with_company": 17,
+    "items_with_catalyst": 5,
+    "items_both": 1
   },
   "count": 9,
   "tickers": [
     "NVDA",
-    "DELL",
-    "MU",
-    "META",
+    "AMZN",
+    "XYZ",
     "BA",
-    "COST",
-    "HPE",
-    "AMBA",
-    "CLSK"
+    "ORCL",
+    "CRWV",
+    "GOOGL",
+    "DIS",
+    "RTX"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 6.0,
+      "score": 8.5,
       "evidence": [
         {
-          "title": "Jensen Huang tells staff that Nvidia doesn't need a succession plan",
+          "title": "‘Your booth is waiting’: Denny’s welcomes Jensen Huang back as Nvidia CEO\n",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Trump open to pardoning Jensen Huang if needed: NY Post",
+          "title": "Nvidia sellers seek new buyers as U.S. curbs China AI chip access, sources tell CNBC",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Trump wanted Jensen Huang back. Now, the president is all alone in Washington",
+          "title": "Trump’s meddling in Huang scandal reignites voter angst over tech’s outsized political power",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "DELL",
-      "score": 4.5,
+      "symbol": "AMZN",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Dell earnings beat on AI strength, company authorizes $25 billion buyback",
-          "catalysts": [
-            "earnings beat"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Dell’s stock rises as the AI boom helps sales more than double",
-          "catalysts": [
-            "rises"
-          ],
-          "has_catalyst": true
-        },
-        {
-          "title": "Dell projects Q4 FY2027 revenue $56.25B and non-GAAP EPS $8.40 as AI server revenue targets ~$23.5B",
+          "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "MU",
-      "score": 2.5,
+      "symbol": "XYZ",
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Micron boosted CEO Sanjay Mehrotra’s security budget by 2,000%, new filing shows",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "Micron’s stock falls as an analyst warns about a future supply glut",
-          "catalysts": [
-            "falls"
-          ],
-          "has_catalyst": true
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "score": 1.0,
-      "evidence": [
-        {
-          "title": "Who qualifies for Costco’s $30-per-share dividend — plus, Meta puts share plan on hold",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "How Meta is using Instagram to get an ad boost from its Muse personal AI agent",
+          "title": "Saudi national in OpenAI bugging case is out on bond after DOJ tries to block release",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -101,59 +64,65 @@
     },
     {
       "symbol": "BA",
-      "score": 1.0,
+      "score": 0.5,
       "evidence": [
         {
-          "title": "Malaysia Airlines’ parent to buy 10 Boeing 787 Dreamliners, CEO says",
-          "catalysts": [],
-          "has_catalyst": false
-        },
-        {
-          "title": "China Southern orders 50 jets in Boeing’s biggest China deal in nearly a decade",
+          "title": "China’s Xiamen Airlines to buy 50 Boeing jets in $7.4 billion deal",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "COST",
+      "symbol": "ORCL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Who qualifies for Costco’s $30-per-share dividend — plus, Meta puts share plan on hold",
+          "title": "Oracle, CoreWeave and other tech stocks bounce back after selloff",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "HPE",
+      "symbol": "CRWV",
       "score": 0.5,
       "evidence": [
         {
-          "title": "HPE just posted its strongest growth ever — but its stock is sinking",
+          "title": "Oracle, CoreWeave and other tech stocks bounce back after selloff",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMBA",
+      "symbol": "GOOGL",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Ambarella anticipates $70M-$75M Q4 revenue amid memory-driven order pushouts",
+          "title": "Malaysia regulator seeks $146 million damages from Google over ’harmful’ content",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "CLSK",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Cleanspark outlines Sandersville first data hall delivery in 4Q 2027 while progressing $2.3B nonrecourse funding",
+          "title": "Court blocks FCC move on ABC licenses in free speech ruling for Disney",
+          "catalysts": [],
+          "has_catalyst": false
+        }
+      ]
+    },
+    {
+      "symbol": "RTX",
+      "score": 0.5,
+      "evidence": [
+        {
+          "title": "RTX wins $2.53B contract for F-35 engine sustainment",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -161,7 +130,7 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 3,
-    "OpenAI (private)": 1
+    "OpenAI (private)": 2,
+    "Anthropic (private)": 1
   }
 }
