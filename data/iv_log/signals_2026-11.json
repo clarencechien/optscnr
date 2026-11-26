@@ -71730,7 +71730,16 @@
     "structural_pass": false,
     "strategy": "A_HOLD",
     "sell_points": null,
-    "path": [],
+    "path": [
+      {
+        "date": "2026-11-25",
+        "spot": 244.42999267578125,
+        "last": 1.21,
+        "bid": 1.15,
+        "ask": 1.24,
+        "iv": 35.388829711914056
+      }
+    ],
     "t5": null,
     "t10": null,
     "t20": null,
@@ -71771,7 +71780,16 @@
     "structural_pass": false,
     "strategy": "C_LADDER4",
     "sell_points": null,
-    "path": [],
+    "path": [
+      {
+        "date": "2026-11-25",
+        "spot": 244.42999267578125,
+        "last": 4.4,
+        "bid": 4.2,
+        "ask": 4.4,
+        "iv": 44.092355957031245
+      }
+    ],
     "t5": null,
     "t10": null,
     "t20": null,
@@ -71812,7 +71830,16 @@
     "structural_pass": false,
     "strategy": "C_LADDER4",
     "sell_points": null,
-    "path": [],
+    "path": [
+      {
+        "date": "2026-11-25",
+        "spot": 244.42999267578125,
+        "last": 3.43,
+        "bid": 3.0,
+        "ask": 3.45,
+        "iv": 43.23787231445312
+      }
+    ],
     "t5": null,
     "t10": null,
     "t20": null,
@@ -71853,7 +71880,16 @@
     "structural_pass": false,
     "strategy": "C_STOP_HALF",
     "sell_points": null,
-    "path": [],
+    "path": [
+      {
+        "date": "2026-11-25",
+        "spot": 244.42999267578125,
+        "last": 2.56,
+        "bid": 2.44,
+        "ask": 2.67,
+        "iv": 42.60311303710938
+      }
+    ],
     "t5": null,
     "t10": null,
     "t20": null,
