@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-11-26T11:28:32+00:00",
+ "generated_at": "2026-11-26T12:18:44+00:00",
  "today": "2026-11-26",
  "cadence": "weekly",
  "tldr": [
   "週檢查（2026-11-27）：本月預算已於 2026-11-09 動用（投降窗 ×2.0），本月不再行動。",
   "鋒面 🌧️ DE_RISK（本週未變）。",
   "2308 前提 🟡 YELLOW；🔀 背離：前提健在（YELLOW）、價格 20 日 -24.3% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 29.7，3 年分位 65 → 44",
-  "2330 前提 🟢 GREEN；🔀 背離：前提健在（GREEN）、價格 20 日 -11.3% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 20.7，3 年分位 65 → 16",
+  "2330 前提 🟢 GREEN；🔀 背離：前提健在（GREEN）、價格 20 日 -11.2% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 20.7，3 年分位 65 → 16",
   "投降窗加碼歷史 10 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +1.87%。"
  ],
  "weather": {
@@ -314,8 +314,8 @@
  "tsmc": {
   "status": "OK",
   "label": "2330",
-  "as_of": "2026-11-25",
-  "age_days": 1,
+  "as_of": "2026-11-26",
+  "age_days": 0,
   "last_overall": "PARTIAL(m5)",
   "last_modules_requested": [
    "m5"
@@ -349,9 +349,9 @@
    },
    {
     "module": "M5 narrative_triggers",
-    "status": "RED",
-    "headline": "export_controls_tariffs:13e(17m) / n2_arizona_ramp:13e(16m) / cowos_capacity:3e / geopolitics:6e / hyperscaler_capex:3e",
-    "ts": "2026-11-25T12:43:49.545417+00:00"
+    "status": "YELLOW",
+    "headline": "export_controls_tariffs:10e(15m) / n2_arizona_ramp:22e(27m) / cowos_capacity:7e / geopolitics:2e / hyperscaler_capex:6e(7m)",
+    "ts": "2026-11-26T12:18:41.534644+00:00"
    },
    {
     "module": "M6 peer_divergence",
@@ -374,12 +374,12 @@
   ],
   "divergence": {
    "flag": "premise_ok_price_down",
-   "text": "🔀 背離：前提健在（GREEN）、價格 20 日 -11.3% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 20.7，3 年分位 65 → 16",
+   "text": "🔀 背離：前提健在（GREEN）、價格 20 日 -11.2% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 20.7，3 年分位 65 → 16",
    "premise": "GREEN",
    "premise_ts": "2026-11-23T14:51:53.047398+00:00",
-   "ret_pct": -11.34,
+   "ret_pct": -11.18,
    "lookback_sessions": 20,
-   "as_of": "2026-11-25",
+   "as_of": "2026-11-26",
    "valuation": {
     "per": 20.66,
     "per_pct": 16.4,
@@ -388,7 +388,7 @@
     "history_years": 3
    }
   },
-  "scored_n": 48
+  "scored_n": 50
  },
  "casino": {
   "status": "OK",
@@ -668,7 +668,7 @@
   {
    "level": "ok",
    "label": "tsmc_radar 正常",
-   "text": "tsmc_radar：最新 2026-11-25"
+   "text": "tsmc_radar：最新 2026-11-26"
   },
   {
    "level": "ok",
