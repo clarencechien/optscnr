@@ -7,7 +7,7 @@
 - 週檢查（2026-11-27）：本月預算已於 2026-11-09 動用（投降窗 ×2.0），本月不再行動。
 - 鋒面 🌧️ DE_RISK（本週未變）。
 - 2308 前提 🟡 YELLOW；🔀 背離：前提健在（YELLOW）、價格 20 日 -24.3% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 33.6，3 年分位 62 → 56
-- 2330 前提 🟢 GREEN；🔀 背離：前提健在（GREEN）、價格 20 日 -11.2% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 20.7，3 年分位 65 → 16
+- 2330 前提 🟢 GREEN；🔀 背離：前提健在（GREEN）、價格 20 日 -11.2% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 21.8，3 年分位 69 → 24
 - 投降窗加碼歷史 10 次：比等到例行日買平均便宜 +1.17%、勝率 75%；平均成本 vs 純 DCA +1.87%。
 
 ## 1. 本期機械指示（DCA 規則影子帳本）
@@ -52,16 +52,16 @@
 - 回填樣本 151 筆（T+20 超額）；退役判準見 `delta_radar_report.md`
 
 ### 2330
-- 前提（最近全模組 2026-11-23）：🟢 GREEN
-- 🔀 背離：前提健在（GREEN）、價格 20 日 -11.2% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 20.7，3 年分位 65 → 16
+- 前提（最近全模組 2026-11-26）：🟢 GREEN
+- 🔀 背離：前提健在（GREEN）、價格 20 日 -11.2% —— 跌的是估值不是基本面（或市場知道儀器不知道的事）；PER 21.8，3 年分位 69 → 24
   - 🟢 M1 revenue_acceleration：2026-10 YoY +59.7%, slope +5.01pp/月, 連續減速 0 個月
   - 🟢 M2 bullwhip_health：合約負債 QoQ n/a / 存貨 QoQ +11.0% / FCF/淨利 1.46
-  - 🟢 M3 adr_premium：ADR 溢價 +17.6%（1 年第 42 百分位；觀察）
+  - 🟢 M3 adr_premium：ADR 溢價 +5.2%（1 年第 1 百分位；觀察）
   - 🟢 M4 customs_flow：US 進口 HS854231 (TH+TW) 近3月 $3666.0M, YoY +65.1%
-  - 🟡 M5 narrative_triggers：export_controls_tariffs:10e(15m) / n2_arizona_ramp:22e(27m) / cowos_capacity:7e / geopolitics:2e / hyperscaler_capex:6e(7m)
+  - 🟢 M5 narrative_triggers：export_controls_tariffs:10e(15m) / n2_arizona_ramp:22e(27m) / cowos_capacity:2e / geopolitics:2e / hyperscaler_capex:3e
   - 🟢 M6 peer_divergence：cohort 內 2330 未被對手顯著反超（離散在容忍帶內）
   - ⚪ M8 revision_velocity：下修 0/上修 0（樣本不足 <3，NO_DATA）
-  - 🟢 M9 valuation：PER 20.7（3 年第 16 百分位；20 日前第 65）；觀察
+  - 🟢 M9 valuation：PER 21.8（3 年第 24 百分位；20 日前第 69）；觀察
 - 回填樣本 50 筆（T+20 超額）；退役判準見 `tsmc_radar_report.md`
 
 
@@ -103,4 +103,4 @@
 - ✅ 賭場 sector：最新 2026-11-25
 
 ---
-*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-26T13:08:34+00:00*
+*tw_brief — 週報：規則影子帳本＋溫度計＋2308／2330 論點監控＋賭場 sector。沒有任何一行是買賣建議；曝險與部位由人管。 產出 2026-11-26T13:59:27+00:00*
