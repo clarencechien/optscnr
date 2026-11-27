@@ -1,30 +1,29 @@
 {
-  "updated_at": "2026-11-26T02:59:48.499291",
+  "updated_at": "2026-11-27T03:07:59.427680",
   "stats": {
-    "total_items": 57,
-    "items_with_company": 17,
-    "items_with_catalyst": 5,
+    "total_items": 47,
+    "items_with_company": 7,
+    "items_with_catalyst": 6,
     "items_both": 1
   },
-  "count": 9,
+  "count": 3,
   "tickers": [
     "NVDA",
-    "AMZN",
-    "XYZ",
-    "BA",
-    "ORCL",
-    "CRWV",
-    "GOOGL",
-    "DIS",
-    "RTX"
+    "GS",
+    "XYZ"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 8.5,
+      "score": 4.0,
       "evidence": [
         {
-          "title": "‘Your booth is waiting’: Denny’s welcomes Jensen Huang back as Nvidia CEO\n",
+          "title": "Nvidia chip buyers told to rule out Chinese renters to purchase GPUs, sources say",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Buyer beware? Nvidia's volatile swings expose risks of single-stock ETFs",
           "catalysts": [],
           "has_catalyst": false
         },
@@ -32,20 +31,15 @@
           "title": "Nvidia sellers seek new buyers as U.S. curbs China AI chip access, sources tell CNBC",
           "catalysts": [],
           "has_catalyst": false
-        },
-        {
-          "title": "Trump’s meddling in Huang scandal reignites voter angst over tech’s outsized political power",
-          "catalysts": [],
-          "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "AMZN",
+      "symbol": "GS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
+          "title": "Wealthy Europeans look beyond stocks amid AI selloff. Here’s where they’re investing",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -56,73 +50,7 @@
       "score": 0.5,
       "evidence": [
         {
-          "title": "Saudi national in OpenAI bugging case is out on bond after DOJ tries to block release",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "BA",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "China’s Xiamen Airlines to buy 50 Boeing jets in $7.4 billion deal",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "ORCL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Oracle, CoreWeave and other tech stocks bounce back after selloff",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "CRWV",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Oracle, CoreWeave and other tech stocks bounce back after selloff",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "GOOGL",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Malaysia regulator seeks $146 million damages from Google over ’harmful’ content",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "DIS",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Court blocks FCC move on ABC licenses in free speech ruling for Disney",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "RTX",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "RTX wins $2.53B contract for F-35 engine sustainment",
+          "title": "Taking on Starlink: Europe’s largest satellite factory opens in push to rival Musk",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -130,7 +58,6 @@
     }
   ],
   "watch_only": {
-    "OpenAI (private)": 2,
     "Anthropic (private)": 1
   }
 }
