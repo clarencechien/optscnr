@@ -1,6 +1,6 @@
 # 🚀 SPCX 雷達站（space_radar + Option Sage）
 
-_README 由 build_readme.py 於 2026-11-26 04:12 UTC 重組；C 池燈號來自 spcx_brief.json，兩個報告區塊各為該模組最近一次排程的輸出。_
+_README 由 build_readme.py 於 2026-11-27 04:19 UTC 重組；C 池燈號來自 spcx_brief.json，兩個報告區塊各為該模組最近一次排程的輸出。_
 
 > 執行手冊：[PLAYBOOK.md](PLAYBOOK.md)｜8 月後任務計劃：[PLAN_2026-08.md](PLAN_2026-08.md)｜C 池管道（燈號／橫幅／推播／回應）：[PLAN_2026-10_c_pool_alert.md](PLAN_2026-10_c_pool_alert.md)｜手動維護檔在 `config/`（dca_log / viewpoint / spcx_config / **spcx_c_decisions**＝你的回答，只加不改）
 

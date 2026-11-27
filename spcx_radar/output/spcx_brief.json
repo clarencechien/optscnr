@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-26T04:12:23+00:00",
+ "generated_at": "2026-11-27T04:19:28+00:00",
  "market_date": "2026-11-25",
- "today": "2026-11-26",
+ "today": "2026-11-27",
  "days_since_ipo": 167,
  "price": 127.44000244140625,
  "market_cap_t": 1.677,
@@ -114,7 +114,7 @@
    "catalyst": "xAI grok 4.7真的上線了, 5.0要來了, 現在spcx光賣算力半年就回本了",
    "thesis": "starship incoming",
    "updated": "2026-08-18",
-   "age_days": 100,
+   "age_days": 101,
    "stale": true
   },
   "strikes": [
@@ -225,7 +225,7 @@
   {
    "level": "warn",
    "label": "看法太舊",
-   "text": "你的看法是 2026-08-18 寫的，已經 100 天沒更新；燈亮時先想一下理由還成不成立"
+   "text": "你的看法是 2026-08-18 寫的，已經 101 天沒更新；燈亮時先想一下理由還成不成立"
   },
   {
    "level": "ok",
