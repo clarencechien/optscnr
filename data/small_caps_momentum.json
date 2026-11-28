@@ -1,12 +1,44 @@
 {
-  "updated_at": "2026-11-21T07:08:38.978868",
+  "updated_at": "2026-11-28T07:49:55.565870",
   "criteria": {
     "MIN_MARKET_CAP": 200000000.0,
     "MAX_MARKET_CAP": 5000000000.0,
     "MIN_30D_GAIN": 0.3,
     "MIN_AVG_VOLUME": 1000000.0
   },
-  "count": 0,
-  "tickers": [],
-  "details": []
+  "count": 3,
+  "tickers": [
+    "EVGO",
+    "PRCT",
+    "TDOC"
+  ],
+  "details": [
+    {
+      "symbol": "EVGO",
+      "price": 1.48,
+      "gain_30d_pct": 38.3,
+      "market_cap_m": 466.0,
+      "avg_volume_m": 8.14,
+      "short_pct_float": 24.8,
+      "score": 28.64
+    },
+    {
+      "symbol": "PRCT",
+      "price": 25.36,
+      "gain_30d_pct": 44.3,
+      "market_cap_m": 1459.0,
+      "avg_volume_m": 1.47,
+      "short_pct_float": 14.9,
+      "score": 19.28
+    },
+    {
+      "symbol": "TDOC",
+      "price": 8.0,
+      "gain_30d_pct": 41.1,
+      "market_cap_m": 1458.0,
+      "avg_volume_m": 4.88,
+      "short_pct_float": 14.9,
+      "score": 19.06
+    }
+  ]
 }
