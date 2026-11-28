@@ -1,21 +1,23 @@
 {
-  "updated_at": "2026-11-27T03:07:59.427680",
+  "updated_at": "2026-11-28T02:53:51.436334",
   "stats": {
-    "total_items": 47,
-    "items_with_company": 7,
-    "items_with_catalyst": 6,
-    "items_both": 1
+    "total_items": 57,
+    "items_with_company": 8,
+    "items_with_catalyst": 10,
+    "items_both": 3
   },
-  "count": 3,
+  "count": 5,
   "tickers": [
     "NVDA",
-    "GS",
-    "XYZ"
+    "NKE",
+    "UUUU",
+    "AAPL",
+    "DIS"
   ],
   "details": [
     {
       "symbol": "NVDA",
-      "score": 4.0,
+      "score": 3.0,
       "evidence": [
         {
           "title": "Nvidia chip buyers told to rule out Chinese renters to purchase GPUs, sources say",
@@ -23,34 +25,67 @@
           "has_catalyst": false
         },
         {
-          "title": "Buyer beware? Nvidia's volatile swings expose risks of single-stock ETFs",
+          "title": "I hate that Jensen Huang is back at Nvidia, but I love what it’s done for my 401(k). Am I a hypocrite?",
           "catalysts": [],
           "has_catalyst": false
         },
         {
-          "title": "Nvidia sellers seek new buyers as U.S. curbs China AI chip access, sources tell CNBC",
+          "title": "These stocks soared the most during a wild week highlighted by Huang’s return to Nvidia",
+          "catalysts": [
+            "soared"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Fast cars, big money: Why sportswear races into Formula 1 as sponsorship spending soars 75%",
+          "catalysts": [
+            "soars"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "UUUU",
+      "score": 2,
+      "evidence": [
+        {
+          "title": "Energy Fuels gains 11% as peers and the broader market rise",
+          "catalysts": [
+            "gains"
+          ],
+          "has_catalyst": true
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "score": 1.0,
+      "evidence": [
+        {
+          "title": "2027 smartphone market outlook: Apple to outperform as shipments fall 5%",
+          "catalysts": [],
+          "has_catalyst": false
+        },
+        {
+          "title": "Apple faces countersuit from OpenAI for stealing trade secrets - FT",
           "catalysts": [],
           "has_catalyst": false
         }
       ]
     },
     {
-      "symbol": "GS",
+      "symbol": "DIS",
       "score": 0.5,
       "evidence": [
         {
-          "title": "Wealthy Europeans look beyond stocks amid AI selloff. Here’s where they’re investing",
-          "catalysts": [],
-          "has_catalyst": false
-        }
-      ]
-    },
-    {
-      "symbol": "XYZ",
-      "score": 0.5,
-      "evidence": [
-        {
-          "title": "Taking on Starlink: Europe’s largest satellite factory opens in push to rival Musk",
+          "title": "Judge blocks FCC early-renewal process for Disney-owned ABC stations, for now",
           "catalysts": [],
           "has_catalyst": false
         }
@@ -58,6 +93,6 @@
     }
   ],
   "watch_only": {
-    "Anthropic (private)": 1
+    "OpenAI (private)": 1
   }
 }
