@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T04:21:26Z",
+ "generated_at": "2026-11-28T04:09:29Z",
  "n_days": 57,
  "t8_by_event_answer": {
   "有": {
@@ -171,12 +171,12 @@
      "status": "answered",
      "outcome": {
       "t5": 0.45,
-      "t10": null,
+      "t10": 0.53,
       "t20": null,
-      "peak": 0.45,
+      "peak": 0.53,
       "mature": false,
-      "verdict": "❌沒噴(峰0.4x)",
-      "filled_at": "2026-11-25"
+      "verdict": "➖持平(峰0.5x/今0.5x)",
+      "filled_at": "2026-11-27"
      }
     }
    ]
